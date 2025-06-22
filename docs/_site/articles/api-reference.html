@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>API Reference </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="API Reference ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="api-reference" sourcefile="articles/api-reference.md" sourcestartlinenumber="1">API Reference</h1>
+
+<h2 id="-complete-api-documentation" sourcefile="articles/api-reference.md" sourcestartlinenumber="3">📚 Complete API Documentation</h2>
+<p sourcefile="articles/api-reference.md" sourcestartlinenumber="5">The Strange Loop Self-Evolution System exposes a comprehensive REST API that enables interaction with all aspects of the autonomous evolution system.</p>
+<blockquote sourcefile="articles/api-reference.md" sourcestartlinenumber="7">
+<p sourcefile="articles/api-reference.md" sourcestartlinenumber="7"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="7">A next-generation autonomous architecture that can evolve itself - a true &quot;strange loop&quot; where the system becomes both the observer and the observed, the designer and the designed.</strong></p>
+</blockquote>
+<h2 id="-api-overview" sourcefile="articles/api-reference.md" sourcestartlinenumber="9">🎯 API Overview</h2>
+<h3 id="base-url" sourcefile="articles/api-reference.md" sourcestartlinenumber="11"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="11">Base URL</strong></h3>
+<pre><code sourcefile="articles/api-reference.md" sourcestartlinenumber="12">https://localhost:7001
+</code></pre>
+<h3 id="authentication" sourcefile="articles/api-reference.md" sourcestartlinenumber="16"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="16">Authentication</strong></h3>
+<p sourcefile="articles/api-reference.md" sourcestartlinenumber="17">Currently, the API uses no authentication. In production, implement proper authentication and authorization.</p>
+<h3 id="response-format" sourcefile="articles/api-reference.md" sourcestartlinenumber="19"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="19">Response Format</strong></h3>
+<p sourcefile="articles/api-reference.md" sourcestartlinenumber="20">All API responses are in JSON format with the following structure:</p>
+<pre><code class="lang-json" sourcefile="articles/api-reference.md" sourcestartlinenumber="22">{
+  &quot;success&quot;: true,
+  &quot;data&quot;: { /* response data */ },
+  &quot;message&quot;: &quot;Operation completed successfully&quot;,
+  &quot;timestamp&quot;: &quot;2025-06-21T22:00:00Z&quot;
+}
+</code></pre>
+<h3 id="error-responses" sourcefile="articles/api-reference.md" sourcestartlinenumber="31"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="31">Error Responses</strong></h3>
+<pre><code class="lang-json" sourcefile="articles/api-reference.md" sourcestartlinenumber="32">{
+  &quot;success&quot;: false,
+  &quot;error&quot;: &quot;Error description&quot;,
+  &quot;errorCode&quot;: &quot;ERROR_CODE&quot;,
+  &quot;timestamp&quot;: &quot;2025-06-21T22:00:00Z&quot;
+}
+</code></pre>
+<h2 id="-azure-ai-agent-api" sourcefile="articles/api-reference.md" sourcestartlinenumber="41">🤖 Azure AI Agent API</h2>
+<h3 id="health-check" sourcefile="articles/api-reference.md" sourcestartlinenumber="43"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="43">Health Check</strong></h3>
+<pre><code class="lang-http" sourcefile="articles/api-reference.md" sourcestartlinenumber="44">GET /api/azureaiagent/health
+</code></pre>
+<p sourcefile="articles/api-reference.md" sourcestartlinenumber="48"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="48">Response:</strong></p>
+<pre><code class="lang-json" sourcefile="articles/api-reference.md" sourcestartlinenumber="49">{
+  &quot;status&quot;: &quot;healthy&quot;,
+  &quot;timestamp&quot;: &quot;2025-06-21T22:00:00Z&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;azureAIStatus&quot;: &quot;connected&quot;,
+  &quot;databaseStatus&quot;: &quot;connected&quot;,
+  &quot;evolutionStatus&quot;: &quot;ready&quot;
+}
+</code></pre>
+<h3 id="send-message" sourcefile="articles/api-reference.md" sourcestartlinenumber="60"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="60">Send Message</strong></h3>
+<pre><code class="lang-http" sourcefile="articles/api-reference.md" sourcestartlinenumber="61">POST /api/azureaiagent/message
+Content-Type: application/json
+
+{
+  &quot;message&quot;: &quot;Hello! Can you help me understand how self-evolution works?&quot;,
+  &quot;conversationId&quot;: &quot;conversation-001&quot;,
+  &quot;parameters&quot;: {
+    &quot;maxTokens&quot;: 1000,
+    &quot;temperature&quot;: 0.7
+  }
+}
+</code></pre>
+<p sourcefile="articles/api-reference.md" sourcestartlinenumber="75"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="75">Response:</strong></p>
+<pre><code class="lang-json" sourcefile="articles/api-reference.md" sourcestartlinenumber="76">{
+  &quot;response&quot;: &quot;Hello! I'd be happy to explain how self-evolution works...&quot;,
+  &quot;conversationId&quot;: &quot;conversation-001&quot;,
+  &quot;timestamp&quot;: &quot;2025-06-21T22:00:00Z&quot;,
+  &quot;tokensUsed&quot;: 150,
+  &quot;modelUsed&quot;: &quot;gpt-4.1&quot;,
+  &quot;processingTime&quot;: &quot;00:00:01.234&quot;
+}
+</code></pre>
+<h3 id="streaming-message" sourcefile="articles/api-reference.md" sourcestartlinenumber="87"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="87">Streaming Message</strong></h3>
+<pre><code class="lang-http" sourcefile="articles/api-reference.md" sourcestartlinenumber="88">POST /api/azureaiagent/message/stream
+Content-Type: application/json
+
+{
+  &quot;message&quot;: &quot;Explain the strange loop concept in detail&quot;,
+  &quot;conversationId&quot;: &quot;conversation-002&quot;
+}
+</code></pre>
+<p sourcefile="articles/api-reference.md" sourcestartlinenumber="98"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="98">Response:</strong> (Server-Sent Events)</p>
+<pre><code sourcefile="articles/api-reference.md" sourcestartlinenumber="99">data: {&quot;chunk&quot;: &quot;The&quot;, &quot;conversationId&quot;: &quot;conversation-002&quot;}
+data: {&quot;chunk&quot;: &quot; strange&quot;, &quot;conversationId&quot;: &quot;conversation-002&quot;}
+data: {&quot;chunk&quot;: &quot; loop&quot;, &quot;conversationId&quot;: &quot;conversation-002&quot;}
+data: {&quot;chunk&quot;: &quot; concept&quot;, &quot;conversationId&quot;: &quot;conversation-002&quot;}
+...
+</code></pre>
+<h3 id="function-calling" sourcefile="articles/api-reference.md" sourcestartlinenumber="107"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="107">Function Calling</strong></h3>
+<pre><code class="lang-http" sourcefile="articles/api-reference.md" sourcestartlinenumber="108">POST /api/azureaiagent/function
+Content-Type: application/json
+
+{
+  &quot;functionName&quot;: &quot;analyzeSystem&quot;,
+  &quot;parameters&quot;: {
+    &quot;targetSystem&quot;: &quot;performance&quot;,
+    &quot;analysisDepth&quot;: &quot;detailed&quot;
+  },
+  &quot;conversationId&quot;: &quot;conversation-003&quot;
+}
+</code></pre>
+<h2 id="-strange-loop-evolution-api" sourcefile="articles/api-reference.md" sourcestartlinenumber="122">🔄 Strange Loop Evolution API</h2>
+<h3 id="get-evolution-statistics" sourcefile="articles/api-reference.md" sourcestartlinenumber="124"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="124">Get Evolution Statistics</strong></h3>
+<pre><code class="lang-http" sourcefile="articles/api-reference.md" sourcestartlinenumber="125">GET /api/selfevolution/strange-loop/statistics
+</code></pre>
+<p sourcefile="articles/api-reference.md" sourcestartlinenumber="129"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="129">Response:</strong></p>
+<pre><code class="lang-json" sourcefile="articles/api-reference.md" sourcestartlinenumber="130">{
+  &quot;totalEvolutions&quot;: 5,
+  &quot;successfulEvolutions&quot;: 4,
+  &quot;failedEvolutions&quot;: 1,
+  &quot;averageEvolutionTime&quot;: &quot;00:03:45&quot;,
+  &quot;lastEvolutionDate&quot;: &quot;2025-06-21T21:30:00Z&quot;,
+  &quot;evolutionTypes&quot;: {
+    &quot;SelfModification&quot;: 2,
+    &quot;PerformanceOptimization&quot;: 2,
+    &quot;CapabilityEnhancement&quot;: 1
+  },
+  &quot;systemCapabilities&quot;: [
+    &quot;BasicAgentOrchestration&quot;,
+    &quot;AzureAIIntegration&quot;,
+    &quot;CodeGeneration&quot;,
+    &quot;DynamicPluginLoading&quot;,
+    &quot;AdvancedMemory&quot;,
+    &quot;PerformanceOptimization&quot;
+  ],
+  &quot;successRate&quot;: 0.8,
+  &quot;averageImprovement&quot;: 0.15
+}
+</code></pre>
+<h3 id="start-evolution-process" sourcefile="articles/api-reference.md" sourcestartlinenumber="155"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="155">Start Evolution Process</strong></h3>
+<pre><code class="lang-http" sourcefile="articles/api-reference.md" sourcestartlinenumber="156">POST /api/selfevolution/strange-loop
+Content-Type: application/json
+
+{
+  &quot;agentId&quot;: &quot;evolution-agent-001&quot;,
+  &quot;evolutionType&quot;: &quot;SelfModification&quot;,
+  &quot;parameters&quot;: {
+    &quot;targetImprovement&quot;: &quot;Performance&quot;,
+    &quot;confidenceThreshold&quot;: 0.8,
+    &quot;maxCodeGenerationAttempts&quot;: 3,
+    &quot;enableAdvancedAnalysis&quot;: true
+  },
+  &quot;enableHumanApproval&quot;: false,
+  &quot;timeout&quot;: &quot;00:10:00&quot;,
+  &quot;maxEvolutionSteps&quot;: 7
+}
+</code></pre>
+<p sourcefile="articles/api-reference.md" sourcestartlinenumber="175"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="175">Response:</strong></p>
+<pre><code class="lang-json" sourcefile="articles/api-reference.md" sourcestartlinenumber="176">{
+  &quot;evolutionId&quot;: &quot;evol-20250621-001&quot;,
+  &quot;status&quot;: &quot;started&quot;,
+  &quot;agentId&quot;: &quot;evolution-agent-001&quot;,
+  &quot;evolutionType&quot;: &quot;SelfModification&quot;,
+  &quot;startTime&quot;: &quot;2025-06-21T22:00:00Z&quot;,
+  &quot;estimatedCompletion&quot;: &quot;2025-06-21T22:10:00Z&quot;,
+  &quot;currentStep&quot;: &quot;SelfAnalysis&quot;,
+  &quot;progress&quot;: 0.0
+}
+</code></pre>
+<h3 id="get-evolution-status" sourcefile="articles/api-reference.md" sourcestartlinenumber="189"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="189">Get Evolution Status</strong></h3>
+<pre><code class="lang-http" sourcefile="articles/api-reference.md" sourcestartlinenumber="190">GET /api/selfevolution/strange-loop/{evolutionId}/status
+</code></pre>
+<p sourcefile="articles/api-reference.md" sourcestartlinenumber="194"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="194">Response:</strong></p>
+<pre><code class="lang-json" sourcefile="articles/api-reference.md" sourcestartlinenumber="195">{
+  &quot;evolutionId&quot;: &quot;evol-20250621-001&quot;,
+  &quot;status&quot;: &quot;in_progress&quot;,
+  &quot;currentStep&quot;: &quot;CodeGeneration&quot;,
+  &quot;completedSteps&quot;: [
+    &quot;SelfAnalysis&quot;,
+    &quot;ImprovementIdentification&quot;,
+    &quot;CapabilityDesign&quot;
+  ],
+  &quot;remainingSteps&quot;: [
+    &quot;CapabilityLoading&quot;,
+    &quot;Testing&quot;,
+    &quot;Reflection&quot;
+  ],
+  &quot;progress&quot;: 0.57,
+  &quot;startTime&quot;: &quot;2025-06-21T22:00:00Z&quot;,
+  &quot;estimatedCompletion&quot;: &quot;2025-06-21T22:10:00Z&quot;,
+  &quot;currentStepDetails&quot;: {
+    &quot;stepName&quot;: &quot;CodeGeneration&quot;,
+    &quot;stepDescription&quot;: &quot;Generating code for new capabilities&quot;,
+    &quot;stepProgress&quot;: 0.75,
+    &quot;estimatedStepCompletion&quot;: &quot;2025-06-21T22:05:00Z&quot;
+  }
+}
+</code></pre>
+<h3 id="cancel-evolution" sourcefile="articles/api-reference.md" sourcestartlinenumber="222"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="222">Cancel Evolution</strong></h3>
+<pre><code class="lang-http" sourcefile="articles/api-reference.md" sourcestartlinenumber="223">DELETE /api/selfevolution/strange-loop/{evolutionId}
+</code></pre>
+<p sourcefile="articles/api-reference.md" sourcestartlinenumber="227"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="227">Response:</strong></p>
+<pre><code class="lang-json" sourcefile="articles/api-reference.md" sourcestartlinenumber="228">{
+  &quot;evolutionId&quot;: &quot;evol-20250621-001&quot;,
+  &quot;status&quot;: &quot;cancelled&quot;,
+  &quot;cancellationTime&quot;: &quot;2025-06-21T22:03:00Z&quot;,
+  &quot;completedSteps&quot;: [
+    &quot;SelfAnalysis&quot;,
+    &quot;ImprovementIdentification&quot;
+  ],
+  &quot;reason&quot;: &quot;User requested cancellation&quot;
+}
+</code></pre>
+<h3 id="get-evolution-history" sourcefile="articles/api-reference.md" sourcestartlinenumber="241"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="241">Get Evolution History</strong></h3>
+<pre><code class="lang-http" sourcefile="articles/api-reference.md" sourcestartlinenumber="242">GET /api/selfevolution/strange-loop/history?limit=10&amp;offset=0
+</code></pre>
+<p sourcefile="articles/api-reference.md" sourcestartlinenumber="246"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="246">Response:</strong></p>
+<pre><code class="lang-json" sourcefile="articles/api-reference.md" sourcestartlinenumber="247">{
+  &quot;evolutions&quot;: [
+    {
+      &quot;evolutionId&quot;: &quot;evol-20250621-001&quot;,
+      &quot;agentId&quot;: &quot;evolution-agent-001&quot;,
+      &quot;evolutionType&quot;: &quot;SelfModification&quot;,
+      &quot;status&quot;: &quot;completed&quot;,
+      &quot;startTime&quot;: &quot;2025-06-21T22:00:00Z&quot;,
+      &quot;completionTime&quot;: &quot;2025-06-21T22:08:30Z&quot;,
+      &quot;success&quot;: true,
+      &quot;improvementsGenerated&quot;: 2,
+      &quot;capabilitiesAdded&quot;: 1
+    }
+  ],
+  &quot;totalCount&quot;: 5,
+  &quot;hasMore&quot;: false
+}
+</code></pre>
+<h2 id="-code-generation-api" sourcefile="articles/api-reference.md" sourcestartlinenumber="267">💻 Code Generation API</h2>
+<h3 id="generate-code" sourcefile="articles/api-reference.md" sourcestartlinenumber="269"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="269">Generate Code</strong></h3>
+<pre><code class="lang-http" sourcefile="articles/api-reference.md" sourcestartlinenumber="270">POST /api/selfevolution/generate
+Content-Type: application/json
+
+{
+  &quot;templateName&quot;: &quot;Entity&quot;,
+  &quot;parameters&quot;: {
+    &quot;EntityName&quot;: &quot;TestEntity&quot;,
+    &quot;Properties&quot;: {
+      &quot;Name&quot;: &quot;string&quot;,
+      &quot;Value&quot;: &quot;int&quot;,
+      &quot;CreatedDate&quot;: &quot;DateTime&quot;,
+      &quot;IsActive&quot;: &quot;bool&quot;
+    },
+    &quot;Namespace&quot;: &quot;UltraGenericSystem.Models.Generated&quot;,
+    &quot;InheritFrom&quot;: &quot;BaseEntity&quot;
+  },
+  &quot;outputPath&quot;: &quot;Models/Generated/TestEntity.cs&quot;,
+  &quot;compileImmediately&quot;: true,
+  &quot;validateCode&quot;: true
+}
+</code></pre>
+<p sourcefile="articles/api-reference.md" sourcestartlinenumber="293"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="293">Response:</strong></p>
+<pre><code class="lang-json" sourcefile="articles/api-reference.md" sourcestartlinenumber="294">{
+  &quot;generationId&quot;: &quot;gen-20250621-001&quot;,
+  &quot;status&quot;: &quot;completed&quot;,
+  &quot;templateName&quot;: &quot;Entity&quot;,
+  &quot;outputPath&quot;: &quot;Models/Generated/TestEntity.cs&quot;,
+  &quot;compilationSuccess&quot;: true,
+  &quot;generatedCode&quot;: &quot;using System;\n\nnamespace UltraGenericSystem.Models.Generated\n{\n    public class TestEntity : BaseEntity\n    {\n        public string Name { get; set; } = \&quot;\&quot;;\n        public int Value { get; set; }\n        public DateTime CreatedDate { get; set; }\n        public bool IsActive { get; set; }\n    }\n}&quot;,
+  &quot;compilationResult&quot;: {
+    &quot;success&quot;: true,
+    &quot;errors&quot;: [],
+    &quot;warnings&quot;: [],
+    &quot;assemblyBytes&quot;: &quot;base64-encoded-assembly&quot;
+  },
+  &quot;generationTime&quot;: &quot;00:00:02.345&quot;,
+  &quot;codeMetrics&quot;: {
+    &quot;linesOfCode&quot;: 12,
+    &quot;complexity&quot;: 1,
+    &quot;maintainabilityIndex&quot;: 100
+  }
+}
+</code></pre>
+<h3 id="list-available-templates" sourcefile="articles/api-reference.md" sourcestartlinenumber="317"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="317">List Available Templates</strong></h3>
+<pre><code class="lang-http" sourcefile="articles/api-reference.md" sourcestartlinenumber="318">GET /api/selfevolution/templates
+</code></pre>
+<p sourcefile="articles/api-reference.md" sourcestartlinenumber="322"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="322">Response:</strong></p>
+<pre><code class="lang-json" sourcefile="articles/api-reference.md" sourcestartlinenumber="323">{
+  &quot;templates&quot;: [
+    {
+      &quot;name&quot;: &quot;Entity&quot;,
+      &quot;description&quot;: &quot;Generate a new entity class&quot;,
+      &quot;category&quot;: &quot;Models&quot;,
+      &quot;parameters&quot;: {
+        &quot;EntityName&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;description&quot;: &quot;Name of the entity class&quot;,
+          &quot;required&quot;: true
+        },
+        &quot;Properties&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;description&quot;: &quot;Dictionary of property names and types&quot;,
+          &quot;required&quot;: true
+        },
+        &quot;Namespace&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;description&quot;: &quot;Namespace for the generated class&quot;,
+          &quot;required&quot;: false,
+          &quot;default&quot;: &quot;UltraGenericSystem.Models.Generated&quot;
+        }
+      }
+    },
+    {
+      &quot;name&quot;: &quot;Controller&quot;,
+      &quot;description&quot;: &quot;Generate a new API controller&quot;,
+      &quot;category&quot;: &quot;Controllers&quot;,
+      &quot;parameters&quot;: {
+        &quot;ControllerName&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;description&quot;: &quot;Name of the controller class&quot;,
+          &quot;required&quot;: true
+        },
+        &quot;EntityName&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;description&quot;: &quot;Name of the entity this controller manages&quot;,
+          &quot;required&quot;: true
+        }
+      }
+    }
+  ]
+}
+</code></pre>
+<h3 id="get-generation-history" sourcefile="articles/api-reference.md" sourcestartlinenumber="370"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="370">Get Generation History</strong></h3>
+<pre><code class="lang-http" sourcefile="articles/api-reference.md" sourcestartlinenumber="371">GET /api/selfevolution/generate/history?limit=10&amp;offset=0
+</code></pre>
+<p sourcefile="articles/api-reference.md" sourcestartlinenumber="375"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="375">Response:</strong></p>
+<pre><code class="lang-json" sourcefile="articles/api-reference.md" sourcestartlinenumber="376">{
+  &quot;generations&quot;: [
+    {
+      &quot;generationId&quot;: &quot;gen-20250621-001&quot;,
+      &quot;templateName&quot;: &quot;Entity&quot;,
+      &quot;status&quot;: &quot;completed&quot;,
+      &quot;compilationSuccess&quot;: true,
+      &quot;generationTime&quot;: &quot;00:00:02.345&quot;,
+      &quot;timestamp&quot;: &quot;2025-06-21T22:00:00Z&quot;
+    }
+  ],
+  &quot;totalCount&quot;: 15,
+  &quot;hasMore&quot;: true
+}
+</code></pre>
+<h2 id="-memory-and-rag-api" sourcefile="articles/api-reference.md" sourcestartlinenumber="393">🧠 Memory and RAG API</h2>
+<h3 id="store-memory-entry" sourcefile="articles/api-reference.md" sourcestartlinenumber="395"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="395">Store Memory Entry</strong></h3>
+<pre><code class="lang-http" sourcefile="articles/api-reference.md" sourcestartlinenumber="396">POST /api/memory/store
+Content-Type: application/json
+
+{
+  &quot;content&quot;: &quot;The strange loop system successfully evolved its performance capabilities by implementing advanced caching mechanisms.&quot;,
+  &quot;metadata&quot;: {
+    &quot;type&quot;: &quot;evolution_result&quot;,
+    &quot;agentId&quot;: &quot;evolution-agent-001&quot;,
+    &quot;evolutionId&quot;: &quot;evol-20250621-001&quot;,
+    &quot;category&quot;: &quot;performance&quot;,
+    &quot;confidence&quot;: 0.95
+  },
+  &quot;tags&quot;: [&quot;evolution&quot;, &quot;performance&quot;, &quot;caching&quot;, &quot;success&quot;],
+  &quot;priority&quot;: &quot;high&quot;,
+  &quot;expirationDate&quot;: &quot;2025-12-21T22:00:00Z&quot;
+}
+</code></pre>
+<p sourcefile="articles/api-reference.md" sourcestartlinenumber="415"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="415">Response:</strong></p>
+<pre><code class="lang-json" sourcefile="articles/api-reference.md" sourcestartlinenumber="416">{
+  &quot;memoryId&quot;: &quot;mem-20250621-001&quot;,
+  &quot;status&quot;: &quot;stored&quot;,
+  &quot;embeddingGenerated&quot;: true,
+  &quot;vectorStored&quot;: true,
+  &quot;timestamp&quot;: &quot;2025-06-21T22:00:00Z&quot;,
+  &quot;similarityScore&quot;: 0.0
+}
+</code></pre>
+<h3 id="search-memory" sourcefile="articles/api-reference.md" sourcestartlinenumber="427"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="427">Search Memory</strong></h3>
+<pre><code class="lang-http" sourcefile="articles/api-reference.md" sourcestartlinenumber="428">POST /api/memory/search
+Content-Type: application/json
+
+{
+  &quot;query&quot;: &quot;performance evolution caching&quot;,
+  &quot;maxResults&quot;: 10,
+  &quot;similarityThreshold&quot;: 0.7,
+  &quot;filters&quot;: {
+    &quot;tags&quot;: [&quot;evolution&quot;, &quot;performance&quot;],
+    &quot;metadata&quot;: {
+      &quot;type&quot;: &quot;evolution_result&quot;
+    }
+  },
+  &quot;includeMetadata&quot;: true,
+  &quot;includeEmbeddings&quot;: false
+}
+</code></pre>
+<p sourcefile="articles/api-reference.md" sourcestartlinenumber="447"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="447">Response:</strong></p>
+<pre><code class="lang-json" sourcefile="articles/api-reference.md" sourcestartlinenumber="448">{
+  &quot;results&quot;: [
+    {
+      &quot;memoryId&quot;: &quot;mem-20250621-001&quot;,
+      &quot;content&quot;: &quot;The strange loop system successfully evolved its performance capabilities by implementing advanced caching mechanisms.&quot;,
+      &quot;similarityScore&quot;: 0.92,
+      &quot;metadata&quot;: {
+        &quot;type&quot;: &quot;evolution_result&quot;,
+        &quot;agentId&quot;: &quot;evolution-agent-001&quot;,
+        &quot;evolutionId&quot;: &quot;evol-20250621-001&quot;,
+        &quot;category&quot;: &quot;performance&quot;,
+        &quot;confidence&quot;: 0.95
+      },
+      &quot;tags&quot;: [&quot;evolution&quot;, &quot;performance&quot;, &quot;caching&quot;, &quot;success&quot;],
+      &quot;timestamp&quot;: &quot;2025-06-21T22:00:00Z&quot;
+    }
+  ],
+  &quot;totalResults&quot;: 1,
+  &quot;searchTime&quot;: &quot;00:00:00.123&quot;,
+  &quot;queryEmbedding&quot;: &quot;base64-encoded-embedding&quot;
+}
+</code></pre>
+<h3 id="get-memory-statistics" sourcefile="articles/api-reference.md" sourcestartlinenumber="472"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="472">Get Memory Statistics</strong></h3>
+<pre><code class="lang-http" sourcefile="articles/api-reference.md" sourcestartlinenumber="473">GET /api/memory/statistics
+</code></pre>
+<p sourcefile="articles/api-reference.md" sourcestartlinenumber="477"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="477">Response:</strong></p>
+<pre><code class="lang-json" sourcefile="articles/api-reference.md" sourcestartlinenumber="478">{
+  &quot;totalEntries&quot;: 150,
+  &quot;totalEmbeddings&quot;: 150,
+  &quot;averageSimilarityScore&quot;: 0.75,
+  &quot;memoryUsage&quot;: &quot;2.5 MB&quot;,
+  &quot;mostCommonTags&quot;: [
+    {&quot;tag&quot;: &quot;evolution&quot;, &quot;count&quot;: 45},
+    {&quot;tag&quot;: &quot;performance&quot;, &quot;count&quot;: 32},
+    {&quot;tag&quot;: &quot;success&quot;, &quot;count&quot;: 28}
+  ],
+  &quot;recentActivity&quot;: {
+    &quot;last24Hours&quot;: 12,
+    &quot;last7Days&quot;: 45,
+    &quot;last30Days&quot;: 150
+  }
+}
+</code></pre>
+<h3 id="delete-memory-entry" sourcefile="articles/api-reference.md" sourcestartlinenumber="497"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="497">Delete Memory Entry</strong></h3>
+<pre><code class="lang-http" sourcefile="articles/api-reference.md" sourcestartlinenumber="498">DELETE /api/memory/{memoryId}
+</code></pre>
+<p sourcefile="articles/api-reference.md" sourcestartlinenumber="502"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="502">Response:</strong></p>
+<pre><code class="lang-json" sourcefile="articles/api-reference.md" sourcestartlinenumber="503">{
+  &quot;memoryId&quot;: &quot;mem-20250621-001&quot;,
+  &quot;status&quot;: &quot;deleted&quot;,
+  &quot;deletionTime&quot;: &quot;2025-06-21T22:00:00Z&quot;
+}
+</code></pre>
+<h2 id="-agent-orchestration-api" sourcefile="articles/api-reference.md" sourcestartlinenumber="511">🎛️ Agent Orchestration API</h2>
+<h3 id="get-orchestration-statistics" sourcefile="articles/api-reference.md" sourcestartlinenumber="513"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="513">Get Orchestration Statistics</strong></h3>
+<pre><code class="lang-http" sourcefile="articles/api-reference.md" sourcestartlinenumber="514">GET /api/orchestration/statistics
+</code></pre>
+<p sourcefile="articles/api-reference.md" sourcestartlinenumber="518"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="518">Response:</strong></p>
+<pre><code class="lang-json" sourcefile="articles/api-reference.md" sourcestartlinenumber="519">{
+  &quot;totalOrchestrations&quot;: 25,
+  &quot;activeOrchestrations&quot;: 3,
+  &quot;completedOrchestrations&quot;: 22,
+  &quot;orchestrationPatterns&quot;: {
+    &quot;Sequential&quot;: 10,
+    &quot;Concurrent&quot;: 8,
+    &quot;GroupChat&quot;: 5,
+    &quot;Handoff&quot;: 2
+  },
+  &quot;averageOrchestrationTime&quot;: &quot;00:02:30&quot;,
+  &quot;successRate&quot;: 0.88,
+  &quot;agentUtilization&quot;: {
+    &quot;PlannerAgent&quot;: 0.75,
+    &quot;MakerAgent&quot;: 0.82,
+    &quot;CheckerAgent&quot;: 0.68,
+    &quot;ReflectorAgent&quot;: 0.71
+  }
+}
+</code></pre>
+<h3 id="start-orchestration" sourcefile="articles/api-reference.md" sourcestartlinenumber="541"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="541">Start Orchestration</strong></h3>
+<pre><code class="lang-http" sourcefile="articles/api-reference.md" sourcestartlinenumber="542">POST /api/orchestration/start
+Content-Type: application/json
+
+{
+  &quot;pattern&quot;: &quot;GroupChat&quot;,
+  &quot;agents&quot;: [&quot;PlannerAgent&quot;, &quot;MakerAgent&quot;, &quot;CheckerAgent&quot;],
+  &quot;task&quot;: &quot;Analyze system performance and suggest improvements&quot;,
+  &quot;parameters&quot;: {
+    &quot;maxIterations&quot;: 5,
+    &quot;timeout&quot;: &quot;00:05:00&quot;,
+    &quot;enableStreaming&quot;: true
+  },
+  &quot;callbackUrl&quot;: &quot;https://example.com/callback&quot;
+}
+</code></pre>
+<p sourcefile="articles/api-reference.md" sourcestartlinenumber="559"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="559">Response:</strong></p>
+<pre><code class="lang-json" sourcefile="articles/api-reference.md" sourcestartlinenumber="560">{
+  &quot;orchestrationId&quot;: &quot;orch-20250621-001&quot;,
+  &quot;status&quot;: &quot;started&quot;,
+  &quot;pattern&quot;: &quot;GroupChat&quot;,
+  &quot;agents&quot;: [&quot;PlannerAgent&quot;, &quot;MakerAgent&quot;, &quot;CheckerAgent&quot;],
+  &quot;startTime&quot;: &quot;2025-06-21T22:00:00Z&quot;,
+  &quot;estimatedCompletion&quot;: &quot;2025-06-21T22:05:00Z&quot;
+}
+</code></pre>
+<h3 id="get-orchestration-status" sourcefile="articles/api-reference.md" sourcestartlinenumber="571"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="571">Get Orchestration Status</strong></h3>
+<pre><code class="lang-http" sourcefile="articles/api-reference.md" sourcestartlinenumber="572">GET /api/orchestration/{orchestrationId}/status
+</code></pre>
+<p sourcefile="articles/api-reference.md" sourcestartlinenumber="576"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="576">Response:</strong></p>
+<pre><code class="lang-json" sourcefile="articles/api-reference.md" sourcestartlinenumber="577">{
+  &quot;orchestrationId&quot;: &quot;orch-20250621-001&quot;,
+  &quot;status&quot;: &quot;in_progress&quot;,
+  &quot;pattern&quot;: &quot;GroupChat&quot;,
+  &quot;currentIteration&quot;: 2,
+  &quot;maxIterations&quot;: 5,
+  &quot;agentResponses&quot;: {
+    &quot;PlannerAgent&quot;: &quot;Analyzing current performance metrics...&quot;,
+    &quot;MakerAgent&quot;: &quot;Generating improvement suggestions...&quot;,
+    &quot;CheckerAgent&quot;: &quot;Validating proposed changes...&quot;
+  },
+  &quot;progress&quot;: 0.4,
+  &quot;startTime&quot;: &quot;2025-06-21T22:00:00Z&quot;,
+  &quot;estimatedCompletion&quot;: &quot;2025-06-21T22:05:00Z&quot;
+}
+</code></pre>
+<h2 id="-generic-entity-api" sourcefile="articles/api-reference.md" sourcestartlinenumber="595">🗄️ Generic Entity API</h2>
+<h3 id="health-check-1" sourcefile="articles/api-reference.md" sourcestartlinenumber="597"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="597">Health Check</strong></h3>
+<pre><code class="lang-http" sourcefile="articles/api-reference.md" sourcestartlinenumber="598">GET /api/generic/health
+</code></pre>
+<p sourcefile="articles/api-reference.md" sourcestartlinenumber="602"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="602">Response:</strong></p>
+<pre><code class="lang-json" sourcefile="articles/api-reference.md" sourcestartlinenumber="603">{
+  &quot;status&quot;: &quot;healthy&quot;,
+  &quot;databaseConnection&quot;: &quot;connected&quot;,
+  &quot;entityCount&quot;: 25,
+  &quot;lastMigration&quot;: &quot;2025-06-21T22:00:00Z&quot;,
+  &quot;databaseSize&quot;: &quot;1.2 MB&quot;
+}
+</code></pre>
+<h3 id="get-all-entities" sourcefile="articles/api-reference.md" sourcestartlinenumber="613"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="613">Get All Entities</strong></h3>
+<pre><code class="lang-http" sourcefile="articles/api-reference.md" sourcestartlinenumber="614">GET /api/generic/entities?page=1&amp;pageSize=10&amp;sortBy=createdDate&amp;sortOrder=desc
+</code></pre>
+<p sourcefile="articles/api-reference.md" sourcestartlinenumber="618"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="618">Response:</strong></p>
+<pre><code class="lang-json" sourcefile="articles/api-reference.md" sourcestartlinenumber="619">{
+  &quot;entities&quot;: [
+    {
+      &quot;id&quot;: &quot;entity-001&quot;,
+      &quot;type&quot;: &quot;TestEntity&quot;,
+      &quot;data&quot;: {
+        &quot;name&quot;: &quot;Test Entity 1&quot;,
+        &quot;value&quot;: 42,
+        &quot;createdDate&quot;: &quot;2025-06-21T22:00:00Z&quot;
+      },
+      &quot;createdDate&quot;: &quot;2025-06-21T22:00:00Z&quot;,
+      &quot;updatedDate&quot;: &quot;2025-06-21T22:00:00Z&quot;
+    }
+  ],
+  &quot;pagination&quot;: {
+    &quot;page&quot;: 1,
+    &quot;pageSize&quot;: 10,
+    &quot;totalCount&quot;: 25,
+    &quot;totalPages&quot;: 3,
+    &quot;hasNext&quot;: true,
+    &quot;hasPrevious&quot;: false
+  }
+}
+</code></pre>
+<h3 id="get-entity-by-id" sourcefile="articles/api-reference.md" sourcestartlinenumber="645"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="645">Get Entity by ID</strong></h3>
+<pre><code class="lang-http" sourcefile="articles/api-reference.md" sourcestartlinenumber="646">GET /api/generic/entities/{entityId}
+</code></pre>
+<p sourcefile="articles/api-reference.md" sourcestartlinenumber="650"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="650">Response:</strong></p>
+<pre><code class="lang-json" sourcefile="articles/api-reference.md" sourcestartlinenumber="651">{
+  &quot;id&quot;: &quot;entity-001&quot;,
+  &quot;type&quot;: &quot;TestEntity&quot;,
+  &quot;data&quot;: {
+    &quot;name&quot;: &quot;Test Entity 1&quot;,
+    &quot;value&quot;: 42,
+    &quot;createdDate&quot;: &quot;2025-06-21T22:00:00Z&quot;
+  },
+  &quot;createdDate&quot;: &quot;2025-06-21T22:00:00Z&quot;,
+  &quot;updatedDate&quot;: &quot;2025-06-21T22:00:00Z&quot;
+}
+</code></pre>
+<h3 id="create-entity" sourcefile="articles/api-reference.md" sourcestartlinenumber="665"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="665">Create Entity</strong></h3>
+<pre><code class="lang-http" sourcefile="articles/api-reference.md" sourcestartlinenumber="666">POST /api/generic/entities
+Content-Type: application/json
+
+{
+  &quot;type&quot;: &quot;TestEntity&quot;,
+  &quot;data&quot;: {
+    &quot;name&quot;: &quot;New Test Entity&quot;,
+    &quot;value&quot;: 100,
+    &quot;createdDate&quot;: &quot;2025-06-21T22:00:00Z&quot;
+  }
+}
+</code></pre>
+<p sourcefile="articles/api-reference.md" sourcestartlinenumber="680"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="680">Response:</strong></p>
+<pre><code class="lang-json" sourcefile="articles/api-reference.md" sourcestartlinenumber="681">{
+  &quot;id&quot;: &quot;entity-002&quot;,
+  &quot;type&quot;: &quot;TestEntity&quot;,
+  &quot;data&quot;: {
+    &quot;name&quot;: &quot;New Test Entity&quot;,
+    &quot;value&quot;: 100,
+    &quot;createdDate&quot;: &quot;2025-06-21T22:00:00Z&quot;
+  },
+  &quot;createdDate&quot;: &quot;2025-06-21T22:00:00Z&quot;,
+  &quot;updatedDate&quot;: &quot;2025-06-21T22:00:00Z&quot;
+}
+</code></pre>
+<h3 id="update-entity" sourcefile="articles/api-reference.md" sourcestartlinenumber="695"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="695">Update Entity</strong></h3>
+<pre><code class="lang-http" sourcefile="articles/api-reference.md" sourcestartlinenumber="696">PUT /api/generic/entities/{entityId}
+Content-Type: application/json
+
+{
+  &quot;data&quot;: {
+    &quot;name&quot;: &quot;Updated Test Entity&quot;,
+    &quot;value&quot;: 200,
+    &quot;createdDate&quot;: &quot;2025-06-21T22:00:00Z&quot;
+  }
+}
+</code></pre>
+<h3 id="delete-entity" sourcefile="articles/api-reference.md" sourcestartlinenumber="709"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="709">Delete Entity</strong></h3>
+<pre><code class="lang-http" sourcefile="articles/api-reference.md" sourcestartlinenumber="710">DELETE /api/generic/entities/{entityId}
+</code></pre>
+<h2 id="-error-codes" sourcefile="articles/api-reference.md" sourcestartlinenumber="714">🔧 Error Codes</h2>
+<h3 id="common-error-codes" sourcefile="articles/api-reference.md" sourcestartlinenumber="716"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="716">Common Error Codes</strong></h3>
+<ul sourcefile="articles/api-reference.md" sourcestartlinenumber="717">
+<li sourcefile="articles/api-reference.md" sourcestartlinenumber="717"><code sourcefile="articles/api-reference.md" sourcestartlinenumber="717">EVOLUTION_NOT_FOUND</code>: Evolution process not found</li>
+<li sourcefile="articles/api-reference.md" sourcestartlinenumber="718"><code sourcefile="articles/api-reference.md" sourcestartlinenumber="718">EVOLUTION_ALREADY_RUNNING</code>: Evolution already in progress</li>
+<li sourcefile="articles/api-reference.md" sourcestartlinenumber="719"><code sourcefile="articles/api-reference.md" sourcestartlinenumber="719">INVALID_EVOLUTION_PARAMETERS</code>: Invalid evolution parameters</li>
+<li sourcefile="articles/api-reference.md" sourcestartlinenumber="720"><code sourcefile="articles/api-reference.md" sourcestartlinenumber="720">CODE_GENERATION_FAILED</code>: Code generation failed</li>
+<li sourcefile="articles/api-reference.md" sourcestartlinenumber="721"><code sourcefile="articles/api-reference.md" sourcestartlinenumber="721">COMPILATION_FAILED</code>: Code compilation failed</li>
+<li sourcefile="articles/api-reference.md" sourcestartlinenumber="722"><code sourcefile="articles/api-reference.md" sourcestartlinenumber="722">MEMORY_STORAGE_FAILED</code>: Memory storage failed</li>
+<li sourcefile="articles/api-reference.md" sourcestartlinenumber="723"><code sourcefile="articles/api-reference.md" sourcestartlinenumber="723">AZURE_AI_ERROR</code>: Azure AI service error</li>
+<li sourcefile="articles/api-reference.md" sourcestartlinenumber="724"><code sourcefile="articles/api-reference.md" sourcestartlinenumber="724">DATABASE_ERROR</code>: Database operation failed</li>
+<li sourcefile="articles/api-reference.md" sourcestartlinenumber="725"><code sourcefile="articles/api-reference.md" sourcestartlinenumber="725">VALIDATION_ERROR</code>: Input validation failed</li>
+<li sourcefile="articles/api-reference.md" sourcestartlinenumber="726"><code sourcefile="articles/api-reference.md" sourcestartlinenumber="726">TIMEOUT_ERROR</code>: Operation timed out</li>
+</ul>
+<h3 id="http-status-codes" sourcefile="articles/api-reference.md" sourcestartlinenumber="728"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="728">HTTP Status Codes</strong></h3>
+<ul sourcefile="articles/api-reference.md" sourcestartlinenumber="729">
+<li sourcefile="articles/api-reference.md" sourcestartlinenumber="729"><code sourcefile="articles/api-reference.md" sourcestartlinenumber="729">200 OK</code>: Operation successful</li>
+<li sourcefile="articles/api-reference.md" sourcestartlinenumber="730"><code sourcefile="articles/api-reference.md" sourcestartlinenumber="730">201 Created</code>: Resource created successfully</li>
+<li sourcefile="articles/api-reference.md" sourcestartlinenumber="731"><code sourcefile="articles/api-reference.md" sourcestartlinenumber="731">400 Bad Request</code>: Invalid request</li>
+<li sourcefile="articles/api-reference.md" sourcestartlinenumber="732"><code sourcefile="articles/api-reference.md" sourcestartlinenumber="732">404 Not Found</code>: Resource not found</li>
+<li sourcefile="articles/api-reference.md" sourcestartlinenumber="733"><code sourcefile="articles/api-reference.md" sourcestartlinenumber="733">409 Conflict</code>: Resource conflict</li>
+<li sourcefile="articles/api-reference.md" sourcestartlinenumber="734"><code sourcefile="articles/api-reference.md" sourcestartlinenumber="734">422 Unprocessable Entity</code>: Validation error</li>
+<li sourcefile="articles/api-reference.md" sourcestartlinenumber="735"><code sourcefile="articles/api-reference.md" sourcestartlinenumber="735">500 Internal Server Error</code>: Server error</li>
+<li sourcefile="articles/api-reference.md" sourcestartlinenumber="736"><code sourcefile="articles/api-reference.md" sourcestartlinenumber="736">503 Service Unavailable</code>: Service temporarily unavailable</li>
+</ul>
+<h2 id="-rate-limiting" sourcefile="articles/api-reference.md" sourcestartlinenumber="738">📊 Rate Limiting</h2>
+<h3 id="default-limits" sourcefile="articles/api-reference.md" sourcestartlinenumber="740"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="740">Default Limits</strong></h3>
+<ul sourcefile="articles/api-reference.md" sourcestartlinenumber="741">
+<li sourcefile="articles/api-reference.md" sourcestartlinenumber="741"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="741">Azure AI API</strong>: 100 requests per minute</li>
+<li sourcefile="articles/api-reference.md" sourcestartlinenumber="742"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="742">Evolution API</strong>: 10 requests per minute</li>
+<li sourcefile="articles/api-reference.md" sourcestartlinenumber="743"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="743">Code Generation</strong>: 20 requests per minute</li>
+<li sourcefile="articles/api-reference.md" sourcestartlinenumber="744"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="744">Memory API</strong>: 50 requests per minute</li>
+<li sourcefile="articles/api-reference.md" sourcestartlinenumber="745"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="745">Generic API</strong>: 200 requests per minute</li>
+</ul>
+<h3 id="rate-limit-headers" sourcefile="articles/api-reference.md" sourcestartlinenumber="747"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="747">Rate Limit Headers</strong></h3>
+<pre><code sourcefile="articles/api-reference.md" sourcestartlinenumber="748">X-RateLimit-Limit: 100
+X-RateLimit-Remaining: 95
+X-RateLimit-Reset: 1642723200
+</code></pre>
+<hr sourcefile="articles/api-reference.md" sourcestartlinenumber="754">
+<blockquote sourcefile="articles/api-reference.md" sourcestartlinenumber="756">
+<p sourcefile="articles/api-reference.md" sourcestartlinenumber="756"><strong sourcefile="articles/api-reference.md" sourcestartlinenumber="756">This comprehensive API enables full interaction with the strange loop system, providing the foundation for autonomous software evolution.</strong></p>
+</blockquote>
+<p sourcefile="articles/api-reference.md" sourcestartlinenumber="758">The foundation is solid and ready for the next phase of testing and evolution! 🎯</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/docs/articles/api-reference.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

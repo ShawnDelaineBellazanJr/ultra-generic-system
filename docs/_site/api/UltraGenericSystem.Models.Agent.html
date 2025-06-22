@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class Agent </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class Agent ">
+    
+    <meta name="description" content="Represents an AI agent in the system">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="UltraGenericSystem.Models.Agent">
+
+
+
+  <h1 id="UltraGenericSystem_Models_Agent" data-uid="UltraGenericSystem.Models.Agent" class="text-break">Class Agent</h1>
+  <div class="markdown level0 summary"><p sourcefile="api/UltraGenericSystem.Models.Agent.yml" sourcestartlinenumber="1">Represents an AI agent in the system</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><a class="xref" href="UltraGenericSystem.Models.BaseEntity.html">BaseEntity</a></div>
+    <div class="level2"><span class="xref">Agent</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_Id">BaseEntity.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_CreatedAt">BaseEntity.CreatedAt</a>
+    </div>
+    <div>
+      <a class="xref" href="UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_UpdatedAt">BaseEntity.UpdatedAt</a>
+    </div>
+    <div>
+      <a class="xref" href="UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_CreatedBy">BaseEntity.CreatedBy</a>
+    </div>
+    <div>
+      <a class="xref" href="UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_IsDeleted">BaseEntity.IsDeleted</a>
+    </div>
+    <div>
+      <a class="xref" href="UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_Metadata">BaseEntity.Metadata</a>
+    </div>
+    <div>
+      <a class="xref" href="UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_EntityType">BaseEntity.EntityType</a>
+    </div>
+    <div>
+      <a class="xref" href="UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_Tags">BaseEntity.Tags</a>
+    </div>
+    <div>
+      <a class="xref" href="UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_Description">BaseEntity.Description</a>
+    </div>
+    <div>
+      <a class="xref" href="UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_OnCreated_System_String_">BaseEntity.OnCreated(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_OnUpdated">BaseEntity.OnUpdated()</a>
+    </div>
+    <div>
+      <a class="xref" href="UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_OnDeleted">BaseEntity.OnDeleted()</a>
+    </div>
+    <div>
+      <a class="xref" href="UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_UpdateTimestamp">BaseEntity.UpdateTimestamp()</a>
+    </div>
+    <div>
+      <a class="xref" href="UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_MarkAsDeleted">BaseEntity.MarkAsDeleted()</a>
+    </div>
+    <div>
+      <a class="xref" href="UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_Restore">BaseEntity.Restore()</a>
+    </div>
+    <div>
+      <a class="xref" href="UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_AddMetadata_System_String_System_Object_">BaseEntity.AddMetadata(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_GetMetadata__1_System_String_">BaseEntity.GetMetadata&lt;T&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_AddTags_System_String___">BaseEntity.AddTags(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_RemoveTags_System_String___">BaseEntity.RemoveTags(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="UltraGenericSystem.html">UltraGenericSystem</a>.<a class="xref" href="UltraGenericSystem.Models.html">Models</a></h6>
+  <h6><strong>Assembly</strong>: UltraGenericSystem.dll</h6>
+  <h5 id="UltraGenericSystem_Models_Agent_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Agent : BaseEntity</code></pre>
+  </div>
+  <h3 id="properties">Properties
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Models_Agent_Configuration.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Models.Agent.Configuration%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Models/DomainModels.cs/#L34">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Models_Agent_Configuration_" data-uid="UltraGenericSystem.Models.Agent.Configuration*"></a>
+  <h4 id="UltraGenericSystem_Models_Agent_Configuration" data-uid="UltraGenericSystem.Models.Agent.Configuration">Configuration</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Models.Agent.yml" sourcestartlinenumber="1">JSON configuration for the agent</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Configuration { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Models_Agent_Executions.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Models.Agent.Executions%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Models/DomainModels.cs/#L71">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Models_Agent_Executions_" data-uid="UltraGenericSystem.Models.Agent.Executions*"></a>
+  <h4 id="UltraGenericSystem_Models_Agent_Executions" data-uid="UltraGenericSystem.Models.Agent.Executions">Executions</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Models.Agent.yml" sourcestartlinenumber="1">Executions performed by this agent</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ICollection&lt;AgentExecution&gt; Executions { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="UltraGenericSystem.Models.AgentExecution.html">AgentExecution</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Models_Agent_IsActive.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Models.Agent.IsActive%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Models/DomainModels.cs/#L45">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Models_Agent_IsActive_" data-uid="UltraGenericSystem.Models.Agent.IsActive*"></a>
+  <h4 id="UltraGenericSystem_Models_Agent_IsActive" data-uid="UltraGenericSystem.Models.Agent.IsActive">IsActive</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Models.Agent.yml" sourcestartlinenumber="1">Whether the agent is currently active</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsActive { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Models_Agent_LastActive.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Models.Agent.LastActive%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Models/DomainModels.cs/#L56">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Models_Agent_LastActive_" data-uid="UltraGenericSystem.Models.Agent.LastActive*"></a>
+  <h4 id="UltraGenericSystem_Models_Agent_LastActive" data-uid="UltraGenericSystem.Models.Agent.LastActive">LastActive</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Models.Agent.yml" sourcestartlinenumber="1">Last time the agent was active</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime? LastActive { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Models_Agent_Name.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Models.Agent.Name%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Models/DomainModels.cs/#L14">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Models_Agent_Name_" data-uid="UltraGenericSystem.Models.Agent.Name*"></a>
+  <h4 id="UltraGenericSystem_Models_Agent_Name" data-uid="UltraGenericSystem.Models.Agent.Name">Name</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Models.Agent.yml" sourcestartlinenumber="1">Name of the agent</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Required]
+[StringLength(100)]
+public string Name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Models_Agent_PromptTemplatePath.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Models.Agent.PromptTemplatePath%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Models/DomainModels.cs/#L28">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Models_Agent_PromptTemplatePath_" data-uid="UltraGenericSystem.Models.Agent.PromptTemplatePath*"></a>
+  <h4 id="UltraGenericSystem_Models_Agent_PromptTemplatePath" data-uid="UltraGenericSystem.Models.Agent.PromptTemplatePath">PromptTemplatePath</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Models.Agent.yml" sourcestartlinenumber="1">Path to the prompt template file</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[StringLength(500)]
+public string PromptTemplatePath { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Models_Agent_Skills.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Models.Agent.Skills%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Models/DomainModels.cs/#L61">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Models_Agent_Skills_" data-uid="UltraGenericSystem.Models.Agent.Skills*"></a>
+  <h4 id="UltraGenericSystem_Models_Agent_Skills" data-uid="UltraGenericSystem.Models.Agent.Skills">Skills</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Models.Agent.yml" sourcestartlinenumber="1">Skills associated with this agent</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ICollection&lt;Skill&gt; Skills { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="UltraGenericSystem.Models.Skill.html">Skill</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Models_Agent_Status.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Models.Agent.Status%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Models/DomainModels.cs/#L50">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Models_Agent_Status_" data-uid="UltraGenericSystem.Models.Agent.Status*"></a>
+  <h4 id="UltraGenericSystem_Models_Agent_Status" data-uid="UltraGenericSystem.Models.Agent.Status">Status</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Models.Agent.yml" sourcestartlinenumber="1">Agent's current status</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[StringLength(20)]
+public string Status { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Models_Agent_Threads.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Models.Agent.Threads%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Models/DomainModels.cs/#L66">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Models_Agent_Threads_" data-uid="UltraGenericSystem.Models.Agent.Threads*"></a>
+  <h4 id="UltraGenericSystem_Models_Agent_Threads" data-uid="UltraGenericSystem.Models.Agent.Threads">Threads</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Models.Agent.yml" sourcestartlinenumber="1">Threads created by this agent</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ICollection&lt;AgentThread&gt; Threads { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="UltraGenericSystem.Models.AgentThread.html">AgentThread</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Models_Agent_Type.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Models.Agent.Type%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Models/DomainModels.cs/#L21">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Models_Agent_Type_" data-uid="UltraGenericSystem.Models.Agent.Type*"></a>
+  <h4 id="UltraGenericSystem_Models_Agent_Type" data-uid="UltraGenericSystem.Models.Agent.Type">Type</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Models.Agent.yml" sourcestartlinenumber="1">Type/category of the agent</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Required]
+[StringLength(50)]
+public string Type { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Models_Agent_Version.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Models.Agent.Version%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Models/DomainModels.cs/#L39">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Models_Agent_Version_" data-uid="UltraGenericSystem.Models.Agent.Version*"></a>
+  <h4 id="UltraGenericSystem_Models_Agent_Version" data-uid="UltraGenericSystem.Models.Agent.Version">Version</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Models.Agent.yml" sourcestartlinenumber="1">Version of the agent</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[StringLength(20)]
+public string Version { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Models_Agent.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Models.Agent%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Models/DomainModels.cs/#L9" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

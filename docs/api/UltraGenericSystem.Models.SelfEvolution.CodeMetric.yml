@@ -1,0 +1,510 @@
+### YamlMime:ManagedReference
+items:
+- uid: UltraGenericSystem.Models.SelfEvolution.CodeMetric
+  commentId: T:UltraGenericSystem.Models.SelfEvolution.CodeMetric
+  id: CodeMetric
+  parent: UltraGenericSystem.Models.SelfEvolution
+  children:
+  - UltraGenericSystem.Models.SelfEvolution.CodeMetric.Category
+  - UltraGenericSystem.Models.SelfEvolution.CodeMetric.Description
+  - UltraGenericSystem.Models.SelfEvolution.CodeMetric.Name
+  - UltraGenericSystem.Models.SelfEvolution.CodeMetric.Unit
+  - UltraGenericSystem.Models.SelfEvolution.CodeMetric.Value
+  langs:
+  - csharp
+  - vb
+  name: CodeMetric
+  nameWithType: CodeMetric
+  fullName: UltraGenericSystem.Models.SelfEvolution.CodeMetric
+  type: Class
+  source:
+    remote:
+      path: Models/SelfEvolution/CodeGenerationModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: CodeMetric
+    path: ../Models/SelfEvolution/CodeGenerationModels.cs
+    startLine: 190
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models.SelfEvolution
+  summary: Code metric information
+  example: []
+  syntax:
+    content: public class CodeMetric
+    content.vb: Public Class CodeMetric
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: UltraGenericSystem.Models.SelfEvolution.CodeMetric.Name
+  commentId: P:UltraGenericSystem.Models.SelfEvolution.CodeMetric.Name
+  id: Name
+  parent: UltraGenericSystem.Models.SelfEvolution.CodeMetric
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: CodeMetric.Name
+  fullName: UltraGenericSystem.Models.SelfEvolution.CodeMetric.Name
+  type: Property
+  source:
+    remote:
+      path: Models/SelfEvolution/CodeGenerationModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Name
+    path: ../Models/SelfEvolution/CodeGenerationModels.cs
+    startLine: 192
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models.SelfEvolution
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: UltraGenericSystem.Models.SelfEvolution.CodeMetric.Name*
+- uid: UltraGenericSystem.Models.SelfEvolution.CodeMetric.Value
+  commentId: P:UltraGenericSystem.Models.SelfEvolution.CodeMetric.Value
+  id: Value
+  parent: UltraGenericSystem.Models.SelfEvolution.CodeMetric
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: CodeMetric.Value
+  fullName: UltraGenericSystem.Models.SelfEvolution.CodeMetric.Value
+  type: Property
+  source:
+    remote:
+      path: Models/SelfEvolution/CodeGenerationModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Value
+    path: ../Models/SelfEvolution/CodeGenerationModels.cs
+    startLine: 194
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models.SelfEvolution
+  syntax:
+    content: public double Value { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Value As Double
+  overload: UltraGenericSystem.Models.SelfEvolution.CodeMetric.Value*
+- uid: UltraGenericSystem.Models.SelfEvolution.CodeMetric.Unit
+  commentId: P:UltraGenericSystem.Models.SelfEvolution.CodeMetric.Unit
+  id: Unit
+  parent: UltraGenericSystem.Models.SelfEvolution.CodeMetric
+  langs:
+  - csharp
+  - vb
+  name: Unit
+  nameWithType: CodeMetric.Unit
+  fullName: UltraGenericSystem.Models.SelfEvolution.CodeMetric.Unit
+  type: Property
+  source:
+    remote:
+      path: Models/SelfEvolution/CodeGenerationModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Unit
+    path: ../Models/SelfEvolution/CodeGenerationModels.cs
+    startLine: 196
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models.SelfEvolution
+  syntax:
+    content: public string Unit { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Unit As String
+  overload: UltraGenericSystem.Models.SelfEvolution.CodeMetric.Unit*
+- uid: UltraGenericSystem.Models.SelfEvolution.CodeMetric.Description
+  commentId: P:UltraGenericSystem.Models.SelfEvolution.CodeMetric.Description
+  id: Description
+  parent: UltraGenericSystem.Models.SelfEvolution.CodeMetric
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: CodeMetric.Description
+  fullName: UltraGenericSystem.Models.SelfEvolution.CodeMetric.Description
+  type: Property
+  source:
+    remote:
+      path: Models/SelfEvolution/CodeGenerationModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Description
+    path: ../Models/SelfEvolution/CodeGenerationModels.cs
+    startLine: 198
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models.SelfEvolution
+  syntax:
+    content: public string Description { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: UltraGenericSystem.Models.SelfEvolution.CodeMetric.Description*
+- uid: UltraGenericSystem.Models.SelfEvolution.CodeMetric.Category
+  commentId: P:UltraGenericSystem.Models.SelfEvolution.CodeMetric.Category
+  id: Category
+  parent: UltraGenericSystem.Models.SelfEvolution.CodeMetric
+  langs:
+  - csharp
+  - vb
+  name: Category
+  nameWithType: CodeMetric.Category
+  fullName: UltraGenericSystem.Models.SelfEvolution.CodeMetric.Category
+  type: Property
+  source:
+    remote:
+      path: Models/SelfEvolution/CodeGenerationModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Category
+    path: ../Models/SelfEvolution/CodeGenerationModels.cs
+    startLine: 200
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models.SelfEvolution
+  syntax:
+    content: public string Category { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Category As String
+  overload: UltraGenericSystem.Models.SelfEvolution.CodeMetric.Category*
+references:
+- uid: UltraGenericSystem.Models.SelfEvolution
+  commentId: N:UltraGenericSystem.Models.SelfEvolution
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Models.SelfEvolution
+  nameWithType: UltraGenericSystem.Models.SelfEvolution
+  fullName: UltraGenericSystem.Models.SelfEvolution
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+  - name: .
+  - uid: UltraGenericSystem.Models.SelfEvolution
+    name: SelfEvolution
+    href: UltraGenericSystem.Models.SelfEvolution.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+  - name: .
+  - uid: UltraGenericSystem.Models.SelfEvolution
+    name: SelfEvolution
+    href: UltraGenericSystem.Models.SelfEvolution.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UltraGenericSystem.Models.SelfEvolution.CodeMetric.Name*
+  commentId: Overload:UltraGenericSystem.Models.SelfEvolution.CodeMetric.Name
+  href: UltraGenericSystem.Models.SelfEvolution.CodeMetric.html#UltraGenericSystem_Models_SelfEvolution_CodeMetric_Name
+  name: Name
+  nameWithType: CodeMetric.Name
+  fullName: UltraGenericSystem.Models.SelfEvolution.CodeMetric.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: UltraGenericSystem.Models.SelfEvolution.CodeMetric.Value*
+  commentId: Overload:UltraGenericSystem.Models.SelfEvolution.CodeMetric.Value
+  href: UltraGenericSystem.Models.SelfEvolution.CodeMetric.html#UltraGenericSystem_Models_SelfEvolution_CodeMetric_Value
+  name: Value
+  nameWithType: CodeMetric.Value
+  fullName: UltraGenericSystem.Models.SelfEvolution.CodeMetric.Value
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: UltraGenericSystem.Models.SelfEvolution.CodeMetric.Unit*
+  commentId: Overload:UltraGenericSystem.Models.SelfEvolution.CodeMetric.Unit
+  href: UltraGenericSystem.Models.SelfEvolution.CodeMetric.html#UltraGenericSystem_Models_SelfEvolution_CodeMetric_Unit
+  name: Unit
+  nameWithType: CodeMetric.Unit
+  fullName: UltraGenericSystem.Models.SelfEvolution.CodeMetric.Unit
+- uid: UltraGenericSystem.Models.SelfEvolution.CodeMetric.Description*
+  commentId: Overload:UltraGenericSystem.Models.SelfEvolution.CodeMetric.Description
+  href: UltraGenericSystem.Models.SelfEvolution.CodeMetric.html#UltraGenericSystem_Models_SelfEvolution_CodeMetric_Description
+  name: Description
+  nameWithType: CodeMetric.Description
+  fullName: UltraGenericSystem.Models.SelfEvolution.CodeMetric.Description
+- uid: UltraGenericSystem.Models.SelfEvolution.CodeMetric.Category*
+  commentId: Overload:UltraGenericSystem.Models.SelfEvolution.CodeMetric.Category
+  href: UltraGenericSystem.Models.SelfEvolution.CodeMetric.html#UltraGenericSystem_Models_SelfEvolution_CodeMetric_Category
+  name: Category
+  nameWithType: CodeMetric.Category
+  fullName: UltraGenericSystem.Models.SelfEvolution.CodeMetric.Category

@@ -1,0 +1,14 @@
+- name: Documentation Overview
+  href: index.md
+- name: Architecture Overview
+  href: architecture.md
+- name: Strange Loop Process
+  href: strange-loop-process.md
+- name: Azure AI Integration
+  href: azure-ai-integration.md
+- name: Getting Started
+  href: getting-started.md
+- name: Testing Guide
+  href: testing-guide.md
+- name: API Reference
+  href: api-reference.md 

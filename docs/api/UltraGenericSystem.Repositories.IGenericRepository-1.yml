@@ -1,0 +1,1742 @@
+### YamlMime:ManagedReference
+items:
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1
+  commentId: T:UltraGenericSystem.Repositories.IGenericRepository`1
+  id: IGenericRepository`1
+  parent: UltraGenericSystem.Repositories
+  children:
+  - UltraGenericSystem.Repositories.IGenericRepository`1.CountAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Threading.CancellationToken)
+  - UltraGenericSystem.Repositories.IGenericRepository`1.CountAsync(System.Threading.CancellationToken)
+  - UltraGenericSystem.Repositories.IGenericRepository`1.CreateAsync(`0,System.Threading.CancellationToken)
+  - UltraGenericSystem.Repositories.IGenericRepository`1.DeleteAsync(System.Guid,System.Threading.CancellationToken)
+  - UltraGenericSystem.Repositories.IGenericRepository`1.ExistsAsync(System.Guid,System.Threading.CancellationToken)
+  - UltraGenericSystem.Repositories.IGenericRepository`1.ExistsAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Threading.CancellationToken)
+  - UltraGenericSystem.Repositories.IGenericRepository`1.GetAllAsync(System.Threading.CancellationToken)
+  - UltraGenericSystem.Repositories.IGenericRepository`1.GetByCreatedByAsync(System.String,System.Threading.CancellationToken)
+  - UltraGenericSystem.Repositories.IGenericRepository`1.GetByDateRangeAsync(System.DateTime,System.DateTime,System.Threading.CancellationToken)
+  - UltraGenericSystem.Repositories.IGenericRepository`1.GetByIdAsync(System.Guid,System.Threading.CancellationToken)
+  - UltraGenericSystem.Repositories.IGenericRepository`1.GetByMetadataAsync(System.String,System.Object,System.Threading.CancellationToken)
+  - UltraGenericSystem.Repositories.IGenericRepository`1.GetByTagAsync(System.String,System.Threading.CancellationToken)
+  - UltraGenericSystem.Repositories.IGenericRepository`1.GetByTagsAsync(System.String[],System.Threading.CancellationToken)
+  - UltraGenericSystem.Repositories.IGenericRepository`1.GetByUpdatedDateRangeAsync(System.DateTime,System.DateTime,System.Threading.CancellationToken)
+  - UltraGenericSystem.Repositories.IGenericRepository`1.GetDeletedAsync(System.Threading.CancellationToken)
+  - UltraGenericSystem.Repositories.IGenericRepository`1.GetPagedAsync(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Threading.CancellationToken)
+  - UltraGenericSystem.Repositories.IGenericRepository`1.GetQueryable
+  - UltraGenericSystem.Repositories.IGenericRepository`1.HardDeleteAsync(System.Guid,System.Threading.CancellationToken)
+  - UltraGenericSystem.Repositories.IGenericRepository`1.QueryAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Threading.CancellationToken)
+  - UltraGenericSystem.Repositories.IGenericRepository`1.RestoreAsync(System.Guid,System.Threading.CancellationToken)
+  - UltraGenericSystem.Repositories.IGenericRepository`1.UpdateAsync(`0,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: IGenericRepository<T>
+  nameWithType: IGenericRepository<T>
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>
+  type: Interface
+  source:
+    remote:
+      path: Repositories/IGenericRepository.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: IGenericRepository
+    path: ../Repositories/IGenericRepository.cs
+    startLine: 9
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Repositories
+  summary: Generic repository interface for all entities in the ultra-generic system
+  example: []
+  syntax:
+    content: 'public interface IGenericRepository<T> where T : BaseEntity'
+    typeParameters:
+    - id: T
+      description: The entity type that inherits from BaseEntity
+    content.vb: Public Interface IGenericRepository(Of T As BaseEntity)
+  nameWithType.vb: IGenericRepository(Of T)
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T)
+  name.vb: IGenericRepository(Of T)
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.GetByIdAsync(System.Guid,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Repositories.IGenericRepository`1.GetByIdAsync(System.Guid,System.Threading.CancellationToken)
+  id: GetByIdAsync(System.Guid,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Repositories.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: GetByIdAsync(Guid, CancellationToken)
+  nameWithType: IGenericRepository<T>.GetByIdAsync(Guid, CancellationToken)
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.GetByIdAsync(System.Guid, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Repositories/IGenericRepository.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetByIdAsync
+    path: ../Repositories/IGenericRepository.cs
+    startLine: 14
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Repositories
+  summary: Gets an entity by its ID
+  example: []
+  syntax:
+    content: Task<T?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default)
+    parameters:
+    - id: id
+      type: System.Guid
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{{T}}
+    content.vb: Function GetByIdAsync(id As Guid, cancellationToken As CancellationToken = Nothing) As Task(Of T)
+  overload: UltraGenericSystem.Repositories.IGenericRepository`1.GetByIdAsync*
+  nameWithType.vb: IGenericRepository(Of T).GetByIdAsync(Guid, CancellationToken)
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).GetByIdAsync(System.Guid, System.Threading.CancellationToken)
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.GetAllAsync(System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Repositories.IGenericRepository`1.GetAllAsync(System.Threading.CancellationToken)
+  id: GetAllAsync(System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Repositories.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: GetAllAsync(CancellationToken)
+  nameWithType: IGenericRepository<T>.GetAllAsync(CancellationToken)
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.GetAllAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Repositories/IGenericRepository.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetAllAsync
+    path: ../Repositories/IGenericRepository.cs
+    startLine: 19
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Repositories
+  summary: Gets all non-deleted entities
+  example: []
+  syntax:
+    content: Task<IEnumerable<T>> GetAllAsync(CancellationToken cancellationToken = default)
+    parameters:
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{{T}}}
+    content.vb: Function GetAllAsync(cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of T))
+  overload: UltraGenericSystem.Repositories.IGenericRepository`1.GetAllAsync*
+  nameWithType.vb: IGenericRepository(Of T).GetAllAsync(CancellationToken)
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).GetAllAsync(System.Threading.CancellationToken)
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.CreateAsync(`0,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Repositories.IGenericRepository`1.CreateAsync(`0,System.Threading.CancellationToken)
+  id: CreateAsync(`0,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Repositories.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: CreateAsync(T, CancellationToken)
+  nameWithType: IGenericRepository<T>.CreateAsync(T, CancellationToken)
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.CreateAsync(T, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Repositories/IGenericRepository.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: CreateAsync
+    path: ../Repositories/IGenericRepository.cs
+    startLine: 24
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Repositories
+  summary: Creates a new entity
+  example: []
+  syntax:
+    content: Task<T> CreateAsync(T entity, CancellationToken cancellationToken = default)
+    parameters:
+    - id: entity
+      type: '{T}'
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{{T}}
+    content.vb: Function CreateAsync(entity As T, cancellationToken As CancellationToken = Nothing) As Task(Of T)
+  overload: UltraGenericSystem.Repositories.IGenericRepository`1.CreateAsync*
+  nameWithType.vb: IGenericRepository(Of T).CreateAsync(T, CancellationToken)
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).CreateAsync(T, System.Threading.CancellationToken)
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.UpdateAsync(`0,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Repositories.IGenericRepository`1.UpdateAsync(`0,System.Threading.CancellationToken)
+  id: UpdateAsync(`0,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Repositories.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: UpdateAsync(T, CancellationToken)
+  nameWithType: IGenericRepository<T>.UpdateAsync(T, CancellationToken)
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.UpdateAsync(T, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Repositories/IGenericRepository.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: UpdateAsync
+    path: ../Repositories/IGenericRepository.cs
+    startLine: 29
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Repositories
+  summary: Updates an existing entity
+  example: []
+  syntax:
+    content: Task<T> UpdateAsync(T entity, CancellationToken cancellationToken = default)
+    parameters:
+    - id: entity
+      type: '{T}'
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{{T}}
+    content.vb: Function UpdateAsync(entity As T, cancellationToken As CancellationToken = Nothing) As Task(Of T)
+  overload: UltraGenericSystem.Repositories.IGenericRepository`1.UpdateAsync*
+  nameWithType.vb: IGenericRepository(Of T).UpdateAsync(T, CancellationToken)
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).UpdateAsync(T, System.Threading.CancellationToken)
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.DeleteAsync(System.Guid,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Repositories.IGenericRepository`1.DeleteAsync(System.Guid,System.Threading.CancellationToken)
+  id: DeleteAsync(System.Guid,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Repositories.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: DeleteAsync(Guid, CancellationToken)
+  nameWithType: IGenericRepository<T>.DeleteAsync(Guid, CancellationToken)
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.DeleteAsync(System.Guid, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Repositories/IGenericRepository.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: DeleteAsync
+    path: ../Repositories/IGenericRepository.cs
+    startLine: 34
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Repositories
+  summary: Soft deletes an entity by ID
+  example: []
+  syntax:
+    content: Task DeleteAsync(Guid id, CancellationToken cancellationToken = default)
+    parameters:
+    - id: id
+      type: System.Guid
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function DeleteAsync(id As Guid, cancellationToken As CancellationToken = Nothing) As Task
+  overload: UltraGenericSystem.Repositories.IGenericRepository`1.DeleteAsync*
+  nameWithType.vb: IGenericRepository(Of T).DeleteAsync(Guid, CancellationToken)
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).DeleteAsync(System.Guid, System.Threading.CancellationToken)
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.HardDeleteAsync(System.Guid,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Repositories.IGenericRepository`1.HardDeleteAsync(System.Guid,System.Threading.CancellationToken)
+  id: HardDeleteAsync(System.Guid,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Repositories.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: HardDeleteAsync(Guid, CancellationToken)
+  nameWithType: IGenericRepository<T>.HardDeleteAsync(Guid, CancellationToken)
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.HardDeleteAsync(System.Guid, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Repositories/IGenericRepository.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: HardDeleteAsync
+    path: ../Repositories/IGenericRepository.cs
+    startLine: 39
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Repositories
+  summary: Hard deletes an entity by ID
+  example: []
+  syntax:
+    content: Task HardDeleteAsync(Guid id, CancellationToken cancellationToken = default)
+    parameters:
+    - id: id
+      type: System.Guid
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function HardDeleteAsync(id As Guid, cancellationToken As CancellationToken = Nothing) As Task
+  overload: UltraGenericSystem.Repositories.IGenericRepository`1.HardDeleteAsync*
+  nameWithType.vb: IGenericRepository(Of T).HardDeleteAsync(Guid, CancellationToken)
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).HardDeleteAsync(System.Guid, System.Threading.CancellationToken)
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.QueryAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Repositories.IGenericRepository`1.QueryAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Threading.CancellationToken)
+  id: QueryAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Repositories.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: QueryAsync(Expression<Func<T, bool>>, CancellationToken)
+  nameWithType: IGenericRepository<T>.QueryAsync(Expression<Func<T, bool>>, CancellationToken)
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.QueryAsync(System.Linq.Expressions.Expression<System.Func<T, bool>>, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Repositories/IGenericRepository.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: QueryAsync
+    path: ../Repositories/IGenericRepository.cs
+    startLine: 44
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Repositories
+  summary: Queries entities using a predicate
+  example: []
+  syntax:
+    content: Task<IEnumerable<T>> QueryAsync(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken = default)
+    parameters:
+    - id: predicate
+      type: System.Linq.Expressions.Expression{System.Func{{T},System.Boolean}}
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{{T}}}
+    content.vb: Function QueryAsync(predicate As Expression(Of Func(Of T, Boolean)), cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of T))
+  overload: UltraGenericSystem.Repositories.IGenericRepository`1.QueryAsync*
+  nameWithType.vb: IGenericRepository(Of T).QueryAsync(Expression(Of Func(Of T, Boolean)), CancellationToken)
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).QueryAsync(System.Linq.Expressions.Expression(Of System.Func(Of T, Boolean)), System.Threading.CancellationToken)
+  name.vb: QueryAsync(Expression(Of Func(Of T, Boolean)), CancellationToken)
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.GetPagedAsync(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Repositories.IGenericRepository`1.GetPagedAsync(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Threading.CancellationToken)
+  id: GetPagedAsync(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Repositories.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: GetPagedAsync(int, int, Expression<Func<T, bool>>?, Func<IQueryable<T>, IOrderedQueryable<T>>?, CancellationToken)
+  nameWithType: IGenericRepository<T>.GetPagedAsync(int, int, Expression<Func<T, bool>>?, Func<IQueryable<T>, IOrderedQueryable<T>>?, CancellationToken)
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.GetPagedAsync(int, int, System.Linq.Expressions.Expression<System.Func<T, bool>>?, System.Func<System.Linq.IQueryable<T>, System.Linq.IOrderedQueryable<T>>?, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Repositories/IGenericRepository.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetPagedAsync
+    path: ../Repositories/IGenericRepository.cs
+    startLine: 49
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Repositories
+  summary: Gets entities with pagination
+  example: []
+  syntax:
+    content: Task<(IEnumerable<T> Items, int TotalCount)> GetPagedAsync(int pageNumber, int pageSize, Expression<Func<T, bool>>? predicate = null, Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null, CancellationToken cancellationToken = default)
+    parameters:
+    - id: pageNumber
+      type: System.Int32
+    - id: pageSize
+      type: System.Int32
+    - id: predicate
+      type: System.Linq.Expressions.Expression{System.Func{{T},System.Boolean}}
+    - id: orderBy
+      type: System.Func{System.Linq.IQueryable{{T}},System.Linq.IOrderedQueryable{{T}}}
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{System.ValueTuple{System.Collections.Generic.IEnumerable{{T}},System.Int32}}
+    content.vb: Function GetPagedAsync(pageNumber As Integer, pageSize As Integer, predicate As Expression(Of Func(Of T, Boolean)) = Nothing, orderBy As Func(Of IQueryable(Of T), IOrderedQueryable(Of T)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of (Items As IEnumerable(Of T), TotalCount As Integer))
+  overload: UltraGenericSystem.Repositories.IGenericRepository`1.GetPagedAsync*
+  nameWithType.vb: IGenericRepository(Of T).GetPagedAsync(Integer, Integer, Expression(Of Func(Of T, Boolean)), Func(Of IQueryable(Of T), IOrderedQueryable(Of T)), CancellationToken)
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).GetPagedAsync(Integer, Integer, System.Linq.Expressions.Expression(Of System.Func(Of T, Boolean)), System.Func(Of System.Linq.IQueryable(Of T), System.Linq.IOrderedQueryable(Of T)), System.Threading.CancellationToken)
+  name.vb: GetPagedAsync(Integer, Integer, Expression(Of Func(Of T, Boolean)), Func(Of IQueryable(Of T), IOrderedQueryable(Of T)), CancellationToken)
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.CountAsync(System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Repositories.IGenericRepository`1.CountAsync(System.Threading.CancellationToken)
+  id: CountAsync(System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Repositories.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: CountAsync(CancellationToken)
+  nameWithType: IGenericRepository<T>.CountAsync(CancellationToken)
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.CountAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Repositories/IGenericRepository.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: CountAsync
+    path: ../Repositories/IGenericRepository.cs
+    startLine: 59
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Repositories
+  summary: Counts all non-deleted entities
+  example: []
+  syntax:
+    content: Task<int> CountAsync(CancellationToken cancellationToken = default)
+    parameters:
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{System.Int32}
+    content.vb: Function CountAsync(cancellationToken As CancellationToken = Nothing) As Task(Of Integer)
+  overload: UltraGenericSystem.Repositories.IGenericRepository`1.CountAsync*
+  nameWithType.vb: IGenericRepository(Of T).CountAsync(CancellationToken)
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).CountAsync(System.Threading.CancellationToken)
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.CountAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Repositories.IGenericRepository`1.CountAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Threading.CancellationToken)
+  id: CountAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Repositories.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: CountAsync(Expression<Func<T, bool>>, CancellationToken)
+  nameWithType: IGenericRepository<T>.CountAsync(Expression<Func<T, bool>>, CancellationToken)
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.CountAsync(System.Linq.Expressions.Expression<System.Func<T, bool>>, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Repositories/IGenericRepository.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: CountAsync
+    path: ../Repositories/IGenericRepository.cs
+    startLine: 64
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Repositories
+  summary: Counts entities matching a predicate
+  example: []
+  syntax:
+    content: Task<int> CountAsync(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken = default)
+    parameters:
+    - id: predicate
+      type: System.Linq.Expressions.Expression{System.Func{{T},System.Boolean}}
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{System.Int32}
+    content.vb: Function CountAsync(predicate As Expression(Of Func(Of T, Boolean)), cancellationToken As CancellationToken = Nothing) As Task(Of Integer)
+  overload: UltraGenericSystem.Repositories.IGenericRepository`1.CountAsync*
+  nameWithType.vb: IGenericRepository(Of T).CountAsync(Expression(Of Func(Of T, Boolean)), CancellationToken)
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).CountAsync(System.Linq.Expressions.Expression(Of System.Func(Of T, Boolean)), System.Threading.CancellationToken)
+  name.vb: CountAsync(Expression(Of Func(Of T, Boolean)), CancellationToken)
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.ExistsAsync(System.Guid,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Repositories.IGenericRepository`1.ExistsAsync(System.Guid,System.Threading.CancellationToken)
+  id: ExistsAsync(System.Guid,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Repositories.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: ExistsAsync(Guid, CancellationToken)
+  nameWithType: IGenericRepository<T>.ExistsAsync(Guid, CancellationToken)
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.ExistsAsync(System.Guid, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Repositories/IGenericRepository.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: ExistsAsync
+    path: ../Repositories/IGenericRepository.cs
+    startLine: 69
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Repositories
+  summary: Checks if an entity exists by ID
+  example: []
+  syntax:
+    content: Task<bool> ExistsAsync(Guid id, CancellationToken cancellationToken = default)
+    parameters:
+    - id: id
+      type: System.Guid
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Function ExistsAsync(id As Guid, cancellationToken As CancellationToken = Nothing) As Task(Of Boolean)
+  overload: UltraGenericSystem.Repositories.IGenericRepository`1.ExistsAsync*
+  nameWithType.vb: IGenericRepository(Of T).ExistsAsync(Guid, CancellationToken)
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).ExistsAsync(System.Guid, System.Threading.CancellationToken)
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.ExistsAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Repositories.IGenericRepository`1.ExistsAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Threading.CancellationToken)
+  id: ExistsAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Repositories.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: ExistsAsync(Expression<Func<T, bool>>, CancellationToken)
+  nameWithType: IGenericRepository<T>.ExistsAsync(Expression<Func<T, bool>>, CancellationToken)
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.ExistsAsync(System.Linq.Expressions.Expression<System.Func<T, bool>>, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Repositories/IGenericRepository.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: ExistsAsync
+    path: ../Repositories/IGenericRepository.cs
+    startLine: 74
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Repositories
+  summary: Checks if any entity matches a predicate
+  example: []
+  syntax:
+    content: Task<bool> ExistsAsync(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken = default)
+    parameters:
+    - id: predicate
+      type: System.Linq.Expressions.Expression{System.Func{{T},System.Boolean}}
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Function ExistsAsync(predicate As Expression(Of Func(Of T, Boolean)), cancellationToken As CancellationToken = Nothing) As Task(Of Boolean)
+  overload: UltraGenericSystem.Repositories.IGenericRepository`1.ExistsAsync*
+  nameWithType.vb: IGenericRepository(Of T).ExistsAsync(Expression(Of Func(Of T, Boolean)), CancellationToken)
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).ExistsAsync(System.Linq.Expressions.Expression(Of System.Func(Of T, Boolean)), System.Threading.CancellationToken)
+  name.vb: ExistsAsync(Expression(Of Func(Of T, Boolean)), CancellationToken)
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.GetByTagAsync(System.String,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Repositories.IGenericRepository`1.GetByTagAsync(System.String,System.Threading.CancellationToken)
+  id: GetByTagAsync(System.String,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Repositories.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: GetByTagAsync(string, CancellationToken)
+  nameWithType: IGenericRepository<T>.GetByTagAsync(string, CancellationToken)
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.GetByTagAsync(string, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Repositories/IGenericRepository.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetByTagAsync
+    path: ../Repositories/IGenericRepository.cs
+    startLine: 79
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Repositories
+  summary: Gets entities by tag
+  example: []
+  syntax:
+    content: Task<IEnumerable<T>> GetByTagAsync(string tag, CancellationToken cancellationToken = default)
+    parameters:
+    - id: tag
+      type: System.String
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{{T}}}
+    content.vb: Function GetByTagAsync(tag As String, cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of T))
+  overload: UltraGenericSystem.Repositories.IGenericRepository`1.GetByTagAsync*
+  nameWithType.vb: IGenericRepository(Of T).GetByTagAsync(String, CancellationToken)
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).GetByTagAsync(String, System.Threading.CancellationToken)
+  name.vb: GetByTagAsync(String, CancellationToken)
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.GetByTagsAsync(System.String[],System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Repositories.IGenericRepository`1.GetByTagsAsync(System.String[],System.Threading.CancellationToken)
+  id: GetByTagsAsync(System.String[],System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Repositories.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: GetByTagsAsync(string[], CancellationToken)
+  nameWithType: IGenericRepository<T>.GetByTagsAsync(string[], CancellationToken)
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.GetByTagsAsync(string[], System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Repositories/IGenericRepository.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetByTagsAsync
+    path: ../Repositories/IGenericRepository.cs
+    startLine: 84
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Repositories
+  summary: Gets entities by multiple tags
+  example: []
+  syntax:
+    content: Task<IEnumerable<T>> GetByTagsAsync(string[] tags, CancellationToken cancellationToken = default)
+    parameters:
+    - id: tags
+      type: System.String[]
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{{T}}}
+    content.vb: Function GetByTagsAsync(tags As String(), cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of T))
+  overload: UltraGenericSystem.Repositories.IGenericRepository`1.GetByTagsAsync*
+  nameWithType.vb: IGenericRepository(Of T).GetByTagsAsync(String(), CancellationToken)
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).GetByTagsAsync(String(), System.Threading.CancellationToken)
+  name.vb: GetByTagsAsync(String(), CancellationToken)
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.GetByCreatedByAsync(System.String,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Repositories.IGenericRepository`1.GetByCreatedByAsync(System.String,System.Threading.CancellationToken)
+  id: GetByCreatedByAsync(System.String,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Repositories.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: GetByCreatedByAsync(string, CancellationToken)
+  nameWithType: IGenericRepository<T>.GetByCreatedByAsync(string, CancellationToken)
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.GetByCreatedByAsync(string, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Repositories/IGenericRepository.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetByCreatedByAsync
+    path: ../Repositories/IGenericRepository.cs
+    startLine: 89
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Repositories
+  summary: Gets entities created by a specific user
+  example: []
+  syntax:
+    content: Task<IEnumerable<T>> GetByCreatedByAsync(string createdBy, CancellationToken cancellationToken = default)
+    parameters:
+    - id: createdBy
+      type: System.String
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{{T}}}
+    content.vb: Function GetByCreatedByAsync(createdBy As String, cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of T))
+  overload: UltraGenericSystem.Repositories.IGenericRepository`1.GetByCreatedByAsync*
+  nameWithType.vb: IGenericRepository(Of T).GetByCreatedByAsync(String, CancellationToken)
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).GetByCreatedByAsync(String, System.Threading.CancellationToken)
+  name.vb: GetByCreatedByAsync(String, CancellationToken)
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.GetByDateRangeAsync(System.DateTime,System.DateTime,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Repositories.IGenericRepository`1.GetByDateRangeAsync(System.DateTime,System.DateTime,System.Threading.CancellationToken)
+  id: GetByDateRangeAsync(System.DateTime,System.DateTime,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Repositories.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: GetByDateRangeAsync(DateTime, DateTime, CancellationToken)
+  nameWithType: IGenericRepository<T>.GetByDateRangeAsync(DateTime, DateTime, CancellationToken)
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.GetByDateRangeAsync(System.DateTime, System.DateTime, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Repositories/IGenericRepository.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetByDateRangeAsync
+    path: ../Repositories/IGenericRepository.cs
+    startLine: 94
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Repositories
+  summary: Gets entities created within a date range
+  example: []
+  syntax:
+    content: Task<IEnumerable<T>> GetByDateRangeAsync(DateTime startDate, DateTime endDate, CancellationToken cancellationToken = default)
+    parameters:
+    - id: startDate
+      type: System.DateTime
+    - id: endDate
+      type: System.DateTime
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{{T}}}
+    content.vb: Function GetByDateRangeAsync(startDate As Date, endDate As Date, cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of T))
+  overload: UltraGenericSystem.Repositories.IGenericRepository`1.GetByDateRangeAsync*
+  nameWithType.vb: IGenericRepository(Of T).GetByDateRangeAsync(Date, Date, CancellationToken)
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).GetByDateRangeAsync(Date, Date, System.Threading.CancellationToken)
+  name.vb: GetByDateRangeAsync(Date, Date, CancellationToken)
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.GetByUpdatedDateRangeAsync(System.DateTime,System.DateTime,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Repositories.IGenericRepository`1.GetByUpdatedDateRangeAsync(System.DateTime,System.DateTime,System.Threading.CancellationToken)
+  id: GetByUpdatedDateRangeAsync(System.DateTime,System.DateTime,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Repositories.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: GetByUpdatedDateRangeAsync(DateTime, DateTime, CancellationToken)
+  nameWithType: IGenericRepository<T>.GetByUpdatedDateRangeAsync(DateTime, DateTime, CancellationToken)
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.GetByUpdatedDateRangeAsync(System.DateTime, System.DateTime, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Repositories/IGenericRepository.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetByUpdatedDateRangeAsync
+    path: ../Repositories/IGenericRepository.cs
+    startLine: 99
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Repositories
+  summary: Gets entities updated within a date range
+  example: []
+  syntax:
+    content: Task<IEnumerable<T>> GetByUpdatedDateRangeAsync(DateTime startDate, DateTime endDate, CancellationToken cancellationToken = default)
+    parameters:
+    - id: startDate
+      type: System.DateTime
+    - id: endDate
+      type: System.DateTime
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{{T}}}
+    content.vb: Function GetByUpdatedDateRangeAsync(startDate As Date, endDate As Date, cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of T))
+  overload: UltraGenericSystem.Repositories.IGenericRepository`1.GetByUpdatedDateRangeAsync*
+  nameWithType.vb: IGenericRepository(Of T).GetByUpdatedDateRangeAsync(Date, Date, CancellationToken)
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).GetByUpdatedDateRangeAsync(Date, Date, System.Threading.CancellationToken)
+  name.vb: GetByUpdatedDateRangeAsync(Date, Date, CancellationToken)
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.GetByMetadataAsync(System.String,System.Object,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Repositories.IGenericRepository`1.GetByMetadataAsync(System.String,System.Object,System.Threading.CancellationToken)
+  id: GetByMetadataAsync(System.String,System.Object,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Repositories.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: GetByMetadataAsync(string, object, CancellationToken)
+  nameWithType: IGenericRepository<T>.GetByMetadataAsync(string, object, CancellationToken)
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.GetByMetadataAsync(string, object, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Repositories/IGenericRepository.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetByMetadataAsync
+    path: ../Repositories/IGenericRepository.cs
+    startLine: 104
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Repositories
+  summary: Gets entities with metadata containing a specific key-value pair
+  example: []
+  syntax:
+    content: Task<IEnumerable<T>> GetByMetadataAsync(string key, object value, CancellationToken cancellationToken = default)
+    parameters:
+    - id: key
+      type: System.String
+    - id: value
+      type: System.Object
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{{T}}}
+    content.vb: Function GetByMetadataAsync(key As String, value As Object, cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of T))
+  overload: UltraGenericSystem.Repositories.IGenericRepository`1.GetByMetadataAsync*
+  nameWithType.vb: IGenericRepository(Of T).GetByMetadataAsync(String, Object, CancellationToken)
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).GetByMetadataAsync(String, Object, System.Threading.CancellationToken)
+  name.vb: GetByMetadataAsync(String, Object, CancellationToken)
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.RestoreAsync(System.Guid,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Repositories.IGenericRepository`1.RestoreAsync(System.Guid,System.Threading.CancellationToken)
+  id: RestoreAsync(System.Guid,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Repositories.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: RestoreAsync(Guid, CancellationToken)
+  nameWithType: IGenericRepository<T>.RestoreAsync(Guid, CancellationToken)
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.RestoreAsync(System.Guid, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Repositories/IGenericRepository.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: RestoreAsync
+    path: ../Repositories/IGenericRepository.cs
+    startLine: 109
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Repositories
+  summary: Restores a soft-deleted entity
+  example: []
+  syntax:
+    content: Task RestoreAsync(Guid id, CancellationToken cancellationToken = default)
+    parameters:
+    - id: id
+      type: System.Guid
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function RestoreAsync(id As Guid, cancellationToken As CancellationToken = Nothing) As Task
+  overload: UltraGenericSystem.Repositories.IGenericRepository`1.RestoreAsync*
+  nameWithType.vb: IGenericRepository(Of T).RestoreAsync(Guid, CancellationToken)
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).RestoreAsync(System.Guid, System.Threading.CancellationToken)
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.GetDeletedAsync(System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Repositories.IGenericRepository`1.GetDeletedAsync(System.Threading.CancellationToken)
+  id: GetDeletedAsync(System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Repositories.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: GetDeletedAsync(CancellationToken)
+  nameWithType: IGenericRepository<T>.GetDeletedAsync(CancellationToken)
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.GetDeletedAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Repositories/IGenericRepository.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetDeletedAsync
+    path: ../Repositories/IGenericRepository.cs
+    startLine: 114
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Repositories
+  summary: Gets all soft-deleted entities
+  example: []
+  syntax:
+    content: Task<IEnumerable<T>> GetDeletedAsync(CancellationToken cancellationToken = default)
+    parameters:
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{{T}}}
+    content.vb: Function GetDeletedAsync(cancellationToken As CancellationToken = Nothing) As Task(Of IEnumerable(Of T))
+  overload: UltraGenericSystem.Repositories.IGenericRepository`1.GetDeletedAsync*
+  nameWithType.vb: IGenericRepository(Of T).GetDeletedAsync(CancellationToken)
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).GetDeletedAsync(System.Threading.CancellationToken)
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.GetQueryable
+  commentId: M:UltraGenericSystem.Repositories.IGenericRepository`1.GetQueryable
+  id: GetQueryable
+  parent: UltraGenericSystem.Repositories.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: GetQueryable()
+  nameWithType: IGenericRepository<T>.GetQueryable()
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.GetQueryable()
+  type: Method
+  source:
+    remote:
+      path: Repositories/IGenericRepository.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetQueryable
+    path: ../Repositories/IGenericRepository.cs
+    startLine: 119
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Repositories
+  summary: Gets the queryable for advanced operations
+  example: []
+  syntax:
+    content: IQueryable<T> GetQueryable()
+    return:
+      type: System.Linq.IQueryable{{T}}
+    content.vb: Function GetQueryable() As IQueryable(Of T)
+  overload: UltraGenericSystem.Repositories.IGenericRepository`1.GetQueryable*
+  nameWithType.vb: IGenericRepository(Of T).GetQueryable()
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).GetQueryable()
+references:
+- uid: UltraGenericSystem.Repositories
+  commentId: N:UltraGenericSystem.Repositories
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Repositories
+  nameWithType: UltraGenericSystem.Repositories
+  fullName: UltraGenericSystem.Repositories
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Repositories
+    name: Repositories
+    href: UltraGenericSystem.Repositories.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Repositories
+    name: Repositories
+    href: UltraGenericSystem.Repositories.html
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.GetByIdAsync*
+  commentId: Overload:UltraGenericSystem.Repositories.IGenericRepository`1.GetByIdAsync
+  href: UltraGenericSystem.Repositories.IGenericRepository-1.html#UltraGenericSystem_Repositories_IGenericRepository_1_GetByIdAsync_System_Guid_System_Threading_CancellationToken_
+  name: GetByIdAsync
+  nameWithType: IGenericRepository<T>.GetByIdAsync
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.GetByIdAsync
+  nameWithType.vb: IGenericRepository(Of T).GetByIdAsync
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).GetByIdAsync
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task{{T}}
+  commentId: T:System.Threading.Tasks.Task{`0}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<T>
+  nameWithType: Task<T>
+  fullName: System.Threading.Tasks.Task<T>
+  nameWithType.vb: Task(Of T)
+  fullName.vb: System.Threading.Tasks.Task(Of T)
+  name.vb: Task(Of T)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.GetAllAsync*
+  commentId: Overload:UltraGenericSystem.Repositories.IGenericRepository`1.GetAllAsync
+  href: UltraGenericSystem.Repositories.IGenericRepository-1.html#UltraGenericSystem_Repositories_IGenericRepository_1_GetAllAsync_System_Threading_CancellationToken_
+  name: GetAllAsync
+  nameWithType: IGenericRepository<T>.GetAllAsync
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.GetAllAsync
+  nameWithType.vb: IGenericRepository(Of T).GetAllAsync
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).GetAllAsync
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{{T}}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{`0}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IEnumerable<T>>
+  nameWithType: Task<IEnumerable<T>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<T>>
+  nameWithType.vb: Task(Of IEnumerable(Of T))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IEnumerable(Of T))
+  name.vb: Task(Of IEnumerable(Of T))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.CreateAsync*
+  commentId: Overload:UltraGenericSystem.Repositories.IGenericRepository`1.CreateAsync
+  href: UltraGenericSystem.Repositories.IGenericRepository-1.html#UltraGenericSystem_Repositories_IGenericRepository_1_CreateAsync__0_System_Threading_CancellationToken_
+  name: CreateAsync
+  nameWithType: IGenericRepository<T>.CreateAsync
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.CreateAsync
+  nameWithType.vb: IGenericRepository(Of T).CreateAsync
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).CreateAsync
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.UpdateAsync*
+  commentId: Overload:UltraGenericSystem.Repositories.IGenericRepository`1.UpdateAsync
+  href: UltraGenericSystem.Repositories.IGenericRepository-1.html#UltraGenericSystem_Repositories_IGenericRepository_1_UpdateAsync__0_System_Threading_CancellationToken_
+  name: UpdateAsync
+  nameWithType: IGenericRepository<T>.UpdateAsync
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.UpdateAsync
+  nameWithType.vb: IGenericRepository(Of T).UpdateAsync
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).UpdateAsync
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.DeleteAsync*
+  commentId: Overload:UltraGenericSystem.Repositories.IGenericRepository`1.DeleteAsync
+  href: UltraGenericSystem.Repositories.IGenericRepository-1.html#UltraGenericSystem_Repositories_IGenericRepository_1_DeleteAsync_System_Guid_System_Threading_CancellationToken_
+  name: DeleteAsync
+  nameWithType: IGenericRepository<T>.DeleteAsync
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.DeleteAsync
+  nameWithType.vb: IGenericRepository(Of T).DeleteAsync
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).DeleteAsync
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.HardDeleteAsync*
+  commentId: Overload:UltraGenericSystem.Repositories.IGenericRepository`1.HardDeleteAsync
+  href: UltraGenericSystem.Repositories.IGenericRepository-1.html#UltraGenericSystem_Repositories_IGenericRepository_1_HardDeleteAsync_System_Guid_System_Threading_CancellationToken_
+  name: HardDeleteAsync
+  nameWithType: IGenericRepository<T>.HardDeleteAsync
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.HardDeleteAsync
+  nameWithType.vb: IGenericRepository(Of T).HardDeleteAsync
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).HardDeleteAsync
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.QueryAsync*
+  commentId: Overload:UltraGenericSystem.Repositories.IGenericRepository`1.QueryAsync
+  href: UltraGenericSystem.Repositories.IGenericRepository-1.html#UltraGenericSystem_Repositories_IGenericRepository_1_QueryAsync_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___System_Threading_CancellationToken_
+  name: QueryAsync
+  nameWithType: IGenericRepository<T>.QueryAsync
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.QueryAsync
+  nameWithType.vb: IGenericRepository(Of T).QueryAsync
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).QueryAsync
+- uid: System.Linq.Expressions.Expression{System.Func{{T},System.Boolean}}
+  commentId: T:System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}}
+  parent: System.Linq.Expressions
+  definition: System.Linq.Expressions.Expression`1
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: Expression<Func<T, bool>>
+  nameWithType: Expression<Func<T, bool>>
+  fullName: System.Linq.Expressions.Expression<System.Func<T, bool>>
+  nameWithType.vb: Expression(Of Func(Of T, Boolean))
+  fullName.vb: System.Linq.Expressions.Expression(Of System.Func(Of T, Boolean))
+  name.vb: Expression(Of Func(Of T, Boolean))
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: System.Linq.Expressions.Expression`1
+  commentId: T:System.Linq.Expressions.Expression`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: Expression<TDelegate>
+  nameWithType: Expression<TDelegate>
+  fullName: System.Linq.Expressions.Expression<TDelegate>
+  nameWithType.vb: Expression(Of TDelegate)
+  fullName.vb: System.Linq.Expressions.Expression(Of TDelegate)
+  name.vb: Expression(Of TDelegate)
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - name: TDelegate
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDelegate
+  - name: )
+- uid: System.Linq.Expressions
+  commentId: N:System.Linq.Expressions
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Linq.Expressions
+  nameWithType: System.Linq.Expressions
+  fullName: System.Linq.Expressions
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq
+  - name: .
+  - uid: System.Linq.Expressions
+    name: Expressions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq
+  - name: .
+  - uid: System.Linq.Expressions
+    name: Expressions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.GetPagedAsync*
+  commentId: Overload:UltraGenericSystem.Repositories.IGenericRepository`1.GetPagedAsync
+  href: UltraGenericSystem.Repositories.IGenericRepository-1.html#UltraGenericSystem_Repositories_IGenericRepository_1_GetPagedAsync_System_Int32_System_Int32_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___System_Func_System_Linq_IQueryable__0__System_Linq_IOrderedQueryable__0___System_Threading_CancellationToken_
+  name: GetPagedAsync
+  nameWithType: IGenericRepository<T>.GetPagedAsync
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.GetPagedAsync
+  nameWithType.vb: IGenericRepository(Of T).GetPagedAsync
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).GetPagedAsync
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Func{System.Linq.IQueryable{{T}},System.Linq.IOrderedQueryable{{T}}}
+  commentId: T:System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<IQueryable<T>, IOrderedQueryable<T>>
+  nameWithType: Func<IQueryable<T>, IOrderedQueryable<T>>
+  fullName: System.Func<System.Linq.IQueryable<T>, System.Linq.IOrderedQueryable<T>>
+  nameWithType.vb: Func(Of IQueryable(Of T), IOrderedQueryable(Of T))
+  fullName.vb: System.Func(Of System.Linq.IQueryable(Of T), System.Linq.IOrderedQueryable(Of T))
+  name.vb: Func(Of IQueryable(Of T), IOrderedQueryable(Of T))
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Linq.IOrderedQueryable`1
+    name: IOrderedQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iorderedqueryable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Linq.IOrderedQueryable`1
+    name: IOrderedQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iorderedqueryable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: System.Threading.Tasks.Task{System.ValueTuple{System.Collections.Generic.IEnumerable{{T}},System.Int32}}
+  commentId: T:System.Threading.Tasks.Task{System.ValueTuple{System.Collections.Generic.IEnumerable{`0},System.Int32}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<(IEnumerable<T> Items, int TotalCount)>
+  nameWithType: Task<(IEnumerable<T> Items, int TotalCount)>
+  fullName: System.Threading.Tasks.Task<(System.Collections.Generic.IEnumerable<T> Items, int TotalCount)>
+  nameWithType.vb: Task(Of (Items As IEnumerable(Of T), TotalCount As Integer))
+  fullName.vb: System.Threading.Tasks.Task(Of (Items As System.Collections.Generic.IEnumerable(Of T), TotalCount As Integer))
+  name.vb: Task(Of (Items As IEnumerable(Of T), TotalCount As Integer))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: " "
+  - uid: System.ValueTuple{System.Collections.Generic.IEnumerable{`0},System.Int32}.Items
+    name: Items
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.collections.generic.ienumerable--0-,system.int32-.items
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: " "
+  - uid: System.ValueTuple{System.Collections.Generic.IEnumerable{`0},System.Int32}.TotalCount
+    name: TotalCount
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.collections.generic.ienumerable--0-,system.int32-.totalcount
+  - name: )
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: (
+  - uid: System.ValueTuple{System.Collections.Generic.IEnumerable{`0},System.Int32}.Items
+    name: Items
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.collections.generic.ienumerable--0-,system.int32-.items
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.Collections.Generic.IEnumerable{`0},System.Int32}.TotalCount
+    name: TotalCount
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.collections.generic.ienumerable--0-,system.int32-.totalcount
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.CountAsync*
+  commentId: Overload:UltraGenericSystem.Repositories.IGenericRepository`1.CountAsync
+  href: UltraGenericSystem.Repositories.IGenericRepository-1.html#UltraGenericSystem_Repositories_IGenericRepository_1_CountAsync_System_Threading_CancellationToken_
+  name: CountAsync
+  nameWithType: IGenericRepository<T>.CountAsync
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.CountAsync
+  nameWithType.vb: IGenericRepository(Of T).CountAsync
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).CountAsync
+- uid: System.Threading.Tasks.Task{System.Int32}
+  commentId: T:System.Threading.Tasks.Task{System.Int32}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<int>
+  nameWithType: Task<int>
+  fullName: System.Threading.Tasks.Task<int>
+  nameWithType.vb: Task(Of Integer)
+  fullName.vb: System.Threading.Tasks.Task(Of Integer)
+  name.vb: Task(Of Integer)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.ExistsAsync*
+  commentId: Overload:UltraGenericSystem.Repositories.IGenericRepository`1.ExistsAsync
+  href: UltraGenericSystem.Repositories.IGenericRepository-1.html#UltraGenericSystem_Repositories_IGenericRepository_1_ExistsAsync_System_Guid_System_Threading_CancellationToken_
+  name: ExistsAsync
+  nameWithType: IGenericRepository<T>.ExistsAsync
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.ExistsAsync
+  nameWithType.vb: IGenericRepository(Of T).ExistsAsync
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).ExistsAsync
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.GetByTagAsync*
+  commentId: Overload:UltraGenericSystem.Repositories.IGenericRepository`1.GetByTagAsync
+  href: UltraGenericSystem.Repositories.IGenericRepository-1.html#UltraGenericSystem_Repositories_IGenericRepository_1_GetByTagAsync_System_String_System_Threading_CancellationToken_
+  name: GetByTagAsync
+  nameWithType: IGenericRepository<T>.GetByTagAsync
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.GetByTagAsync
+  nameWithType.vb: IGenericRepository(Of T).GetByTagAsync
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).GetByTagAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.GetByTagsAsync*
+  commentId: Overload:UltraGenericSystem.Repositories.IGenericRepository`1.GetByTagsAsync
+  href: UltraGenericSystem.Repositories.IGenericRepository-1.html#UltraGenericSystem_Repositories_IGenericRepository_1_GetByTagsAsync_System_String___System_Threading_CancellationToken_
+  name: GetByTagsAsync
+  nameWithType: IGenericRepository<T>.GetByTagsAsync
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.GetByTagsAsync
+  nameWithType.vb: IGenericRepository(Of T).GetByTagsAsync
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).GetByTagsAsync
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.GetByCreatedByAsync*
+  commentId: Overload:UltraGenericSystem.Repositories.IGenericRepository`1.GetByCreatedByAsync
+  href: UltraGenericSystem.Repositories.IGenericRepository-1.html#UltraGenericSystem_Repositories_IGenericRepository_1_GetByCreatedByAsync_System_String_System_Threading_CancellationToken_
+  name: GetByCreatedByAsync
+  nameWithType: IGenericRepository<T>.GetByCreatedByAsync
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.GetByCreatedByAsync
+  nameWithType.vb: IGenericRepository(Of T).GetByCreatedByAsync
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).GetByCreatedByAsync
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.GetByDateRangeAsync*
+  commentId: Overload:UltraGenericSystem.Repositories.IGenericRepository`1.GetByDateRangeAsync
+  href: UltraGenericSystem.Repositories.IGenericRepository-1.html#UltraGenericSystem_Repositories_IGenericRepository_1_GetByDateRangeAsync_System_DateTime_System_DateTime_System_Threading_CancellationToken_
+  name: GetByDateRangeAsync
+  nameWithType: IGenericRepository<T>.GetByDateRangeAsync
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.GetByDateRangeAsync
+  nameWithType.vb: IGenericRepository(Of T).GetByDateRangeAsync
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).GetByDateRangeAsync
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.GetByUpdatedDateRangeAsync*
+  commentId: Overload:UltraGenericSystem.Repositories.IGenericRepository`1.GetByUpdatedDateRangeAsync
+  href: UltraGenericSystem.Repositories.IGenericRepository-1.html#UltraGenericSystem_Repositories_IGenericRepository_1_GetByUpdatedDateRangeAsync_System_DateTime_System_DateTime_System_Threading_CancellationToken_
+  name: GetByUpdatedDateRangeAsync
+  nameWithType: IGenericRepository<T>.GetByUpdatedDateRangeAsync
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.GetByUpdatedDateRangeAsync
+  nameWithType.vb: IGenericRepository(Of T).GetByUpdatedDateRangeAsync
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).GetByUpdatedDateRangeAsync
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.GetByMetadataAsync*
+  commentId: Overload:UltraGenericSystem.Repositories.IGenericRepository`1.GetByMetadataAsync
+  href: UltraGenericSystem.Repositories.IGenericRepository-1.html#UltraGenericSystem_Repositories_IGenericRepository_1_GetByMetadataAsync_System_String_System_Object_System_Threading_CancellationToken_
+  name: GetByMetadataAsync
+  nameWithType: IGenericRepository<T>.GetByMetadataAsync
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.GetByMetadataAsync
+  nameWithType.vb: IGenericRepository(Of T).GetByMetadataAsync
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).GetByMetadataAsync
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.RestoreAsync*
+  commentId: Overload:UltraGenericSystem.Repositories.IGenericRepository`1.RestoreAsync
+  href: UltraGenericSystem.Repositories.IGenericRepository-1.html#UltraGenericSystem_Repositories_IGenericRepository_1_RestoreAsync_System_Guid_System_Threading_CancellationToken_
+  name: RestoreAsync
+  nameWithType: IGenericRepository<T>.RestoreAsync
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.RestoreAsync
+  nameWithType.vb: IGenericRepository(Of T).RestoreAsync
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).RestoreAsync
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.GetDeletedAsync*
+  commentId: Overload:UltraGenericSystem.Repositories.IGenericRepository`1.GetDeletedAsync
+  href: UltraGenericSystem.Repositories.IGenericRepository-1.html#UltraGenericSystem_Repositories_IGenericRepository_1_GetDeletedAsync_System_Threading_CancellationToken_
+  name: GetDeletedAsync
+  nameWithType: IGenericRepository<T>.GetDeletedAsync
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.GetDeletedAsync
+  nameWithType.vb: IGenericRepository(Of T).GetDeletedAsync
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).GetDeletedAsync
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1.GetQueryable*
+  commentId: Overload:UltraGenericSystem.Repositories.IGenericRepository`1.GetQueryable
+  href: UltraGenericSystem.Repositories.IGenericRepository-1.html#UltraGenericSystem_Repositories_IGenericRepository_1_GetQueryable
+  name: GetQueryable
+  nameWithType: IGenericRepository<T>.GetQueryable
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>.GetQueryable
+  nameWithType.vb: IGenericRepository(Of T).GetQueryable
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T).GetQueryable
+- uid: System.Linq.IQueryable{{T}}
+  commentId: T:System.Linq.IQueryable{`0}
+  parent: System.Linq
+  definition: System.Linq.IQueryable`1
+  href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  name: IQueryable<T>
+  nameWithType: IQueryable<T>
+  fullName: System.Linq.IQueryable<T>
+  nameWithType.vb: IQueryable(Of T)
+  fullName.vb: System.Linq.IQueryable(Of T)
+  name.vb: IQueryable(Of T)
+  spec.csharp:
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Linq.IQueryable`1
+  commentId: T:System.Linq.IQueryable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  name: IQueryable<T>
+  nameWithType: IQueryable<T>
+  fullName: System.Linq.IQueryable<T>
+  nameWithType.vb: IQueryable(Of T)
+  fullName.vb: System.Linq.IQueryable(Of T)
+  name.vb: IQueryable(Of T)
+  spec.csharp:
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Linq
+  commentId: N:System.Linq
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Linq
+  nameWithType: System.Linq
+  fullName: System.Linq
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq

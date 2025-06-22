@@ -1,0 +1,140 @@
+### YamlMime:ManagedReference
+items:
+- uid: UltraGenericSystem.Services.Agents.ResponseCallback
+  commentId: T:UltraGenericSystem.Services.Agents.ResponseCallback
+  id: ResponseCallback
+  parent: UltraGenericSystem.Services.Agents
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ResponseCallback
+  nameWithType: ResponseCallback
+  fullName: UltraGenericSystem.Services.Agents.ResponseCallback
+  type: Delegate
+  source:
+    remote:
+      path: Services/Agents/SKAgentFactory.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: ResponseCallback
+    path: ../Services/Agents/SKAgentFactory.cs
+    startLine: 17
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.Agents
+  summary: Response callback delegate for monitoring agent responses
+  example: []
+  syntax:
+    content: public delegate ValueTask ResponseCallback(ChatMessageContent response)
+    parameters:
+    - id: response
+      type: Microsoft.SemanticKernel.ChatMessageContent
+    return:
+      type: System.Threading.Tasks.ValueTask
+    content.vb: Public Delegate Function ResponseCallback(response As ChatMessageContent) As ValueTask
+references:
+- uid: UltraGenericSystem.Services.Agents
+  commentId: N:UltraGenericSystem.Services.Agents
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Services.Agents
+  nameWithType: UltraGenericSystem.Services.Agents
+  fullName: UltraGenericSystem.Services.Agents
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Services
+    name: Services
+    href: UltraGenericSystem.Services.html
+  - name: .
+  - uid: UltraGenericSystem.Services.Agents
+    name: Agents
+    href: UltraGenericSystem.Services.Agents.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Services
+    name: Services
+    href: UltraGenericSystem.Services.html
+  - name: .
+  - uid: UltraGenericSystem.Services.Agents
+    name: Agents
+    href: UltraGenericSystem.Services.Agents.html
+- uid: Microsoft.SemanticKernel.ChatMessageContent
+  commentId: T:Microsoft.SemanticKernel.ChatMessageContent
+  parent: Microsoft.SemanticKernel
+  isExternal: true
+  name: ChatMessageContent
+  nameWithType: ChatMessageContent
+  fullName: Microsoft.SemanticKernel.ChatMessageContent
+- uid: System.Threading.Tasks.ValueTask
+  commentId: T:System.Threading.Tasks.ValueTask
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask
+  name: ValueTask
+  nameWithType: ValueTask
+  fullName: System.Threading.Tasks.ValueTask
+- uid: Microsoft.SemanticKernel
+  commentId: N:Microsoft.SemanticKernel
+  isExternal: true
+  name: Microsoft.SemanticKernel
+  nameWithType: Microsoft.SemanticKernel
+  fullName: Microsoft.SemanticKernel
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel
+    name: SemanticKernel
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel
+    name: SemanticKernel
+    isExternal: true
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

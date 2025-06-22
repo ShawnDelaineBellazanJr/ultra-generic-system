@@ -1,0 +1,432 @@
+### YamlMime:ManagedReference
+items:
+- uid: UltraGenericSystem.Models.AzureAIToolCall
+  commentId: T:UltraGenericSystem.Models.AzureAIToolCall
+  id: AzureAIToolCall
+  parent: UltraGenericSystem.Models
+  children:
+  - UltraGenericSystem.Models.AzureAIToolCall.Function
+  - UltraGenericSystem.Models.AzureAIToolCall.Id
+  - UltraGenericSystem.Models.AzureAIToolCall.Type
+  langs:
+  - csharp
+  - vb
+  name: AzureAIToolCall
+  nameWithType: AzureAIToolCall
+  fullName: UltraGenericSystem.Models.AzureAIToolCall
+  type: Class
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: AzureAIToolCall
+    path: ../Models/AgentModels.cs
+    startLine: 916
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Azure AI tool call
+  example: []
+  syntax:
+    content: public class AzureAIToolCall
+    content.vb: Public Class AzureAIToolCall
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: UltraGenericSystem.Models.AzureAIToolCall.Id
+  commentId: P:UltraGenericSystem.Models.AzureAIToolCall.Id
+  id: Id
+  parent: UltraGenericSystem.Models.AzureAIToolCall
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: AzureAIToolCall.Id
+  fullName: UltraGenericSystem.Models.AzureAIToolCall.Id
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Id
+    path: ../Models/AgentModels.cs
+    startLine: 921
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Tool call ID
+  example: []
+  syntax:
+    content: public string Id { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Id As String
+  overload: UltraGenericSystem.Models.AzureAIToolCall.Id*
+- uid: UltraGenericSystem.Models.AzureAIToolCall.Type
+  commentId: P:UltraGenericSystem.Models.AzureAIToolCall.Type
+  id: Type
+  parent: UltraGenericSystem.Models.AzureAIToolCall
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: AzureAIToolCall.Type
+  fullName: UltraGenericSystem.Models.AzureAIToolCall.Type
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Type
+    path: ../Models/AgentModels.cs
+    startLine: 926
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Tool type
+  example: []
+  syntax:
+    content: public string Type { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Type As String
+  overload: UltraGenericSystem.Models.AzureAIToolCall.Type*
+- uid: UltraGenericSystem.Models.AzureAIToolCall.Function
+  commentId: P:UltraGenericSystem.Models.AzureAIToolCall.Function
+  id: Function
+  parent: UltraGenericSystem.Models.AzureAIToolCall
+  langs:
+  - csharp
+  - vb
+  name: Function
+  nameWithType: AzureAIToolCall.Function
+  fullName: UltraGenericSystem.Models.AzureAIToolCall.Function
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Function
+    path: ../Models/AgentModels.cs
+    startLine: 931
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Function call details
+  example: []
+  syntax:
+    content: public AzureAIFunctionCall Function { get; set; }
+    parameters: []
+    return:
+      type: UltraGenericSystem.Models.AzureAIFunctionCall
+    content.vb: Public Property [Function] As AzureAIFunctionCall
+  overload: UltraGenericSystem.Models.AzureAIToolCall.Function*
+references:
+- uid: UltraGenericSystem.Models
+  commentId: N:UltraGenericSystem.Models
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Models
+  nameWithType: UltraGenericSystem.Models
+  fullName: UltraGenericSystem.Models
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UltraGenericSystem.Models.AzureAIToolCall.Id*
+  commentId: Overload:UltraGenericSystem.Models.AzureAIToolCall.Id
+  href: UltraGenericSystem.Models.AzureAIToolCall.html#UltraGenericSystem_Models_AzureAIToolCall_Id
+  name: Id
+  nameWithType: AzureAIToolCall.Id
+  fullName: UltraGenericSystem.Models.AzureAIToolCall.Id
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: UltraGenericSystem.Models.AzureAIToolCall.Type*
+  commentId: Overload:UltraGenericSystem.Models.AzureAIToolCall.Type
+  href: UltraGenericSystem.Models.AzureAIToolCall.html#UltraGenericSystem_Models_AzureAIToolCall_Type
+  name: Type
+  nameWithType: AzureAIToolCall.Type
+  fullName: UltraGenericSystem.Models.AzureAIToolCall.Type
+- uid: UltraGenericSystem.Models.AzureAIToolCall.Function*
+  commentId: Overload:UltraGenericSystem.Models.AzureAIToolCall.Function
+  href: UltraGenericSystem.Models.AzureAIToolCall.html#UltraGenericSystem_Models_AzureAIToolCall_Function
+  name: Function
+  nameWithType: AzureAIToolCall.Function
+  fullName: UltraGenericSystem.Models.AzureAIToolCall.Function
+- uid: UltraGenericSystem.Models.AzureAIFunctionCall
+  commentId: T:UltraGenericSystem.Models.AzureAIFunctionCall
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.AzureAIFunctionCall.html
+  name: AzureAIFunctionCall
+  nameWithType: AzureAIFunctionCall
+  fullName: UltraGenericSystem.Models.AzureAIFunctionCall

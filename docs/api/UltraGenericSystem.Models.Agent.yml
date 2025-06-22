@@ -1,0 +1,1405 @@
+### YamlMime:ManagedReference
+items:
+- uid: UltraGenericSystem.Models.Agent
+  commentId: T:UltraGenericSystem.Models.Agent
+  id: Agent
+  parent: UltraGenericSystem.Models
+  children:
+  - UltraGenericSystem.Models.Agent.Configuration
+  - UltraGenericSystem.Models.Agent.Executions
+  - UltraGenericSystem.Models.Agent.IsActive
+  - UltraGenericSystem.Models.Agent.LastActive
+  - UltraGenericSystem.Models.Agent.Name
+  - UltraGenericSystem.Models.Agent.PromptTemplatePath
+  - UltraGenericSystem.Models.Agent.Skills
+  - UltraGenericSystem.Models.Agent.Status
+  - UltraGenericSystem.Models.Agent.Threads
+  - UltraGenericSystem.Models.Agent.Type
+  - UltraGenericSystem.Models.Agent.Version
+  langs:
+  - csharp
+  - vb
+  name: Agent
+  nameWithType: Agent
+  fullName: UltraGenericSystem.Models.Agent
+  type: Class
+  source:
+    remote:
+      path: Models/DomainModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Agent
+    path: ../Models/DomainModels.cs
+    startLine: 8
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Represents an AI agent in the system
+  example: []
+  syntax:
+    content: 'public class Agent : BaseEntity'
+    content.vb: Public Class Agent Inherits BaseEntity
+  inheritance:
+  - System.Object
+  - UltraGenericSystem.Models.BaseEntity
+  inheritedMembers:
+  - UltraGenericSystem.Models.BaseEntity.Id
+  - UltraGenericSystem.Models.BaseEntity.CreatedAt
+  - UltraGenericSystem.Models.BaseEntity.UpdatedAt
+  - UltraGenericSystem.Models.BaseEntity.CreatedBy
+  - UltraGenericSystem.Models.BaseEntity.IsDeleted
+  - UltraGenericSystem.Models.BaseEntity.Metadata
+  - UltraGenericSystem.Models.BaseEntity.EntityType
+  - UltraGenericSystem.Models.BaseEntity.Tags
+  - UltraGenericSystem.Models.BaseEntity.Description
+  - UltraGenericSystem.Models.BaseEntity.OnCreated(System.String)
+  - UltraGenericSystem.Models.BaseEntity.OnUpdated
+  - UltraGenericSystem.Models.BaseEntity.OnDeleted
+  - UltraGenericSystem.Models.BaseEntity.UpdateTimestamp
+  - UltraGenericSystem.Models.BaseEntity.MarkAsDeleted
+  - UltraGenericSystem.Models.BaseEntity.Restore
+  - UltraGenericSystem.Models.BaseEntity.AddMetadata(System.String,System.Object)
+  - UltraGenericSystem.Models.BaseEntity.GetMetadata``1(System.String)
+  - UltraGenericSystem.Models.BaseEntity.AddTags(System.String[])
+  - UltraGenericSystem.Models.BaseEntity.RemoveTags(System.String[])
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: UltraGenericSystem.Models.Agent.Name
+  commentId: P:UltraGenericSystem.Models.Agent.Name
+  id: Name
+  parent: UltraGenericSystem.Models.Agent
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Agent.Name
+  fullName: UltraGenericSystem.Models.Agent.Name
+  type: Property
+  source:
+    remote:
+      path: Models/DomainModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Name
+    path: ../Models/DomainModels.cs
+    startLine: 13
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Name of the agent
+  example: []
+  syntax:
+    content: >-
+      [Required]
+
+      [StringLength(100)]
+
+      public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Required>
+
+      <StringLength(100)>
+
+      Public Property Name As String
+  overload: UltraGenericSystem.Models.Agent.Name*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 100
+- uid: UltraGenericSystem.Models.Agent.Type
+  commentId: P:UltraGenericSystem.Models.Agent.Type
+  id: Type
+  parent: UltraGenericSystem.Models.Agent
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: Agent.Type
+  fullName: UltraGenericSystem.Models.Agent.Type
+  type: Property
+  source:
+    remote:
+      path: Models/DomainModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Type
+    path: ../Models/DomainModels.cs
+    startLine: 20
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Type/category of the agent
+  example: []
+  syntax:
+    content: >-
+      [Required]
+
+      [StringLength(50)]
+
+      public string Type { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Required>
+
+      <StringLength(50)>
+
+      Public Property Type As String
+  overload: UltraGenericSystem.Models.Agent.Type*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 50
+- uid: UltraGenericSystem.Models.Agent.PromptTemplatePath
+  commentId: P:UltraGenericSystem.Models.Agent.PromptTemplatePath
+  id: PromptTemplatePath
+  parent: UltraGenericSystem.Models.Agent
+  langs:
+  - csharp
+  - vb
+  name: PromptTemplatePath
+  nameWithType: Agent.PromptTemplatePath
+  fullName: UltraGenericSystem.Models.Agent.PromptTemplatePath
+  type: Property
+  source:
+    remote:
+      path: Models/DomainModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: PromptTemplatePath
+    path: ../Models/DomainModels.cs
+    startLine: 27
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Path to the prompt template file
+  example: []
+  syntax:
+    content: >-
+      [StringLength(500)]
+
+      public string PromptTemplatePath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <StringLength(500)>
+
+      Public Property PromptTemplatePath As String
+  overload: UltraGenericSystem.Models.Agent.PromptTemplatePath*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 500
+- uid: UltraGenericSystem.Models.Agent.Configuration
+  commentId: P:UltraGenericSystem.Models.Agent.Configuration
+  id: Configuration
+  parent: UltraGenericSystem.Models.Agent
+  langs:
+  - csharp
+  - vb
+  name: Configuration
+  nameWithType: Agent.Configuration
+  fullName: UltraGenericSystem.Models.Agent.Configuration
+  type: Property
+  source:
+    remote:
+      path: Models/DomainModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Configuration
+    path: ../Models/DomainModels.cs
+    startLine: 33
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: JSON configuration for the agent
+  example: []
+  syntax:
+    content: public string Configuration { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Configuration As String
+  overload: UltraGenericSystem.Models.Agent.Configuration*
+- uid: UltraGenericSystem.Models.Agent.Version
+  commentId: P:UltraGenericSystem.Models.Agent.Version
+  id: Version
+  parent: UltraGenericSystem.Models.Agent
+  langs:
+  - csharp
+  - vb
+  name: Version
+  nameWithType: Agent.Version
+  fullName: UltraGenericSystem.Models.Agent.Version
+  type: Property
+  source:
+    remote:
+      path: Models/DomainModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Version
+    path: ../Models/DomainModels.cs
+    startLine: 38
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Version of the agent
+  example: []
+  syntax:
+    content: >-
+      [StringLength(20)]
+
+      public string Version { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <StringLength(20)>
+
+      Public Property Version As String
+  overload: UltraGenericSystem.Models.Agent.Version*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 20
+- uid: UltraGenericSystem.Models.Agent.IsActive
+  commentId: P:UltraGenericSystem.Models.Agent.IsActive
+  id: IsActive
+  parent: UltraGenericSystem.Models.Agent
+  langs:
+  - csharp
+  - vb
+  name: IsActive
+  nameWithType: Agent.IsActive
+  fullName: UltraGenericSystem.Models.Agent.IsActive
+  type: Property
+  source:
+    remote:
+      path: Models/DomainModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: IsActive
+    path: ../Models/DomainModels.cs
+    startLine: 44
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Whether the agent is currently active
+  example: []
+  syntax:
+    content: public bool IsActive { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsActive As Boolean
+  overload: UltraGenericSystem.Models.Agent.IsActive*
+- uid: UltraGenericSystem.Models.Agent.Status
+  commentId: P:UltraGenericSystem.Models.Agent.Status
+  id: Status
+  parent: UltraGenericSystem.Models.Agent
+  langs:
+  - csharp
+  - vb
+  name: Status
+  nameWithType: Agent.Status
+  fullName: UltraGenericSystem.Models.Agent.Status
+  type: Property
+  source:
+    remote:
+      path: Models/DomainModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Status
+    path: ../Models/DomainModels.cs
+    startLine: 49
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Agent's current status
+  example: []
+  syntax:
+    content: >-
+      [StringLength(20)]
+
+      public string Status { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <StringLength(20)>
+
+      Public Property Status As String
+  overload: UltraGenericSystem.Models.Agent.Status*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 20
+- uid: UltraGenericSystem.Models.Agent.LastActive
+  commentId: P:UltraGenericSystem.Models.Agent.LastActive
+  id: LastActive
+  parent: UltraGenericSystem.Models.Agent
+  langs:
+  - csharp
+  - vb
+  name: LastActive
+  nameWithType: Agent.LastActive
+  fullName: UltraGenericSystem.Models.Agent.LastActive
+  type: Property
+  source:
+    remote:
+      path: Models/DomainModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: LastActive
+    path: ../Models/DomainModels.cs
+    startLine: 55
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Last time the agent was active
+  example: []
+  syntax:
+    content: public DateTime? LastActive { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property LastActive As Date?
+  overload: UltraGenericSystem.Models.Agent.LastActive*
+- uid: UltraGenericSystem.Models.Agent.Skills
+  commentId: P:UltraGenericSystem.Models.Agent.Skills
+  id: Skills
+  parent: UltraGenericSystem.Models.Agent
+  langs:
+  - csharp
+  - vb
+  name: Skills
+  nameWithType: Agent.Skills
+  fullName: UltraGenericSystem.Models.Agent.Skills
+  type: Property
+  source:
+    remote:
+      path: Models/DomainModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Skills
+    path: ../Models/DomainModels.cs
+    startLine: 60
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Skills associated with this agent
+  example: []
+  syntax:
+    content: public virtual ICollection<Skill> Skills { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{UltraGenericSystem.Models.Skill}
+    content.vb: Public Overridable Property Skills As ICollection(Of Skill)
+  overload: UltraGenericSystem.Models.Agent.Skills*
+- uid: UltraGenericSystem.Models.Agent.Threads
+  commentId: P:UltraGenericSystem.Models.Agent.Threads
+  id: Threads
+  parent: UltraGenericSystem.Models.Agent
+  langs:
+  - csharp
+  - vb
+  name: Threads
+  nameWithType: Agent.Threads
+  fullName: UltraGenericSystem.Models.Agent.Threads
+  type: Property
+  source:
+    remote:
+      path: Models/DomainModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Threads
+    path: ../Models/DomainModels.cs
+    startLine: 65
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Threads created by this agent
+  example: []
+  syntax:
+    content: public virtual ICollection<AgentThread> Threads { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{UltraGenericSystem.Models.AgentThread}
+    content.vb: Public Overridable Property Threads As ICollection(Of AgentThread)
+  overload: UltraGenericSystem.Models.Agent.Threads*
+- uid: UltraGenericSystem.Models.Agent.Executions
+  commentId: P:UltraGenericSystem.Models.Agent.Executions
+  id: Executions
+  parent: UltraGenericSystem.Models.Agent
+  langs:
+  - csharp
+  - vb
+  name: Executions
+  nameWithType: Agent.Executions
+  fullName: UltraGenericSystem.Models.Agent.Executions
+  type: Property
+  source:
+    remote:
+      path: Models/DomainModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Executions
+    path: ../Models/DomainModels.cs
+    startLine: 70
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Executions performed by this agent
+  example: []
+  syntax:
+    content: public virtual ICollection<AgentExecution> Executions { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{UltraGenericSystem.Models.AgentExecution}
+    content.vb: Public Overridable Property Executions As ICollection(Of AgentExecution)
+  overload: UltraGenericSystem.Models.Agent.Executions*
+references:
+- uid: UltraGenericSystem.Models
+  commentId: N:UltraGenericSystem.Models
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Models
+  nameWithType: UltraGenericSystem.Models
+  fullName: UltraGenericSystem.Models
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UltraGenericSystem.Models.BaseEntity
+  commentId: T:UltraGenericSystem.Models.BaseEntity
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.BaseEntity.html
+  name: BaseEntity
+  nameWithType: BaseEntity
+  fullName: UltraGenericSystem.Models.BaseEntity
+- uid: UltraGenericSystem.Models.BaseEntity.Id
+  commentId: P:UltraGenericSystem.Models.BaseEntity.Id
+  parent: UltraGenericSystem.Models.BaseEntity
+  href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_Id
+  name: Id
+  nameWithType: BaseEntity.Id
+  fullName: UltraGenericSystem.Models.BaseEntity.Id
+- uid: UltraGenericSystem.Models.BaseEntity.CreatedAt
+  commentId: P:UltraGenericSystem.Models.BaseEntity.CreatedAt
+  parent: UltraGenericSystem.Models.BaseEntity
+  href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_CreatedAt
+  name: CreatedAt
+  nameWithType: BaseEntity.CreatedAt
+  fullName: UltraGenericSystem.Models.BaseEntity.CreatedAt
+- uid: UltraGenericSystem.Models.BaseEntity.UpdatedAt
+  commentId: P:UltraGenericSystem.Models.BaseEntity.UpdatedAt
+  parent: UltraGenericSystem.Models.BaseEntity
+  href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_UpdatedAt
+  name: UpdatedAt
+  nameWithType: BaseEntity.UpdatedAt
+  fullName: UltraGenericSystem.Models.BaseEntity.UpdatedAt
+- uid: UltraGenericSystem.Models.BaseEntity.CreatedBy
+  commentId: P:UltraGenericSystem.Models.BaseEntity.CreatedBy
+  parent: UltraGenericSystem.Models.BaseEntity
+  href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_CreatedBy
+  name: CreatedBy
+  nameWithType: BaseEntity.CreatedBy
+  fullName: UltraGenericSystem.Models.BaseEntity.CreatedBy
+- uid: UltraGenericSystem.Models.BaseEntity.IsDeleted
+  commentId: P:UltraGenericSystem.Models.BaseEntity.IsDeleted
+  parent: UltraGenericSystem.Models.BaseEntity
+  href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_IsDeleted
+  name: IsDeleted
+  nameWithType: BaseEntity.IsDeleted
+  fullName: UltraGenericSystem.Models.BaseEntity.IsDeleted
+- uid: UltraGenericSystem.Models.BaseEntity.Metadata
+  commentId: P:UltraGenericSystem.Models.BaseEntity.Metadata
+  parent: UltraGenericSystem.Models.BaseEntity
+  href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_Metadata
+  name: Metadata
+  nameWithType: BaseEntity.Metadata
+  fullName: UltraGenericSystem.Models.BaseEntity.Metadata
+- uid: UltraGenericSystem.Models.BaseEntity.EntityType
+  commentId: P:UltraGenericSystem.Models.BaseEntity.EntityType
+  parent: UltraGenericSystem.Models.BaseEntity
+  href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_EntityType
+  name: EntityType
+  nameWithType: BaseEntity.EntityType
+  fullName: UltraGenericSystem.Models.BaseEntity.EntityType
+- uid: UltraGenericSystem.Models.BaseEntity.Tags
+  commentId: P:UltraGenericSystem.Models.BaseEntity.Tags
+  parent: UltraGenericSystem.Models.BaseEntity
+  href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_Tags
+  name: Tags
+  nameWithType: BaseEntity.Tags
+  fullName: UltraGenericSystem.Models.BaseEntity.Tags
+- uid: UltraGenericSystem.Models.BaseEntity.Description
+  commentId: P:UltraGenericSystem.Models.BaseEntity.Description
+  parent: UltraGenericSystem.Models.BaseEntity
+  href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_Description
+  name: Description
+  nameWithType: BaseEntity.Description
+  fullName: UltraGenericSystem.Models.BaseEntity.Description
+- uid: UltraGenericSystem.Models.BaseEntity.OnCreated(System.String)
+  commentId: M:UltraGenericSystem.Models.BaseEntity.OnCreated(System.String)
+  parent: UltraGenericSystem.Models.BaseEntity
+  isExternal: true
+  href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_OnCreated_System_String_
+  name: OnCreated(string)
+  nameWithType: BaseEntity.OnCreated(string)
+  fullName: UltraGenericSystem.Models.BaseEntity.OnCreated(string)
+  nameWithType.vb: BaseEntity.OnCreated(String)
+  fullName.vb: UltraGenericSystem.Models.BaseEntity.OnCreated(String)
+  name.vb: OnCreated(String)
+  spec.csharp:
+  - uid: UltraGenericSystem.Models.BaseEntity.OnCreated(System.String)
+    name: OnCreated
+    href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_OnCreated_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: UltraGenericSystem.Models.BaseEntity.OnCreated(System.String)
+    name: OnCreated
+    href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_OnCreated_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: UltraGenericSystem.Models.BaseEntity.OnUpdated
+  commentId: M:UltraGenericSystem.Models.BaseEntity.OnUpdated
+  parent: UltraGenericSystem.Models.BaseEntity
+  href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_OnUpdated
+  name: OnUpdated()
+  nameWithType: BaseEntity.OnUpdated()
+  fullName: UltraGenericSystem.Models.BaseEntity.OnUpdated()
+  spec.csharp:
+  - uid: UltraGenericSystem.Models.BaseEntity.OnUpdated
+    name: OnUpdated
+    href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_OnUpdated
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UltraGenericSystem.Models.BaseEntity.OnUpdated
+    name: OnUpdated
+    href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_OnUpdated
+  - name: (
+  - name: )
+- uid: UltraGenericSystem.Models.BaseEntity.OnDeleted
+  commentId: M:UltraGenericSystem.Models.BaseEntity.OnDeleted
+  parent: UltraGenericSystem.Models.BaseEntity
+  href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_OnDeleted
+  name: OnDeleted()
+  nameWithType: BaseEntity.OnDeleted()
+  fullName: UltraGenericSystem.Models.BaseEntity.OnDeleted()
+  spec.csharp:
+  - uid: UltraGenericSystem.Models.BaseEntity.OnDeleted
+    name: OnDeleted
+    href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_OnDeleted
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UltraGenericSystem.Models.BaseEntity.OnDeleted
+    name: OnDeleted
+    href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_OnDeleted
+  - name: (
+  - name: )
+- uid: UltraGenericSystem.Models.BaseEntity.UpdateTimestamp
+  commentId: M:UltraGenericSystem.Models.BaseEntity.UpdateTimestamp
+  parent: UltraGenericSystem.Models.BaseEntity
+  href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_UpdateTimestamp
+  name: UpdateTimestamp()
+  nameWithType: BaseEntity.UpdateTimestamp()
+  fullName: UltraGenericSystem.Models.BaseEntity.UpdateTimestamp()
+  spec.csharp:
+  - uid: UltraGenericSystem.Models.BaseEntity.UpdateTimestamp
+    name: UpdateTimestamp
+    href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_UpdateTimestamp
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UltraGenericSystem.Models.BaseEntity.UpdateTimestamp
+    name: UpdateTimestamp
+    href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_UpdateTimestamp
+  - name: (
+  - name: )
+- uid: UltraGenericSystem.Models.BaseEntity.MarkAsDeleted
+  commentId: M:UltraGenericSystem.Models.BaseEntity.MarkAsDeleted
+  parent: UltraGenericSystem.Models.BaseEntity
+  href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_MarkAsDeleted
+  name: MarkAsDeleted()
+  nameWithType: BaseEntity.MarkAsDeleted()
+  fullName: UltraGenericSystem.Models.BaseEntity.MarkAsDeleted()
+  spec.csharp:
+  - uid: UltraGenericSystem.Models.BaseEntity.MarkAsDeleted
+    name: MarkAsDeleted
+    href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_MarkAsDeleted
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UltraGenericSystem.Models.BaseEntity.MarkAsDeleted
+    name: MarkAsDeleted
+    href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_MarkAsDeleted
+  - name: (
+  - name: )
+- uid: UltraGenericSystem.Models.BaseEntity.Restore
+  commentId: M:UltraGenericSystem.Models.BaseEntity.Restore
+  parent: UltraGenericSystem.Models.BaseEntity
+  href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_Restore
+  name: Restore()
+  nameWithType: BaseEntity.Restore()
+  fullName: UltraGenericSystem.Models.BaseEntity.Restore()
+  spec.csharp:
+  - uid: UltraGenericSystem.Models.BaseEntity.Restore
+    name: Restore
+    href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_Restore
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UltraGenericSystem.Models.BaseEntity.Restore
+    name: Restore
+    href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_Restore
+  - name: (
+  - name: )
+- uid: UltraGenericSystem.Models.BaseEntity.AddMetadata(System.String,System.Object)
+  commentId: M:UltraGenericSystem.Models.BaseEntity.AddMetadata(System.String,System.Object)
+  parent: UltraGenericSystem.Models.BaseEntity
+  isExternal: true
+  href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_AddMetadata_System_String_System_Object_
+  name: AddMetadata(string, object)
+  nameWithType: BaseEntity.AddMetadata(string, object)
+  fullName: UltraGenericSystem.Models.BaseEntity.AddMetadata(string, object)
+  nameWithType.vb: BaseEntity.AddMetadata(String, Object)
+  fullName.vb: UltraGenericSystem.Models.BaseEntity.AddMetadata(String, Object)
+  name.vb: AddMetadata(String, Object)
+  spec.csharp:
+  - uid: UltraGenericSystem.Models.BaseEntity.AddMetadata(System.String,System.Object)
+    name: AddMetadata
+    href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_AddMetadata_System_String_System_Object_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: UltraGenericSystem.Models.BaseEntity.AddMetadata(System.String,System.Object)
+    name: AddMetadata
+    href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_AddMetadata_System_String_System_Object_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: UltraGenericSystem.Models.BaseEntity.GetMetadata``1(System.String)
+  commentId: M:UltraGenericSystem.Models.BaseEntity.GetMetadata``1(System.String)
+  parent: UltraGenericSystem.Models.BaseEntity
+  isExternal: true
+  href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_GetMetadata__1_System_String_
+  name: GetMetadata<T>(string)
+  nameWithType: BaseEntity.GetMetadata<T>(string)
+  fullName: UltraGenericSystem.Models.BaseEntity.GetMetadata<T>(string)
+  nameWithType.vb: BaseEntity.GetMetadata(Of T)(String)
+  fullName.vb: UltraGenericSystem.Models.BaseEntity.GetMetadata(Of T)(String)
+  name.vb: GetMetadata(Of T)(String)
+  spec.csharp:
+  - uid: UltraGenericSystem.Models.BaseEntity.GetMetadata``1(System.String)
+    name: GetMetadata
+    href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_GetMetadata__1_System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: UltraGenericSystem.Models.BaseEntity.GetMetadata``1(System.String)
+    name: GetMetadata
+    href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_GetMetadata__1_System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: UltraGenericSystem.Models.BaseEntity.AddTags(System.String[])
+  commentId: M:UltraGenericSystem.Models.BaseEntity.AddTags(System.String[])
+  parent: UltraGenericSystem.Models.BaseEntity
+  isExternal: true
+  href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_AddTags_System_String___
+  name: AddTags(params string[])
+  nameWithType: BaseEntity.AddTags(params string[])
+  fullName: UltraGenericSystem.Models.BaseEntity.AddTags(params string[])
+  nameWithType.vb: BaseEntity.AddTags(ParamArray String())
+  fullName.vb: UltraGenericSystem.Models.BaseEntity.AddTags(ParamArray String())
+  name.vb: AddTags(ParamArray String())
+  spec.csharp:
+  - uid: UltraGenericSystem.Models.BaseEntity.AddTags(System.String[])
+    name: AddTags
+    href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_AddTags_System_String___
+  - name: (
+  - name: params
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: UltraGenericSystem.Models.BaseEntity.AddTags(System.String[])
+    name: AddTags
+    href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_AddTags_System_String___
+  - name: (
+  - name: ParamArray
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+  - name: )
+- uid: UltraGenericSystem.Models.BaseEntity.RemoveTags(System.String[])
+  commentId: M:UltraGenericSystem.Models.BaseEntity.RemoveTags(System.String[])
+  parent: UltraGenericSystem.Models.BaseEntity
+  isExternal: true
+  href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_RemoveTags_System_String___
+  name: RemoveTags(params string[])
+  nameWithType: BaseEntity.RemoveTags(params string[])
+  fullName: UltraGenericSystem.Models.BaseEntity.RemoveTags(params string[])
+  nameWithType.vb: BaseEntity.RemoveTags(ParamArray String())
+  fullName.vb: UltraGenericSystem.Models.BaseEntity.RemoveTags(ParamArray String())
+  name.vb: RemoveTags(ParamArray String())
+  spec.csharp:
+  - uid: UltraGenericSystem.Models.BaseEntity.RemoveTags(System.String[])
+    name: RemoveTags
+    href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_RemoveTags_System_String___
+  - name: (
+  - name: params
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: UltraGenericSystem.Models.BaseEntity.RemoveTags(System.String[])
+    name: RemoveTags
+    href: UltraGenericSystem.Models.BaseEntity.html#UltraGenericSystem_Models_BaseEntity_RemoveTags_System_String___
+  - name: (
+  - name: ParamArray
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UltraGenericSystem.Models.Agent.Name*
+  commentId: Overload:UltraGenericSystem.Models.Agent.Name
+  href: UltraGenericSystem.Models.Agent.html#UltraGenericSystem_Models_Agent_Name
+  name: Name
+  nameWithType: Agent.Name
+  fullName: UltraGenericSystem.Models.Agent.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: UltraGenericSystem.Models.Agent.Type*
+  commentId: Overload:UltraGenericSystem.Models.Agent.Type
+  href: UltraGenericSystem.Models.Agent.html#UltraGenericSystem_Models_Agent_Type
+  name: Type
+  nameWithType: Agent.Type
+  fullName: UltraGenericSystem.Models.Agent.Type
+- uid: UltraGenericSystem.Models.Agent.PromptTemplatePath*
+  commentId: Overload:UltraGenericSystem.Models.Agent.PromptTemplatePath
+  href: UltraGenericSystem.Models.Agent.html#UltraGenericSystem_Models_Agent_PromptTemplatePath
+  name: PromptTemplatePath
+  nameWithType: Agent.PromptTemplatePath
+  fullName: UltraGenericSystem.Models.Agent.PromptTemplatePath
+- uid: UltraGenericSystem.Models.Agent.Configuration*
+  commentId: Overload:UltraGenericSystem.Models.Agent.Configuration
+  href: UltraGenericSystem.Models.Agent.html#UltraGenericSystem_Models_Agent_Configuration
+  name: Configuration
+  nameWithType: Agent.Configuration
+  fullName: UltraGenericSystem.Models.Agent.Configuration
+- uid: UltraGenericSystem.Models.Agent.Version*
+  commentId: Overload:UltraGenericSystem.Models.Agent.Version
+  href: UltraGenericSystem.Models.Agent.html#UltraGenericSystem_Models_Agent_Version
+  name: Version
+  nameWithType: Agent.Version
+  fullName: UltraGenericSystem.Models.Agent.Version
+- uid: UltraGenericSystem.Models.Agent.IsActive*
+  commentId: Overload:UltraGenericSystem.Models.Agent.IsActive
+  href: UltraGenericSystem.Models.Agent.html#UltraGenericSystem_Models_Agent_IsActive
+  name: IsActive
+  nameWithType: Agent.IsActive
+  fullName: UltraGenericSystem.Models.Agent.IsActive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: UltraGenericSystem.Models.Agent.Status*
+  commentId: Overload:UltraGenericSystem.Models.Agent.Status
+  href: UltraGenericSystem.Models.Agent.html#UltraGenericSystem_Models_Agent_Status
+  name: Status
+  nameWithType: Agent.Status
+  fullName: UltraGenericSystem.Models.Agent.Status
+- uid: UltraGenericSystem.Models.Agent.LastActive*
+  commentId: Overload:UltraGenericSystem.Models.Agent.LastActive
+  href: UltraGenericSystem.Models.Agent.html#UltraGenericSystem_Models_Agent_LastActive
+  name: LastActive
+  nameWithType: Agent.LastActive
+  fullName: UltraGenericSystem.Models.Agent.LastActive
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime?
+  nameWithType: DateTime?
+  fullName: System.DateTime?
+  nameWithType.vb: Date?
+  fullName.vb: Date?
+  name.vb: Date?
+  spec.csharp:
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+  spec.vb:
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UltraGenericSystem.Models.Agent.Skills*
+  commentId: Overload:UltraGenericSystem.Models.Agent.Skills
+  href: UltraGenericSystem.Models.Agent.html#UltraGenericSystem_Models_Agent_Skills
+  name: Skills
+  nameWithType: Agent.Skills
+  fullName: UltraGenericSystem.Models.Agent.Skills
+- uid: System.Collections.Generic.ICollection{UltraGenericSystem.Models.Skill}
+  commentId: T:System.Collections.Generic.ICollection{UltraGenericSystem.Models.Skill}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<Skill>
+  nameWithType: ICollection<Skill>
+  fullName: System.Collections.Generic.ICollection<UltraGenericSystem.Models.Skill>
+  nameWithType.vb: ICollection(Of Skill)
+  fullName.vb: System.Collections.Generic.ICollection(Of UltraGenericSystem.Models.Skill)
+  name.vb: ICollection(Of Skill)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: UltraGenericSystem.Models.Skill
+    name: Skill
+    href: UltraGenericSystem.Models.Skill.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.Skill
+    name: Skill
+    href: UltraGenericSystem.Models.Skill.html
+  - name: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: UltraGenericSystem.Models.Agent.Threads*
+  commentId: Overload:UltraGenericSystem.Models.Agent.Threads
+  href: UltraGenericSystem.Models.Agent.html#UltraGenericSystem_Models_Agent_Threads
+  name: Threads
+  nameWithType: Agent.Threads
+  fullName: UltraGenericSystem.Models.Agent.Threads
+- uid: System.Collections.Generic.ICollection{UltraGenericSystem.Models.AgentThread}
+  commentId: T:System.Collections.Generic.ICollection{UltraGenericSystem.Models.AgentThread}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<AgentThread>
+  nameWithType: ICollection<AgentThread>
+  fullName: System.Collections.Generic.ICollection<UltraGenericSystem.Models.AgentThread>
+  nameWithType.vb: ICollection(Of AgentThread)
+  fullName.vb: System.Collections.Generic.ICollection(Of UltraGenericSystem.Models.AgentThread)
+  name.vb: ICollection(Of AgentThread)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: UltraGenericSystem.Models.AgentThread
+    name: AgentThread
+    href: UltraGenericSystem.Models.AgentThread.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.AgentThread
+    name: AgentThread
+    href: UltraGenericSystem.Models.AgentThread.html
+  - name: )
+- uid: UltraGenericSystem.Models.Agent.Executions*
+  commentId: Overload:UltraGenericSystem.Models.Agent.Executions
+  href: UltraGenericSystem.Models.Agent.html#UltraGenericSystem_Models_Agent_Executions
+  name: Executions
+  nameWithType: Agent.Executions
+  fullName: UltraGenericSystem.Models.Agent.Executions
+- uid: System.Collections.Generic.ICollection{UltraGenericSystem.Models.AgentExecution}
+  commentId: T:System.Collections.Generic.ICollection{UltraGenericSystem.Models.AgentExecution}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<AgentExecution>
+  nameWithType: ICollection<AgentExecution>
+  fullName: System.Collections.Generic.ICollection<UltraGenericSystem.Models.AgentExecution>
+  nameWithType.vb: ICollection(Of AgentExecution)
+  fullName.vb: System.Collections.Generic.ICollection(Of UltraGenericSystem.Models.AgentExecution)
+  name.vb: ICollection(Of AgentExecution)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: UltraGenericSystem.Models.AgentExecution
+    name: AgentExecution
+    href: UltraGenericSystem.Models.AgentExecution.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.AgentExecution
+    name: AgentExecution
+    href: UltraGenericSystem.Models.AgentExecution.html
+  - name: )

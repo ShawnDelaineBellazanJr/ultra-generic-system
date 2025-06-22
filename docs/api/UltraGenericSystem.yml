@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: UltraGenericSystem
+  commentId: N:UltraGenericSystem
+  id: UltraGenericSystem
+  children:
+  - UltraGenericSystem.Program
+  langs:
+  - csharp
+  - vb
+  name: UltraGenericSystem
+  nameWithType: UltraGenericSystem
+  fullName: UltraGenericSystem
+  type: Namespace
+  assemblies:
+  - UltraGenericSystem
+references:
+- uid: UltraGenericSystem.Program
+  commentId: T:UltraGenericSystem.Program
+  href: UltraGenericSystem.Program.html
+  name: Program
+  nameWithType: Program
+  fullName: UltraGenericSystem.Program

@@ -1,0 +1,654 @@
+### YamlMime:ManagedReference
+items:
+- uid: UltraGenericSystem.Services.BulkOperationResult`1
+  commentId: T:UltraGenericSystem.Services.BulkOperationResult`1
+  id: BulkOperationResult`1
+  parent: UltraGenericSystem.Services
+  children:
+  - UltraGenericSystem.Services.BulkOperationResult`1.Errors
+  - UltraGenericSystem.Services.BulkOperationResult`1.FailureCount
+  - UltraGenericSystem.Services.BulkOperationResult`1.SuccessCount
+  - UltraGenericSystem.Services.BulkOperationResult`1.SuccessResults
+  - UltraGenericSystem.Services.BulkOperationResult`1.TotalCount
+  langs:
+  - csharp
+  - vb
+  name: BulkOperationResult<T>
+  nameWithType: BulkOperationResult<T>
+  fullName: UltraGenericSystem.Services.BulkOperationResult<T>
+  type: Class
+  source:
+    remote:
+      path: Services/IAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: BulkOperationResult
+    path: ../Services/IAgentService.cs
+    startLine: 121
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Result of bulk operations
+  example: []
+  syntax:
+    content: public class BulkOperationResult<T>
+    typeParameters:
+    - id: T
+      description: Result type
+    content.vb: Public Class BulkOperationResult(Of T)
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  nameWithType.vb: BulkOperationResult(Of T)
+  fullName.vb: UltraGenericSystem.Services.BulkOperationResult(Of T)
+  name.vb: BulkOperationResult(Of T)
+- uid: UltraGenericSystem.Services.BulkOperationResult`1.SuccessCount
+  commentId: P:UltraGenericSystem.Services.BulkOperationResult`1.SuccessCount
+  id: SuccessCount
+  parent: UltraGenericSystem.Services.BulkOperationResult`1
+  langs:
+  - csharp
+  - vb
+  name: SuccessCount
+  nameWithType: BulkOperationResult<T>.SuccessCount
+  fullName: UltraGenericSystem.Services.BulkOperationResult<T>.SuccessCount
+  type: Property
+  source:
+    remote:
+      path: Services/IAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: SuccessCount
+    path: ../Services/IAgentService.cs
+    startLine: 126
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Number of successful operations
+  example: []
+  syntax:
+    content: public int SuccessCount { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property SuccessCount As Integer
+  overload: UltraGenericSystem.Services.BulkOperationResult`1.SuccessCount*
+  nameWithType.vb: BulkOperationResult(Of T).SuccessCount
+  fullName.vb: UltraGenericSystem.Services.BulkOperationResult(Of T).SuccessCount
+- uid: UltraGenericSystem.Services.BulkOperationResult`1.FailureCount
+  commentId: P:UltraGenericSystem.Services.BulkOperationResult`1.FailureCount
+  id: FailureCount
+  parent: UltraGenericSystem.Services.BulkOperationResult`1
+  langs:
+  - csharp
+  - vb
+  name: FailureCount
+  nameWithType: BulkOperationResult<T>.FailureCount
+  fullName: UltraGenericSystem.Services.BulkOperationResult<T>.FailureCount
+  type: Property
+  source:
+    remote:
+      path: Services/IAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: FailureCount
+    path: ../Services/IAgentService.cs
+    startLine: 131
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Number of failed operations
+  example: []
+  syntax:
+    content: public int FailureCount { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property FailureCount As Integer
+  overload: UltraGenericSystem.Services.BulkOperationResult`1.FailureCount*
+  nameWithType.vb: BulkOperationResult(Of T).FailureCount
+  fullName.vb: UltraGenericSystem.Services.BulkOperationResult(Of T).FailureCount
+- uid: UltraGenericSystem.Services.BulkOperationResult`1.SuccessResults
+  commentId: P:UltraGenericSystem.Services.BulkOperationResult`1.SuccessResults
+  id: SuccessResults
+  parent: UltraGenericSystem.Services.BulkOperationResult`1
+  langs:
+  - csharp
+  - vb
+  name: SuccessResults
+  nameWithType: BulkOperationResult<T>.SuccessResults
+  fullName: UltraGenericSystem.Services.BulkOperationResult<T>.SuccessResults
+  type: Property
+  source:
+    remote:
+      path: Services/IAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: SuccessResults
+    path: ../Services/IAgentService.cs
+    startLine: 136
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Successful results
+  example: []
+  syntax:
+    content: public IEnumerable<T> SuccessResults { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{{T}}
+    content.vb: Public Property SuccessResults As IEnumerable(Of T)
+  overload: UltraGenericSystem.Services.BulkOperationResult`1.SuccessResults*
+  nameWithType.vb: BulkOperationResult(Of T).SuccessResults
+  fullName.vb: UltraGenericSystem.Services.BulkOperationResult(Of T).SuccessResults
+- uid: UltraGenericSystem.Services.BulkOperationResult`1.Errors
+  commentId: P:UltraGenericSystem.Services.BulkOperationResult`1.Errors
+  id: Errors
+  parent: UltraGenericSystem.Services.BulkOperationResult`1
+  langs:
+  - csharp
+  - vb
+  name: Errors
+  nameWithType: BulkOperationResult<T>.Errors
+  fullName: UltraGenericSystem.Services.BulkOperationResult<T>.Errors
+  type: Property
+  source:
+    remote:
+      path: Services/IAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Errors
+    path: ../Services/IAgentService.cs
+    startLine: 141
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Failed operations with errors
+  example: []
+  syntax:
+    content: public IEnumerable<BulkOperationError> Errors { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{UltraGenericSystem.Services.BulkOperationError}
+    content.vb: Public Property Errors As IEnumerable(Of BulkOperationError)
+  overload: UltraGenericSystem.Services.BulkOperationResult`1.Errors*
+  nameWithType.vb: BulkOperationResult(Of T).Errors
+  fullName.vb: UltraGenericSystem.Services.BulkOperationResult(Of T).Errors
+- uid: UltraGenericSystem.Services.BulkOperationResult`1.TotalCount
+  commentId: P:UltraGenericSystem.Services.BulkOperationResult`1.TotalCount
+  id: TotalCount
+  parent: UltraGenericSystem.Services.BulkOperationResult`1
+  langs:
+  - csharp
+  - vb
+  name: TotalCount
+  nameWithType: BulkOperationResult<T>.TotalCount
+  fullName: UltraGenericSystem.Services.BulkOperationResult<T>.TotalCount
+  type: Property
+  source:
+    remote:
+      path: Services/IAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: TotalCount
+    path: ../Services/IAgentService.cs
+    startLine: 146
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Total number of operations
+  example: []
+  syntax:
+    content: public int TotalCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property TotalCount As Integer
+  overload: UltraGenericSystem.Services.BulkOperationResult`1.TotalCount*
+  nameWithType.vb: BulkOperationResult(Of T).TotalCount
+  fullName.vb: UltraGenericSystem.Services.BulkOperationResult(Of T).TotalCount
+references:
+- uid: UltraGenericSystem.Services
+  commentId: N:UltraGenericSystem.Services
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Services
+  nameWithType: UltraGenericSystem.Services
+  fullName: UltraGenericSystem.Services
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Services
+    name: Services
+    href: UltraGenericSystem.Services.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Services
+    name: Services
+    href: UltraGenericSystem.Services.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UltraGenericSystem.Services.BulkOperationResult`1.SuccessCount*
+  commentId: Overload:UltraGenericSystem.Services.BulkOperationResult`1.SuccessCount
+  href: UltraGenericSystem.Services.BulkOperationResult-1.html#UltraGenericSystem_Services_BulkOperationResult_1_SuccessCount
+  name: SuccessCount
+  nameWithType: BulkOperationResult<T>.SuccessCount
+  fullName: UltraGenericSystem.Services.BulkOperationResult<T>.SuccessCount
+  nameWithType.vb: BulkOperationResult(Of T).SuccessCount
+  fullName.vb: UltraGenericSystem.Services.BulkOperationResult(Of T).SuccessCount
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: UltraGenericSystem.Services.BulkOperationResult`1.FailureCount*
+  commentId: Overload:UltraGenericSystem.Services.BulkOperationResult`1.FailureCount
+  href: UltraGenericSystem.Services.BulkOperationResult-1.html#UltraGenericSystem_Services_BulkOperationResult_1_FailureCount
+  name: FailureCount
+  nameWithType: BulkOperationResult<T>.FailureCount
+  fullName: UltraGenericSystem.Services.BulkOperationResult<T>.FailureCount
+  nameWithType.vb: BulkOperationResult(Of T).FailureCount
+  fullName.vb: UltraGenericSystem.Services.BulkOperationResult(Of T).FailureCount
+- uid: UltraGenericSystem.Services.BulkOperationResult`1.SuccessResults*
+  commentId: Overload:UltraGenericSystem.Services.BulkOperationResult`1.SuccessResults
+  href: UltraGenericSystem.Services.BulkOperationResult-1.html#UltraGenericSystem_Services_BulkOperationResult_1_SuccessResults
+  name: SuccessResults
+  nameWithType: BulkOperationResult<T>.SuccessResults
+  fullName: UltraGenericSystem.Services.BulkOperationResult<T>.SuccessResults
+  nameWithType.vb: BulkOperationResult(Of T).SuccessResults
+  fullName.vb: UltraGenericSystem.Services.BulkOperationResult(Of T).SuccessResults
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: T:System.Collections.Generic.IEnumerable{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: UltraGenericSystem.Services.BulkOperationResult`1.Errors*
+  commentId: Overload:UltraGenericSystem.Services.BulkOperationResult`1.Errors
+  href: UltraGenericSystem.Services.BulkOperationResult-1.html#UltraGenericSystem_Services_BulkOperationResult_1_Errors
+  name: Errors
+  nameWithType: BulkOperationResult<T>.Errors
+  fullName: UltraGenericSystem.Services.BulkOperationResult<T>.Errors
+  nameWithType.vb: BulkOperationResult(Of T).Errors
+  fullName.vb: UltraGenericSystem.Services.BulkOperationResult(Of T).Errors
+- uid: System.Collections.Generic.IEnumerable{UltraGenericSystem.Services.BulkOperationError}
+  commentId: T:System.Collections.Generic.IEnumerable{UltraGenericSystem.Services.BulkOperationError}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<BulkOperationError>
+  nameWithType: IEnumerable<BulkOperationError>
+  fullName: System.Collections.Generic.IEnumerable<UltraGenericSystem.Services.BulkOperationError>
+  nameWithType.vb: IEnumerable(Of BulkOperationError)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of UltraGenericSystem.Services.BulkOperationError)
+  name.vb: IEnumerable(Of BulkOperationError)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: UltraGenericSystem.Services.BulkOperationError
+    name: BulkOperationError
+    href: UltraGenericSystem.Services.BulkOperationError.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Services.BulkOperationError
+    name: BulkOperationError
+    href: UltraGenericSystem.Services.BulkOperationError.html
+  - name: )
+- uid: UltraGenericSystem.Services.BulkOperationResult`1.TotalCount*
+  commentId: Overload:UltraGenericSystem.Services.BulkOperationResult`1.TotalCount
+  href: UltraGenericSystem.Services.BulkOperationResult-1.html#UltraGenericSystem_Services_BulkOperationResult_1_TotalCount
+  name: TotalCount
+  nameWithType: BulkOperationResult<T>.TotalCount
+  fullName: UltraGenericSystem.Services.BulkOperationResult<T>.TotalCount
+  nameWithType.vb: BulkOperationResult(Of T).TotalCount
+  fullName.vb: UltraGenericSystem.Services.BulkOperationResult(Of T).TotalCount

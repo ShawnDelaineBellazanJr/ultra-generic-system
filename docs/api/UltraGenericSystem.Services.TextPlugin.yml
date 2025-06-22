@@ -1,0 +1,475 @@
+### YamlMime:ManagedReference
+items:
+- uid: UltraGenericSystem.Services.TextPlugin
+  commentId: T:UltraGenericSystem.Services.TextPlugin
+  id: TextPlugin
+  parent: UltraGenericSystem.Services
+  children:
+  - UltraGenericSystem.Services.TextPlugin.GetLength(System.String)
+  - UltraGenericSystem.Services.TextPlugin.ToLower(System.String)
+  - UltraGenericSystem.Services.TextPlugin.ToUpper(System.String)
+  langs:
+  - csharp
+  - vb
+  name: TextPlugin
+  nameWithType: TextPlugin
+  fullName: UltraGenericSystem.Services.TextPlugin
+  type: Class
+  source:
+    remote:
+      path: Services/AgentOrchestrator.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: TextPlugin
+    path: ../Services/AgentOrchestrator.cs
+    startLine: 629
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Simple text processing plugin
+  example: []
+  syntax:
+    content: public class TextPlugin
+    content.vb: Public Class TextPlugin
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: UltraGenericSystem.Services.TextPlugin.ToUpper(System.String)
+  commentId: M:UltraGenericSystem.Services.TextPlugin.ToUpper(System.String)
+  id: ToUpper(System.String)
+  parent: UltraGenericSystem.Services.TextPlugin
+  langs:
+  - csharp
+  - vb
+  name: ToUpper(string)
+  nameWithType: TextPlugin.ToUpper(string)
+  fullName: UltraGenericSystem.Services.TextPlugin.ToUpper(string)
+  type: Method
+  source:
+    remote:
+      path: Services/AgentOrchestrator.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: ToUpper
+    path: ../Services/AgentOrchestrator.cs
+    startLine: 631
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  syntax:
+    content: >-
+      [KernelFunction]
+
+      public string ToUpper(string text)
+    parameters:
+    - id: text
+      type: System.String
+    return:
+      type: System.String
+    content.vb: >-
+      <KernelFunction>
+
+      Public Function ToUpper(text As String) As String
+  overload: UltraGenericSystem.Services.TextPlugin.ToUpper*
+  attributes:
+  - type: Microsoft.SemanticKernel.KernelFunctionAttribute
+    ctor: Microsoft.SemanticKernel.KernelFunctionAttribute.#ctor
+    arguments: []
+  nameWithType.vb: TextPlugin.ToUpper(String)
+  fullName.vb: UltraGenericSystem.Services.TextPlugin.ToUpper(String)
+  name.vb: ToUpper(String)
+- uid: UltraGenericSystem.Services.TextPlugin.ToLower(System.String)
+  commentId: M:UltraGenericSystem.Services.TextPlugin.ToLower(System.String)
+  id: ToLower(System.String)
+  parent: UltraGenericSystem.Services.TextPlugin
+  langs:
+  - csharp
+  - vb
+  name: ToLower(string)
+  nameWithType: TextPlugin.ToLower(string)
+  fullName: UltraGenericSystem.Services.TextPlugin.ToLower(string)
+  type: Method
+  source:
+    remote:
+      path: Services/AgentOrchestrator.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: ToLower
+    path: ../Services/AgentOrchestrator.cs
+    startLine: 634
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  syntax:
+    content: >-
+      [KernelFunction]
+
+      public string ToLower(string text)
+    parameters:
+    - id: text
+      type: System.String
+    return:
+      type: System.String
+    content.vb: >-
+      <KernelFunction>
+
+      Public Function ToLower(text As String) As String
+  overload: UltraGenericSystem.Services.TextPlugin.ToLower*
+  attributes:
+  - type: Microsoft.SemanticKernel.KernelFunctionAttribute
+    ctor: Microsoft.SemanticKernel.KernelFunctionAttribute.#ctor
+    arguments: []
+  nameWithType.vb: TextPlugin.ToLower(String)
+  fullName.vb: UltraGenericSystem.Services.TextPlugin.ToLower(String)
+  name.vb: ToLower(String)
+- uid: UltraGenericSystem.Services.TextPlugin.GetLength(System.String)
+  commentId: M:UltraGenericSystem.Services.TextPlugin.GetLength(System.String)
+  id: GetLength(System.String)
+  parent: UltraGenericSystem.Services.TextPlugin
+  langs:
+  - csharp
+  - vb
+  name: GetLength(string)
+  nameWithType: TextPlugin.GetLength(string)
+  fullName: UltraGenericSystem.Services.TextPlugin.GetLength(string)
+  type: Method
+  source:
+    remote:
+      path: Services/AgentOrchestrator.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetLength
+    path: ../Services/AgentOrchestrator.cs
+    startLine: 637
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  syntax:
+    content: >-
+      [KernelFunction]
+
+      public int GetLength(string text)
+    parameters:
+    - id: text
+      type: System.String
+    return:
+      type: System.Int32
+    content.vb: >-
+      <KernelFunction>
+
+      Public Function GetLength(text As String) As Integer
+  overload: UltraGenericSystem.Services.TextPlugin.GetLength*
+  attributes:
+  - type: Microsoft.SemanticKernel.KernelFunctionAttribute
+    ctor: Microsoft.SemanticKernel.KernelFunctionAttribute.#ctor
+    arguments: []
+  nameWithType.vb: TextPlugin.GetLength(String)
+  fullName.vb: UltraGenericSystem.Services.TextPlugin.GetLength(String)
+  name.vb: GetLength(String)
+references:
+- uid: UltraGenericSystem.Services
+  commentId: N:UltraGenericSystem.Services
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Services
+  nameWithType: UltraGenericSystem.Services
+  fullName: UltraGenericSystem.Services
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Services
+    name: Services
+    href: UltraGenericSystem.Services.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Services
+    name: Services
+    href: UltraGenericSystem.Services.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UltraGenericSystem.Services.TextPlugin.ToUpper*
+  commentId: Overload:UltraGenericSystem.Services.TextPlugin.ToUpper
+  href: UltraGenericSystem.Services.TextPlugin.html#UltraGenericSystem_Services_TextPlugin_ToUpper_System_String_
+  name: ToUpper
+  nameWithType: TextPlugin.ToUpper
+  fullName: UltraGenericSystem.Services.TextPlugin.ToUpper
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: UltraGenericSystem.Services.TextPlugin.ToLower*
+  commentId: Overload:UltraGenericSystem.Services.TextPlugin.ToLower
+  href: UltraGenericSystem.Services.TextPlugin.html#UltraGenericSystem_Services_TextPlugin_ToLower_System_String_
+  name: ToLower
+  nameWithType: TextPlugin.ToLower
+  fullName: UltraGenericSystem.Services.TextPlugin.ToLower
+- uid: UltraGenericSystem.Services.TextPlugin.GetLength*
+  commentId: Overload:UltraGenericSystem.Services.TextPlugin.GetLength
+  href: UltraGenericSystem.Services.TextPlugin.html#UltraGenericSystem_Services_TextPlugin_GetLength_System_String_
+  name: GetLength
+  nameWithType: TextPlugin.GetLength
+  fullName: UltraGenericSystem.Services.TextPlugin.GetLength
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

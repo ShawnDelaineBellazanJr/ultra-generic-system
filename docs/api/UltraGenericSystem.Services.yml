@@ -1,0 +1,196 @@
+### YamlMime:ManagedReference
+items:
+- uid: UltraGenericSystem.Services
+  commentId: N:UltraGenericSystem.Services
+  id: UltraGenericSystem.Services
+  children:
+  - UltraGenericSystem.Services.AgentOrchestrator
+  - UltraGenericSystem.Services.AgentService`1
+  - UltraGenericSystem.Services.AzureAIAgentHealthStatus
+  - UltraGenericSystem.Services.AzureAIAgentService
+  - UltraGenericSystem.Services.BulkOperationError
+  - UltraGenericSystem.Services.BulkOperationResult`1
+  - UltraGenericSystem.Services.HttpPlugin
+  - UltraGenericSystem.Services.IAgentOrchestrator
+  - UltraGenericSystem.Services.IAgentService`1
+  - UltraGenericSystem.Services.IAzureAIAgentService
+  - UltraGenericSystem.Services.IMemoryService
+  - UltraGenericSystem.Services.MemoryService
+  - UltraGenericSystem.Services.TextPlugin
+  - UltraGenericSystem.Services.TimePlugin
+  langs:
+  - csharp
+  - vb
+  name: UltraGenericSystem.Services
+  nameWithType: UltraGenericSystem.Services
+  fullName: UltraGenericSystem.Services
+  type: Namespace
+  assemblies:
+  - UltraGenericSystem
+references:
+- uid: UltraGenericSystem.Services.AgentOrchestrator
+  commentId: T:UltraGenericSystem.Services.AgentOrchestrator
+  href: UltraGenericSystem.Services.AgentOrchestrator.html
+  name: AgentOrchestrator
+  nameWithType: AgentOrchestrator
+  fullName: UltraGenericSystem.Services.AgentOrchestrator
+- uid: UltraGenericSystem.Services.TextPlugin
+  commentId: T:UltraGenericSystem.Services.TextPlugin
+  href: UltraGenericSystem.Services.TextPlugin.html
+  name: TextPlugin
+  nameWithType: TextPlugin
+  fullName: UltraGenericSystem.Services.TextPlugin
+- uid: UltraGenericSystem.Services.TimePlugin
+  commentId: T:UltraGenericSystem.Services.TimePlugin
+  href: UltraGenericSystem.Services.TimePlugin.html
+  name: TimePlugin
+  nameWithType: TimePlugin
+  fullName: UltraGenericSystem.Services.TimePlugin
+- uid: UltraGenericSystem.Services.HttpPlugin
+  commentId: T:UltraGenericSystem.Services.HttpPlugin
+  href: UltraGenericSystem.Services.HttpPlugin.html
+  name: HttpPlugin
+  nameWithType: HttpPlugin
+  fullName: UltraGenericSystem.Services.HttpPlugin
+- uid: UltraGenericSystem.Services.AgentService`1
+  commentId: T:UltraGenericSystem.Services.AgentService`1
+  href: UltraGenericSystem.Services.AgentService-1.html
+  name: AgentService<T>
+  nameWithType: AgentService<T>
+  fullName: UltraGenericSystem.Services.AgentService<T>
+  nameWithType.vb: AgentService(Of T)
+  fullName.vb: UltraGenericSystem.Services.AgentService(Of T)
+  name.vb: AgentService(Of T)
+  spec.csharp:
+  - uid: UltraGenericSystem.Services.AgentService`1
+    name: AgentService
+    href: UltraGenericSystem.Services.AgentService-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UltraGenericSystem.Services.AgentService`1
+    name: AgentService
+    href: UltraGenericSystem.Services.AgentService-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UltraGenericSystem.Services.AzureAIAgentService
+  commentId: T:UltraGenericSystem.Services.AzureAIAgentService
+  href: UltraGenericSystem.Services.AzureAIAgentService.html
+  name: AzureAIAgentService
+  nameWithType: AzureAIAgentService
+  fullName: UltraGenericSystem.Services.AzureAIAgentService
+- uid: UltraGenericSystem.Services.IAgentOrchestrator
+  commentId: T:UltraGenericSystem.Services.IAgentOrchestrator
+  parent: UltraGenericSystem.Services
+  href: UltraGenericSystem.Services.IAgentOrchestrator.html
+  name: IAgentOrchestrator
+  nameWithType: IAgentOrchestrator
+  fullName: UltraGenericSystem.Services.IAgentOrchestrator
+- uid: UltraGenericSystem.Services.IAgentService`1
+  commentId: T:UltraGenericSystem.Services.IAgentService`1
+  href: UltraGenericSystem.Services.IAgentService-1.html
+  name: IAgentService<T>
+  nameWithType: IAgentService<T>
+  fullName: UltraGenericSystem.Services.IAgentService<T>
+  nameWithType.vb: IAgentService(Of T)
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T)
+  name.vb: IAgentService(Of T)
+  spec.csharp:
+  - uid: UltraGenericSystem.Services.IAgentService`1
+    name: IAgentService
+    href: UltraGenericSystem.Services.IAgentService-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UltraGenericSystem.Services.IAgentService`1
+    name: IAgentService
+    href: UltraGenericSystem.Services.IAgentService-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UltraGenericSystem.Services.BulkOperationResult`1
+  commentId: T:UltraGenericSystem.Services.BulkOperationResult`1
+  href: UltraGenericSystem.Services.BulkOperationResult-1.html
+  name: BulkOperationResult<T>
+  nameWithType: BulkOperationResult<T>
+  fullName: UltraGenericSystem.Services.BulkOperationResult<T>
+  nameWithType.vb: BulkOperationResult(Of T)
+  fullName.vb: UltraGenericSystem.Services.BulkOperationResult(Of T)
+  name.vb: BulkOperationResult(Of T)
+  spec.csharp:
+  - uid: UltraGenericSystem.Services.BulkOperationResult`1
+    name: BulkOperationResult
+    href: UltraGenericSystem.Services.BulkOperationResult-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UltraGenericSystem.Services.BulkOperationResult`1
+    name: BulkOperationResult
+    href: UltraGenericSystem.Services.BulkOperationResult-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UltraGenericSystem.Services.BulkOperationError
+  commentId: T:UltraGenericSystem.Services.BulkOperationError
+  href: UltraGenericSystem.Services.BulkOperationError.html
+  name: BulkOperationError
+  nameWithType: BulkOperationError
+  fullName: UltraGenericSystem.Services.BulkOperationError
+- uid: UltraGenericSystem.Services.IAzureAIAgentService
+  commentId: T:UltraGenericSystem.Services.IAzureAIAgentService
+  parent: UltraGenericSystem.Services
+  href: UltraGenericSystem.Services.IAzureAIAgentService.html
+  name: IAzureAIAgentService
+  nameWithType: IAzureAIAgentService
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService
+- uid: UltraGenericSystem.Services.AzureAIAgentHealthStatus
+  commentId: T:UltraGenericSystem.Services.AzureAIAgentHealthStatus
+  href: UltraGenericSystem.Services.AzureAIAgentHealthStatus.html
+  name: AzureAIAgentHealthStatus
+  nameWithType: AzureAIAgentHealthStatus
+  fullName: UltraGenericSystem.Services.AzureAIAgentHealthStatus
+- uid: UltraGenericSystem.Services.IMemoryService
+  commentId: T:UltraGenericSystem.Services.IMemoryService
+  parent: UltraGenericSystem.Services
+  href: UltraGenericSystem.Services.IMemoryService.html
+  name: IMemoryService
+  nameWithType: IMemoryService
+  fullName: UltraGenericSystem.Services.IMemoryService
+- uid: UltraGenericSystem.Services.MemoryService
+  commentId: T:UltraGenericSystem.Services.MemoryService
+  href: UltraGenericSystem.Services.MemoryService.html
+  name: MemoryService
+  nameWithType: MemoryService
+  fullName: UltraGenericSystem.Services.MemoryService
+- uid: UltraGenericSystem.Services
+  commentId: N:UltraGenericSystem.Services
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Services
+  nameWithType: UltraGenericSystem.Services
+  fullName: UltraGenericSystem.Services
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Services
+    name: Services
+    href: UltraGenericSystem.Services.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Services
+    name: Services
+    href: UltraGenericSystem.Services.html

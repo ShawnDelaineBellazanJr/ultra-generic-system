@@ -1,0 +1,105 @@
+### YamlMime:ManagedReference
+items:
+- uid: UltraGenericSystem.Repositories
+  commentId: N:UltraGenericSystem.Repositories
+  id: UltraGenericSystem.Repositories
+  children:
+  - UltraGenericSystem.Repositories.GenericRepository`1
+  - UltraGenericSystem.Repositories.IGenericRepository`1
+  - UltraGenericSystem.Repositories.IUnitOfWork
+  - UltraGenericSystem.Repositories.UnitOfWork
+  langs:
+  - csharp
+  - vb
+  name: UltraGenericSystem.Repositories
+  nameWithType: UltraGenericSystem.Repositories
+  fullName: UltraGenericSystem.Repositories
+  type: Namespace
+  assemblies:
+  - UltraGenericSystem
+references:
+- uid: UltraGenericSystem.Repositories.GenericRepository`1
+  commentId: T:UltraGenericSystem.Repositories.GenericRepository`1
+  href: UltraGenericSystem.Repositories.GenericRepository-1.html
+  name: GenericRepository<T>
+  nameWithType: GenericRepository<T>
+  fullName: UltraGenericSystem.Repositories.GenericRepository<T>
+  nameWithType.vb: GenericRepository(Of T)
+  fullName.vb: UltraGenericSystem.Repositories.GenericRepository(Of T)
+  name.vb: GenericRepository(Of T)
+  spec.csharp:
+  - uid: UltraGenericSystem.Repositories.GenericRepository`1
+    name: GenericRepository
+    href: UltraGenericSystem.Repositories.GenericRepository-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UltraGenericSystem.Repositories.GenericRepository`1
+    name: GenericRepository
+    href: UltraGenericSystem.Repositories.GenericRepository-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1
+  commentId: T:UltraGenericSystem.Repositories.IGenericRepository`1
+  href: UltraGenericSystem.Repositories.IGenericRepository-1.html
+  name: IGenericRepository<T>
+  nameWithType: IGenericRepository<T>
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>
+  nameWithType.vb: IGenericRepository(Of T)
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T)
+  name.vb: IGenericRepository(Of T)
+  spec.csharp:
+  - uid: UltraGenericSystem.Repositories.IGenericRepository`1
+    name: IGenericRepository
+    href: UltraGenericSystem.Repositories.IGenericRepository-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UltraGenericSystem.Repositories.IGenericRepository`1
+    name: IGenericRepository
+    href: UltraGenericSystem.Repositories.IGenericRepository-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UltraGenericSystem.Repositories.IUnitOfWork
+  commentId: T:UltraGenericSystem.Repositories.IUnitOfWork
+  parent: UltraGenericSystem.Repositories
+  href: UltraGenericSystem.Repositories.IUnitOfWork.html
+  name: IUnitOfWork
+  nameWithType: IUnitOfWork
+  fullName: UltraGenericSystem.Repositories.IUnitOfWork
+- uid: UltraGenericSystem.Repositories.UnitOfWork
+  commentId: T:UltraGenericSystem.Repositories.UnitOfWork
+  href: UltraGenericSystem.Repositories.UnitOfWork.html
+  name: UnitOfWork
+  nameWithType: UnitOfWork
+  fullName: UltraGenericSystem.Repositories.UnitOfWork
+- uid: UltraGenericSystem.Repositories
+  commentId: N:UltraGenericSystem.Repositories
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Repositories
+  nameWithType: UltraGenericSystem.Repositories
+  fullName: UltraGenericSystem.Repositories
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Repositories
+    name: Repositories
+    href: UltraGenericSystem.Repositories.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Repositories
+    name: Repositories
+    href: UltraGenericSystem.Repositories.html

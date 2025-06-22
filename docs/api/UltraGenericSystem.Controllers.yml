@@ -1,0 +1,243 @@
+### YamlMime:ManagedReference
+items:
+- uid: UltraGenericSystem.Controllers
+  commentId: N:UltraGenericSystem.Controllers
+  id: UltraGenericSystem.Controllers
+  children:
+  - UltraGenericSystem.Controllers.AdvancedOrchestrationController
+  - UltraGenericSystem.Controllers.AnalyzeCodeRequest
+  - UltraGenericSystem.Controllers.AzureAIAgentController
+  - UltraGenericSystem.Controllers.BulkOperationRequest
+  - UltraGenericSystem.Controllers.BulkOperationResult
+  - UltraGenericSystem.Controllers.CleanupRequest
+  - UltraGenericSystem.Controllers.CompileCodeRequest
+  - UltraGenericSystem.Controllers.CompilePluginRequest
+  - UltraGenericSystem.Controllers.ContentGenerationRequest
+  - UltraGenericSystem.Controllers.ExecutePluginRequest
+  - UltraGenericSystem.Controllers.GenerateControllerRequest
+  - UltraGenericSystem.Controllers.GenerateCrudStackRequest
+  - UltraGenericSystem.Controllers.GenerateEntityRequest
+  - UltraGenericSystem.Controllers.GenerateRepositoryRequest
+  - UltraGenericSystem.Controllers.GenerateServiceRequest
+  - UltraGenericSystem.Controllers.GenericController`1
+  - UltraGenericSystem.Controllers.MemoryController
+  - UltraGenericSystem.Controllers.QueryRequest
+  - UltraGenericSystem.Controllers.SelfEvolutionController
+  - UltraGenericSystem.Controllers.SimilarityRequest
+  - UltraGenericSystem.Controllers.SimilaritySearchRequest
+  - UltraGenericSystem.Controllers.TextAnalysisRequest
+  - UltraGenericSystem.Controllers.ValidateCodeRequest
+  - UltraGenericSystem.Controllers.ValidatePluginRequest
+  langs:
+  - csharp
+  - vb
+  name: UltraGenericSystem.Controllers
+  nameWithType: UltraGenericSystem.Controllers
+  fullName: UltraGenericSystem.Controllers
+  type: Namespace
+  assemblies:
+  - UltraGenericSystem
+references:
+- uid: UltraGenericSystem.Controllers.AdvancedOrchestrationController
+  commentId: T:UltraGenericSystem.Controllers.AdvancedOrchestrationController
+  href: UltraGenericSystem.Controllers.AdvancedOrchestrationController.html
+  name: AdvancedOrchestrationController
+  nameWithType: AdvancedOrchestrationController
+  fullName: UltraGenericSystem.Controllers.AdvancedOrchestrationController
+- uid: UltraGenericSystem.Controllers.AzureAIAgentController
+  commentId: T:UltraGenericSystem.Controllers.AzureAIAgentController
+  href: UltraGenericSystem.Controllers.AzureAIAgentController.html
+  name: AzureAIAgentController
+  nameWithType: AzureAIAgentController
+  fullName: UltraGenericSystem.Controllers.AzureAIAgentController
+- uid: UltraGenericSystem.Controllers.SimilaritySearchRequest
+  commentId: T:UltraGenericSystem.Controllers.SimilaritySearchRequest
+  parent: UltraGenericSystem.Controllers
+  href: UltraGenericSystem.Controllers.SimilaritySearchRequest.html
+  name: SimilaritySearchRequest
+  nameWithType: SimilaritySearchRequest
+  fullName: UltraGenericSystem.Controllers.SimilaritySearchRequest
+- uid: UltraGenericSystem.Controllers.TextAnalysisRequest
+  commentId: T:UltraGenericSystem.Controllers.TextAnalysisRequest
+  parent: UltraGenericSystem.Controllers
+  href: UltraGenericSystem.Controllers.TextAnalysisRequest.html
+  name: TextAnalysisRequest
+  nameWithType: TextAnalysisRequest
+  fullName: UltraGenericSystem.Controllers.TextAnalysisRequest
+- uid: UltraGenericSystem.Controllers.ContentGenerationRequest
+  commentId: T:UltraGenericSystem.Controllers.ContentGenerationRequest
+  parent: UltraGenericSystem.Controllers
+  href: UltraGenericSystem.Controllers.ContentGenerationRequest.html
+  name: ContentGenerationRequest
+  nameWithType: ContentGenerationRequest
+  fullName: UltraGenericSystem.Controllers.ContentGenerationRequest
+- uid: UltraGenericSystem.Controllers.GenericController`1
+  commentId: T:UltraGenericSystem.Controllers.GenericController`1
+  href: UltraGenericSystem.Controllers.GenericController-1.html
+  name: GenericController<T>
+  nameWithType: GenericController<T>
+  fullName: UltraGenericSystem.Controllers.GenericController<T>
+  nameWithType.vb: GenericController(Of T)
+  fullName.vb: UltraGenericSystem.Controllers.GenericController(Of T)
+  name.vb: GenericController(Of T)
+  spec.csharp:
+  - uid: UltraGenericSystem.Controllers.GenericController`1
+    name: GenericController
+    href: UltraGenericSystem.Controllers.GenericController-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UltraGenericSystem.Controllers.GenericController`1
+    name: GenericController
+    href: UltraGenericSystem.Controllers.GenericController-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UltraGenericSystem.Controllers.QueryRequest
+  commentId: T:UltraGenericSystem.Controllers.QueryRequest
+  parent: UltraGenericSystem.Controllers
+  href: UltraGenericSystem.Controllers.QueryRequest.html
+  name: QueryRequest
+  nameWithType: QueryRequest
+  fullName: UltraGenericSystem.Controllers.QueryRequest
+- uid: UltraGenericSystem.Controllers.BulkOperationRequest
+  commentId: T:UltraGenericSystem.Controllers.BulkOperationRequest
+  parent: UltraGenericSystem.Controllers
+  href: UltraGenericSystem.Controllers.BulkOperationRequest.html
+  name: BulkOperationRequest
+  nameWithType: BulkOperationRequest
+  fullName: UltraGenericSystem.Controllers.BulkOperationRequest
+- uid: UltraGenericSystem.Controllers.BulkOperationResult
+  commentId: T:UltraGenericSystem.Controllers.BulkOperationResult
+  href: UltraGenericSystem.Controllers.BulkOperationResult.html
+  name: BulkOperationResult
+  nameWithType: BulkOperationResult
+  fullName: UltraGenericSystem.Controllers.BulkOperationResult
+- uid: UltraGenericSystem.Controllers.MemoryController
+  commentId: T:UltraGenericSystem.Controllers.MemoryController
+  href: UltraGenericSystem.Controllers.MemoryController.html
+  name: MemoryController
+  nameWithType: MemoryController
+  fullName: UltraGenericSystem.Controllers.MemoryController
+- uid: UltraGenericSystem.Controllers.SimilarityRequest
+  commentId: T:UltraGenericSystem.Controllers.SimilarityRequest
+  parent: UltraGenericSystem.Controllers
+  href: UltraGenericSystem.Controllers.SimilarityRequest.html
+  name: SimilarityRequest
+  nameWithType: SimilarityRequest
+  fullName: UltraGenericSystem.Controllers.SimilarityRequest
+- uid: UltraGenericSystem.Controllers.CleanupRequest
+  commentId: T:UltraGenericSystem.Controllers.CleanupRequest
+  parent: UltraGenericSystem.Controllers
+  href: UltraGenericSystem.Controllers.CleanupRequest.html
+  name: CleanupRequest
+  nameWithType: CleanupRequest
+  fullName: UltraGenericSystem.Controllers.CleanupRequest
+- uid: UltraGenericSystem.Controllers.SelfEvolutionController
+  commentId: T:UltraGenericSystem.Controllers.SelfEvolutionController
+  href: UltraGenericSystem.Controllers.SelfEvolutionController.html
+  name: SelfEvolutionController
+  nameWithType: SelfEvolutionController
+  fullName: UltraGenericSystem.Controllers.SelfEvolutionController
+- uid: UltraGenericSystem.Controllers.CompileCodeRequest
+  commentId: T:UltraGenericSystem.Controllers.CompileCodeRequest
+  parent: UltraGenericSystem.Controllers
+  href: UltraGenericSystem.Controllers.CompileCodeRequest.html
+  name: CompileCodeRequest
+  nameWithType: CompileCodeRequest
+  fullName: UltraGenericSystem.Controllers.CompileCodeRequest
+- uid: UltraGenericSystem.Controllers.AnalyzeCodeRequest
+  commentId: T:UltraGenericSystem.Controllers.AnalyzeCodeRequest
+  parent: UltraGenericSystem.Controllers
+  href: UltraGenericSystem.Controllers.AnalyzeCodeRequest.html
+  name: AnalyzeCodeRequest
+  nameWithType: AnalyzeCodeRequest
+  fullName: UltraGenericSystem.Controllers.AnalyzeCodeRequest
+- uid: UltraGenericSystem.Controllers.GenerateEntityRequest
+  commentId: T:UltraGenericSystem.Controllers.GenerateEntityRequest
+  parent: UltraGenericSystem.Controllers
+  href: UltraGenericSystem.Controllers.GenerateEntityRequest.html
+  name: GenerateEntityRequest
+  nameWithType: GenerateEntityRequest
+  fullName: UltraGenericSystem.Controllers.GenerateEntityRequest
+- uid: UltraGenericSystem.Controllers.GenerateControllerRequest
+  commentId: T:UltraGenericSystem.Controllers.GenerateControllerRequest
+  parent: UltraGenericSystem.Controllers
+  href: UltraGenericSystem.Controllers.GenerateControllerRequest.html
+  name: GenerateControllerRequest
+  nameWithType: GenerateControllerRequest
+  fullName: UltraGenericSystem.Controllers.GenerateControllerRequest
+- uid: UltraGenericSystem.Controllers.GenerateServiceRequest
+  commentId: T:UltraGenericSystem.Controllers.GenerateServiceRequest
+  parent: UltraGenericSystem.Controllers
+  href: UltraGenericSystem.Controllers.GenerateServiceRequest.html
+  name: GenerateServiceRequest
+  nameWithType: GenerateServiceRequest
+  fullName: UltraGenericSystem.Controllers.GenerateServiceRequest
+- uid: UltraGenericSystem.Controllers.GenerateRepositoryRequest
+  commentId: T:UltraGenericSystem.Controllers.GenerateRepositoryRequest
+  parent: UltraGenericSystem.Controllers
+  href: UltraGenericSystem.Controllers.GenerateRepositoryRequest.html
+  name: GenerateRepositoryRequest
+  nameWithType: GenerateRepositoryRequest
+  fullName: UltraGenericSystem.Controllers.GenerateRepositoryRequest
+- uid: UltraGenericSystem.Controllers.GenerateCrudStackRequest
+  commentId: T:UltraGenericSystem.Controllers.GenerateCrudStackRequest
+  parent: UltraGenericSystem.Controllers
+  href: UltraGenericSystem.Controllers.GenerateCrudStackRequest.html
+  name: GenerateCrudStackRequest
+  nameWithType: GenerateCrudStackRequest
+  fullName: UltraGenericSystem.Controllers.GenerateCrudStackRequest
+- uid: UltraGenericSystem.Controllers.ValidateCodeRequest
+  commentId: T:UltraGenericSystem.Controllers.ValidateCodeRequest
+  parent: UltraGenericSystem.Controllers
+  href: UltraGenericSystem.Controllers.ValidateCodeRequest.html
+  name: ValidateCodeRequest
+  nameWithType: ValidateCodeRequest
+  fullName: UltraGenericSystem.Controllers.ValidateCodeRequest
+- uid: UltraGenericSystem.Controllers.CompilePluginRequest
+  commentId: T:UltraGenericSystem.Controllers.CompilePluginRequest
+  parent: UltraGenericSystem.Controllers
+  href: UltraGenericSystem.Controllers.CompilePluginRequest.html
+  name: CompilePluginRequest
+  nameWithType: CompilePluginRequest
+  fullName: UltraGenericSystem.Controllers.CompilePluginRequest
+- uid: UltraGenericSystem.Controllers.ExecutePluginRequest
+  commentId: T:UltraGenericSystem.Controllers.ExecutePluginRequest
+  parent: UltraGenericSystem.Controllers
+  href: UltraGenericSystem.Controllers.ExecutePluginRequest.html
+  name: ExecutePluginRequest
+  nameWithType: ExecutePluginRequest
+  fullName: UltraGenericSystem.Controllers.ExecutePluginRequest
+- uid: UltraGenericSystem.Controllers.ValidatePluginRequest
+  commentId: T:UltraGenericSystem.Controllers.ValidatePluginRequest
+  parent: UltraGenericSystem.Controllers
+  href: UltraGenericSystem.Controllers.ValidatePluginRequest.html
+  name: ValidatePluginRequest
+  nameWithType: ValidatePluginRequest
+  fullName: UltraGenericSystem.Controllers.ValidatePluginRequest
+- uid: UltraGenericSystem.Controllers
+  commentId: N:UltraGenericSystem.Controllers
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Controllers
+  nameWithType: UltraGenericSystem.Controllers
+  fullName: UltraGenericSystem.Controllers
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Controllers
+    name: Controllers
+    href: UltraGenericSystem.Controllers.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Controllers
+    name: Controllers
+    href: UltraGenericSystem.Controllers.html

@@ -1,0 +1,1958 @@
+### YamlMime:ManagedReference
+items:
+- uid: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService
+  commentId: T:UltraGenericSystem.Services.SelfEvolution.DynamicPluginService
+  id: DynamicPluginService
+  parent: UltraGenericSystem.Services.SelfEvolution
+  children:
+  - UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.#ctor(UltraGenericSystem.Repositories.IGenericRepository{UltraGenericSystem.Models.SelfEvolution.DynamicPlugin},UltraGenericSystem.Services.SelfEvolution.ICodeGenerationService,Microsoft.Extensions.Logging.ILogger{UltraGenericSystem.Services.SelfEvolution.DynamicPluginService})
+  - UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.CheckPluginCompatibilityAsync(System.String)
+  - UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.CompileAndRegisterPluginAsync(System.String,System.String,System.String)
+  - UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.DeletePluginAsync(System.String)
+  - UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.ExecutePluginMethodAsync(System.String,System.String,System.Object[])
+  - UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginAsync(System.String)
+  - UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginDependenciesAsync(System.String)
+  - UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginStatisticsAsync
+  - UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginsAsync(System.String)
+  - UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.LoadPluginAsync(System.String)
+  - UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.RegisterPluginAsync(UltraGenericSystem.Models.SelfEvolution.DynamicPlugin)
+  - UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.UnloadPluginAsync(System.String)
+  - UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.UpdatePluginAsync(UltraGenericSystem.Models.SelfEvolution.DynamicPlugin)
+  - UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.ValidatePluginSourceAsync(System.String)
+  langs:
+  - csharp
+  - vb
+  name: DynamicPluginService
+  nameWithType: DynamicPluginService
+  fullName: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService
+  type: Class
+  source:
+    remote:
+      path: Services/SelfEvolution/DynamicPluginService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: DynamicPluginService
+    path: ../Services/SelfEvolution/DynamicPluginService.cs
+    startLine: 11
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.SelfEvolution
+  summary: Service for dynamic plugin management and registration
+  example: []
+  syntax:
+    content: 'public class DynamicPluginService : IDynamicPluginService'
+    content.vb: Public Class DynamicPluginService Implements IDynamicPluginService
+  inheritance:
+  - System.Object
+  implements:
+  - UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.#ctor(UltraGenericSystem.Repositories.IGenericRepository{UltraGenericSystem.Models.SelfEvolution.DynamicPlugin},UltraGenericSystem.Services.SelfEvolution.ICodeGenerationService,Microsoft.Extensions.Logging.ILogger{UltraGenericSystem.Services.SelfEvolution.DynamicPluginService})
+  commentId: M:UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.#ctor(UltraGenericSystem.Repositories.IGenericRepository{UltraGenericSystem.Models.SelfEvolution.DynamicPlugin},UltraGenericSystem.Services.SelfEvolution.ICodeGenerationService,Microsoft.Extensions.Logging.ILogger{UltraGenericSystem.Services.SelfEvolution.DynamicPluginService})
+  id: '#ctor(UltraGenericSystem.Repositories.IGenericRepository{UltraGenericSystem.Models.SelfEvolution.DynamicPlugin},UltraGenericSystem.Services.SelfEvolution.ICodeGenerationService,Microsoft.Extensions.Logging.ILogger{UltraGenericSystem.Services.SelfEvolution.DynamicPluginService})'
+  parent: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService
+  langs:
+  - csharp
+  - vb
+  name: DynamicPluginService(IGenericRepository<DynamicPlugin>, ICodeGenerationService, ILogger<DynamicPluginService>)
+  nameWithType: DynamicPluginService.DynamicPluginService(IGenericRepository<DynamicPlugin>, ICodeGenerationService, ILogger<DynamicPluginService>)
+  fullName: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.DynamicPluginService(UltraGenericSystem.Repositories.IGenericRepository<UltraGenericSystem.Models.SelfEvolution.DynamicPlugin>, UltraGenericSystem.Services.SelfEvolution.ICodeGenerationService, Microsoft.Extensions.Logging.ILogger<UltraGenericSystem.Services.SelfEvolution.DynamicPluginService>)
+  type: Constructor
+  source:
+    remote:
+      path: Services/SelfEvolution/DynamicPluginService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: .ctor
+    path: ../Services/SelfEvolution/DynamicPluginService.cs
+    startLine: 19
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.SelfEvolution
+  syntax:
+    content: public DynamicPluginService(IGenericRepository<DynamicPlugin> pluginRepository, ICodeGenerationService codeGenerationService, ILogger<DynamicPluginService> logger)
+    parameters:
+    - id: pluginRepository
+      type: UltraGenericSystem.Repositories.IGenericRepository{UltraGenericSystem.Models.SelfEvolution.DynamicPlugin}
+    - id: codeGenerationService
+      type: UltraGenericSystem.Services.SelfEvolution.ICodeGenerationService
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger{UltraGenericSystem.Services.SelfEvolution.DynamicPluginService}
+    content.vb: Public Sub New(pluginRepository As IGenericRepository(Of DynamicPlugin), codeGenerationService As ICodeGenerationService, logger As ILogger(Of DynamicPluginService))
+  overload: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.#ctor*
+  nameWithType.vb: DynamicPluginService.New(IGenericRepository(Of DynamicPlugin), ICodeGenerationService, ILogger(Of DynamicPluginService))
+  fullName.vb: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.New(UltraGenericSystem.Repositories.IGenericRepository(Of UltraGenericSystem.Models.SelfEvolution.DynamicPlugin), UltraGenericSystem.Services.SelfEvolution.ICodeGenerationService, Microsoft.Extensions.Logging.ILogger(Of UltraGenericSystem.Services.SelfEvolution.DynamicPluginService))
+  name.vb: New(IGenericRepository(Of DynamicPlugin), ICodeGenerationService, ILogger(Of DynamicPluginService))
+- uid: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.RegisterPluginAsync(UltraGenericSystem.Models.SelfEvolution.DynamicPlugin)
+  commentId: M:UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.RegisterPluginAsync(UltraGenericSystem.Models.SelfEvolution.DynamicPlugin)
+  id: RegisterPluginAsync(UltraGenericSystem.Models.SelfEvolution.DynamicPlugin)
+  parent: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService
+  langs:
+  - csharp
+  - vb
+  name: RegisterPluginAsync(DynamicPlugin)
+  nameWithType: DynamicPluginService.RegisterPluginAsync(DynamicPlugin)
+  fullName: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.RegisterPluginAsync(UltraGenericSystem.Models.SelfEvolution.DynamicPlugin)
+  type: Method
+  source:
+    remote:
+      path: Services/SelfEvolution/DynamicPluginService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: RegisterPluginAsync
+    path: ../Services/SelfEvolution/DynamicPluginService.cs
+    startLine: 34
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.SelfEvolution
+  summary: Register a new plugin
+  example: []
+  syntax:
+    content: public Task<DynamicPlugin> RegisterPluginAsync(DynamicPlugin plugin)
+    parameters:
+    - id: plugin
+      type: UltraGenericSystem.Models.SelfEvolution.DynamicPlugin
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.SelfEvolution.DynamicPlugin}
+    content.vb: Public Function RegisterPluginAsync(plugin As DynamicPlugin) As Task(Of DynamicPlugin)
+  overload: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.RegisterPluginAsync*
+  implements:
+  - UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.RegisterPluginAsync(UltraGenericSystem.Models.SelfEvolution.DynamicPlugin)
+- uid: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.LoadPluginAsync(System.String)
+  commentId: M:UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.LoadPluginAsync(System.String)
+  id: LoadPluginAsync(System.String)
+  parent: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService
+  langs:
+  - csharp
+  - vb
+  name: LoadPluginAsync(string)
+  nameWithType: DynamicPluginService.LoadPluginAsync(string)
+  fullName: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.LoadPluginAsync(string)
+  type: Method
+  source:
+    remote:
+      path: Services/SelfEvolution/DynamicPluginService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: LoadPluginAsync
+    path: ../Services/SelfEvolution/DynamicPluginService.cs
+    startLine: 62
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.SelfEvolution
+  summary: Load a plugin into memory
+  example: []
+  syntax:
+    content: public Task<bool> LoadPluginAsync(string pluginName)
+    parameters:
+    - id: pluginName
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Public Function LoadPluginAsync(pluginName As String) As Task(Of Boolean)
+  overload: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.LoadPluginAsync*
+  implements:
+  - UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.LoadPluginAsync(System.String)
+  nameWithType.vb: DynamicPluginService.LoadPluginAsync(String)
+  fullName.vb: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.LoadPluginAsync(String)
+  name.vb: LoadPluginAsync(String)
+- uid: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.UnloadPluginAsync(System.String)
+  commentId: M:UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.UnloadPluginAsync(System.String)
+  id: UnloadPluginAsync(System.String)
+  parent: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService
+  langs:
+  - csharp
+  - vb
+  name: UnloadPluginAsync(string)
+  nameWithType: DynamicPluginService.UnloadPluginAsync(string)
+  fullName: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.UnloadPluginAsync(string)
+  type: Method
+  source:
+    remote:
+      path: Services/SelfEvolution/DynamicPluginService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: UnloadPluginAsync
+    path: ../Services/SelfEvolution/DynamicPluginService.cs
+    startLine: 128
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.SelfEvolution
+  summary: Unload a plugin from memory
+  example: []
+  syntax:
+    content: public Task<bool> UnloadPluginAsync(string pluginName)
+    parameters:
+    - id: pluginName
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Public Function UnloadPluginAsync(pluginName As String) As Task(Of Boolean)
+  overload: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.UnloadPluginAsync*
+  implements:
+  - UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.UnloadPluginAsync(System.String)
+  nameWithType.vb: DynamicPluginService.UnloadPluginAsync(String)
+  fullName.vb: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.UnloadPluginAsync(String)
+  name.vb: UnloadPluginAsync(String)
+- uid: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginsAsync(System.String)
+  commentId: M:UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginsAsync(System.String)
+  id: GetPluginsAsync(System.String)
+  parent: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService
+  langs:
+  - csharp
+  - vb
+  name: GetPluginsAsync(string?)
+  nameWithType: DynamicPluginService.GetPluginsAsync(string?)
+  fullName: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginsAsync(string?)
+  type: Method
+  source:
+    remote:
+      path: Services/SelfEvolution/DynamicPluginService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetPluginsAsync
+    path: ../Services/SelfEvolution/DynamicPluginService.cs
+    startLine: 162
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.SelfEvolution
+  summary: Get all registered plugins
+  example: []
+  syntax:
+    content: public Task<List<DynamicPlugin>> GetPluginsAsync(string? pluginType = null)
+    parameters:
+    - id: pluginType
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{UltraGenericSystem.Models.SelfEvolution.DynamicPlugin}}
+    content.vb: Public Function GetPluginsAsync(pluginType As String = Nothing) As Task(Of List(Of DynamicPlugin))
+  overload: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginsAsync*
+  implements:
+  - UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.GetPluginsAsync(System.String)
+  nameWithType.vb: DynamicPluginService.GetPluginsAsync(String)
+  fullName.vb: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginsAsync(String)
+  name.vb: GetPluginsAsync(String)
+- uid: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginAsync(System.String)
+  commentId: M:UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginAsync(System.String)
+  id: GetPluginAsync(System.String)
+  parent: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService
+  langs:
+  - csharp
+  - vb
+  name: GetPluginAsync(string)
+  nameWithType: DynamicPluginService.GetPluginAsync(string)
+  fullName: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginAsync(string)
+  type: Method
+  source:
+    remote:
+      path: Services/SelfEvolution/DynamicPluginService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetPluginAsync
+    path: ../Services/SelfEvolution/DynamicPluginService.cs
+    startLine: 177
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.SelfEvolution
+  summary: Get a specific plugin
+  example: []
+  syntax:
+    content: public Task<DynamicPlugin?> GetPluginAsync(string pluginName)
+    parameters:
+    - id: pluginName
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.SelfEvolution.DynamicPlugin}
+    content.vb: Public Function GetPluginAsync(pluginName As String) As Task(Of DynamicPlugin)
+  overload: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginAsync*
+  implements:
+  - UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.GetPluginAsync(System.String)
+  nameWithType.vb: DynamicPluginService.GetPluginAsync(String)
+  fullName.vb: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginAsync(String)
+  name.vb: GetPluginAsync(String)
+- uid: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.UpdatePluginAsync(UltraGenericSystem.Models.SelfEvolution.DynamicPlugin)
+  commentId: M:UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.UpdatePluginAsync(UltraGenericSystem.Models.SelfEvolution.DynamicPlugin)
+  id: UpdatePluginAsync(UltraGenericSystem.Models.SelfEvolution.DynamicPlugin)
+  parent: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService
+  langs:
+  - csharp
+  - vb
+  name: UpdatePluginAsync(DynamicPlugin)
+  nameWithType: DynamicPluginService.UpdatePluginAsync(DynamicPlugin)
+  fullName: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.UpdatePluginAsync(UltraGenericSystem.Models.SelfEvolution.DynamicPlugin)
+  type: Method
+  source:
+    remote:
+      path: Services/SelfEvolution/DynamicPluginService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: UpdatePluginAsync
+    path: ../Services/SelfEvolution/DynamicPluginService.cs
+    startLine: 186
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.SelfEvolution
+  summary: Update plugin configuration
+  example: []
+  syntax:
+    content: public Task<DynamicPlugin> UpdatePluginAsync(DynamicPlugin plugin)
+    parameters:
+    - id: plugin
+      type: UltraGenericSystem.Models.SelfEvolution.DynamicPlugin
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.SelfEvolution.DynamicPlugin}
+    content.vb: Public Function UpdatePluginAsync(plugin As DynamicPlugin) As Task(Of DynamicPlugin)
+  overload: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.UpdatePluginAsync*
+  implements:
+  - UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.UpdatePluginAsync(UltraGenericSystem.Models.SelfEvolution.DynamicPlugin)
+- uid: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.DeletePluginAsync(System.String)
+  commentId: M:UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.DeletePluginAsync(System.String)
+  id: DeletePluginAsync(System.String)
+  parent: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService
+  langs:
+  - csharp
+  - vb
+  name: DeletePluginAsync(string)
+  nameWithType: DynamicPluginService.DeletePluginAsync(string)
+  fullName: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.DeletePluginAsync(string)
+  type: Method
+  source:
+    remote:
+      path: Services/SelfEvolution/DynamicPluginService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: DeletePluginAsync
+    path: ../Services/SelfEvolution/DynamicPluginService.cs
+    startLine: 212
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.SelfEvolution
+  summary: Delete a plugin
+  example: []
+  syntax:
+    content: public Task<bool> DeletePluginAsync(string pluginName)
+    parameters:
+    - id: pluginName
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Public Function DeletePluginAsync(pluginName As String) As Task(Of Boolean)
+  overload: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.DeletePluginAsync*
+  implements:
+  - UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.DeletePluginAsync(System.String)
+  nameWithType.vb: DynamicPluginService.DeletePluginAsync(String)
+  fullName.vb: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.DeletePluginAsync(String)
+  name.vb: DeletePluginAsync(String)
+- uid: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.CompileAndRegisterPluginAsync(System.String,System.String,System.String)
+  commentId: M:UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.CompileAndRegisterPluginAsync(System.String,System.String,System.String)
+  id: CompileAndRegisterPluginAsync(System.String,System.String,System.String)
+  parent: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService
+  langs:
+  - csharp
+  - vb
+  name: CompileAndRegisterPluginAsync(string, string, string)
+  nameWithType: DynamicPluginService.CompileAndRegisterPluginAsync(string, string, string)
+  fullName: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.CompileAndRegisterPluginAsync(string, string, string)
+  type: Method
+  source:
+    remote:
+      path: Services/SelfEvolution/DynamicPluginService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: CompileAndRegisterPluginAsync
+    path: ../Services/SelfEvolution/DynamicPluginService.cs
+    startLine: 247
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.SelfEvolution
+  summary: Compile and register a plugin from source code
+  example: []
+  syntax:
+    content: public Task<DynamicPlugin> CompileAndRegisterPluginAsync(string pluginName, string sourceCode, string pluginType)
+    parameters:
+    - id: pluginName
+      type: System.String
+    - id: sourceCode
+      type: System.String
+    - id: pluginType
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.SelfEvolution.DynamicPlugin}
+    content.vb: Public Function CompileAndRegisterPluginAsync(pluginName As String, sourceCode As String, pluginType As String) As Task(Of DynamicPlugin)
+  overload: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.CompileAndRegisterPluginAsync*
+  implements:
+  - UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.CompileAndRegisterPluginAsync(System.String,System.String,System.String)
+  nameWithType.vb: DynamicPluginService.CompileAndRegisterPluginAsync(String, String, String)
+  fullName.vb: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.CompileAndRegisterPluginAsync(String, String, String)
+  name.vb: CompileAndRegisterPluginAsync(String, String, String)
+- uid: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.ExecutePluginMethodAsync(System.String,System.String,System.Object[])
+  commentId: M:UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.ExecutePluginMethodAsync(System.String,System.String,System.Object[])
+  id: ExecutePluginMethodAsync(System.String,System.String,System.Object[])
+  parent: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService
+  langs:
+  - csharp
+  - vb
+  name: ExecutePluginMethodAsync(string, string, params object[])
+  nameWithType: DynamicPluginService.ExecutePluginMethodAsync(string, string, params object[])
+  fullName: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.ExecutePluginMethodAsync(string, string, params object[])
+  type: Method
+  source:
+    remote:
+      path: Services/SelfEvolution/DynamicPluginService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: ExecutePluginMethodAsync
+    path: ../Services/SelfEvolution/DynamicPluginService.cs
+    startLine: 284
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.SelfEvolution
+  summary: Execute a plugin method
+  example: []
+  syntax:
+    content: public Task<object?> ExecutePluginMethodAsync(string pluginName, string methodName, params object[] parameters)
+    parameters:
+    - id: pluginName
+      type: System.String
+    - id: methodName
+      type: System.String
+    - id: parameters
+      type: System.Object[]
+    return:
+      type: System.Threading.Tasks.Task{System.Object}
+    content.vb: Public Function ExecutePluginMethodAsync(pluginName As String, methodName As String, ParamArray parameters As Object()) As Task(Of Object)
+  overload: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.ExecutePluginMethodAsync*
+  implements:
+  - UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.ExecutePluginMethodAsync(System.String,System.String,System.Object[])
+  nameWithType.vb: DynamicPluginService.ExecutePluginMethodAsync(String, String, ParamArray Object())
+  fullName.vb: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.ExecutePluginMethodAsync(String, String, ParamArray Object())
+  name.vb: ExecutePluginMethodAsync(String, String, ParamArray Object())
+- uid: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginStatisticsAsync
+  commentId: M:UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginStatisticsAsync
+  id: GetPluginStatisticsAsync
+  parent: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService
+  langs:
+  - csharp
+  - vb
+  name: GetPluginStatisticsAsync()
+  nameWithType: DynamicPluginService.GetPluginStatisticsAsync()
+  fullName: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginStatisticsAsync()
+  type: Method
+  source:
+    remote:
+      path: Services/SelfEvolution/DynamicPluginService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetPluginStatisticsAsync
+    path: ../Services/SelfEvolution/DynamicPluginService.cs
+    startLine: 331
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.SelfEvolution
+  summary: Get plugin statistics
+  example: []
+  syntax:
+    content: public Task<Dictionary<string, object>> GetPluginStatisticsAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.Dictionary{System.String,System.Object}}
+    content.vb: Public Function GetPluginStatisticsAsync() As Task(Of Dictionary(Of String, Object))
+  overload: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginStatisticsAsync*
+  implements:
+  - UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.GetPluginStatisticsAsync
+- uid: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.ValidatePluginSourceAsync(System.String)
+  commentId: M:UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.ValidatePluginSourceAsync(System.String)
+  id: ValidatePluginSourceAsync(System.String)
+  parent: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService
+  langs:
+  - csharp
+  - vb
+  name: ValidatePluginSourceAsync(string)
+  nameWithType: DynamicPluginService.ValidatePluginSourceAsync(string)
+  fullName: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.ValidatePluginSourceAsync(string)
+  type: Method
+  source:
+    remote:
+      path: Services/SelfEvolution/DynamicPluginService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: ValidatePluginSourceAsync
+    path: ../Services/SelfEvolution/DynamicPluginService.cs
+    startLine: 349
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.SelfEvolution
+  summary: Validate plugin source code
+  example: []
+  syntax:
+    content: public Task<bool> ValidatePluginSourceAsync(string sourceCode)
+    parameters:
+    - id: sourceCode
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Public Function ValidatePluginSourceAsync(sourceCode As String) As Task(Of Boolean)
+  overload: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.ValidatePluginSourceAsync*
+  implements:
+  - UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.ValidatePluginSourceAsync(System.String)
+  nameWithType.vb: DynamicPluginService.ValidatePluginSourceAsync(String)
+  fullName.vb: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.ValidatePluginSourceAsync(String)
+  name.vb: ValidatePluginSourceAsync(String)
+- uid: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginDependenciesAsync(System.String)
+  commentId: M:UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginDependenciesAsync(System.String)
+  id: GetPluginDependenciesAsync(System.String)
+  parent: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService
+  langs:
+  - csharp
+  - vb
+  name: GetPluginDependenciesAsync(string)
+  nameWithType: DynamicPluginService.GetPluginDependenciesAsync(string)
+  fullName: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginDependenciesAsync(string)
+  type: Method
+  source:
+    remote:
+      path: Services/SelfEvolution/DynamicPluginService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetPluginDependenciesAsync
+    path: ../Services/SelfEvolution/DynamicPluginService.cs
+    startLine: 364
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.SelfEvolution
+  summary: Get plugin dependencies
+  example: []
+  syntax:
+    content: public Task<List<string>> GetPluginDependenciesAsync(string pluginName)
+    parameters:
+    - id: pluginName
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{System.String}}
+    content.vb: Public Function GetPluginDependenciesAsync(pluginName As String) As Task(Of List(Of String))
+  overload: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginDependenciesAsync*
+  implements:
+  - UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.GetPluginDependenciesAsync(System.String)
+  nameWithType.vb: DynamicPluginService.GetPluginDependenciesAsync(String)
+  fullName.vb: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginDependenciesAsync(String)
+  name.vb: GetPluginDependenciesAsync(String)
+- uid: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.CheckPluginCompatibilityAsync(System.String)
+  commentId: M:UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.CheckPluginCompatibilityAsync(System.String)
+  id: CheckPluginCompatibilityAsync(System.String)
+  parent: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService
+  langs:
+  - csharp
+  - vb
+  name: CheckPluginCompatibilityAsync(string)
+  nameWithType: DynamicPluginService.CheckPluginCompatibilityAsync(string)
+  fullName: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.CheckPluginCompatibilityAsync(string)
+  type: Method
+  source:
+    remote:
+      path: Services/SelfEvolution/DynamicPluginService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: CheckPluginCompatibilityAsync
+    path: ../Services/SelfEvolution/DynamicPluginService.cs
+    startLine: 374
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.SelfEvolution
+  summary: Check plugin compatibility
+  example: []
+  syntax:
+    content: public Task<bool> CheckPluginCompatibilityAsync(string pluginName)
+    parameters:
+    - id: pluginName
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Public Function CheckPluginCompatibilityAsync(pluginName As String) As Task(Of Boolean)
+  overload: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.CheckPluginCompatibilityAsync*
+  implements:
+  - UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.CheckPluginCompatibilityAsync(System.String)
+  nameWithType.vb: DynamicPluginService.CheckPluginCompatibilityAsync(String)
+  fullName.vb: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.CheckPluginCompatibilityAsync(String)
+  name.vb: CheckPluginCompatibilityAsync(String)
+references:
+- uid: UltraGenericSystem.Services.SelfEvolution
+  commentId: N:UltraGenericSystem.Services.SelfEvolution
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Services.SelfEvolution
+  nameWithType: UltraGenericSystem.Services.SelfEvolution
+  fullName: UltraGenericSystem.Services.SelfEvolution
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Services
+    name: Services
+    href: UltraGenericSystem.Services.html
+  - name: .
+  - uid: UltraGenericSystem.Services.SelfEvolution
+    name: SelfEvolution
+    href: UltraGenericSystem.Services.SelfEvolution.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Services
+    name: Services
+    href: UltraGenericSystem.Services.html
+  - name: .
+  - uid: UltraGenericSystem.Services.SelfEvolution
+    name: SelfEvolution
+    href: UltraGenericSystem.Services.SelfEvolution.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService
+  commentId: T:UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService
+  parent: UltraGenericSystem.Services.SelfEvolution
+  href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html
+  name: IDynamicPluginService
+  nameWithType: IDynamicPluginService
+  fullName: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.#ctor*
+  commentId: Overload:UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.#ctor
+  href: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_DynamicPluginService__ctor_UltraGenericSystem_Repositories_IGenericRepository_UltraGenericSystem_Models_SelfEvolution_DynamicPlugin__UltraGenericSystem_Services_SelfEvolution_ICodeGenerationService_Microsoft_Extensions_Logging_ILogger_UltraGenericSystem_Services_SelfEvolution_DynamicPluginService__
+  name: DynamicPluginService
+  nameWithType: DynamicPluginService.DynamicPluginService
+  fullName: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.DynamicPluginService
+  nameWithType.vb: DynamicPluginService.New
+  fullName.vb: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.New
+  name.vb: New
+- uid: UltraGenericSystem.Repositories.IGenericRepository{UltraGenericSystem.Models.SelfEvolution.DynamicPlugin}
+  commentId: T:UltraGenericSystem.Repositories.IGenericRepository{UltraGenericSystem.Models.SelfEvolution.DynamicPlugin}
+  parent: UltraGenericSystem.Repositories
+  definition: UltraGenericSystem.Repositories.IGenericRepository`1
+  href: UltraGenericSystem.Repositories.IGenericRepository-1.html
+  name: IGenericRepository<DynamicPlugin>
+  nameWithType: IGenericRepository<DynamicPlugin>
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<UltraGenericSystem.Models.SelfEvolution.DynamicPlugin>
+  nameWithType.vb: IGenericRepository(Of DynamicPlugin)
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of UltraGenericSystem.Models.SelfEvolution.DynamicPlugin)
+  name.vb: IGenericRepository(Of DynamicPlugin)
+  spec.csharp:
+  - uid: UltraGenericSystem.Repositories.IGenericRepository`1
+    name: IGenericRepository
+    href: UltraGenericSystem.Repositories.IGenericRepository-1.html
+  - name: <
+  - uid: UltraGenericSystem.Models.SelfEvolution.DynamicPlugin
+    name: DynamicPlugin
+    href: UltraGenericSystem.Models.SelfEvolution.DynamicPlugin.html
+  - name: '>'
+  spec.vb:
+  - uid: UltraGenericSystem.Repositories.IGenericRepository`1
+    name: IGenericRepository
+    href: UltraGenericSystem.Repositories.IGenericRepository-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.SelfEvolution.DynamicPlugin
+    name: DynamicPlugin
+    href: UltraGenericSystem.Models.SelfEvolution.DynamicPlugin.html
+  - name: )
+- uid: UltraGenericSystem.Services.SelfEvolution.ICodeGenerationService
+  commentId: T:UltraGenericSystem.Services.SelfEvolution.ICodeGenerationService
+  parent: UltraGenericSystem.Services.SelfEvolution
+  href: UltraGenericSystem.Services.SelfEvolution.ICodeGenerationService.html
+  name: ICodeGenerationService
+  nameWithType: ICodeGenerationService
+  fullName: UltraGenericSystem.Services.SelfEvolution.ICodeGenerationService
+- uid: Microsoft.Extensions.Logging.ILogger{UltraGenericSystem.Services.SelfEvolution.DynamicPluginService}
+  commentId: T:Microsoft.Extensions.Logging.ILogger{UltraGenericSystem.Services.SelfEvolution.DynamicPluginService}
+  parent: Microsoft.Extensions.Logging
+  definition: Microsoft.Extensions.Logging.ILogger`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<DynamicPluginService>
+  nameWithType: ILogger<DynamicPluginService>
+  fullName: Microsoft.Extensions.Logging.ILogger<UltraGenericSystem.Services.SelfEvolution.DynamicPluginService>
+  nameWithType.vb: ILogger(Of DynamicPluginService)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of UltraGenericSystem.Services.SelfEvolution.DynamicPluginService)
+  name.vb: ILogger(Of DynamicPluginService)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - uid: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService
+    name: DynamicPluginService
+    href: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService
+    name: DynamicPluginService
+    href: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.html
+  - name: )
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1
+  commentId: T:UltraGenericSystem.Repositories.IGenericRepository`1
+  href: UltraGenericSystem.Repositories.IGenericRepository-1.html
+  name: IGenericRepository<T>
+  nameWithType: IGenericRepository<T>
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>
+  nameWithType.vb: IGenericRepository(Of T)
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T)
+  name.vb: IGenericRepository(Of T)
+  spec.csharp:
+  - uid: UltraGenericSystem.Repositories.IGenericRepository`1
+    name: IGenericRepository
+    href: UltraGenericSystem.Repositories.IGenericRepository-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UltraGenericSystem.Repositories.IGenericRepository`1
+    name: IGenericRepository
+    href: UltraGenericSystem.Repositories.IGenericRepository-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UltraGenericSystem.Repositories
+  commentId: N:UltraGenericSystem.Repositories
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Repositories
+  nameWithType: UltraGenericSystem.Repositories
+  fullName: UltraGenericSystem.Repositories
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Repositories
+    name: Repositories
+    href: UltraGenericSystem.Repositories.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Repositories
+    name: Repositories
+    href: UltraGenericSystem.Repositories.html
+- uid: Microsoft.Extensions.Logging.ILogger`1
+  commentId: T:Microsoft.Extensions.Logging.ILogger`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<TCategoryName>
+  nameWithType: ILogger<TCategoryName>
+  fullName: Microsoft.Extensions.Logging.ILogger<TCategoryName>
+  nameWithType.vb: ILogger(Of TCategoryName)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of TCategoryName)
+  name.vb: ILogger(Of TCategoryName)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - name: TCategoryName
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCategoryName
+  - name: )
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+- uid: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.RegisterPluginAsync*
+  commentId: Overload:UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.RegisterPluginAsync
+  href: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_RegisterPluginAsync_UltraGenericSystem_Models_SelfEvolution_DynamicPlugin_
+  name: RegisterPluginAsync
+  nameWithType: DynamicPluginService.RegisterPluginAsync
+  fullName: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.RegisterPluginAsync
+- uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.RegisterPluginAsync(UltraGenericSystem.Models.SelfEvolution.DynamicPlugin)
+  commentId: M:UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.RegisterPluginAsync(UltraGenericSystem.Models.SelfEvolution.DynamicPlugin)
+  parent: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService
+  href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_RegisterPluginAsync_UltraGenericSystem_Models_SelfEvolution_DynamicPlugin_
+  name: RegisterPluginAsync(DynamicPlugin)
+  nameWithType: IDynamicPluginService.RegisterPluginAsync(DynamicPlugin)
+  fullName: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.RegisterPluginAsync(UltraGenericSystem.Models.SelfEvolution.DynamicPlugin)
+  spec.csharp:
+  - uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.RegisterPluginAsync(UltraGenericSystem.Models.SelfEvolution.DynamicPlugin)
+    name: RegisterPluginAsync
+    href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_RegisterPluginAsync_UltraGenericSystem_Models_SelfEvolution_DynamicPlugin_
+  - name: (
+  - uid: UltraGenericSystem.Models.SelfEvolution.DynamicPlugin
+    name: DynamicPlugin
+    href: UltraGenericSystem.Models.SelfEvolution.DynamicPlugin.html
+  - name: )
+  spec.vb:
+  - uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.RegisterPluginAsync(UltraGenericSystem.Models.SelfEvolution.DynamicPlugin)
+    name: RegisterPluginAsync
+    href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_RegisterPluginAsync_UltraGenericSystem_Models_SelfEvolution_DynamicPlugin_
+  - name: (
+  - uid: UltraGenericSystem.Models.SelfEvolution.DynamicPlugin
+    name: DynamicPlugin
+    href: UltraGenericSystem.Models.SelfEvolution.DynamicPlugin.html
+  - name: )
+- uid: UltraGenericSystem.Models.SelfEvolution.DynamicPlugin
+  commentId: T:UltraGenericSystem.Models.SelfEvolution.DynamicPlugin
+  parent: UltraGenericSystem.Models.SelfEvolution
+  href: UltraGenericSystem.Models.SelfEvolution.DynamicPlugin.html
+  name: DynamicPlugin
+  nameWithType: DynamicPlugin
+  fullName: UltraGenericSystem.Models.SelfEvolution.DynamicPlugin
+- uid: System.Threading.Tasks.Task{UltraGenericSystem.Models.SelfEvolution.DynamicPlugin}
+  commentId: T:System.Threading.Tasks.Task{UltraGenericSystem.Models.SelfEvolution.DynamicPlugin}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<DynamicPlugin>
+  nameWithType: Task<DynamicPlugin>
+  fullName: System.Threading.Tasks.Task<UltraGenericSystem.Models.SelfEvolution.DynamicPlugin>
+  nameWithType.vb: Task(Of DynamicPlugin)
+  fullName.vb: System.Threading.Tasks.Task(Of UltraGenericSystem.Models.SelfEvolution.DynamicPlugin)
+  name.vb: Task(Of DynamicPlugin)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: UltraGenericSystem.Models.SelfEvolution.DynamicPlugin
+    name: DynamicPlugin
+    href: UltraGenericSystem.Models.SelfEvolution.DynamicPlugin.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.SelfEvolution.DynamicPlugin
+    name: DynamicPlugin
+    href: UltraGenericSystem.Models.SelfEvolution.DynamicPlugin.html
+  - name: )
+- uid: UltraGenericSystem.Models.SelfEvolution
+  commentId: N:UltraGenericSystem.Models.SelfEvolution
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Models.SelfEvolution
+  nameWithType: UltraGenericSystem.Models.SelfEvolution
+  fullName: UltraGenericSystem.Models.SelfEvolution
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+  - name: .
+  - uid: UltraGenericSystem.Models.SelfEvolution
+    name: SelfEvolution
+    href: UltraGenericSystem.Models.SelfEvolution.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+  - name: .
+  - uid: UltraGenericSystem.Models.SelfEvolution
+    name: SelfEvolution
+    href: UltraGenericSystem.Models.SelfEvolution.html
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.LoadPluginAsync*
+  commentId: Overload:UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.LoadPluginAsync
+  href: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_LoadPluginAsync_System_String_
+  name: LoadPluginAsync
+  nameWithType: DynamicPluginService.LoadPluginAsync
+  fullName: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.LoadPluginAsync
+- uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.LoadPluginAsync(System.String)
+  commentId: M:UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.LoadPluginAsync(System.String)
+  parent: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService
+  isExternal: true
+  href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_LoadPluginAsync_System_String_
+  name: LoadPluginAsync(string)
+  nameWithType: IDynamicPluginService.LoadPluginAsync(string)
+  fullName: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.LoadPluginAsync(string)
+  nameWithType.vb: IDynamicPluginService.LoadPluginAsync(String)
+  fullName.vb: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.LoadPluginAsync(String)
+  name.vb: LoadPluginAsync(String)
+  spec.csharp:
+  - uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.LoadPluginAsync(System.String)
+    name: LoadPluginAsync
+    href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_LoadPluginAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.LoadPluginAsync(System.String)
+    name: LoadPluginAsync
+    href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_LoadPluginAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.UnloadPluginAsync*
+  commentId: Overload:UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.UnloadPluginAsync
+  href: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_UnloadPluginAsync_System_String_
+  name: UnloadPluginAsync
+  nameWithType: DynamicPluginService.UnloadPluginAsync
+  fullName: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.UnloadPluginAsync
+- uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.UnloadPluginAsync(System.String)
+  commentId: M:UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.UnloadPluginAsync(System.String)
+  parent: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService
+  isExternal: true
+  href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_UnloadPluginAsync_System_String_
+  name: UnloadPluginAsync(string)
+  nameWithType: IDynamicPluginService.UnloadPluginAsync(string)
+  fullName: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.UnloadPluginAsync(string)
+  nameWithType.vb: IDynamicPluginService.UnloadPluginAsync(String)
+  fullName.vb: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.UnloadPluginAsync(String)
+  name.vb: UnloadPluginAsync(String)
+  spec.csharp:
+  - uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.UnloadPluginAsync(System.String)
+    name: UnloadPluginAsync
+    href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_UnloadPluginAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.UnloadPluginAsync(System.String)
+    name: UnloadPluginAsync
+    href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_UnloadPluginAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginsAsync*
+  commentId: Overload:UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginsAsync
+  href: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_GetPluginsAsync_System_String_
+  name: GetPluginsAsync
+  nameWithType: DynamicPluginService.GetPluginsAsync
+  fullName: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginsAsync
+- uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.GetPluginsAsync(System.String)
+  commentId: M:UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.GetPluginsAsync(System.String)
+  parent: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService
+  isExternal: true
+  href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_GetPluginsAsync_System_String_
+  name: GetPluginsAsync(string)
+  nameWithType: IDynamicPluginService.GetPluginsAsync(string)
+  fullName: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.GetPluginsAsync(string)
+  nameWithType.vb: IDynamicPluginService.GetPluginsAsync(String)
+  fullName.vb: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.GetPluginsAsync(String)
+  name.vb: GetPluginsAsync(String)
+  spec.csharp:
+  - uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.GetPluginsAsync(System.String)
+    name: GetPluginsAsync
+    href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_GetPluginsAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.GetPluginsAsync(System.String)
+    name: GetPluginsAsync
+    href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_GetPluginsAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{UltraGenericSystem.Models.SelfEvolution.DynamicPlugin}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.List{UltraGenericSystem.Models.SelfEvolution.DynamicPlugin}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<List<DynamicPlugin>>
+  nameWithType: Task<List<DynamicPlugin>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<UltraGenericSystem.Models.SelfEvolution.DynamicPlugin>>
+  nameWithType.vb: Task(Of List(Of DynamicPlugin))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of UltraGenericSystem.Models.SelfEvolution.DynamicPlugin))
+  name.vb: Task(Of List(Of DynamicPlugin))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: UltraGenericSystem.Models.SelfEvolution.DynamicPlugin
+    name: DynamicPlugin
+    href: UltraGenericSystem.Models.SelfEvolution.DynamicPlugin.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.SelfEvolution.DynamicPlugin
+    name: DynamicPlugin
+    href: UltraGenericSystem.Models.SelfEvolution.DynamicPlugin.html
+  - name: )
+  - name: )
+- uid: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginAsync*
+  commentId: Overload:UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginAsync
+  href: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_GetPluginAsync_System_String_
+  name: GetPluginAsync
+  nameWithType: DynamicPluginService.GetPluginAsync
+  fullName: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginAsync
+- uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.GetPluginAsync(System.String)
+  commentId: M:UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.GetPluginAsync(System.String)
+  parent: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService
+  isExternal: true
+  href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_GetPluginAsync_System_String_
+  name: GetPluginAsync(string)
+  nameWithType: IDynamicPluginService.GetPluginAsync(string)
+  fullName: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.GetPluginAsync(string)
+  nameWithType.vb: IDynamicPluginService.GetPluginAsync(String)
+  fullName.vb: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.GetPluginAsync(String)
+  name.vb: GetPluginAsync(String)
+  spec.csharp:
+  - uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.GetPluginAsync(System.String)
+    name: GetPluginAsync
+    href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_GetPluginAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.GetPluginAsync(System.String)
+    name: GetPluginAsync
+    href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_GetPluginAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.UpdatePluginAsync*
+  commentId: Overload:UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.UpdatePluginAsync
+  href: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_UpdatePluginAsync_UltraGenericSystem_Models_SelfEvolution_DynamicPlugin_
+  name: UpdatePluginAsync
+  nameWithType: DynamicPluginService.UpdatePluginAsync
+  fullName: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.UpdatePluginAsync
+- uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.UpdatePluginAsync(UltraGenericSystem.Models.SelfEvolution.DynamicPlugin)
+  commentId: M:UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.UpdatePluginAsync(UltraGenericSystem.Models.SelfEvolution.DynamicPlugin)
+  parent: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService
+  href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_UpdatePluginAsync_UltraGenericSystem_Models_SelfEvolution_DynamicPlugin_
+  name: UpdatePluginAsync(DynamicPlugin)
+  nameWithType: IDynamicPluginService.UpdatePluginAsync(DynamicPlugin)
+  fullName: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.UpdatePluginAsync(UltraGenericSystem.Models.SelfEvolution.DynamicPlugin)
+  spec.csharp:
+  - uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.UpdatePluginAsync(UltraGenericSystem.Models.SelfEvolution.DynamicPlugin)
+    name: UpdatePluginAsync
+    href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_UpdatePluginAsync_UltraGenericSystem_Models_SelfEvolution_DynamicPlugin_
+  - name: (
+  - uid: UltraGenericSystem.Models.SelfEvolution.DynamicPlugin
+    name: DynamicPlugin
+    href: UltraGenericSystem.Models.SelfEvolution.DynamicPlugin.html
+  - name: )
+  spec.vb:
+  - uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.UpdatePluginAsync(UltraGenericSystem.Models.SelfEvolution.DynamicPlugin)
+    name: UpdatePluginAsync
+    href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_UpdatePluginAsync_UltraGenericSystem_Models_SelfEvolution_DynamicPlugin_
+  - name: (
+  - uid: UltraGenericSystem.Models.SelfEvolution.DynamicPlugin
+    name: DynamicPlugin
+    href: UltraGenericSystem.Models.SelfEvolution.DynamicPlugin.html
+  - name: )
+- uid: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.DeletePluginAsync*
+  commentId: Overload:UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.DeletePluginAsync
+  href: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_DeletePluginAsync_System_String_
+  name: DeletePluginAsync
+  nameWithType: DynamicPluginService.DeletePluginAsync
+  fullName: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.DeletePluginAsync
+- uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.DeletePluginAsync(System.String)
+  commentId: M:UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.DeletePluginAsync(System.String)
+  parent: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService
+  isExternal: true
+  href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_DeletePluginAsync_System_String_
+  name: DeletePluginAsync(string)
+  nameWithType: IDynamicPluginService.DeletePluginAsync(string)
+  fullName: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.DeletePluginAsync(string)
+  nameWithType.vb: IDynamicPluginService.DeletePluginAsync(String)
+  fullName.vb: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.DeletePluginAsync(String)
+  name.vb: DeletePluginAsync(String)
+  spec.csharp:
+  - uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.DeletePluginAsync(System.String)
+    name: DeletePluginAsync
+    href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_DeletePluginAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.DeletePluginAsync(System.String)
+    name: DeletePluginAsync
+    href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_DeletePluginAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.CompileAndRegisterPluginAsync*
+  commentId: Overload:UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.CompileAndRegisterPluginAsync
+  href: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_CompileAndRegisterPluginAsync_System_String_System_String_System_String_
+  name: CompileAndRegisterPluginAsync
+  nameWithType: DynamicPluginService.CompileAndRegisterPluginAsync
+  fullName: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.CompileAndRegisterPluginAsync
+- uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.CompileAndRegisterPluginAsync(System.String,System.String,System.String)
+  commentId: M:UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.CompileAndRegisterPluginAsync(System.String,System.String,System.String)
+  parent: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService
+  isExternal: true
+  href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_CompileAndRegisterPluginAsync_System_String_System_String_System_String_
+  name: CompileAndRegisterPluginAsync(string, string, string)
+  nameWithType: IDynamicPluginService.CompileAndRegisterPluginAsync(string, string, string)
+  fullName: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.CompileAndRegisterPluginAsync(string, string, string)
+  nameWithType.vb: IDynamicPluginService.CompileAndRegisterPluginAsync(String, String, String)
+  fullName.vb: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.CompileAndRegisterPluginAsync(String, String, String)
+  name.vb: CompileAndRegisterPluginAsync(String, String, String)
+  spec.csharp:
+  - uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.CompileAndRegisterPluginAsync(System.String,System.String,System.String)
+    name: CompileAndRegisterPluginAsync
+    href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_CompileAndRegisterPluginAsync_System_String_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.CompileAndRegisterPluginAsync(System.String,System.String,System.String)
+    name: CompileAndRegisterPluginAsync
+    href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_CompileAndRegisterPluginAsync_System_String_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.ExecutePluginMethodAsync*
+  commentId: Overload:UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.ExecutePluginMethodAsync
+  href: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_ExecutePluginMethodAsync_System_String_System_String_System_Object___
+  name: ExecutePluginMethodAsync
+  nameWithType: DynamicPluginService.ExecutePluginMethodAsync
+  fullName: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.ExecutePluginMethodAsync
+- uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.ExecutePluginMethodAsync(System.String,System.String,System.Object[])
+  commentId: M:UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.ExecutePluginMethodAsync(System.String,System.String,System.Object[])
+  parent: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService
+  isExternal: true
+  href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_ExecutePluginMethodAsync_System_String_System_String_System_Object___
+  name: ExecutePluginMethodAsync(string, string, params object[])
+  nameWithType: IDynamicPluginService.ExecutePluginMethodAsync(string, string, params object[])
+  fullName: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.ExecutePluginMethodAsync(string, string, params object[])
+  nameWithType.vb: IDynamicPluginService.ExecutePluginMethodAsync(String, String, ParamArray Object())
+  fullName.vb: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.ExecutePluginMethodAsync(String, String, ParamArray Object())
+  name.vb: ExecutePluginMethodAsync(String, String, ParamArray Object())
+  spec.csharp:
+  - uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.ExecutePluginMethodAsync(System.String,System.String,System.Object[])
+    name: ExecutePluginMethodAsync
+    href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_ExecutePluginMethodAsync_System_String_System_String_System_Object___
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: params
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.ExecutePluginMethodAsync(System.String,System.String,System.Object[])
+    name: ExecutePluginMethodAsync
+    href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_ExecutePluginMethodAsync_System_String_System_String_System_Object___
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: ParamArray
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: System.Object[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object[]
+  nameWithType: object[]
+  fullName: object[]
+  nameWithType.vb: Object()
+  fullName.vb: Object()
+  name.vb: Object()
+  spec.csharp:
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+- uid: System.Threading.Tasks.Task{System.Object}
+  commentId: T:System.Threading.Tasks.Task{System.Object}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<object>
+  nameWithType: Task<object>
+  fullName: System.Threading.Tasks.Task<object>
+  nameWithType.vb: Task(Of Object)
+  fullName.vb: System.Threading.Tasks.Task(Of Object)
+  name.vb: Task(Of Object)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginStatisticsAsync*
+  commentId: Overload:UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginStatisticsAsync
+  href: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_GetPluginStatisticsAsync
+  name: GetPluginStatisticsAsync
+  nameWithType: DynamicPluginService.GetPluginStatisticsAsync
+  fullName: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginStatisticsAsync
+- uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.GetPluginStatisticsAsync
+  commentId: M:UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.GetPluginStatisticsAsync
+  parent: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService
+  href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_GetPluginStatisticsAsync
+  name: GetPluginStatisticsAsync()
+  nameWithType: IDynamicPluginService.GetPluginStatisticsAsync()
+  fullName: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.GetPluginStatisticsAsync()
+  spec.csharp:
+  - uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.GetPluginStatisticsAsync
+    name: GetPluginStatisticsAsync
+    href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_GetPluginStatisticsAsync
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.GetPluginStatisticsAsync
+    name: GetPluginStatisticsAsync
+    href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_GetPluginStatisticsAsync
+  - name: (
+  - name: )
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.Dictionary{System.String,System.Object}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.Dictionary{System.String,System.Object}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<Dictionary<string, object>>
+  nameWithType: Task<Dictionary<string, object>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.Dictionary<string, object>>
+  nameWithType.vb: Task(Of Dictionary(Of String, Object))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.Dictionary(Of String, Object))
+  name.vb: Task(Of Dictionary(Of String, Object))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.ValidatePluginSourceAsync*
+  commentId: Overload:UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.ValidatePluginSourceAsync
+  href: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_ValidatePluginSourceAsync_System_String_
+  name: ValidatePluginSourceAsync
+  nameWithType: DynamicPluginService.ValidatePluginSourceAsync
+  fullName: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.ValidatePluginSourceAsync
+- uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.ValidatePluginSourceAsync(System.String)
+  commentId: M:UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.ValidatePluginSourceAsync(System.String)
+  parent: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService
+  isExternal: true
+  href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_ValidatePluginSourceAsync_System_String_
+  name: ValidatePluginSourceAsync(string)
+  nameWithType: IDynamicPluginService.ValidatePluginSourceAsync(string)
+  fullName: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.ValidatePluginSourceAsync(string)
+  nameWithType.vb: IDynamicPluginService.ValidatePluginSourceAsync(String)
+  fullName.vb: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.ValidatePluginSourceAsync(String)
+  name.vb: ValidatePluginSourceAsync(String)
+  spec.csharp:
+  - uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.ValidatePluginSourceAsync(System.String)
+    name: ValidatePluginSourceAsync
+    href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_ValidatePluginSourceAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.ValidatePluginSourceAsync(System.String)
+    name: ValidatePluginSourceAsync
+    href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_ValidatePluginSourceAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginDependenciesAsync*
+  commentId: Overload:UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginDependenciesAsync
+  href: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_GetPluginDependenciesAsync_System_String_
+  name: GetPluginDependenciesAsync
+  nameWithType: DynamicPluginService.GetPluginDependenciesAsync
+  fullName: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginDependenciesAsync
+- uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.GetPluginDependenciesAsync(System.String)
+  commentId: M:UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.GetPluginDependenciesAsync(System.String)
+  parent: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService
+  isExternal: true
+  href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_GetPluginDependenciesAsync_System_String_
+  name: GetPluginDependenciesAsync(string)
+  nameWithType: IDynamicPluginService.GetPluginDependenciesAsync(string)
+  fullName: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.GetPluginDependenciesAsync(string)
+  nameWithType.vb: IDynamicPluginService.GetPluginDependenciesAsync(String)
+  fullName.vb: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.GetPluginDependenciesAsync(String)
+  name.vb: GetPluginDependenciesAsync(String)
+  spec.csharp:
+  - uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.GetPluginDependenciesAsync(System.String)
+    name: GetPluginDependenciesAsync
+    href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_GetPluginDependenciesAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.GetPluginDependenciesAsync(System.String)
+    name: GetPluginDependenciesAsync
+    href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_GetPluginDependenciesAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{System.String}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.List{System.String}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<List<string>>
+  nameWithType: Task<List<string>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<string>>
+  nameWithType.vb: Task(Of List(Of String))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of String))
+  name.vb: Task(Of List(Of String))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: )
+- uid: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.CheckPluginCompatibilityAsync*
+  commentId: Overload:UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.CheckPluginCompatibilityAsync
+  href: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_CheckPluginCompatibilityAsync_System_String_
+  name: CheckPluginCompatibilityAsync
+  nameWithType: DynamicPluginService.CheckPluginCompatibilityAsync
+  fullName: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.CheckPluginCompatibilityAsync
+- uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.CheckPluginCompatibilityAsync(System.String)
+  commentId: M:UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.CheckPluginCompatibilityAsync(System.String)
+  parent: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService
+  isExternal: true
+  href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_CheckPluginCompatibilityAsync_System_String_
+  name: CheckPluginCompatibilityAsync(string)
+  nameWithType: IDynamicPluginService.CheckPluginCompatibilityAsync(string)
+  fullName: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.CheckPluginCompatibilityAsync(string)
+  nameWithType.vb: IDynamicPluginService.CheckPluginCompatibilityAsync(String)
+  fullName.vb: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.CheckPluginCompatibilityAsync(String)
+  name.vb: CheckPluginCompatibilityAsync(String)
+  spec.csharp:
+  - uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.CheckPluginCompatibilityAsync(System.String)
+    name: CheckPluginCompatibilityAsync
+    href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_CheckPluginCompatibilityAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.CheckPluginCompatibilityAsync(System.String)
+    name: CheckPluginCompatibilityAsync
+    href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html#UltraGenericSystem_Services_SelfEvolution_IDynamicPluginService_CheckPluginCompatibilityAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )

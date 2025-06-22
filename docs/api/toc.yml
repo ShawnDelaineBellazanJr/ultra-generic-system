@@ -1,0 +1,447 @@
+### YamlMime:TableOfContent
+items:
+- uid: UltraGenericSystem
+  name: UltraGenericSystem
+  type: Namespace
+  items:
+  - uid: UltraGenericSystem.Program
+    name: Program
+    type: Class
+- uid: UltraGenericSystem.Controllers
+  name: UltraGenericSystem.Controllers
+  type: Namespace
+  items:
+  - uid: UltraGenericSystem.Controllers.AdvancedOrchestrationController
+    name: AdvancedOrchestrationController
+    type: Class
+  - uid: UltraGenericSystem.Controllers.AnalyzeCodeRequest
+    name: AnalyzeCodeRequest
+    type: Class
+  - uid: UltraGenericSystem.Controllers.AzureAIAgentController
+    name: AzureAIAgentController
+    type: Class
+  - uid: UltraGenericSystem.Controllers.BulkOperationRequest
+    name: BulkOperationRequest
+    type: Class
+  - uid: UltraGenericSystem.Controllers.BulkOperationResult
+    name: BulkOperationResult
+    type: Class
+  - uid: UltraGenericSystem.Controllers.CleanupRequest
+    name: CleanupRequest
+    type: Class
+  - uid: UltraGenericSystem.Controllers.CompileCodeRequest
+    name: CompileCodeRequest
+    type: Class
+  - uid: UltraGenericSystem.Controllers.CompilePluginRequest
+    name: CompilePluginRequest
+    type: Class
+  - uid: UltraGenericSystem.Controllers.ContentGenerationRequest
+    name: ContentGenerationRequest
+    type: Class
+  - uid: UltraGenericSystem.Controllers.ExecutePluginRequest
+    name: ExecutePluginRequest
+    type: Class
+  - uid: UltraGenericSystem.Controllers.GenerateControllerRequest
+    name: GenerateControllerRequest
+    type: Class
+  - uid: UltraGenericSystem.Controllers.GenerateCrudStackRequest
+    name: GenerateCrudStackRequest
+    type: Class
+  - uid: UltraGenericSystem.Controllers.GenerateEntityRequest
+    name: GenerateEntityRequest
+    type: Class
+  - uid: UltraGenericSystem.Controllers.GenerateRepositoryRequest
+    name: GenerateRepositoryRequest
+    type: Class
+  - uid: UltraGenericSystem.Controllers.GenerateServiceRequest
+    name: GenerateServiceRequest
+    type: Class
+  - uid: UltraGenericSystem.Controllers.GenericController`1
+    name: GenericController<T>
+    type: Class
+  - uid: UltraGenericSystem.Controllers.MemoryController
+    name: MemoryController
+    type: Class
+  - uid: UltraGenericSystem.Controllers.QueryRequest
+    name: QueryRequest
+    type: Class
+  - uid: UltraGenericSystem.Controllers.SelfEvolutionController
+    name: SelfEvolutionController
+    type: Class
+  - uid: UltraGenericSystem.Controllers.SimilarityRequest
+    name: SimilarityRequest
+    type: Class
+  - uid: UltraGenericSystem.Controllers.SimilaritySearchRequest
+    name: SimilaritySearchRequest
+    type: Class
+  - uid: UltraGenericSystem.Controllers.TextAnalysisRequest
+    name: TextAnalysisRequest
+    type: Class
+  - uid: UltraGenericSystem.Controllers.ValidateCodeRequest
+    name: ValidateCodeRequest
+    type: Class
+  - uid: UltraGenericSystem.Controllers.ValidatePluginRequest
+    name: ValidatePluginRequest
+    type: Class
+- uid: UltraGenericSystem.Data
+  name: UltraGenericSystem.Data
+  type: Namespace
+  items:
+  - uid: UltraGenericSystem.Data.UltraGenericContext
+    name: UltraGenericContext
+    type: Class
+- uid: UltraGenericSystem.Models
+  name: UltraGenericSystem.Models
+  type: Namespace
+  items:
+  - uid: UltraGenericSystem.Models.AdvancedAgentRequest`2
+    name: AdvancedAgentRequest<TInput, TOutput>
+    type: Class
+  - uid: UltraGenericSystem.Models.AdvancedAgentResponse`1
+    name: AdvancedAgentResponse<TOutput>
+    type: Class
+  - uid: UltraGenericSystem.Models.AdvancedOrchestrationConfig
+    name: AdvancedOrchestrationConfig
+    type: Class
+  - uid: UltraGenericSystem.Models.AdvancedOrchestrationContext`2
+    name: AdvancedOrchestrationContext<TInput, TOutput>
+    type: Class
+  - uid: UltraGenericSystem.Models.Agent
+    name: Agent
+    type: Class
+  - uid: UltraGenericSystem.Models.AgentCreateRequest`1
+    name: AgentCreateRequest<T>
+    type: Class
+  - uid: UltraGenericSystem.Models.AgentDeleteRequest
+    name: AgentDeleteRequest
+    type: Class
+  - uid: UltraGenericSystem.Models.AgentExecution
+    name: AgentExecution
+    type: Class
+  - uid: UltraGenericSystem.Models.AgentExecutionContext
+    name: AgentExecutionContext
+    type: Class
+  - uid: UltraGenericSystem.Models.AgentQueryRequest
+    name: AgentQueryRequest
+    type: Class
+  - uid: UltraGenericSystem.Models.AgentRequest`1
+    name: AgentRequest<T>
+    type: Class
+  - uid: UltraGenericSystem.Models.AgentResponse`1
+    name: AgentResponse<T>
+    type: Class
+  - uid: UltraGenericSystem.Models.AgentThread
+    name: AgentThread
+    type: Class
+  - uid: UltraGenericSystem.Models.AgentUpdateRequest`1
+    name: AgentUpdateRequest<T>
+    type: Class
+  - uid: UltraGenericSystem.Models.AzureAIAgentCapabilities
+    name: AzureAIAgentCapabilities
+    type: Class
+  - uid: UltraGenericSystem.Models.AzureAIAgentConfig
+    name: AzureAIAgentConfig
+    type: Class
+  - uid: UltraGenericSystem.Models.AzureAIAgentRequest
+    name: AzureAIAgentRequest
+    type: Class
+  - uid: UltraGenericSystem.Models.AzureAIAgentResponse
+    name: AzureAIAgentResponse
+    type: Class
+  - uid: UltraGenericSystem.Models.AzureAIConversationMessage
+    name: AzureAIConversationMessage
+    type: Class
+  - uid: UltraGenericSystem.Models.AzureAIFunctionCall
+    name: AzureAIFunctionCall
+    type: Class
+  - uid: UltraGenericSystem.Models.AzureAIFunctionCallResult
+    name: AzureAIFunctionCallResult
+    type: Class
+  - uid: UltraGenericSystem.Models.AzureAIFunctionDefinition
+    name: AzureAIFunctionDefinition
+    type: Class
+  - uid: UltraGenericSystem.Models.AzureAIMemoryConfig
+    name: AzureAIMemoryConfig
+    type: Class
+  - uid: UltraGenericSystem.Models.AzureAIRetryConfig
+    name: AzureAIRetryConfig
+    type: Class
+  - uid: UltraGenericSystem.Models.AzureAIStreamingResponse
+    name: AzureAIStreamingResponse
+    type: Class
+  - uid: UltraGenericSystem.Models.AzureAIToolCall
+    name: AzureAIToolCall
+    type: Class
+  - uid: UltraGenericSystem.Models.AzureAIToolCallResult
+    name: AzureAIToolCallResult
+    type: Class
+  - uid: UltraGenericSystem.Models.AzureAIUsage
+    name: AzureAIUsage
+    type: Class
+  - uid: UltraGenericSystem.Models.BaseEntity
+    name: BaseEntity
+    type: Class
+  - uid: UltraGenericSystem.Models.CustomTransformConfig
+    name: CustomTransformConfig
+    type: Class
+  - uid: UltraGenericSystem.Models.Document
+    name: Document
+    type: Class
+  - uid: UltraGenericSystem.Models.DocumentChunk
+    name: DocumentChunk
+    type: Class
+  - uid: UltraGenericSystem.Models.DocumentationEntry
+    name: DocumentationEntry
+    type: Class
+  - uid: UltraGenericSystem.Models.DynamicSkill
+    name: DynamicSkill
+    type: Class
+  - uid: UltraGenericSystem.Models.EntityAnalysisResult
+    name: EntityAnalysisResult
+    type: Class
+  - uid: UltraGenericSystem.Models.HumanInTheLoopConfig
+    name: HumanInTheLoopConfig
+    type: Class
+  - uid: UltraGenericSystem.Models.KnowledgeEntry
+    name: KnowledgeEntry
+    type: Class
+  - uid: UltraGenericSystem.Models.MemoryConfig
+    name: MemoryConfig
+    type: Class
+  - uid: UltraGenericSystem.Models.MemoryEntry
+    name: MemoryEntry
+    type: Class
+  - uid: UltraGenericSystem.Models.MemoryOperationResult
+    name: MemoryOperationResult
+    type: Class
+  - uid: UltraGenericSystem.Models.MemorySearchRequest
+    name: MemorySearchRequest
+    type: Class
+  - uid: UltraGenericSystem.Models.MemorySearchResponse
+    name: MemorySearchResponse
+    type: Class
+  - uid: UltraGenericSystem.Models.PaginatedResult`1
+    name: PaginatedResult<T>
+    type: Class
+  - uid: UltraGenericSystem.Models.RAGMatch
+    name: RAGMatch
+    type: Class
+  - uid: UltraGenericSystem.Models.RAGQueryResult
+    name: RAGQueryResult
+    type: Class
+  - uid: UltraGenericSystem.Models.RAGRequest
+    name: RAGRequest
+    type: Class
+  - uid: UltraGenericSystem.Models.ResponseCallbackConfig
+    name: ResponseCallbackConfig
+    type: Class
+  - uid: UltraGenericSystem.Models.Skill
+    name: Skill
+    type: Class
+  - uid: UltraGenericSystem.Models.StructuredInput`1
+    name: StructuredInput<T>
+    type: Class
+  - uid: UltraGenericSystem.Models.StructuredOutput`1
+    name: StructuredOutput<T>
+    type: Class
+  - uid: UltraGenericSystem.Models.ValidationOptions
+    name: ValidationOptions
+    type: Class
+  - uid: UltraGenericSystem.Models.VectorEmbedding
+    name: VectorEmbedding
+    type: Class
+  - uid: UltraGenericSystem.Models.WhiteboardMemory
+    name: WhiteboardMemory
+    type: Class
+  - uid: UltraGenericSystem.Models.WorkflowExecutionResult
+    name: WorkflowExecutionResult
+    type: Class
+- uid: UltraGenericSystem.Models.SelfEvolution
+  name: UltraGenericSystem.Models.SelfEvolution
+  type: Namespace
+  items:
+  - uid: UltraGenericSystem.Models.SelfEvolution.CapabilityDesign
+    name: CapabilityDesign
+    type: Class
+  - uid: UltraGenericSystem.Models.SelfEvolution.CapabilityTestResult
+    name: CapabilityTestResult
+    type: Class
+  - uid: UltraGenericSystem.Models.SelfEvolution.CodeAnalysisResult
+    name: CodeAnalysisResult
+    type: Class
+  - uid: UltraGenericSystem.Models.SelfEvolution.CodeGenerationRequest
+    name: CodeGenerationRequest
+    type: Class
+  - uid: UltraGenericSystem.Models.SelfEvolution.CodeGenerationResult
+    name: CodeGenerationResult
+    type: Class
+  - uid: UltraGenericSystem.Models.SelfEvolution.CodeIssue
+    name: CodeIssue
+    type: Class
+  - uid: UltraGenericSystem.Models.SelfEvolution.CodeMetric
+    name: CodeMetric
+    type: Class
+  - uid: UltraGenericSystem.Models.SelfEvolution.CodeSuggestion
+    name: CodeSuggestion
+    type: Class
+  - uid: UltraGenericSystem.Models.SelfEvolution.CodeTemplate
+    name: CodeTemplate
+    type: Class
+  - uid: UltraGenericSystem.Models.SelfEvolution.CompilationResult
+    name: CompilationResult
+    type: Class
+  - uid: UltraGenericSystem.Models.SelfEvolution.DiagnosticInfo
+    name: DiagnosticInfo
+    type: Class
+  - uid: UltraGenericSystem.Models.SelfEvolution.DynamicPlugin
+    name: DynamicPlugin
+    type: Class
+  - uid: UltraGenericSystem.Models.SelfEvolution.EvolutionReflection
+    name: EvolutionReflection
+    type: Class
+  - uid: UltraGenericSystem.Models.SelfEvolution.EvolutionStatistics
+    name: EvolutionStatistics
+    type: Class
+  - uid: UltraGenericSystem.Models.SelfEvolution.EvolutionStep
+    name: EvolutionStep
+    type: Class
+  - uid: UltraGenericSystem.Models.SelfEvolution.GeneratedCapability
+    name: GeneratedCapability
+    type: Class
+  - uid: UltraGenericSystem.Models.SelfEvolution.ImprovementOpportunity
+    name: ImprovementOpportunity
+    type: Class
+  - uid: UltraGenericSystem.Models.SelfEvolution.LoadedCapability
+    name: LoadedCapability
+    type: Class
+  - uid: UltraGenericSystem.Models.SelfEvolution.SelfEvolutionConfig
+    name: SelfEvolutionConfig
+    type: Class
+  - uid: UltraGenericSystem.Models.SelfEvolution.StrangeLoopRequest
+    name: StrangeLoopRequest
+    type: Class
+  - uid: UltraGenericSystem.Models.SelfEvolution.StrangeLoopResult
+    name: StrangeLoopResult
+    type: Class
+- uid: UltraGenericSystem.Repositories
+  name: UltraGenericSystem.Repositories
+  type: Namespace
+  items:
+  - uid: UltraGenericSystem.Repositories.GenericRepository`1
+    name: GenericRepository<T>
+    type: Class
+  - uid: UltraGenericSystem.Repositories.IGenericRepository`1
+    name: IGenericRepository<T>
+    type: Interface
+  - uid: UltraGenericSystem.Repositories.IUnitOfWork
+    name: IUnitOfWork
+    type: Interface
+  - uid: UltraGenericSystem.Repositories.UnitOfWork
+    name: UnitOfWork
+    type: Class
+- uid: UltraGenericSystem.Services
+  name: UltraGenericSystem.Services
+  type: Namespace
+  items:
+  - uid: UltraGenericSystem.Services.AgentOrchestrator
+    name: AgentOrchestrator
+    type: Class
+  - uid: UltraGenericSystem.Services.AgentService`1
+    name: AgentService<T>
+    type: Class
+  - uid: UltraGenericSystem.Services.AzureAIAgentHealthStatus
+    name: AzureAIAgentHealthStatus
+    type: Class
+  - uid: UltraGenericSystem.Services.AzureAIAgentService
+    name: AzureAIAgentService
+    type: Class
+  - uid: UltraGenericSystem.Services.BulkOperationError
+    name: BulkOperationError
+    type: Class
+  - uid: UltraGenericSystem.Services.BulkOperationResult`1
+    name: BulkOperationResult<T>
+    type: Class
+  - uid: UltraGenericSystem.Services.HttpPlugin
+    name: HttpPlugin
+    type: Class
+  - uid: UltraGenericSystem.Services.IAgentOrchestrator
+    name: IAgentOrchestrator
+    type: Interface
+  - uid: UltraGenericSystem.Services.IAgentService`1
+    name: IAgentService<T>
+    type: Interface
+  - uid: UltraGenericSystem.Services.IAzureAIAgentService
+    name: IAzureAIAgentService
+    type: Interface
+  - uid: UltraGenericSystem.Services.IMemoryService
+    name: IMemoryService
+    type: Interface
+  - uid: UltraGenericSystem.Services.MemoryService
+    name: MemoryService
+    type: Class
+  - uid: UltraGenericSystem.Services.TextPlugin
+    name: TextPlugin
+    type: Class
+  - uid: UltraGenericSystem.Services.TimePlugin
+    name: TimePlugin
+    type: Class
+- uid: UltraGenericSystem.Services.Agents
+  name: UltraGenericSystem.Services.Agents
+  type: Namespace
+  items:
+  - uid: UltraGenericSystem.Services.Agents.InteractiveCallback
+    name: InteractiveCallback
+    type: Delegate
+  - uid: UltraGenericSystem.Services.Agents.OrchestrationPatterns
+    name: OrchestrationPatterns
+    type: Class
+  - uid: UltraGenericSystem.Services.Agents.ResponseCallback
+    name: ResponseCallback
+    type: Delegate
+  - uid: UltraGenericSystem.Services.Agents.SKAgentFactory
+    name: SKAgentFactory
+    type: Class
+  - uid: UltraGenericSystem.Services.Agents.StreamingCheckerAgent
+    name: StreamingCheckerAgent
+    type: Class
+  - uid: UltraGenericSystem.Services.Agents.StreamingMakerAgent
+    name: StreamingMakerAgent
+    type: Class
+  - uid: UltraGenericSystem.Services.Agents.StreamingOrchestratorAgent
+    name: StreamingOrchestratorAgent
+    type: Class
+  - uid: UltraGenericSystem.Services.Agents.StreamingPlannerAgent
+    name: StreamingPlannerAgent
+    type: Class
+  - uid: UltraGenericSystem.Services.Agents.StreamingReflectorAgent
+    name: StreamingReflectorAgent
+    type: Class
+  - uid: UltraGenericSystem.Services.Agents.StreamingSKAgentBase
+    name: StreamingSKAgentBase
+    type: Class
+- uid: UltraGenericSystem.Services.SelfEvolution
+  name: UltraGenericSystem.Services.SelfEvolution
+  type: Namespace
+  items:
+  - uid: UltraGenericSystem.Services.SelfEvolution.CodeAnalyzer
+    name: CodeAnalyzer
+    type: Class
+  - uid: UltraGenericSystem.Services.SelfEvolution.CodeGenerationService
+    name: CodeGenerationService
+    type: Class
+  - uid: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService
+    name: DynamicPluginService
+    type: Class
+  - uid: UltraGenericSystem.Services.SelfEvolution.ICodeGenerationService
+    name: ICodeGenerationService
+    type: Interface
+  - uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService
+    name: IDynamicPluginService
+    type: Interface
+  - uid: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService
+    name: IStrangeLoopService
+    type: Interface
+  - uid: UltraGenericSystem.Services.SelfEvolution.StrangeLoopService
+    name: StrangeLoopService
+    type: Class
+memberLayout: SamePage

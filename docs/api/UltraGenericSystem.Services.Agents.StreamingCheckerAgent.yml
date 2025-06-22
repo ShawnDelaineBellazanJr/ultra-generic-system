@@ -1,0 +1,1269 @@
+### YamlMime:ManagedReference
+items:
+- uid: UltraGenericSystem.Services.Agents.StreamingCheckerAgent
+  commentId: T:UltraGenericSystem.Services.Agents.StreamingCheckerAgent
+  id: StreamingCheckerAgent
+  parent: UltraGenericSystem.Services.Agents
+  children:
+  - UltraGenericSystem.Services.Agents.StreamingCheckerAgent.#ctor(Microsoft.SemanticKernel.Kernel,Microsoft.Extensions.Logging.ILogger)
+  - UltraGenericSystem.Services.Agents.StreamingCheckerAgent.BuildPrompt(UltraGenericSystem.Models.AgentExecutionContext)
+  - UltraGenericSystem.Services.Agents.StreamingCheckerAgent.ExecuteAsync(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.Agents.StreamingCheckerAgent.ExecuteStreamingAsync(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.Agents.StreamingCheckerAgent.ProcessResponseAsync(System.String,UltraGenericSystem.Models.AgentExecutionContext)
+  langs:
+  - csharp
+  - vb
+  name: StreamingCheckerAgent
+  nameWithType: StreamingCheckerAgent
+  fullName: UltraGenericSystem.Services.Agents.StreamingCheckerAgent
+  type: Class
+  source:
+    remote:
+      path: Services/Agents/StreamingCheckerAgent.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: StreamingCheckerAgent
+    path: ../Services/Agents/StreamingCheckerAgent.cs
+    startLine: 11
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.Agents
+  summary: Checker agent that validates operations and ensures quality
+  example: []
+  syntax:
+    content: 'public class StreamingCheckerAgent : StreamingSKAgentBase'
+    content.vb: Public Class StreamingCheckerAgent Inherits StreamingSKAgentBase
+  inheritance:
+  - System.Object
+  - UltraGenericSystem.Services.Agents.StreamingSKAgentBase
+  inheritedMembers:
+  - UltraGenericSystem.Services.Agents.StreamingSKAgentBase._kernel
+  - UltraGenericSystem.Services.Agents.StreamingSKAgentBase._logger
+  - UltraGenericSystem.Services.Agents.StreamingSKAgentBase._agentName
+  - UltraGenericSystem.Services.Agents.StreamingSKAgentBase.CreateStreamingContent(System.String)
+  - UltraGenericSystem.Services.Agents.StreamingSKAgentBase.ExecuteChatCompletionAsync(System.String,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.Agents.StreamingSKAgentBase.ExecuteStreamingChatCompletionAsync(System.String,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.Agents.StreamingSKAgentBase.LogExecution(System.String,System.TimeSpan,System.Boolean)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.#ctor(Microsoft.SemanticKernel.Kernel,Microsoft.Extensions.Logging.ILogger)
+  commentId: M:UltraGenericSystem.Services.Agents.StreamingCheckerAgent.#ctor(Microsoft.SemanticKernel.Kernel,Microsoft.Extensions.Logging.ILogger)
+  id: '#ctor(Microsoft.SemanticKernel.Kernel,Microsoft.Extensions.Logging.ILogger)'
+  parent: UltraGenericSystem.Services.Agents.StreamingCheckerAgent
+  langs:
+  - csharp
+  - vb
+  name: StreamingCheckerAgent(Kernel, ILogger)
+  nameWithType: StreamingCheckerAgent.StreamingCheckerAgent(Kernel, ILogger)
+  fullName: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.StreamingCheckerAgent(Microsoft.SemanticKernel.Kernel, Microsoft.Extensions.Logging.ILogger)
+  type: Constructor
+  source:
+    remote:
+      path: Services/Agents/StreamingCheckerAgent.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: .ctor
+    path: ../Services/Agents/StreamingCheckerAgent.cs
+    startLine: 13
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.Agents
+  syntax:
+    content: public StreamingCheckerAgent(Kernel kernel, ILogger logger)
+    parameters:
+    - id: kernel
+      type: Microsoft.SemanticKernel.Kernel
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger
+    content.vb: Public Sub New(kernel As Kernel, logger As ILogger)
+  overload: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.#ctor*
+  nameWithType.vb: StreamingCheckerAgent.New(Kernel, ILogger)
+  fullName.vb: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.New(Microsoft.SemanticKernel.Kernel, Microsoft.Extensions.Logging.ILogger)
+  name.vb: New(Kernel, ILogger)
+- uid: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.ExecuteAsync(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.Agents.StreamingCheckerAgent.ExecuteAsync(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+  id: ExecuteAsync(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.Agents.StreamingCheckerAgent
+  langs:
+  - csharp
+  - vb
+  name: ExecuteAsync(AgentExecutionContext, CancellationToken)
+  nameWithType: StreamingCheckerAgent.ExecuteAsync(AgentExecutionContext, CancellationToken)
+  fullName: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.ExecuteAsync(UltraGenericSystem.Models.AgentExecutionContext, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/Agents/StreamingCheckerAgent.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: ExecuteAsync
+    path: ../Services/Agents/StreamingCheckerAgent.cs
+    startLine: 16
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.Agents
+  summary: Execute the agent operation and return a complete response
+  example: []
+  syntax:
+    content: public override Task<AgentResponse<object>> ExecuteAsync(AgentExecutionContext context, CancellationToken cancellationToken = default)
+    parameters:
+    - id: context
+      type: UltraGenericSystem.Models.AgentExecutionContext
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Object}}
+    content.vb: Public Overrides Function ExecuteAsync(context As AgentExecutionContext, cancellationToken As CancellationToken = Nothing) As Task(Of AgentResponse(Of Object))
+  overridden: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.ExecuteAsync(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+  overload: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.ExecuteAsync*
+- uid: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.ExecuteStreamingAsync(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.Agents.StreamingCheckerAgent.ExecuteStreamingAsync(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+  id: ExecuteStreamingAsync(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.Agents.StreamingCheckerAgent
+  langs:
+  - csharp
+  - vb
+  name: ExecuteStreamingAsync(AgentExecutionContext, CancellationToken)
+  nameWithType: StreamingCheckerAgent.ExecuteStreamingAsync(AgentExecutionContext, CancellationToken)
+  fullName: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.ExecuteStreamingAsync(UltraGenericSystem.Models.AgentExecutionContext, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/Agents/StreamingCheckerAgent.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: ExecuteStreamingAsync
+    path: ../Services/Agents/StreamingCheckerAgent.cs
+    startLine: 44
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.Agents
+  summary: Execute the agent operation with streaming response
+  example: []
+  syntax:
+    content: public override IAsyncEnumerable<StreamingChatMessageContent> ExecuteStreamingAsync(AgentExecutionContext context, CancellationToken cancellationToken = default)
+    parameters:
+    - id: context
+      type: UltraGenericSystem.Models.AgentExecutionContext
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Collections.Generic.IAsyncEnumerable{Microsoft.SemanticKernel.StreamingChatMessageContent}
+    content.vb: Public Overrides Function ExecuteStreamingAsync(context As AgentExecutionContext, cancellationToken As CancellationToken = Nothing) As IAsyncEnumerable(Of StreamingChatMessageContent)
+  overridden: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.ExecuteStreamingAsync(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+  overload: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.ExecuteStreamingAsync*
+- uid: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.BuildPrompt(UltraGenericSystem.Models.AgentExecutionContext)
+  commentId: M:UltraGenericSystem.Services.Agents.StreamingCheckerAgent.BuildPrompt(UltraGenericSystem.Models.AgentExecutionContext)
+  id: BuildPrompt(UltraGenericSystem.Models.AgentExecutionContext)
+  parent: UltraGenericSystem.Services.Agents.StreamingCheckerAgent
+  langs:
+  - csharp
+  - vb
+  name: BuildPrompt(AgentExecutionContext)
+  nameWithType: StreamingCheckerAgent.BuildPrompt(AgentExecutionContext)
+  fullName: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.BuildPrompt(UltraGenericSystem.Models.AgentExecutionContext)
+  type: Method
+  source:
+    remote:
+      path: Services/Agents/StreamingCheckerAgent.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: BuildPrompt
+    path: ../Services/Agents/StreamingCheckerAgent.cs
+    startLine: 60
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.Agents
+  summary: Build a context-aware prompt for the agent
+  example: []
+  syntax:
+    content: protected override string BuildPrompt(AgentExecutionContext context)
+    parameters:
+    - id: context
+      type: UltraGenericSystem.Models.AgentExecutionContext
+    return:
+      type: System.String
+    content.vb: Protected Overrides Function BuildPrompt(context As AgentExecutionContext) As String
+  overridden: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.BuildPrompt(UltraGenericSystem.Models.AgentExecutionContext)
+  overload: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.BuildPrompt*
+- uid: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.ProcessResponseAsync(System.String,UltraGenericSystem.Models.AgentExecutionContext)
+  commentId: M:UltraGenericSystem.Services.Agents.StreamingCheckerAgent.ProcessResponseAsync(System.String,UltraGenericSystem.Models.AgentExecutionContext)
+  id: ProcessResponseAsync(System.String,UltraGenericSystem.Models.AgentExecutionContext)
+  parent: UltraGenericSystem.Services.Agents.StreamingCheckerAgent
+  langs:
+  - csharp
+  - vb
+  name: ProcessResponseAsync(string, AgentExecutionContext)
+  nameWithType: StreamingCheckerAgent.ProcessResponseAsync(string, AgentExecutionContext)
+  fullName: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.ProcessResponseAsync(string, UltraGenericSystem.Models.AgentExecutionContext)
+  type: Method
+  source:
+    remote:
+      path: Services/Agents/StreamingCheckerAgent.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: ProcessResponseAsync
+    path: ../Services/Agents/StreamingCheckerAgent.cs
+    startLine: 85
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.Agents
+  summary: Process the agent's response and convert to appropriate format
+  example: []
+  syntax:
+    content: protected override Task<object> ProcessResponseAsync(string response, AgentExecutionContext context)
+    parameters:
+    - id: response
+      type: System.String
+    - id: context
+      type: UltraGenericSystem.Models.AgentExecutionContext
+    return:
+      type: System.Threading.Tasks.Task{System.Object}
+    content.vb: Protected Overrides Function ProcessResponseAsync(response As String, context As AgentExecutionContext) As Task(Of Object)
+  overridden: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.ProcessResponseAsync(System.String,UltraGenericSystem.Models.AgentExecutionContext)
+  overload: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.ProcessResponseAsync*
+  nameWithType.vb: StreamingCheckerAgent.ProcessResponseAsync(String, AgentExecutionContext)
+  fullName.vb: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.ProcessResponseAsync(String, UltraGenericSystem.Models.AgentExecutionContext)
+  name.vb: ProcessResponseAsync(String, AgentExecutionContext)
+references:
+- uid: UltraGenericSystem.Services.Agents
+  commentId: N:UltraGenericSystem.Services.Agents
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Services.Agents
+  nameWithType: UltraGenericSystem.Services.Agents
+  fullName: UltraGenericSystem.Services.Agents
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Services
+    name: Services
+    href: UltraGenericSystem.Services.html
+  - name: .
+  - uid: UltraGenericSystem.Services.Agents
+    name: Agents
+    href: UltraGenericSystem.Services.Agents.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Services
+    name: Services
+    href: UltraGenericSystem.Services.html
+  - name: .
+  - uid: UltraGenericSystem.Services.Agents
+    name: Agents
+    href: UltraGenericSystem.Services.Agents.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UltraGenericSystem.Services.Agents.StreamingSKAgentBase
+  commentId: T:UltraGenericSystem.Services.Agents.StreamingSKAgentBase
+  parent: UltraGenericSystem.Services.Agents
+  href: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.html
+  name: StreamingSKAgentBase
+  nameWithType: StreamingSKAgentBase
+  fullName: UltraGenericSystem.Services.Agents.StreamingSKAgentBase
+- uid: UltraGenericSystem.Services.Agents.StreamingSKAgentBase._kernel
+  commentId: F:UltraGenericSystem.Services.Agents.StreamingSKAgentBase._kernel
+  parent: UltraGenericSystem.Services.Agents.StreamingSKAgentBase
+  href: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.html#UltraGenericSystem_Services_Agents_StreamingSKAgentBase__kernel
+  name: _kernel
+  nameWithType: StreamingSKAgentBase._kernel
+  fullName: UltraGenericSystem.Services.Agents.StreamingSKAgentBase._kernel
+- uid: UltraGenericSystem.Services.Agents.StreamingSKAgentBase._logger
+  commentId: F:UltraGenericSystem.Services.Agents.StreamingSKAgentBase._logger
+  parent: UltraGenericSystem.Services.Agents.StreamingSKAgentBase
+  href: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.html#UltraGenericSystem_Services_Agents_StreamingSKAgentBase__logger
+  name: _logger
+  nameWithType: StreamingSKAgentBase._logger
+  fullName: UltraGenericSystem.Services.Agents.StreamingSKAgentBase._logger
+- uid: UltraGenericSystem.Services.Agents.StreamingSKAgentBase._agentName
+  commentId: F:UltraGenericSystem.Services.Agents.StreamingSKAgentBase._agentName
+  parent: UltraGenericSystem.Services.Agents.StreamingSKAgentBase
+  href: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.html#UltraGenericSystem_Services_Agents_StreamingSKAgentBase__agentName
+  name: _agentName
+  nameWithType: StreamingSKAgentBase._agentName
+  fullName: UltraGenericSystem.Services.Agents.StreamingSKAgentBase._agentName
+- uid: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.CreateStreamingContent(System.String)
+  commentId: M:UltraGenericSystem.Services.Agents.StreamingSKAgentBase.CreateStreamingContent(System.String)
+  parent: UltraGenericSystem.Services.Agents.StreamingSKAgentBase
+  isExternal: true
+  href: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.html#UltraGenericSystem_Services_Agents_StreamingSKAgentBase_CreateStreamingContent_System_String_
+  name: CreateStreamingContent(string)
+  nameWithType: StreamingSKAgentBase.CreateStreamingContent(string)
+  fullName: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.CreateStreamingContent(string)
+  nameWithType.vb: StreamingSKAgentBase.CreateStreamingContent(String)
+  fullName.vb: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.CreateStreamingContent(String)
+  name.vb: CreateStreamingContent(String)
+  spec.csharp:
+  - uid: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.CreateStreamingContent(System.String)
+    name: CreateStreamingContent
+    href: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.html#UltraGenericSystem_Services_Agents_StreamingSKAgentBase_CreateStreamingContent_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.CreateStreamingContent(System.String)
+    name: CreateStreamingContent
+    href: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.html#UltraGenericSystem_Services_Agents_StreamingSKAgentBase_CreateStreamingContent_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.ExecuteChatCompletionAsync(System.String,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.Agents.StreamingSKAgentBase.ExecuteChatCompletionAsync(System.String,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.Agents.StreamingSKAgentBase
+  isExternal: true
+  href: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.html#UltraGenericSystem_Services_Agents_StreamingSKAgentBase_ExecuteChatCompletionAsync_System_String_System_Threading_CancellationToken_
+  name: ExecuteChatCompletionAsync(string, CancellationToken)
+  nameWithType: StreamingSKAgentBase.ExecuteChatCompletionAsync(string, CancellationToken)
+  fullName: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.ExecuteChatCompletionAsync(string, System.Threading.CancellationToken)
+  nameWithType.vb: StreamingSKAgentBase.ExecuteChatCompletionAsync(String, CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.ExecuteChatCompletionAsync(String, System.Threading.CancellationToken)
+  name.vb: ExecuteChatCompletionAsync(String, CancellationToken)
+  spec.csharp:
+  - uid: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.ExecuteChatCompletionAsync(System.String,System.Threading.CancellationToken)
+    name: ExecuteChatCompletionAsync
+    href: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.html#UltraGenericSystem_Services_Agents_StreamingSKAgentBase_ExecuteChatCompletionAsync_System_String_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.ExecuteChatCompletionAsync(System.String,System.Threading.CancellationToken)
+    name: ExecuteChatCompletionAsync
+    href: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.html#UltraGenericSystem_Services_Agents_StreamingSKAgentBase_ExecuteChatCompletionAsync_System_String_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.ExecuteStreamingChatCompletionAsync(System.String,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.Agents.StreamingSKAgentBase.ExecuteStreamingChatCompletionAsync(System.String,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.Agents.StreamingSKAgentBase
+  isExternal: true
+  href: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.html#UltraGenericSystem_Services_Agents_StreamingSKAgentBase_ExecuteStreamingChatCompletionAsync_System_String_System_Threading_CancellationToken_
+  name: ExecuteStreamingChatCompletionAsync(string, CancellationToken)
+  nameWithType: StreamingSKAgentBase.ExecuteStreamingChatCompletionAsync(string, CancellationToken)
+  fullName: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.ExecuteStreamingChatCompletionAsync(string, System.Threading.CancellationToken)
+  nameWithType.vb: StreamingSKAgentBase.ExecuteStreamingChatCompletionAsync(String, CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.ExecuteStreamingChatCompletionAsync(String, System.Threading.CancellationToken)
+  name.vb: ExecuteStreamingChatCompletionAsync(String, CancellationToken)
+  spec.csharp:
+  - uid: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.ExecuteStreamingChatCompletionAsync(System.String,System.Threading.CancellationToken)
+    name: ExecuteStreamingChatCompletionAsync
+    href: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.html#UltraGenericSystem_Services_Agents_StreamingSKAgentBase_ExecuteStreamingChatCompletionAsync_System_String_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.ExecuteStreamingChatCompletionAsync(System.String,System.Threading.CancellationToken)
+    name: ExecuteStreamingChatCompletionAsync
+    href: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.html#UltraGenericSystem_Services_Agents_StreamingSKAgentBase_ExecuteStreamingChatCompletionAsync_System_String_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.LogExecution(System.String,System.TimeSpan,System.Boolean)
+  commentId: M:UltraGenericSystem.Services.Agents.StreamingSKAgentBase.LogExecution(System.String,System.TimeSpan,System.Boolean)
+  parent: UltraGenericSystem.Services.Agents.StreamingSKAgentBase
+  isExternal: true
+  href: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.html#UltraGenericSystem_Services_Agents_StreamingSKAgentBase_LogExecution_System_String_System_TimeSpan_System_Boolean_
+  name: LogExecution(string, TimeSpan, bool)
+  nameWithType: StreamingSKAgentBase.LogExecution(string, TimeSpan, bool)
+  fullName: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.LogExecution(string, System.TimeSpan, bool)
+  nameWithType.vb: StreamingSKAgentBase.LogExecution(String, TimeSpan, Boolean)
+  fullName.vb: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.LogExecution(String, System.TimeSpan, Boolean)
+  name.vb: LogExecution(String, TimeSpan, Boolean)
+  spec.csharp:
+  - uid: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.LogExecution(System.String,System.TimeSpan,System.Boolean)
+    name: LogExecution
+    href: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.html#UltraGenericSystem_Services_Agents_StreamingSKAgentBase_LogExecution_System_String_System_TimeSpan_System_Boolean_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.LogExecution(System.String,System.TimeSpan,System.Boolean)
+    name: LogExecution
+    href: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.html#UltraGenericSystem_Services_Agents_StreamingSKAgentBase_LogExecution_System_String_System_TimeSpan_System_Boolean_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.#ctor*
+  commentId: Overload:UltraGenericSystem.Services.Agents.StreamingCheckerAgent.#ctor
+  href: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.html#UltraGenericSystem_Services_Agents_StreamingCheckerAgent__ctor_Microsoft_SemanticKernel_Kernel_Microsoft_Extensions_Logging_ILogger_
+  name: StreamingCheckerAgent
+  nameWithType: StreamingCheckerAgent.StreamingCheckerAgent
+  fullName: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.StreamingCheckerAgent
+  nameWithType.vb: StreamingCheckerAgent.New
+  fullName.vb: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.New
+  name.vb: New
+- uid: Microsoft.SemanticKernel.Kernel
+  commentId: T:Microsoft.SemanticKernel.Kernel
+  parent: Microsoft.SemanticKernel
+  isExternal: true
+  name: Kernel
+  nameWithType: Kernel
+  fullName: Microsoft.SemanticKernel.Kernel
+- uid: Microsoft.Extensions.Logging.ILogger
+  commentId: T:Microsoft.Extensions.Logging.ILogger
+  parent: Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  name: ILogger
+  nameWithType: ILogger
+  fullName: Microsoft.Extensions.Logging.ILogger
+- uid: Microsoft.SemanticKernel
+  commentId: N:Microsoft.SemanticKernel
+  isExternal: true
+  name: Microsoft.SemanticKernel
+  nameWithType: Microsoft.SemanticKernel
+  fullName: Microsoft.SemanticKernel
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel
+    name: SemanticKernel
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel
+    name: SemanticKernel
+    isExternal: true
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+- uid: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.ExecuteAsync(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.Agents.StreamingSKAgentBase.ExecuteAsync(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.Agents.StreamingSKAgentBase
+  isExternal: true
+  href: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.html#UltraGenericSystem_Services_Agents_StreamingSKAgentBase_ExecuteAsync_UltraGenericSystem_Models_AgentExecutionContext_System_Threading_CancellationToken_
+  name: ExecuteAsync(AgentExecutionContext, CancellationToken)
+  nameWithType: StreamingSKAgentBase.ExecuteAsync(AgentExecutionContext, CancellationToken)
+  fullName: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.ExecuteAsync(UltraGenericSystem.Models.AgentExecutionContext, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.ExecuteAsync(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+    name: ExecuteAsync
+    href: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.html#UltraGenericSystem_Services_Agents_StreamingSKAgentBase_ExecuteAsync_UltraGenericSystem_Models_AgentExecutionContext_System_Threading_CancellationToken_
+  - name: (
+  - uid: UltraGenericSystem.Models.AgentExecutionContext
+    name: AgentExecutionContext
+    href: UltraGenericSystem.Models.AgentExecutionContext.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.ExecuteAsync(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+    name: ExecuteAsync
+    href: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.html#UltraGenericSystem_Services_Agents_StreamingSKAgentBase_ExecuteAsync_UltraGenericSystem_Models_AgentExecutionContext_System_Threading_CancellationToken_
+  - name: (
+  - uid: UltraGenericSystem.Models.AgentExecutionContext
+    name: AgentExecutionContext
+    href: UltraGenericSystem.Models.AgentExecutionContext.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.ExecuteAsync*
+  commentId: Overload:UltraGenericSystem.Services.Agents.StreamingCheckerAgent.ExecuteAsync
+  href: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.html#UltraGenericSystem_Services_Agents_StreamingCheckerAgent_ExecuteAsync_UltraGenericSystem_Models_AgentExecutionContext_System_Threading_CancellationToken_
+  name: ExecuteAsync
+  nameWithType: StreamingCheckerAgent.ExecuteAsync
+  fullName: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.ExecuteAsync
+- uid: UltraGenericSystem.Models.AgentExecutionContext
+  commentId: T:UltraGenericSystem.Models.AgentExecutionContext
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.AgentExecutionContext.html
+  name: AgentExecutionContext
+  nameWithType: AgentExecutionContext
+  fullName: UltraGenericSystem.Models.AgentExecutionContext
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Object}}
+  commentId: T:System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Object}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<AgentResponse<object>>
+  nameWithType: Task<AgentResponse<object>>
+  fullName: System.Threading.Tasks.Task<UltraGenericSystem.Models.AgentResponse<object>>
+  nameWithType.vb: Task(Of AgentResponse(Of Object))
+  fullName.vb: System.Threading.Tasks.Task(Of UltraGenericSystem.Models.AgentResponse(Of Object))
+  name.vb: Task(Of AgentResponse(Of Object))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: UltraGenericSystem.Models.AgentResponse`1
+    name: AgentResponse
+    href: UltraGenericSystem.Models.AgentResponse-1.html
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.AgentResponse`1
+    name: AgentResponse
+    href: UltraGenericSystem.Models.AgentResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: UltraGenericSystem.Models
+  commentId: N:UltraGenericSystem.Models
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Models
+  nameWithType: UltraGenericSystem.Models
+  fullName: UltraGenericSystem.Models
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.ExecuteStreamingAsync(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.Agents.StreamingSKAgentBase.ExecuteStreamingAsync(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.Agents.StreamingSKAgentBase
+  isExternal: true
+  href: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.html#UltraGenericSystem_Services_Agents_StreamingSKAgentBase_ExecuteStreamingAsync_UltraGenericSystem_Models_AgentExecutionContext_System_Threading_CancellationToken_
+  name: ExecuteStreamingAsync(AgentExecutionContext, CancellationToken)
+  nameWithType: StreamingSKAgentBase.ExecuteStreamingAsync(AgentExecutionContext, CancellationToken)
+  fullName: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.ExecuteStreamingAsync(UltraGenericSystem.Models.AgentExecutionContext, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.ExecuteStreamingAsync(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+    name: ExecuteStreamingAsync
+    href: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.html#UltraGenericSystem_Services_Agents_StreamingSKAgentBase_ExecuteStreamingAsync_UltraGenericSystem_Models_AgentExecutionContext_System_Threading_CancellationToken_
+  - name: (
+  - uid: UltraGenericSystem.Models.AgentExecutionContext
+    name: AgentExecutionContext
+    href: UltraGenericSystem.Models.AgentExecutionContext.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.ExecuteStreamingAsync(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+    name: ExecuteStreamingAsync
+    href: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.html#UltraGenericSystem_Services_Agents_StreamingSKAgentBase_ExecuteStreamingAsync_UltraGenericSystem_Models_AgentExecutionContext_System_Threading_CancellationToken_
+  - name: (
+  - uid: UltraGenericSystem.Models.AgentExecutionContext
+    name: AgentExecutionContext
+    href: UltraGenericSystem.Models.AgentExecutionContext.html
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.ExecuteStreamingAsync*
+  commentId: Overload:UltraGenericSystem.Services.Agents.StreamingCheckerAgent.ExecuteStreamingAsync
+  href: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.html#UltraGenericSystem_Services_Agents_StreamingCheckerAgent_ExecuteStreamingAsync_UltraGenericSystem_Models_AgentExecutionContext_System_Threading_CancellationToken_
+  name: ExecuteStreamingAsync
+  nameWithType: StreamingCheckerAgent.ExecuteStreamingAsync
+  fullName: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.ExecuteStreamingAsync
+- uid: System.Collections.Generic.IAsyncEnumerable{Microsoft.SemanticKernel.StreamingChatMessageContent}
+  commentId: T:System.Collections.Generic.IAsyncEnumerable{Microsoft.SemanticKernel.StreamingChatMessageContent}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IAsyncEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1
+  name: IAsyncEnumerable<StreamingChatMessageContent>
+  nameWithType: IAsyncEnumerable<StreamingChatMessageContent>
+  fullName: System.Collections.Generic.IAsyncEnumerable<Microsoft.SemanticKernel.StreamingChatMessageContent>
+  nameWithType.vb: IAsyncEnumerable(Of StreamingChatMessageContent)
+  fullName.vb: System.Collections.Generic.IAsyncEnumerable(Of Microsoft.SemanticKernel.StreamingChatMessageContent)
+  name.vb: IAsyncEnumerable(Of StreamingChatMessageContent)
+  spec.csharp:
+  - uid: System.Collections.Generic.IAsyncEnumerable`1
+    name: IAsyncEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1
+  - name: <
+  - uid: Microsoft.SemanticKernel.StreamingChatMessageContent
+    name: StreamingChatMessageContent
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IAsyncEnumerable`1
+    name: IAsyncEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.SemanticKernel.StreamingChatMessageContent
+    name: StreamingChatMessageContent
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.IAsyncEnumerable`1
+  commentId: T:System.Collections.Generic.IAsyncEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1
+  name: IAsyncEnumerable<T>
+  nameWithType: IAsyncEnumerable<T>
+  fullName: System.Collections.Generic.IAsyncEnumerable<T>
+  nameWithType.vb: IAsyncEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IAsyncEnumerable(Of T)
+  name.vb: IAsyncEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IAsyncEnumerable`1
+    name: IAsyncEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IAsyncEnumerable`1
+    name: IAsyncEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.BuildPrompt(UltraGenericSystem.Models.AgentExecutionContext)
+  commentId: M:UltraGenericSystem.Services.Agents.StreamingSKAgentBase.BuildPrompt(UltraGenericSystem.Models.AgentExecutionContext)
+  parent: UltraGenericSystem.Services.Agents.StreamingSKAgentBase
+  href: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.html#UltraGenericSystem_Services_Agents_StreamingSKAgentBase_BuildPrompt_UltraGenericSystem_Models_AgentExecutionContext_
+  name: BuildPrompt(AgentExecutionContext)
+  nameWithType: StreamingSKAgentBase.BuildPrompt(AgentExecutionContext)
+  fullName: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.BuildPrompt(UltraGenericSystem.Models.AgentExecutionContext)
+  spec.csharp:
+  - uid: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.BuildPrompt(UltraGenericSystem.Models.AgentExecutionContext)
+    name: BuildPrompt
+    href: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.html#UltraGenericSystem_Services_Agents_StreamingSKAgentBase_BuildPrompt_UltraGenericSystem_Models_AgentExecutionContext_
+  - name: (
+  - uid: UltraGenericSystem.Models.AgentExecutionContext
+    name: AgentExecutionContext
+    href: UltraGenericSystem.Models.AgentExecutionContext.html
+  - name: )
+  spec.vb:
+  - uid: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.BuildPrompt(UltraGenericSystem.Models.AgentExecutionContext)
+    name: BuildPrompt
+    href: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.html#UltraGenericSystem_Services_Agents_StreamingSKAgentBase_BuildPrompt_UltraGenericSystem_Models_AgentExecutionContext_
+  - name: (
+  - uid: UltraGenericSystem.Models.AgentExecutionContext
+    name: AgentExecutionContext
+    href: UltraGenericSystem.Models.AgentExecutionContext.html
+  - name: )
+- uid: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.BuildPrompt*
+  commentId: Overload:UltraGenericSystem.Services.Agents.StreamingCheckerAgent.BuildPrompt
+  href: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.html#UltraGenericSystem_Services_Agents_StreamingCheckerAgent_BuildPrompt_UltraGenericSystem_Models_AgentExecutionContext_
+  name: BuildPrompt
+  nameWithType: StreamingCheckerAgent.BuildPrompt
+  fullName: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.BuildPrompt
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.ProcessResponseAsync(System.String,UltraGenericSystem.Models.AgentExecutionContext)
+  commentId: M:UltraGenericSystem.Services.Agents.StreamingSKAgentBase.ProcessResponseAsync(System.String,UltraGenericSystem.Models.AgentExecutionContext)
+  parent: UltraGenericSystem.Services.Agents.StreamingSKAgentBase
+  isExternal: true
+  href: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.html#UltraGenericSystem_Services_Agents_StreamingSKAgentBase_ProcessResponseAsync_System_String_UltraGenericSystem_Models_AgentExecutionContext_
+  name: ProcessResponseAsync(string, AgentExecutionContext)
+  nameWithType: StreamingSKAgentBase.ProcessResponseAsync(string, AgentExecutionContext)
+  fullName: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.ProcessResponseAsync(string, UltraGenericSystem.Models.AgentExecutionContext)
+  nameWithType.vb: StreamingSKAgentBase.ProcessResponseAsync(String, AgentExecutionContext)
+  fullName.vb: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.ProcessResponseAsync(String, UltraGenericSystem.Models.AgentExecutionContext)
+  name.vb: ProcessResponseAsync(String, AgentExecutionContext)
+  spec.csharp:
+  - uid: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.ProcessResponseAsync(System.String,UltraGenericSystem.Models.AgentExecutionContext)
+    name: ProcessResponseAsync
+    href: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.html#UltraGenericSystem_Services_Agents_StreamingSKAgentBase_ProcessResponseAsync_System_String_UltraGenericSystem_Models_AgentExecutionContext_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: UltraGenericSystem.Models.AgentExecutionContext
+    name: AgentExecutionContext
+    href: UltraGenericSystem.Models.AgentExecutionContext.html
+  - name: )
+  spec.vb:
+  - uid: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.ProcessResponseAsync(System.String,UltraGenericSystem.Models.AgentExecutionContext)
+    name: ProcessResponseAsync
+    href: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.html#UltraGenericSystem_Services_Agents_StreamingSKAgentBase_ProcessResponseAsync_System_String_UltraGenericSystem_Models_AgentExecutionContext_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: UltraGenericSystem.Models.AgentExecutionContext
+    name: AgentExecutionContext
+    href: UltraGenericSystem.Models.AgentExecutionContext.html
+  - name: )
+- uid: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.ProcessResponseAsync*
+  commentId: Overload:UltraGenericSystem.Services.Agents.StreamingCheckerAgent.ProcessResponseAsync
+  href: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.html#UltraGenericSystem_Services_Agents_StreamingCheckerAgent_ProcessResponseAsync_System_String_UltraGenericSystem_Models_AgentExecutionContext_
+  name: ProcessResponseAsync
+  nameWithType: StreamingCheckerAgent.ProcessResponseAsync
+  fullName: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.ProcessResponseAsync
+- uid: System.Threading.Tasks.Task{System.Object}
+  commentId: T:System.Threading.Tasks.Task{System.Object}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<object>
+  nameWithType: Task<object>
+  fullName: System.Threading.Tasks.Task<object>
+  nameWithType.vb: Task(Of Object)
+  fullName.vb: System.Threading.Tasks.Task(Of Object)
+  name.vb: Task(Of Object)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )

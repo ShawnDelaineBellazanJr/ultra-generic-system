@@ -1,0 +1,587 @@
+### YamlMime:ManagedReference
+items:
+- uid: UltraGenericSystem.Repositories.IUnitOfWork
+  commentId: T:UltraGenericSystem.Repositories.IUnitOfWork
+  id: IUnitOfWork
+  parent: UltraGenericSystem.Repositories
+  children:
+  - UltraGenericSystem.Repositories.IUnitOfWork.BeginTransactionAsync(System.Threading.CancellationToken)
+  - UltraGenericSystem.Repositories.IUnitOfWork.CommitTransactionAsync(System.Threading.CancellationToken)
+  - UltraGenericSystem.Repositories.IUnitOfWork.CurrentTransactionId
+  - UltraGenericSystem.Repositories.IUnitOfWork.HasActiveTransaction
+  - UltraGenericSystem.Repositories.IUnitOfWork.Repository``1
+  - UltraGenericSystem.Repositories.IUnitOfWork.RollbackTransactionAsync(System.Threading.CancellationToken)
+  - UltraGenericSystem.Repositories.IUnitOfWork.SaveChangesAsync(System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: IUnitOfWork
+  nameWithType: IUnitOfWork
+  fullName: UltraGenericSystem.Repositories.IUnitOfWork
+  type: Interface
+  source:
+    remote:
+      path: Repositories/IUnitOfWork.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: IUnitOfWork
+    path: ../Repositories/IUnitOfWork.cs
+    startLine: 7
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Repositories
+  summary: Unit of Work pattern interface for managing transactions and repository access
+  example: []
+  syntax:
+    content: 'public interface IUnitOfWork : IDisposable'
+    content.vb: Public Interface IUnitOfWork Inherits IDisposable
+  inheritedMembers:
+  - System.IDisposable.Dispose
+- uid: UltraGenericSystem.Repositories.IUnitOfWork.Repository``1
+  commentId: M:UltraGenericSystem.Repositories.IUnitOfWork.Repository``1
+  id: Repository``1
+  parent: UltraGenericSystem.Repositories.IUnitOfWork
+  langs:
+  - csharp
+  - vb
+  name: Repository<T>()
+  nameWithType: IUnitOfWork.Repository<T>()
+  fullName: UltraGenericSystem.Repositories.IUnitOfWork.Repository<T>()
+  type: Method
+  source:
+    remote:
+      path: Repositories/IUnitOfWork.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Repository
+    path: ../Repositories/IUnitOfWork.cs
+    startLine: 12
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Repositories
+  summary: Gets a repository for the specified entity type
+  example: []
+  syntax:
+    content: 'IGenericRepository<T> Repository<T>() where T : BaseEntity'
+    typeParameters:
+    - id: T
+    return:
+      type: UltraGenericSystem.Repositories.IGenericRepository{{T}}
+    content.vb: Function Repository(Of T As BaseEntity)() As IGenericRepository(Of T)
+  overload: UltraGenericSystem.Repositories.IUnitOfWork.Repository*
+  nameWithType.vb: IUnitOfWork.Repository(Of T)()
+  fullName.vb: UltraGenericSystem.Repositories.IUnitOfWork.Repository(Of T)()
+  name.vb: Repository(Of T)()
+- uid: UltraGenericSystem.Repositories.IUnitOfWork.SaveChangesAsync(System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Repositories.IUnitOfWork.SaveChangesAsync(System.Threading.CancellationToken)
+  id: SaveChangesAsync(System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Repositories.IUnitOfWork
+  langs:
+  - csharp
+  - vb
+  name: SaveChangesAsync(CancellationToken)
+  nameWithType: IUnitOfWork.SaveChangesAsync(CancellationToken)
+  fullName: UltraGenericSystem.Repositories.IUnitOfWork.SaveChangesAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Repositories/IUnitOfWork.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: SaveChangesAsync
+    path: ../Repositories/IUnitOfWork.cs
+    startLine: 17
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Repositories
+  summary: Saves all changes to the database
+  example: []
+  syntax:
+    content: Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+    parameters:
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{System.Int32}
+    content.vb: Function SaveChangesAsync(cancellationToken As CancellationToken = Nothing) As Task(Of Integer)
+  overload: UltraGenericSystem.Repositories.IUnitOfWork.SaveChangesAsync*
+- uid: UltraGenericSystem.Repositories.IUnitOfWork.BeginTransactionAsync(System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Repositories.IUnitOfWork.BeginTransactionAsync(System.Threading.CancellationToken)
+  id: BeginTransactionAsync(System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Repositories.IUnitOfWork
+  langs:
+  - csharp
+  - vb
+  name: BeginTransactionAsync(CancellationToken)
+  nameWithType: IUnitOfWork.BeginTransactionAsync(CancellationToken)
+  fullName: UltraGenericSystem.Repositories.IUnitOfWork.BeginTransactionAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Repositories/IUnitOfWork.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: BeginTransactionAsync
+    path: ../Repositories/IUnitOfWork.cs
+    startLine: 22
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Repositories
+  summary: Begins a new transaction
+  example: []
+  syntax:
+    content: Task BeginTransactionAsync(CancellationToken cancellationToken = default)
+    parameters:
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function BeginTransactionAsync(cancellationToken As CancellationToken = Nothing) As Task
+  overload: UltraGenericSystem.Repositories.IUnitOfWork.BeginTransactionAsync*
+- uid: UltraGenericSystem.Repositories.IUnitOfWork.CommitTransactionAsync(System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Repositories.IUnitOfWork.CommitTransactionAsync(System.Threading.CancellationToken)
+  id: CommitTransactionAsync(System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Repositories.IUnitOfWork
+  langs:
+  - csharp
+  - vb
+  name: CommitTransactionAsync(CancellationToken)
+  nameWithType: IUnitOfWork.CommitTransactionAsync(CancellationToken)
+  fullName: UltraGenericSystem.Repositories.IUnitOfWork.CommitTransactionAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Repositories/IUnitOfWork.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: CommitTransactionAsync
+    path: ../Repositories/IUnitOfWork.cs
+    startLine: 27
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Repositories
+  summary: Commits the current transaction
+  example: []
+  syntax:
+    content: Task CommitTransactionAsync(CancellationToken cancellationToken = default)
+    parameters:
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function CommitTransactionAsync(cancellationToken As CancellationToken = Nothing) As Task
+  overload: UltraGenericSystem.Repositories.IUnitOfWork.CommitTransactionAsync*
+- uid: UltraGenericSystem.Repositories.IUnitOfWork.RollbackTransactionAsync(System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Repositories.IUnitOfWork.RollbackTransactionAsync(System.Threading.CancellationToken)
+  id: RollbackTransactionAsync(System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Repositories.IUnitOfWork
+  langs:
+  - csharp
+  - vb
+  name: RollbackTransactionAsync(CancellationToken)
+  nameWithType: IUnitOfWork.RollbackTransactionAsync(CancellationToken)
+  fullName: UltraGenericSystem.Repositories.IUnitOfWork.RollbackTransactionAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Repositories/IUnitOfWork.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: RollbackTransactionAsync
+    path: ../Repositories/IUnitOfWork.cs
+    startLine: 32
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Repositories
+  summary: Rolls back the current transaction
+  example: []
+  syntax:
+    content: Task RollbackTransactionAsync(CancellationToken cancellationToken = default)
+    parameters:
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function RollbackTransactionAsync(cancellationToken As CancellationToken = Nothing) As Task
+  overload: UltraGenericSystem.Repositories.IUnitOfWork.RollbackTransactionAsync*
+- uid: UltraGenericSystem.Repositories.IUnitOfWork.HasActiveTransaction
+  commentId: P:UltraGenericSystem.Repositories.IUnitOfWork.HasActiveTransaction
+  id: HasActiveTransaction
+  parent: UltraGenericSystem.Repositories.IUnitOfWork
+  langs:
+  - csharp
+  - vb
+  name: HasActiveTransaction
+  nameWithType: IUnitOfWork.HasActiveTransaction
+  fullName: UltraGenericSystem.Repositories.IUnitOfWork.HasActiveTransaction
+  type: Property
+  source:
+    remote:
+      path: Repositories/IUnitOfWork.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: HasActiveTransaction
+    path: ../Repositories/IUnitOfWork.cs
+    startLine: 37
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Repositories
+  summary: Checks if there is an active transaction
+  example: []
+  syntax:
+    content: bool HasActiveTransaction { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: ReadOnly Property HasActiveTransaction As Boolean
+  overload: UltraGenericSystem.Repositories.IUnitOfWork.HasActiveTransaction*
+- uid: UltraGenericSystem.Repositories.IUnitOfWork.CurrentTransactionId
+  commentId: P:UltraGenericSystem.Repositories.IUnitOfWork.CurrentTransactionId
+  id: CurrentTransactionId
+  parent: UltraGenericSystem.Repositories.IUnitOfWork
+  langs:
+  - csharp
+  - vb
+  name: CurrentTransactionId
+  nameWithType: IUnitOfWork.CurrentTransactionId
+  fullName: UltraGenericSystem.Repositories.IUnitOfWork.CurrentTransactionId
+  type: Property
+  source:
+    remote:
+      path: Repositories/IUnitOfWork.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: CurrentTransactionId
+    path: ../Repositories/IUnitOfWork.cs
+    startLine: 42
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Repositories
+  summary: Gets the current transaction ID
+  example: []
+  syntax:
+    content: string? CurrentTransactionId { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property CurrentTransactionId As String
+  overload: UltraGenericSystem.Repositories.IUnitOfWork.CurrentTransactionId*
+references:
+- uid: UltraGenericSystem.Repositories
+  commentId: N:UltraGenericSystem.Repositories
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Repositories
+  nameWithType: UltraGenericSystem.Repositories
+  fullName: UltraGenericSystem.Repositories
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Repositories
+    name: Repositories
+    href: UltraGenericSystem.Repositories.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Repositories
+    name: Repositories
+    href: UltraGenericSystem.Repositories.html
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UltraGenericSystem.Repositories.IUnitOfWork.Repository*
+  commentId: Overload:UltraGenericSystem.Repositories.IUnitOfWork.Repository
+  href: UltraGenericSystem.Repositories.IUnitOfWork.html#UltraGenericSystem_Repositories_IUnitOfWork_Repository__1
+  name: Repository
+  nameWithType: IUnitOfWork.Repository
+  fullName: UltraGenericSystem.Repositories.IUnitOfWork.Repository
+- uid: UltraGenericSystem.Repositories.IGenericRepository{{T}}
+  commentId: T:UltraGenericSystem.Repositories.IGenericRepository{`0}
+  parent: UltraGenericSystem.Repositories
+  definition: UltraGenericSystem.Repositories.IGenericRepository`1
+  href: UltraGenericSystem.Repositories.IGenericRepository-1.html
+  name: IGenericRepository<T>
+  nameWithType: IGenericRepository<T>
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>
+  nameWithType.vb: IGenericRepository(Of T)
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T)
+  name.vb: IGenericRepository(Of T)
+  spec.csharp:
+  - uid: UltraGenericSystem.Repositories.IGenericRepository`1
+    name: IGenericRepository
+    href: UltraGenericSystem.Repositories.IGenericRepository-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UltraGenericSystem.Repositories.IGenericRepository`1
+    name: IGenericRepository
+    href: UltraGenericSystem.Repositories.IGenericRepository-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UltraGenericSystem.Repositories.IGenericRepository`1
+  commentId: T:UltraGenericSystem.Repositories.IGenericRepository`1
+  href: UltraGenericSystem.Repositories.IGenericRepository-1.html
+  name: IGenericRepository<T>
+  nameWithType: IGenericRepository<T>
+  fullName: UltraGenericSystem.Repositories.IGenericRepository<T>
+  nameWithType.vb: IGenericRepository(Of T)
+  fullName.vb: UltraGenericSystem.Repositories.IGenericRepository(Of T)
+  name.vb: IGenericRepository(Of T)
+  spec.csharp:
+  - uid: UltraGenericSystem.Repositories.IGenericRepository`1
+    name: IGenericRepository
+    href: UltraGenericSystem.Repositories.IGenericRepository-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UltraGenericSystem.Repositories.IGenericRepository`1
+    name: IGenericRepository
+    href: UltraGenericSystem.Repositories.IGenericRepository-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UltraGenericSystem.Repositories.IUnitOfWork.SaveChangesAsync*
+  commentId: Overload:UltraGenericSystem.Repositories.IUnitOfWork.SaveChangesAsync
+  href: UltraGenericSystem.Repositories.IUnitOfWork.html#UltraGenericSystem_Repositories_IUnitOfWork_SaveChangesAsync_System_Threading_CancellationToken_
+  name: SaveChangesAsync
+  nameWithType: IUnitOfWork.SaveChangesAsync
+  fullName: UltraGenericSystem.Repositories.IUnitOfWork.SaveChangesAsync
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task{System.Int32}
+  commentId: T:System.Threading.Tasks.Task{System.Int32}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<int>
+  nameWithType: Task<int>
+  fullName: System.Threading.Tasks.Task<int>
+  nameWithType.vb: Task(Of Integer)
+  fullName.vb: System.Threading.Tasks.Task(Of Integer)
+  name.vb: Task(Of Integer)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: UltraGenericSystem.Repositories.IUnitOfWork.BeginTransactionAsync*
+  commentId: Overload:UltraGenericSystem.Repositories.IUnitOfWork.BeginTransactionAsync
+  href: UltraGenericSystem.Repositories.IUnitOfWork.html#UltraGenericSystem_Repositories_IUnitOfWork_BeginTransactionAsync_System_Threading_CancellationToken_
+  name: BeginTransactionAsync
+  nameWithType: IUnitOfWork.BeginTransactionAsync
+  fullName: UltraGenericSystem.Repositories.IUnitOfWork.BeginTransactionAsync
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: UltraGenericSystem.Repositories.IUnitOfWork.CommitTransactionAsync*
+  commentId: Overload:UltraGenericSystem.Repositories.IUnitOfWork.CommitTransactionAsync
+  href: UltraGenericSystem.Repositories.IUnitOfWork.html#UltraGenericSystem_Repositories_IUnitOfWork_CommitTransactionAsync_System_Threading_CancellationToken_
+  name: CommitTransactionAsync
+  nameWithType: IUnitOfWork.CommitTransactionAsync
+  fullName: UltraGenericSystem.Repositories.IUnitOfWork.CommitTransactionAsync
+- uid: UltraGenericSystem.Repositories.IUnitOfWork.RollbackTransactionAsync*
+  commentId: Overload:UltraGenericSystem.Repositories.IUnitOfWork.RollbackTransactionAsync
+  href: UltraGenericSystem.Repositories.IUnitOfWork.html#UltraGenericSystem_Repositories_IUnitOfWork_RollbackTransactionAsync_System_Threading_CancellationToken_
+  name: RollbackTransactionAsync
+  nameWithType: IUnitOfWork.RollbackTransactionAsync
+  fullName: UltraGenericSystem.Repositories.IUnitOfWork.RollbackTransactionAsync
+- uid: UltraGenericSystem.Repositories.IUnitOfWork.HasActiveTransaction*
+  commentId: Overload:UltraGenericSystem.Repositories.IUnitOfWork.HasActiveTransaction
+  href: UltraGenericSystem.Repositories.IUnitOfWork.html#UltraGenericSystem_Repositories_IUnitOfWork_HasActiveTransaction
+  name: HasActiveTransaction
+  nameWithType: IUnitOfWork.HasActiveTransaction
+  fullName: UltraGenericSystem.Repositories.IUnitOfWork.HasActiveTransaction
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: UltraGenericSystem.Repositories.IUnitOfWork.CurrentTransactionId*
+  commentId: Overload:UltraGenericSystem.Repositories.IUnitOfWork.CurrentTransactionId
+  href: UltraGenericSystem.Repositories.IUnitOfWork.html#UltraGenericSystem_Repositories_IUnitOfWork_CurrentTransactionId
+  name: CurrentTransactionId
+  nameWithType: IUnitOfWork.CurrentTransactionId
+  fullName: UltraGenericSystem.Repositories.IUnitOfWork.CurrentTransactionId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

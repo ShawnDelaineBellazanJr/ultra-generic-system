@@ -1,0 +1,1936 @@
+### YamlMime:ManagedReference
+items:
+- uid: UltraGenericSystem.Services.IAgentService`1
+  commentId: T:UltraGenericSystem.Services.IAgentService`1
+  id: IAgentService`1
+  parent: UltraGenericSystem.Services
+  children:
+  - UltraGenericSystem.Services.IAgentService`1.BulkCreateAsync(System.Collections.Generic.IEnumerable{`0},System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAgentService`1.BulkDeleteAsync(System.Collections.Generic.IEnumerable{System.Guid},System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAgentService`1.BulkUpdateAsync(System.Collections.Generic.IEnumerable{`0},System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAgentService`1.CountAsync(System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAgentService`1.CreateAsync(UltraGenericSystem.Models.AgentCreateRequest{`0},System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAgentService`1.DeleteAsync(UltraGenericSystem.Models.AgentDeleteRequest,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAgentService`1.ExistsAsync(System.Guid,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAgentService`1.GetAllAsync(System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAgentService`1.GetByCreatedByAsync(System.String,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAgentService`1.GetByDateRangeAsync(System.DateTime,System.DateTime,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAgentService`1.GetByIdAsync(System.Guid,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAgentService`1.GetByMetadataAsync(System.String,System.Object,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAgentService`1.GetByTagAsync(System.String,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAgentService`1.GetByTagsAsync(System.String[],System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAgentService`1.GetDeletedAsync(System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAgentService`1.GetPagedAsync(System.Int32,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAgentService`1.ProcessAsync(UltraGenericSystem.Models.AgentRequest{`0},System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAgentService`1.QueryAsync(UltraGenericSystem.Models.AgentQueryRequest,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAgentService`1.RestoreAsync(System.Guid,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAgentService`1.UpdateAsync(UltraGenericSystem.Models.AgentUpdateRequest{`0},System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: IAgentService<T>
+  nameWithType: IAgentService<T>
+  fullName: UltraGenericSystem.Services.IAgentService<T>
+  type: Interface
+  source:
+    remote:
+      path: Services/IAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: IAgentService
+    path: ../Services/IAgentService.cs
+    startLine: 8
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Generic agent service interface for all entities in the ultra-generic system
+  example: []
+  syntax:
+    content: 'public interface IAgentService<T> where T : BaseEntity'
+    typeParameters:
+    - id: T
+      description: The entity type that inherits from BaseEntity
+    content.vb: Public Interface IAgentService(Of T As BaseEntity)
+  nameWithType.vb: IAgentService(Of T)
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T)
+  name.vb: IAgentService(Of T)
+- uid: UltraGenericSystem.Services.IAgentService`1.ProcessAsync(UltraGenericSystem.Models.AgentRequest{`0},System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAgentService`1.ProcessAsync(UltraGenericSystem.Models.AgentRequest{`0},System.Threading.CancellationToken)
+  id: ProcessAsync(UltraGenericSystem.Models.AgentRequest{`0},System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAgentService`1
+  langs:
+  - csharp
+  - vb
+  name: ProcessAsync(AgentRequest<T>, CancellationToken)
+  nameWithType: IAgentService<T>.ProcessAsync(AgentRequest<T>, CancellationToken)
+  fullName: UltraGenericSystem.Services.IAgentService<T>.ProcessAsync(UltraGenericSystem.Models.AgentRequest<T>, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: ProcessAsync
+    path: ../Services/IAgentService.cs
+    startLine: 13
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Processes a generic agent request
+  example: []
+  syntax:
+    content: Task<AgentResponse<T>> ProcessAsync(AgentRequest<T> request, CancellationToken cancellationToken = default)
+    parameters:
+    - id: request
+      type: UltraGenericSystem.Models.AgentRequest{{T}}
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{{T}}}
+    content.vb: Function ProcessAsync(request As AgentRequest(Of T), cancellationToken As CancellationToken = Nothing) As Task(Of AgentResponse(Of T))
+  overload: UltraGenericSystem.Services.IAgentService`1.ProcessAsync*
+  nameWithType.vb: IAgentService(Of T).ProcessAsync(AgentRequest(Of T), CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).ProcessAsync(UltraGenericSystem.Models.AgentRequest(Of T), System.Threading.CancellationToken)
+  name.vb: ProcessAsync(AgentRequest(Of T), CancellationToken)
+- uid: UltraGenericSystem.Services.IAgentService`1.QueryAsync(UltraGenericSystem.Models.AgentQueryRequest,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAgentService`1.QueryAsync(UltraGenericSystem.Models.AgentQueryRequest,System.Threading.CancellationToken)
+  id: QueryAsync(UltraGenericSystem.Models.AgentQueryRequest,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAgentService`1
+  langs:
+  - csharp
+  - vb
+  name: QueryAsync(AgentQueryRequest, CancellationToken)
+  nameWithType: IAgentService<T>.QueryAsync(AgentQueryRequest, CancellationToken)
+  fullName: UltraGenericSystem.Services.IAgentService<T>.QueryAsync(UltraGenericSystem.Models.AgentQueryRequest, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: QueryAsync
+    path: ../Services/IAgentService.cs
+    startLine: 18
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Queries entities using agent orchestration
+  example: []
+  syntax:
+    content: Task<AgentResponse<IEnumerable<T>>> QueryAsync(AgentQueryRequest request, CancellationToken cancellationToken = default)
+    parameters:
+    - id: request
+      type: UltraGenericSystem.Models.AgentQueryRequest
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Collections.Generic.IEnumerable{{T}}}}
+    content.vb: Function QueryAsync(request As AgentQueryRequest, cancellationToken As CancellationToken = Nothing) As Task(Of AgentResponse(Of IEnumerable(Of T)))
+  overload: UltraGenericSystem.Services.IAgentService`1.QueryAsync*
+  nameWithType.vb: IAgentService(Of T).QueryAsync(AgentQueryRequest, CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).QueryAsync(UltraGenericSystem.Models.AgentQueryRequest, System.Threading.CancellationToken)
+- uid: UltraGenericSystem.Services.IAgentService`1.CreateAsync(UltraGenericSystem.Models.AgentCreateRequest{`0},System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAgentService`1.CreateAsync(UltraGenericSystem.Models.AgentCreateRequest{`0},System.Threading.CancellationToken)
+  id: CreateAsync(UltraGenericSystem.Models.AgentCreateRequest{`0},System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAgentService`1
+  langs:
+  - csharp
+  - vb
+  name: CreateAsync(AgentCreateRequest<T>, CancellationToken)
+  nameWithType: IAgentService<T>.CreateAsync(AgentCreateRequest<T>, CancellationToken)
+  fullName: UltraGenericSystem.Services.IAgentService<T>.CreateAsync(UltraGenericSystem.Models.AgentCreateRequest<T>, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: CreateAsync
+    path: ../Services/IAgentService.cs
+    startLine: 23
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Creates a new entity using agent orchestration
+  example: []
+  syntax:
+    content: Task<AgentResponse<T>> CreateAsync(AgentCreateRequest<T> request, CancellationToken cancellationToken = default)
+    parameters:
+    - id: request
+      type: UltraGenericSystem.Models.AgentCreateRequest{{T}}
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{{T}}}
+    content.vb: Function CreateAsync(request As AgentCreateRequest(Of T), cancellationToken As CancellationToken = Nothing) As Task(Of AgentResponse(Of T))
+  overload: UltraGenericSystem.Services.IAgentService`1.CreateAsync*
+  nameWithType.vb: IAgentService(Of T).CreateAsync(AgentCreateRequest(Of T), CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).CreateAsync(UltraGenericSystem.Models.AgentCreateRequest(Of T), System.Threading.CancellationToken)
+  name.vb: CreateAsync(AgentCreateRequest(Of T), CancellationToken)
+- uid: UltraGenericSystem.Services.IAgentService`1.UpdateAsync(UltraGenericSystem.Models.AgentUpdateRequest{`0},System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAgentService`1.UpdateAsync(UltraGenericSystem.Models.AgentUpdateRequest{`0},System.Threading.CancellationToken)
+  id: UpdateAsync(UltraGenericSystem.Models.AgentUpdateRequest{`0},System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAgentService`1
+  langs:
+  - csharp
+  - vb
+  name: UpdateAsync(AgentUpdateRequest<T>, CancellationToken)
+  nameWithType: IAgentService<T>.UpdateAsync(AgentUpdateRequest<T>, CancellationToken)
+  fullName: UltraGenericSystem.Services.IAgentService<T>.UpdateAsync(UltraGenericSystem.Models.AgentUpdateRequest<T>, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: UpdateAsync
+    path: ../Services/IAgentService.cs
+    startLine: 28
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Updates an existing entity using agent orchestration
+  example: []
+  syntax:
+    content: Task<AgentResponse<T>> UpdateAsync(AgentUpdateRequest<T> request, CancellationToken cancellationToken = default)
+    parameters:
+    - id: request
+      type: UltraGenericSystem.Models.AgentUpdateRequest{{T}}
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{{T}}}
+    content.vb: Function UpdateAsync(request As AgentUpdateRequest(Of T), cancellationToken As CancellationToken = Nothing) As Task(Of AgentResponse(Of T))
+  overload: UltraGenericSystem.Services.IAgentService`1.UpdateAsync*
+  nameWithType.vb: IAgentService(Of T).UpdateAsync(AgentUpdateRequest(Of T), CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).UpdateAsync(UltraGenericSystem.Models.AgentUpdateRequest(Of T), System.Threading.CancellationToken)
+  name.vb: UpdateAsync(AgentUpdateRequest(Of T), CancellationToken)
+- uid: UltraGenericSystem.Services.IAgentService`1.DeleteAsync(UltraGenericSystem.Models.AgentDeleteRequest,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAgentService`1.DeleteAsync(UltraGenericSystem.Models.AgentDeleteRequest,System.Threading.CancellationToken)
+  id: DeleteAsync(UltraGenericSystem.Models.AgentDeleteRequest,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAgentService`1
+  langs:
+  - csharp
+  - vb
+  name: DeleteAsync(AgentDeleteRequest, CancellationToken)
+  nameWithType: IAgentService<T>.DeleteAsync(AgentDeleteRequest, CancellationToken)
+  fullName: UltraGenericSystem.Services.IAgentService<T>.DeleteAsync(UltraGenericSystem.Models.AgentDeleteRequest, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: DeleteAsync
+    path: ../Services/IAgentService.cs
+    startLine: 33
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Deletes an entity using agent orchestration
+  example: []
+  syntax:
+    content: Task<AgentResponse<bool>> DeleteAsync(AgentDeleteRequest request, CancellationToken cancellationToken = default)
+    parameters:
+    - id: request
+      type: UltraGenericSystem.Models.AgentDeleteRequest
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Boolean}}
+    content.vb: Function DeleteAsync(request As AgentDeleteRequest, cancellationToken As CancellationToken = Nothing) As Task(Of AgentResponse(Of Boolean))
+  overload: UltraGenericSystem.Services.IAgentService`1.DeleteAsync*
+  nameWithType.vb: IAgentService(Of T).DeleteAsync(AgentDeleteRequest, CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).DeleteAsync(UltraGenericSystem.Models.AgentDeleteRequest, System.Threading.CancellationToken)
+- uid: UltraGenericSystem.Services.IAgentService`1.GetByIdAsync(System.Guid,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAgentService`1.GetByIdAsync(System.Guid,System.Threading.CancellationToken)
+  id: GetByIdAsync(System.Guid,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAgentService`1
+  langs:
+  - csharp
+  - vb
+  name: GetByIdAsync(Guid, CancellationToken)
+  nameWithType: IAgentService<T>.GetByIdAsync(Guid, CancellationToken)
+  fullName: UltraGenericSystem.Services.IAgentService<T>.GetByIdAsync(System.Guid, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetByIdAsync
+    path: ../Services/IAgentService.cs
+    startLine: 38
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Gets an entity by ID using agent orchestration
+  example: []
+  syntax:
+    content: Task<AgentResponse<T>> GetByIdAsync(Guid id, CancellationToken cancellationToken = default)
+    parameters:
+    - id: id
+      type: System.Guid
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{{T}}}
+    content.vb: Function GetByIdAsync(id As Guid, cancellationToken As CancellationToken = Nothing) As Task(Of AgentResponse(Of T))
+  overload: UltraGenericSystem.Services.IAgentService`1.GetByIdAsync*
+  nameWithType.vb: IAgentService(Of T).GetByIdAsync(Guid, CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).GetByIdAsync(System.Guid, System.Threading.CancellationToken)
+- uid: UltraGenericSystem.Services.IAgentService`1.GetAllAsync(System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAgentService`1.GetAllAsync(System.Threading.CancellationToken)
+  id: GetAllAsync(System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAgentService`1
+  langs:
+  - csharp
+  - vb
+  name: GetAllAsync(CancellationToken)
+  nameWithType: IAgentService<T>.GetAllAsync(CancellationToken)
+  fullName: UltraGenericSystem.Services.IAgentService<T>.GetAllAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetAllAsync
+    path: ../Services/IAgentService.cs
+    startLine: 43
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Gets all entities using agent orchestration
+  example: []
+  syntax:
+    content: Task<AgentResponse<IEnumerable<T>>> GetAllAsync(CancellationToken cancellationToken = default)
+    parameters:
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Collections.Generic.IEnumerable{{T}}}}
+    content.vb: Function GetAllAsync(cancellationToken As CancellationToken = Nothing) As Task(Of AgentResponse(Of IEnumerable(Of T)))
+  overload: UltraGenericSystem.Services.IAgentService`1.GetAllAsync*
+  nameWithType.vb: IAgentService(Of T).GetAllAsync(CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).GetAllAsync(System.Threading.CancellationToken)
+- uid: UltraGenericSystem.Services.IAgentService`1.GetPagedAsync(System.Int32,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAgentService`1.GetPagedAsync(System.Int32,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Threading.CancellationToken)
+  id: GetPagedAsync(System.Int32,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAgentService`1
+  langs:
+  - csharp
+  - vb
+  name: GetPagedAsync(int, int, string?, string?, Dictionary<string, object>?, CancellationToken)
+  nameWithType: IAgentService<T>.GetPagedAsync(int, int, string?, string?, Dictionary<string, object>?, CancellationToken)
+  fullName: UltraGenericSystem.Services.IAgentService<T>.GetPagedAsync(int, int, string?, string?, System.Collections.Generic.Dictionary<string, object>?, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetPagedAsync
+    path: ../Services/IAgentService.cs
+    startLine: 48
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Gets entities with pagination using agent orchestration
+  example: []
+  syntax:
+    content: Task<AgentResponse<PaginatedResult<T>>> GetPagedAsync(int pageNumber, int pageSize, string? sortBy = null, string? sortDirection = null, Dictionary<string, object>? filters = null, CancellationToken cancellationToken = default)
+    parameters:
+    - id: pageNumber
+      type: System.Int32
+    - id: pageSize
+      type: System.Int32
+    - id: sortBy
+      type: System.String
+    - id: sortDirection
+      type: System.String
+    - id: filters
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{UltraGenericSystem.Models.PaginatedResult{{T}}}}
+    content.vb: Function GetPagedAsync(pageNumber As Integer, pageSize As Integer, sortBy As String = Nothing, sortDirection As String = Nothing, filters As Dictionary(Of String, Object) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AgentResponse(Of PaginatedResult(Of T)))
+  overload: UltraGenericSystem.Services.IAgentService`1.GetPagedAsync*
+  nameWithType.vb: IAgentService(Of T).GetPagedAsync(Integer, Integer, String, String, Dictionary(Of String, Object), CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).GetPagedAsync(Integer, Integer, String, String, System.Collections.Generic.Dictionary(Of String, Object), System.Threading.CancellationToken)
+  name.vb: GetPagedAsync(Integer, Integer, String, String, Dictionary(Of String, Object), CancellationToken)
+- uid: UltraGenericSystem.Services.IAgentService`1.GetByTagAsync(System.String,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAgentService`1.GetByTagAsync(System.String,System.Threading.CancellationToken)
+  id: GetByTagAsync(System.String,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAgentService`1
+  langs:
+  - csharp
+  - vb
+  name: GetByTagAsync(string, CancellationToken)
+  nameWithType: IAgentService<T>.GetByTagAsync(string, CancellationToken)
+  fullName: UltraGenericSystem.Services.IAgentService<T>.GetByTagAsync(string, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetByTagAsync
+    path: ../Services/IAgentService.cs
+    startLine: 59
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Gets entities by tag using agent orchestration
+  example: []
+  syntax:
+    content: Task<AgentResponse<IEnumerable<T>>> GetByTagAsync(string tag, CancellationToken cancellationToken = default)
+    parameters:
+    - id: tag
+      type: System.String
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Collections.Generic.IEnumerable{{T}}}}
+    content.vb: Function GetByTagAsync(tag As String, cancellationToken As CancellationToken = Nothing) As Task(Of AgentResponse(Of IEnumerable(Of T)))
+  overload: UltraGenericSystem.Services.IAgentService`1.GetByTagAsync*
+  nameWithType.vb: IAgentService(Of T).GetByTagAsync(String, CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).GetByTagAsync(String, System.Threading.CancellationToken)
+  name.vb: GetByTagAsync(String, CancellationToken)
+- uid: UltraGenericSystem.Services.IAgentService`1.GetByTagsAsync(System.String[],System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAgentService`1.GetByTagsAsync(System.String[],System.Threading.CancellationToken)
+  id: GetByTagsAsync(System.String[],System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAgentService`1
+  langs:
+  - csharp
+  - vb
+  name: GetByTagsAsync(string[], CancellationToken)
+  nameWithType: IAgentService<T>.GetByTagsAsync(string[], CancellationToken)
+  fullName: UltraGenericSystem.Services.IAgentService<T>.GetByTagsAsync(string[], System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetByTagsAsync
+    path: ../Services/IAgentService.cs
+    startLine: 64
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Gets entities by multiple tags using agent orchestration
+  example: []
+  syntax:
+    content: Task<AgentResponse<IEnumerable<T>>> GetByTagsAsync(string[] tags, CancellationToken cancellationToken = default)
+    parameters:
+    - id: tags
+      type: System.String[]
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Collections.Generic.IEnumerable{{T}}}}
+    content.vb: Function GetByTagsAsync(tags As String(), cancellationToken As CancellationToken = Nothing) As Task(Of AgentResponse(Of IEnumerable(Of T)))
+  overload: UltraGenericSystem.Services.IAgentService`1.GetByTagsAsync*
+  nameWithType.vb: IAgentService(Of T).GetByTagsAsync(String(), CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).GetByTagsAsync(String(), System.Threading.CancellationToken)
+  name.vb: GetByTagsAsync(String(), CancellationToken)
+- uid: UltraGenericSystem.Services.IAgentService`1.GetByCreatedByAsync(System.String,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAgentService`1.GetByCreatedByAsync(System.String,System.Threading.CancellationToken)
+  id: GetByCreatedByAsync(System.String,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAgentService`1
+  langs:
+  - csharp
+  - vb
+  name: GetByCreatedByAsync(string, CancellationToken)
+  nameWithType: IAgentService<T>.GetByCreatedByAsync(string, CancellationToken)
+  fullName: UltraGenericSystem.Services.IAgentService<T>.GetByCreatedByAsync(string, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetByCreatedByAsync
+    path: ../Services/IAgentService.cs
+    startLine: 69
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Gets entities created by a specific user using agent orchestration
+  example: []
+  syntax:
+    content: Task<AgentResponse<IEnumerable<T>>> GetByCreatedByAsync(string createdBy, CancellationToken cancellationToken = default)
+    parameters:
+    - id: createdBy
+      type: System.String
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Collections.Generic.IEnumerable{{T}}}}
+    content.vb: Function GetByCreatedByAsync(createdBy As String, cancellationToken As CancellationToken = Nothing) As Task(Of AgentResponse(Of IEnumerable(Of T)))
+  overload: UltraGenericSystem.Services.IAgentService`1.GetByCreatedByAsync*
+  nameWithType.vb: IAgentService(Of T).GetByCreatedByAsync(String, CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).GetByCreatedByAsync(String, System.Threading.CancellationToken)
+  name.vb: GetByCreatedByAsync(String, CancellationToken)
+- uid: UltraGenericSystem.Services.IAgentService`1.GetByDateRangeAsync(System.DateTime,System.DateTime,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAgentService`1.GetByDateRangeAsync(System.DateTime,System.DateTime,System.Threading.CancellationToken)
+  id: GetByDateRangeAsync(System.DateTime,System.DateTime,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAgentService`1
+  langs:
+  - csharp
+  - vb
+  name: GetByDateRangeAsync(DateTime, DateTime, CancellationToken)
+  nameWithType: IAgentService<T>.GetByDateRangeAsync(DateTime, DateTime, CancellationToken)
+  fullName: UltraGenericSystem.Services.IAgentService<T>.GetByDateRangeAsync(System.DateTime, System.DateTime, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetByDateRangeAsync
+    path: ../Services/IAgentService.cs
+    startLine: 74
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Gets entities within a date range using agent orchestration
+  example: []
+  syntax:
+    content: Task<AgentResponse<IEnumerable<T>>> GetByDateRangeAsync(DateTime startDate, DateTime endDate, CancellationToken cancellationToken = default)
+    parameters:
+    - id: startDate
+      type: System.DateTime
+    - id: endDate
+      type: System.DateTime
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Collections.Generic.IEnumerable{{T}}}}
+    content.vb: Function GetByDateRangeAsync(startDate As Date, endDate As Date, cancellationToken As CancellationToken = Nothing) As Task(Of AgentResponse(Of IEnumerable(Of T)))
+  overload: UltraGenericSystem.Services.IAgentService`1.GetByDateRangeAsync*
+  nameWithType.vb: IAgentService(Of T).GetByDateRangeAsync(Date, Date, CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).GetByDateRangeAsync(Date, Date, System.Threading.CancellationToken)
+  name.vb: GetByDateRangeAsync(Date, Date, CancellationToken)
+- uid: UltraGenericSystem.Services.IAgentService`1.GetByMetadataAsync(System.String,System.Object,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAgentService`1.GetByMetadataAsync(System.String,System.Object,System.Threading.CancellationToken)
+  id: GetByMetadataAsync(System.String,System.Object,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAgentService`1
+  langs:
+  - csharp
+  - vb
+  name: GetByMetadataAsync(string, object, CancellationToken)
+  nameWithType: IAgentService<T>.GetByMetadataAsync(string, object, CancellationToken)
+  fullName: UltraGenericSystem.Services.IAgentService<T>.GetByMetadataAsync(string, object, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetByMetadataAsync
+    path: ../Services/IAgentService.cs
+    startLine: 79
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Gets entities with metadata using agent orchestration
+  example: []
+  syntax:
+    content: Task<AgentResponse<IEnumerable<T>>> GetByMetadataAsync(string key, object value, CancellationToken cancellationToken = default)
+    parameters:
+    - id: key
+      type: System.String
+    - id: value
+      type: System.Object
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Collections.Generic.IEnumerable{{T}}}}
+    content.vb: Function GetByMetadataAsync(key As String, value As Object, cancellationToken As CancellationToken = Nothing) As Task(Of AgentResponse(Of IEnumerable(Of T)))
+  overload: UltraGenericSystem.Services.IAgentService`1.GetByMetadataAsync*
+  nameWithType.vb: IAgentService(Of T).GetByMetadataAsync(String, Object, CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).GetByMetadataAsync(String, Object, System.Threading.CancellationToken)
+  name.vb: GetByMetadataAsync(String, Object, CancellationToken)
+- uid: UltraGenericSystem.Services.IAgentService`1.RestoreAsync(System.Guid,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAgentService`1.RestoreAsync(System.Guid,System.Threading.CancellationToken)
+  id: RestoreAsync(System.Guid,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAgentService`1
+  langs:
+  - csharp
+  - vb
+  name: RestoreAsync(Guid, CancellationToken)
+  nameWithType: IAgentService<T>.RestoreAsync(Guid, CancellationToken)
+  fullName: UltraGenericSystem.Services.IAgentService<T>.RestoreAsync(System.Guid, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: RestoreAsync
+    path: ../Services/IAgentService.cs
+    startLine: 84
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Restores a soft-deleted entity using agent orchestration
+  example: []
+  syntax:
+    content: Task<AgentResponse<T>> RestoreAsync(Guid id, CancellationToken cancellationToken = default)
+    parameters:
+    - id: id
+      type: System.Guid
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{{T}}}
+    content.vb: Function RestoreAsync(id As Guid, cancellationToken As CancellationToken = Nothing) As Task(Of AgentResponse(Of T))
+  overload: UltraGenericSystem.Services.IAgentService`1.RestoreAsync*
+  nameWithType.vb: IAgentService(Of T).RestoreAsync(Guid, CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).RestoreAsync(System.Guid, System.Threading.CancellationToken)
+- uid: UltraGenericSystem.Services.IAgentService`1.GetDeletedAsync(System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAgentService`1.GetDeletedAsync(System.Threading.CancellationToken)
+  id: GetDeletedAsync(System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAgentService`1
+  langs:
+  - csharp
+  - vb
+  name: GetDeletedAsync(CancellationToken)
+  nameWithType: IAgentService<T>.GetDeletedAsync(CancellationToken)
+  fullName: UltraGenericSystem.Services.IAgentService<T>.GetDeletedAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetDeletedAsync
+    path: ../Services/IAgentService.cs
+    startLine: 89
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Gets all soft-deleted entities using agent orchestration
+  example: []
+  syntax:
+    content: Task<AgentResponse<IEnumerable<T>>> GetDeletedAsync(CancellationToken cancellationToken = default)
+    parameters:
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Collections.Generic.IEnumerable{{T}}}}
+    content.vb: Function GetDeletedAsync(cancellationToken As CancellationToken = Nothing) As Task(Of AgentResponse(Of IEnumerable(Of T)))
+  overload: UltraGenericSystem.Services.IAgentService`1.GetDeletedAsync*
+  nameWithType.vb: IAgentService(Of T).GetDeletedAsync(CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).GetDeletedAsync(System.Threading.CancellationToken)
+- uid: UltraGenericSystem.Services.IAgentService`1.CountAsync(System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAgentService`1.CountAsync(System.Threading.CancellationToken)
+  id: CountAsync(System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAgentService`1
+  langs:
+  - csharp
+  - vb
+  name: CountAsync(CancellationToken)
+  nameWithType: IAgentService<T>.CountAsync(CancellationToken)
+  fullName: UltraGenericSystem.Services.IAgentService<T>.CountAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: CountAsync
+    path: ../Services/IAgentService.cs
+    startLine: 94
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Counts entities using agent orchestration
+  example: []
+  syntax:
+    content: Task<AgentResponse<int>> CountAsync(CancellationToken cancellationToken = default)
+    parameters:
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Int32}}
+    content.vb: Function CountAsync(cancellationToken As CancellationToken = Nothing) As Task(Of AgentResponse(Of Integer))
+  overload: UltraGenericSystem.Services.IAgentService`1.CountAsync*
+  nameWithType.vb: IAgentService(Of T).CountAsync(CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).CountAsync(System.Threading.CancellationToken)
+- uid: UltraGenericSystem.Services.IAgentService`1.ExistsAsync(System.Guid,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAgentService`1.ExistsAsync(System.Guid,System.Threading.CancellationToken)
+  id: ExistsAsync(System.Guid,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAgentService`1
+  langs:
+  - csharp
+  - vb
+  name: ExistsAsync(Guid, CancellationToken)
+  nameWithType: IAgentService<T>.ExistsAsync(Guid, CancellationToken)
+  fullName: UltraGenericSystem.Services.IAgentService<T>.ExistsAsync(System.Guid, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: ExistsAsync
+    path: ../Services/IAgentService.cs
+    startLine: 99
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Checks if an entity exists using agent orchestration
+  example: []
+  syntax:
+    content: Task<AgentResponse<bool>> ExistsAsync(Guid id, CancellationToken cancellationToken = default)
+    parameters:
+    - id: id
+      type: System.Guid
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Boolean}}
+    content.vb: Function ExistsAsync(id As Guid, cancellationToken As CancellationToken = Nothing) As Task(Of AgentResponse(Of Boolean))
+  overload: UltraGenericSystem.Services.IAgentService`1.ExistsAsync*
+  nameWithType.vb: IAgentService(Of T).ExistsAsync(Guid, CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).ExistsAsync(System.Guid, System.Threading.CancellationToken)
+- uid: UltraGenericSystem.Services.IAgentService`1.BulkCreateAsync(System.Collections.Generic.IEnumerable{`0},System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAgentService`1.BulkCreateAsync(System.Collections.Generic.IEnumerable{`0},System.Threading.CancellationToken)
+  id: BulkCreateAsync(System.Collections.Generic.IEnumerable{`0},System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAgentService`1
+  langs:
+  - csharp
+  - vb
+  name: BulkCreateAsync(IEnumerable<T>, CancellationToken)
+  nameWithType: IAgentService<T>.BulkCreateAsync(IEnumerable<T>, CancellationToken)
+  fullName: UltraGenericSystem.Services.IAgentService<T>.BulkCreateAsync(System.Collections.Generic.IEnumerable<T>, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: BulkCreateAsync
+    path: ../Services/IAgentService.cs
+    startLine: 104
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Performs bulk operations using agent orchestration
+  example: []
+  syntax:
+    content: Task<AgentResponse<BulkOperationResult<T>>> BulkCreateAsync(IEnumerable<T> entities, CancellationToken cancellationToken = default)
+    parameters:
+    - id: entities
+      type: System.Collections.Generic.IEnumerable{{T}}
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{UltraGenericSystem.Services.BulkOperationResult{{T}}}}
+    content.vb: Function BulkCreateAsync(entities As IEnumerable(Of T), cancellationToken As CancellationToken = Nothing) As Task(Of AgentResponse(Of BulkOperationResult(Of T)))
+  overload: UltraGenericSystem.Services.IAgentService`1.BulkCreateAsync*
+  nameWithType.vb: IAgentService(Of T).BulkCreateAsync(IEnumerable(Of T), CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).BulkCreateAsync(System.Collections.Generic.IEnumerable(Of T), System.Threading.CancellationToken)
+  name.vb: BulkCreateAsync(IEnumerable(Of T), CancellationToken)
+- uid: UltraGenericSystem.Services.IAgentService`1.BulkUpdateAsync(System.Collections.Generic.IEnumerable{`0},System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAgentService`1.BulkUpdateAsync(System.Collections.Generic.IEnumerable{`0},System.Threading.CancellationToken)
+  id: BulkUpdateAsync(System.Collections.Generic.IEnumerable{`0},System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAgentService`1
+  langs:
+  - csharp
+  - vb
+  name: BulkUpdateAsync(IEnumerable<T>, CancellationToken)
+  nameWithType: IAgentService<T>.BulkUpdateAsync(IEnumerable<T>, CancellationToken)
+  fullName: UltraGenericSystem.Services.IAgentService<T>.BulkUpdateAsync(System.Collections.Generic.IEnumerable<T>, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: BulkUpdateAsync
+    path: ../Services/IAgentService.cs
+    startLine: 109
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Performs bulk update operations using agent orchestration
+  example: []
+  syntax:
+    content: Task<AgentResponse<BulkOperationResult<T>>> BulkUpdateAsync(IEnumerable<T> entities, CancellationToken cancellationToken = default)
+    parameters:
+    - id: entities
+      type: System.Collections.Generic.IEnumerable{{T}}
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{UltraGenericSystem.Services.BulkOperationResult{{T}}}}
+    content.vb: Function BulkUpdateAsync(entities As IEnumerable(Of T), cancellationToken As CancellationToken = Nothing) As Task(Of AgentResponse(Of BulkOperationResult(Of T)))
+  overload: UltraGenericSystem.Services.IAgentService`1.BulkUpdateAsync*
+  nameWithType.vb: IAgentService(Of T).BulkUpdateAsync(IEnumerable(Of T), CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).BulkUpdateAsync(System.Collections.Generic.IEnumerable(Of T), System.Threading.CancellationToken)
+  name.vb: BulkUpdateAsync(IEnumerable(Of T), CancellationToken)
+- uid: UltraGenericSystem.Services.IAgentService`1.BulkDeleteAsync(System.Collections.Generic.IEnumerable{System.Guid},System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAgentService`1.BulkDeleteAsync(System.Collections.Generic.IEnumerable{System.Guid},System.Threading.CancellationToken)
+  id: BulkDeleteAsync(System.Collections.Generic.IEnumerable{System.Guid},System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAgentService`1
+  langs:
+  - csharp
+  - vb
+  name: BulkDeleteAsync(IEnumerable<Guid>, CancellationToken)
+  nameWithType: IAgentService<T>.BulkDeleteAsync(IEnumerable<Guid>, CancellationToken)
+  fullName: UltraGenericSystem.Services.IAgentService<T>.BulkDeleteAsync(System.Collections.Generic.IEnumerable<System.Guid>, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: BulkDeleteAsync
+    path: ../Services/IAgentService.cs
+    startLine: 114
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Performs bulk delete operations using agent orchestration
+  example: []
+  syntax:
+    content: Task<AgentResponse<BulkOperationResult<Guid>>> BulkDeleteAsync(IEnumerable<Guid> ids, CancellationToken cancellationToken = default)
+    parameters:
+    - id: ids
+      type: System.Collections.Generic.IEnumerable{System.Guid}
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{UltraGenericSystem.Services.BulkOperationResult{System.Guid}}}
+    content.vb: Function BulkDeleteAsync(ids As IEnumerable(Of Guid), cancellationToken As CancellationToken = Nothing) As Task(Of AgentResponse(Of BulkOperationResult(Of Guid)))
+  overload: UltraGenericSystem.Services.IAgentService`1.BulkDeleteAsync*
+  nameWithType.vb: IAgentService(Of T).BulkDeleteAsync(IEnumerable(Of Guid), CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).BulkDeleteAsync(System.Collections.Generic.IEnumerable(Of System.Guid), System.Threading.CancellationToken)
+  name.vb: BulkDeleteAsync(IEnumerable(Of Guid), CancellationToken)
+references:
+- uid: UltraGenericSystem.Services
+  commentId: N:UltraGenericSystem.Services
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Services
+  nameWithType: UltraGenericSystem.Services
+  fullName: UltraGenericSystem.Services
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Services
+    name: Services
+    href: UltraGenericSystem.Services.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Services
+    name: Services
+    href: UltraGenericSystem.Services.html
+- uid: UltraGenericSystem.Services.IAgentService`1.ProcessAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAgentService`1.ProcessAsync
+  href: UltraGenericSystem.Services.IAgentService-1.html#UltraGenericSystem_Services_IAgentService_1_ProcessAsync_UltraGenericSystem_Models_AgentRequest__0__System_Threading_CancellationToken_
+  name: ProcessAsync
+  nameWithType: IAgentService<T>.ProcessAsync
+  fullName: UltraGenericSystem.Services.IAgentService<T>.ProcessAsync
+  nameWithType.vb: IAgentService(Of T).ProcessAsync
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).ProcessAsync
+- uid: UltraGenericSystem.Models.AgentRequest{{T}}
+  commentId: T:UltraGenericSystem.Models.AgentRequest{`0}
+  parent: UltraGenericSystem.Models
+  definition: UltraGenericSystem.Models.AgentRequest`1
+  href: UltraGenericSystem.Models.AgentRequest-1.html
+  name: AgentRequest<T>
+  nameWithType: AgentRequest<T>
+  fullName: UltraGenericSystem.Models.AgentRequest<T>
+  nameWithType.vb: AgentRequest(Of T)
+  fullName.vb: UltraGenericSystem.Models.AgentRequest(Of T)
+  name.vb: AgentRequest(Of T)
+  spec.csharp:
+  - uid: UltraGenericSystem.Models.AgentRequest`1
+    name: AgentRequest
+    href: UltraGenericSystem.Models.AgentRequest-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UltraGenericSystem.Models.AgentRequest`1
+    name: AgentRequest
+    href: UltraGenericSystem.Models.AgentRequest-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{{T}}}
+  commentId: T:System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{``0}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<AgentResponse<T>>
+  nameWithType: Task<AgentResponse<T>>
+  fullName: System.Threading.Tasks.Task<UltraGenericSystem.Models.AgentResponse<T>>
+  nameWithType.vb: Task(Of AgentResponse(Of T))
+  fullName.vb: System.Threading.Tasks.Task(Of UltraGenericSystem.Models.AgentResponse(Of T))
+  name.vb: Task(Of AgentResponse(Of T))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: UltraGenericSystem.Models.AgentResponse`1
+    name: AgentResponse
+    href: UltraGenericSystem.Models.AgentResponse-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.AgentResponse`1
+    name: AgentResponse
+    href: UltraGenericSystem.Models.AgentResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: UltraGenericSystem.Models.AgentRequest`1
+  commentId: T:UltraGenericSystem.Models.AgentRequest`1
+  href: UltraGenericSystem.Models.AgentRequest-1.html
+  name: AgentRequest<T>
+  nameWithType: AgentRequest<T>
+  fullName: UltraGenericSystem.Models.AgentRequest<T>
+  nameWithType.vb: AgentRequest(Of T)
+  fullName.vb: UltraGenericSystem.Models.AgentRequest(Of T)
+  name.vb: AgentRequest(Of T)
+  spec.csharp:
+  - uid: UltraGenericSystem.Models.AgentRequest`1
+    name: AgentRequest
+    href: UltraGenericSystem.Models.AgentRequest-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UltraGenericSystem.Models.AgentRequest`1
+    name: AgentRequest
+    href: UltraGenericSystem.Models.AgentRequest-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UltraGenericSystem.Models
+  commentId: N:UltraGenericSystem.Models
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Models
+  nameWithType: UltraGenericSystem.Models
+  fullName: UltraGenericSystem.Models
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: UltraGenericSystem.Services.IAgentService`1.QueryAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAgentService`1.QueryAsync
+  href: UltraGenericSystem.Services.IAgentService-1.html#UltraGenericSystem_Services_IAgentService_1_QueryAsync_UltraGenericSystem_Models_AgentQueryRequest_System_Threading_CancellationToken_
+  name: QueryAsync
+  nameWithType: IAgentService<T>.QueryAsync
+  fullName: UltraGenericSystem.Services.IAgentService<T>.QueryAsync
+  nameWithType.vb: IAgentService(Of T).QueryAsync
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).QueryAsync
+- uid: UltraGenericSystem.Models.AgentQueryRequest
+  commentId: T:UltraGenericSystem.Models.AgentQueryRequest
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.AgentQueryRequest.html
+  name: AgentQueryRequest
+  nameWithType: AgentQueryRequest
+  fullName: UltraGenericSystem.Models.AgentQueryRequest
+- uid: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Collections.Generic.IEnumerable{{T}}}}
+  commentId: T:System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Collections.Generic.IEnumerable{``0}}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<AgentResponse<IEnumerable<T>>>
+  nameWithType: Task<AgentResponse<IEnumerable<T>>>
+  fullName: System.Threading.Tasks.Task<UltraGenericSystem.Models.AgentResponse<System.Collections.Generic.IEnumerable<T>>>
+  nameWithType.vb: Task(Of AgentResponse(Of IEnumerable(Of T)))
+  fullName.vb: System.Threading.Tasks.Task(Of UltraGenericSystem.Models.AgentResponse(Of System.Collections.Generic.IEnumerable(Of T)))
+  name.vb: Task(Of AgentResponse(Of IEnumerable(Of T)))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: UltraGenericSystem.Models.AgentResponse`1
+    name: AgentResponse
+    href: UltraGenericSystem.Models.AgentResponse-1.html
+  - name: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.AgentResponse`1
+    name: AgentResponse
+    href: UltraGenericSystem.Models.AgentResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: )
+- uid: UltraGenericSystem.Services.IAgentService`1.CreateAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAgentService`1.CreateAsync
+  href: UltraGenericSystem.Services.IAgentService-1.html#UltraGenericSystem_Services_IAgentService_1_CreateAsync_UltraGenericSystem_Models_AgentCreateRequest__0__System_Threading_CancellationToken_
+  name: CreateAsync
+  nameWithType: IAgentService<T>.CreateAsync
+  fullName: UltraGenericSystem.Services.IAgentService<T>.CreateAsync
+  nameWithType.vb: IAgentService(Of T).CreateAsync
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).CreateAsync
+- uid: UltraGenericSystem.Models.AgentCreateRequest{{T}}
+  commentId: T:UltraGenericSystem.Models.AgentCreateRequest{`0}
+  parent: UltraGenericSystem.Models
+  definition: UltraGenericSystem.Models.AgentCreateRequest`1
+  href: UltraGenericSystem.Models.AgentCreateRequest-1.html
+  name: AgentCreateRequest<T>
+  nameWithType: AgentCreateRequest<T>
+  fullName: UltraGenericSystem.Models.AgentCreateRequest<T>
+  nameWithType.vb: AgentCreateRequest(Of T)
+  fullName.vb: UltraGenericSystem.Models.AgentCreateRequest(Of T)
+  name.vb: AgentCreateRequest(Of T)
+  spec.csharp:
+  - uid: UltraGenericSystem.Models.AgentCreateRequest`1
+    name: AgentCreateRequest
+    href: UltraGenericSystem.Models.AgentCreateRequest-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UltraGenericSystem.Models.AgentCreateRequest`1
+    name: AgentCreateRequest
+    href: UltraGenericSystem.Models.AgentCreateRequest-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UltraGenericSystem.Models.AgentCreateRequest`1
+  commentId: T:UltraGenericSystem.Models.AgentCreateRequest`1
+  href: UltraGenericSystem.Models.AgentCreateRequest-1.html
+  name: AgentCreateRequest<T>
+  nameWithType: AgentCreateRequest<T>
+  fullName: UltraGenericSystem.Models.AgentCreateRequest<T>
+  nameWithType.vb: AgentCreateRequest(Of T)
+  fullName.vb: UltraGenericSystem.Models.AgentCreateRequest(Of T)
+  name.vb: AgentCreateRequest(Of T)
+  spec.csharp:
+  - uid: UltraGenericSystem.Models.AgentCreateRequest`1
+    name: AgentCreateRequest
+    href: UltraGenericSystem.Models.AgentCreateRequest-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UltraGenericSystem.Models.AgentCreateRequest`1
+    name: AgentCreateRequest
+    href: UltraGenericSystem.Models.AgentCreateRequest-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UltraGenericSystem.Services.IAgentService`1.UpdateAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAgentService`1.UpdateAsync
+  href: UltraGenericSystem.Services.IAgentService-1.html#UltraGenericSystem_Services_IAgentService_1_UpdateAsync_UltraGenericSystem_Models_AgentUpdateRequest__0__System_Threading_CancellationToken_
+  name: UpdateAsync
+  nameWithType: IAgentService<T>.UpdateAsync
+  fullName: UltraGenericSystem.Services.IAgentService<T>.UpdateAsync
+  nameWithType.vb: IAgentService(Of T).UpdateAsync
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).UpdateAsync
+- uid: UltraGenericSystem.Models.AgentUpdateRequest{{T}}
+  commentId: T:UltraGenericSystem.Models.AgentUpdateRequest{`0}
+  parent: UltraGenericSystem.Models
+  definition: UltraGenericSystem.Models.AgentUpdateRequest`1
+  href: UltraGenericSystem.Models.AgentUpdateRequest-1.html
+  name: AgentUpdateRequest<T>
+  nameWithType: AgentUpdateRequest<T>
+  fullName: UltraGenericSystem.Models.AgentUpdateRequest<T>
+  nameWithType.vb: AgentUpdateRequest(Of T)
+  fullName.vb: UltraGenericSystem.Models.AgentUpdateRequest(Of T)
+  name.vb: AgentUpdateRequest(Of T)
+  spec.csharp:
+  - uid: UltraGenericSystem.Models.AgentUpdateRequest`1
+    name: AgentUpdateRequest
+    href: UltraGenericSystem.Models.AgentUpdateRequest-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UltraGenericSystem.Models.AgentUpdateRequest`1
+    name: AgentUpdateRequest
+    href: UltraGenericSystem.Models.AgentUpdateRequest-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UltraGenericSystem.Models.AgentUpdateRequest`1
+  commentId: T:UltraGenericSystem.Models.AgentUpdateRequest`1
+  href: UltraGenericSystem.Models.AgentUpdateRequest-1.html
+  name: AgentUpdateRequest<T>
+  nameWithType: AgentUpdateRequest<T>
+  fullName: UltraGenericSystem.Models.AgentUpdateRequest<T>
+  nameWithType.vb: AgentUpdateRequest(Of T)
+  fullName.vb: UltraGenericSystem.Models.AgentUpdateRequest(Of T)
+  name.vb: AgentUpdateRequest(Of T)
+  spec.csharp:
+  - uid: UltraGenericSystem.Models.AgentUpdateRequest`1
+    name: AgentUpdateRequest
+    href: UltraGenericSystem.Models.AgentUpdateRequest-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UltraGenericSystem.Models.AgentUpdateRequest`1
+    name: AgentUpdateRequest
+    href: UltraGenericSystem.Models.AgentUpdateRequest-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UltraGenericSystem.Services.IAgentService`1.DeleteAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAgentService`1.DeleteAsync
+  href: UltraGenericSystem.Services.IAgentService-1.html#UltraGenericSystem_Services_IAgentService_1_DeleteAsync_UltraGenericSystem_Models_AgentDeleteRequest_System_Threading_CancellationToken_
+  name: DeleteAsync
+  nameWithType: IAgentService<T>.DeleteAsync
+  fullName: UltraGenericSystem.Services.IAgentService<T>.DeleteAsync
+  nameWithType.vb: IAgentService(Of T).DeleteAsync
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).DeleteAsync
+- uid: UltraGenericSystem.Models.AgentDeleteRequest
+  commentId: T:UltraGenericSystem.Models.AgentDeleteRequest
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.AgentDeleteRequest.html
+  name: AgentDeleteRequest
+  nameWithType: AgentDeleteRequest
+  fullName: UltraGenericSystem.Models.AgentDeleteRequest
+- uid: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Boolean}}
+  commentId: T:System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Boolean}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<AgentResponse<bool>>
+  nameWithType: Task<AgentResponse<bool>>
+  fullName: System.Threading.Tasks.Task<UltraGenericSystem.Models.AgentResponse<bool>>
+  nameWithType.vb: Task(Of AgentResponse(Of Boolean))
+  fullName.vb: System.Threading.Tasks.Task(Of UltraGenericSystem.Models.AgentResponse(Of Boolean))
+  name.vb: Task(Of AgentResponse(Of Boolean))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: UltraGenericSystem.Models.AgentResponse`1
+    name: AgentResponse
+    href: UltraGenericSystem.Models.AgentResponse-1.html
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.AgentResponse`1
+    name: AgentResponse
+    href: UltraGenericSystem.Models.AgentResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: UltraGenericSystem.Services.IAgentService`1.GetByIdAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAgentService`1.GetByIdAsync
+  href: UltraGenericSystem.Services.IAgentService-1.html#UltraGenericSystem_Services_IAgentService_1_GetByIdAsync_System_Guid_System_Threading_CancellationToken_
+  name: GetByIdAsync
+  nameWithType: IAgentService<T>.GetByIdAsync
+  fullName: UltraGenericSystem.Services.IAgentService<T>.GetByIdAsync
+  nameWithType.vb: IAgentService(Of T).GetByIdAsync
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).GetByIdAsync
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UltraGenericSystem.Services.IAgentService`1.GetAllAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAgentService`1.GetAllAsync
+  href: UltraGenericSystem.Services.IAgentService-1.html#UltraGenericSystem_Services_IAgentService_1_GetAllAsync_System_Threading_CancellationToken_
+  name: GetAllAsync
+  nameWithType: IAgentService<T>.GetAllAsync
+  fullName: UltraGenericSystem.Services.IAgentService<T>.GetAllAsync
+  nameWithType.vb: IAgentService(Of T).GetAllAsync
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).GetAllAsync
+- uid: UltraGenericSystem.Services.IAgentService`1.GetPagedAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAgentService`1.GetPagedAsync
+  href: UltraGenericSystem.Services.IAgentService-1.html#UltraGenericSystem_Services_IAgentService_1_GetPagedAsync_System_Int32_System_Int32_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__System_Threading_CancellationToken_
+  name: GetPagedAsync
+  nameWithType: IAgentService<T>.GetPagedAsync
+  fullName: UltraGenericSystem.Services.IAgentService<T>.GetPagedAsync
+  nameWithType.vb: IAgentService(Of T).GetPagedAsync
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).GetPagedAsync
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Collections.Generic.Dictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, object>
+  nameWithType: Dictionary<string, object>
+  fullName: System.Collections.Generic.Dictionary<string, object>
+  nameWithType.vb: Dictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, Object)
+  name.vb: Dictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{UltraGenericSystem.Models.PaginatedResult{{T}}}}
+  commentId: T:System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{UltraGenericSystem.Models.PaginatedResult{`0}}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<AgentResponse<PaginatedResult<T>>>
+  nameWithType: Task<AgentResponse<PaginatedResult<T>>>
+  fullName: System.Threading.Tasks.Task<UltraGenericSystem.Models.AgentResponse<UltraGenericSystem.Models.PaginatedResult<T>>>
+  nameWithType.vb: Task(Of AgentResponse(Of PaginatedResult(Of T)))
+  fullName.vb: System.Threading.Tasks.Task(Of UltraGenericSystem.Models.AgentResponse(Of UltraGenericSystem.Models.PaginatedResult(Of T)))
+  name.vb: Task(Of AgentResponse(Of PaginatedResult(Of T)))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: UltraGenericSystem.Models.AgentResponse`1
+    name: AgentResponse
+    href: UltraGenericSystem.Models.AgentResponse-1.html
+  - name: <
+  - uid: UltraGenericSystem.Models.PaginatedResult`1
+    name: PaginatedResult
+    href: UltraGenericSystem.Models.PaginatedResult-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.AgentResponse`1
+    name: AgentResponse
+    href: UltraGenericSystem.Models.AgentResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.PaginatedResult`1
+    name: PaginatedResult
+    href: UltraGenericSystem.Models.PaginatedResult-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: UltraGenericSystem.Services.IAgentService`1.GetByTagAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAgentService`1.GetByTagAsync
+  href: UltraGenericSystem.Services.IAgentService-1.html#UltraGenericSystem_Services_IAgentService_1_GetByTagAsync_System_String_System_Threading_CancellationToken_
+  name: GetByTagAsync
+  nameWithType: IAgentService<T>.GetByTagAsync
+  fullName: UltraGenericSystem.Services.IAgentService<T>.GetByTagAsync
+  nameWithType.vb: IAgentService(Of T).GetByTagAsync
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).GetByTagAsync
+- uid: UltraGenericSystem.Services.IAgentService`1.GetByTagsAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAgentService`1.GetByTagsAsync
+  href: UltraGenericSystem.Services.IAgentService-1.html#UltraGenericSystem_Services_IAgentService_1_GetByTagsAsync_System_String___System_Threading_CancellationToken_
+  name: GetByTagsAsync
+  nameWithType: IAgentService<T>.GetByTagsAsync
+  fullName: UltraGenericSystem.Services.IAgentService<T>.GetByTagsAsync
+  nameWithType.vb: IAgentService(Of T).GetByTagsAsync
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).GetByTagsAsync
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: UltraGenericSystem.Services.IAgentService`1.GetByCreatedByAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAgentService`1.GetByCreatedByAsync
+  href: UltraGenericSystem.Services.IAgentService-1.html#UltraGenericSystem_Services_IAgentService_1_GetByCreatedByAsync_System_String_System_Threading_CancellationToken_
+  name: GetByCreatedByAsync
+  nameWithType: IAgentService<T>.GetByCreatedByAsync
+  fullName: UltraGenericSystem.Services.IAgentService<T>.GetByCreatedByAsync
+  nameWithType.vb: IAgentService(Of T).GetByCreatedByAsync
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).GetByCreatedByAsync
+- uid: UltraGenericSystem.Services.IAgentService`1.GetByDateRangeAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAgentService`1.GetByDateRangeAsync
+  href: UltraGenericSystem.Services.IAgentService-1.html#UltraGenericSystem_Services_IAgentService_1_GetByDateRangeAsync_System_DateTime_System_DateTime_System_Threading_CancellationToken_
+  name: GetByDateRangeAsync
+  nameWithType: IAgentService<T>.GetByDateRangeAsync
+  fullName: UltraGenericSystem.Services.IAgentService<T>.GetByDateRangeAsync
+  nameWithType.vb: IAgentService(Of T).GetByDateRangeAsync
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).GetByDateRangeAsync
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: UltraGenericSystem.Services.IAgentService`1.GetByMetadataAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAgentService`1.GetByMetadataAsync
+  href: UltraGenericSystem.Services.IAgentService-1.html#UltraGenericSystem_Services_IAgentService_1_GetByMetadataAsync_System_String_System_Object_System_Threading_CancellationToken_
+  name: GetByMetadataAsync
+  nameWithType: IAgentService<T>.GetByMetadataAsync
+  fullName: UltraGenericSystem.Services.IAgentService<T>.GetByMetadataAsync
+  nameWithType.vb: IAgentService(Of T).GetByMetadataAsync
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).GetByMetadataAsync
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UltraGenericSystem.Services.IAgentService`1.RestoreAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAgentService`1.RestoreAsync
+  href: UltraGenericSystem.Services.IAgentService-1.html#UltraGenericSystem_Services_IAgentService_1_RestoreAsync_System_Guid_System_Threading_CancellationToken_
+  name: RestoreAsync
+  nameWithType: IAgentService<T>.RestoreAsync
+  fullName: UltraGenericSystem.Services.IAgentService<T>.RestoreAsync
+  nameWithType.vb: IAgentService(Of T).RestoreAsync
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).RestoreAsync
+- uid: UltraGenericSystem.Services.IAgentService`1.GetDeletedAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAgentService`1.GetDeletedAsync
+  href: UltraGenericSystem.Services.IAgentService-1.html#UltraGenericSystem_Services_IAgentService_1_GetDeletedAsync_System_Threading_CancellationToken_
+  name: GetDeletedAsync
+  nameWithType: IAgentService<T>.GetDeletedAsync
+  fullName: UltraGenericSystem.Services.IAgentService<T>.GetDeletedAsync
+  nameWithType.vb: IAgentService(Of T).GetDeletedAsync
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).GetDeletedAsync
+- uid: UltraGenericSystem.Services.IAgentService`1.CountAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAgentService`1.CountAsync
+  href: UltraGenericSystem.Services.IAgentService-1.html#UltraGenericSystem_Services_IAgentService_1_CountAsync_System_Threading_CancellationToken_
+  name: CountAsync
+  nameWithType: IAgentService<T>.CountAsync
+  fullName: UltraGenericSystem.Services.IAgentService<T>.CountAsync
+  nameWithType.vb: IAgentService(Of T).CountAsync
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).CountAsync
+- uid: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Int32}}
+  commentId: T:System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Int32}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<AgentResponse<int>>
+  nameWithType: Task<AgentResponse<int>>
+  fullName: System.Threading.Tasks.Task<UltraGenericSystem.Models.AgentResponse<int>>
+  nameWithType.vb: Task(Of AgentResponse(Of Integer))
+  fullName.vb: System.Threading.Tasks.Task(Of UltraGenericSystem.Models.AgentResponse(Of Integer))
+  name.vb: Task(Of AgentResponse(Of Integer))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: UltraGenericSystem.Models.AgentResponse`1
+    name: AgentResponse
+    href: UltraGenericSystem.Models.AgentResponse-1.html
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.AgentResponse`1
+    name: AgentResponse
+    href: UltraGenericSystem.Models.AgentResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  - name: )
+- uid: UltraGenericSystem.Services.IAgentService`1.ExistsAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAgentService`1.ExistsAsync
+  href: UltraGenericSystem.Services.IAgentService-1.html#UltraGenericSystem_Services_IAgentService_1_ExistsAsync_System_Guid_System_Threading_CancellationToken_
+  name: ExistsAsync
+  nameWithType: IAgentService<T>.ExistsAsync
+  fullName: UltraGenericSystem.Services.IAgentService<T>.ExistsAsync
+  nameWithType.vb: IAgentService(Of T).ExistsAsync
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).ExistsAsync
+- uid: UltraGenericSystem.Services.IAgentService`1.BulkCreateAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAgentService`1.BulkCreateAsync
+  href: UltraGenericSystem.Services.IAgentService-1.html#UltraGenericSystem_Services_IAgentService_1_BulkCreateAsync_System_Collections_Generic_IEnumerable__0__System_Threading_CancellationToken_
+  name: BulkCreateAsync
+  nameWithType: IAgentService<T>.BulkCreateAsync
+  fullName: UltraGenericSystem.Services.IAgentService<T>.BulkCreateAsync
+  nameWithType.vb: IAgentService(Of T).BulkCreateAsync
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).BulkCreateAsync
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: T:System.Collections.Generic.IEnumerable{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{UltraGenericSystem.Services.BulkOperationResult{{T}}}}
+  commentId: T:System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{UltraGenericSystem.Services.BulkOperationResult{`0}}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<AgentResponse<BulkOperationResult<T>>>
+  nameWithType: Task<AgentResponse<BulkOperationResult<T>>>
+  fullName: System.Threading.Tasks.Task<UltraGenericSystem.Models.AgentResponse<UltraGenericSystem.Services.BulkOperationResult<T>>>
+  nameWithType.vb: Task(Of AgentResponse(Of BulkOperationResult(Of T)))
+  fullName.vb: System.Threading.Tasks.Task(Of UltraGenericSystem.Models.AgentResponse(Of UltraGenericSystem.Services.BulkOperationResult(Of T)))
+  name.vb: Task(Of AgentResponse(Of BulkOperationResult(Of T)))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: UltraGenericSystem.Models.AgentResponse`1
+    name: AgentResponse
+    href: UltraGenericSystem.Models.AgentResponse-1.html
+  - name: <
+  - uid: UltraGenericSystem.Services.BulkOperationResult`1
+    name: BulkOperationResult
+    href: UltraGenericSystem.Services.BulkOperationResult-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.AgentResponse`1
+    name: AgentResponse
+    href: UltraGenericSystem.Models.AgentResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Services.BulkOperationResult`1
+    name: BulkOperationResult
+    href: UltraGenericSystem.Services.BulkOperationResult-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UltraGenericSystem.Services.IAgentService`1.BulkUpdateAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAgentService`1.BulkUpdateAsync
+  href: UltraGenericSystem.Services.IAgentService-1.html#UltraGenericSystem_Services_IAgentService_1_BulkUpdateAsync_System_Collections_Generic_IEnumerable__0__System_Threading_CancellationToken_
+  name: BulkUpdateAsync
+  nameWithType: IAgentService<T>.BulkUpdateAsync
+  fullName: UltraGenericSystem.Services.IAgentService<T>.BulkUpdateAsync
+  nameWithType.vb: IAgentService(Of T).BulkUpdateAsync
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).BulkUpdateAsync
+- uid: UltraGenericSystem.Services.IAgentService`1.BulkDeleteAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAgentService`1.BulkDeleteAsync
+  href: UltraGenericSystem.Services.IAgentService-1.html#UltraGenericSystem_Services_IAgentService_1_BulkDeleteAsync_System_Collections_Generic_IEnumerable_System_Guid__System_Threading_CancellationToken_
+  name: BulkDeleteAsync
+  nameWithType: IAgentService<T>.BulkDeleteAsync
+  fullName: UltraGenericSystem.Services.IAgentService<T>.BulkDeleteAsync
+  nameWithType.vb: IAgentService(Of T).BulkDeleteAsync
+  fullName.vb: UltraGenericSystem.Services.IAgentService(Of T).BulkDeleteAsync
+- uid: System.Collections.Generic.IEnumerable{System.Guid}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Guid}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<Guid>
+  nameWithType: IEnumerable<Guid>
+  fullName: System.Collections.Generic.IEnumerable<System.Guid>
+  nameWithType.vb: IEnumerable(Of Guid)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Guid)
+  name.vb: IEnumerable(Of Guid)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+- uid: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{UltraGenericSystem.Services.BulkOperationResult{System.Guid}}}
+  commentId: T:System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{UltraGenericSystem.Services.BulkOperationResult{System.Guid}}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<AgentResponse<BulkOperationResult<Guid>>>
+  nameWithType: Task<AgentResponse<BulkOperationResult<Guid>>>
+  fullName: System.Threading.Tasks.Task<UltraGenericSystem.Models.AgentResponse<UltraGenericSystem.Services.BulkOperationResult<System.Guid>>>
+  nameWithType.vb: Task(Of AgentResponse(Of BulkOperationResult(Of Guid)))
+  fullName.vb: System.Threading.Tasks.Task(Of UltraGenericSystem.Models.AgentResponse(Of UltraGenericSystem.Services.BulkOperationResult(Of System.Guid)))
+  name.vb: Task(Of AgentResponse(Of BulkOperationResult(Of Guid)))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: UltraGenericSystem.Models.AgentResponse`1
+    name: AgentResponse
+    href: UltraGenericSystem.Models.AgentResponse-1.html
+  - name: <
+  - uid: UltraGenericSystem.Services.BulkOperationResult`1
+    name: BulkOperationResult
+    href: UltraGenericSystem.Services.BulkOperationResult-1.html
+  - name: <
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: '>'
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.AgentResponse`1
+    name: AgentResponse
+    href: UltraGenericSystem.Models.AgentResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Services.BulkOperationResult`1
+    name: BulkOperationResult
+    href: UltraGenericSystem.Services.BulkOperationResult-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+  - name: )
+  - name: )

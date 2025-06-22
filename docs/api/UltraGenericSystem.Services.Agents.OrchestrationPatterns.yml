@@ -1,0 +1,664 @@
+### YamlMime:ManagedReference
+items:
+- uid: UltraGenericSystem.Services.Agents.OrchestrationPatterns
+  commentId: T:UltraGenericSystem.Services.Agents.OrchestrationPatterns
+  id: OrchestrationPatterns
+  parent: UltraGenericSystem.Services.Agents
+  children:
+  - UltraGenericSystem.Services.Agents.OrchestrationPatterns.Concurrent
+  - UltraGenericSystem.Services.Agents.OrchestrationPatterns.GroupChat
+  - UltraGenericSystem.Services.Agents.OrchestrationPatterns.Handoff
+  - UltraGenericSystem.Services.Agents.OrchestrationPatterns.Sequential
+  langs:
+  - csharp
+  - vb
+  name: OrchestrationPatterns
+  nameWithType: OrchestrationPatterns
+  fullName: UltraGenericSystem.Services.Agents.OrchestrationPatterns
+  type: Class
+  source:
+    remote:
+      path: Services/Agents/SKAgentFactory.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: OrchestrationPatterns
+    path: ../Services/Agents/SKAgentFactory.cs
+    startLine: 142
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.Agents
+  summary: Container for orchestration patterns
+  example: []
+  syntax:
+    content: public class OrchestrationPatterns
+    content.vb: Public Class OrchestrationPatterns
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: UltraGenericSystem.Services.Agents.OrchestrationPatterns.Sequential
+  commentId: P:UltraGenericSystem.Services.Agents.OrchestrationPatterns.Sequential
+  id: Sequential
+  parent: UltraGenericSystem.Services.Agents.OrchestrationPatterns
+  langs:
+  - csharp
+  - vb
+  name: Sequential
+  nameWithType: OrchestrationPatterns.Sequential
+  fullName: UltraGenericSystem.Services.Agents.OrchestrationPatterns.Sequential
+  type: Property
+  source:
+    remote:
+      path: Services/Agents/SKAgentFactory.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Sequential
+    path: ../Services/Agents/SKAgentFactory.cs
+    startLine: 144
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.Agents
+  syntax:
+    content: public SequentialOrchestration Sequential { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.SemanticKernel.Agents.Orchestration.Sequential.SequentialOrchestration
+    content.vb: Public Property Sequential As SequentialOrchestration
+  overload: UltraGenericSystem.Services.Agents.OrchestrationPatterns.Sequential*
+- uid: UltraGenericSystem.Services.Agents.OrchestrationPatterns.Concurrent
+  commentId: P:UltraGenericSystem.Services.Agents.OrchestrationPatterns.Concurrent
+  id: Concurrent
+  parent: UltraGenericSystem.Services.Agents.OrchestrationPatterns
+  langs:
+  - csharp
+  - vb
+  name: Concurrent
+  nameWithType: OrchestrationPatterns.Concurrent
+  fullName: UltraGenericSystem.Services.Agents.OrchestrationPatterns.Concurrent
+  type: Property
+  source:
+    remote:
+      path: Services/Agents/SKAgentFactory.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Concurrent
+    path: ../Services/Agents/SKAgentFactory.cs
+    startLine: 145
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.Agents
+  syntax:
+    content: public ConcurrentOrchestration Concurrent { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.SemanticKernel.Agents.Orchestration.Concurrent.ConcurrentOrchestration
+    content.vb: Public Property Concurrent As ConcurrentOrchestration
+  overload: UltraGenericSystem.Services.Agents.OrchestrationPatterns.Concurrent*
+- uid: UltraGenericSystem.Services.Agents.OrchestrationPatterns.GroupChat
+  commentId: P:UltraGenericSystem.Services.Agents.OrchestrationPatterns.GroupChat
+  id: GroupChat
+  parent: UltraGenericSystem.Services.Agents.OrchestrationPatterns
+  langs:
+  - csharp
+  - vb
+  name: GroupChat
+  nameWithType: OrchestrationPatterns.GroupChat
+  fullName: UltraGenericSystem.Services.Agents.OrchestrationPatterns.GroupChat
+  type: Property
+  source:
+    remote:
+      path: Services/Agents/SKAgentFactory.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GroupChat
+    path: ../Services/Agents/SKAgentFactory.cs
+    startLine: 146
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.Agents
+  syntax:
+    content: public GroupChatOrchestration GroupChat { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.SemanticKernel.Agents.Orchestration.GroupChat.GroupChatOrchestration
+    content.vb: Public Property GroupChat As GroupChatOrchestration
+  overload: UltraGenericSystem.Services.Agents.OrchestrationPatterns.GroupChat*
+- uid: UltraGenericSystem.Services.Agents.OrchestrationPatterns.Handoff
+  commentId: P:UltraGenericSystem.Services.Agents.OrchestrationPatterns.Handoff
+  id: Handoff
+  parent: UltraGenericSystem.Services.Agents.OrchestrationPatterns
+  langs:
+  - csharp
+  - vb
+  name: Handoff
+  nameWithType: OrchestrationPatterns.Handoff
+  fullName: UltraGenericSystem.Services.Agents.OrchestrationPatterns.Handoff
+  type: Property
+  source:
+    remote:
+      path: Services/Agents/SKAgentFactory.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Handoff
+    path: ../Services/Agents/SKAgentFactory.cs
+    startLine: 147
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.Agents
+  syntax:
+    content: public HandoffOrchestration Handoff { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.SemanticKernel.Agents.Orchestration.Handoff.HandoffOrchestration
+    content.vb: Public Property Handoff As HandoffOrchestration
+  overload: UltraGenericSystem.Services.Agents.OrchestrationPatterns.Handoff*
+references:
+- uid: UltraGenericSystem.Services.Agents
+  commentId: N:UltraGenericSystem.Services.Agents
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Services.Agents
+  nameWithType: UltraGenericSystem.Services.Agents
+  fullName: UltraGenericSystem.Services.Agents
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Services
+    name: Services
+    href: UltraGenericSystem.Services.html
+  - name: .
+  - uid: UltraGenericSystem.Services.Agents
+    name: Agents
+    href: UltraGenericSystem.Services.Agents.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Services
+    name: Services
+    href: UltraGenericSystem.Services.html
+  - name: .
+  - uid: UltraGenericSystem.Services.Agents
+    name: Agents
+    href: UltraGenericSystem.Services.Agents.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UltraGenericSystem.Services.Agents.OrchestrationPatterns.Sequential*
+  commentId: Overload:UltraGenericSystem.Services.Agents.OrchestrationPatterns.Sequential
+  href: UltraGenericSystem.Services.Agents.OrchestrationPatterns.html#UltraGenericSystem_Services_Agents_OrchestrationPatterns_Sequential
+  name: Sequential
+  nameWithType: OrchestrationPatterns.Sequential
+  fullName: UltraGenericSystem.Services.Agents.OrchestrationPatterns.Sequential
+- uid: Microsoft.SemanticKernel.Agents.Orchestration.Sequential.SequentialOrchestration
+  commentId: T:Microsoft.SemanticKernel.Agents.Orchestration.Sequential.SequentialOrchestration
+  parent: Microsoft.SemanticKernel.Agents.Orchestration.Sequential
+  isExternal: true
+  name: SequentialOrchestration
+  nameWithType: SequentialOrchestration
+  fullName: Microsoft.SemanticKernel.Agents.Orchestration.Sequential.SequentialOrchestration
+- uid: Microsoft.SemanticKernel.Agents.Orchestration.Sequential
+  commentId: N:Microsoft.SemanticKernel.Agents.Orchestration.Sequential
+  isExternal: true
+  name: Microsoft.SemanticKernel.Agents.Orchestration.Sequential
+  nameWithType: Microsoft.SemanticKernel.Agents.Orchestration.Sequential
+  fullName: Microsoft.SemanticKernel.Agents.Orchestration.Sequential
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel
+    name: SemanticKernel
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel.Agents
+    name: Agents
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel.Agents.Orchestration
+    name: Orchestration
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel.Agents.Orchestration.Sequential
+    name: Sequential
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel
+    name: SemanticKernel
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel.Agents
+    name: Agents
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel.Agents.Orchestration
+    name: Orchestration
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel.Agents.Orchestration.Sequential
+    name: Sequential
+    isExternal: true
+- uid: UltraGenericSystem.Services.Agents.OrchestrationPatterns.Concurrent*
+  commentId: Overload:UltraGenericSystem.Services.Agents.OrchestrationPatterns.Concurrent
+  href: UltraGenericSystem.Services.Agents.OrchestrationPatterns.html#UltraGenericSystem_Services_Agents_OrchestrationPatterns_Concurrent
+  name: Concurrent
+  nameWithType: OrchestrationPatterns.Concurrent
+  fullName: UltraGenericSystem.Services.Agents.OrchestrationPatterns.Concurrent
+- uid: Microsoft.SemanticKernel.Agents.Orchestration.Concurrent.ConcurrentOrchestration
+  commentId: T:Microsoft.SemanticKernel.Agents.Orchestration.Concurrent.ConcurrentOrchestration
+  parent: Microsoft.SemanticKernel.Agents.Orchestration.Concurrent
+  isExternal: true
+  name: ConcurrentOrchestration
+  nameWithType: ConcurrentOrchestration
+  fullName: Microsoft.SemanticKernel.Agents.Orchestration.Concurrent.ConcurrentOrchestration
+- uid: Microsoft.SemanticKernel.Agents.Orchestration.Concurrent
+  commentId: N:Microsoft.SemanticKernel.Agents.Orchestration.Concurrent
+  isExternal: true
+  name: Microsoft.SemanticKernel.Agents.Orchestration.Concurrent
+  nameWithType: Microsoft.SemanticKernel.Agents.Orchestration.Concurrent
+  fullName: Microsoft.SemanticKernel.Agents.Orchestration.Concurrent
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel
+    name: SemanticKernel
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel.Agents
+    name: Agents
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel.Agents.Orchestration
+    name: Orchestration
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel.Agents.Orchestration.Concurrent
+    name: Concurrent
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel
+    name: SemanticKernel
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel.Agents
+    name: Agents
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel.Agents.Orchestration
+    name: Orchestration
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel.Agents.Orchestration.Concurrent
+    name: Concurrent
+    isExternal: true
+- uid: UltraGenericSystem.Services.Agents.OrchestrationPatterns.GroupChat*
+  commentId: Overload:UltraGenericSystem.Services.Agents.OrchestrationPatterns.GroupChat
+  href: UltraGenericSystem.Services.Agents.OrchestrationPatterns.html#UltraGenericSystem_Services_Agents_OrchestrationPatterns_GroupChat
+  name: GroupChat
+  nameWithType: OrchestrationPatterns.GroupChat
+  fullName: UltraGenericSystem.Services.Agents.OrchestrationPatterns.GroupChat
+- uid: Microsoft.SemanticKernel.Agents.Orchestration.GroupChat.GroupChatOrchestration
+  commentId: T:Microsoft.SemanticKernel.Agents.Orchestration.GroupChat.GroupChatOrchestration
+  parent: Microsoft.SemanticKernel.Agents.Orchestration.GroupChat
+  isExternal: true
+  name: GroupChatOrchestration
+  nameWithType: GroupChatOrchestration
+  fullName: Microsoft.SemanticKernel.Agents.Orchestration.GroupChat.GroupChatOrchestration
+- uid: Microsoft.SemanticKernel.Agents.Orchestration.GroupChat
+  commentId: N:Microsoft.SemanticKernel.Agents.Orchestration.GroupChat
+  isExternal: true
+  name: Microsoft.SemanticKernel.Agents.Orchestration.GroupChat
+  nameWithType: Microsoft.SemanticKernel.Agents.Orchestration.GroupChat
+  fullName: Microsoft.SemanticKernel.Agents.Orchestration.GroupChat
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel
+    name: SemanticKernel
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel.Agents
+    name: Agents
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel.Agents.Orchestration
+    name: Orchestration
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel.Agents.Orchestration.GroupChat
+    name: GroupChat
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel
+    name: SemanticKernel
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel.Agents
+    name: Agents
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel.Agents.Orchestration
+    name: Orchestration
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel.Agents.Orchestration.GroupChat
+    name: GroupChat
+    isExternal: true
+- uid: UltraGenericSystem.Services.Agents.OrchestrationPatterns.Handoff*
+  commentId: Overload:UltraGenericSystem.Services.Agents.OrchestrationPatterns.Handoff
+  href: UltraGenericSystem.Services.Agents.OrchestrationPatterns.html#UltraGenericSystem_Services_Agents_OrchestrationPatterns_Handoff
+  name: Handoff
+  nameWithType: OrchestrationPatterns.Handoff
+  fullName: UltraGenericSystem.Services.Agents.OrchestrationPatterns.Handoff
+- uid: Microsoft.SemanticKernel.Agents.Orchestration.Handoff.HandoffOrchestration
+  commentId: T:Microsoft.SemanticKernel.Agents.Orchestration.Handoff.HandoffOrchestration
+  parent: Microsoft.SemanticKernel.Agents.Orchestration.Handoff
+  isExternal: true
+  name: HandoffOrchestration
+  nameWithType: HandoffOrchestration
+  fullName: Microsoft.SemanticKernel.Agents.Orchestration.Handoff.HandoffOrchestration
+- uid: Microsoft.SemanticKernel.Agents.Orchestration.Handoff
+  commentId: N:Microsoft.SemanticKernel.Agents.Orchestration.Handoff
+  isExternal: true
+  name: Microsoft.SemanticKernel.Agents.Orchestration.Handoff
+  nameWithType: Microsoft.SemanticKernel.Agents.Orchestration.Handoff
+  fullName: Microsoft.SemanticKernel.Agents.Orchestration.Handoff
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel
+    name: SemanticKernel
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel.Agents
+    name: Agents
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel.Agents.Orchestration
+    name: Orchestration
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel.Agents.Orchestration.Handoff
+    name: Handoff
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel
+    name: SemanticKernel
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel.Agents
+    name: Agents
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel.Agents.Orchestration
+    name: Orchestration
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel.Agents.Orchestration.Handoff
+    name: Handoff
+    isExternal: true

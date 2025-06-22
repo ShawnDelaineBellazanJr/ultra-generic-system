@@ -1,0 +1,1769 @@
+### YamlMime:ManagedReference
+items:
+- uid: UltraGenericSystem.Services.IAzureAIAgentService
+  commentId: T:UltraGenericSystem.Services.IAzureAIAgentService
+  id: IAzureAIAgentService
+  parent: UltraGenericSystem.Services
+  children:
+  - UltraGenericSystem.Services.IAzureAIAgentService.AnalyzeTextAsync(System.String,System.String,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAzureAIAgentService.CalculateSimilarity(System.Single[],System.Single[])
+  - UltraGenericSystem.Services.IAzureAIAgentService.Capabilities
+  - UltraGenericSystem.Services.IAzureAIAgentService.ClearConversationHistoryAsync(System.String)
+  - UltraGenericSystem.Services.IAzureAIAgentService.Config
+  - UltraGenericSystem.Services.IAzureAIAgentService.ExecuteFunctionCallAsync(UltraGenericSystem.Models.AzureAIFunctionCall,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAzureAIAgentService.FindSimilarTextsAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Double,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAzureAIAgentService.GenerateContentAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAzureAIAgentService.GenerateEmbeddingsAsync(System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAzureAIAgentService.GenerateEmbeddingsAsync(System.String,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAzureAIAgentService.GetConversationHistoryAsync(System.String)
+  - UltraGenericSystem.Services.IAzureAIAgentService.GetHealthStatusAsync
+  - UltraGenericSystem.Services.IAzureAIAgentService.RegisterFunction(UltraGenericSystem.Models.AzureAIFunctionDefinition,System.Func{System.String,System.Threading.Tasks.Task{System.String}})
+  - UltraGenericSystem.Services.IAzureAIAgentService.SaveConversationMessageAsync(System.String,UltraGenericSystem.Models.AzureAIConversationMessage)
+  - UltraGenericSystem.Services.IAzureAIAgentService.SendMessageAsync(UltraGenericSystem.Models.AzureAIAgentRequest,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAzureAIAgentService.SendStreamingMessageAsync(UltraGenericSystem.Models.AzureAIAgentRequest,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAzureAIAgentService.ValidateConfigurationAsync
+  langs:
+  - csharp
+  - vb
+  name: IAzureAIAgentService
+  nameWithType: IAzureAIAgentService
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService
+  type: Interface
+  source:
+    remote:
+      path: Services/IAzureAIAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: IAzureAIAgentService
+    path: ../Services/IAzureAIAgentService.cs
+    startLine: 7
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Interface for Azure AI Agent service
+  example: []
+  syntax:
+    content: public interface IAzureAIAgentService
+    content.vb: Public Interface IAzureAIAgentService
+- uid: UltraGenericSystem.Services.IAzureAIAgentService.Config
+  commentId: P:UltraGenericSystem.Services.IAzureAIAgentService.Config
+  id: Config
+  parent: UltraGenericSystem.Services.IAzureAIAgentService
+  langs:
+  - csharp
+  - vb
+  name: Config
+  nameWithType: IAzureAIAgentService.Config
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService.Config
+  type: Property
+  source:
+    remote:
+      path: Services/IAzureAIAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Config
+    path: ../Services/IAzureAIAgentService.cs
+    startLine: 12
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Gets the Azure AI Agent configuration
+  example: []
+  syntax:
+    content: AzureAIAgentConfig Config { get; }
+    parameters: []
+    return:
+      type: UltraGenericSystem.Models.AzureAIAgentConfig
+    content.vb: ReadOnly Property Config As AzureAIAgentConfig
+  overload: UltraGenericSystem.Services.IAzureAIAgentService.Config*
+- uid: UltraGenericSystem.Services.IAzureAIAgentService.Capabilities
+  commentId: P:UltraGenericSystem.Services.IAzureAIAgentService.Capabilities
+  id: Capabilities
+  parent: UltraGenericSystem.Services.IAzureAIAgentService
+  langs:
+  - csharp
+  - vb
+  name: Capabilities
+  nameWithType: IAzureAIAgentService.Capabilities
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService.Capabilities
+  type: Property
+  source:
+    remote:
+      path: Services/IAzureAIAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Capabilities
+    path: ../Services/IAzureAIAgentService.cs
+    startLine: 17
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Gets the agent capabilities
+  example: []
+  syntax:
+    content: AzureAIAgentCapabilities Capabilities { get; }
+    parameters: []
+    return:
+      type: UltraGenericSystem.Models.AzureAIAgentCapabilities
+    content.vb: ReadOnly Property Capabilities As AzureAIAgentCapabilities
+  overload: UltraGenericSystem.Services.IAzureAIAgentService.Capabilities*
+- uid: UltraGenericSystem.Services.IAzureAIAgentService.SendMessageAsync(UltraGenericSystem.Models.AzureAIAgentRequest,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAzureAIAgentService.SendMessageAsync(UltraGenericSystem.Models.AzureAIAgentRequest,System.Threading.CancellationToken)
+  id: SendMessageAsync(UltraGenericSystem.Models.AzureAIAgentRequest,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAzureAIAgentService
+  langs:
+  - csharp
+  - vb
+  name: SendMessageAsync(AzureAIAgentRequest, CancellationToken)
+  nameWithType: IAzureAIAgentService.SendMessageAsync(AzureAIAgentRequest, CancellationToken)
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService.SendMessageAsync(UltraGenericSystem.Models.AzureAIAgentRequest, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAzureAIAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: SendMessageAsync
+    path: ../Services/IAzureAIAgentService.cs
+    startLine: 25
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Sends a message to the Azure AI Agent
+  example: []
+  syntax:
+    content: Task<AzureAIAgentResponse> SendMessageAsync(AzureAIAgentRequest request, CancellationToken cancellationToken = default)
+    parameters:
+    - id: request
+      type: UltraGenericSystem.Models.AzureAIAgentRequest
+      description: The agent request
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Cancellation token
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.AzureAIAgentResponse}
+      description: The agent response
+    content.vb: Function SendMessageAsync(request As AzureAIAgentRequest, cancellationToken As CancellationToken = Nothing) As Task(Of AzureAIAgentResponse)
+  overload: UltraGenericSystem.Services.IAzureAIAgentService.SendMessageAsync*
+- uid: UltraGenericSystem.Services.IAzureAIAgentService.SendStreamingMessageAsync(UltraGenericSystem.Models.AzureAIAgentRequest,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAzureAIAgentService.SendStreamingMessageAsync(UltraGenericSystem.Models.AzureAIAgentRequest,System.Threading.CancellationToken)
+  id: SendStreamingMessageAsync(UltraGenericSystem.Models.AzureAIAgentRequest,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAzureAIAgentService
+  langs:
+  - csharp
+  - vb
+  name: SendStreamingMessageAsync(AzureAIAgentRequest, CancellationToken)
+  nameWithType: IAzureAIAgentService.SendStreamingMessageAsync(AzureAIAgentRequest, CancellationToken)
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService.SendStreamingMessageAsync(UltraGenericSystem.Models.AzureAIAgentRequest, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAzureAIAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: SendStreamingMessageAsync
+    path: ../Services/IAzureAIAgentService.cs
+    startLine: 33
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Sends a streaming message to the Azure AI Agent
+  example: []
+  syntax:
+    content: IAsyncEnumerable<AzureAIStreamingResponse> SendStreamingMessageAsync(AzureAIAgentRequest request, CancellationToken cancellationToken = default)
+    parameters:
+    - id: request
+      type: UltraGenericSystem.Models.AzureAIAgentRequest
+      description: The agent request
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Cancellation token
+    return:
+      type: System.Collections.Generic.IAsyncEnumerable{UltraGenericSystem.Models.AzureAIStreamingResponse}
+      description: Stream of response chunks
+    content.vb: Function SendStreamingMessageAsync(request As AzureAIAgentRequest, cancellationToken As CancellationToken = Nothing) As IAsyncEnumerable(Of AzureAIStreamingResponse)
+  overload: UltraGenericSystem.Services.IAzureAIAgentService.SendStreamingMessageAsync*
+- uid: UltraGenericSystem.Services.IAzureAIAgentService.GenerateEmbeddingsAsync(System.String,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAzureAIAgentService.GenerateEmbeddingsAsync(System.String,System.Threading.CancellationToken)
+  id: GenerateEmbeddingsAsync(System.String,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAzureAIAgentService
+  langs:
+  - csharp
+  - vb
+  name: GenerateEmbeddingsAsync(string, CancellationToken)
+  nameWithType: IAzureAIAgentService.GenerateEmbeddingsAsync(string, CancellationToken)
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService.GenerateEmbeddingsAsync(string, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAzureAIAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GenerateEmbeddingsAsync
+    path: ../Services/IAzureAIAgentService.cs
+    startLine: 41
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Generates embeddings for text
+  example: []
+  syntax:
+    content: Task<float[]> GenerateEmbeddingsAsync(string text, CancellationToken cancellationToken = default)
+    parameters:
+    - id: text
+      type: System.String
+      description: Text to embed
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Cancellation token
+    return:
+      type: System.Threading.Tasks.Task{System.Single[]}
+      description: Embedding vector
+    content.vb: Function GenerateEmbeddingsAsync(text As String, cancellationToken As CancellationToken = Nothing) As Task(Of Single())
+  overload: UltraGenericSystem.Services.IAzureAIAgentService.GenerateEmbeddingsAsync*
+  nameWithType.vb: IAzureAIAgentService.GenerateEmbeddingsAsync(String, CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IAzureAIAgentService.GenerateEmbeddingsAsync(String, System.Threading.CancellationToken)
+  name.vb: GenerateEmbeddingsAsync(String, CancellationToken)
+- uid: UltraGenericSystem.Services.IAzureAIAgentService.GenerateEmbeddingsAsync(System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAzureAIAgentService.GenerateEmbeddingsAsync(System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)
+  id: GenerateEmbeddingsAsync(System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAzureAIAgentService
+  langs:
+  - csharp
+  - vb
+  name: GenerateEmbeddingsAsync(IEnumerable<string>, CancellationToken)
+  nameWithType: IAzureAIAgentService.GenerateEmbeddingsAsync(IEnumerable<string>, CancellationToken)
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService.GenerateEmbeddingsAsync(System.Collections.Generic.IEnumerable<string>, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAzureAIAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GenerateEmbeddingsAsync
+    path: ../Services/IAzureAIAgentService.cs
+    startLine: 49
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Generates embeddings for multiple texts
+  example: []
+  syntax:
+    content: Task<List<float[]>> GenerateEmbeddingsAsync(IEnumerable<string> texts, CancellationToken cancellationToken = default)
+    parameters:
+    - id: texts
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: Texts to embed
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Cancellation token
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{System.Single[]}}
+      description: List of embedding vectors
+    content.vb: Function GenerateEmbeddingsAsync(texts As IEnumerable(Of String), cancellationToken As CancellationToken = Nothing) As Task(Of List(Of Single()))
+  overload: UltraGenericSystem.Services.IAzureAIAgentService.GenerateEmbeddingsAsync*
+  nameWithType.vb: IAzureAIAgentService.GenerateEmbeddingsAsync(IEnumerable(Of String), CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IAzureAIAgentService.GenerateEmbeddingsAsync(System.Collections.Generic.IEnumerable(Of String), System.Threading.CancellationToken)
+  name.vb: GenerateEmbeddingsAsync(IEnumerable(Of String), CancellationToken)
+- uid: UltraGenericSystem.Services.IAzureAIAgentService.CalculateSimilarity(System.Single[],System.Single[])
+  commentId: M:UltraGenericSystem.Services.IAzureAIAgentService.CalculateSimilarity(System.Single[],System.Single[])
+  id: CalculateSimilarity(System.Single[],System.Single[])
+  parent: UltraGenericSystem.Services.IAzureAIAgentService
+  langs:
+  - csharp
+  - vb
+  name: CalculateSimilarity(float[], float[])
+  nameWithType: IAzureAIAgentService.CalculateSimilarity(float[], float[])
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService.CalculateSimilarity(float[], float[])
+  type: Method
+  source:
+    remote:
+      path: Services/IAzureAIAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: CalculateSimilarity
+    path: ../Services/IAzureAIAgentService.cs
+    startLine: 57
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Calculates cosine similarity between two embeddings
+  example: []
+  syntax:
+    content: double CalculateSimilarity(float[] embedding1, float[] embedding2)
+    parameters:
+    - id: embedding1
+      type: System.Single[]
+      description: First embedding
+    - id: embedding2
+      type: System.Single[]
+      description: Second embedding
+    return:
+      type: System.Double
+      description: Similarity score
+    content.vb: Function CalculateSimilarity(embedding1 As Single(), embedding2 As Single()) As Double
+  overload: UltraGenericSystem.Services.IAzureAIAgentService.CalculateSimilarity*
+  nameWithType.vb: IAzureAIAgentService.CalculateSimilarity(Single(), Single())
+  fullName.vb: UltraGenericSystem.Services.IAzureAIAgentService.CalculateSimilarity(Single(), Single())
+  name.vb: CalculateSimilarity(Single(), Single())
+- uid: UltraGenericSystem.Services.IAzureAIAgentService.FindSimilarTextsAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Double,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAzureAIAgentService.FindSimilarTextsAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Double,System.Threading.CancellationToken)
+  id: FindSimilarTextsAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Double,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAzureAIAgentService
+  langs:
+  - csharp
+  - vb
+  name: FindSimilarTextsAsync(string, IEnumerable<string>, double, CancellationToken)
+  nameWithType: IAzureAIAgentService.FindSimilarTextsAsync(string, IEnumerable<string>, double, CancellationToken)
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService.FindSimilarTextsAsync(string, System.Collections.Generic.IEnumerable<string>, double, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAzureAIAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: FindSimilarTextsAsync
+    path: ../Services/IAzureAIAgentService.cs
+    startLine: 67
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Finds similar texts using embeddings
+  example: []
+  syntax:
+    content: Task<List<(string Text, double Score)>> FindSimilarTextsAsync(string queryText, IEnumerable<string> candidateTexts, double threshold = 0.8, CancellationToken cancellationToken = default)
+    parameters:
+    - id: queryText
+      type: System.String
+      description: Query text
+    - id: candidateTexts
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: Candidate texts
+    - id: threshold
+      type: System.Double
+      description: Similarity threshold
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Cancellation token
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{System.ValueTuple{System.String,System.Double}}}
+      description: Similar texts with scores
+    content.vb: Function FindSimilarTextsAsync(queryText As String, candidateTexts As IEnumerable(Of String), threshold As Double = 0.8, cancellationToken As CancellationToken = Nothing) As Task(Of List(Of (Text As String, Score As Double)))
+  overload: UltraGenericSystem.Services.IAzureAIAgentService.FindSimilarTextsAsync*
+  nameWithType.vb: IAzureAIAgentService.FindSimilarTextsAsync(String, IEnumerable(Of String), Double, CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IAzureAIAgentService.FindSimilarTextsAsync(String, System.Collections.Generic.IEnumerable(Of String), Double, System.Threading.CancellationToken)
+  name.vb: FindSimilarTextsAsync(String, IEnumerable(Of String), Double, CancellationToken)
+- uid: UltraGenericSystem.Services.IAzureAIAgentService.ExecuteFunctionCallAsync(UltraGenericSystem.Models.AzureAIFunctionCall,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAzureAIAgentService.ExecuteFunctionCallAsync(UltraGenericSystem.Models.AzureAIFunctionCall,System.Threading.CancellationToken)
+  id: ExecuteFunctionCallAsync(UltraGenericSystem.Models.AzureAIFunctionCall,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAzureAIAgentService
+  langs:
+  - csharp
+  - vb
+  name: ExecuteFunctionCallAsync(AzureAIFunctionCall, CancellationToken)
+  nameWithType: IAzureAIAgentService.ExecuteFunctionCallAsync(AzureAIFunctionCall, CancellationToken)
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService.ExecuteFunctionCallAsync(UltraGenericSystem.Models.AzureAIFunctionCall, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAzureAIAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: ExecuteFunctionCallAsync
+    path: ../Services/IAzureAIAgentService.cs
+    startLine: 75
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Executes a function call
+  example: []
+  syntax:
+    content: Task<AzureAIFunctionCallResult> ExecuteFunctionCallAsync(AzureAIFunctionCall functionCall, CancellationToken cancellationToken = default)
+    parameters:
+    - id: functionCall
+      type: UltraGenericSystem.Models.AzureAIFunctionCall
+      description: Function call to execute
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Cancellation token
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.AzureAIFunctionCallResult}
+      description: Function call result
+    content.vb: Function ExecuteFunctionCallAsync(functionCall As AzureAIFunctionCall, cancellationToken As CancellationToken = Nothing) As Task(Of AzureAIFunctionCallResult)
+  overload: UltraGenericSystem.Services.IAzureAIAgentService.ExecuteFunctionCallAsync*
+- uid: UltraGenericSystem.Services.IAzureAIAgentService.RegisterFunction(UltraGenericSystem.Models.AzureAIFunctionDefinition,System.Func{System.String,System.Threading.Tasks.Task{System.String}})
+  commentId: M:UltraGenericSystem.Services.IAzureAIAgentService.RegisterFunction(UltraGenericSystem.Models.AzureAIFunctionDefinition,System.Func{System.String,System.Threading.Tasks.Task{System.String}})
+  id: RegisterFunction(UltraGenericSystem.Models.AzureAIFunctionDefinition,System.Func{System.String,System.Threading.Tasks.Task{System.String}})
+  parent: UltraGenericSystem.Services.IAzureAIAgentService
+  langs:
+  - csharp
+  - vb
+  name: RegisterFunction(AzureAIFunctionDefinition, Func<string, Task<string>>)
+  nameWithType: IAzureAIAgentService.RegisterFunction(AzureAIFunctionDefinition, Func<string, Task<string>>)
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService.RegisterFunction(UltraGenericSystem.Models.AzureAIFunctionDefinition, System.Func<string, System.Threading.Tasks.Task<string>>)
+  type: Method
+  source:
+    remote:
+      path: Services/IAzureAIAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: RegisterFunction
+    path: ../Services/IAzureAIAgentService.cs
+    startLine: 82
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Registers a function for the agent
+  example: []
+  syntax:
+    content: void RegisterFunction(AzureAIFunctionDefinition functionDefinition, Func<string, Task<string>> function)
+    parameters:
+    - id: functionDefinition
+      type: UltraGenericSystem.Models.AzureAIFunctionDefinition
+      description: Function definition
+    - id: function
+      type: System.Func{System.String,System.Threading.Tasks.Task{System.String}}
+      description: Function implementation
+    content.vb: Sub RegisterFunction(functionDefinition As AzureAIFunctionDefinition, [function] As Func(Of String, Task(Of String)))
+  overload: UltraGenericSystem.Services.IAzureAIAgentService.RegisterFunction*
+  nameWithType.vb: IAzureAIAgentService.RegisterFunction(AzureAIFunctionDefinition, Func(Of String, Task(Of String)))
+  fullName.vb: UltraGenericSystem.Services.IAzureAIAgentService.RegisterFunction(UltraGenericSystem.Models.AzureAIFunctionDefinition, System.Func(Of String, System.Threading.Tasks.Task(Of String)))
+  name.vb: RegisterFunction(AzureAIFunctionDefinition, Func(Of String, Task(Of String)))
+- uid: UltraGenericSystem.Services.IAzureAIAgentService.GetConversationHistoryAsync(System.String)
+  commentId: M:UltraGenericSystem.Services.IAzureAIAgentService.GetConversationHistoryAsync(System.String)
+  id: GetConversationHistoryAsync(System.String)
+  parent: UltraGenericSystem.Services.IAzureAIAgentService
+  langs:
+  - csharp
+  - vb
+  name: GetConversationHistoryAsync(string)
+  nameWithType: IAzureAIAgentService.GetConversationHistoryAsync(string)
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService.GetConversationHistoryAsync(string)
+  type: Method
+  source:
+    remote:
+      path: Services/IAzureAIAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetConversationHistoryAsync
+    path: ../Services/IAzureAIAgentService.cs
+    startLine: 89
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Gets conversation history for a session
+  example: []
+  syntax:
+    content: Task<List<AzureAIConversationMessage>> GetConversationHistoryAsync(string sessionId)
+    parameters:
+    - id: sessionId
+      type: System.String
+      description: Session ID
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{UltraGenericSystem.Models.AzureAIConversationMessage}}
+      description: Conversation history
+    content.vb: Function GetConversationHistoryAsync(sessionId As String) As Task(Of List(Of AzureAIConversationMessage))
+  overload: UltraGenericSystem.Services.IAzureAIAgentService.GetConversationHistoryAsync*
+  nameWithType.vb: IAzureAIAgentService.GetConversationHistoryAsync(String)
+  fullName.vb: UltraGenericSystem.Services.IAzureAIAgentService.GetConversationHistoryAsync(String)
+  name.vb: GetConversationHistoryAsync(String)
+- uid: UltraGenericSystem.Services.IAzureAIAgentService.SaveConversationMessageAsync(System.String,UltraGenericSystem.Models.AzureAIConversationMessage)
+  commentId: M:UltraGenericSystem.Services.IAzureAIAgentService.SaveConversationMessageAsync(System.String,UltraGenericSystem.Models.AzureAIConversationMessage)
+  id: SaveConversationMessageAsync(System.String,UltraGenericSystem.Models.AzureAIConversationMessage)
+  parent: UltraGenericSystem.Services.IAzureAIAgentService
+  langs:
+  - csharp
+  - vb
+  name: SaveConversationMessageAsync(string, AzureAIConversationMessage)
+  nameWithType: IAzureAIAgentService.SaveConversationMessageAsync(string, AzureAIConversationMessage)
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService.SaveConversationMessageAsync(string, UltraGenericSystem.Models.AzureAIConversationMessage)
+  type: Method
+  source:
+    remote:
+      path: Services/IAzureAIAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: SaveConversationMessageAsync
+    path: ../Services/IAzureAIAgentService.cs
+    startLine: 96
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Saves conversation message
+  example: []
+  syntax:
+    content: Task SaveConversationMessageAsync(string sessionId, AzureAIConversationMessage message)
+    parameters:
+    - id: sessionId
+      type: System.String
+      description: Session ID
+    - id: message
+      type: UltraGenericSystem.Models.AzureAIConversationMessage
+      description: Message to save
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function SaveConversationMessageAsync(sessionId As String, message As AzureAIConversationMessage) As Task
+  overload: UltraGenericSystem.Services.IAzureAIAgentService.SaveConversationMessageAsync*
+  nameWithType.vb: IAzureAIAgentService.SaveConversationMessageAsync(String, AzureAIConversationMessage)
+  fullName.vb: UltraGenericSystem.Services.IAzureAIAgentService.SaveConversationMessageAsync(String, UltraGenericSystem.Models.AzureAIConversationMessage)
+  name.vb: SaveConversationMessageAsync(String, AzureAIConversationMessage)
+- uid: UltraGenericSystem.Services.IAzureAIAgentService.ClearConversationHistoryAsync(System.String)
+  commentId: M:UltraGenericSystem.Services.IAzureAIAgentService.ClearConversationHistoryAsync(System.String)
+  id: ClearConversationHistoryAsync(System.String)
+  parent: UltraGenericSystem.Services.IAzureAIAgentService
+  langs:
+  - csharp
+  - vb
+  name: ClearConversationHistoryAsync(string)
+  nameWithType: IAzureAIAgentService.ClearConversationHistoryAsync(string)
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService.ClearConversationHistoryAsync(string)
+  type: Method
+  source:
+    remote:
+      path: Services/IAzureAIAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: ClearConversationHistoryAsync
+    path: ../Services/IAzureAIAgentService.cs
+    startLine: 102
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Clears conversation history for a session
+  example: []
+  syntax:
+    content: Task ClearConversationHistoryAsync(string sessionId)
+    parameters:
+    - id: sessionId
+      type: System.String
+      description: Session ID
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function ClearConversationHistoryAsync(sessionId As String) As Task
+  overload: UltraGenericSystem.Services.IAzureAIAgentService.ClearConversationHistoryAsync*
+  nameWithType.vb: IAzureAIAgentService.ClearConversationHistoryAsync(String)
+  fullName.vb: UltraGenericSystem.Services.IAzureAIAgentService.ClearConversationHistoryAsync(String)
+  name.vb: ClearConversationHistoryAsync(String)
+- uid: UltraGenericSystem.Services.IAzureAIAgentService.AnalyzeTextAsync(System.String,System.String,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAzureAIAgentService.AnalyzeTextAsync(System.String,System.String,System.Threading.CancellationToken)
+  id: AnalyzeTextAsync(System.String,System.String,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAzureAIAgentService
+  langs:
+  - csharp
+  - vb
+  name: AnalyzeTextAsync(string, string, CancellationToken)
+  nameWithType: IAzureAIAgentService.AnalyzeTextAsync(string, string, CancellationToken)
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService.AnalyzeTextAsync(string, string, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAzureAIAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: AnalyzeTextAsync
+    path: ../Services/IAzureAIAgentService.cs
+    startLine: 111
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Analyzes text using the agent
+  example: []
+  syntax:
+    content: Task<string> AnalyzeTextAsync(string text, string analysisType, CancellationToken cancellationToken = default)
+    parameters:
+    - id: text
+      type: System.String
+      description: Text to analyze
+    - id: analysisType
+      type: System.String
+      description: Type of analysis
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Cancellation token
+    return:
+      type: System.Threading.Tasks.Task{System.String}
+      description: Analysis result
+    content.vb: Function AnalyzeTextAsync(text As String, analysisType As String, cancellationToken As CancellationToken = Nothing) As Task(Of String)
+  overload: UltraGenericSystem.Services.IAzureAIAgentService.AnalyzeTextAsync*
+  nameWithType.vb: IAzureAIAgentService.AnalyzeTextAsync(String, String, CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IAzureAIAgentService.AnalyzeTextAsync(String, String, System.Threading.CancellationToken)
+  name.vb: AnalyzeTextAsync(String, String, CancellationToken)
+- uid: UltraGenericSystem.Services.IAzureAIAgentService.GenerateContentAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAzureAIAgentService.GenerateContentAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Threading.CancellationToken)
+  id: GenerateContentAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAzureAIAgentService
+  langs:
+  - csharp
+  - vb
+  name: GenerateContentAsync(string, Dictionary<string, object>, CancellationToken)
+  nameWithType: IAzureAIAgentService.GenerateContentAsync(string, Dictionary<string, object>, CancellationToken)
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService.GenerateContentAsync(string, System.Collections.Generic.Dictionary<string, object>, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAzureAIAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GenerateContentAsync
+    path: ../Services/IAzureAIAgentService.cs
+    startLine: 120
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Generates content using the agent
+  example: []
+  syntax:
+    content: Task<string> GenerateContentAsync(string prompt, Dictionary<string, object> parameters, CancellationToken cancellationToken = default)
+    parameters:
+    - id: prompt
+      type: System.String
+      description: Generation prompt
+    - id: parameters
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+      description: Generation parameters
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Cancellation token
+    return:
+      type: System.Threading.Tasks.Task{System.String}
+      description: Generated content
+    content.vb: Function GenerateContentAsync(prompt As String, parameters As Dictionary(Of String, Object), cancellationToken As CancellationToken = Nothing) As Task(Of String)
+  overload: UltraGenericSystem.Services.IAzureAIAgentService.GenerateContentAsync*
+  nameWithType.vb: IAzureAIAgentService.GenerateContentAsync(String, Dictionary(Of String, Object), CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IAzureAIAgentService.GenerateContentAsync(String, System.Collections.Generic.Dictionary(Of String, Object), System.Threading.CancellationToken)
+  name.vb: GenerateContentAsync(String, Dictionary(Of String, Object), CancellationToken)
+- uid: UltraGenericSystem.Services.IAzureAIAgentService.ValidateConfigurationAsync
+  commentId: M:UltraGenericSystem.Services.IAzureAIAgentService.ValidateConfigurationAsync
+  id: ValidateConfigurationAsync
+  parent: UltraGenericSystem.Services.IAzureAIAgentService
+  langs:
+  - csharp
+  - vb
+  name: ValidateConfigurationAsync()
+  nameWithType: IAzureAIAgentService.ValidateConfigurationAsync()
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService.ValidateConfigurationAsync()
+  type: Method
+  source:
+    remote:
+      path: Services/IAzureAIAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: ValidateConfigurationAsync
+    path: ../Services/IAzureAIAgentService.cs
+    startLine: 126
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Validates the agent configuration
+  example: []
+  syntax:
+    content: Task<bool> ValidateConfigurationAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+      description: Validation result
+    content.vb: Function ValidateConfigurationAsync() As Task(Of Boolean)
+  overload: UltraGenericSystem.Services.IAzureAIAgentService.ValidateConfigurationAsync*
+- uid: UltraGenericSystem.Services.IAzureAIAgentService.GetHealthStatusAsync
+  commentId: M:UltraGenericSystem.Services.IAzureAIAgentService.GetHealthStatusAsync
+  id: GetHealthStatusAsync
+  parent: UltraGenericSystem.Services.IAzureAIAgentService
+  langs:
+  - csharp
+  - vb
+  name: GetHealthStatusAsync()
+  nameWithType: IAzureAIAgentService.GetHealthStatusAsync()
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService.GetHealthStatusAsync()
+  type: Method
+  source:
+    remote:
+      path: Services/IAzureAIAgentService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetHealthStatusAsync
+    path: ../Services/IAzureAIAgentService.cs
+    startLine: 132
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Gets agent health status
+  example: []
+  syntax:
+    content: Task<AzureAIAgentHealthStatus> GetHealthStatusAsync()
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Services.AzureAIAgentHealthStatus}
+      description: Health status
+    content.vb: Function GetHealthStatusAsync() As Task(Of AzureAIAgentHealthStatus)
+  overload: UltraGenericSystem.Services.IAzureAIAgentService.GetHealthStatusAsync*
+references:
+- uid: UltraGenericSystem.Services
+  commentId: N:UltraGenericSystem.Services
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Services
+  nameWithType: UltraGenericSystem.Services
+  fullName: UltraGenericSystem.Services
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Services
+    name: Services
+    href: UltraGenericSystem.Services.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Services
+    name: Services
+    href: UltraGenericSystem.Services.html
+- uid: UltraGenericSystem.Services.IAzureAIAgentService.Config*
+  commentId: Overload:UltraGenericSystem.Services.IAzureAIAgentService.Config
+  href: UltraGenericSystem.Services.IAzureAIAgentService.html#UltraGenericSystem_Services_IAzureAIAgentService_Config
+  name: Config
+  nameWithType: IAzureAIAgentService.Config
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService.Config
+- uid: UltraGenericSystem.Models.AzureAIAgentConfig
+  commentId: T:UltraGenericSystem.Models.AzureAIAgentConfig
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.AzureAIAgentConfig.html
+  name: AzureAIAgentConfig
+  nameWithType: AzureAIAgentConfig
+  fullName: UltraGenericSystem.Models.AzureAIAgentConfig
+- uid: UltraGenericSystem.Models
+  commentId: N:UltraGenericSystem.Models
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Models
+  nameWithType: UltraGenericSystem.Models
+  fullName: UltraGenericSystem.Models
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+- uid: UltraGenericSystem.Services.IAzureAIAgentService.Capabilities*
+  commentId: Overload:UltraGenericSystem.Services.IAzureAIAgentService.Capabilities
+  href: UltraGenericSystem.Services.IAzureAIAgentService.html#UltraGenericSystem_Services_IAzureAIAgentService_Capabilities
+  name: Capabilities
+  nameWithType: IAzureAIAgentService.Capabilities
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService.Capabilities
+- uid: UltraGenericSystem.Models.AzureAIAgentCapabilities
+  commentId: T:UltraGenericSystem.Models.AzureAIAgentCapabilities
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.AzureAIAgentCapabilities.html
+  name: AzureAIAgentCapabilities
+  nameWithType: AzureAIAgentCapabilities
+  fullName: UltraGenericSystem.Models.AzureAIAgentCapabilities
+- uid: UltraGenericSystem.Services.IAzureAIAgentService.SendMessageAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAzureAIAgentService.SendMessageAsync
+  href: UltraGenericSystem.Services.IAzureAIAgentService.html#UltraGenericSystem_Services_IAzureAIAgentService_SendMessageAsync_UltraGenericSystem_Models_AzureAIAgentRequest_System_Threading_CancellationToken_
+  name: SendMessageAsync
+  nameWithType: IAzureAIAgentService.SendMessageAsync
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService.SendMessageAsync
+- uid: UltraGenericSystem.Models.AzureAIAgentRequest
+  commentId: T:UltraGenericSystem.Models.AzureAIAgentRequest
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.AzureAIAgentRequest.html
+  name: AzureAIAgentRequest
+  nameWithType: AzureAIAgentRequest
+  fullName: UltraGenericSystem.Models.AzureAIAgentRequest
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task{UltraGenericSystem.Models.AzureAIAgentResponse}
+  commentId: T:System.Threading.Tasks.Task{UltraGenericSystem.Models.AzureAIAgentResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<AzureAIAgentResponse>
+  nameWithType: Task<AzureAIAgentResponse>
+  fullName: System.Threading.Tasks.Task<UltraGenericSystem.Models.AzureAIAgentResponse>
+  nameWithType.vb: Task(Of AzureAIAgentResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of UltraGenericSystem.Models.AzureAIAgentResponse)
+  name.vb: Task(Of AzureAIAgentResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: UltraGenericSystem.Models.AzureAIAgentResponse
+    name: AzureAIAgentResponse
+    href: UltraGenericSystem.Models.AzureAIAgentResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.AzureAIAgentResponse
+    name: AzureAIAgentResponse
+    href: UltraGenericSystem.Models.AzureAIAgentResponse.html
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: UltraGenericSystem.Services.IAzureAIAgentService.SendStreamingMessageAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAzureAIAgentService.SendStreamingMessageAsync
+  href: UltraGenericSystem.Services.IAzureAIAgentService.html#UltraGenericSystem_Services_IAzureAIAgentService_SendStreamingMessageAsync_UltraGenericSystem_Models_AzureAIAgentRequest_System_Threading_CancellationToken_
+  name: SendStreamingMessageAsync
+  nameWithType: IAzureAIAgentService.SendStreamingMessageAsync
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService.SendStreamingMessageAsync
+- uid: System.Collections.Generic.IAsyncEnumerable{UltraGenericSystem.Models.AzureAIStreamingResponse}
+  commentId: T:System.Collections.Generic.IAsyncEnumerable{UltraGenericSystem.Models.AzureAIStreamingResponse}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IAsyncEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1
+  name: IAsyncEnumerable<AzureAIStreamingResponse>
+  nameWithType: IAsyncEnumerable<AzureAIStreamingResponse>
+  fullName: System.Collections.Generic.IAsyncEnumerable<UltraGenericSystem.Models.AzureAIStreamingResponse>
+  nameWithType.vb: IAsyncEnumerable(Of AzureAIStreamingResponse)
+  fullName.vb: System.Collections.Generic.IAsyncEnumerable(Of UltraGenericSystem.Models.AzureAIStreamingResponse)
+  name.vb: IAsyncEnumerable(Of AzureAIStreamingResponse)
+  spec.csharp:
+  - uid: System.Collections.Generic.IAsyncEnumerable`1
+    name: IAsyncEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1
+  - name: <
+  - uid: UltraGenericSystem.Models.AzureAIStreamingResponse
+    name: AzureAIStreamingResponse
+    href: UltraGenericSystem.Models.AzureAIStreamingResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IAsyncEnumerable`1
+    name: IAsyncEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.AzureAIStreamingResponse
+    name: AzureAIStreamingResponse
+    href: UltraGenericSystem.Models.AzureAIStreamingResponse.html
+  - name: )
+- uid: System.Collections.Generic.IAsyncEnumerable`1
+  commentId: T:System.Collections.Generic.IAsyncEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1
+  name: IAsyncEnumerable<T>
+  nameWithType: IAsyncEnumerable<T>
+  fullName: System.Collections.Generic.IAsyncEnumerable<T>
+  nameWithType.vb: IAsyncEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IAsyncEnumerable(Of T)
+  name.vb: IAsyncEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IAsyncEnumerable`1
+    name: IAsyncEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IAsyncEnumerable`1
+    name: IAsyncEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: UltraGenericSystem.Services.IAzureAIAgentService.GenerateEmbeddingsAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAzureAIAgentService.GenerateEmbeddingsAsync
+  href: UltraGenericSystem.Services.IAzureAIAgentService.html#UltraGenericSystem_Services_IAzureAIAgentService_GenerateEmbeddingsAsync_System_String_System_Threading_CancellationToken_
+  name: GenerateEmbeddingsAsync
+  nameWithType: IAzureAIAgentService.GenerateEmbeddingsAsync
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService.GenerateEmbeddingsAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task{System.Single[]}
+  commentId: T:System.Threading.Tasks.Task{System.Single[]}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<float[]>
+  nameWithType: Task<float[]>
+  fullName: System.Threading.Tasks.Task<float[]>
+  nameWithType.vb: Task(Of Single())
+  fullName.vb: System.Threading.Tasks.Task(Of Single())
+  name.vb: Task(Of Single())
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '['
+  - name: ']'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: (
+  - name: )
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<string>
+  nameWithType: IEnumerable<string>
+  fullName: System.Collections.Generic.IEnumerable<string>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{System.Single[]}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.List{System.Single[]}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<List<float[]>>
+  nameWithType: Task<List<float[]>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<float[]>>
+  nameWithType.vb: Task(Of List(Of Single()))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of Single()))
+  name.vb: Task(Of List(Of Single()))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '['
+  - name: ']'
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: (
+  - name: )
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UltraGenericSystem.Services.IAzureAIAgentService.CalculateSimilarity*
+  commentId: Overload:UltraGenericSystem.Services.IAzureAIAgentService.CalculateSimilarity
+  href: UltraGenericSystem.Services.IAzureAIAgentService.html#UltraGenericSystem_Services_IAzureAIAgentService_CalculateSimilarity_System_Single___System_Single___
+  name: CalculateSimilarity
+  nameWithType: IAzureAIAgentService.CalculateSimilarity
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService.CalculateSimilarity
+- uid: System.Single[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float[]
+  nameWithType: float[]
+  fullName: float[]
+  nameWithType.vb: Single()
+  fullName.vb: Single()
+  name.vb: Single()
+  spec.csharp:
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: (
+  - name: )
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: UltraGenericSystem.Services.IAzureAIAgentService.FindSimilarTextsAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAzureAIAgentService.FindSimilarTextsAsync
+  href: UltraGenericSystem.Services.IAzureAIAgentService.html#UltraGenericSystem_Services_IAzureAIAgentService_FindSimilarTextsAsync_System_String_System_Collections_Generic_IEnumerable_System_String__System_Double_System_Threading_CancellationToken_
+  name: FindSimilarTextsAsync
+  nameWithType: IAzureAIAgentService.FindSimilarTextsAsync
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService.FindSimilarTextsAsync
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{System.ValueTuple{System.String,System.Double}}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.List{System.ValueTuple{System.String,System.Double}}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<List<(string Text, double Score)>>
+  nameWithType: Task<List<(string Text, double Score)>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<(string Text, double Score)>>
+  nameWithType.vb: Task(Of List(Of (Text As String, Score As Double)))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of (Text As String, Score As Double)))
+  name.vb: Task(Of List(Of (Text As String, Score As Double)))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.Double}.Text
+    name: Text
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.double-.text
+  - name: ','
+  - name: " "
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.Double}.Score
+    name: Score
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.double-.score
+  - name: )
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: (
+  - uid: System.ValueTuple{System.String,System.Double}.Text
+    name: Text
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.double-.text
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.Double}.Score
+    name: Score
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.double-.score
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  - name: )
+  - name: )
+- uid: UltraGenericSystem.Services.IAzureAIAgentService.ExecuteFunctionCallAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAzureAIAgentService.ExecuteFunctionCallAsync
+  href: UltraGenericSystem.Services.IAzureAIAgentService.html#UltraGenericSystem_Services_IAzureAIAgentService_ExecuteFunctionCallAsync_UltraGenericSystem_Models_AzureAIFunctionCall_System_Threading_CancellationToken_
+  name: ExecuteFunctionCallAsync
+  nameWithType: IAzureAIAgentService.ExecuteFunctionCallAsync
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService.ExecuteFunctionCallAsync
+- uid: UltraGenericSystem.Models.AzureAIFunctionCall
+  commentId: T:UltraGenericSystem.Models.AzureAIFunctionCall
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.AzureAIFunctionCall.html
+  name: AzureAIFunctionCall
+  nameWithType: AzureAIFunctionCall
+  fullName: UltraGenericSystem.Models.AzureAIFunctionCall
+- uid: System.Threading.Tasks.Task{UltraGenericSystem.Models.AzureAIFunctionCallResult}
+  commentId: T:System.Threading.Tasks.Task{UltraGenericSystem.Models.AzureAIFunctionCallResult}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<AzureAIFunctionCallResult>
+  nameWithType: Task<AzureAIFunctionCallResult>
+  fullName: System.Threading.Tasks.Task<UltraGenericSystem.Models.AzureAIFunctionCallResult>
+  nameWithType.vb: Task(Of AzureAIFunctionCallResult)
+  fullName.vb: System.Threading.Tasks.Task(Of UltraGenericSystem.Models.AzureAIFunctionCallResult)
+  name.vb: Task(Of AzureAIFunctionCallResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: UltraGenericSystem.Models.AzureAIFunctionCallResult
+    name: AzureAIFunctionCallResult
+    href: UltraGenericSystem.Models.AzureAIFunctionCallResult.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.AzureAIFunctionCallResult
+    name: AzureAIFunctionCallResult
+    href: UltraGenericSystem.Models.AzureAIFunctionCallResult.html
+  - name: )
+- uid: UltraGenericSystem.Services.IAzureAIAgentService.RegisterFunction*
+  commentId: Overload:UltraGenericSystem.Services.IAzureAIAgentService.RegisterFunction
+  href: UltraGenericSystem.Services.IAzureAIAgentService.html#UltraGenericSystem_Services_IAzureAIAgentService_RegisterFunction_UltraGenericSystem_Models_AzureAIFunctionDefinition_System_Func_System_String_System_Threading_Tasks_Task_System_String___
+  name: RegisterFunction
+  nameWithType: IAzureAIAgentService.RegisterFunction
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService.RegisterFunction
+- uid: UltraGenericSystem.Models.AzureAIFunctionDefinition
+  commentId: T:UltraGenericSystem.Models.AzureAIFunctionDefinition
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.AzureAIFunctionDefinition.html
+  name: AzureAIFunctionDefinition
+  nameWithType: AzureAIFunctionDefinition
+  fullName: UltraGenericSystem.Models.AzureAIFunctionDefinition
+- uid: System.Func{System.String,System.Threading.Tasks.Task{System.String}}
+  commentId: T:System.Func{System.String,System.Threading.Tasks.Task{System.String}}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<string, Task<string>>
+  nameWithType: Func<string, Task<string>>
+  fullName: System.Func<string, System.Threading.Tasks.Task<string>>
+  nameWithType.vb: Func(Of String, Task(Of String))
+  fullName.vb: System.Func(Of String, System.Threading.Tasks.Task(Of String))
+  name.vb: Func(Of String, Task(Of String))
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: UltraGenericSystem.Services.IAzureAIAgentService.GetConversationHistoryAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAzureAIAgentService.GetConversationHistoryAsync
+  href: UltraGenericSystem.Services.IAzureAIAgentService.html#UltraGenericSystem_Services_IAzureAIAgentService_GetConversationHistoryAsync_System_String_
+  name: GetConversationHistoryAsync
+  nameWithType: IAzureAIAgentService.GetConversationHistoryAsync
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService.GetConversationHistoryAsync
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{UltraGenericSystem.Models.AzureAIConversationMessage}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.List{UltraGenericSystem.Models.AzureAIConversationMessage}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<List<AzureAIConversationMessage>>
+  nameWithType: Task<List<AzureAIConversationMessage>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<UltraGenericSystem.Models.AzureAIConversationMessage>>
+  nameWithType.vb: Task(Of List(Of AzureAIConversationMessage))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of UltraGenericSystem.Models.AzureAIConversationMessage))
+  name.vb: Task(Of List(Of AzureAIConversationMessage))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: UltraGenericSystem.Models.AzureAIConversationMessage
+    name: AzureAIConversationMessage
+    href: UltraGenericSystem.Models.AzureAIConversationMessage.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.AzureAIConversationMessage
+    name: AzureAIConversationMessage
+    href: UltraGenericSystem.Models.AzureAIConversationMessage.html
+  - name: )
+  - name: )
+- uid: UltraGenericSystem.Services.IAzureAIAgentService.SaveConversationMessageAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAzureAIAgentService.SaveConversationMessageAsync
+  href: UltraGenericSystem.Services.IAzureAIAgentService.html#UltraGenericSystem_Services_IAzureAIAgentService_SaveConversationMessageAsync_System_String_UltraGenericSystem_Models_AzureAIConversationMessage_
+  name: SaveConversationMessageAsync
+  nameWithType: IAzureAIAgentService.SaveConversationMessageAsync
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService.SaveConversationMessageAsync
+- uid: UltraGenericSystem.Models.AzureAIConversationMessage
+  commentId: T:UltraGenericSystem.Models.AzureAIConversationMessage
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.AzureAIConversationMessage.html
+  name: AzureAIConversationMessage
+  nameWithType: AzureAIConversationMessage
+  fullName: UltraGenericSystem.Models.AzureAIConversationMessage
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: UltraGenericSystem.Services.IAzureAIAgentService.ClearConversationHistoryAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAzureAIAgentService.ClearConversationHistoryAsync
+  href: UltraGenericSystem.Services.IAzureAIAgentService.html#UltraGenericSystem_Services_IAzureAIAgentService_ClearConversationHistoryAsync_System_String_
+  name: ClearConversationHistoryAsync
+  nameWithType: IAzureAIAgentService.ClearConversationHistoryAsync
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService.ClearConversationHistoryAsync
+- uid: UltraGenericSystem.Services.IAzureAIAgentService.AnalyzeTextAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAzureAIAgentService.AnalyzeTextAsync
+  href: UltraGenericSystem.Services.IAzureAIAgentService.html#UltraGenericSystem_Services_IAzureAIAgentService_AnalyzeTextAsync_System_String_System_String_System_Threading_CancellationToken_
+  name: AnalyzeTextAsync
+  nameWithType: IAzureAIAgentService.AnalyzeTextAsync
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService.AnalyzeTextAsync
+- uid: System.Threading.Tasks.Task{System.String}
+  commentId: T:System.Threading.Tasks.Task{System.String}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<string>
+  nameWithType: Task<string>
+  fullName: System.Threading.Tasks.Task<string>
+  nameWithType.vb: Task(Of String)
+  fullName.vb: System.Threading.Tasks.Task(Of String)
+  name.vb: Task(Of String)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: UltraGenericSystem.Services.IAzureAIAgentService.GenerateContentAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAzureAIAgentService.GenerateContentAsync
+  href: UltraGenericSystem.Services.IAzureAIAgentService.html#UltraGenericSystem_Services_IAzureAIAgentService_GenerateContentAsync_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__System_Threading_CancellationToken_
+  name: GenerateContentAsync
+  nameWithType: IAzureAIAgentService.GenerateContentAsync
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService.GenerateContentAsync
+- uid: System.Collections.Generic.Dictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, object>
+  nameWithType: Dictionary<string, object>
+  fullName: System.Collections.Generic.Dictionary<string, object>
+  nameWithType.vb: Dictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, Object)
+  name.vb: Dictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: UltraGenericSystem.Services.IAzureAIAgentService.ValidateConfigurationAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAzureAIAgentService.ValidateConfigurationAsync
+  href: UltraGenericSystem.Services.IAzureAIAgentService.html#UltraGenericSystem_Services_IAzureAIAgentService_ValidateConfigurationAsync
+  name: ValidateConfigurationAsync
+  nameWithType: IAzureAIAgentService.ValidateConfigurationAsync
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService.ValidateConfigurationAsync
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: UltraGenericSystem.Services.IAzureAIAgentService.GetHealthStatusAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAzureAIAgentService.GetHealthStatusAsync
+  href: UltraGenericSystem.Services.IAzureAIAgentService.html#UltraGenericSystem_Services_IAzureAIAgentService_GetHealthStatusAsync
+  name: GetHealthStatusAsync
+  nameWithType: IAzureAIAgentService.GetHealthStatusAsync
+  fullName: UltraGenericSystem.Services.IAzureAIAgentService.GetHealthStatusAsync
+- uid: System.Threading.Tasks.Task{UltraGenericSystem.Services.AzureAIAgentHealthStatus}
+  commentId: T:System.Threading.Tasks.Task{UltraGenericSystem.Services.AzureAIAgentHealthStatus}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<AzureAIAgentHealthStatus>
+  nameWithType: Task<AzureAIAgentHealthStatus>
+  fullName: System.Threading.Tasks.Task<UltraGenericSystem.Services.AzureAIAgentHealthStatus>
+  nameWithType.vb: Task(Of AzureAIAgentHealthStatus)
+  fullName.vb: System.Threading.Tasks.Task(Of UltraGenericSystem.Services.AzureAIAgentHealthStatus)
+  name.vb: Task(Of AzureAIAgentHealthStatus)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: UltraGenericSystem.Services.AzureAIAgentHealthStatus
+    name: AzureAIAgentHealthStatus
+    href: UltraGenericSystem.Services.AzureAIAgentHealthStatus.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Services.AzureAIAgentHealthStatus
+    name: AzureAIAgentHealthStatus
+    href: UltraGenericSystem.Services.AzureAIAgentHealthStatus.html
+  - name: )

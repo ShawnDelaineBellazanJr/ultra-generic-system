@@ -1,0 +1,118 @@
+### YamlMime:ManagedReference
+items:
+- uid: UltraGenericSystem.Services.Agents
+  commentId: N:UltraGenericSystem.Services.Agents
+  id: UltraGenericSystem.Services.Agents
+  children:
+  - UltraGenericSystem.Services.Agents.InteractiveCallback
+  - UltraGenericSystem.Services.Agents.OrchestrationPatterns
+  - UltraGenericSystem.Services.Agents.ResponseCallback
+  - UltraGenericSystem.Services.Agents.SKAgentFactory
+  - UltraGenericSystem.Services.Agents.StreamingCheckerAgent
+  - UltraGenericSystem.Services.Agents.StreamingMakerAgent
+  - UltraGenericSystem.Services.Agents.StreamingOrchestratorAgent
+  - UltraGenericSystem.Services.Agents.StreamingPlannerAgent
+  - UltraGenericSystem.Services.Agents.StreamingReflectorAgent
+  - UltraGenericSystem.Services.Agents.StreamingSKAgentBase
+  langs:
+  - csharp
+  - vb
+  name: UltraGenericSystem.Services.Agents
+  nameWithType: UltraGenericSystem.Services.Agents
+  fullName: UltraGenericSystem.Services.Agents
+  type: Namespace
+  assemblies:
+  - UltraGenericSystem
+references:
+- uid: UltraGenericSystem.Services.Agents.ResponseCallback
+  commentId: T:UltraGenericSystem.Services.Agents.ResponseCallback
+  href: UltraGenericSystem.Services.Agents.ResponseCallback.html
+  name: ResponseCallback
+  nameWithType: ResponseCallback
+  fullName: UltraGenericSystem.Services.Agents.ResponseCallback
+- uid: UltraGenericSystem.Services.Agents.InteractiveCallback
+  commentId: T:UltraGenericSystem.Services.Agents.InteractiveCallback
+  href: UltraGenericSystem.Services.Agents.InteractiveCallback.html
+  name: InteractiveCallback
+  nameWithType: InteractiveCallback
+  fullName: UltraGenericSystem.Services.Agents.InteractiveCallback
+- uid: UltraGenericSystem.Services.Agents.SKAgentFactory
+  commentId: T:UltraGenericSystem.Services.Agents.SKAgentFactory
+  href: UltraGenericSystem.Services.Agents.SKAgentFactory.html
+  name: SKAgentFactory
+  nameWithType: SKAgentFactory
+  fullName: UltraGenericSystem.Services.Agents.SKAgentFactory
+- uid: UltraGenericSystem.Services.Agents.OrchestrationPatterns
+  commentId: T:UltraGenericSystem.Services.Agents.OrchestrationPatterns
+  parent: UltraGenericSystem.Services.Agents
+  href: UltraGenericSystem.Services.Agents.OrchestrationPatterns.html
+  name: OrchestrationPatterns
+  nameWithType: OrchestrationPatterns
+  fullName: UltraGenericSystem.Services.Agents.OrchestrationPatterns
+- uid: UltraGenericSystem.Services.Agents.StreamingCheckerAgent
+  commentId: T:UltraGenericSystem.Services.Agents.StreamingCheckerAgent
+  href: UltraGenericSystem.Services.Agents.StreamingCheckerAgent.html
+  name: StreamingCheckerAgent
+  nameWithType: StreamingCheckerAgent
+  fullName: UltraGenericSystem.Services.Agents.StreamingCheckerAgent
+- uid: UltraGenericSystem.Services.Agents.StreamingMakerAgent
+  commentId: T:UltraGenericSystem.Services.Agents.StreamingMakerAgent
+  href: UltraGenericSystem.Services.Agents.StreamingMakerAgent.html
+  name: StreamingMakerAgent
+  nameWithType: StreamingMakerAgent
+  fullName: UltraGenericSystem.Services.Agents.StreamingMakerAgent
+- uid: UltraGenericSystem.Services.Agents.StreamingOrchestratorAgent
+  commentId: T:UltraGenericSystem.Services.Agents.StreamingOrchestratorAgent
+  href: UltraGenericSystem.Services.Agents.StreamingOrchestratorAgent.html
+  name: StreamingOrchestratorAgent
+  nameWithType: StreamingOrchestratorAgent
+  fullName: UltraGenericSystem.Services.Agents.StreamingOrchestratorAgent
+- uid: UltraGenericSystem.Services.Agents.StreamingPlannerAgent
+  commentId: T:UltraGenericSystem.Services.Agents.StreamingPlannerAgent
+  href: UltraGenericSystem.Services.Agents.StreamingPlannerAgent.html
+  name: StreamingPlannerAgent
+  nameWithType: StreamingPlannerAgent
+  fullName: UltraGenericSystem.Services.Agents.StreamingPlannerAgent
+- uid: UltraGenericSystem.Services.Agents.StreamingReflectorAgent
+  commentId: T:UltraGenericSystem.Services.Agents.StreamingReflectorAgent
+  href: UltraGenericSystem.Services.Agents.StreamingReflectorAgent.html
+  name: StreamingReflectorAgent
+  nameWithType: StreamingReflectorAgent
+  fullName: UltraGenericSystem.Services.Agents.StreamingReflectorAgent
+- uid: UltraGenericSystem.Services.Agents.StreamingSKAgentBase
+  commentId: T:UltraGenericSystem.Services.Agents.StreamingSKAgentBase
+  parent: UltraGenericSystem.Services.Agents
+  href: UltraGenericSystem.Services.Agents.StreamingSKAgentBase.html
+  name: StreamingSKAgentBase
+  nameWithType: StreamingSKAgentBase
+  fullName: UltraGenericSystem.Services.Agents.StreamingSKAgentBase
+- uid: UltraGenericSystem.Services.Agents
+  commentId: N:UltraGenericSystem.Services.Agents
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Services.Agents
+  nameWithType: UltraGenericSystem.Services.Agents
+  fullName: UltraGenericSystem.Services.Agents
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Services
+    name: Services
+    href: UltraGenericSystem.Services.html
+  - name: .
+  - uid: UltraGenericSystem.Services.Agents
+    name: Agents
+    href: UltraGenericSystem.Services.Agents.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Services
+    name: Services
+    href: UltraGenericSystem.Services.html
+  - name: .
+  - uid: UltraGenericSystem.Services.Agents
+    name: Agents
+    href: UltraGenericSystem.Services.Agents.html

@@ -1,0 +1,46 @@
+### YamlMime:ManagedReference
+items:
+- uid: UltraGenericSystem.Data
+  commentId: N:UltraGenericSystem.Data
+  id: UltraGenericSystem.Data
+  children:
+  - UltraGenericSystem.Data.UltraGenericContext
+  langs:
+  - csharp
+  - vb
+  name: UltraGenericSystem.Data
+  nameWithType: UltraGenericSystem.Data
+  fullName: UltraGenericSystem.Data
+  type: Namespace
+  assemblies:
+  - UltraGenericSystem
+references:
+- uid: UltraGenericSystem.Data.UltraGenericContext
+  commentId: T:UltraGenericSystem.Data.UltraGenericContext
+  parent: UltraGenericSystem.Data
+  href: UltraGenericSystem.Data.UltraGenericContext.html
+  name: UltraGenericContext
+  nameWithType: UltraGenericContext
+  fullName: UltraGenericSystem.Data.UltraGenericContext
+- uid: UltraGenericSystem.Data
+  commentId: N:UltraGenericSystem.Data
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Data
+  nameWithType: UltraGenericSystem.Data
+  fullName: UltraGenericSystem.Data
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Data
+    name: Data
+    href: UltraGenericSystem.Data.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Data
+    name: Data
+    href: UltraGenericSystem.Data.html

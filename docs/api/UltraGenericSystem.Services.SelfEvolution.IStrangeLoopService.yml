@@ -1,0 +1,495 @@
+### YamlMime:ManagedReference
+items:
+- uid: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService
+  commentId: T:UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService
+  id: IStrangeLoopService
+  parent: UltraGenericSystem.Services.SelfEvolution
+  children:
+  - UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.ExecuteStrangeLoopAsync(UltraGenericSystem.Models.SelfEvolution.StrangeLoopRequest)
+  - UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.GetEvolutionHistoryAsync(System.String)
+  - UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.GetEvolutionStatisticsAsync
+  - UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.IsAgentReadyForEvolutionAsync(System.String)
+  langs:
+  - csharp
+  - vb
+  name: IStrangeLoopService
+  nameWithType: IStrangeLoopService
+  fullName: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService
+  type: Interface
+  source:
+    remote:
+      path: Services/SelfEvolution/IStrangeLoopService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: IStrangeLoopService
+    path: ../Services/SelfEvolution/IStrangeLoopService.cs
+    startLine: 8
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.SelfEvolution
+  summary: >-
+    Service that implements the strange loop of self-evolution
+
+    where agents can modify their own workflows and create new capabilities
+  example: []
+  syntax:
+    content: public interface IStrangeLoopService
+    content.vb: Public Interface IStrangeLoopService
+- uid: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.ExecuteStrangeLoopAsync(UltraGenericSystem.Models.SelfEvolution.StrangeLoopRequest)
+  commentId: M:UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.ExecuteStrangeLoopAsync(UltraGenericSystem.Models.SelfEvolution.StrangeLoopRequest)
+  id: ExecuteStrangeLoopAsync(UltraGenericSystem.Models.SelfEvolution.StrangeLoopRequest)
+  parent: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService
+  langs:
+  - csharp
+  - vb
+  name: ExecuteStrangeLoopAsync(StrangeLoopRequest)
+  nameWithType: IStrangeLoopService.ExecuteStrangeLoopAsync(StrangeLoopRequest)
+  fullName: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.ExecuteStrangeLoopAsync(UltraGenericSystem.Models.SelfEvolution.StrangeLoopRequest)
+  type: Method
+  source:
+    remote:
+      path: Services/SelfEvolution/IStrangeLoopService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: ExecuteStrangeLoopAsync
+    path: ../Services/SelfEvolution/IStrangeLoopService.cs
+    startLine: 13
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.SelfEvolution
+  summary: 'Execute the strange loop: agent modifies itself'
+  example: []
+  syntax:
+    content: Task<StrangeLoopResult> ExecuteStrangeLoopAsync(StrangeLoopRequest request)
+    parameters:
+    - id: request
+      type: UltraGenericSystem.Models.SelfEvolution.StrangeLoopRequest
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.SelfEvolution.StrangeLoopResult}
+    content.vb: Function ExecuteStrangeLoopAsync(request As StrangeLoopRequest) As Task(Of StrangeLoopResult)
+  overload: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.ExecuteStrangeLoopAsync*
+- uid: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.GetEvolutionHistoryAsync(System.String)
+  commentId: M:UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.GetEvolutionHistoryAsync(System.String)
+  id: GetEvolutionHistoryAsync(System.String)
+  parent: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService
+  langs:
+  - csharp
+  - vb
+  name: GetEvolutionHistoryAsync(string)
+  nameWithType: IStrangeLoopService.GetEvolutionHistoryAsync(string)
+  fullName: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.GetEvolutionHistoryAsync(string)
+  type: Method
+  source:
+    remote:
+      path: Services/SelfEvolution/IStrangeLoopService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetEvolutionHistoryAsync
+    path: ../Services/SelfEvolution/IStrangeLoopService.cs
+    startLine: 18
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.SelfEvolution
+  summary: Get evolution history for an agent
+  example: []
+  syntax:
+    content: Task<List<StrangeLoopResult>> GetEvolutionHistoryAsync(string agentId)
+    parameters:
+    - id: agentId
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{UltraGenericSystem.Models.SelfEvolution.StrangeLoopResult}}
+    content.vb: Function GetEvolutionHistoryAsync(agentId As String) As Task(Of List(Of StrangeLoopResult))
+  overload: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.GetEvolutionHistoryAsync*
+  nameWithType.vb: IStrangeLoopService.GetEvolutionHistoryAsync(String)
+  fullName.vb: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.GetEvolutionHistoryAsync(String)
+  name.vb: GetEvolutionHistoryAsync(String)
+- uid: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.IsAgentReadyForEvolutionAsync(System.String)
+  commentId: M:UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.IsAgentReadyForEvolutionAsync(System.String)
+  id: IsAgentReadyForEvolutionAsync(System.String)
+  parent: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService
+  langs:
+  - csharp
+  - vb
+  name: IsAgentReadyForEvolutionAsync(string)
+  nameWithType: IStrangeLoopService.IsAgentReadyForEvolutionAsync(string)
+  fullName: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.IsAgentReadyForEvolutionAsync(string)
+  type: Method
+  source:
+    remote:
+      path: Services/SelfEvolution/IStrangeLoopService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: IsAgentReadyForEvolutionAsync
+    path: ../Services/SelfEvolution/IStrangeLoopService.cs
+    startLine: 23
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.SelfEvolution
+  summary: Check if agent is ready for evolution
+  example: []
+  syntax:
+    content: Task<bool> IsAgentReadyForEvolutionAsync(string agentId)
+    parameters:
+    - id: agentId
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Function IsAgentReadyForEvolutionAsync(agentId As String) As Task(Of Boolean)
+  overload: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.IsAgentReadyForEvolutionAsync*
+  nameWithType.vb: IStrangeLoopService.IsAgentReadyForEvolutionAsync(String)
+  fullName.vb: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.IsAgentReadyForEvolutionAsync(String)
+  name.vb: IsAgentReadyForEvolutionAsync(String)
+- uid: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.GetEvolutionStatisticsAsync
+  commentId: M:UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.GetEvolutionStatisticsAsync
+  id: GetEvolutionStatisticsAsync
+  parent: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService
+  langs:
+  - csharp
+  - vb
+  name: GetEvolutionStatisticsAsync()
+  nameWithType: IStrangeLoopService.GetEvolutionStatisticsAsync()
+  fullName: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.GetEvolutionStatisticsAsync()
+  type: Method
+  source:
+    remote:
+      path: Services/SelfEvolution/IStrangeLoopService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetEvolutionStatisticsAsync
+    path: ../Services/SelfEvolution/IStrangeLoopService.cs
+    startLine: 28
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.SelfEvolution
+  summary: Get evolution statistics
+  example: []
+  syntax:
+    content: Task<EvolutionStatistics> GetEvolutionStatisticsAsync()
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.SelfEvolution.EvolutionStatistics}
+    content.vb: Function GetEvolutionStatisticsAsync() As Task(Of EvolutionStatistics)
+  overload: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.GetEvolutionStatisticsAsync*
+references:
+- uid: UltraGenericSystem.Services.SelfEvolution
+  commentId: N:UltraGenericSystem.Services.SelfEvolution
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Services.SelfEvolution
+  nameWithType: UltraGenericSystem.Services.SelfEvolution
+  fullName: UltraGenericSystem.Services.SelfEvolution
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Services
+    name: Services
+    href: UltraGenericSystem.Services.html
+  - name: .
+  - uid: UltraGenericSystem.Services.SelfEvolution
+    name: SelfEvolution
+    href: UltraGenericSystem.Services.SelfEvolution.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Services
+    name: Services
+    href: UltraGenericSystem.Services.html
+  - name: .
+  - uid: UltraGenericSystem.Services.SelfEvolution
+    name: SelfEvolution
+    href: UltraGenericSystem.Services.SelfEvolution.html
+- uid: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.ExecuteStrangeLoopAsync*
+  commentId: Overload:UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.ExecuteStrangeLoopAsync
+  href: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.html#UltraGenericSystem_Services_SelfEvolution_IStrangeLoopService_ExecuteStrangeLoopAsync_UltraGenericSystem_Models_SelfEvolution_StrangeLoopRequest_
+  name: ExecuteStrangeLoopAsync
+  nameWithType: IStrangeLoopService.ExecuteStrangeLoopAsync
+  fullName: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.ExecuteStrangeLoopAsync
+- uid: UltraGenericSystem.Models.SelfEvolution.StrangeLoopRequest
+  commentId: T:UltraGenericSystem.Models.SelfEvolution.StrangeLoopRequest
+  parent: UltraGenericSystem.Models.SelfEvolution
+  href: UltraGenericSystem.Models.SelfEvolution.StrangeLoopRequest.html
+  name: StrangeLoopRequest
+  nameWithType: StrangeLoopRequest
+  fullName: UltraGenericSystem.Models.SelfEvolution.StrangeLoopRequest
+- uid: System.Threading.Tasks.Task{UltraGenericSystem.Models.SelfEvolution.StrangeLoopResult}
+  commentId: T:System.Threading.Tasks.Task{UltraGenericSystem.Models.SelfEvolution.StrangeLoopResult}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<StrangeLoopResult>
+  nameWithType: Task<StrangeLoopResult>
+  fullName: System.Threading.Tasks.Task<UltraGenericSystem.Models.SelfEvolution.StrangeLoopResult>
+  nameWithType.vb: Task(Of StrangeLoopResult)
+  fullName.vb: System.Threading.Tasks.Task(Of UltraGenericSystem.Models.SelfEvolution.StrangeLoopResult)
+  name.vb: Task(Of StrangeLoopResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: UltraGenericSystem.Models.SelfEvolution.StrangeLoopResult
+    name: StrangeLoopResult
+    href: UltraGenericSystem.Models.SelfEvolution.StrangeLoopResult.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.SelfEvolution.StrangeLoopResult
+    name: StrangeLoopResult
+    href: UltraGenericSystem.Models.SelfEvolution.StrangeLoopResult.html
+  - name: )
+- uid: UltraGenericSystem.Models.SelfEvolution
+  commentId: N:UltraGenericSystem.Models.SelfEvolution
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Models.SelfEvolution
+  nameWithType: UltraGenericSystem.Models.SelfEvolution
+  fullName: UltraGenericSystem.Models.SelfEvolution
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+  - name: .
+  - uid: UltraGenericSystem.Models.SelfEvolution
+    name: SelfEvolution
+    href: UltraGenericSystem.Models.SelfEvolution.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+  - name: .
+  - uid: UltraGenericSystem.Models.SelfEvolution
+    name: SelfEvolution
+    href: UltraGenericSystem.Models.SelfEvolution.html
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.GetEvolutionHistoryAsync*
+  commentId: Overload:UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.GetEvolutionHistoryAsync
+  href: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.html#UltraGenericSystem_Services_SelfEvolution_IStrangeLoopService_GetEvolutionHistoryAsync_System_String_
+  name: GetEvolutionHistoryAsync
+  nameWithType: IStrangeLoopService.GetEvolutionHistoryAsync
+  fullName: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.GetEvolutionHistoryAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{UltraGenericSystem.Models.SelfEvolution.StrangeLoopResult}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.List{UltraGenericSystem.Models.SelfEvolution.StrangeLoopResult}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<List<StrangeLoopResult>>
+  nameWithType: Task<List<StrangeLoopResult>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<UltraGenericSystem.Models.SelfEvolution.StrangeLoopResult>>
+  nameWithType.vb: Task(Of List(Of StrangeLoopResult))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of UltraGenericSystem.Models.SelfEvolution.StrangeLoopResult))
+  name.vb: Task(Of List(Of StrangeLoopResult))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: UltraGenericSystem.Models.SelfEvolution.StrangeLoopResult
+    name: StrangeLoopResult
+    href: UltraGenericSystem.Models.SelfEvolution.StrangeLoopResult.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.SelfEvolution.StrangeLoopResult
+    name: StrangeLoopResult
+    href: UltraGenericSystem.Models.SelfEvolution.StrangeLoopResult.html
+  - name: )
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.IsAgentReadyForEvolutionAsync*
+  commentId: Overload:UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.IsAgentReadyForEvolutionAsync
+  href: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.html#UltraGenericSystem_Services_SelfEvolution_IStrangeLoopService_IsAgentReadyForEvolutionAsync_System_String_
+  name: IsAgentReadyForEvolutionAsync
+  nameWithType: IStrangeLoopService.IsAgentReadyForEvolutionAsync
+  fullName: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.IsAgentReadyForEvolutionAsync
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.GetEvolutionStatisticsAsync*
+  commentId: Overload:UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.GetEvolutionStatisticsAsync
+  href: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.html#UltraGenericSystem_Services_SelfEvolution_IStrangeLoopService_GetEvolutionStatisticsAsync
+  name: GetEvolutionStatisticsAsync
+  nameWithType: IStrangeLoopService.GetEvolutionStatisticsAsync
+  fullName: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.GetEvolutionStatisticsAsync
+- uid: System.Threading.Tasks.Task{UltraGenericSystem.Models.SelfEvolution.EvolutionStatistics}
+  commentId: T:System.Threading.Tasks.Task{UltraGenericSystem.Models.SelfEvolution.EvolutionStatistics}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<EvolutionStatistics>
+  nameWithType: Task<EvolutionStatistics>
+  fullName: System.Threading.Tasks.Task<UltraGenericSystem.Models.SelfEvolution.EvolutionStatistics>
+  nameWithType.vb: Task(Of EvolutionStatistics)
+  fullName.vb: System.Threading.Tasks.Task(Of UltraGenericSystem.Models.SelfEvolution.EvolutionStatistics)
+  name.vb: Task(Of EvolutionStatistics)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: UltraGenericSystem.Models.SelfEvolution.EvolutionStatistics
+    name: EvolutionStatistics
+    href: UltraGenericSystem.Models.SelfEvolution.EvolutionStatistics.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.SelfEvolution.EvolutionStatistics
+    name: EvolutionStatistics
+    href: UltraGenericSystem.Models.SelfEvolution.EvolutionStatistics.html
+  - name: )

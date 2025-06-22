@@ -1,0 +1,646 @@
+### YamlMime:ManagedReference
+items:
+- uid: UltraGenericSystem.Models
+  commentId: N:UltraGenericSystem.Models
+  id: UltraGenericSystem.Models
+  children:
+  - UltraGenericSystem.Models.AdvancedAgentRequest`2
+  - UltraGenericSystem.Models.AdvancedAgentResponse`1
+  - UltraGenericSystem.Models.AdvancedOrchestrationConfig
+  - UltraGenericSystem.Models.AdvancedOrchestrationContext`2
+  - UltraGenericSystem.Models.Agent
+  - UltraGenericSystem.Models.AgentCreateRequest`1
+  - UltraGenericSystem.Models.AgentDeleteRequest
+  - UltraGenericSystem.Models.AgentExecution
+  - UltraGenericSystem.Models.AgentExecutionContext
+  - UltraGenericSystem.Models.AgentQueryRequest
+  - UltraGenericSystem.Models.AgentRequest`1
+  - UltraGenericSystem.Models.AgentResponse`1
+  - UltraGenericSystem.Models.AgentThread
+  - UltraGenericSystem.Models.AgentUpdateRequest`1
+  - UltraGenericSystem.Models.AzureAIAgentCapabilities
+  - UltraGenericSystem.Models.AzureAIAgentConfig
+  - UltraGenericSystem.Models.AzureAIAgentRequest
+  - UltraGenericSystem.Models.AzureAIAgentResponse
+  - UltraGenericSystem.Models.AzureAIConversationMessage
+  - UltraGenericSystem.Models.AzureAIFunctionCall
+  - UltraGenericSystem.Models.AzureAIFunctionCallResult
+  - UltraGenericSystem.Models.AzureAIFunctionDefinition
+  - UltraGenericSystem.Models.AzureAIMemoryConfig
+  - UltraGenericSystem.Models.AzureAIRetryConfig
+  - UltraGenericSystem.Models.AzureAIStreamingResponse
+  - UltraGenericSystem.Models.AzureAIToolCall
+  - UltraGenericSystem.Models.AzureAIToolCallResult
+  - UltraGenericSystem.Models.AzureAIUsage
+  - UltraGenericSystem.Models.BaseEntity
+  - UltraGenericSystem.Models.CustomTransformConfig
+  - UltraGenericSystem.Models.Document
+  - UltraGenericSystem.Models.DocumentChunk
+  - UltraGenericSystem.Models.DocumentationEntry
+  - UltraGenericSystem.Models.DynamicSkill
+  - UltraGenericSystem.Models.EntityAnalysisResult
+  - UltraGenericSystem.Models.HumanInTheLoopConfig
+  - UltraGenericSystem.Models.KnowledgeEntry
+  - UltraGenericSystem.Models.MemoryConfig
+  - UltraGenericSystem.Models.MemoryEntry
+  - UltraGenericSystem.Models.MemoryOperationResult
+  - UltraGenericSystem.Models.MemorySearchRequest
+  - UltraGenericSystem.Models.MemorySearchResponse
+  - UltraGenericSystem.Models.PaginatedResult`1
+  - UltraGenericSystem.Models.RAGMatch
+  - UltraGenericSystem.Models.RAGQueryResult
+  - UltraGenericSystem.Models.RAGRequest
+  - UltraGenericSystem.Models.ResponseCallbackConfig
+  - UltraGenericSystem.Models.Skill
+  - UltraGenericSystem.Models.StructuredInput`1
+  - UltraGenericSystem.Models.StructuredOutput`1
+  - UltraGenericSystem.Models.ValidationOptions
+  - UltraGenericSystem.Models.VectorEmbedding
+  - UltraGenericSystem.Models.WhiteboardMemory
+  - UltraGenericSystem.Models.WorkflowExecutionResult
+  langs:
+  - csharp
+  - vb
+  name: UltraGenericSystem.Models
+  nameWithType: UltraGenericSystem.Models
+  fullName: UltraGenericSystem.Models
+  type: Namespace
+  assemblies:
+  - UltraGenericSystem
+references:
+- uid: UltraGenericSystem.Models.AgentExecutionContext
+  commentId: T:UltraGenericSystem.Models.AgentExecutionContext
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.AgentExecutionContext.html
+  name: AgentExecutionContext
+  nameWithType: AgentExecutionContext
+  fullName: UltraGenericSystem.Models.AgentExecutionContext
+- uid: UltraGenericSystem.Models.AgentRequest`1
+  commentId: T:UltraGenericSystem.Models.AgentRequest`1
+  href: UltraGenericSystem.Models.AgentRequest-1.html
+  name: AgentRequest<T>
+  nameWithType: AgentRequest<T>
+  fullName: UltraGenericSystem.Models.AgentRequest<T>
+  nameWithType.vb: AgentRequest(Of T)
+  fullName.vb: UltraGenericSystem.Models.AgentRequest(Of T)
+  name.vb: AgentRequest(Of T)
+  spec.csharp:
+  - uid: UltraGenericSystem.Models.AgentRequest`1
+    name: AgentRequest
+    href: UltraGenericSystem.Models.AgentRequest-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UltraGenericSystem.Models.AgentRequest`1
+    name: AgentRequest
+    href: UltraGenericSystem.Models.AgentRequest-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UltraGenericSystem.Models.AgentResponse`1
+  commentId: T:UltraGenericSystem.Models.AgentResponse`1
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.AgentResponse-1.html
+  name: AgentResponse<T>
+  nameWithType: AgentResponse<T>
+  fullName: UltraGenericSystem.Models.AgentResponse<T>
+  nameWithType.vb: AgentResponse(Of T)
+  fullName.vb: UltraGenericSystem.Models.AgentResponse(Of T)
+  name.vb: AgentResponse(Of T)
+  spec.csharp:
+  - uid: UltraGenericSystem.Models.AgentResponse`1
+    name: AgentResponse
+    href: UltraGenericSystem.Models.AgentResponse-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UltraGenericSystem.Models.AgentResponse`1
+    name: AgentResponse
+    href: UltraGenericSystem.Models.AgentResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UltraGenericSystem.Models.AgentQueryRequest
+  commentId: T:UltraGenericSystem.Models.AgentQueryRequest
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.AgentQueryRequest.html
+  name: AgentQueryRequest
+  nameWithType: AgentQueryRequest
+  fullName: UltraGenericSystem.Models.AgentQueryRequest
+- uid: UltraGenericSystem.Models.AgentCreateRequest`1
+  commentId: T:UltraGenericSystem.Models.AgentCreateRequest`1
+  href: UltraGenericSystem.Models.AgentCreateRequest-1.html
+  name: AgentCreateRequest<T>
+  nameWithType: AgentCreateRequest<T>
+  fullName: UltraGenericSystem.Models.AgentCreateRequest<T>
+  nameWithType.vb: AgentCreateRequest(Of T)
+  fullName.vb: UltraGenericSystem.Models.AgentCreateRequest(Of T)
+  name.vb: AgentCreateRequest(Of T)
+  spec.csharp:
+  - uid: UltraGenericSystem.Models.AgentCreateRequest`1
+    name: AgentCreateRequest
+    href: UltraGenericSystem.Models.AgentCreateRequest-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UltraGenericSystem.Models.AgentCreateRequest`1
+    name: AgentCreateRequest
+    href: UltraGenericSystem.Models.AgentCreateRequest-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UltraGenericSystem.Models.AgentUpdateRequest`1
+  commentId: T:UltraGenericSystem.Models.AgentUpdateRequest`1
+  href: UltraGenericSystem.Models.AgentUpdateRequest-1.html
+  name: AgentUpdateRequest<T>
+  nameWithType: AgentUpdateRequest<T>
+  fullName: UltraGenericSystem.Models.AgentUpdateRequest<T>
+  nameWithType.vb: AgentUpdateRequest(Of T)
+  fullName.vb: UltraGenericSystem.Models.AgentUpdateRequest(Of T)
+  name.vb: AgentUpdateRequest(Of T)
+  spec.csharp:
+  - uid: UltraGenericSystem.Models.AgentUpdateRequest`1
+    name: AgentUpdateRequest
+    href: UltraGenericSystem.Models.AgentUpdateRequest-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UltraGenericSystem.Models.AgentUpdateRequest`1
+    name: AgentUpdateRequest
+    href: UltraGenericSystem.Models.AgentUpdateRequest-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UltraGenericSystem.Models.AgentDeleteRequest
+  commentId: T:UltraGenericSystem.Models.AgentDeleteRequest
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.AgentDeleteRequest.html
+  name: AgentDeleteRequest
+  nameWithType: AgentDeleteRequest
+  fullName: UltraGenericSystem.Models.AgentDeleteRequest
+- uid: UltraGenericSystem.Models.ValidationOptions
+  commentId: T:UltraGenericSystem.Models.ValidationOptions
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.ValidationOptions.html
+  name: ValidationOptions
+  nameWithType: ValidationOptions
+  fullName: UltraGenericSystem.Models.ValidationOptions
+- uid: UltraGenericSystem.Models.PaginatedResult`1
+  commentId: T:UltraGenericSystem.Models.PaginatedResult`1
+  href: UltraGenericSystem.Models.PaginatedResult-1.html
+  name: PaginatedResult<T>
+  nameWithType: PaginatedResult<T>
+  fullName: UltraGenericSystem.Models.PaginatedResult<T>
+  nameWithType.vb: PaginatedResult(Of T)
+  fullName.vb: UltraGenericSystem.Models.PaginatedResult(Of T)
+  name.vb: PaginatedResult(Of T)
+  spec.csharp:
+  - uid: UltraGenericSystem.Models.PaginatedResult`1
+    name: PaginatedResult
+    href: UltraGenericSystem.Models.PaginatedResult-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UltraGenericSystem.Models.PaginatedResult`1
+    name: PaginatedResult
+    href: UltraGenericSystem.Models.PaginatedResult-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UltraGenericSystem.Models.AdvancedOrchestrationConfig
+  commentId: T:UltraGenericSystem.Models.AdvancedOrchestrationConfig
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.AdvancedOrchestrationConfig.html
+  name: AdvancedOrchestrationConfig
+  nameWithType: AdvancedOrchestrationConfig
+  fullName: UltraGenericSystem.Models.AdvancedOrchestrationConfig
+- uid: UltraGenericSystem.Models.StructuredInput`1
+  commentId: T:UltraGenericSystem.Models.StructuredInput`1
+  href: UltraGenericSystem.Models.StructuredInput-1.html
+  name: StructuredInput<T>
+  nameWithType: StructuredInput<T>
+  fullName: UltraGenericSystem.Models.StructuredInput<T>
+  nameWithType.vb: StructuredInput(Of T)
+  fullName.vb: UltraGenericSystem.Models.StructuredInput(Of T)
+  name.vb: StructuredInput(Of T)
+  spec.csharp:
+  - uid: UltraGenericSystem.Models.StructuredInput`1
+    name: StructuredInput
+    href: UltraGenericSystem.Models.StructuredInput-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UltraGenericSystem.Models.StructuredInput`1
+    name: StructuredInput
+    href: UltraGenericSystem.Models.StructuredInput-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UltraGenericSystem.Models.StructuredOutput`1
+  commentId: T:UltraGenericSystem.Models.StructuredOutput`1
+  href: UltraGenericSystem.Models.StructuredOutput-1.html
+  name: StructuredOutput<T>
+  nameWithType: StructuredOutput<T>
+  fullName: UltraGenericSystem.Models.StructuredOutput<T>
+  nameWithType.vb: StructuredOutput(Of T)
+  fullName.vb: UltraGenericSystem.Models.StructuredOutput(Of T)
+  name.vb: StructuredOutput(Of T)
+  spec.csharp:
+  - uid: UltraGenericSystem.Models.StructuredOutput`1
+    name: StructuredOutput
+    href: UltraGenericSystem.Models.StructuredOutput-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UltraGenericSystem.Models.StructuredOutput`1
+    name: StructuredOutput
+    href: UltraGenericSystem.Models.StructuredOutput-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UltraGenericSystem.Models.ResponseCallbackConfig
+  commentId: T:UltraGenericSystem.Models.ResponseCallbackConfig
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.ResponseCallbackConfig.html
+  name: ResponseCallbackConfig
+  nameWithType: ResponseCallbackConfig
+  fullName: UltraGenericSystem.Models.ResponseCallbackConfig
+- uid: UltraGenericSystem.Models.HumanInTheLoopConfig
+  commentId: T:UltraGenericSystem.Models.HumanInTheLoopConfig
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.HumanInTheLoopConfig.html
+  name: HumanInTheLoopConfig
+  nameWithType: HumanInTheLoopConfig
+  fullName: UltraGenericSystem.Models.HumanInTheLoopConfig
+- uid: UltraGenericSystem.Models.CustomTransformConfig
+  commentId: T:UltraGenericSystem.Models.CustomTransformConfig
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.CustomTransformConfig.html
+  name: CustomTransformConfig
+  nameWithType: CustomTransformConfig
+  fullName: UltraGenericSystem.Models.CustomTransformConfig
+- uid: UltraGenericSystem.Models.AdvancedAgentRequest`2
+  commentId: T:UltraGenericSystem.Models.AdvancedAgentRequest`2
+  href: UltraGenericSystem.Models.AdvancedAgentRequest-2.html
+  name: AdvancedAgentRequest<TInput, TOutput>
+  nameWithType: AdvancedAgentRequest<TInput, TOutput>
+  fullName: UltraGenericSystem.Models.AdvancedAgentRequest<TInput, TOutput>
+  nameWithType.vb: AdvancedAgentRequest(Of TInput, TOutput)
+  fullName.vb: UltraGenericSystem.Models.AdvancedAgentRequest(Of TInput, TOutput)
+  name.vb: AdvancedAgentRequest(Of TInput, TOutput)
+  spec.csharp:
+  - uid: UltraGenericSystem.Models.AdvancedAgentRequest`2
+    name: AdvancedAgentRequest
+    href: UltraGenericSystem.Models.AdvancedAgentRequest-2.html
+  - name: <
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: '>'
+  spec.vb:
+  - uid: UltraGenericSystem.Models.AdvancedAgentRequest`2
+    name: AdvancedAgentRequest
+    href: UltraGenericSystem.Models.AdvancedAgentRequest-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: )
+- uid: UltraGenericSystem.Models.AdvancedAgentResponse`1
+  commentId: T:UltraGenericSystem.Models.AdvancedAgentResponse`1
+  href: UltraGenericSystem.Models.AdvancedAgentResponse-1.html
+  name: AdvancedAgentResponse<TOutput>
+  nameWithType: AdvancedAgentResponse<TOutput>
+  fullName: UltraGenericSystem.Models.AdvancedAgentResponse<TOutput>
+  nameWithType.vb: AdvancedAgentResponse(Of TOutput)
+  fullName.vb: UltraGenericSystem.Models.AdvancedAgentResponse(Of TOutput)
+  name.vb: AdvancedAgentResponse(Of TOutput)
+  spec.csharp:
+  - uid: UltraGenericSystem.Models.AdvancedAgentResponse`1
+    name: AdvancedAgentResponse
+    href: UltraGenericSystem.Models.AdvancedAgentResponse-1.html
+  - name: <
+  - name: TOutput
+  - name: '>'
+  spec.vb:
+  - uid: UltraGenericSystem.Models.AdvancedAgentResponse`1
+    name: AdvancedAgentResponse
+    href: UltraGenericSystem.Models.AdvancedAgentResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TOutput
+  - name: )
+- uid: UltraGenericSystem.Models.AdvancedOrchestrationContext`2
+  commentId: T:UltraGenericSystem.Models.AdvancedOrchestrationContext`2
+  href: UltraGenericSystem.Models.AdvancedOrchestrationContext-2.html
+  name: AdvancedOrchestrationContext<TInput, TOutput>
+  nameWithType: AdvancedOrchestrationContext<TInput, TOutput>
+  fullName: UltraGenericSystem.Models.AdvancedOrchestrationContext<TInput, TOutput>
+  nameWithType.vb: AdvancedOrchestrationContext(Of TInput, TOutput)
+  fullName.vb: UltraGenericSystem.Models.AdvancedOrchestrationContext(Of TInput, TOutput)
+  name.vb: AdvancedOrchestrationContext(Of TInput, TOutput)
+  spec.csharp:
+  - uid: UltraGenericSystem.Models.AdvancedOrchestrationContext`2
+    name: AdvancedOrchestrationContext
+    href: UltraGenericSystem.Models.AdvancedOrchestrationContext-2.html
+  - name: <
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: '>'
+  spec.vb:
+  - uid: UltraGenericSystem.Models.AdvancedOrchestrationContext`2
+    name: AdvancedOrchestrationContext
+    href: UltraGenericSystem.Models.AdvancedOrchestrationContext-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: )
+- uid: UltraGenericSystem.Models.EntityAnalysisResult
+  commentId: T:UltraGenericSystem.Models.EntityAnalysisResult
+  href: UltraGenericSystem.Models.EntityAnalysisResult.html
+  name: EntityAnalysisResult
+  nameWithType: EntityAnalysisResult
+  fullName: UltraGenericSystem.Models.EntityAnalysisResult
+- uid: UltraGenericSystem.Models.WorkflowExecutionResult
+  commentId: T:UltraGenericSystem.Models.WorkflowExecutionResult
+  href: UltraGenericSystem.Models.WorkflowExecutionResult.html
+  name: WorkflowExecutionResult
+  nameWithType: WorkflowExecutionResult
+  fullName: UltraGenericSystem.Models.WorkflowExecutionResult
+- uid: UltraGenericSystem.Models.AzureAIAgentConfig
+  commentId: T:UltraGenericSystem.Models.AzureAIAgentConfig
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.AzureAIAgentConfig.html
+  name: AzureAIAgentConfig
+  nameWithType: AzureAIAgentConfig
+  fullName: UltraGenericSystem.Models.AzureAIAgentConfig
+- uid: UltraGenericSystem.Models.AzureAIRetryConfig
+  commentId: T:UltraGenericSystem.Models.AzureAIRetryConfig
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.AzureAIRetryConfig.html
+  name: AzureAIRetryConfig
+  nameWithType: AzureAIRetryConfig
+  fullName: UltraGenericSystem.Models.AzureAIRetryConfig
+- uid: UltraGenericSystem.Models.AzureAIMemoryConfig
+  commentId: T:UltraGenericSystem.Models.AzureAIMemoryConfig
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.AzureAIMemoryConfig.html
+  name: AzureAIMemoryConfig
+  nameWithType: AzureAIMemoryConfig
+  fullName: UltraGenericSystem.Models.AzureAIMemoryConfig
+- uid: UltraGenericSystem.Models.AzureAIAgentRequest
+  commentId: T:UltraGenericSystem.Models.AzureAIAgentRequest
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.AzureAIAgentRequest.html
+  name: AzureAIAgentRequest
+  nameWithType: AzureAIAgentRequest
+  fullName: UltraGenericSystem.Models.AzureAIAgentRequest
+- uid: UltraGenericSystem.Models.AzureAIConversationMessage
+  commentId: T:UltraGenericSystem.Models.AzureAIConversationMessage
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.AzureAIConversationMessage.html
+  name: AzureAIConversationMessage
+  nameWithType: AzureAIConversationMessage
+  fullName: UltraGenericSystem.Models.AzureAIConversationMessage
+- uid: UltraGenericSystem.Models.AzureAIFunctionDefinition
+  commentId: T:UltraGenericSystem.Models.AzureAIFunctionDefinition
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.AzureAIFunctionDefinition.html
+  name: AzureAIFunctionDefinition
+  nameWithType: AzureAIFunctionDefinition
+  fullName: UltraGenericSystem.Models.AzureAIFunctionDefinition
+- uid: UltraGenericSystem.Models.AzureAIToolCall
+  commentId: T:UltraGenericSystem.Models.AzureAIToolCall
+  href: UltraGenericSystem.Models.AzureAIToolCall.html
+  name: AzureAIToolCall
+  nameWithType: AzureAIToolCall
+  fullName: UltraGenericSystem.Models.AzureAIToolCall
+- uid: UltraGenericSystem.Models.AzureAIFunctionCall
+  commentId: T:UltraGenericSystem.Models.AzureAIFunctionCall
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.AzureAIFunctionCall.html
+  name: AzureAIFunctionCall
+  nameWithType: AzureAIFunctionCall
+  fullName: UltraGenericSystem.Models.AzureAIFunctionCall
+- uid: UltraGenericSystem.Models.AzureAIToolCallResult
+  commentId: T:UltraGenericSystem.Models.AzureAIToolCallResult
+  href: UltraGenericSystem.Models.AzureAIToolCallResult.html
+  name: AzureAIToolCallResult
+  nameWithType: AzureAIToolCallResult
+  fullName: UltraGenericSystem.Models.AzureAIToolCallResult
+- uid: UltraGenericSystem.Models.AzureAIFunctionCallResult
+  commentId: T:UltraGenericSystem.Models.AzureAIFunctionCallResult
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.AzureAIFunctionCallResult.html
+  name: AzureAIFunctionCallResult
+  nameWithType: AzureAIFunctionCallResult
+  fullName: UltraGenericSystem.Models.AzureAIFunctionCallResult
+- uid: UltraGenericSystem.Models.AzureAIAgentResponse
+  commentId: T:UltraGenericSystem.Models.AzureAIAgentResponse
+  href: UltraGenericSystem.Models.AzureAIAgentResponse.html
+  name: AzureAIAgentResponse
+  nameWithType: AzureAIAgentResponse
+  fullName: UltraGenericSystem.Models.AzureAIAgentResponse
+- uid: UltraGenericSystem.Models.AzureAIUsage
+  commentId: T:UltraGenericSystem.Models.AzureAIUsage
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.AzureAIUsage.html
+  name: AzureAIUsage
+  nameWithType: AzureAIUsage
+  fullName: UltraGenericSystem.Models.AzureAIUsage
+- uid: UltraGenericSystem.Models.AzureAIStreamingResponse
+  commentId: T:UltraGenericSystem.Models.AzureAIStreamingResponse
+  href: UltraGenericSystem.Models.AzureAIStreamingResponse.html
+  name: AzureAIStreamingResponse
+  nameWithType: AzureAIStreamingResponse
+  fullName: UltraGenericSystem.Models.AzureAIStreamingResponse
+- uid: UltraGenericSystem.Models.AzureAIAgentCapabilities
+  commentId: T:UltraGenericSystem.Models.AzureAIAgentCapabilities
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.AzureAIAgentCapabilities.html
+  name: AzureAIAgentCapabilities
+  nameWithType: AzureAIAgentCapabilities
+  fullName: UltraGenericSystem.Models.AzureAIAgentCapabilities
+- uid: UltraGenericSystem.Models.BaseEntity
+  commentId: T:UltraGenericSystem.Models.BaseEntity
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.BaseEntity.html
+  name: BaseEntity
+  nameWithType: BaseEntity
+  fullName: UltraGenericSystem.Models.BaseEntity
+- uid: UltraGenericSystem.Models.Agent
+  commentId: T:UltraGenericSystem.Models.Agent
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.Agent.html
+  name: Agent
+  nameWithType: Agent
+  fullName: UltraGenericSystem.Models.Agent
+- uid: UltraGenericSystem.Models.Skill
+  commentId: T:UltraGenericSystem.Models.Skill
+  href: UltraGenericSystem.Models.Skill.html
+  name: Skill
+  nameWithType: Skill
+  fullName: UltraGenericSystem.Models.Skill
+- uid: UltraGenericSystem.Models.AgentThread
+  commentId: T:UltraGenericSystem.Models.AgentThread
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.AgentThread.html
+  name: AgentThread
+  nameWithType: AgentThread
+  fullName: UltraGenericSystem.Models.AgentThread
+- uid: UltraGenericSystem.Models.AgentExecution
+  commentId: T:UltraGenericSystem.Models.AgentExecution
+  href: UltraGenericSystem.Models.AgentExecution.html
+  name: AgentExecution
+  nameWithType: AgentExecution
+  fullName: UltraGenericSystem.Models.AgentExecution
+- uid: UltraGenericSystem.Models.KnowledgeEntry
+  commentId: T:UltraGenericSystem.Models.KnowledgeEntry
+  href: UltraGenericSystem.Models.KnowledgeEntry.html
+  name: KnowledgeEntry
+  nameWithType: KnowledgeEntry
+  fullName: UltraGenericSystem.Models.KnowledgeEntry
+- uid: UltraGenericSystem.Models.DynamicSkill
+  commentId: T:UltraGenericSystem.Models.DynamicSkill
+  href: UltraGenericSystem.Models.DynamicSkill.html
+  name: DynamicSkill
+  nameWithType: DynamicSkill
+  fullName: UltraGenericSystem.Models.DynamicSkill
+- uid: UltraGenericSystem.Models.DocumentationEntry
+  commentId: T:UltraGenericSystem.Models.DocumentationEntry
+  href: UltraGenericSystem.Models.DocumentationEntry.html
+  name: DocumentationEntry
+  nameWithType: DocumentationEntry
+  fullName: UltraGenericSystem.Models.DocumentationEntry
+- uid: UltraGenericSystem.Models.MemoryEntry
+  commentId: T:UltraGenericSystem.Models.MemoryEntry
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.MemoryEntry.html
+  name: MemoryEntry
+  nameWithType: MemoryEntry
+  fullName: UltraGenericSystem.Models.MemoryEntry
+- uid: UltraGenericSystem.Models.WhiteboardMemory
+  commentId: T:UltraGenericSystem.Models.WhiteboardMemory
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.WhiteboardMemory.html
+  name: WhiteboardMemory
+  nameWithType: WhiteboardMemory
+  fullName: UltraGenericSystem.Models.WhiteboardMemory
+- uid: UltraGenericSystem.Models.VectorEmbedding
+  commentId: T:UltraGenericSystem.Models.VectorEmbedding
+  href: UltraGenericSystem.Models.VectorEmbedding.html
+  name: VectorEmbedding
+  nameWithType: VectorEmbedding
+  fullName: UltraGenericSystem.Models.VectorEmbedding
+- uid: UltraGenericSystem.Models.Document
+  commentId: T:UltraGenericSystem.Models.Document
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.Document.html
+  name: Document
+  nameWithType: Document
+  fullName: UltraGenericSystem.Models.Document
+- uid: UltraGenericSystem.Models.DocumentChunk
+  commentId: T:UltraGenericSystem.Models.DocumentChunk
+  href: UltraGenericSystem.Models.DocumentChunk.html
+  name: DocumentChunk
+  nameWithType: DocumentChunk
+  fullName: UltraGenericSystem.Models.DocumentChunk
+- uid: UltraGenericSystem.Models.RAGQueryResult
+  commentId: T:UltraGenericSystem.Models.RAGQueryResult
+  href: UltraGenericSystem.Models.RAGQueryResult.html
+  name: RAGQueryResult
+  nameWithType: RAGQueryResult
+  fullName: UltraGenericSystem.Models.RAGQueryResult
+- uid: UltraGenericSystem.Models.RAGMatch
+  commentId: T:UltraGenericSystem.Models.RAGMatch
+  href: UltraGenericSystem.Models.RAGMatch.html
+  name: RAGMatch
+  nameWithType: RAGMatch
+  fullName: UltraGenericSystem.Models.RAGMatch
+- uid: UltraGenericSystem.Models.MemoryConfig
+  commentId: T:UltraGenericSystem.Models.MemoryConfig
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.MemoryConfig.html
+  name: MemoryConfig
+  nameWithType: MemoryConfig
+  fullName: UltraGenericSystem.Models.MemoryConfig
+- uid: UltraGenericSystem.Models.MemorySearchRequest
+  commentId: T:UltraGenericSystem.Models.MemorySearchRequest
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.MemorySearchRequest.html
+  name: MemorySearchRequest
+  nameWithType: MemorySearchRequest
+  fullName: UltraGenericSystem.Models.MemorySearchRequest
+- uid: UltraGenericSystem.Models.MemorySearchResponse
+  commentId: T:UltraGenericSystem.Models.MemorySearchResponse
+  href: UltraGenericSystem.Models.MemorySearchResponse.html
+  name: MemorySearchResponse
+  nameWithType: MemorySearchResponse
+  fullName: UltraGenericSystem.Models.MemorySearchResponse
+- uid: UltraGenericSystem.Models.RAGRequest
+  commentId: T:UltraGenericSystem.Models.RAGRequest
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.RAGRequest.html
+  name: RAGRequest
+  nameWithType: RAGRequest
+  fullName: UltraGenericSystem.Models.RAGRequest
+- uid: UltraGenericSystem.Models.MemoryOperationResult
+  commentId: T:UltraGenericSystem.Models.MemoryOperationResult
+  href: UltraGenericSystem.Models.MemoryOperationResult.html
+  name: MemoryOperationResult
+  nameWithType: MemoryOperationResult
+  fullName: UltraGenericSystem.Models.MemoryOperationResult
+- uid: UltraGenericSystem.Models
+  commentId: N:UltraGenericSystem.Models
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Models
+  nameWithType: UltraGenericSystem.Models
+  fullName: UltraGenericSystem.Models
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html

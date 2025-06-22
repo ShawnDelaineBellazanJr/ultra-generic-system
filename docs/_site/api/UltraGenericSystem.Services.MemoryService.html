@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class MemoryService </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class MemoryService ">
+    
+    <meta name="description" content="Implementation of SK Memory and RAG services">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="UltraGenericSystem.Services.MemoryService">
+
+
+
+  <h1 id="UltraGenericSystem_Services_MemoryService" data-uid="UltraGenericSystem.Services.MemoryService" class="text-break">Class MemoryService</h1>
+  <div class="markdown level0 summary"><p sourcefile="api/UltraGenericSystem.Services.MemoryService.yml" sourcestartlinenumber="1">Implementation of SK Memory and RAG services</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">MemoryService</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="UltraGenericSystem.Services.IMemoryService.html">IMemoryService</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="UltraGenericSystem.html">UltraGenericSystem</a>.<a class="xref" href="UltraGenericSystem.Services.html">Services</a></h6>
+  <h6><strong>Assembly</strong>: UltraGenericSystem.dll</h6>
+  <h5 id="UltraGenericSystem_Services_MemoryService_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class MemoryService : IMemoryService</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_MemoryService__ctor_Microsoft_SemanticKernel_Kernel_UltraGenericSystem_Repositories_IUnitOfWork_Microsoft_Extensions_Logging_ILogger_UltraGenericSystem_Services_MemoryService__UltraGenericSystem_Models_MemoryConfig_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.MemoryService.%23ctor(Microsoft.SemanticKernel.Kernel%2CUltraGenericSystem.Repositories.IUnitOfWork%2CMicrosoft.Extensions.Logging.ILogger%7BUltraGenericSystem.Services.MemoryService%7D%2CUltraGenericSystem.Models.MemoryConfig)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/MemoryService.cs/#L22">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_MemoryService__ctor_" data-uid="UltraGenericSystem.Services.MemoryService.#ctor*"></a>
+  <h4 id="UltraGenericSystem_Services_MemoryService__ctor_Microsoft_SemanticKernel_Kernel_UltraGenericSystem_Repositories_IUnitOfWork_Microsoft_Extensions_Logging_ILogger_UltraGenericSystem_Services_MemoryService__UltraGenericSystem_Models_MemoryConfig_" data-uid="UltraGenericSystem.Services.MemoryService.#ctor(Microsoft.SemanticKernel.Kernel,UltraGenericSystem.Repositories.IUnitOfWork,Microsoft.Extensions.Logging.ILogger{UltraGenericSystem.Services.MemoryService},UltraGenericSystem.Models.MemoryConfig)">MemoryService(Kernel, IUnitOfWork, ILogger&lt;MemoryService&gt;, MemoryConfig)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MemoryService(Kernel kernel, IUnitOfWork unitOfWork, ILogger&lt;MemoryService&gt; logger, MemoryConfig config)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Kernel</span></td>
+        <td><span class="parametername">kernel</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="UltraGenericSystem.Repositories.IUnitOfWork.html">IUnitOfWork</a></td>
+        <td><span class="parametername">unitOfWork</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="UltraGenericSystem.Services.MemoryService.html">MemoryService</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="UltraGenericSystem.Models.MemoryConfig.html">MemoryConfig</a></td>
+        <td><span class="parametername">config</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_MemoryService_CalculateSimilarityAsync_System_Collections_Generic_List_System_Single__System_Collections_Generic_List_System_Single__System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.MemoryService.CalculateSimilarityAsync(System.Collections.Generic.List%7BSystem.Single%7D%2CSystem.Collections.Generic.List%7BSystem.Single%7D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/MemoryService.cs/#L537">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_MemoryService_CalculateSimilarityAsync_" data-uid="UltraGenericSystem.Services.MemoryService.CalculateSimilarityAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_MemoryService_CalculateSimilarityAsync_System_Collections_Generic_List_System_Single__System_Collections_Generic_List_System_Single__System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Services.MemoryService.CalculateSimilarityAsync(System.Collections.Generic.List{System.Single},System.Collections.Generic.List{System.Single},System.Threading.CancellationToken)">CalculateSimilarityAsync(List&lt;float&gt;, List&lt;float&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.MemoryService.yml" sourcestartlinenumber="1">Calculates similarity between two embeddings</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;double&gt; CalculateSimilarityAsync(List&lt;float&gt; embedding1, List&lt;float&gt; embedding2, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</td>
+        <td><span class="parametername">embedding1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</td>
+        <td><span class="parametername">embedding2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_MemoryService_CleanupMemoryAsync_System_TimeSpan_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.MemoryService.CleanupMemoryAsync(System.TimeSpan%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/MemoryService.cs/#L612">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_MemoryService_CleanupMemoryAsync_" data-uid="UltraGenericSystem.Services.MemoryService.CleanupMemoryAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_MemoryService_CleanupMemoryAsync_System_TimeSpan_System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Services.MemoryService.CleanupMemoryAsync(System.TimeSpan,System.Threading.CancellationToken)">CleanupMemoryAsync(TimeSpan, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.MemoryService.yml" sourcestartlinenumber="1">Cleans up old memory entries</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;MemoryOperationResult&gt; CleanupMemoryAsync(TimeSpan olderThan, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">olderThan</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="UltraGenericSystem.Models.MemoryOperationResult.html">MemoryOperationResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_MemoryService_ClearWhiteboardAsync_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.MemoryService.ClearWhiteboardAsync(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/MemoryService.cs/#L314">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_MemoryService_ClearWhiteboardAsync_" data-uid="UltraGenericSystem.Services.MemoryService.ClearWhiteboardAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_MemoryService_ClearWhiteboardAsync_System_String_System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Services.MemoryService.ClearWhiteboardAsync(System.String,System.Threading.CancellationToken)">ClearWhiteboardAsync(string, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.MemoryService.yml" sourcestartlinenumber="1">Clears whiteboard entries for a session</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;MemoryOperationResult&gt; ClearWhiteboardAsync(string sessionId, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">sessionId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="UltraGenericSystem.Models.MemoryOperationResult.html">MemoryOperationResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_MemoryService_DeleteMemoryAsync_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.MemoryService.DeleteMemoryAsync(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/MemoryService.cs/#L186">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_MemoryService_DeleteMemoryAsync_" data-uid="UltraGenericSystem.Services.MemoryService.DeleteMemoryAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_MemoryService_DeleteMemoryAsync_System_String_System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Services.MemoryService.DeleteMemoryAsync(System.String,System.Threading.CancellationToken)">DeleteMemoryAsync(string, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.MemoryService.yml" sourcestartlinenumber="1">Deletes a memory entry</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;MemoryOperationResult&gt; DeleteMemoryAsync(string key, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="UltraGenericSystem.Models.MemoryOperationResult.html">MemoryOperationResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_MemoryService_GenerateEmbeddingAsync_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.MemoryService.GenerateEmbeddingAsync(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/MemoryService.cs/#L503">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_MemoryService_GenerateEmbeddingAsync_" data-uid="UltraGenericSystem.Services.MemoryService.GenerateEmbeddingAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_MemoryService_GenerateEmbeddingAsync_System_String_System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Services.MemoryService.GenerateEmbeddingAsync(System.String,System.Threading.CancellationToken)">GenerateEmbeddingAsync(string, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.MemoryService.yml" sourcestartlinenumber="1">Generates embeddings for text</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;List&lt;float&gt;&gt; GenerateEmbeddingAsync(string text, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_MemoryService_GetMemoryAsync_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.MemoryService.GetMemoryAsync(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/MemoryService.cs/#L86">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_MemoryService_GetMemoryAsync_" data-uid="UltraGenericSystem.Services.MemoryService.GetMemoryAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_MemoryService_GetMemoryAsync_System_String_System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Services.MemoryService.GetMemoryAsync(System.String,System.Threading.CancellationToken)">GetMemoryAsync(string, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.MemoryService.yml" sourcestartlinenumber="1">Retrieves a memory entry by key</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;MemoryEntry?&gt; GetMemoryAsync(string key, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="UltraGenericSystem.Models.MemoryEntry.html">MemoryEntry</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_MemoryService_GetMemoryStatsAsync_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.MemoryService.GetMemoryStatsAsync(System.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/MemoryService.cs/#L578">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_MemoryService_GetMemoryStatsAsync_" data-uid="UltraGenericSystem.Services.MemoryService.GetMemoryStatsAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_MemoryService_GetMemoryStatsAsync_System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Services.MemoryService.GetMemoryStatsAsync(System.Threading.CancellationToken)">GetMemoryStatsAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.MemoryService.yml" sourcestartlinenumber="1">Gets memory statistics</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;Dictionary&lt;string, object&gt;&gt; GetMemoryStatsAsync(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_MemoryService_GetWhiteboardAsync_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.MemoryService.GetWhiteboardAsync(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/MemoryService.cs/#L283">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_MemoryService_GetWhiteboardAsync_" data-uid="UltraGenericSystem.Services.MemoryService.GetWhiteboardAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_MemoryService_GetWhiteboardAsync_System_String_System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Services.MemoryService.GetWhiteboardAsync(System.String,System.Threading.CancellationToken)">GetWhiteboardAsync(string, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.MemoryService.yml" sourcestartlinenumber="1">Gets whiteboard entries for a session</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;List&lt;WhiteboardMemory&gt;&gt; GetWhiteboardAsync(string sessionId, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">sessionId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="UltraGenericSystem.Models.WhiteboardMemory.html">WhiteboardMemory</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_MemoryService_ProcessDocumentAsync_UltraGenericSystem_Models_Document_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.MemoryService.ProcessDocumentAsync(UltraGenericSystem.Models.Document%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/MemoryService.cs/#L357">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_MemoryService_ProcessDocumentAsync_" data-uid="UltraGenericSystem.Services.MemoryService.ProcessDocumentAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_MemoryService_ProcessDocumentAsync_UltraGenericSystem_Models_Document_System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Services.MemoryService.ProcessDocumentAsync(UltraGenericSystem.Models.Document,System.Threading.CancellationToken)">ProcessDocumentAsync(Document, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.MemoryService.yml" sourcestartlinenumber="1">Processes a document for RAG</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;MemoryOperationResult&gt; ProcessDocumentAsync(Document document, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="UltraGenericSystem.Models.Document.html">Document</a></td>
+        <td><span class="parametername">document</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="UltraGenericSystem.Models.MemoryOperationResult.html">MemoryOperationResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_MemoryService_QueryRAGAsync_UltraGenericSystem_Models_RAGRequest_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.MemoryService.QueryRAGAsync(UltraGenericSystem.Models.RAGRequest%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/MemoryService.cs/#L421">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_MemoryService_QueryRAGAsync_" data-uid="UltraGenericSystem.Services.MemoryService.QueryRAGAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_MemoryService_QueryRAGAsync_UltraGenericSystem_Models_RAGRequest_System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Services.MemoryService.QueryRAGAsync(UltraGenericSystem.Models.RAGRequest,System.Threading.CancellationToken)">QueryRAGAsync(RAGRequest, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.MemoryService.yml" sourcestartlinenumber="1">Performs a RAG query</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;RAGQueryResult&gt; QueryRAGAsync(RAGRequest request, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="UltraGenericSystem.Models.RAGRequest.html">RAGRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="UltraGenericSystem.Models.RAGQueryResult.html">RAGQueryResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_MemoryService_SearchMemoryAsync_UltraGenericSystem_Models_MemorySearchRequest_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.MemoryService.SearchMemoryAsync(UltraGenericSystem.Models.MemorySearchRequest%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/MemoryService.cs/#L117">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_MemoryService_SearchMemoryAsync_" data-uid="UltraGenericSystem.Services.MemoryService.SearchMemoryAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_MemoryService_SearchMemoryAsync_UltraGenericSystem_Models_MemorySearchRequest_System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Services.MemoryService.SearchMemoryAsync(UltraGenericSystem.Models.MemorySearchRequest,System.Threading.CancellationToken)">SearchMemoryAsync(MemorySearchRequest, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.MemoryService.yml" sourcestartlinenumber="1">Searches memory entries by similarity</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;MemorySearchResponse&gt; SearchMemoryAsync(MemorySearchRequest request, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="UltraGenericSystem.Models.MemorySearchRequest.html">MemorySearchRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="UltraGenericSystem.Models.MemorySearchResponse.html">MemorySearchResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_MemoryService_StoreMemoryAsync_UltraGenericSystem_Models_MemoryEntry_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.MemoryService.StoreMemoryAsync(UltraGenericSystem.Models.MemoryEntry%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/MemoryService.cs/#L39">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_MemoryService_StoreMemoryAsync_" data-uid="UltraGenericSystem.Services.MemoryService.StoreMemoryAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_MemoryService_StoreMemoryAsync_UltraGenericSystem_Models_MemoryEntry_System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Services.MemoryService.StoreMemoryAsync(UltraGenericSystem.Models.MemoryEntry,System.Threading.CancellationToken)">StoreMemoryAsync(MemoryEntry, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.MemoryService.yml" sourcestartlinenumber="1">Stores a memory entry</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;MemoryOperationResult&gt; StoreMemoryAsync(MemoryEntry entry, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="UltraGenericSystem.Models.MemoryEntry.html">MemoryEntry</a></td>
+        <td><span class="parametername">entry</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="UltraGenericSystem.Models.MemoryOperationResult.html">MemoryOperationResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_MemoryService_StoreWhiteboardAsync_UltraGenericSystem_Models_WhiteboardMemory_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.MemoryService.StoreWhiteboardAsync(UltraGenericSystem.Models.WhiteboardMemory%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/MemoryService.cs/#L237">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_MemoryService_StoreWhiteboardAsync_" data-uid="UltraGenericSystem.Services.MemoryService.StoreWhiteboardAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_MemoryService_StoreWhiteboardAsync_UltraGenericSystem_Models_WhiteboardMemory_System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Services.MemoryService.StoreWhiteboardAsync(UltraGenericSystem.Models.WhiteboardMemory,System.Threading.CancellationToken)">StoreWhiteboardAsync(WhiteboardMemory, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.MemoryService.yml" sourcestartlinenumber="1">Stores a whiteboard memory entry</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;MemoryOperationResult&gt; StoreWhiteboardAsync(WhiteboardMemory entry, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="UltraGenericSystem.Models.WhiteboardMemory.html">WhiteboardMemory</a></td>
+        <td><span class="parametername">entry</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="UltraGenericSystem.Models.MemoryOperationResult.html">MemoryOperationResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="UltraGenericSystem.Services.IMemoryService.html">IMemoryService</a>
+  </div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_MemoryService.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.MemoryService%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/MemoryService.cs/#L13" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

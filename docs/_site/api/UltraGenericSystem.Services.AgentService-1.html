@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class AgentService&lt;T&gt; </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class AgentService&lt;T&gt; ">
+    
+    <meta name="description" content="Generic agent service implementation for all entities in the ultra-generic system">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="UltraGenericSystem.Services.AgentService`1">
+
+
+
+  <h1 id="UltraGenericSystem_Services_AgentService_1" data-uid="UltraGenericSystem.Services.AgentService`1" class="text-break">Class AgentService&lt;T&gt;</h1>
+  <div class="markdown level0 summary"><p sourcefile="api/UltraGenericSystem.Services.AgentService-1.yml" sourcestartlinenumber="1">Generic agent service implementation for all entities in the ultra-generic system</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">AgentService&lt;T&gt;</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="UltraGenericSystem.Services.IAgentService-1.html">IAgentService</a>&lt;T&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="UltraGenericSystem.html">UltraGenericSystem</a>.<a class="xref" href="UltraGenericSystem.Services.html">Services</a></h6>
+  <h6><strong>Assembly</strong>: UltraGenericSystem.dll</h6>
+  <h5 id="UltraGenericSystem_Services_AgentService_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AgentService&lt;T&gt; : IAgentService&lt;T&gt; where T : BaseEntity</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p sourcefile="api/UltraGenericSystem.Services.AgentService-1.yml" sourcestartlinenumber="1">The entity type that inherits from BaseEntity</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_AgentService_1__ctor_UltraGenericSystem_Repositories_IUnitOfWork_UltraGenericSystem_Services_IAgentOrchestrator_Microsoft_Extensions_Logging_ILogger_UltraGenericSystem_Services_AgentService__0___.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.AgentService%601.%23ctor(UltraGenericSystem.Repositories.IUnitOfWork%2CUltraGenericSystem.Services.IAgentOrchestrator%2CMicrosoft.Extensions.Logging.ILogger%7BUltraGenericSystem.Services.AgentService%7B%600%7D%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/AgentService.cs/#L18">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_AgentService_1__ctor_" data-uid="UltraGenericSystem.Services.AgentService`1.#ctor*"></a>
+  <h4 id="UltraGenericSystem_Services_AgentService_1__ctor_UltraGenericSystem_Repositories_IUnitOfWork_UltraGenericSystem_Services_IAgentOrchestrator_Microsoft_Extensions_Logging_ILogger_UltraGenericSystem_Services_AgentService__0___" data-uid="UltraGenericSystem.Services.AgentService`1.#ctor(UltraGenericSystem.Repositories.IUnitOfWork,UltraGenericSystem.Services.IAgentOrchestrator,Microsoft.Extensions.Logging.ILogger{UltraGenericSystem.Services.AgentService{`0}})">AgentService(IUnitOfWork, IAgentOrchestrator, ILogger&lt;AgentService&lt;T&gt;&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AgentService(IUnitOfWork unitOfWork, IAgentOrchestrator orchestrator, ILogger&lt;AgentService&lt;T&gt;&gt; logger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="UltraGenericSystem.Repositories.IUnitOfWork.html">IUnitOfWork</a></td>
+        <td><span class="parametername">unitOfWork</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="UltraGenericSystem.Services.IAgentOrchestrator.html">IAgentOrchestrator</a></td>
+        <td><span class="parametername">orchestrator</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="UltraGenericSystem.Services.AgentService-1.html">AgentService</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_AgentService_1_BulkCreateAsync_System_Collections_Generic_IEnumerable__0__System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.AgentService%601.BulkCreateAsync(System.Collections.Generic.IEnumerable%7B%600%7D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/AgentService.cs/#L503">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_AgentService_1_BulkCreateAsync_" data-uid="UltraGenericSystem.Services.AgentService`1.BulkCreateAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_AgentService_1_BulkCreateAsync_System_Collections_Generic_IEnumerable__0__System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Services.AgentService`1.BulkCreateAsync(System.Collections.Generic.IEnumerable{`0},System.Threading.CancellationToken)">BulkCreateAsync(IEnumerable&lt;T&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.AgentService-1.yml" sourcestartlinenumber="1">Performs bulk operations using agent orchestration</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;AgentResponse&lt;BulkOperationResult&lt;T&gt;&gt;&gt; BulkCreateAsync(IEnumerable&lt;T&gt; entities, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</td>
+        <td><span class="parametername">entities</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="UltraGenericSystem.Models.AgentResponse-1.html">AgentResponse</a>&lt;<a class="xref" href="UltraGenericSystem.Services.BulkOperationResult-1.html">BulkOperationResult</a>&lt;T&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_AgentService_1_BulkDeleteAsync_System_Collections_Generic_IEnumerable_System_Guid__System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.AgentService%601.BulkDeleteAsync(System.Collections.Generic.IEnumerable%7BSystem.Guid%7D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/AgentService.cs/#L575">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_AgentService_1_BulkDeleteAsync_" data-uid="UltraGenericSystem.Services.AgentService`1.BulkDeleteAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_AgentService_1_BulkDeleteAsync_System_Collections_Generic_IEnumerable_System_Guid__System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Services.AgentService`1.BulkDeleteAsync(System.Collections.Generic.IEnumerable{System.Guid},System.Threading.CancellationToken)">BulkDeleteAsync(IEnumerable&lt;Guid&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.AgentService-1.yml" sourcestartlinenumber="1">Performs bulk delete operations using agent orchestration</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;AgentResponse&lt;BulkOperationResult&lt;Guid&gt;&gt;&gt; BulkDeleteAsync(IEnumerable&lt;Guid&gt; ids, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;</td>
+        <td><span class="parametername">ids</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="UltraGenericSystem.Models.AgentResponse-1.html">AgentResponse</a>&lt;<a class="xref" href="UltraGenericSystem.Services.BulkOperationResult-1.html">BulkOperationResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_AgentService_1_BulkUpdateAsync_System_Collections_Generic_IEnumerable__0__System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.AgentService%601.BulkUpdateAsync(System.Collections.Generic.IEnumerable%7B%600%7D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/AgentService.cs/#L539">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_AgentService_1_BulkUpdateAsync_" data-uid="UltraGenericSystem.Services.AgentService`1.BulkUpdateAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_AgentService_1_BulkUpdateAsync_System_Collections_Generic_IEnumerable__0__System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Services.AgentService`1.BulkUpdateAsync(System.Collections.Generic.IEnumerable{`0},System.Threading.CancellationToken)">BulkUpdateAsync(IEnumerable&lt;T&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.AgentService-1.yml" sourcestartlinenumber="1">Performs bulk update operations using agent orchestration</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;AgentResponse&lt;BulkOperationResult&lt;T&gt;&gt;&gt; BulkUpdateAsync(IEnumerable&lt;T&gt; entities, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</td>
+        <td><span class="parametername">entities</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="UltraGenericSystem.Models.AgentResponse-1.html">AgentResponse</a>&lt;<a class="xref" href="UltraGenericSystem.Services.BulkOperationResult-1.html">BulkOperationResult</a>&lt;T&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_AgentService_1_CountAsync_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.AgentService%601.CountAsync(System.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/AgentService.cs/#L453">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_AgentService_1_CountAsync_" data-uid="UltraGenericSystem.Services.AgentService`1.CountAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_AgentService_1_CountAsync_System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Services.AgentService`1.CountAsync(System.Threading.CancellationToken)">CountAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.AgentService-1.yml" sourcestartlinenumber="1">Counts entities using agent orchestration</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;AgentResponse&lt;int&gt;&gt; CountAsync(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="UltraGenericSystem.Models.AgentResponse-1.html">AgentResponse</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_AgentService_1_CreateAsync_UltraGenericSystem_Models_AgentCreateRequest__0__System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.AgentService%601.CreateAsync(UltraGenericSystem.Models.AgentCreateRequest%7B%600%7D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/AgentService.cs/#L92">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_AgentService_1_CreateAsync_" data-uid="UltraGenericSystem.Services.AgentService`1.CreateAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_AgentService_1_CreateAsync_UltraGenericSystem_Models_AgentCreateRequest__0__System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Services.AgentService`1.CreateAsync(UltraGenericSystem.Models.AgentCreateRequest{`0},System.Threading.CancellationToken)">CreateAsync(AgentCreateRequest&lt;T&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.AgentService-1.yml" sourcestartlinenumber="1">Creates a new entity using agent orchestration</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;AgentResponse&lt;T&gt;&gt; CreateAsync(AgentCreateRequest&lt;T&gt; request, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="UltraGenericSystem.Models.AgentCreateRequest-1.html">AgentCreateRequest</a>&lt;T&gt;</td>
+        <td><span class="parametername">request</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="UltraGenericSystem.Models.AgentResponse-1.html">AgentResponse</a>&lt;T&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_AgentService_1_DeleteAsync_UltraGenericSystem_Models_AgentDeleteRequest_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.AgentService%601.DeleteAsync(UltraGenericSystem.Models.AgentDeleteRequest%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/AgentService.cs/#L156">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_AgentService_1_DeleteAsync_" data-uid="UltraGenericSystem.Services.AgentService`1.DeleteAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_AgentService_1_DeleteAsync_UltraGenericSystem_Models_AgentDeleteRequest_System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Services.AgentService`1.DeleteAsync(UltraGenericSystem.Models.AgentDeleteRequest,System.Threading.CancellationToken)">DeleteAsync(AgentDeleteRequest, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.AgentService-1.yml" sourcestartlinenumber="1">Deletes an entity using agent orchestration</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;AgentResponse&lt;bool&gt;&gt; DeleteAsync(AgentDeleteRequest request, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="UltraGenericSystem.Models.AgentDeleteRequest.html">AgentDeleteRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="UltraGenericSystem.Models.AgentResponse-1.html">AgentResponse</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_AgentService_1_ExistsAsync_System_Guid_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.AgentService%601.ExistsAsync(System.Guid%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/AgentService.cs/#L481">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_AgentService_1_ExistsAsync_" data-uid="UltraGenericSystem.Services.AgentService`1.ExistsAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_AgentService_1_ExistsAsync_System_Guid_System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Services.AgentService`1.ExistsAsync(System.Guid,System.Threading.CancellationToken)">ExistsAsync(Guid, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.AgentService-1.yml" sourcestartlinenumber="1">Checks if an entity exists using agent orchestration</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;AgentResponse&lt;bool&gt;&gt; ExistsAsync(Guid id, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="UltraGenericSystem.Models.AgentResponse-1.html">AgentResponse</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_AgentService_1_GetAllAsync_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.AgentService%601.GetAllAsync(System.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/AgentService.cs/#L209">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_AgentService_1_GetAllAsync_" data-uid="UltraGenericSystem.Services.AgentService`1.GetAllAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_AgentService_1_GetAllAsync_System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Services.AgentService`1.GetAllAsync(System.Threading.CancellationToken)">GetAllAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.AgentService-1.yml" sourcestartlinenumber="1">Gets all entities using agent orchestration</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;AgentResponse&lt;IEnumerable&lt;T&gt;&gt;&gt; GetAllAsync(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="UltraGenericSystem.Models.AgentResponse-1.html">AgentResponse</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_AgentService_1_GetByCreatedByAsync_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.AgentService%601.GetByCreatedByAsync(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/AgentService.cs/#L333">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_AgentService_1_GetByCreatedByAsync_" data-uid="UltraGenericSystem.Services.AgentService`1.GetByCreatedByAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_AgentService_1_GetByCreatedByAsync_System_String_System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Services.AgentService`1.GetByCreatedByAsync(System.String,System.Threading.CancellationToken)">GetByCreatedByAsync(string, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.AgentService-1.yml" sourcestartlinenumber="1">Gets entities created by a specific user using agent orchestration</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;AgentResponse&lt;IEnumerable&lt;T&gt;&gt;&gt; GetByCreatedByAsync(string createdBy, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">createdBy</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="UltraGenericSystem.Models.AgentResponse-1.html">AgentResponse</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_AgentService_1_GetByDateRangeAsync_System_DateTime_System_DateTime_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.AgentService%601.GetByDateRangeAsync(System.DateTime%2CSystem.DateTime%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/AgentService.cs/#L358">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_AgentService_1_GetByDateRangeAsync_" data-uid="UltraGenericSystem.Services.AgentService`1.GetByDateRangeAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_AgentService_1_GetByDateRangeAsync_System_DateTime_System_DateTime_System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Services.AgentService`1.GetByDateRangeAsync(System.DateTime,System.DateTime,System.Threading.CancellationToken)">GetByDateRangeAsync(DateTime, DateTime, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.AgentService-1.yml" sourcestartlinenumber="1">Gets entities within a date range using agent orchestration</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;AgentResponse&lt;IEnumerable&lt;T&gt;&gt;&gt; GetByDateRangeAsync(DateTime startDate, DateTime endDate, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+        <td><span class="parametername">startDate</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+        <td><span class="parametername">endDate</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="UltraGenericSystem.Models.AgentResponse-1.html">AgentResponse</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_AgentService_1_GetByIdAsync_System_Guid_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.AgentService%601.GetByIdAsync(System.Guid%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/AgentService.cs/#L188">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_AgentService_1_GetByIdAsync_" data-uid="UltraGenericSystem.Services.AgentService`1.GetByIdAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_AgentService_1_GetByIdAsync_System_Guid_System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Services.AgentService`1.GetByIdAsync(System.Guid,System.Threading.CancellationToken)">GetByIdAsync(Guid, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.AgentService-1.yml" sourcestartlinenumber="1">Gets an entity by ID using agent orchestration</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;AgentResponse&lt;T&gt;&gt; GetByIdAsync(Guid id, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="UltraGenericSystem.Models.AgentResponse-1.html">AgentResponse</a>&lt;T&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_AgentService_1_GetByMetadataAsync_System_String_System_Object_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.AgentService%601.GetByMetadataAsync(System.String%2CSystem.Object%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/AgentService.cs/#L383">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_AgentService_1_GetByMetadataAsync_" data-uid="UltraGenericSystem.Services.AgentService`1.GetByMetadataAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_AgentService_1_GetByMetadataAsync_System_String_System_Object_System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Services.AgentService`1.GetByMetadataAsync(System.String,System.Object,System.Threading.CancellationToken)">GetByMetadataAsync(string, object, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.AgentService-1.yml" sourcestartlinenumber="1">Gets entities with metadata using agent orchestration</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;AgentResponse&lt;IEnumerable&lt;T&gt;&gt;&gt; GetByMetadataAsync(string key, object value, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="UltraGenericSystem.Models.AgentResponse-1.html">AgentResponse</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_AgentService_1_GetByTagAsync_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.AgentService%601.GetByTagAsync(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/AgentService.cs/#L283">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_AgentService_1_GetByTagAsync_" data-uid="UltraGenericSystem.Services.AgentService`1.GetByTagAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_AgentService_1_GetByTagAsync_System_String_System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Services.AgentService`1.GetByTagAsync(System.String,System.Threading.CancellationToken)">GetByTagAsync(string, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.AgentService-1.yml" sourcestartlinenumber="1">Gets entities by tag using agent orchestration</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;AgentResponse&lt;IEnumerable&lt;T&gt;&gt;&gt; GetByTagAsync(string tag, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">tag</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="UltraGenericSystem.Models.AgentResponse-1.html">AgentResponse</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_AgentService_1_GetByTagsAsync_System_String___System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.AgentService%601.GetByTagsAsync(System.String%5B%5D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/AgentService.cs/#L308">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_AgentService_1_GetByTagsAsync_" data-uid="UltraGenericSystem.Services.AgentService`1.GetByTagsAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_AgentService_1_GetByTagsAsync_System_String___System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Services.AgentService`1.GetByTagsAsync(System.String[],System.Threading.CancellationToken)">GetByTagsAsync(string[], CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.AgentService-1.yml" sourcestartlinenumber="1">Gets entities by multiple tags using agent orchestration</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;AgentResponse&lt;IEnumerable&lt;T&gt;&gt;&gt; GetByTagsAsync(string[] tags, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</td>
+        <td><span class="parametername">tags</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="UltraGenericSystem.Models.AgentResponse-1.html">AgentResponse</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_AgentService_1_GetDeletedAsync_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.AgentService%601.GetDeletedAsync(System.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/AgentService.cs/#L429">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_AgentService_1_GetDeletedAsync_" data-uid="UltraGenericSystem.Services.AgentService`1.GetDeletedAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_AgentService_1_GetDeletedAsync_System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Services.AgentService`1.GetDeletedAsync(System.Threading.CancellationToken)">GetDeletedAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.AgentService-1.yml" sourcestartlinenumber="1">Gets all soft-deleted entities using agent orchestration</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;AgentResponse&lt;IEnumerable&lt;T&gt;&gt;&gt; GetDeletedAsync(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="UltraGenericSystem.Models.AgentResponse-1.html">AgentResponse</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_AgentService_1_GetPagedAsync_System_Int32_System_Int32_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.AgentService%601.GetPagedAsync(System.Int32%2CSystem.Int32%2CSystem.String%2CSystem.String%2CSystem.Collections.Generic.Dictionary%7BSystem.String%2CSystem.Object%7D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/AgentService.cs/#L233">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_AgentService_1_GetPagedAsync_" data-uid="UltraGenericSystem.Services.AgentService`1.GetPagedAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_AgentService_1_GetPagedAsync_System_Int32_System_Int32_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Services.AgentService`1.GetPagedAsync(System.Int32,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Threading.CancellationToken)">GetPagedAsync(int, int, string?, string?, Dictionary&lt;string, object&gt;?, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.AgentService-1.yml" sourcestartlinenumber="1">Gets entities with pagination using agent orchestration</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;AgentResponse&lt;PaginatedResult&lt;T&gt;&gt;&gt; GetPagedAsync(int pageNumber, int pageSize, string? sortBy = null, string? sortDirection = null, Dictionary&lt;string, object&gt;? filters = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">pageNumber</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">pageSize</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">sortBy</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">sortDirection</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
+        <td><span class="parametername">filters</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="UltraGenericSystem.Models.AgentResponse-1.html">AgentResponse</a>&lt;<a class="xref" href="UltraGenericSystem.Models.PaginatedResult-1.html">PaginatedResult</a>&lt;T&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_AgentService_1_ProcessAsync_UltraGenericSystem_Models_AgentRequest__0__System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.AgentService%601.ProcessAsync(UltraGenericSystem.Models.AgentRequest%7B%600%7D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/AgentService.cs/#L25">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_AgentService_1_ProcessAsync_" data-uid="UltraGenericSystem.Services.AgentService`1.ProcessAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_AgentService_1_ProcessAsync_UltraGenericSystem_Models_AgentRequest__0__System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Services.AgentService`1.ProcessAsync(UltraGenericSystem.Models.AgentRequest{`0},System.Threading.CancellationToken)">ProcessAsync(AgentRequest&lt;T&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.AgentService-1.yml" sourcestartlinenumber="1">Processes a generic agent request</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;AgentResponse&lt;T&gt;&gt; ProcessAsync(AgentRequest&lt;T&gt; request, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="UltraGenericSystem.Models.AgentRequest-1.html">AgentRequest</a>&lt;T&gt;</td>
+        <td><span class="parametername">request</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="UltraGenericSystem.Models.AgentResponse-1.html">AgentResponse</a>&lt;T&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_AgentService_1_QueryAsync_UltraGenericSystem_Models_AgentQueryRequest_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.AgentService%601.QueryAsync(UltraGenericSystem.Models.AgentQueryRequest%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/AgentService.cs/#L56">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_AgentService_1_QueryAsync_" data-uid="UltraGenericSystem.Services.AgentService`1.QueryAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_AgentService_1_QueryAsync_UltraGenericSystem_Models_AgentQueryRequest_System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Services.AgentService`1.QueryAsync(UltraGenericSystem.Models.AgentQueryRequest,System.Threading.CancellationToken)">QueryAsync(AgentQueryRequest, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.AgentService-1.yml" sourcestartlinenumber="1">Queries entities using agent orchestration</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;AgentResponse&lt;IEnumerable&lt;T&gt;&gt;&gt; QueryAsync(AgentQueryRequest request, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="UltraGenericSystem.Models.AgentQueryRequest.html">AgentQueryRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="UltraGenericSystem.Models.AgentResponse-1.html">AgentResponse</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_AgentService_1_RestoreAsync_System_Guid_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.AgentService%601.RestoreAsync(System.Guid%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/AgentService.cs/#L408">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_AgentService_1_RestoreAsync_" data-uid="UltraGenericSystem.Services.AgentService`1.RestoreAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_AgentService_1_RestoreAsync_System_Guid_System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Services.AgentService`1.RestoreAsync(System.Guid,System.Threading.CancellationToken)">RestoreAsync(Guid, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.AgentService-1.yml" sourcestartlinenumber="1">Restores a soft-deleted entity using agent orchestration</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;AgentResponse&lt;T&gt;&gt; RestoreAsync(Guid id, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="UltraGenericSystem.Models.AgentResponse-1.html">AgentResponse</a>&lt;T&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_AgentService_1_UpdateAsync_UltraGenericSystem_Models_AgentUpdateRequest__0__System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.AgentService%601.UpdateAsync(UltraGenericSystem.Models.AgentUpdateRequest%7B%600%7D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/AgentService.cs/#L123">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_AgentService_1_UpdateAsync_" data-uid="UltraGenericSystem.Services.AgentService`1.UpdateAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_AgentService_1_UpdateAsync_UltraGenericSystem_Models_AgentUpdateRequest__0__System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Services.AgentService`1.UpdateAsync(UltraGenericSystem.Models.AgentUpdateRequest{`0},System.Threading.CancellationToken)">UpdateAsync(AgentUpdateRequest&lt;T&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.AgentService-1.yml" sourcestartlinenumber="1">Updates an existing entity using agent orchestration</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;AgentResponse&lt;T&gt;&gt; UpdateAsync(AgentUpdateRequest&lt;T&gt; request, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="UltraGenericSystem.Models.AgentUpdateRequest-1.html">AgentUpdateRequest</a>&lt;T&gt;</td>
+        <td><span class="parametername">request</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="UltraGenericSystem.Models.AgentResponse-1.html">AgentResponse</a>&lt;T&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="UltraGenericSystem.Services.IAgentService-1.html">IAgentService&lt;T&gt;</a>
+  </div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_AgentService_1.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.AgentService%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/AgentService.cs/#L12" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

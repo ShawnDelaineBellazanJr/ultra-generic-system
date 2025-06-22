@@ -1,0 +1,901 @@
+### YamlMime:ManagedReference
+items:
+- uid: UltraGenericSystem.Services.Agents.SKAgentFactory
+  commentId: T:UltraGenericSystem.Services.Agents.SKAgentFactory
+  id: SKAgentFactory
+  parent: UltraGenericSystem.Services.Agents
+  children:
+  - UltraGenericSystem.Services.Agents.SKAgentFactory.#ctor(Microsoft.SemanticKernel.Kernel,Microsoft.Extensions.Logging.ILogger{UltraGenericSystem.Services.Agents.SKAgentFactory})
+  - UltraGenericSystem.Services.Agents.SKAgentFactory.CreateAllAgents
+  - UltraGenericSystem.Services.Agents.SKAgentFactory.CreateChatCompletionAgent(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+  - UltraGenericSystem.Services.Agents.SKAgentFactory.CreateOrchestrationPatterns(System.Collections.Generic.IEnumerable{Microsoft.SemanticKernel.Agents.ChatCompletionAgent})
+  langs:
+  - csharp
+  - vb
+  name: SKAgentFactory
+  nameWithType: SKAgentFactory
+  fullName: UltraGenericSystem.Services.Agents.SKAgentFactory
+  type: Class
+  source:
+    remote:
+      path: Services/Agents/SKAgentFactory.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: SKAgentFactory
+    path: ../Services/Agents/SKAgentFactory.cs
+    startLine: 27
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.Agents
+  summary: Factory for creating SK agents using the official Agent Framework
+  example: []
+  syntax:
+    content: public class SKAgentFactory
+    content.vb: Public Class SKAgentFactory
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: UltraGenericSystem.Services.Agents.SKAgentFactory.#ctor(Microsoft.SemanticKernel.Kernel,Microsoft.Extensions.Logging.ILogger{UltraGenericSystem.Services.Agents.SKAgentFactory})
+  commentId: M:UltraGenericSystem.Services.Agents.SKAgentFactory.#ctor(Microsoft.SemanticKernel.Kernel,Microsoft.Extensions.Logging.ILogger{UltraGenericSystem.Services.Agents.SKAgentFactory})
+  id: '#ctor(Microsoft.SemanticKernel.Kernel,Microsoft.Extensions.Logging.ILogger{UltraGenericSystem.Services.Agents.SKAgentFactory})'
+  parent: UltraGenericSystem.Services.Agents.SKAgentFactory
+  langs:
+  - csharp
+  - vb
+  name: SKAgentFactory(Kernel, ILogger<SKAgentFactory>)
+  nameWithType: SKAgentFactory.SKAgentFactory(Kernel, ILogger<SKAgentFactory>)
+  fullName: UltraGenericSystem.Services.Agents.SKAgentFactory.SKAgentFactory(Microsoft.SemanticKernel.Kernel, Microsoft.Extensions.Logging.ILogger<UltraGenericSystem.Services.Agents.SKAgentFactory>)
+  type: Constructor
+  source:
+    remote:
+      path: Services/Agents/SKAgentFactory.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: .ctor
+    path: ../Services/Agents/SKAgentFactory.cs
+    startLine: 32
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.Agents
+  syntax:
+    content: public SKAgentFactory(Kernel kernel, ILogger<SKAgentFactory> logger)
+    parameters:
+    - id: kernel
+      type: Microsoft.SemanticKernel.Kernel
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger{UltraGenericSystem.Services.Agents.SKAgentFactory}
+    content.vb: Public Sub New(kernel As Kernel, logger As ILogger(Of SKAgentFactory))
+  overload: UltraGenericSystem.Services.Agents.SKAgentFactory.#ctor*
+  nameWithType.vb: SKAgentFactory.New(Kernel, ILogger(Of SKAgentFactory))
+  fullName.vb: UltraGenericSystem.Services.Agents.SKAgentFactory.New(Microsoft.SemanticKernel.Kernel, Microsoft.Extensions.Logging.ILogger(Of UltraGenericSystem.Services.Agents.SKAgentFactory))
+  name.vb: New(Kernel, ILogger(Of SKAgentFactory))
+- uid: UltraGenericSystem.Services.Agents.SKAgentFactory.CreateChatCompletionAgent(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+  commentId: M:UltraGenericSystem.Services.Agents.SKAgentFactory.CreateChatCompletionAgent(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+  id: CreateChatCompletionAgent(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+  parent: UltraGenericSystem.Services.Agents.SKAgentFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateChatCompletionAgent(string, string, Dictionary<string, object>?)
+  nameWithType: SKAgentFactory.CreateChatCompletionAgent(string, string, Dictionary<string, object>?)
+  fullName: UltraGenericSystem.Services.Agents.SKAgentFactory.CreateChatCompletionAgent(string, string, System.Collections.Generic.Dictionary<string, object>?)
+  type: Method
+  source:
+    remote:
+      path: Services/Agents/SKAgentFactory.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: CreateChatCompletionAgent
+    path: ../Services/Agents/SKAgentFactory.cs
+    startLine: 41
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.Agents
+  summary: Creates a ChatCompletionAgent with basic configuration
+  example: []
+  syntax:
+    content: public ChatCompletionAgent CreateChatCompletionAgent(string name, string instructions, Dictionary<string, object>? arguments = null)
+    parameters:
+    - id: name
+      type: System.String
+    - id: instructions
+      type: System.String
+    - id: arguments
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+    return:
+      type: Microsoft.SemanticKernel.Agents.ChatCompletionAgent
+    content.vb: Public Function CreateChatCompletionAgent(name As String, instructions As String, arguments As Dictionary(Of String, Object) = Nothing) As ChatCompletionAgent
+  overload: UltraGenericSystem.Services.Agents.SKAgentFactory.CreateChatCompletionAgent*
+  nameWithType.vb: SKAgentFactory.CreateChatCompletionAgent(String, String, Dictionary(Of String, Object))
+  fullName.vb: UltraGenericSystem.Services.Agents.SKAgentFactory.CreateChatCompletionAgent(String, String, System.Collections.Generic.Dictionary(Of String, Object))
+  name.vb: CreateChatCompletionAgent(String, String, Dictionary(Of String, Object))
+- uid: UltraGenericSystem.Services.Agents.SKAgentFactory.CreateOrchestrationPatterns(System.Collections.Generic.IEnumerable{Microsoft.SemanticKernel.Agents.ChatCompletionAgent})
+  commentId: M:UltraGenericSystem.Services.Agents.SKAgentFactory.CreateOrchestrationPatterns(System.Collections.Generic.IEnumerable{Microsoft.SemanticKernel.Agents.ChatCompletionAgent})
+  id: CreateOrchestrationPatterns(System.Collections.Generic.IEnumerable{Microsoft.SemanticKernel.Agents.ChatCompletionAgent})
+  parent: UltraGenericSystem.Services.Agents.SKAgentFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateOrchestrationPatterns(IEnumerable<ChatCompletionAgent>)
+  nameWithType: SKAgentFactory.CreateOrchestrationPatterns(IEnumerable<ChatCompletionAgent>)
+  fullName: UltraGenericSystem.Services.Agents.SKAgentFactory.CreateOrchestrationPatterns(System.Collections.Generic.IEnumerable<Microsoft.SemanticKernel.Agents.ChatCompletionAgent>)
+  type: Method
+  source:
+    remote:
+      path: Services/Agents/SKAgentFactory.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: CreateOrchestrationPatterns
+    path: ../Services/Agents/SKAgentFactory.cs
+    startLine: 62
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.Agents
+  summary: Creates basic orchestration patterns
+  example: []
+  syntax:
+    content: public OrchestrationPatterns CreateOrchestrationPatterns(IEnumerable<ChatCompletionAgent> agents)
+    parameters:
+    - id: agents
+      type: System.Collections.Generic.IEnumerable{Microsoft.SemanticKernel.Agents.ChatCompletionAgent}
+    return:
+      type: UltraGenericSystem.Services.Agents.OrchestrationPatterns
+    content.vb: Public Function CreateOrchestrationPatterns(agents As IEnumerable(Of ChatCompletionAgent)) As OrchestrationPatterns
+  overload: UltraGenericSystem.Services.Agents.SKAgentFactory.CreateOrchestrationPatterns*
+  nameWithType.vb: SKAgentFactory.CreateOrchestrationPatterns(IEnumerable(Of ChatCompletionAgent))
+  fullName.vb: UltraGenericSystem.Services.Agents.SKAgentFactory.CreateOrchestrationPatterns(System.Collections.Generic.IEnumerable(Of Microsoft.SemanticKernel.Agents.ChatCompletionAgent))
+  name.vb: CreateOrchestrationPatterns(IEnumerable(Of ChatCompletionAgent))
+- uid: UltraGenericSystem.Services.Agents.SKAgentFactory.CreateAllAgents
+  commentId: M:UltraGenericSystem.Services.Agents.SKAgentFactory.CreateAllAgents
+  id: CreateAllAgents
+  parent: UltraGenericSystem.Services.Agents.SKAgentFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateAllAgents()
+  nameWithType: SKAgentFactory.CreateAllAgents()
+  fullName: UltraGenericSystem.Services.Agents.SKAgentFactory.CreateAllAgents()
+  type: Method
+  source:
+    remote:
+      path: Services/Agents/SKAgentFactory.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: CreateAllAgents
+    path: ../Services/Agents/SKAgentFactory.cs
+    startLine: 108
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services.Agents
+  summary: Creates all core agents for the system
+  example: []
+  syntax:
+    content: public List<ChatCompletionAgent> CreateAllAgents()
+    return:
+      type: System.Collections.Generic.List{Microsoft.SemanticKernel.Agents.ChatCompletionAgent}
+    content.vb: Public Function CreateAllAgents() As List(Of ChatCompletionAgent)
+  overload: UltraGenericSystem.Services.Agents.SKAgentFactory.CreateAllAgents*
+references:
+- uid: UltraGenericSystem.Services.Agents
+  commentId: N:UltraGenericSystem.Services.Agents
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Services.Agents
+  nameWithType: UltraGenericSystem.Services.Agents
+  fullName: UltraGenericSystem.Services.Agents
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Services
+    name: Services
+    href: UltraGenericSystem.Services.html
+  - name: .
+  - uid: UltraGenericSystem.Services.Agents
+    name: Agents
+    href: UltraGenericSystem.Services.Agents.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Services
+    name: Services
+    href: UltraGenericSystem.Services.html
+  - name: .
+  - uid: UltraGenericSystem.Services.Agents
+    name: Agents
+    href: UltraGenericSystem.Services.Agents.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UltraGenericSystem.Services.Agents.SKAgentFactory.#ctor*
+  commentId: Overload:UltraGenericSystem.Services.Agents.SKAgentFactory.#ctor
+  href: UltraGenericSystem.Services.Agents.SKAgentFactory.html#UltraGenericSystem_Services_Agents_SKAgentFactory__ctor_Microsoft_SemanticKernel_Kernel_Microsoft_Extensions_Logging_ILogger_UltraGenericSystem_Services_Agents_SKAgentFactory__
+  name: SKAgentFactory
+  nameWithType: SKAgentFactory.SKAgentFactory
+  fullName: UltraGenericSystem.Services.Agents.SKAgentFactory.SKAgentFactory
+  nameWithType.vb: SKAgentFactory.New
+  fullName.vb: UltraGenericSystem.Services.Agents.SKAgentFactory.New
+  name.vb: New
+- uid: Microsoft.SemanticKernel.Kernel
+  commentId: T:Microsoft.SemanticKernel.Kernel
+  parent: Microsoft.SemanticKernel
+  isExternal: true
+  name: Kernel
+  nameWithType: Kernel
+  fullName: Microsoft.SemanticKernel.Kernel
+- uid: Microsoft.Extensions.Logging.ILogger{UltraGenericSystem.Services.Agents.SKAgentFactory}
+  commentId: T:Microsoft.Extensions.Logging.ILogger{UltraGenericSystem.Services.Agents.SKAgentFactory}
+  parent: Microsoft.Extensions.Logging
+  definition: Microsoft.Extensions.Logging.ILogger`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<SKAgentFactory>
+  nameWithType: ILogger<SKAgentFactory>
+  fullName: Microsoft.Extensions.Logging.ILogger<UltraGenericSystem.Services.Agents.SKAgentFactory>
+  nameWithType.vb: ILogger(Of SKAgentFactory)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of UltraGenericSystem.Services.Agents.SKAgentFactory)
+  name.vb: ILogger(Of SKAgentFactory)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - uid: UltraGenericSystem.Services.Agents.SKAgentFactory
+    name: SKAgentFactory
+    href: UltraGenericSystem.Services.Agents.SKAgentFactory.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Services.Agents.SKAgentFactory
+    name: SKAgentFactory
+    href: UltraGenericSystem.Services.Agents.SKAgentFactory.html
+  - name: )
+- uid: Microsoft.SemanticKernel
+  commentId: N:Microsoft.SemanticKernel
+  isExternal: true
+  name: Microsoft.SemanticKernel
+  nameWithType: Microsoft.SemanticKernel
+  fullName: Microsoft.SemanticKernel
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel
+    name: SemanticKernel
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel
+    name: SemanticKernel
+    isExternal: true
+- uid: Microsoft.Extensions.Logging.ILogger`1
+  commentId: T:Microsoft.Extensions.Logging.ILogger`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<TCategoryName>
+  nameWithType: ILogger<TCategoryName>
+  fullName: Microsoft.Extensions.Logging.ILogger<TCategoryName>
+  nameWithType.vb: ILogger(Of TCategoryName)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of TCategoryName)
+  name.vb: ILogger(Of TCategoryName)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - name: TCategoryName
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCategoryName
+  - name: )
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+- uid: UltraGenericSystem.Services.Agents.SKAgentFactory.CreateChatCompletionAgent*
+  commentId: Overload:UltraGenericSystem.Services.Agents.SKAgentFactory.CreateChatCompletionAgent
+  href: UltraGenericSystem.Services.Agents.SKAgentFactory.html#UltraGenericSystem_Services_Agents_SKAgentFactory_CreateChatCompletionAgent_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__
+  name: CreateChatCompletionAgent
+  nameWithType: SKAgentFactory.CreateChatCompletionAgent
+  fullName: UltraGenericSystem.Services.Agents.SKAgentFactory.CreateChatCompletionAgent
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Collections.Generic.Dictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, object>
+  nameWithType: Dictionary<string, object>
+  fullName: System.Collections.Generic.Dictionary<string, object>
+  nameWithType.vb: Dictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, Object)
+  name.vb: Dictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Microsoft.SemanticKernel.Agents.ChatCompletionAgent
+  commentId: T:Microsoft.SemanticKernel.Agents.ChatCompletionAgent
+  parent: Microsoft.SemanticKernel.Agents
+  isExternal: true
+  name: ChatCompletionAgent
+  nameWithType: ChatCompletionAgent
+  fullName: Microsoft.SemanticKernel.Agents.ChatCompletionAgent
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Microsoft.SemanticKernel.Agents
+  commentId: N:Microsoft.SemanticKernel.Agents
+  isExternal: true
+  name: Microsoft.SemanticKernel.Agents
+  nameWithType: Microsoft.SemanticKernel.Agents
+  fullName: Microsoft.SemanticKernel.Agents
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel
+    name: SemanticKernel
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel.Agents
+    name: Agents
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel
+    name: SemanticKernel
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel.Agents
+    name: Agents
+    isExternal: true
+- uid: UltraGenericSystem.Services.Agents.SKAgentFactory.CreateOrchestrationPatterns*
+  commentId: Overload:UltraGenericSystem.Services.Agents.SKAgentFactory.CreateOrchestrationPatterns
+  href: UltraGenericSystem.Services.Agents.SKAgentFactory.html#UltraGenericSystem_Services_Agents_SKAgentFactory_CreateOrchestrationPatterns_System_Collections_Generic_IEnumerable_Microsoft_SemanticKernel_Agents_ChatCompletionAgent__
+  name: CreateOrchestrationPatterns
+  nameWithType: SKAgentFactory.CreateOrchestrationPatterns
+  fullName: UltraGenericSystem.Services.Agents.SKAgentFactory.CreateOrchestrationPatterns
+- uid: System.Collections.Generic.IEnumerable{Microsoft.SemanticKernel.Agents.ChatCompletionAgent}
+  commentId: T:System.Collections.Generic.IEnumerable{Microsoft.SemanticKernel.Agents.ChatCompletionAgent}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<ChatCompletionAgent>
+  nameWithType: IEnumerable<ChatCompletionAgent>
+  fullName: System.Collections.Generic.IEnumerable<Microsoft.SemanticKernel.Agents.ChatCompletionAgent>
+  nameWithType.vb: IEnumerable(Of ChatCompletionAgent)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Microsoft.SemanticKernel.Agents.ChatCompletionAgent)
+  name.vb: IEnumerable(Of ChatCompletionAgent)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: Microsoft.SemanticKernel.Agents.ChatCompletionAgent
+    name: ChatCompletionAgent
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.SemanticKernel.Agents.ChatCompletionAgent
+    name: ChatCompletionAgent
+    isExternal: true
+  - name: )
+- uid: UltraGenericSystem.Services.Agents.OrchestrationPatterns
+  commentId: T:UltraGenericSystem.Services.Agents.OrchestrationPatterns
+  parent: UltraGenericSystem.Services.Agents
+  href: UltraGenericSystem.Services.Agents.OrchestrationPatterns.html
+  name: OrchestrationPatterns
+  nameWithType: OrchestrationPatterns
+  fullName: UltraGenericSystem.Services.Agents.OrchestrationPatterns
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UltraGenericSystem.Services.Agents.SKAgentFactory.CreateAllAgents*
+  commentId: Overload:UltraGenericSystem.Services.Agents.SKAgentFactory.CreateAllAgents
+  href: UltraGenericSystem.Services.Agents.SKAgentFactory.html#UltraGenericSystem_Services_Agents_SKAgentFactory_CreateAllAgents
+  name: CreateAllAgents
+  nameWithType: SKAgentFactory.CreateAllAgents
+  fullName: UltraGenericSystem.Services.Agents.SKAgentFactory.CreateAllAgents
+- uid: System.Collections.Generic.List{Microsoft.SemanticKernel.Agents.ChatCompletionAgent}
+  commentId: T:System.Collections.Generic.List{Microsoft.SemanticKernel.Agents.ChatCompletionAgent}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<ChatCompletionAgent>
+  nameWithType: List<ChatCompletionAgent>
+  fullName: System.Collections.Generic.List<Microsoft.SemanticKernel.Agents.ChatCompletionAgent>
+  nameWithType.vb: List(Of ChatCompletionAgent)
+  fullName.vb: System.Collections.Generic.List(Of Microsoft.SemanticKernel.Agents.ChatCompletionAgent)
+  name.vb: List(Of ChatCompletionAgent)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Microsoft.SemanticKernel.Agents.ChatCompletionAgent
+    name: ChatCompletionAgent
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.SemanticKernel.Agents.ChatCompletionAgent
+    name: ChatCompletionAgent
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

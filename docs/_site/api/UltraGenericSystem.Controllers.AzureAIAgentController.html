@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class AzureAIAgentController </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class AzureAIAgentController ">
+    
+    <meta name="description" content="Azure AI Agent controller for managing Azure OpenAI interactions">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="UltraGenericSystem.Controllers.AzureAIAgentController">
+
+
+
+  <h1 id="UltraGenericSystem_Controllers_AzureAIAgentController" data-uid="UltraGenericSystem.Controllers.AzureAIAgentController" class="text-break">Class AzureAIAgentController</h1>
+  <div class="markdown level0 summary"><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Azure AI Agent controller for managing Azure OpenAI interactions</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase">ControllerBase</a></div>
+    <div class="level2"><span class="xref">AzureAIAgentController</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.statuscode#microsoft-aspnetcore-mvc-controllerbase-statuscode(system-int32)">ControllerBase.StatusCode(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.statuscode#microsoft-aspnetcore-mvc-controllerbase-statuscode(system-int32-system-object)">ControllerBase.StatusCode(int, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.content#microsoft-aspnetcore-mvc-controllerbase-content(system-string)">ControllerBase.Content(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.content#microsoft-aspnetcore-mvc-controllerbase-content(system-string-system-string)">ControllerBase.Content(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.content#microsoft-aspnetcore-mvc-controllerbase-content(system-string-system-string-system-text-encoding)">ControllerBase.Content(string, string, Encoding)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.content#microsoft-aspnetcore-mvc-controllerbase-content(system-string-microsoft-net-http-headers-mediatypeheadervalue)">ControllerBase.Content(string, MediaTypeHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.nocontent">ControllerBase.NoContent()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.ok#microsoft-aspnetcore-mvc-controllerbase-ok">ControllerBase.Ok()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.ok#microsoft-aspnetcore-mvc-controllerbase-ok(system-object)">ControllerBase.Ok(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirect">ControllerBase.Redirect(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirectpermanent">ControllerBase.RedirectPermanent(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirectpreservemethod">ControllerBase.RedirectPreserveMethod(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirectpermanentpreservemethod">ControllerBase.RedirectPermanentPreserveMethod(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.localredirect">ControllerBase.LocalRedirect(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.localredirectpermanent">ControllerBase.LocalRedirectPermanent(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.localredirectpreservemethod">ControllerBase.LocalRedirectPreserveMethod(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.localredirectpermanentpreservemethod">ControllerBase.LocalRedirectPermanentPreserveMethod(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#microsoft-aspnetcore-mvc-controllerbase-redirecttoaction">ControllerBase.RedirectToAction()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#microsoft-aspnetcore-mvc-controllerbase-redirecttoaction(system-string)">ControllerBase.RedirectToAction(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#microsoft-aspnetcore-mvc-controllerbase-redirecttoaction(system-string-system-object)">ControllerBase.RedirectToAction(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#microsoft-aspnetcore-mvc-controllerbase-redirecttoaction(system-string-system-string)">ControllerBase.RedirectToAction(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#microsoft-aspnetcore-mvc-controllerbase-redirecttoaction(system-string-system-string-system-object)">ControllerBase.RedirectToAction(string, string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#microsoft-aspnetcore-mvc-controllerbase-redirecttoaction(system-string-system-string-system-string)">ControllerBase.RedirectToAction(string, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#microsoft-aspnetcore-mvc-controllerbase-redirecttoaction(system-string-system-string-system-object-system-string)">ControllerBase.RedirectToAction(string, string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpreservemethod">ControllerBase.RedirectToActionPreserveMethod(string, string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoactionpermanent(system-string)">ControllerBase.RedirectToActionPermanent(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoactionpermanent(system-string-system-object)">ControllerBase.RedirectToActionPermanent(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoactionpermanent(system-string-system-string)">ControllerBase.RedirectToActionPermanent(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoactionpermanent(system-string-system-string-system-string)">ControllerBase.RedirectToActionPermanent(string, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoactionpermanent(system-string-system-string-system-object)">ControllerBase.RedirectToActionPermanent(string, string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoactionpermanent(system-string-system-string-system-object-system-string)">ControllerBase.RedirectToActionPermanent(string, string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanentpreservemethod">ControllerBase.RedirectToActionPermanentPreserveMethod(string, string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroute#microsoft-aspnetcore-mvc-controllerbase-redirecttoroute(system-string)">ControllerBase.RedirectToRoute(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroute#microsoft-aspnetcore-mvc-controllerbase-redirecttoroute(system-object)">ControllerBase.RedirectToRoute(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroute#microsoft-aspnetcore-mvc-controllerbase-redirecttoroute(system-string-system-object)">ControllerBase.RedirectToRoute(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroute#microsoft-aspnetcore-mvc-controllerbase-redirecttoroute(system-string-system-string)">ControllerBase.RedirectToRoute(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroute#microsoft-aspnetcore-mvc-controllerbase-redirecttoroute(system-string-system-object-system-string)">ControllerBase.RedirectToRoute(string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepreservemethod">ControllerBase.RedirectToRoutePreserveMethod(string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoroutepermanent(system-string)">ControllerBase.RedirectToRoutePermanent(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoroutepermanent(system-object)">ControllerBase.RedirectToRoutePermanent(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoroutepermanent(system-string-system-object)">ControllerBase.RedirectToRoutePermanent(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoroutepermanent(system-string-system-string)">ControllerBase.RedirectToRoutePermanent(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoroutepermanent(system-string-system-object-system-string)">ControllerBase.RedirectToRoutePermanent(string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepermanentpreservemethod">ControllerBase.RedirectToRoutePermanentPreserveMethod(string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopage#microsoft-aspnetcore-mvc-controllerbase-redirecttopage(system-string)">ControllerBase.RedirectToPage(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopage#microsoft-aspnetcore-mvc-controllerbase-redirecttopage(system-string-system-object)">ControllerBase.RedirectToPage(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopage#microsoft-aspnetcore-mvc-controllerbase-redirecttopage(system-string-system-string)">ControllerBase.RedirectToPage(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopage#microsoft-aspnetcore-mvc-controllerbase-redirecttopage(system-string-system-string-system-object)">ControllerBase.RedirectToPage(string, string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopage#microsoft-aspnetcore-mvc-controllerbase-redirecttopage(system-string-system-string-system-string)">ControllerBase.RedirectToPage(string, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopage#microsoft-aspnetcore-mvc-controllerbase-redirecttopage(system-string-system-string-system-object-system-string)">ControllerBase.RedirectToPage(string, string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttopagepermanent(system-string)">ControllerBase.RedirectToPagePermanent(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttopagepermanent(system-string-system-object)">ControllerBase.RedirectToPagePermanent(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttopagepermanent(system-string-system-string)">ControllerBase.RedirectToPagePermanent(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttopagepermanent(system-string-system-string-system-string)">ControllerBase.RedirectToPagePermanent(string, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttopagepermanent(system-string-system-string-system-object-system-string)">ControllerBase.RedirectToPagePermanent(string, string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepreservemethod">ControllerBase.RedirectToPagePreserveMethod(string, string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepermanentpreservemethod">ControllerBase.RedirectToPagePermanentPreserveMethod(string, string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-byte()-system-string)">ControllerBase.File(byte[], string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-byte()-system-string-system-boolean)">ControllerBase.File(byte[], string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-byte()-system-string-system-string)">ControllerBase.File(byte[], string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-byte()-system-string-system-string-system-boolean)">ControllerBase.File(byte[], string, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-byte()-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue)">ControllerBase.File(byte[], string, DateTimeOffset?, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-byte()-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue-system-boolean)">ControllerBase.File(byte[], string, DateTimeOffset?, EntityTagHeaderValue, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-byte()-system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue)">ControllerBase.File(byte[], string, string, DateTimeOffset?, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-byte()-system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue-system-boolean)">ControllerBase.File(byte[], string, string, DateTimeOffset?, EntityTagHeaderValue, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-io-stream-system-string)">ControllerBase.File(Stream, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-io-stream-system-string-system-boolean)">ControllerBase.File(Stream, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-io-stream-system-string-system-string)">ControllerBase.File(Stream, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-io-stream-system-string-system-string-system-boolean)">ControllerBase.File(Stream, string, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-io-stream-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue)">ControllerBase.File(Stream, string, DateTimeOffset?, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-io-stream-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue-system-boolean)">ControllerBase.File(Stream, string, DateTimeOffset?, EntityTagHeaderValue, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-io-stream-system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue)">ControllerBase.File(Stream, string, string, DateTimeOffset?, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-io-stream-system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue-system-boolean)">ControllerBase.File(Stream, string, string, DateTimeOffset?, EntityTagHeaderValue, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-string-system-string)">ControllerBase.File(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-string-system-string-system-boolean)">ControllerBase.File(string, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-string-system-string-system-string)">ControllerBase.File(string, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-string-system-string-system-string-system-boolean)">ControllerBase.File(string, string, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue)">ControllerBase.File(string, string, DateTimeOffset?, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue-system-boolean)">ControllerBase.File(string, string, DateTimeOffset?, EntityTagHeaderValue, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-string-system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue)">ControllerBase.File(string, string, string, DateTimeOffset?, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-string-system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue-system-boolean)">ControllerBase.File(string, string, string, DateTimeOffset?, EntityTagHeaderValue, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#microsoft-aspnetcore-mvc-controllerbase-physicalfile(system-string-system-string)">ControllerBase.PhysicalFile(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#microsoft-aspnetcore-mvc-controllerbase-physicalfile(system-string-system-string-system-boolean)">ControllerBase.PhysicalFile(string, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#microsoft-aspnetcore-mvc-controllerbase-physicalfile(system-string-system-string-system-string)">ControllerBase.PhysicalFile(string, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#microsoft-aspnetcore-mvc-controllerbase-physicalfile(system-string-system-string-system-string-system-boolean)">ControllerBase.PhysicalFile(string, string, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#microsoft-aspnetcore-mvc-controllerbase-physicalfile(system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue)">ControllerBase.PhysicalFile(string, string, DateTimeOffset?, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#microsoft-aspnetcore-mvc-controllerbase-physicalfile(system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue-system-boolean)">ControllerBase.PhysicalFile(string, string, DateTimeOffset?, EntityTagHeaderValue, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#microsoft-aspnetcore-mvc-controllerbase-physicalfile(system-string-system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue)">ControllerBase.PhysicalFile(string, string, string, DateTimeOffset?, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#microsoft-aspnetcore-mvc-controllerbase-physicalfile(system-string-system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue-system-boolean)">ControllerBase.PhysicalFile(string, string, string, DateTimeOffset?, EntityTagHeaderValue, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.unauthorized#microsoft-aspnetcore-mvc-controllerbase-unauthorized">ControllerBase.Unauthorized()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.unauthorized#microsoft-aspnetcore-mvc-controllerbase-unauthorized(system-object)">ControllerBase.Unauthorized(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.notfound#microsoft-aspnetcore-mvc-controllerbase-notfound">ControllerBase.NotFound()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.notfound#microsoft-aspnetcore-mvc-controllerbase-notfound(system-object)">ControllerBase.NotFound(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.badrequest#microsoft-aspnetcore-mvc-controllerbase-badrequest">ControllerBase.BadRequest()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.badrequest#microsoft-aspnetcore-mvc-controllerbase-badrequest(system-object)">ControllerBase.BadRequest(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.badrequest#microsoft-aspnetcore-mvc-controllerbase-badrequest(microsoft-aspnetcore-mvc-modelbinding-modelstatedictionary)">ControllerBase.BadRequest(ModelStateDictionary)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.unprocessableentity#microsoft-aspnetcore-mvc-controllerbase-unprocessableentity">ControllerBase.UnprocessableEntity()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.unprocessableentity#microsoft-aspnetcore-mvc-controllerbase-unprocessableentity(system-object)">ControllerBase.UnprocessableEntity(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.unprocessableentity#microsoft-aspnetcore-mvc-controllerbase-unprocessableentity(microsoft-aspnetcore-mvc-modelbinding-modelstatedictionary)">ControllerBase.UnprocessableEntity(ModelStateDictionary)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.conflict#microsoft-aspnetcore-mvc-controllerbase-conflict">ControllerBase.Conflict()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.conflict#microsoft-aspnetcore-mvc-controllerbase-conflict(system-object)">ControllerBase.Conflict(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.conflict#microsoft-aspnetcore-mvc-controllerbase-conflict(microsoft-aspnetcore-mvc-modelbinding-modelstatedictionary)">ControllerBase.Conflict(ModelStateDictionary)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.problem#microsoft-aspnetcore-mvc-controllerbase-problem(system-string-system-string-system-nullable((system-int32))-system-string-system-string)">ControllerBase.Problem(string, string, int?, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.problem#microsoft-aspnetcore-mvc-controllerbase-problem(system-string-system-string-system-nullable((system-int32))-system-string-system-string-system-collections-generic-idictionary((system-string-system-object)))">ControllerBase.Problem(string, string, int?, string, string, IDictionary&lt;string, object&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.validationproblem#microsoft-aspnetcore-mvc-controllerbase-validationproblem(microsoft-aspnetcore-mvc-validationproblemdetails)">ControllerBase.ValidationProblem(ValidationProblemDetails)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.validationproblem#microsoft-aspnetcore-mvc-controllerbase-validationproblem(microsoft-aspnetcore-mvc-modelbinding-modelstatedictionary)">ControllerBase.ValidationProblem(ModelStateDictionary)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.validationproblem#microsoft-aspnetcore-mvc-controllerbase-validationproblem">ControllerBase.ValidationProblem()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.validationproblem#microsoft-aspnetcore-mvc-controllerbase-validationproblem(system-string-system-string-system-nullable((system-int32))-system-string-system-string-microsoft-aspnetcore-mvc-modelbinding-modelstatedictionary)">ControllerBase.ValidationProblem(string, string, int?, string, string, ModelStateDictionary)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.validationproblem#microsoft-aspnetcore-mvc-controllerbase-validationproblem(system-string-system-string-system-nullable((system-int32))-system-string-system-string-microsoft-aspnetcore-mvc-modelbinding-modelstatedictionary-system-collections-generic-idictionary((system-string-system-object)))">ControllerBase.ValidationProblem(string, string, int?, string, string, ModelStateDictionary, IDictionary&lt;string, object&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.created#microsoft-aspnetcore-mvc-controllerbase-created">ControllerBase.Created()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.created#microsoft-aspnetcore-mvc-controllerbase-created(system-string-system-object)">ControllerBase.Created(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.created#microsoft-aspnetcore-mvc-controllerbase-created(system-uri-system-object)">ControllerBase.Created(Uri, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.createdataction#microsoft-aspnetcore-mvc-controllerbase-createdataction(system-string-system-object)">ControllerBase.CreatedAtAction(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.createdataction#microsoft-aspnetcore-mvc-controllerbase-createdataction(system-string-system-object-system-object)">ControllerBase.CreatedAtAction(string, object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.createdataction#microsoft-aspnetcore-mvc-controllerbase-createdataction(system-string-system-string-system-object-system-object)">ControllerBase.CreatedAtAction(string, string, object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.createdatroute#microsoft-aspnetcore-mvc-controllerbase-createdatroute(system-string-system-object)">ControllerBase.CreatedAtRoute(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.createdatroute#microsoft-aspnetcore-mvc-controllerbase-createdatroute(system-object-system-object)">ControllerBase.CreatedAtRoute(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.createdatroute#microsoft-aspnetcore-mvc-controllerbase-createdatroute(system-string-system-object-system-object)">ControllerBase.CreatedAtRoute(string, object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.accepted#microsoft-aspnetcore-mvc-controllerbase-accepted">ControllerBase.Accepted()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.accepted#microsoft-aspnetcore-mvc-controllerbase-accepted(system-object)">ControllerBase.Accepted(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.accepted#microsoft-aspnetcore-mvc-controllerbase-accepted(system-uri)">ControllerBase.Accepted(Uri)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.accepted#microsoft-aspnetcore-mvc-controllerbase-accepted(system-string)">ControllerBase.Accepted(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.accepted#microsoft-aspnetcore-mvc-controllerbase-accepted(system-string-system-object)">ControllerBase.Accepted(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.accepted#microsoft-aspnetcore-mvc-controllerbase-accepted(system-uri-system-object)">ControllerBase.Accepted(Uri, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedataction#microsoft-aspnetcore-mvc-controllerbase-acceptedataction(system-string)">ControllerBase.AcceptedAtAction(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedataction#microsoft-aspnetcore-mvc-controllerbase-acceptedataction(system-string-system-string)">ControllerBase.AcceptedAtAction(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedataction#microsoft-aspnetcore-mvc-controllerbase-acceptedataction(system-string-system-object)">ControllerBase.AcceptedAtAction(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedataction#microsoft-aspnetcore-mvc-controllerbase-acceptedataction(system-string-system-string-system-object)">ControllerBase.AcceptedAtAction(string, string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedataction#microsoft-aspnetcore-mvc-controllerbase-acceptedataction(system-string-system-object-system-object)">ControllerBase.AcceptedAtAction(string, object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedataction#microsoft-aspnetcore-mvc-controllerbase-acceptedataction(system-string-system-string-system-object-system-object)">ControllerBase.AcceptedAtAction(string, string, object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedatroute#microsoft-aspnetcore-mvc-controllerbase-acceptedatroute(system-object)">ControllerBase.AcceptedAtRoute(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedatroute#microsoft-aspnetcore-mvc-controllerbase-acceptedatroute(system-string)">ControllerBase.AcceptedAtRoute(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedatroute#microsoft-aspnetcore-mvc-controllerbase-acceptedatroute(system-string-system-object)">ControllerBase.AcceptedAtRoute(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedatroute#microsoft-aspnetcore-mvc-controllerbase-acceptedatroute(system-object-system-object)">ControllerBase.AcceptedAtRoute(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedatroute#microsoft-aspnetcore-mvc-controllerbase-acceptedatroute(system-string-system-object-system-object)">ControllerBase.AcceptedAtRoute(string, object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.challenge#microsoft-aspnetcore-mvc-controllerbase-challenge">ControllerBase.Challenge()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.challenge#microsoft-aspnetcore-mvc-controllerbase-challenge(system-string())">ControllerBase.Challenge(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.challenge#microsoft-aspnetcore-mvc-controllerbase-challenge(microsoft-aspnetcore-authentication-authenticationproperties)">ControllerBase.Challenge(AuthenticationProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.challenge#microsoft-aspnetcore-mvc-controllerbase-challenge(microsoft-aspnetcore-authentication-authenticationproperties-system-string())">ControllerBase.Challenge(AuthenticationProperties, params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.forbid#microsoft-aspnetcore-mvc-controllerbase-forbid">ControllerBase.Forbid()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.forbid#microsoft-aspnetcore-mvc-controllerbase-forbid(system-string())">ControllerBase.Forbid(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.forbid#microsoft-aspnetcore-mvc-controllerbase-forbid(microsoft-aspnetcore-authentication-authenticationproperties)">ControllerBase.Forbid(AuthenticationProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.forbid#microsoft-aspnetcore-mvc-controllerbase-forbid(microsoft-aspnetcore-authentication-authenticationproperties-system-string())">ControllerBase.Forbid(AuthenticationProperties, params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signin#microsoft-aspnetcore-mvc-controllerbase-signin(system-security-claims-claimsprincipal)">ControllerBase.SignIn(ClaimsPrincipal)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signin#microsoft-aspnetcore-mvc-controllerbase-signin(system-security-claims-claimsprincipal-system-string)">ControllerBase.SignIn(ClaimsPrincipal, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signin#microsoft-aspnetcore-mvc-controllerbase-signin(system-security-claims-claimsprincipal-microsoft-aspnetcore-authentication-authenticationproperties)">ControllerBase.SignIn(ClaimsPrincipal, AuthenticationProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signin#microsoft-aspnetcore-mvc-controllerbase-signin(system-security-claims-claimsprincipal-microsoft-aspnetcore-authentication-authenticationproperties-system-string)">ControllerBase.SignIn(ClaimsPrincipal, AuthenticationProperties, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signout#microsoft-aspnetcore-mvc-controllerbase-signout">ControllerBase.SignOut()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signout#microsoft-aspnetcore-mvc-controllerbase-signout(microsoft-aspnetcore-authentication-authenticationproperties)">ControllerBase.SignOut(AuthenticationProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signout#microsoft-aspnetcore-mvc-controllerbase-signout(system-string())">ControllerBase.SignOut(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signout#microsoft-aspnetcore-mvc-controllerbase-signout(microsoft-aspnetcore-authentication-authenticationproperties-system-string())">ControllerBase.SignOut(AuthenticationProperties, params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync-1(-0)">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync-1(-0-system-string)">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync-1(-0-system-string-microsoft-aspnetcore-mvc-modelbinding-ivalueprovider)">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, string, IValueProvider)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync-1(-0-system-string-system-linq-expressions-expression((system-func((-0-system-object))))())">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, string, params Expression&lt;Func&lt;TModel, object&gt;&gt;[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync-1(-0-system-string-system-func((microsoft-aspnetcore-mvc-modelbinding-modelmetadata-system-boolean)))">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, string, Func&lt;ModelMetadata, bool&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync-1(-0-system-string-microsoft-aspnetcore-mvc-modelbinding-ivalueprovider-system-linq-expressions-expression((system-func((-0-system-object))))())">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, string, IValueProvider, params Expression&lt;Func&lt;TModel, object&gt;&gt;[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync-1(-0-system-string-microsoft-aspnetcore-mvc-modelbinding-ivalueprovider-system-func((microsoft-aspnetcore-mvc-modelbinding-modelmetadata-system-boolean)))">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, string, IValueProvider, Func&lt;ModelMetadata, bool&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync(system-object-system-type-system-string)">ControllerBase.TryUpdateModelAsync(object, Type, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync(system-object-system-type-system-string-microsoft-aspnetcore-mvc-modelbinding-ivalueprovider-system-func((microsoft-aspnetcore-mvc-modelbinding-modelmetadata-system-boolean)))">ControllerBase.TryUpdateModelAsync(object, Type, string, IValueProvider, Func&lt;ModelMetadata, bool&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryvalidatemodel#microsoft-aspnetcore-mvc-controllerbase-tryvalidatemodel(system-object)">ControllerBase.TryValidateModel(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryvalidatemodel#microsoft-aspnetcore-mvc-controllerbase-tryvalidatemodel(system-object-system-string)">ControllerBase.TryValidateModel(object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.httpcontext">ControllerBase.HttpContext</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.request">ControllerBase.Request</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.response">ControllerBase.Response</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.routedata">ControllerBase.RouteData</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.modelstate">ControllerBase.ModelState</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.controllercontext">ControllerBase.ControllerContext</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.metadataprovider">ControllerBase.MetadataProvider</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.modelbinderfactory">ControllerBase.ModelBinderFactory</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.url">ControllerBase.Url</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.objectvalidator">ControllerBase.ObjectValidator</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.problemdetailsfactory">ControllerBase.ProblemDetailsFactory</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.user">ControllerBase.User</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.empty">ControllerBase.Empty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="UltraGenericSystem.html">UltraGenericSystem</a>.<a class="xref" href="UltraGenericSystem.Controllers.html">Controllers</a></h6>
+  <h6><strong>Assembly</strong>: UltraGenericSystem.dll</h6>
+  <h5 id="UltraGenericSystem_Controllers_AzureAIAgentController_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ApiController]
+[Route(&quot;api/[controller]&quot;)]
+public class AzureAIAgentController : ControllerBase</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Controllers_AzureAIAgentController__ctor_UltraGenericSystem_Services_IAzureAIAgentService_Microsoft_Extensions_Logging_ILogger_UltraGenericSystem_Controllers_AzureAIAgentController__.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Controllers.AzureAIAgentController.%23ctor(UltraGenericSystem.Services.IAzureAIAgentService%2CMicrosoft.Extensions.Logging.ILogger%7BUltraGenericSystem.Controllers.AzureAIAgentController%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Controllers/AzureAIAgentController.cs/#L17">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Controllers_AzureAIAgentController__ctor_" data-uid="UltraGenericSystem.Controllers.AzureAIAgentController.#ctor*"></a>
+  <h4 id="UltraGenericSystem_Controllers_AzureAIAgentController__ctor_UltraGenericSystem_Services_IAzureAIAgentService_Microsoft_Extensions_Logging_ILogger_UltraGenericSystem_Controllers_AzureAIAgentController__" data-uid="UltraGenericSystem.Controllers.AzureAIAgentController.#ctor(UltraGenericSystem.Services.IAzureAIAgentService,Microsoft.Extensions.Logging.ILogger{UltraGenericSystem.Controllers.AzureAIAgentController})">AzureAIAgentController(IAzureAIAgentService, ILogger&lt;AzureAIAgentController&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AzureAIAgentController(IAzureAIAgentService azureAIAgentService, ILogger&lt;AzureAIAgentController&gt; logger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="UltraGenericSystem.Services.IAzureAIAgentService.html">IAzureAIAgentService</a></td>
+        <td><span class="parametername">azureAIAgentService</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="UltraGenericSystem.Controllers.AzureAIAgentController.html">AzureAIAgentController</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Controllers_AzureAIAgentController_AnalyzeTextAsync_UltraGenericSystem_Controllers_TextAnalysisRequest_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Controllers.AzureAIAgentController.AnalyzeTextAsync(UltraGenericSystem.Controllers.TextAnalysisRequest%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Controllers/AzureAIAgentController.cs/#L244">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Controllers_AzureAIAgentController_AnalyzeTextAsync_" data-uid="UltraGenericSystem.Controllers.AzureAIAgentController.AnalyzeTextAsync*"></a>
+  <h4 id="UltraGenericSystem_Controllers_AzureAIAgentController_AnalyzeTextAsync_UltraGenericSystem_Controllers_TextAnalysisRequest_System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Controllers.AzureAIAgentController.AnalyzeTextAsync(UltraGenericSystem.Controllers.TextAnalysisRequest,System.Threading.CancellationToken)">AnalyzeTextAsync(TextAnalysisRequest, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Analyze text using the agent</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;analyze&quot;)]
+public Task&lt;ActionResult&lt;string&gt;&gt; AnalyzeTextAsync(TextAnalysisRequest request, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="UltraGenericSystem.Controllers.TextAnalysisRequest.html">TextAnalysisRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Text analysis request</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</td>
+        <td><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Analysis result</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Controllers_AzureAIAgentController_ClearConversationHistoryAsync_System_String_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Controllers.AzureAIAgentController.ClearConversationHistoryAsync(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Controllers/AzureAIAgentController.cs/#L219">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Controllers_AzureAIAgentController_ClearConversationHistoryAsync_" data-uid="UltraGenericSystem.Controllers.AzureAIAgentController.ClearConversationHistoryAsync*"></a>
+  <h4 id="UltraGenericSystem_Controllers_AzureAIAgentController_ClearConversationHistoryAsync_System_String_" data-uid="UltraGenericSystem.Controllers.AzureAIAgentController.ClearConversationHistoryAsync(System.String)">ClearConversationHistoryAsync(string)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Clear conversation history for a session</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpDelete(&quot;conversation/{sessionId}&quot;)]
+public Task&lt;ActionResult&gt; ClearConversationHistoryAsync(string sessionId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">sessionId</span></td>
+        <td><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Session ID</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a>&gt;</td>
+        <td><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Success status</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Controllers_AzureAIAgentController_ExecuteFunctionCallAsync_UltraGenericSystem_Models_AzureAIFunctionCall_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Controllers.AzureAIAgentController.ExecuteFunctionCallAsync(UltraGenericSystem.Models.AzureAIFunctionCall%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Controllers/AzureAIAgentController.cs/#L169">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Controllers_AzureAIAgentController_ExecuteFunctionCallAsync_" data-uid="UltraGenericSystem.Controllers.AzureAIAgentController.ExecuteFunctionCallAsync*"></a>
+  <h4 id="UltraGenericSystem_Controllers_AzureAIAgentController_ExecuteFunctionCallAsync_UltraGenericSystem_Models_AzureAIFunctionCall_System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Controllers.AzureAIAgentController.ExecuteFunctionCallAsync(UltraGenericSystem.Models.AzureAIFunctionCall,System.Threading.CancellationToken)">ExecuteFunctionCallAsync(AzureAIFunctionCall, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Execute a function call</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;function&quot;)]
+public Task&lt;ActionResult&lt;AzureAIFunctionCallResult&gt;&gt; ExecuteFunctionCallAsync(AzureAIFunctionCall functionCall, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="UltraGenericSystem.Models.AzureAIFunctionCall.html">AzureAIFunctionCall</a></td>
+        <td><span class="parametername">functionCall</span></td>
+        <td><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Function call to execute</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="UltraGenericSystem.Models.AzureAIFunctionCallResult.html">AzureAIFunctionCallResult</a>&gt;&gt;</td>
+        <td><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Function call result</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Controllers_AzureAIAgentController_FindSimilarTextsAsync_UltraGenericSystem_Controllers_SimilaritySearchRequest_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Controllers.AzureAIAgentController.FindSimilarTextsAsync(UltraGenericSystem.Controllers.SimilaritySearchRequest%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Controllers/AzureAIAgentController.cs/#L138">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Controllers_AzureAIAgentController_FindSimilarTextsAsync_" data-uid="UltraGenericSystem.Controllers.AzureAIAgentController.FindSimilarTextsAsync*"></a>
+  <h4 id="UltraGenericSystem_Controllers_AzureAIAgentController_FindSimilarTextsAsync_UltraGenericSystem_Controllers_SimilaritySearchRequest_System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Controllers.AzureAIAgentController.FindSimilarTextsAsync(UltraGenericSystem.Controllers.SimilaritySearchRequest,System.Threading.CancellationToken)">FindSimilarTextsAsync(SimilaritySearchRequest, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Find similar texts using embeddings</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;similarity&quot;)]
+public Task&lt;ActionResult&lt;List&lt;(string Text, double Score)&gt;&gt;&gt; FindSimilarTextsAsync(SimilaritySearchRequest request, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="UltraGenericSystem.Controllers.SimilaritySearchRequest.html">SimilaritySearchRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Similarity search request</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.double-.text">Text</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.double-.score">Score</a>)&gt;&gt;&gt;</td>
+        <td><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Similar texts with scores</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Controllers_AzureAIAgentController_GenerateContentAsync_UltraGenericSystem_Controllers_ContentGenerationRequest_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Controllers.AzureAIAgentController.GenerateContentAsync(UltraGenericSystem.Controllers.ContentGenerationRequest%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Controllers/AzureAIAgentController.cs/#L271">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Controllers_AzureAIAgentController_GenerateContentAsync_" data-uid="UltraGenericSystem.Controllers.AzureAIAgentController.GenerateContentAsync*"></a>
+  <h4 id="UltraGenericSystem_Controllers_AzureAIAgentController_GenerateContentAsync_UltraGenericSystem_Controllers_ContentGenerationRequest_System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Controllers.AzureAIAgentController.GenerateContentAsync(UltraGenericSystem.Controllers.ContentGenerationRequest,System.Threading.CancellationToken)">GenerateContentAsync(ContentGenerationRequest, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Generate content using the agent</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;generate&quot;)]
+public Task&lt;ActionResult&lt;string&gt;&gt; GenerateContentAsync(ContentGenerationRequest request, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="UltraGenericSystem.Controllers.ContentGenerationRequest.html">ContentGenerationRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Content generation request</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</td>
+        <td><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Generated content</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Controllers_AzureAIAgentController_GenerateEmbeddingsAsync_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Controllers.AzureAIAgentController.GenerateEmbeddingsAsync(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Controllers/AzureAIAgentController.cs/#L84">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Controllers_AzureAIAgentController_GenerateEmbeddingsAsync_" data-uid="UltraGenericSystem.Controllers.AzureAIAgentController.GenerateEmbeddingsAsync*"></a>
+  <h4 id="UltraGenericSystem_Controllers_AzureAIAgentController_GenerateEmbeddingsAsync_System_String_System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Controllers.AzureAIAgentController.GenerateEmbeddingsAsync(System.String,System.Threading.CancellationToken)">GenerateEmbeddingsAsync(string, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Generate embeddings for text</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;embeddings&quot;)]
+public Task&lt;ActionResult&lt;float[]&gt;&gt; GenerateEmbeddingsAsync(string text, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Text to embed</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>[]&gt;&gt;</td>
+        <td><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Embedding vector</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Controllers_AzureAIAgentController_GenerateEmbeddingsBatchAsync_System_Collections_Generic_List_System_String__System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Controllers.AzureAIAgentController.GenerateEmbeddingsBatchAsync(System.Collections.Generic.List%7BSystem.String%7D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Controllers/AzureAIAgentController.cs/#L111">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Controllers_AzureAIAgentController_GenerateEmbeddingsBatchAsync_" data-uid="UltraGenericSystem.Controllers.AzureAIAgentController.GenerateEmbeddingsBatchAsync*"></a>
+  <h4 id="UltraGenericSystem_Controllers_AzureAIAgentController_GenerateEmbeddingsBatchAsync_System_Collections_Generic_List_System_String__System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Controllers.AzureAIAgentController.GenerateEmbeddingsBatchAsync(System.Collections.Generic.List{System.String},System.Threading.CancellationToken)">GenerateEmbeddingsBatchAsync(List&lt;string&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Generate embeddings for multiple texts</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;embeddings/batch&quot;)]
+public Task&lt;ActionResult&lt;List&lt;float[]&gt;&gt;&gt; GenerateEmbeddingsBatchAsync(List&lt;string&gt; texts, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+        <td><span class="parametername">texts</span></td>
+        <td><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Texts to embed</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>[]&gt;&gt;&gt;</td>
+        <td><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">List of embedding vectors</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Controllers_AzureAIAgentController_GetCapabilities.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Controllers.AzureAIAgentController.GetCapabilities%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Controllers/AzureAIAgentController.cs/#L339">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Controllers_AzureAIAgentController_GetCapabilities_" data-uid="UltraGenericSystem.Controllers.AzureAIAgentController.GetCapabilities*"></a>
+  <h4 id="UltraGenericSystem_Controllers_AzureAIAgentController_GetCapabilities" data-uid="UltraGenericSystem.Controllers.AzureAIAgentController.GetCapabilities">GetCapabilities()</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Get agent capabilities</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpGet(&quot;capabilities&quot;)]
+public ActionResult&lt;AzureAIAgentCapabilities&gt; GetCapabilities()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="UltraGenericSystem.Models.AzureAIAgentCapabilities.html">AzureAIAgentCapabilities</a>&gt;</td>
+        <td><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Agent capabilities</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Controllers_AzureAIAgentController_GetConfiguration.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Controllers.AzureAIAgentController.GetConfiguration%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Controllers/AzureAIAgentController.cs/#L296">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Controllers_AzureAIAgentController_GetConfiguration_" data-uid="UltraGenericSystem.Controllers.AzureAIAgentController.GetConfiguration*"></a>
+  <h4 id="UltraGenericSystem_Controllers_AzureAIAgentController_GetConfiguration" data-uid="UltraGenericSystem.Controllers.AzureAIAgentController.GetConfiguration">GetConfiguration()</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Get agent configuration</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpGet(&quot;config&quot;)]
+public ActionResult&lt;AzureAIAgentConfig&gt; GetConfiguration()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="UltraGenericSystem.Models.AzureAIAgentConfig.html">AzureAIAgentConfig</a>&gt;</td>
+        <td><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Agent configuration</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Controllers_AzureAIAgentController_GetConversationHistoryAsync_System_String_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Controllers.AzureAIAgentController.GetConversationHistoryAsync(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Controllers/AzureAIAgentController.cs/#L195">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Controllers_AzureAIAgentController_GetConversationHistoryAsync_" data-uid="UltraGenericSystem.Controllers.AzureAIAgentController.GetConversationHistoryAsync*"></a>
+  <h4 id="UltraGenericSystem_Controllers_AzureAIAgentController_GetConversationHistoryAsync_System_String_" data-uid="UltraGenericSystem.Controllers.AzureAIAgentController.GetConversationHistoryAsync(System.String)">GetConversationHistoryAsync(string)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Get conversation history for a session</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpGet(&quot;conversation/{sessionId}&quot;)]
+public Task&lt;ActionResult&lt;List&lt;AzureAIConversationMessage&gt;&gt;&gt; GetConversationHistoryAsync(string sessionId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">sessionId</span></td>
+        <td><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Session ID</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="UltraGenericSystem.Models.AzureAIConversationMessage.html">AzureAIConversationMessage</a>&gt;&gt;&gt;</td>
+        <td><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Conversation history</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Controllers_AzureAIAgentController_GetHealthStatusAsync.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Controllers.AzureAIAgentController.GetHealthStatusAsync%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Controllers/AzureAIAgentController.cs/#L385">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Controllers_AzureAIAgentController_GetHealthStatusAsync_" data-uid="UltraGenericSystem.Controllers.AzureAIAgentController.GetHealthStatusAsync*"></a>
+  <h4 id="UltraGenericSystem_Controllers_AzureAIAgentController_GetHealthStatusAsync" data-uid="UltraGenericSystem.Controllers.AzureAIAgentController.GetHealthStatusAsync">GetHealthStatusAsync()</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Get agent health status</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpGet(&quot;health&quot;)]
+public Task&lt;ActionResult&lt;AzureAIAgentHealthStatus&gt;&gt; GetHealthStatusAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="UltraGenericSystem.Services.AzureAIAgentHealthStatus.html">AzureAIAgentHealthStatus</a>&gt;&gt;</td>
+        <td><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Health status</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Controllers_AzureAIAgentController_SendMessageAsync_UltraGenericSystem_Models_AzureAIAgentRequest_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Controllers.AzureAIAgentController.SendMessageAsync(UltraGenericSystem.Models.AzureAIAgentRequest%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Controllers/AzureAIAgentController.cs/#L29">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Controllers_AzureAIAgentController_SendMessageAsync_" data-uid="UltraGenericSystem.Controllers.AzureAIAgentController.SendMessageAsync*"></a>
+  <h4 id="UltraGenericSystem_Controllers_AzureAIAgentController_SendMessageAsync_UltraGenericSystem_Models_AzureAIAgentRequest_System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Controllers.AzureAIAgentController.SendMessageAsync(UltraGenericSystem.Models.AzureAIAgentRequest,System.Threading.CancellationToken)">SendMessageAsync(AzureAIAgentRequest, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Send a message to the Azure AI Agent</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;message&quot;)]
+public Task&lt;ActionResult&lt;AzureAIAgentResponse&gt;&gt; SendMessageAsync(AzureAIAgentRequest request, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="UltraGenericSystem.Models.AzureAIAgentRequest.html">AzureAIAgentRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">The agent request</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="UltraGenericSystem.Models.AzureAIAgentResponse.html">AzureAIAgentResponse</a>&gt;&gt;</td>
+        <td><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">The agent response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Controllers_AzureAIAgentController_SendStreamingMessageAsync_UltraGenericSystem_Models_AzureAIAgentRequest_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Controllers.AzureAIAgentController.SendStreamingMessageAsync(UltraGenericSystem.Models.AzureAIAgentRequest%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Controllers/AzureAIAgentController.cs/#L56">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Controllers_AzureAIAgentController_SendStreamingMessageAsync_" data-uid="UltraGenericSystem.Controllers.AzureAIAgentController.SendStreamingMessageAsync*"></a>
+  <h4 id="UltraGenericSystem_Controllers_AzureAIAgentController_SendStreamingMessageAsync_UltraGenericSystem_Models_AzureAIAgentRequest_System_Threading_CancellationToken_" data-uid="UltraGenericSystem.Controllers.AzureAIAgentController.SendStreamingMessageAsync(UltraGenericSystem.Models.AzureAIAgentRequest,System.Threading.CancellationToken)">SendStreamingMessageAsync(AzureAIAgentRequest, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Send a streaming message to the Azure AI Agent</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;stream&quot;)]
+public IAsyncEnumerable&lt;AzureAIStreamingResponse&gt; SendStreamingMessageAsync(AzureAIAgentRequest request, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="UltraGenericSystem.Models.AzureAIAgentRequest.html">AzureAIAgentRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">The agent request</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable</a>&lt;<a class="xref" href="UltraGenericSystem.Models.AzureAIStreamingResponse.html">AzureAIStreamingResponse</a>&gt;</td>
+        <td><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Stream of response chunks</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Controllers_AzureAIAgentController_ValidateConfigurationAsync.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Controllers.AzureAIAgentController.ValidateConfigurationAsync%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Controllers/AzureAIAgentController.cs/#L362">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Controllers_AzureAIAgentController_ValidateConfigurationAsync_" data-uid="UltraGenericSystem.Controllers.AzureAIAgentController.ValidateConfigurationAsync*"></a>
+  <h4 id="UltraGenericSystem_Controllers_AzureAIAgentController_ValidateConfigurationAsync" data-uid="UltraGenericSystem.Controllers.AzureAIAgentController.ValidateConfigurationAsync">ValidateConfigurationAsync()</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Validate agent configuration</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;validate&quot;)]
+public Task&lt;ActionResult&lt;bool&gt;&gt; ValidateConfigurationAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;&gt;</td>
+        <td><p sourcefile="api/UltraGenericSystem.Controllers.AzureAIAgentController.yml" sourcestartlinenumber="1">Validation result</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Controllers_AzureAIAgentController.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Controllers.AzureAIAgentController%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Controllers/AzureAIAgentController.cs/#L10" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

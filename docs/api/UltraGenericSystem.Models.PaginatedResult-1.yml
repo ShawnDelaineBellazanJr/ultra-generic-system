@@ -1,0 +1,716 @@
+### YamlMime:ManagedReference
+items:
+- uid: UltraGenericSystem.Models.PaginatedResult`1
+  commentId: T:UltraGenericSystem.Models.PaginatedResult`1
+  id: PaginatedResult`1
+  parent: UltraGenericSystem.Models
+  children:
+  - UltraGenericSystem.Models.PaginatedResult`1.HasNextPage
+  - UltraGenericSystem.Models.PaginatedResult`1.HasPreviousPage
+  - UltraGenericSystem.Models.PaginatedResult`1.Items
+  - UltraGenericSystem.Models.PaginatedResult`1.PageNumber
+  - UltraGenericSystem.Models.PaginatedResult`1.PageSize
+  - UltraGenericSystem.Models.PaginatedResult`1.TotalCount
+  - UltraGenericSystem.Models.PaginatedResult`1.TotalPages
+  langs:
+  - csharp
+  - vb
+  name: PaginatedResult<T>
+  nameWithType: PaginatedResult<T>
+  fullName: UltraGenericSystem.Models.PaginatedResult<T>
+  type: Class
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: PaginatedResult
+    path: ../Models/AgentModels.cs
+    startLine: 448
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Pagination result
+  example: []
+  syntax:
+    content: public class PaginatedResult<T>
+    typeParameters:
+    - id: T
+      description: Entity type
+    content.vb: Public Class PaginatedResult(Of T)
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  nameWithType.vb: PaginatedResult(Of T)
+  fullName.vb: UltraGenericSystem.Models.PaginatedResult(Of T)
+  name.vb: PaginatedResult(Of T)
+- uid: UltraGenericSystem.Models.PaginatedResult`1.Items
+  commentId: P:UltraGenericSystem.Models.PaginatedResult`1.Items
+  id: Items
+  parent: UltraGenericSystem.Models.PaginatedResult`1
+  langs:
+  - csharp
+  - vb
+  name: Items
+  nameWithType: PaginatedResult<T>.Items
+  fullName: UltraGenericSystem.Models.PaginatedResult<T>.Items
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Items
+    path: ../Models/AgentModels.cs
+    startLine: 453
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Items in the current page
+  example: []
+  syntax:
+    content: public IEnumerable<T> Items { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{{T}}
+    content.vb: Public Property Items As IEnumerable(Of T)
+  overload: UltraGenericSystem.Models.PaginatedResult`1.Items*
+  nameWithType.vb: PaginatedResult(Of T).Items
+  fullName.vb: UltraGenericSystem.Models.PaginatedResult(Of T).Items
+- uid: UltraGenericSystem.Models.PaginatedResult`1.TotalCount
+  commentId: P:UltraGenericSystem.Models.PaginatedResult`1.TotalCount
+  id: TotalCount
+  parent: UltraGenericSystem.Models.PaginatedResult`1
+  langs:
+  - csharp
+  - vb
+  name: TotalCount
+  nameWithType: PaginatedResult<T>.TotalCount
+  fullName: UltraGenericSystem.Models.PaginatedResult<T>.TotalCount
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: TotalCount
+    path: ../Models/AgentModels.cs
+    startLine: 458
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Total count of items
+  example: []
+  syntax:
+    content: public int TotalCount { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property TotalCount As Integer
+  overload: UltraGenericSystem.Models.PaginatedResult`1.TotalCount*
+  nameWithType.vb: PaginatedResult(Of T).TotalCount
+  fullName.vb: UltraGenericSystem.Models.PaginatedResult(Of T).TotalCount
+- uid: UltraGenericSystem.Models.PaginatedResult`1.PageNumber
+  commentId: P:UltraGenericSystem.Models.PaginatedResult`1.PageNumber
+  id: PageNumber
+  parent: UltraGenericSystem.Models.PaginatedResult`1
+  langs:
+  - csharp
+  - vb
+  name: PageNumber
+  nameWithType: PaginatedResult<T>.PageNumber
+  fullName: UltraGenericSystem.Models.PaginatedResult<T>.PageNumber
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: PageNumber
+    path: ../Models/AgentModels.cs
+    startLine: 463
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Current page number
+  example: []
+  syntax:
+    content: public int PageNumber { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property PageNumber As Integer
+  overload: UltraGenericSystem.Models.PaginatedResult`1.PageNumber*
+  nameWithType.vb: PaginatedResult(Of T).PageNumber
+  fullName.vb: UltraGenericSystem.Models.PaginatedResult(Of T).PageNumber
+- uid: UltraGenericSystem.Models.PaginatedResult`1.PageSize
+  commentId: P:UltraGenericSystem.Models.PaginatedResult`1.PageSize
+  id: PageSize
+  parent: UltraGenericSystem.Models.PaginatedResult`1
+  langs:
+  - csharp
+  - vb
+  name: PageSize
+  nameWithType: PaginatedResult<T>.PageSize
+  fullName: UltraGenericSystem.Models.PaginatedResult<T>.PageSize
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: PageSize
+    path: ../Models/AgentModels.cs
+    startLine: 468
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Page size
+  example: []
+  syntax:
+    content: public int PageSize { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property PageSize As Integer
+  overload: UltraGenericSystem.Models.PaginatedResult`1.PageSize*
+  nameWithType.vb: PaginatedResult(Of T).PageSize
+  fullName.vb: UltraGenericSystem.Models.PaginatedResult(Of T).PageSize
+- uid: UltraGenericSystem.Models.PaginatedResult`1.TotalPages
+  commentId: P:UltraGenericSystem.Models.PaginatedResult`1.TotalPages
+  id: TotalPages
+  parent: UltraGenericSystem.Models.PaginatedResult`1
+  langs:
+  - csharp
+  - vb
+  name: TotalPages
+  nameWithType: PaginatedResult<T>.TotalPages
+  fullName: UltraGenericSystem.Models.PaginatedResult<T>.TotalPages
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: TotalPages
+    path: ../Models/AgentModels.cs
+    startLine: 473
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Total number of pages
+  example: []
+  syntax:
+    content: public int TotalPages { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property TotalPages As Integer
+  overload: UltraGenericSystem.Models.PaginatedResult`1.TotalPages*
+  nameWithType.vb: PaginatedResult(Of T).TotalPages
+  fullName.vb: UltraGenericSystem.Models.PaginatedResult(Of T).TotalPages
+- uid: UltraGenericSystem.Models.PaginatedResult`1.HasPreviousPage
+  commentId: P:UltraGenericSystem.Models.PaginatedResult`1.HasPreviousPage
+  id: HasPreviousPage
+  parent: UltraGenericSystem.Models.PaginatedResult`1
+  langs:
+  - csharp
+  - vb
+  name: HasPreviousPage
+  nameWithType: PaginatedResult<T>.HasPreviousPage
+  fullName: UltraGenericSystem.Models.PaginatedResult<T>.HasPreviousPage
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: HasPreviousPage
+    path: ../Models/AgentModels.cs
+    startLine: 478
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Whether there is a previous page
+  example: []
+  syntax:
+    content: public bool HasPreviousPage { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property HasPreviousPage As Boolean
+  overload: UltraGenericSystem.Models.PaginatedResult`1.HasPreviousPage*
+  nameWithType.vb: PaginatedResult(Of T).HasPreviousPage
+  fullName.vb: UltraGenericSystem.Models.PaginatedResult(Of T).HasPreviousPage
+- uid: UltraGenericSystem.Models.PaginatedResult`1.HasNextPage
+  commentId: P:UltraGenericSystem.Models.PaginatedResult`1.HasNextPage
+  id: HasNextPage
+  parent: UltraGenericSystem.Models.PaginatedResult`1
+  langs:
+  - csharp
+  - vb
+  name: HasNextPage
+  nameWithType: PaginatedResult<T>.HasNextPage
+  fullName: UltraGenericSystem.Models.PaginatedResult<T>.HasNextPage
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: HasNextPage
+    path: ../Models/AgentModels.cs
+    startLine: 483
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Whether there is a next page
+  example: []
+  syntax:
+    content: public bool HasNextPage { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property HasNextPage As Boolean
+  overload: UltraGenericSystem.Models.PaginatedResult`1.HasNextPage*
+  nameWithType.vb: PaginatedResult(Of T).HasNextPage
+  fullName.vb: UltraGenericSystem.Models.PaginatedResult(Of T).HasNextPage
+references:
+- uid: UltraGenericSystem.Models
+  commentId: N:UltraGenericSystem.Models
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Models
+  nameWithType: UltraGenericSystem.Models
+  fullName: UltraGenericSystem.Models
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UltraGenericSystem.Models.PaginatedResult`1.Items*
+  commentId: Overload:UltraGenericSystem.Models.PaginatedResult`1.Items
+  href: UltraGenericSystem.Models.PaginatedResult-1.html#UltraGenericSystem_Models_PaginatedResult_1_Items
+  name: Items
+  nameWithType: PaginatedResult<T>.Items
+  fullName: UltraGenericSystem.Models.PaginatedResult<T>.Items
+  nameWithType.vb: PaginatedResult(Of T).Items
+  fullName.vb: UltraGenericSystem.Models.PaginatedResult(Of T).Items
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: T:System.Collections.Generic.IEnumerable{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: UltraGenericSystem.Models.PaginatedResult`1.TotalCount*
+  commentId: Overload:UltraGenericSystem.Models.PaginatedResult`1.TotalCount
+  href: UltraGenericSystem.Models.PaginatedResult-1.html#UltraGenericSystem_Models_PaginatedResult_1_TotalCount
+  name: TotalCount
+  nameWithType: PaginatedResult<T>.TotalCount
+  fullName: UltraGenericSystem.Models.PaginatedResult<T>.TotalCount
+  nameWithType.vb: PaginatedResult(Of T).TotalCount
+  fullName.vb: UltraGenericSystem.Models.PaginatedResult(Of T).TotalCount
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: UltraGenericSystem.Models.PaginatedResult`1.PageNumber*
+  commentId: Overload:UltraGenericSystem.Models.PaginatedResult`1.PageNumber
+  href: UltraGenericSystem.Models.PaginatedResult-1.html#UltraGenericSystem_Models_PaginatedResult_1_PageNumber
+  name: PageNumber
+  nameWithType: PaginatedResult<T>.PageNumber
+  fullName: UltraGenericSystem.Models.PaginatedResult<T>.PageNumber
+  nameWithType.vb: PaginatedResult(Of T).PageNumber
+  fullName.vb: UltraGenericSystem.Models.PaginatedResult(Of T).PageNumber
+- uid: UltraGenericSystem.Models.PaginatedResult`1.PageSize*
+  commentId: Overload:UltraGenericSystem.Models.PaginatedResult`1.PageSize
+  href: UltraGenericSystem.Models.PaginatedResult-1.html#UltraGenericSystem_Models_PaginatedResult_1_PageSize
+  name: PageSize
+  nameWithType: PaginatedResult<T>.PageSize
+  fullName: UltraGenericSystem.Models.PaginatedResult<T>.PageSize
+  nameWithType.vb: PaginatedResult(Of T).PageSize
+  fullName.vb: UltraGenericSystem.Models.PaginatedResult(Of T).PageSize
+- uid: UltraGenericSystem.Models.PaginatedResult`1.TotalPages*
+  commentId: Overload:UltraGenericSystem.Models.PaginatedResult`1.TotalPages
+  href: UltraGenericSystem.Models.PaginatedResult-1.html#UltraGenericSystem_Models_PaginatedResult_1_TotalPages
+  name: TotalPages
+  nameWithType: PaginatedResult<T>.TotalPages
+  fullName: UltraGenericSystem.Models.PaginatedResult<T>.TotalPages
+  nameWithType.vb: PaginatedResult(Of T).TotalPages
+  fullName.vb: UltraGenericSystem.Models.PaginatedResult(Of T).TotalPages
+- uid: UltraGenericSystem.Models.PaginatedResult`1.HasPreviousPage*
+  commentId: Overload:UltraGenericSystem.Models.PaginatedResult`1.HasPreviousPage
+  href: UltraGenericSystem.Models.PaginatedResult-1.html#UltraGenericSystem_Models_PaginatedResult_1_HasPreviousPage
+  name: HasPreviousPage
+  nameWithType: PaginatedResult<T>.HasPreviousPage
+  fullName: UltraGenericSystem.Models.PaginatedResult<T>.HasPreviousPage
+  nameWithType.vb: PaginatedResult(Of T).HasPreviousPage
+  fullName.vb: UltraGenericSystem.Models.PaginatedResult(Of T).HasPreviousPage
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: UltraGenericSystem.Models.PaginatedResult`1.HasNextPage*
+  commentId: Overload:UltraGenericSystem.Models.PaginatedResult`1.HasNextPage
+  href: UltraGenericSystem.Models.PaginatedResult-1.html#UltraGenericSystem_Models_PaginatedResult_1_HasNextPage
+  name: HasNextPage
+  nameWithType: PaginatedResult<T>.HasNextPage
+  fullName: UltraGenericSystem.Models.PaginatedResult<T>.HasNextPage
+  nameWithType.vb: PaginatedResult(Of T).HasNextPage
+  fullName.vb: UltraGenericSystem.Models.PaginatedResult(Of T).HasNextPage

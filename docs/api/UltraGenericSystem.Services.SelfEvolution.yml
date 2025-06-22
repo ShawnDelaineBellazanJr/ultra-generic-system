@@ -1,0 +1,98 @@
+### YamlMime:ManagedReference
+items:
+- uid: UltraGenericSystem.Services.SelfEvolution
+  commentId: N:UltraGenericSystem.Services.SelfEvolution
+  id: UltraGenericSystem.Services.SelfEvolution
+  children:
+  - UltraGenericSystem.Services.SelfEvolution.CodeAnalyzer
+  - UltraGenericSystem.Services.SelfEvolution.CodeGenerationService
+  - UltraGenericSystem.Services.SelfEvolution.DynamicPluginService
+  - UltraGenericSystem.Services.SelfEvolution.ICodeGenerationService
+  - UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService
+  - UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService
+  - UltraGenericSystem.Services.SelfEvolution.StrangeLoopService
+  langs:
+  - csharp
+  - vb
+  name: UltraGenericSystem.Services.SelfEvolution
+  nameWithType: UltraGenericSystem.Services.SelfEvolution
+  fullName: UltraGenericSystem.Services.SelfEvolution
+  type: Namespace
+  assemblies:
+  - UltraGenericSystem
+references:
+- uid: UltraGenericSystem.Services.SelfEvolution.CodeGenerationService
+  commentId: T:UltraGenericSystem.Services.SelfEvolution.CodeGenerationService
+  href: UltraGenericSystem.Services.SelfEvolution.CodeGenerationService.html
+  name: CodeGenerationService
+  nameWithType: CodeGenerationService
+  fullName: UltraGenericSystem.Services.SelfEvolution.CodeGenerationService
+- uid: UltraGenericSystem.Services.SelfEvolution.CodeAnalyzer
+  commentId: T:UltraGenericSystem.Services.SelfEvolution.CodeAnalyzer
+  href: UltraGenericSystem.Services.SelfEvolution.CodeAnalyzer.html
+  name: CodeAnalyzer
+  nameWithType: CodeAnalyzer
+  fullName: UltraGenericSystem.Services.SelfEvolution.CodeAnalyzer
+- uid: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService
+  commentId: T:UltraGenericSystem.Services.SelfEvolution.DynamicPluginService
+  href: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.html
+  name: DynamicPluginService
+  nameWithType: DynamicPluginService
+  fullName: UltraGenericSystem.Services.SelfEvolution.DynamicPluginService
+- uid: UltraGenericSystem.Services.SelfEvolution.ICodeGenerationService
+  commentId: T:UltraGenericSystem.Services.SelfEvolution.ICodeGenerationService
+  parent: UltraGenericSystem.Services.SelfEvolution
+  href: UltraGenericSystem.Services.SelfEvolution.ICodeGenerationService.html
+  name: ICodeGenerationService
+  nameWithType: ICodeGenerationService
+  fullName: UltraGenericSystem.Services.SelfEvolution.ICodeGenerationService
+- uid: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService
+  commentId: T:UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService
+  parent: UltraGenericSystem.Services.SelfEvolution
+  href: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html
+  name: IDynamicPluginService
+  nameWithType: IDynamicPluginService
+  fullName: UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService
+- uid: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService
+  commentId: T:UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService
+  parent: UltraGenericSystem.Services.SelfEvolution
+  href: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService.html
+  name: IStrangeLoopService
+  nameWithType: IStrangeLoopService
+  fullName: UltraGenericSystem.Services.SelfEvolution.IStrangeLoopService
+- uid: UltraGenericSystem.Services.SelfEvolution.StrangeLoopService
+  commentId: T:UltraGenericSystem.Services.SelfEvolution.StrangeLoopService
+  href: UltraGenericSystem.Services.SelfEvolution.StrangeLoopService.html
+  name: StrangeLoopService
+  nameWithType: StrangeLoopService
+  fullName: UltraGenericSystem.Services.SelfEvolution.StrangeLoopService
+- uid: UltraGenericSystem.Services.SelfEvolution
+  commentId: N:UltraGenericSystem.Services.SelfEvolution
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Services.SelfEvolution
+  nameWithType: UltraGenericSystem.Services.SelfEvolution
+  fullName: UltraGenericSystem.Services.SelfEvolution
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Services
+    name: Services
+    href: UltraGenericSystem.Services.html
+  - name: .
+  - uid: UltraGenericSystem.Services.SelfEvolution
+    name: SelfEvolution
+    href: UltraGenericSystem.Services.SelfEvolution.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Services
+    name: Services
+    href: UltraGenericSystem.Services.html
+  - name: .
+  - uid: UltraGenericSystem.Services.SelfEvolution
+    name: SelfEvolution
+    href: UltraGenericSystem.Services.SelfEvolution.html

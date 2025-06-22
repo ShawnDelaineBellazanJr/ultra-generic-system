@@ -1,0 +1,1072 @@
+### YamlMime:ManagedReference
+items:
+- uid: UltraGenericSystem.Models.AdvancedOrchestrationContext`2
+  commentId: T:UltraGenericSystem.Models.AdvancedOrchestrationContext`2
+  id: AdvancedOrchestrationContext`2
+  parent: UltraGenericSystem.Models
+  children:
+  - UltraGenericSystem.Models.AdvancedOrchestrationContext`2.CancellationToken
+  - UltraGenericSystem.Models.AdvancedOrchestrationContext`2.Config
+  - UltraGenericSystem.Models.AdvancedOrchestrationContext`2.ExecutionLog
+  - UltraGenericSystem.Models.AdvancedOrchestrationContext`2.GetState``1(System.String)
+  - UltraGenericSystem.Models.AdvancedOrchestrationContext`2.HumanConfig
+  - UltraGenericSystem.Models.AdvancedOrchestrationContext`2.LogExecution(System.String)
+  - UltraGenericSystem.Models.AdvancedOrchestrationContext`2.ResponseConfig
+  - UltraGenericSystem.Models.AdvancedOrchestrationContext`2.SetState(System.String,System.Object)
+  - UltraGenericSystem.Models.AdvancedOrchestrationContext`2.State
+  - UltraGenericSystem.Models.AdvancedOrchestrationContext`2.StructuredInput
+  - UltraGenericSystem.Models.AdvancedOrchestrationContext`2.TransformConfig
+  langs:
+  - csharp
+  - vb
+  name: AdvancedOrchestrationContext<TInput, TOutput>
+  nameWithType: AdvancedOrchestrationContext<TInput, TOutput>
+  fullName: UltraGenericSystem.Models.AdvancedOrchestrationContext<TInput, TOutput>
+  type: Class
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: AdvancedOrchestrationContext
+    path: ../Models/AgentModels.cs
+    startLine: 595
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Orchestration execution context with advanced features
+  example: []
+  syntax:
+    content: public class AdvancedOrchestrationContext<TInput, TOutput>
+    typeParameters:
+    - id: TInput
+    - id: TOutput
+    content.vb: Public Class AdvancedOrchestrationContext(Of TInput, TOutput)
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  nameWithType.vb: AdvancedOrchestrationContext(Of TInput, TOutput)
+  fullName.vb: UltraGenericSystem.Models.AdvancedOrchestrationContext(Of TInput, TOutput)
+  name.vb: AdvancedOrchestrationContext(Of TInput, TOutput)
+- uid: UltraGenericSystem.Models.AdvancedOrchestrationContext`2.StructuredInput
+  commentId: P:UltraGenericSystem.Models.AdvancedOrchestrationContext`2.StructuredInput
+  id: StructuredInput
+  parent: UltraGenericSystem.Models.AdvancedOrchestrationContext`2
+  langs:
+  - csharp
+  - vb
+  name: StructuredInput
+  nameWithType: AdvancedOrchestrationContext<TInput, TOutput>.StructuredInput
+  fullName: UltraGenericSystem.Models.AdvancedOrchestrationContext<TInput, TOutput>.StructuredInput
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: StructuredInput
+    path: ../Models/AgentModels.cs
+    startLine: 597
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  syntax:
+    content: public StructuredInput<TInput> StructuredInput { get; set; }
+    parameters: []
+    return:
+      type: UltraGenericSystem.Models.StructuredInput{{TInput}}
+    content.vb: Public Property StructuredInput As StructuredInput(Of TInput)
+  overload: UltraGenericSystem.Models.AdvancedOrchestrationContext`2.StructuredInput*
+  nameWithType.vb: AdvancedOrchestrationContext(Of TInput, TOutput).StructuredInput
+  fullName.vb: UltraGenericSystem.Models.AdvancedOrchestrationContext(Of TInput, TOutput).StructuredInput
+- uid: UltraGenericSystem.Models.AdvancedOrchestrationContext`2.Config
+  commentId: P:UltraGenericSystem.Models.AdvancedOrchestrationContext`2.Config
+  id: Config
+  parent: UltraGenericSystem.Models.AdvancedOrchestrationContext`2
+  langs:
+  - csharp
+  - vb
+  name: Config
+  nameWithType: AdvancedOrchestrationContext<TInput, TOutput>.Config
+  fullName: UltraGenericSystem.Models.AdvancedOrchestrationContext<TInput, TOutput>.Config
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Config
+    path: ../Models/AgentModels.cs
+    startLine: 598
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  syntax:
+    content: public AdvancedOrchestrationConfig Config { get; set; }
+    parameters: []
+    return:
+      type: UltraGenericSystem.Models.AdvancedOrchestrationConfig
+    content.vb: Public Property Config As AdvancedOrchestrationConfig
+  overload: UltraGenericSystem.Models.AdvancedOrchestrationContext`2.Config*
+  nameWithType.vb: AdvancedOrchestrationContext(Of TInput, TOutput).Config
+  fullName.vb: UltraGenericSystem.Models.AdvancedOrchestrationContext(Of TInput, TOutput).Config
+- uid: UltraGenericSystem.Models.AdvancedOrchestrationContext`2.ResponseConfig
+  commentId: P:UltraGenericSystem.Models.AdvancedOrchestrationContext`2.ResponseConfig
+  id: ResponseConfig
+  parent: UltraGenericSystem.Models.AdvancedOrchestrationContext`2
+  langs:
+  - csharp
+  - vb
+  name: ResponseConfig
+  nameWithType: AdvancedOrchestrationContext<TInput, TOutput>.ResponseConfig
+  fullName: UltraGenericSystem.Models.AdvancedOrchestrationContext<TInput, TOutput>.ResponseConfig
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: ResponseConfig
+    path: ../Models/AgentModels.cs
+    startLine: 599
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  syntax:
+    content: public ResponseCallbackConfig ResponseConfig { get; set; }
+    parameters: []
+    return:
+      type: UltraGenericSystem.Models.ResponseCallbackConfig
+    content.vb: Public Property ResponseConfig As ResponseCallbackConfig
+  overload: UltraGenericSystem.Models.AdvancedOrchestrationContext`2.ResponseConfig*
+  nameWithType.vb: AdvancedOrchestrationContext(Of TInput, TOutput).ResponseConfig
+  fullName.vb: UltraGenericSystem.Models.AdvancedOrchestrationContext(Of TInput, TOutput).ResponseConfig
+- uid: UltraGenericSystem.Models.AdvancedOrchestrationContext`2.HumanConfig
+  commentId: P:UltraGenericSystem.Models.AdvancedOrchestrationContext`2.HumanConfig
+  id: HumanConfig
+  parent: UltraGenericSystem.Models.AdvancedOrchestrationContext`2
+  langs:
+  - csharp
+  - vb
+  name: HumanConfig
+  nameWithType: AdvancedOrchestrationContext<TInput, TOutput>.HumanConfig
+  fullName: UltraGenericSystem.Models.AdvancedOrchestrationContext<TInput, TOutput>.HumanConfig
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: HumanConfig
+    path: ../Models/AgentModels.cs
+    startLine: 600
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  syntax:
+    content: public HumanInTheLoopConfig HumanConfig { get; set; }
+    parameters: []
+    return:
+      type: UltraGenericSystem.Models.HumanInTheLoopConfig
+    content.vb: Public Property HumanConfig As HumanInTheLoopConfig
+  overload: UltraGenericSystem.Models.AdvancedOrchestrationContext`2.HumanConfig*
+  nameWithType.vb: AdvancedOrchestrationContext(Of TInput, TOutput).HumanConfig
+  fullName.vb: UltraGenericSystem.Models.AdvancedOrchestrationContext(Of TInput, TOutput).HumanConfig
+- uid: UltraGenericSystem.Models.AdvancedOrchestrationContext`2.TransformConfig
+  commentId: P:UltraGenericSystem.Models.AdvancedOrchestrationContext`2.TransformConfig
+  id: TransformConfig
+  parent: UltraGenericSystem.Models.AdvancedOrchestrationContext`2
+  langs:
+  - csharp
+  - vb
+  name: TransformConfig
+  nameWithType: AdvancedOrchestrationContext<TInput, TOutput>.TransformConfig
+  fullName: UltraGenericSystem.Models.AdvancedOrchestrationContext<TInput, TOutput>.TransformConfig
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: TransformConfig
+    path: ../Models/AgentModels.cs
+    startLine: 601
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  syntax:
+    content: public CustomTransformConfig TransformConfig { get; set; }
+    parameters: []
+    return:
+      type: UltraGenericSystem.Models.CustomTransformConfig
+    content.vb: Public Property TransformConfig As CustomTransformConfig
+  overload: UltraGenericSystem.Models.AdvancedOrchestrationContext`2.TransformConfig*
+  nameWithType.vb: AdvancedOrchestrationContext(Of TInput, TOutput).TransformConfig
+  fullName.vb: UltraGenericSystem.Models.AdvancedOrchestrationContext(Of TInput, TOutput).TransformConfig
+- uid: UltraGenericSystem.Models.AdvancedOrchestrationContext`2.State
+  commentId: P:UltraGenericSystem.Models.AdvancedOrchestrationContext`2.State
+  id: State
+  parent: UltraGenericSystem.Models.AdvancedOrchestrationContext`2
+  langs:
+  - csharp
+  - vb
+  name: State
+  nameWithType: AdvancedOrchestrationContext<TInput, TOutput>.State
+  fullName: UltraGenericSystem.Models.AdvancedOrchestrationContext<TInput, TOutput>.State
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: State
+    path: ../Models/AgentModels.cs
+    startLine: 602
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  syntax:
+    content: public Dictionary<string, object> State { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+    content.vb: Public Property State As Dictionary(Of String, Object)
+  overload: UltraGenericSystem.Models.AdvancedOrchestrationContext`2.State*
+  nameWithType.vb: AdvancedOrchestrationContext(Of TInput, TOutput).State
+  fullName.vb: UltraGenericSystem.Models.AdvancedOrchestrationContext(Of TInput, TOutput).State
+- uid: UltraGenericSystem.Models.AdvancedOrchestrationContext`2.ExecutionLog
+  commentId: P:UltraGenericSystem.Models.AdvancedOrchestrationContext`2.ExecutionLog
+  id: ExecutionLog
+  parent: UltraGenericSystem.Models.AdvancedOrchestrationContext`2
+  langs:
+  - csharp
+  - vb
+  name: ExecutionLog
+  nameWithType: AdvancedOrchestrationContext<TInput, TOutput>.ExecutionLog
+  fullName: UltraGenericSystem.Models.AdvancedOrchestrationContext<TInput, TOutput>.ExecutionLog
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: ExecutionLog
+    path: ../Models/AgentModels.cs
+    startLine: 603
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  syntax:
+    content: public List<string> ExecutionLog { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Public Property ExecutionLog As List(Of String)
+  overload: UltraGenericSystem.Models.AdvancedOrchestrationContext`2.ExecutionLog*
+  nameWithType.vb: AdvancedOrchestrationContext(Of TInput, TOutput).ExecutionLog
+  fullName.vb: UltraGenericSystem.Models.AdvancedOrchestrationContext(Of TInput, TOutput).ExecutionLog
+- uid: UltraGenericSystem.Models.AdvancedOrchestrationContext`2.CancellationToken
+  commentId: P:UltraGenericSystem.Models.AdvancedOrchestrationContext`2.CancellationToken
+  id: CancellationToken
+  parent: UltraGenericSystem.Models.AdvancedOrchestrationContext`2
+  langs:
+  - csharp
+  - vb
+  name: CancellationToken
+  nameWithType: AdvancedOrchestrationContext<TInput, TOutput>.CancellationToken
+  fullName: UltraGenericSystem.Models.AdvancedOrchestrationContext<TInput, TOutput>.CancellationToken
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: CancellationToken
+    path: ../Models/AgentModels.cs
+    startLine: 604
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  syntax:
+    content: public CancellationToken CancellationToken { get; set; }
+    parameters: []
+    return:
+      type: System.Threading.CancellationToken
+    content.vb: Public Property CancellationToken As CancellationToken
+  overload: UltraGenericSystem.Models.AdvancedOrchestrationContext`2.CancellationToken*
+  nameWithType.vb: AdvancedOrchestrationContext(Of TInput, TOutput).CancellationToken
+  fullName.vb: UltraGenericSystem.Models.AdvancedOrchestrationContext(Of TInput, TOutput).CancellationToken
+- uid: UltraGenericSystem.Models.AdvancedOrchestrationContext`2.LogExecution(System.String)
+  commentId: M:UltraGenericSystem.Models.AdvancedOrchestrationContext`2.LogExecution(System.String)
+  id: LogExecution(System.String)
+  parent: UltraGenericSystem.Models.AdvancedOrchestrationContext`2
+  langs:
+  - csharp
+  - vb
+  name: LogExecution(string)
+  nameWithType: AdvancedOrchestrationContext<TInput, TOutput>.LogExecution(string)
+  fullName: UltraGenericSystem.Models.AdvancedOrchestrationContext<TInput, TOutput>.LogExecution(string)
+  type: Method
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: LogExecution
+    path: ../Models/AgentModels.cs
+    startLine: 606
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  syntax:
+    content: public void LogExecution(string message)
+    parameters:
+    - id: message
+      type: System.String
+    content.vb: Public Sub LogExecution(message As String)
+  overload: UltraGenericSystem.Models.AdvancedOrchestrationContext`2.LogExecution*
+  nameWithType.vb: AdvancedOrchestrationContext(Of TInput, TOutput).LogExecution(String)
+  fullName.vb: UltraGenericSystem.Models.AdvancedOrchestrationContext(Of TInput, TOutput).LogExecution(String)
+  name.vb: LogExecution(String)
+- uid: UltraGenericSystem.Models.AdvancedOrchestrationContext`2.SetState(System.String,System.Object)
+  commentId: M:UltraGenericSystem.Models.AdvancedOrchestrationContext`2.SetState(System.String,System.Object)
+  id: SetState(System.String,System.Object)
+  parent: UltraGenericSystem.Models.AdvancedOrchestrationContext`2
+  langs:
+  - csharp
+  - vb
+  name: SetState(string, object)
+  nameWithType: AdvancedOrchestrationContext<TInput, TOutput>.SetState(string, object)
+  fullName: UltraGenericSystem.Models.AdvancedOrchestrationContext<TInput, TOutput>.SetState(string, object)
+  type: Method
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: SetState
+    path: ../Models/AgentModels.cs
+    startLine: 611
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  syntax:
+    content: public void SetState(string key, object value)
+    parameters:
+    - id: key
+      type: System.String
+    - id: value
+      type: System.Object
+    content.vb: Public Sub SetState(key As String, value As Object)
+  overload: UltraGenericSystem.Models.AdvancedOrchestrationContext`2.SetState*
+  nameWithType.vb: AdvancedOrchestrationContext(Of TInput, TOutput).SetState(String, Object)
+  fullName.vb: UltraGenericSystem.Models.AdvancedOrchestrationContext(Of TInput, TOutput).SetState(String, Object)
+  name.vb: SetState(String, Object)
+- uid: UltraGenericSystem.Models.AdvancedOrchestrationContext`2.GetState``1(System.String)
+  commentId: M:UltraGenericSystem.Models.AdvancedOrchestrationContext`2.GetState``1(System.String)
+  id: GetState``1(System.String)
+  parent: UltraGenericSystem.Models.AdvancedOrchestrationContext`2
+  langs:
+  - csharp
+  - vb
+  name: GetState<T>(string)
+  nameWithType: AdvancedOrchestrationContext<TInput, TOutput>.GetState<T>(string)
+  fullName: UltraGenericSystem.Models.AdvancedOrchestrationContext<TInput, TOutput>.GetState<T>(string)
+  type: Method
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetState
+    path: ../Models/AgentModels.cs
+    startLine: 616
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  syntax:
+    content: public T? GetState<T>(string key)
+    parameters:
+    - id: key
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Function GetState(Of T)(key As String) As T
+  overload: UltraGenericSystem.Models.AdvancedOrchestrationContext`2.GetState*
+  nameWithType.vb: AdvancedOrchestrationContext(Of TInput, TOutput).GetState(Of T)(String)
+  fullName.vb: UltraGenericSystem.Models.AdvancedOrchestrationContext(Of TInput, TOutput).GetState(Of T)(String)
+  name.vb: GetState(Of T)(String)
+references:
+- uid: UltraGenericSystem.Models
+  commentId: N:UltraGenericSystem.Models
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Models
+  nameWithType: UltraGenericSystem.Models
+  fullName: UltraGenericSystem.Models
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UltraGenericSystem.Models.AdvancedOrchestrationContext`2.StructuredInput*
+  commentId: Overload:UltraGenericSystem.Models.AdvancedOrchestrationContext`2.StructuredInput
+  href: UltraGenericSystem.Models.AdvancedOrchestrationContext-2.html#UltraGenericSystem_Models_AdvancedOrchestrationContext_2_StructuredInput
+  name: StructuredInput
+  nameWithType: AdvancedOrchestrationContext<TInput, TOutput>.StructuredInput
+  fullName: UltraGenericSystem.Models.AdvancedOrchestrationContext<TInput, TOutput>.StructuredInput
+  nameWithType.vb: AdvancedOrchestrationContext(Of TInput, TOutput).StructuredInput
+  fullName.vb: UltraGenericSystem.Models.AdvancedOrchestrationContext(Of TInput, TOutput).StructuredInput
+- uid: UltraGenericSystem.Models.StructuredInput{{TInput}}
+  commentId: T:UltraGenericSystem.Models.StructuredInput{`0}
+  parent: UltraGenericSystem.Models
+  definition: UltraGenericSystem.Models.StructuredInput`1
+  href: UltraGenericSystem.Models.StructuredInput-1.html
+  name: StructuredInput<TInput>
+  nameWithType: StructuredInput<TInput>
+  fullName: UltraGenericSystem.Models.StructuredInput<TInput>
+  nameWithType.vb: StructuredInput(Of TInput)
+  fullName.vb: UltraGenericSystem.Models.StructuredInput(Of TInput)
+  name.vb: StructuredInput(Of TInput)
+  spec.csharp:
+  - uid: UltraGenericSystem.Models.StructuredInput`1
+    name: StructuredInput
+    href: UltraGenericSystem.Models.StructuredInput-1.html
+  - name: <
+  - name: TInput
+  - name: '>'
+  spec.vb:
+  - uid: UltraGenericSystem.Models.StructuredInput`1
+    name: StructuredInput
+    href: UltraGenericSystem.Models.StructuredInput-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TInput
+  - name: )
+- uid: UltraGenericSystem.Models.StructuredInput`1
+  commentId: T:UltraGenericSystem.Models.StructuredInput`1
+  href: UltraGenericSystem.Models.StructuredInput-1.html
+  name: StructuredInput<T>
+  nameWithType: StructuredInput<T>
+  fullName: UltraGenericSystem.Models.StructuredInput<T>
+  nameWithType.vb: StructuredInput(Of T)
+  fullName.vb: UltraGenericSystem.Models.StructuredInput(Of T)
+  name.vb: StructuredInput(Of T)
+  spec.csharp:
+  - uid: UltraGenericSystem.Models.StructuredInput`1
+    name: StructuredInput
+    href: UltraGenericSystem.Models.StructuredInput-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UltraGenericSystem.Models.StructuredInput`1
+    name: StructuredInput
+    href: UltraGenericSystem.Models.StructuredInput-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UltraGenericSystem.Models.AdvancedOrchestrationContext`2.Config*
+  commentId: Overload:UltraGenericSystem.Models.AdvancedOrchestrationContext`2.Config
+  href: UltraGenericSystem.Models.AdvancedOrchestrationContext-2.html#UltraGenericSystem_Models_AdvancedOrchestrationContext_2_Config
+  name: Config
+  nameWithType: AdvancedOrchestrationContext<TInput, TOutput>.Config
+  fullName: UltraGenericSystem.Models.AdvancedOrchestrationContext<TInput, TOutput>.Config
+  nameWithType.vb: AdvancedOrchestrationContext(Of TInput, TOutput).Config
+  fullName.vb: UltraGenericSystem.Models.AdvancedOrchestrationContext(Of TInput, TOutput).Config
+- uid: UltraGenericSystem.Models.AdvancedOrchestrationConfig
+  commentId: T:UltraGenericSystem.Models.AdvancedOrchestrationConfig
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.AdvancedOrchestrationConfig.html
+  name: AdvancedOrchestrationConfig
+  nameWithType: AdvancedOrchestrationConfig
+  fullName: UltraGenericSystem.Models.AdvancedOrchestrationConfig
+- uid: UltraGenericSystem.Models.AdvancedOrchestrationContext`2.ResponseConfig*
+  commentId: Overload:UltraGenericSystem.Models.AdvancedOrchestrationContext`2.ResponseConfig
+  href: UltraGenericSystem.Models.AdvancedOrchestrationContext-2.html#UltraGenericSystem_Models_AdvancedOrchestrationContext_2_ResponseConfig
+  name: ResponseConfig
+  nameWithType: AdvancedOrchestrationContext<TInput, TOutput>.ResponseConfig
+  fullName: UltraGenericSystem.Models.AdvancedOrchestrationContext<TInput, TOutput>.ResponseConfig
+  nameWithType.vb: AdvancedOrchestrationContext(Of TInput, TOutput).ResponseConfig
+  fullName.vb: UltraGenericSystem.Models.AdvancedOrchestrationContext(Of TInput, TOutput).ResponseConfig
+- uid: UltraGenericSystem.Models.ResponseCallbackConfig
+  commentId: T:UltraGenericSystem.Models.ResponseCallbackConfig
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.ResponseCallbackConfig.html
+  name: ResponseCallbackConfig
+  nameWithType: ResponseCallbackConfig
+  fullName: UltraGenericSystem.Models.ResponseCallbackConfig
+- uid: UltraGenericSystem.Models.AdvancedOrchestrationContext`2.HumanConfig*
+  commentId: Overload:UltraGenericSystem.Models.AdvancedOrchestrationContext`2.HumanConfig
+  href: UltraGenericSystem.Models.AdvancedOrchestrationContext-2.html#UltraGenericSystem_Models_AdvancedOrchestrationContext_2_HumanConfig
+  name: HumanConfig
+  nameWithType: AdvancedOrchestrationContext<TInput, TOutput>.HumanConfig
+  fullName: UltraGenericSystem.Models.AdvancedOrchestrationContext<TInput, TOutput>.HumanConfig
+  nameWithType.vb: AdvancedOrchestrationContext(Of TInput, TOutput).HumanConfig
+  fullName.vb: UltraGenericSystem.Models.AdvancedOrchestrationContext(Of TInput, TOutput).HumanConfig
+- uid: UltraGenericSystem.Models.HumanInTheLoopConfig
+  commentId: T:UltraGenericSystem.Models.HumanInTheLoopConfig
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.HumanInTheLoopConfig.html
+  name: HumanInTheLoopConfig
+  nameWithType: HumanInTheLoopConfig
+  fullName: UltraGenericSystem.Models.HumanInTheLoopConfig
+- uid: UltraGenericSystem.Models.AdvancedOrchestrationContext`2.TransformConfig*
+  commentId: Overload:UltraGenericSystem.Models.AdvancedOrchestrationContext`2.TransformConfig
+  href: UltraGenericSystem.Models.AdvancedOrchestrationContext-2.html#UltraGenericSystem_Models_AdvancedOrchestrationContext_2_TransformConfig
+  name: TransformConfig
+  nameWithType: AdvancedOrchestrationContext<TInput, TOutput>.TransformConfig
+  fullName: UltraGenericSystem.Models.AdvancedOrchestrationContext<TInput, TOutput>.TransformConfig
+  nameWithType.vb: AdvancedOrchestrationContext(Of TInput, TOutput).TransformConfig
+  fullName.vb: UltraGenericSystem.Models.AdvancedOrchestrationContext(Of TInput, TOutput).TransformConfig
+- uid: UltraGenericSystem.Models.CustomTransformConfig
+  commentId: T:UltraGenericSystem.Models.CustomTransformConfig
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.CustomTransformConfig.html
+  name: CustomTransformConfig
+  nameWithType: CustomTransformConfig
+  fullName: UltraGenericSystem.Models.CustomTransformConfig
+- uid: UltraGenericSystem.Models.AdvancedOrchestrationContext`2.State*
+  commentId: Overload:UltraGenericSystem.Models.AdvancedOrchestrationContext`2.State
+  href: UltraGenericSystem.Models.AdvancedOrchestrationContext-2.html#UltraGenericSystem_Models_AdvancedOrchestrationContext_2_State
+  name: State
+  nameWithType: AdvancedOrchestrationContext<TInput, TOutput>.State
+  fullName: UltraGenericSystem.Models.AdvancedOrchestrationContext<TInput, TOutput>.State
+  nameWithType.vb: AdvancedOrchestrationContext(Of TInput, TOutput).State
+  fullName.vb: UltraGenericSystem.Models.AdvancedOrchestrationContext(Of TInput, TOutput).State
+- uid: System.Collections.Generic.Dictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, object>
+  nameWithType: Dictionary<string, object>
+  fullName: System.Collections.Generic.Dictionary<string, object>
+  nameWithType.vb: Dictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, Object)
+  name.vb: Dictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: UltraGenericSystem.Models.AdvancedOrchestrationContext`2.ExecutionLog*
+  commentId: Overload:UltraGenericSystem.Models.AdvancedOrchestrationContext`2.ExecutionLog
+  href: UltraGenericSystem.Models.AdvancedOrchestrationContext-2.html#UltraGenericSystem_Models_AdvancedOrchestrationContext_2_ExecutionLog
+  name: ExecutionLog
+  nameWithType: AdvancedOrchestrationContext<TInput, TOutput>.ExecutionLog
+  fullName: UltraGenericSystem.Models.AdvancedOrchestrationContext<TInput, TOutput>.ExecutionLog
+  nameWithType.vb: AdvancedOrchestrationContext(Of TInput, TOutput).ExecutionLog
+  fullName.vb: UltraGenericSystem.Models.AdvancedOrchestrationContext(Of TInput, TOutput).ExecutionLog
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UltraGenericSystem.Models.AdvancedOrchestrationContext`2.CancellationToken*
+  commentId: Overload:UltraGenericSystem.Models.AdvancedOrchestrationContext`2.CancellationToken
+  href: UltraGenericSystem.Models.AdvancedOrchestrationContext-2.html#UltraGenericSystem_Models_AdvancedOrchestrationContext_2_CancellationToken
+  name: CancellationToken
+  nameWithType: AdvancedOrchestrationContext<TInput, TOutput>.CancellationToken
+  fullName: UltraGenericSystem.Models.AdvancedOrchestrationContext<TInput, TOutput>.CancellationToken
+  nameWithType.vb: AdvancedOrchestrationContext(Of TInput, TOutput).CancellationToken
+  fullName.vb: UltraGenericSystem.Models.AdvancedOrchestrationContext(Of TInput, TOutput).CancellationToken
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: UltraGenericSystem.Models.AdvancedOrchestrationContext`2.LogExecution*
+  commentId: Overload:UltraGenericSystem.Models.AdvancedOrchestrationContext`2.LogExecution
+  href: UltraGenericSystem.Models.AdvancedOrchestrationContext-2.html#UltraGenericSystem_Models_AdvancedOrchestrationContext_2_LogExecution_System_String_
+  name: LogExecution
+  nameWithType: AdvancedOrchestrationContext<TInput, TOutput>.LogExecution
+  fullName: UltraGenericSystem.Models.AdvancedOrchestrationContext<TInput, TOutput>.LogExecution
+  nameWithType.vb: AdvancedOrchestrationContext(Of TInput, TOutput).LogExecution
+  fullName.vb: UltraGenericSystem.Models.AdvancedOrchestrationContext(Of TInput, TOutput).LogExecution
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: UltraGenericSystem.Models.AdvancedOrchestrationContext`2.SetState*
+  commentId: Overload:UltraGenericSystem.Models.AdvancedOrchestrationContext`2.SetState
+  href: UltraGenericSystem.Models.AdvancedOrchestrationContext-2.html#UltraGenericSystem_Models_AdvancedOrchestrationContext_2_SetState_System_String_System_Object_
+  name: SetState
+  nameWithType: AdvancedOrchestrationContext<TInput, TOutput>.SetState
+  fullName: UltraGenericSystem.Models.AdvancedOrchestrationContext<TInput, TOutput>.SetState
+  nameWithType.vb: AdvancedOrchestrationContext(Of TInput, TOutput).SetState
+  fullName.vb: UltraGenericSystem.Models.AdvancedOrchestrationContext(Of TInput, TOutput).SetState
+- uid: UltraGenericSystem.Models.AdvancedOrchestrationContext`2.GetState*
+  commentId: Overload:UltraGenericSystem.Models.AdvancedOrchestrationContext`2.GetState
+  href: UltraGenericSystem.Models.AdvancedOrchestrationContext-2.html#UltraGenericSystem_Models_AdvancedOrchestrationContext_2_GetState__1_System_String_
+  name: GetState
+  nameWithType: AdvancedOrchestrationContext<TInput, TOutput>.GetState
+  fullName: UltraGenericSystem.Models.AdvancedOrchestrationContext<TInput, TOutput>.GetState
+  nameWithType.vb: AdvancedOrchestrationContext(Of TInput, TOutput).GetState
+  fullName.vb: UltraGenericSystem.Models.AdvancedOrchestrationContext(Of TInput, TOutput).GetState
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T

@@ -1,0 +1,822 @@
+### YamlMime:ManagedReference
+items:
+- uid: UltraGenericSystem.Models.MemoryConfig
+  commentId: T:UltraGenericSystem.Models.MemoryConfig
+  id: MemoryConfig
+  parent: UltraGenericSystem.Models
+  children:
+  - UltraGenericSystem.Models.MemoryConfig.EmbeddingModel
+  - UltraGenericSystem.Models.MemoryConfig.EnableMem0
+  - UltraGenericSystem.Models.MemoryConfig.EnableRAG
+  - UltraGenericSystem.Models.MemoryConfig.EnableWhiteboard
+  - UltraGenericSystem.Models.MemoryConfig.MaxMemoryEntries
+  - UltraGenericSystem.Models.MemoryConfig.MaxRAGResults
+  - UltraGenericSystem.Models.MemoryConfig.MaxWhiteboardEntries
+  - UltraGenericSystem.Models.MemoryConfig.MinSimilarityThreshold
+  - UltraGenericSystem.Models.MemoryConfig.VectorStoreConfig
+  - UltraGenericSystem.Models.MemoryConfig.VectorStoreType
+  langs:
+  - csharp
+  - vb
+  name: MemoryConfig
+  nameWithType: MemoryConfig
+  fullName: UltraGenericSystem.Models.MemoryConfig
+  type: Class
+  source:
+    remote:
+      path: Models/MemoryModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: MemoryConfig
+    path: ../Models/MemoryModels.cs
+    startLine: 178
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Memory configuration
+  example: []
+  syntax:
+    content: public class MemoryConfig
+    content.vb: Public Class MemoryConfig
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: UltraGenericSystem.Models.MemoryConfig.EnableMem0
+  commentId: P:UltraGenericSystem.Models.MemoryConfig.EnableMem0
+  id: EnableMem0
+  parent: UltraGenericSystem.Models.MemoryConfig
+  langs:
+  - csharp
+  - vb
+  name: EnableMem0
+  nameWithType: MemoryConfig.EnableMem0
+  fullName: UltraGenericSystem.Models.MemoryConfig.EnableMem0
+  type: Property
+  source:
+    remote:
+      path: Models/MemoryModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: EnableMem0
+    path: ../Models/MemoryModels.cs
+    startLine: 180
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  syntax:
+    content: public bool EnableMem0 { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property EnableMem0 As Boolean
+  overload: UltraGenericSystem.Models.MemoryConfig.EnableMem0*
+- uid: UltraGenericSystem.Models.MemoryConfig.EnableWhiteboard
+  commentId: P:UltraGenericSystem.Models.MemoryConfig.EnableWhiteboard
+  id: EnableWhiteboard
+  parent: UltraGenericSystem.Models.MemoryConfig
+  langs:
+  - csharp
+  - vb
+  name: EnableWhiteboard
+  nameWithType: MemoryConfig.EnableWhiteboard
+  fullName: UltraGenericSystem.Models.MemoryConfig.EnableWhiteboard
+  type: Property
+  source:
+    remote:
+      path: Models/MemoryModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: EnableWhiteboard
+    path: ../Models/MemoryModels.cs
+    startLine: 182
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  syntax:
+    content: public bool EnableWhiteboard { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property EnableWhiteboard As Boolean
+  overload: UltraGenericSystem.Models.MemoryConfig.EnableWhiteboard*
+- uid: UltraGenericSystem.Models.MemoryConfig.EnableRAG
+  commentId: P:UltraGenericSystem.Models.MemoryConfig.EnableRAG
+  id: EnableRAG
+  parent: UltraGenericSystem.Models.MemoryConfig
+  langs:
+  - csharp
+  - vb
+  name: EnableRAG
+  nameWithType: MemoryConfig.EnableRAG
+  fullName: UltraGenericSystem.Models.MemoryConfig.EnableRAG
+  type: Property
+  source:
+    remote:
+      path: Models/MemoryModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: EnableRAG
+    path: ../Models/MemoryModels.cs
+    startLine: 184
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  syntax:
+    content: public bool EnableRAG { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property EnableRAG As Boolean
+  overload: UltraGenericSystem.Models.MemoryConfig.EnableRAG*
+- uid: UltraGenericSystem.Models.MemoryConfig.MaxMemoryEntries
+  commentId: P:UltraGenericSystem.Models.MemoryConfig.MaxMemoryEntries
+  id: MaxMemoryEntries
+  parent: UltraGenericSystem.Models.MemoryConfig
+  langs:
+  - csharp
+  - vb
+  name: MaxMemoryEntries
+  nameWithType: MemoryConfig.MaxMemoryEntries
+  fullName: UltraGenericSystem.Models.MemoryConfig.MaxMemoryEntries
+  type: Property
+  source:
+    remote:
+      path: Models/MemoryModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: MaxMemoryEntries
+    path: ../Models/MemoryModels.cs
+    startLine: 186
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  syntax:
+    content: public int MaxMemoryEntries { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property MaxMemoryEntries As Integer
+  overload: UltraGenericSystem.Models.MemoryConfig.MaxMemoryEntries*
+- uid: UltraGenericSystem.Models.MemoryConfig.MaxWhiteboardEntries
+  commentId: P:UltraGenericSystem.Models.MemoryConfig.MaxWhiteboardEntries
+  id: MaxWhiteboardEntries
+  parent: UltraGenericSystem.Models.MemoryConfig
+  langs:
+  - csharp
+  - vb
+  name: MaxWhiteboardEntries
+  nameWithType: MemoryConfig.MaxWhiteboardEntries
+  fullName: UltraGenericSystem.Models.MemoryConfig.MaxWhiteboardEntries
+  type: Property
+  source:
+    remote:
+      path: Models/MemoryModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: MaxWhiteboardEntries
+    path: ../Models/MemoryModels.cs
+    startLine: 188
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  syntax:
+    content: public int MaxWhiteboardEntries { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property MaxWhiteboardEntries As Integer
+  overload: UltraGenericSystem.Models.MemoryConfig.MaxWhiteboardEntries*
+- uid: UltraGenericSystem.Models.MemoryConfig.MaxRAGResults
+  commentId: P:UltraGenericSystem.Models.MemoryConfig.MaxRAGResults
+  id: MaxRAGResults
+  parent: UltraGenericSystem.Models.MemoryConfig
+  langs:
+  - csharp
+  - vb
+  name: MaxRAGResults
+  nameWithType: MemoryConfig.MaxRAGResults
+  fullName: UltraGenericSystem.Models.MemoryConfig.MaxRAGResults
+  type: Property
+  source:
+    remote:
+      path: Models/MemoryModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: MaxRAGResults
+    path: ../Models/MemoryModels.cs
+    startLine: 190
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  syntax:
+    content: public int MaxRAGResults { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property MaxRAGResults As Integer
+  overload: UltraGenericSystem.Models.MemoryConfig.MaxRAGResults*
+- uid: UltraGenericSystem.Models.MemoryConfig.MinSimilarityThreshold
+  commentId: P:UltraGenericSystem.Models.MemoryConfig.MinSimilarityThreshold
+  id: MinSimilarityThreshold
+  parent: UltraGenericSystem.Models.MemoryConfig
+  langs:
+  - csharp
+  - vb
+  name: MinSimilarityThreshold
+  nameWithType: MemoryConfig.MinSimilarityThreshold
+  fullName: UltraGenericSystem.Models.MemoryConfig.MinSimilarityThreshold
+  type: Property
+  source:
+    remote:
+      path: Models/MemoryModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: MinSimilarityThreshold
+    path: ../Models/MemoryModels.cs
+    startLine: 192
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  syntax:
+    content: public double MinSimilarityThreshold { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property MinSimilarityThreshold As Double
+  overload: UltraGenericSystem.Models.MemoryConfig.MinSimilarityThreshold*
+- uid: UltraGenericSystem.Models.MemoryConfig.EmbeddingModel
+  commentId: P:UltraGenericSystem.Models.MemoryConfig.EmbeddingModel
+  id: EmbeddingModel
+  parent: UltraGenericSystem.Models.MemoryConfig
+  langs:
+  - csharp
+  - vb
+  name: EmbeddingModel
+  nameWithType: MemoryConfig.EmbeddingModel
+  fullName: UltraGenericSystem.Models.MemoryConfig.EmbeddingModel
+  type: Property
+  source:
+    remote:
+      path: Models/MemoryModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: EmbeddingModel
+    path: ../Models/MemoryModels.cs
+    startLine: 194
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  syntax:
+    content: public string? EmbeddingModel { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EmbeddingModel As String
+  overload: UltraGenericSystem.Models.MemoryConfig.EmbeddingModel*
+- uid: UltraGenericSystem.Models.MemoryConfig.VectorStoreType
+  commentId: P:UltraGenericSystem.Models.MemoryConfig.VectorStoreType
+  id: VectorStoreType
+  parent: UltraGenericSystem.Models.MemoryConfig
+  langs:
+  - csharp
+  - vb
+  name: VectorStoreType
+  nameWithType: MemoryConfig.VectorStoreType
+  fullName: UltraGenericSystem.Models.MemoryConfig.VectorStoreType
+  type: Property
+  source:
+    remote:
+      path: Models/MemoryModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: VectorStoreType
+    path: ../Models/MemoryModels.cs
+    startLine: 196
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  syntax:
+    content: public string? VectorStoreType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property VectorStoreType As String
+  overload: UltraGenericSystem.Models.MemoryConfig.VectorStoreType*
+- uid: UltraGenericSystem.Models.MemoryConfig.VectorStoreConfig
+  commentId: P:UltraGenericSystem.Models.MemoryConfig.VectorStoreConfig
+  id: VectorStoreConfig
+  parent: UltraGenericSystem.Models.MemoryConfig
+  langs:
+  - csharp
+  - vb
+  name: VectorStoreConfig
+  nameWithType: MemoryConfig.VectorStoreConfig
+  fullName: UltraGenericSystem.Models.MemoryConfig.VectorStoreConfig
+  type: Property
+  source:
+    remote:
+      path: Models/MemoryModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: VectorStoreConfig
+    path: ../Models/MemoryModels.cs
+    startLine: 198
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  syntax:
+    content: public Dictionary<string, object>? VectorStoreConfig { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+    content.vb: Public Property VectorStoreConfig As Dictionary(Of String, Object)
+  overload: UltraGenericSystem.Models.MemoryConfig.VectorStoreConfig*
+references:
+- uid: UltraGenericSystem.Models
+  commentId: N:UltraGenericSystem.Models
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Models
+  nameWithType: UltraGenericSystem.Models
+  fullName: UltraGenericSystem.Models
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UltraGenericSystem.Models.MemoryConfig.EnableMem0*
+  commentId: Overload:UltraGenericSystem.Models.MemoryConfig.EnableMem0
+  href: UltraGenericSystem.Models.MemoryConfig.html#UltraGenericSystem_Models_MemoryConfig_EnableMem0
+  name: EnableMem0
+  nameWithType: MemoryConfig.EnableMem0
+  fullName: UltraGenericSystem.Models.MemoryConfig.EnableMem0
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: UltraGenericSystem.Models.MemoryConfig.EnableWhiteboard*
+  commentId: Overload:UltraGenericSystem.Models.MemoryConfig.EnableWhiteboard
+  href: UltraGenericSystem.Models.MemoryConfig.html#UltraGenericSystem_Models_MemoryConfig_EnableWhiteboard
+  name: EnableWhiteboard
+  nameWithType: MemoryConfig.EnableWhiteboard
+  fullName: UltraGenericSystem.Models.MemoryConfig.EnableWhiteboard
+- uid: UltraGenericSystem.Models.MemoryConfig.EnableRAG*
+  commentId: Overload:UltraGenericSystem.Models.MemoryConfig.EnableRAG
+  href: UltraGenericSystem.Models.MemoryConfig.html#UltraGenericSystem_Models_MemoryConfig_EnableRAG
+  name: EnableRAG
+  nameWithType: MemoryConfig.EnableRAG
+  fullName: UltraGenericSystem.Models.MemoryConfig.EnableRAG
+- uid: UltraGenericSystem.Models.MemoryConfig.MaxMemoryEntries*
+  commentId: Overload:UltraGenericSystem.Models.MemoryConfig.MaxMemoryEntries
+  href: UltraGenericSystem.Models.MemoryConfig.html#UltraGenericSystem_Models_MemoryConfig_MaxMemoryEntries
+  name: MaxMemoryEntries
+  nameWithType: MemoryConfig.MaxMemoryEntries
+  fullName: UltraGenericSystem.Models.MemoryConfig.MaxMemoryEntries
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: UltraGenericSystem.Models.MemoryConfig.MaxWhiteboardEntries*
+  commentId: Overload:UltraGenericSystem.Models.MemoryConfig.MaxWhiteboardEntries
+  href: UltraGenericSystem.Models.MemoryConfig.html#UltraGenericSystem_Models_MemoryConfig_MaxWhiteboardEntries
+  name: MaxWhiteboardEntries
+  nameWithType: MemoryConfig.MaxWhiteboardEntries
+  fullName: UltraGenericSystem.Models.MemoryConfig.MaxWhiteboardEntries
+- uid: UltraGenericSystem.Models.MemoryConfig.MaxRAGResults*
+  commentId: Overload:UltraGenericSystem.Models.MemoryConfig.MaxRAGResults
+  href: UltraGenericSystem.Models.MemoryConfig.html#UltraGenericSystem_Models_MemoryConfig_MaxRAGResults
+  name: MaxRAGResults
+  nameWithType: MemoryConfig.MaxRAGResults
+  fullName: UltraGenericSystem.Models.MemoryConfig.MaxRAGResults
+- uid: UltraGenericSystem.Models.MemoryConfig.MinSimilarityThreshold*
+  commentId: Overload:UltraGenericSystem.Models.MemoryConfig.MinSimilarityThreshold
+  href: UltraGenericSystem.Models.MemoryConfig.html#UltraGenericSystem_Models_MemoryConfig_MinSimilarityThreshold
+  name: MinSimilarityThreshold
+  nameWithType: MemoryConfig.MinSimilarityThreshold
+  fullName: UltraGenericSystem.Models.MemoryConfig.MinSimilarityThreshold
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: UltraGenericSystem.Models.MemoryConfig.EmbeddingModel*
+  commentId: Overload:UltraGenericSystem.Models.MemoryConfig.EmbeddingModel
+  href: UltraGenericSystem.Models.MemoryConfig.html#UltraGenericSystem_Models_MemoryConfig_EmbeddingModel
+  name: EmbeddingModel
+  nameWithType: MemoryConfig.EmbeddingModel
+  fullName: UltraGenericSystem.Models.MemoryConfig.EmbeddingModel
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: UltraGenericSystem.Models.MemoryConfig.VectorStoreType*
+  commentId: Overload:UltraGenericSystem.Models.MemoryConfig.VectorStoreType
+  href: UltraGenericSystem.Models.MemoryConfig.html#UltraGenericSystem_Models_MemoryConfig_VectorStoreType
+  name: VectorStoreType
+  nameWithType: MemoryConfig.VectorStoreType
+  fullName: UltraGenericSystem.Models.MemoryConfig.VectorStoreType
+- uid: UltraGenericSystem.Models.MemoryConfig.VectorStoreConfig*
+  commentId: Overload:UltraGenericSystem.Models.MemoryConfig.VectorStoreConfig
+  href: UltraGenericSystem.Models.MemoryConfig.html#UltraGenericSystem_Models_MemoryConfig_VectorStoreConfig
+  name: VectorStoreConfig
+  nameWithType: MemoryConfig.VectorStoreConfig
+  fullName: UltraGenericSystem.Models.MemoryConfig.VectorStoreConfig
+- uid: System.Collections.Generic.Dictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, object>
+  nameWithType: Dictionary<string, object>
+  fullName: System.Collections.Generic.Dictionary<string, object>
+  nameWithType.vb: Dictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, Object)
+  name.vb: Dictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

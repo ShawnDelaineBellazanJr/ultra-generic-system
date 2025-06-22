@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class DynamicPluginService </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class DynamicPluginService ">
+    
+    <meta name="description" content="Service for dynamic plugin management and registration">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="UltraGenericSystem.Services.SelfEvolution.DynamicPluginService">
+
+
+
+  <h1 id="UltraGenericSystem_Services_SelfEvolution_DynamicPluginService" data-uid="UltraGenericSystem.Services.SelfEvolution.DynamicPluginService" class="text-break">Class DynamicPluginService</h1>
+  <div class="markdown level0 summary"><p sourcefile="api/UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.yml" sourcestartlinenumber="1">Service for dynamic plugin management and registration</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">DynamicPluginService</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html">IDynamicPluginService</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="UltraGenericSystem.html">UltraGenericSystem</a>.<a class="xref" href="UltraGenericSystem.Services.html">Services</a>.<a class="xref" href="UltraGenericSystem.Services.SelfEvolution.html">SelfEvolution</a></h6>
+  <h6><strong>Assembly</strong>: UltraGenericSystem.dll</h6>
+  <h5 id="UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DynamicPluginService : IDynamicPluginService</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_SelfEvolution_DynamicPluginService__ctor_UltraGenericSystem_Repositories_IGenericRepository_UltraGenericSystem_Models_SelfEvolution_DynamicPlugin__UltraGenericSystem_Services_SelfEvolution_ICodeGenerationService_Microsoft_Extensions_Logging_ILogger_UltraGenericSystem_Services_SelfEvolution_DynamicPluginService__.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.%23ctor(UltraGenericSystem.Repositories.IGenericRepository%7BUltraGenericSystem.Models.SelfEvolution.DynamicPlugin%7D%2CUltraGenericSystem.Services.SelfEvolution.ICodeGenerationService%2CMicrosoft.Extensions.Logging.ILogger%7BUltraGenericSystem.Services.SelfEvolution.DynamicPluginService%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/SelfEvolution/DynamicPluginService.cs/#L20">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_SelfEvolution_DynamicPluginService__ctor_" data-uid="UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.#ctor*"></a>
+  <h4 id="UltraGenericSystem_Services_SelfEvolution_DynamicPluginService__ctor_UltraGenericSystem_Repositories_IGenericRepository_UltraGenericSystem_Models_SelfEvolution_DynamicPlugin__UltraGenericSystem_Services_SelfEvolution_ICodeGenerationService_Microsoft_Extensions_Logging_ILogger_UltraGenericSystem_Services_SelfEvolution_DynamicPluginService__" data-uid="UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.#ctor(UltraGenericSystem.Repositories.IGenericRepository{UltraGenericSystem.Models.SelfEvolution.DynamicPlugin},UltraGenericSystem.Services.SelfEvolution.ICodeGenerationService,Microsoft.Extensions.Logging.ILogger{UltraGenericSystem.Services.SelfEvolution.DynamicPluginService})">DynamicPluginService(IGenericRepository&lt;DynamicPlugin&gt;, ICodeGenerationService, ILogger&lt;DynamicPluginService&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DynamicPluginService(IGenericRepository&lt;DynamicPlugin&gt; pluginRepository, ICodeGenerationService codeGenerationService, ILogger&lt;DynamicPluginService&gt; logger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="UltraGenericSystem.Repositories.IGenericRepository-1.html">IGenericRepository</a>&lt;<a class="xref" href="UltraGenericSystem.Models.SelfEvolution.DynamicPlugin.html">DynamicPlugin</a>&gt;</td>
+        <td><span class="parametername">pluginRepository</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="UltraGenericSystem.Services.SelfEvolution.ICodeGenerationService.html">ICodeGenerationService</a></td>
+        <td><span class="parametername">codeGenerationService</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.html">DynamicPluginService</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_CheckPluginCompatibilityAsync_System_String_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.CheckPluginCompatibilityAsync(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/SelfEvolution/DynamicPluginService.cs/#L375">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_CheckPluginCompatibilityAsync_" data-uid="UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.CheckPluginCompatibilityAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_CheckPluginCompatibilityAsync_System_String_" data-uid="UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.CheckPluginCompatibilityAsync(System.String)">CheckPluginCompatibilityAsync(string)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.yml" sourcestartlinenumber="1">Check plugin compatibility</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; CheckPluginCompatibilityAsync(string pluginName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">pluginName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_CompileAndRegisterPluginAsync_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.CompileAndRegisterPluginAsync(System.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/SelfEvolution/DynamicPluginService.cs/#L248">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_CompileAndRegisterPluginAsync_" data-uid="UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.CompileAndRegisterPluginAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_CompileAndRegisterPluginAsync_System_String_System_String_System_String_" data-uid="UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.CompileAndRegisterPluginAsync(System.String,System.String,System.String)">CompileAndRegisterPluginAsync(string, string, string)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.yml" sourcestartlinenumber="1">Compile and register a plugin from source code</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;DynamicPlugin&gt; CompileAndRegisterPluginAsync(string pluginName, string sourceCode, string pluginType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">pluginName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">sourceCode</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">pluginType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="UltraGenericSystem.Models.SelfEvolution.DynamicPlugin.html">DynamicPlugin</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_DeletePluginAsync_System_String_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.DeletePluginAsync(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/SelfEvolution/DynamicPluginService.cs/#L213">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_DeletePluginAsync_" data-uid="UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.DeletePluginAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_DeletePluginAsync_System_String_" data-uid="UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.DeletePluginAsync(System.String)">DeletePluginAsync(string)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.yml" sourcestartlinenumber="1">Delete a plugin</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; DeletePluginAsync(string pluginName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">pluginName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_ExecutePluginMethodAsync_System_String_System_String_System_Object___.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.ExecutePluginMethodAsync(System.String%2CSystem.String%2CSystem.Object%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/SelfEvolution/DynamicPluginService.cs/#L285">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_ExecutePluginMethodAsync_" data-uid="UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.ExecutePluginMethodAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_ExecutePluginMethodAsync_System_String_System_String_System_Object___" data-uid="UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.ExecutePluginMethodAsync(System.String,System.String,System.Object[])">ExecutePluginMethodAsync(string, string, params object[])</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.yml" sourcestartlinenumber="1">Execute a plugin method</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;object?&gt; ExecutePluginMethodAsync(string pluginName, string methodName, params object[] parameters)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">pluginName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">methodName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</td>
+        <td><span class="parametername">parameters</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_GetPluginAsync_System_String_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginAsync(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/SelfEvolution/DynamicPluginService.cs/#L178">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_GetPluginAsync_" data-uid="UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_GetPluginAsync_System_String_" data-uid="UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginAsync(System.String)">GetPluginAsync(string)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.yml" sourcestartlinenumber="1">Get a specific plugin</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;DynamicPlugin?&gt; GetPluginAsync(string pluginName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">pluginName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="UltraGenericSystem.Models.SelfEvolution.DynamicPlugin.html">DynamicPlugin</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_GetPluginDependenciesAsync_System_String_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginDependenciesAsync(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/SelfEvolution/DynamicPluginService.cs/#L365">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_GetPluginDependenciesAsync_" data-uid="UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginDependenciesAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_GetPluginDependenciesAsync_System_String_" data-uid="UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginDependenciesAsync(System.String)">GetPluginDependenciesAsync(string)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.yml" sourcestartlinenumber="1">Get plugin dependencies</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;List&lt;string&gt;&gt; GetPluginDependenciesAsync(string pluginName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">pluginName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_GetPluginStatisticsAsync.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginStatisticsAsync%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/SelfEvolution/DynamicPluginService.cs/#L332">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_GetPluginStatisticsAsync_" data-uid="UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginStatisticsAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_GetPluginStatisticsAsync" data-uid="UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginStatisticsAsync">GetPluginStatisticsAsync()</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.yml" sourcestartlinenumber="1">Get plugin statistics</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;Dictionary&lt;string, object&gt;&gt; GetPluginStatisticsAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_GetPluginsAsync_System_String_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginsAsync(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/SelfEvolution/DynamicPluginService.cs/#L163">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_GetPluginsAsync_" data-uid="UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginsAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_GetPluginsAsync_System_String_" data-uid="UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.GetPluginsAsync(System.String)">GetPluginsAsync(string?)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.yml" sourcestartlinenumber="1">Get all registered plugins</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;List&lt;DynamicPlugin&gt;&gt; GetPluginsAsync(string? pluginType = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">pluginType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="UltraGenericSystem.Models.SelfEvolution.DynamicPlugin.html">DynamicPlugin</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_LoadPluginAsync_System_String_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.LoadPluginAsync(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/SelfEvolution/DynamicPluginService.cs/#L63">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_LoadPluginAsync_" data-uid="UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.LoadPluginAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_LoadPluginAsync_System_String_" data-uid="UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.LoadPluginAsync(System.String)">LoadPluginAsync(string)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.yml" sourcestartlinenumber="1">Load a plugin into memory</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; LoadPluginAsync(string pluginName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">pluginName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_RegisterPluginAsync_UltraGenericSystem_Models_SelfEvolution_DynamicPlugin_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.RegisterPluginAsync(UltraGenericSystem.Models.SelfEvolution.DynamicPlugin)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/SelfEvolution/DynamicPluginService.cs/#L35">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_RegisterPluginAsync_" data-uid="UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.RegisterPluginAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_RegisterPluginAsync_UltraGenericSystem_Models_SelfEvolution_DynamicPlugin_" data-uid="UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.RegisterPluginAsync(UltraGenericSystem.Models.SelfEvolution.DynamicPlugin)">RegisterPluginAsync(DynamicPlugin)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.yml" sourcestartlinenumber="1">Register a new plugin</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;DynamicPlugin&gt; RegisterPluginAsync(DynamicPlugin plugin)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="UltraGenericSystem.Models.SelfEvolution.DynamicPlugin.html">DynamicPlugin</a></td>
+        <td><span class="parametername">plugin</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="UltraGenericSystem.Models.SelfEvolution.DynamicPlugin.html">DynamicPlugin</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_UnloadPluginAsync_System_String_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.UnloadPluginAsync(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/SelfEvolution/DynamicPluginService.cs/#L129">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_UnloadPluginAsync_" data-uid="UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.UnloadPluginAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_UnloadPluginAsync_System_String_" data-uid="UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.UnloadPluginAsync(System.String)">UnloadPluginAsync(string)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.yml" sourcestartlinenumber="1">Unload a plugin from memory</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; UnloadPluginAsync(string pluginName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">pluginName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_UpdatePluginAsync_UltraGenericSystem_Models_SelfEvolution_DynamicPlugin_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.UpdatePluginAsync(UltraGenericSystem.Models.SelfEvolution.DynamicPlugin)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/SelfEvolution/DynamicPluginService.cs/#L187">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_UpdatePluginAsync_" data-uid="UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.UpdatePluginAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_UpdatePluginAsync_UltraGenericSystem_Models_SelfEvolution_DynamicPlugin_" data-uid="UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.UpdatePluginAsync(UltraGenericSystem.Models.SelfEvolution.DynamicPlugin)">UpdatePluginAsync(DynamicPlugin)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.yml" sourcestartlinenumber="1">Update plugin configuration</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;DynamicPlugin&gt; UpdatePluginAsync(DynamicPlugin plugin)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="UltraGenericSystem.Models.SelfEvolution.DynamicPlugin.html">DynamicPlugin</a></td>
+        <td><span class="parametername">plugin</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="UltraGenericSystem.Models.SelfEvolution.DynamicPlugin.html">DynamicPlugin</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_ValidatePluginSourceAsync_System_String_.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.ValidatePluginSourceAsync(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/SelfEvolution/DynamicPluginService.cs/#L350">View Source</a>
+  </span>
+  <a id="UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_ValidatePluginSourceAsync_" data-uid="UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.ValidatePluginSourceAsync*"></a>
+  <h4 id="UltraGenericSystem_Services_SelfEvolution_DynamicPluginService_ValidatePluginSourceAsync_System_String_" data-uid="UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.ValidatePluginSourceAsync(System.String)">ValidatePluginSourceAsync(string)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/UltraGenericSystem.Services.SelfEvolution.DynamicPluginService.yml" sourcestartlinenumber="1">Validate plugin source code</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; ValidatePluginSourceAsync(string sourceCode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">sourceCode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="UltraGenericSystem.Services.SelfEvolution.IDynamicPluginService.html">IDynamicPluginService</a>
+  </div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/new/feature/strange-loop-self-evolution/apiSpec/new?filename=UltraGenericSystem_Services_SelfEvolution_DynamicPluginService.md&amp;value=---%0Auid%3A%20UltraGenericSystem.Services.SelfEvolution.DynamicPluginService%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/ShawnDelaineBellazanJr/ultra-generic-system/blob/feature/strange-loop-self-evolution/Services/SelfEvolution/DynamicPluginService.cs/#L12" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1506 @@
+### YamlMime:ManagedReference
+items:
+- uid: UltraGenericSystem.Services.IAgentOrchestrator
+  commentId: T:UltraGenericSystem.Services.IAgentOrchestrator
+  id: IAgentOrchestrator
+  parent: UltraGenericSystem.Services
+  children:
+  - UltraGenericSystem.Services.IAgentOrchestrator.AnalyzeEntityAsync``1(``0,System.String,UltraGenericSystem.Models.AdvancedOrchestrationConfig)
+  - UltraGenericSystem.Services.IAgentOrchestrator.CreateThreadAsync(System.String,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAgentOrchestrator.ExecuteAdvancedOrchestrationAsync``2(UltraGenericSystem.Models.AdvancedAgentRequest{``0,``1})
+  - UltraGenericSystem.Services.IAgentOrchestrator.ExecuteAsync``1(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAgentOrchestrator.ExecuteDeleteAsync(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAgentOrchestrator.ExecuteOrchestrationAsync(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAgentOrchestrator.ExecuteQueryAsync``1(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAgentOrchestrator.ExecuteStructuredOrchestrationAsync``2(UltraGenericSystem.Models.StructuredInput{``0},UltraGenericSystem.Models.AdvancedOrchestrationConfig)
+  - UltraGenericSystem.Services.IAgentOrchestrator.ExecuteWorkflowAsync``2(``0,System.Collections.Generic.List{System.String},UltraGenericSystem.Models.AdvancedOrchestrationConfig)
+  - UltraGenericSystem.Services.IAgentOrchestrator.GetAvailablePluginsAsync(System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAgentOrchestrator.GetKernel
+  - UltraGenericSystem.Services.IAgentOrchestrator.RegisterPluginAsync(System.String,System.Object,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IAgentOrchestrator.UnregisterPluginAsync(System.String,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: IAgentOrchestrator
+  nameWithType: IAgentOrchestrator
+  fullName: UltraGenericSystem.Services.IAgentOrchestrator
+  type: Interface
+  source:
+    remote:
+      path: Services/IAgentOrchestrator.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: IAgentOrchestrator
+    path: ../Services/IAgentOrchestrator.cs
+    startLine: 7
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Interface for advanced agent orchestration with SK Agent Framework
+  example: []
+  syntax:
+    content: public interface IAgentOrchestrator
+    content.vb: Public Interface IAgentOrchestrator
+- uid: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteAsync``1(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAgentOrchestrator.ExecuteAsync``1(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+  id: ExecuteAsync``1(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAgentOrchestrator
+  langs:
+  - csharp
+  - vb
+  name: ExecuteAsync<T>(AgentExecutionContext, CancellationToken)
+  nameWithType: IAgentOrchestrator.ExecuteAsync<T>(AgentExecutionContext, CancellationToken)
+  fullName: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteAsync<T>(UltraGenericSystem.Models.AgentExecutionContext, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAgentOrchestrator.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: ExecuteAsync
+    path: ../Services/IAgentOrchestrator.cs
+    startLine: 12
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Executes a single agent operation
+  example: []
+  syntax:
+    content: 'Task<AgentResponse<T>> ExecuteAsync<T>(AgentExecutionContext context, CancellationToken cancellationToken = default) where T : BaseEntity'
+    parameters:
+    - id: context
+      type: UltraGenericSystem.Models.AgentExecutionContext
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    typeParameters:
+    - id: T
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{{T}}}
+    content.vb: Function ExecuteAsync(Of T As BaseEntity)(context As AgentExecutionContext, cancellationToken As CancellationToken = Nothing) As Task(Of AgentResponse(Of T))
+  overload: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteAsync*
+  nameWithType.vb: IAgentOrchestrator.ExecuteAsync(Of T)(AgentExecutionContext, CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteAsync(Of T)(UltraGenericSystem.Models.AgentExecutionContext, System.Threading.CancellationToken)
+  name.vb: ExecuteAsync(Of T)(AgentExecutionContext, CancellationToken)
+- uid: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteQueryAsync``1(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAgentOrchestrator.ExecuteQueryAsync``1(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+  id: ExecuteQueryAsync``1(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAgentOrchestrator
+  langs:
+  - csharp
+  - vb
+  name: ExecuteQueryAsync<T>(AgentExecutionContext, CancellationToken)
+  nameWithType: IAgentOrchestrator.ExecuteQueryAsync<T>(AgentExecutionContext, CancellationToken)
+  fullName: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteQueryAsync<T>(UltraGenericSystem.Models.AgentExecutionContext, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAgentOrchestrator.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: ExecuteQueryAsync
+    path: ../Services/IAgentOrchestrator.cs
+    startLine: 17
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Executes a query operation with multiple agents
+  example: []
+  syntax:
+    content: 'Task<AgentResponse<IEnumerable<T>>> ExecuteQueryAsync<T>(AgentExecutionContext context, CancellationToken cancellationToken = default) where T : BaseEntity'
+    parameters:
+    - id: context
+      type: UltraGenericSystem.Models.AgentExecutionContext
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    typeParameters:
+    - id: T
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Collections.Generic.IEnumerable{{T}}}}
+    content.vb: Function ExecuteQueryAsync(Of T As BaseEntity)(context As AgentExecutionContext, cancellationToken As CancellationToken = Nothing) As Task(Of AgentResponse(Of IEnumerable(Of T)))
+  overload: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteQueryAsync*
+  nameWithType.vb: IAgentOrchestrator.ExecuteQueryAsync(Of T)(AgentExecutionContext, CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteQueryAsync(Of T)(UltraGenericSystem.Models.AgentExecutionContext, System.Threading.CancellationToken)
+  name.vb: ExecuteQueryAsync(Of T)(AgentExecutionContext, CancellationToken)
+- uid: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteDeleteAsync(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAgentOrchestrator.ExecuteDeleteAsync(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+  id: ExecuteDeleteAsync(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAgentOrchestrator
+  langs:
+  - csharp
+  - vb
+  name: ExecuteDeleteAsync(AgentExecutionContext, CancellationToken)
+  nameWithType: IAgentOrchestrator.ExecuteDeleteAsync(AgentExecutionContext, CancellationToken)
+  fullName: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteDeleteAsync(UltraGenericSystem.Models.AgentExecutionContext, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAgentOrchestrator.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: ExecuteDeleteAsync
+    path: ../Services/IAgentOrchestrator.cs
+    startLine: 22
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Executes a delete operation
+  example: []
+  syntax:
+    content: Task<AgentResponse<bool>> ExecuteDeleteAsync(AgentExecutionContext context, CancellationToken cancellationToken = default)
+    parameters:
+    - id: context
+      type: UltraGenericSystem.Models.AgentExecutionContext
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Boolean}}
+    content.vb: Function ExecuteDeleteAsync(context As AgentExecutionContext, cancellationToken As CancellationToken = Nothing) As Task(Of AgentResponse(Of Boolean))
+  overload: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteDeleteAsync*
+- uid: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteOrchestrationAsync(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAgentOrchestrator.ExecuteOrchestrationAsync(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+  id: ExecuteOrchestrationAsync(UltraGenericSystem.Models.AgentExecutionContext,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAgentOrchestrator
+  langs:
+  - csharp
+  - vb
+  name: ExecuteOrchestrationAsync(AgentExecutionContext, CancellationToken)
+  nameWithType: IAgentOrchestrator.ExecuteOrchestrationAsync(AgentExecutionContext, CancellationToken)
+  fullName: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteOrchestrationAsync(UltraGenericSystem.Models.AgentExecutionContext, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAgentOrchestrator.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: ExecuteOrchestrationAsync
+    path: ../Services/IAgentOrchestrator.cs
+    startLine: 27
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Executes a multi-agent orchestration pattern
+  example: []
+  syntax:
+    content: Task<AgentResponse<object>> ExecuteOrchestrationAsync(AgentExecutionContext context, CancellationToken cancellationToken = default)
+    parameters:
+    - id: context
+      type: UltraGenericSystem.Models.AgentExecutionContext
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Object}}
+    content.vb: Function ExecuteOrchestrationAsync(context As AgentExecutionContext, cancellationToken As CancellationToken = Nothing) As Task(Of AgentResponse(Of Object))
+  overload: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteOrchestrationAsync*
+- uid: UltraGenericSystem.Services.IAgentOrchestrator.CreateThreadAsync(System.String,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAgentOrchestrator.CreateThreadAsync(System.String,System.Threading.CancellationToken)
+  id: CreateThreadAsync(System.String,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAgentOrchestrator
+  langs:
+  - csharp
+  - vb
+  name: CreateThreadAsync(string, CancellationToken)
+  nameWithType: IAgentOrchestrator.CreateThreadAsync(string, CancellationToken)
+  fullName: UltraGenericSystem.Services.IAgentOrchestrator.CreateThreadAsync(string, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAgentOrchestrator.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: CreateThreadAsync
+    path: ../Services/IAgentOrchestrator.cs
+    startLine: 32
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Creates a new agent thread
+  example: []
+  syntax:
+    content: Task<AgentResponse<string>> CreateThreadAsync(string agentId, CancellationToken cancellationToken = default)
+    parameters:
+    - id: agentId
+      type: System.String
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.String}}
+    content.vb: Function CreateThreadAsync(agentId As String, cancellationToken As CancellationToken = Nothing) As Task(Of AgentResponse(Of String))
+  overload: UltraGenericSystem.Services.IAgentOrchestrator.CreateThreadAsync*
+  nameWithType.vb: IAgentOrchestrator.CreateThreadAsync(String, CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IAgentOrchestrator.CreateThreadAsync(String, System.Threading.CancellationToken)
+  name.vb: CreateThreadAsync(String, CancellationToken)
+- uid: UltraGenericSystem.Services.IAgentOrchestrator.GetKernel
+  commentId: M:UltraGenericSystem.Services.IAgentOrchestrator.GetKernel
+  id: GetKernel
+  parent: UltraGenericSystem.Services.IAgentOrchestrator
+  langs:
+  - csharp
+  - vb
+  name: GetKernel()
+  nameWithType: IAgentOrchestrator.GetKernel()
+  fullName: UltraGenericSystem.Services.IAgentOrchestrator.GetKernel()
+  type: Method
+  source:
+    remote:
+      path: Services/IAgentOrchestrator.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetKernel
+    path: ../Services/IAgentOrchestrator.cs
+    startLine: 37
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Gets the Semantic Kernel instance
+  example: []
+  syntax:
+    content: Kernel GetKernel()
+    return:
+      type: Microsoft.SemanticKernel.Kernel
+    content.vb: Function GetKernel() As Kernel
+  overload: UltraGenericSystem.Services.IAgentOrchestrator.GetKernel*
+- uid: UltraGenericSystem.Services.IAgentOrchestrator.RegisterPluginAsync(System.String,System.Object,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAgentOrchestrator.RegisterPluginAsync(System.String,System.Object,System.Threading.CancellationToken)
+  id: RegisterPluginAsync(System.String,System.Object,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAgentOrchestrator
+  langs:
+  - csharp
+  - vb
+  name: RegisterPluginAsync(string, object, CancellationToken)
+  nameWithType: IAgentOrchestrator.RegisterPluginAsync(string, object, CancellationToken)
+  fullName: UltraGenericSystem.Services.IAgentOrchestrator.RegisterPluginAsync(string, object, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAgentOrchestrator.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: RegisterPluginAsync
+    path: ../Services/IAgentOrchestrator.cs
+    startLine: 42
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Registers a new plugin/skill dynamically
+  example: []
+  syntax:
+    content: Task<AgentResponse<bool>> RegisterPluginAsync(string pluginName, object pluginInstance, CancellationToken cancellationToken = default)
+    parameters:
+    - id: pluginName
+      type: System.String
+    - id: pluginInstance
+      type: System.Object
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Boolean}}
+    content.vb: Function RegisterPluginAsync(pluginName As String, pluginInstance As Object, cancellationToken As CancellationToken = Nothing) As Task(Of AgentResponse(Of Boolean))
+  overload: UltraGenericSystem.Services.IAgentOrchestrator.RegisterPluginAsync*
+  nameWithType.vb: IAgentOrchestrator.RegisterPluginAsync(String, Object, CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IAgentOrchestrator.RegisterPluginAsync(String, Object, System.Threading.CancellationToken)
+  name.vb: RegisterPluginAsync(String, Object, CancellationToken)
+- uid: UltraGenericSystem.Services.IAgentOrchestrator.UnregisterPluginAsync(System.String,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAgentOrchestrator.UnregisterPluginAsync(System.String,System.Threading.CancellationToken)
+  id: UnregisterPluginAsync(System.String,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAgentOrchestrator
+  langs:
+  - csharp
+  - vb
+  name: UnregisterPluginAsync(string, CancellationToken)
+  nameWithType: IAgentOrchestrator.UnregisterPluginAsync(string, CancellationToken)
+  fullName: UltraGenericSystem.Services.IAgentOrchestrator.UnregisterPluginAsync(string, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAgentOrchestrator.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: UnregisterPluginAsync
+    path: ../Services/IAgentOrchestrator.cs
+    startLine: 47
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Unregisters a plugin/skill
+  example: []
+  syntax:
+    content: Task<AgentResponse<bool>> UnregisterPluginAsync(string pluginName, CancellationToken cancellationToken = default)
+    parameters:
+    - id: pluginName
+      type: System.String
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Boolean}}
+    content.vb: Function UnregisterPluginAsync(pluginName As String, cancellationToken As CancellationToken = Nothing) As Task(Of AgentResponse(Of Boolean))
+  overload: UltraGenericSystem.Services.IAgentOrchestrator.UnregisterPluginAsync*
+  nameWithType.vb: IAgentOrchestrator.UnregisterPluginAsync(String, CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IAgentOrchestrator.UnregisterPluginAsync(String, System.Threading.CancellationToken)
+  name.vb: UnregisterPluginAsync(String, CancellationToken)
+- uid: UltraGenericSystem.Services.IAgentOrchestrator.GetAvailablePluginsAsync(System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IAgentOrchestrator.GetAvailablePluginsAsync(System.Threading.CancellationToken)
+  id: GetAvailablePluginsAsync(System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IAgentOrchestrator
+  langs:
+  - csharp
+  - vb
+  name: GetAvailablePluginsAsync(CancellationToken)
+  nameWithType: IAgentOrchestrator.GetAvailablePluginsAsync(CancellationToken)
+  fullName: UltraGenericSystem.Services.IAgentOrchestrator.GetAvailablePluginsAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IAgentOrchestrator.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetAvailablePluginsAsync
+    path: ../Services/IAgentOrchestrator.cs
+    startLine: 52
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Gets available plugins/skills
+  example: []
+  syntax:
+    content: Task<AgentResponse<IEnumerable<string>>> GetAvailablePluginsAsync(CancellationToken cancellationToken = default)
+    parameters:
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Collections.Generic.IEnumerable{System.String}}}
+    content.vb: Function GetAvailablePluginsAsync(cancellationToken As CancellationToken = Nothing) As Task(Of AgentResponse(Of IEnumerable(Of String)))
+  overload: UltraGenericSystem.Services.IAgentOrchestrator.GetAvailablePluginsAsync*
+- uid: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteAdvancedOrchestrationAsync``2(UltraGenericSystem.Models.AdvancedAgentRequest{``0,``1})
+  commentId: M:UltraGenericSystem.Services.IAgentOrchestrator.ExecuteAdvancedOrchestrationAsync``2(UltraGenericSystem.Models.AdvancedAgentRequest{``0,``1})
+  id: ExecuteAdvancedOrchestrationAsync``2(UltraGenericSystem.Models.AdvancedAgentRequest{``0,``1})
+  parent: UltraGenericSystem.Services.IAgentOrchestrator
+  langs:
+  - csharp
+  - vb
+  name: ExecuteAdvancedOrchestrationAsync<TInput, TOutput>(AdvancedAgentRequest<TInput, TOutput>)
+  nameWithType: IAgentOrchestrator.ExecuteAdvancedOrchestrationAsync<TInput, TOutput>(AdvancedAgentRequest<TInput, TOutput>)
+  fullName: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteAdvancedOrchestrationAsync<TInput, TOutput>(UltraGenericSystem.Models.AdvancedAgentRequest<TInput, TOutput>)
+  type: Method
+  source:
+    remote:
+      path: Services/IAgentOrchestrator.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: ExecuteAdvancedOrchestrationAsync
+    path: ../Services/IAgentOrchestrator.cs
+    startLine: 55
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  syntax:
+    content: Task<AdvancedAgentResponse<TOutput>> ExecuteAdvancedOrchestrationAsync<TInput, TOutput>(AdvancedAgentRequest<TInput, TOutput> request)
+    parameters:
+    - id: request
+      type: UltraGenericSystem.Models.AdvancedAgentRequest{{TInput},{TOutput}}
+    typeParameters:
+    - id: TInput
+    - id: TOutput
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.AdvancedAgentResponse{{TOutput}}}
+    content.vb: Function ExecuteAdvancedOrchestrationAsync(Of TInput, TOutput)(request As AdvancedAgentRequest(Of TInput, TOutput)) As Task(Of AdvancedAgentResponse(Of TOutput))
+  overload: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteAdvancedOrchestrationAsync*
+  nameWithType.vb: IAgentOrchestrator.ExecuteAdvancedOrchestrationAsync(Of TInput, TOutput)(AdvancedAgentRequest(Of TInput, TOutput))
+  fullName.vb: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteAdvancedOrchestrationAsync(Of TInput, TOutput)(UltraGenericSystem.Models.AdvancedAgentRequest(Of TInput, TOutput))
+  name.vb: ExecuteAdvancedOrchestrationAsync(Of TInput, TOutput)(AdvancedAgentRequest(Of TInput, TOutput))
+- uid: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteStructuredOrchestrationAsync``2(UltraGenericSystem.Models.StructuredInput{``0},UltraGenericSystem.Models.AdvancedOrchestrationConfig)
+  commentId: M:UltraGenericSystem.Services.IAgentOrchestrator.ExecuteStructuredOrchestrationAsync``2(UltraGenericSystem.Models.StructuredInput{``0},UltraGenericSystem.Models.AdvancedOrchestrationConfig)
+  id: ExecuteStructuredOrchestrationAsync``2(UltraGenericSystem.Models.StructuredInput{``0},UltraGenericSystem.Models.AdvancedOrchestrationConfig)
+  parent: UltraGenericSystem.Services.IAgentOrchestrator
+  langs:
+  - csharp
+  - vb
+  name: ExecuteStructuredOrchestrationAsync<TInput, TOutput>(StructuredInput<TInput>, AdvancedOrchestrationConfig)
+  nameWithType: IAgentOrchestrator.ExecuteStructuredOrchestrationAsync<TInput, TOutput>(StructuredInput<TInput>, AdvancedOrchestrationConfig)
+  fullName: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteStructuredOrchestrationAsync<TInput, TOutput>(UltraGenericSystem.Models.StructuredInput<TInput>, UltraGenericSystem.Models.AdvancedOrchestrationConfig)
+  type: Method
+  source:
+    remote:
+      path: Services/IAgentOrchestrator.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: ExecuteStructuredOrchestrationAsync
+    path: ../Services/IAgentOrchestrator.cs
+    startLine: 58
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  syntax:
+    content: 'Task<StructuredOutput<TOutput>> ExecuteStructuredOrchestrationAsync<TInput, TOutput>(StructuredInput<TInput> input, AdvancedOrchestrationConfig config) where TInput : class where TOutput : class'
+    parameters:
+    - id: input
+      type: UltraGenericSystem.Models.StructuredInput{{TInput}}
+    - id: config
+      type: UltraGenericSystem.Models.AdvancedOrchestrationConfig
+    typeParameters:
+    - id: TInput
+    - id: TOutput
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.StructuredOutput{{TOutput}}}
+    content.vb: Function ExecuteStructuredOrchestrationAsync(Of TInput As Class, TOutput As Class)(input As StructuredInput(Of TInput), config As AdvancedOrchestrationConfig) As Task(Of StructuredOutput(Of TOutput))
+  overload: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteStructuredOrchestrationAsync*
+  nameWithType.vb: IAgentOrchestrator.ExecuteStructuredOrchestrationAsync(Of TInput, TOutput)(StructuredInput(Of TInput), AdvancedOrchestrationConfig)
+  fullName.vb: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteStructuredOrchestrationAsync(Of TInput, TOutput)(UltraGenericSystem.Models.StructuredInput(Of TInput), UltraGenericSystem.Models.AdvancedOrchestrationConfig)
+  name.vb: ExecuteStructuredOrchestrationAsync(Of TInput, TOutput)(StructuredInput(Of TInput), AdvancedOrchestrationConfig)
+- uid: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteWorkflowAsync``2(``0,System.Collections.Generic.List{System.String},UltraGenericSystem.Models.AdvancedOrchestrationConfig)
+  commentId: M:UltraGenericSystem.Services.IAgentOrchestrator.ExecuteWorkflowAsync``2(``0,System.Collections.Generic.List{System.String},UltraGenericSystem.Models.AdvancedOrchestrationConfig)
+  id: ExecuteWorkflowAsync``2(``0,System.Collections.Generic.List{System.String},UltraGenericSystem.Models.AdvancedOrchestrationConfig)
+  parent: UltraGenericSystem.Services.IAgentOrchestrator
+  langs:
+  - csharp
+  - vb
+  name: ExecuteWorkflowAsync<TInput, TOutput>(TInput, List<string>, AdvancedOrchestrationConfig)
+  nameWithType: IAgentOrchestrator.ExecuteWorkflowAsync<TInput, TOutput>(TInput, List<string>, AdvancedOrchestrationConfig)
+  fullName: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteWorkflowAsync<TInput, TOutput>(TInput, System.Collections.Generic.List<string>, UltraGenericSystem.Models.AdvancedOrchestrationConfig)
+  type: Method
+  source:
+    remote:
+      path: Services/IAgentOrchestrator.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: ExecuteWorkflowAsync
+    path: ../Services/IAgentOrchestrator.cs
+    startLine: 64
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  syntax:
+    content: Task<WorkflowExecutionResult> ExecuteWorkflowAsync<TInput, TOutput>(TInput input, List<string> workflowSteps, AdvancedOrchestrationConfig config)
+    parameters:
+    - id: input
+      type: '{TInput}'
+    - id: workflowSteps
+      type: System.Collections.Generic.List{System.String}
+    - id: config
+      type: UltraGenericSystem.Models.AdvancedOrchestrationConfig
+    typeParameters:
+    - id: TInput
+    - id: TOutput
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.WorkflowExecutionResult}
+    content.vb: Function ExecuteWorkflowAsync(Of TInput, TOutput)(input As TInput, workflowSteps As List(Of String), config As AdvancedOrchestrationConfig) As Task(Of WorkflowExecutionResult)
+  overload: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteWorkflowAsync*
+  nameWithType.vb: IAgentOrchestrator.ExecuteWorkflowAsync(Of TInput, TOutput)(TInput, List(Of String), AdvancedOrchestrationConfig)
+  fullName.vb: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteWorkflowAsync(Of TInput, TOutput)(TInput, System.Collections.Generic.List(Of String), UltraGenericSystem.Models.AdvancedOrchestrationConfig)
+  name.vb: ExecuteWorkflowAsync(Of TInput, TOutput)(TInput, List(Of String), AdvancedOrchestrationConfig)
+- uid: UltraGenericSystem.Services.IAgentOrchestrator.AnalyzeEntityAsync``1(``0,System.String,UltraGenericSystem.Models.AdvancedOrchestrationConfig)
+  commentId: M:UltraGenericSystem.Services.IAgentOrchestrator.AnalyzeEntityAsync``1(``0,System.String,UltraGenericSystem.Models.AdvancedOrchestrationConfig)
+  id: AnalyzeEntityAsync``1(``0,System.String,UltraGenericSystem.Models.AdvancedOrchestrationConfig)
+  parent: UltraGenericSystem.Services.IAgentOrchestrator
+  langs:
+  - csharp
+  - vb
+  name: AnalyzeEntityAsync<T>(T, string, AdvancedOrchestrationConfig)
+  nameWithType: IAgentOrchestrator.AnalyzeEntityAsync<T>(T, string, AdvancedOrchestrationConfig)
+  fullName: UltraGenericSystem.Services.IAgentOrchestrator.AnalyzeEntityAsync<T>(T, string, UltraGenericSystem.Models.AdvancedOrchestrationConfig)
+  type: Method
+  source:
+    remote:
+      path: Services/IAgentOrchestrator.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: AnalyzeEntityAsync
+    path: ../Services/IAgentOrchestrator.cs
+    startLine: 69
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  syntax:
+    content: Task<EntityAnalysisResult> AnalyzeEntityAsync<T>(T entity, string entityType, AdvancedOrchestrationConfig config)
+    parameters:
+    - id: entity
+      type: '{T}'
+    - id: entityType
+      type: System.String
+    - id: config
+      type: UltraGenericSystem.Models.AdvancedOrchestrationConfig
+    typeParameters:
+    - id: T
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.EntityAnalysisResult}
+    content.vb: Function AnalyzeEntityAsync(Of T)(entity As T, entityType As String, config As AdvancedOrchestrationConfig) As Task(Of EntityAnalysisResult)
+  overload: UltraGenericSystem.Services.IAgentOrchestrator.AnalyzeEntityAsync*
+  nameWithType.vb: IAgentOrchestrator.AnalyzeEntityAsync(Of T)(T, String, AdvancedOrchestrationConfig)
+  fullName.vb: UltraGenericSystem.Services.IAgentOrchestrator.AnalyzeEntityAsync(Of T)(T, String, UltraGenericSystem.Models.AdvancedOrchestrationConfig)
+  name.vb: AnalyzeEntityAsync(Of T)(T, String, AdvancedOrchestrationConfig)
+references:
+- uid: UltraGenericSystem.Services
+  commentId: N:UltraGenericSystem.Services
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Services
+  nameWithType: UltraGenericSystem.Services
+  fullName: UltraGenericSystem.Services
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Services
+    name: Services
+    href: UltraGenericSystem.Services.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Services
+    name: Services
+    href: UltraGenericSystem.Services.html
+- uid: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAgentOrchestrator.ExecuteAsync
+  href: UltraGenericSystem.Services.IAgentOrchestrator.html#UltraGenericSystem_Services_IAgentOrchestrator_ExecuteAsync__1_UltraGenericSystem_Models_AgentExecutionContext_System_Threading_CancellationToken_
+  name: ExecuteAsync
+  nameWithType: IAgentOrchestrator.ExecuteAsync
+  fullName: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteAsync
+- uid: UltraGenericSystem.Models.AgentExecutionContext
+  commentId: T:UltraGenericSystem.Models.AgentExecutionContext
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.AgentExecutionContext.html
+  name: AgentExecutionContext
+  nameWithType: AgentExecutionContext
+  fullName: UltraGenericSystem.Models.AgentExecutionContext
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{{T}}}
+  commentId: T:System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{``0}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<AgentResponse<T>>
+  nameWithType: Task<AgentResponse<T>>
+  fullName: System.Threading.Tasks.Task<UltraGenericSystem.Models.AgentResponse<T>>
+  nameWithType.vb: Task(Of AgentResponse(Of T))
+  fullName.vb: System.Threading.Tasks.Task(Of UltraGenericSystem.Models.AgentResponse(Of T))
+  name.vb: Task(Of AgentResponse(Of T))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: UltraGenericSystem.Models.AgentResponse`1
+    name: AgentResponse
+    href: UltraGenericSystem.Models.AgentResponse-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.AgentResponse`1
+    name: AgentResponse
+    href: UltraGenericSystem.Models.AgentResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: UltraGenericSystem.Models
+  commentId: N:UltraGenericSystem.Models
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Models
+  nameWithType: UltraGenericSystem.Models
+  fullName: UltraGenericSystem.Models
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteQueryAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAgentOrchestrator.ExecuteQueryAsync
+  href: UltraGenericSystem.Services.IAgentOrchestrator.html#UltraGenericSystem_Services_IAgentOrchestrator_ExecuteQueryAsync__1_UltraGenericSystem_Models_AgentExecutionContext_System_Threading_CancellationToken_
+  name: ExecuteQueryAsync
+  nameWithType: IAgentOrchestrator.ExecuteQueryAsync
+  fullName: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteQueryAsync
+- uid: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Collections.Generic.IEnumerable{{T}}}}
+  commentId: T:System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Collections.Generic.IEnumerable{``0}}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<AgentResponse<IEnumerable<T>>>
+  nameWithType: Task<AgentResponse<IEnumerable<T>>>
+  fullName: System.Threading.Tasks.Task<UltraGenericSystem.Models.AgentResponse<System.Collections.Generic.IEnumerable<T>>>
+  nameWithType.vb: Task(Of AgentResponse(Of IEnumerable(Of T)))
+  fullName.vb: System.Threading.Tasks.Task(Of UltraGenericSystem.Models.AgentResponse(Of System.Collections.Generic.IEnumerable(Of T)))
+  name.vb: Task(Of AgentResponse(Of IEnumerable(Of T)))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: UltraGenericSystem.Models.AgentResponse`1
+    name: AgentResponse
+    href: UltraGenericSystem.Models.AgentResponse-1.html
+  - name: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.AgentResponse`1
+    name: AgentResponse
+    href: UltraGenericSystem.Models.AgentResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: )
+- uid: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteDeleteAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAgentOrchestrator.ExecuteDeleteAsync
+  href: UltraGenericSystem.Services.IAgentOrchestrator.html#UltraGenericSystem_Services_IAgentOrchestrator_ExecuteDeleteAsync_UltraGenericSystem_Models_AgentExecutionContext_System_Threading_CancellationToken_
+  name: ExecuteDeleteAsync
+  nameWithType: IAgentOrchestrator.ExecuteDeleteAsync
+  fullName: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteDeleteAsync
+- uid: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Boolean}}
+  commentId: T:System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Boolean}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<AgentResponse<bool>>
+  nameWithType: Task<AgentResponse<bool>>
+  fullName: System.Threading.Tasks.Task<UltraGenericSystem.Models.AgentResponse<bool>>
+  nameWithType.vb: Task(Of AgentResponse(Of Boolean))
+  fullName.vb: System.Threading.Tasks.Task(Of UltraGenericSystem.Models.AgentResponse(Of Boolean))
+  name.vb: Task(Of AgentResponse(Of Boolean))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: UltraGenericSystem.Models.AgentResponse`1
+    name: AgentResponse
+    href: UltraGenericSystem.Models.AgentResponse-1.html
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.AgentResponse`1
+    name: AgentResponse
+    href: UltraGenericSystem.Models.AgentResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteOrchestrationAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAgentOrchestrator.ExecuteOrchestrationAsync
+  href: UltraGenericSystem.Services.IAgentOrchestrator.html#UltraGenericSystem_Services_IAgentOrchestrator_ExecuteOrchestrationAsync_UltraGenericSystem_Models_AgentExecutionContext_System_Threading_CancellationToken_
+  name: ExecuteOrchestrationAsync
+  nameWithType: IAgentOrchestrator.ExecuteOrchestrationAsync
+  fullName: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteOrchestrationAsync
+- uid: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Object}}
+  commentId: T:System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Object}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<AgentResponse<object>>
+  nameWithType: Task<AgentResponse<object>>
+  fullName: System.Threading.Tasks.Task<UltraGenericSystem.Models.AgentResponse<object>>
+  nameWithType.vb: Task(Of AgentResponse(Of Object))
+  fullName.vb: System.Threading.Tasks.Task(Of UltraGenericSystem.Models.AgentResponse(Of Object))
+  name.vb: Task(Of AgentResponse(Of Object))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: UltraGenericSystem.Models.AgentResponse`1
+    name: AgentResponse
+    href: UltraGenericSystem.Models.AgentResponse-1.html
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.AgentResponse`1
+    name: AgentResponse
+    href: UltraGenericSystem.Models.AgentResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: UltraGenericSystem.Services.IAgentOrchestrator.CreateThreadAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAgentOrchestrator.CreateThreadAsync
+  href: UltraGenericSystem.Services.IAgentOrchestrator.html#UltraGenericSystem_Services_IAgentOrchestrator_CreateThreadAsync_System_String_System_Threading_CancellationToken_
+  name: CreateThreadAsync
+  nameWithType: IAgentOrchestrator.CreateThreadAsync
+  fullName: UltraGenericSystem.Services.IAgentOrchestrator.CreateThreadAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.String}}
+  commentId: T:System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.String}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<AgentResponse<string>>
+  nameWithType: Task<AgentResponse<string>>
+  fullName: System.Threading.Tasks.Task<UltraGenericSystem.Models.AgentResponse<string>>
+  nameWithType.vb: Task(Of AgentResponse(Of String))
+  fullName.vb: System.Threading.Tasks.Task(Of UltraGenericSystem.Models.AgentResponse(Of String))
+  name.vb: Task(Of AgentResponse(Of String))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: UltraGenericSystem.Models.AgentResponse`1
+    name: AgentResponse
+    href: UltraGenericSystem.Models.AgentResponse-1.html
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.AgentResponse`1
+    name: AgentResponse
+    href: UltraGenericSystem.Models.AgentResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UltraGenericSystem.Services.IAgentOrchestrator.GetKernel*
+  commentId: Overload:UltraGenericSystem.Services.IAgentOrchestrator.GetKernel
+  href: UltraGenericSystem.Services.IAgentOrchestrator.html#UltraGenericSystem_Services_IAgentOrchestrator_GetKernel
+  name: GetKernel
+  nameWithType: IAgentOrchestrator.GetKernel
+  fullName: UltraGenericSystem.Services.IAgentOrchestrator.GetKernel
+- uid: Microsoft.SemanticKernel.Kernel
+  commentId: T:Microsoft.SemanticKernel.Kernel
+  parent: Microsoft.SemanticKernel
+  isExternal: true
+  name: Kernel
+  nameWithType: Kernel
+  fullName: Microsoft.SemanticKernel.Kernel
+- uid: Microsoft.SemanticKernel
+  commentId: N:Microsoft.SemanticKernel
+  isExternal: true
+  name: Microsoft.SemanticKernel
+  nameWithType: Microsoft.SemanticKernel
+  fullName: Microsoft.SemanticKernel
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel
+    name: SemanticKernel
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.SemanticKernel
+    name: SemanticKernel
+    isExternal: true
+- uid: UltraGenericSystem.Services.IAgentOrchestrator.RegisterPluginAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAgentOrchestrator.RegisterPluginAsync
+  href: UltraGenericSystem.Services.IAgentOrchestrator.html#UltraGenericSystem_Services_IAgentOrchestrator_RegisterPluginAsync_System_String_System_Object_System_Threading_CancellationToken_
+  name: RegisterPluginAsync
+  nameWithType: IAgentOrchestrator.RegisterPluginAsync
+  fullName: UltraGenericSystem.Services.IAgentOrchestrator.RegisterPluginAsync
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UltraGenericSystem.Services.IAgentOrchestrator.UnregisterPluginAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAgentOrchestrator.UnregisterPluginAsync
+  href: UltraGenericSystem.Services.IAgentOrchestrator.html#UltraGenericSystem_Services_IAgentOrchestrator_UnregisterPluginAsync_System_String_System_Threading_CancellationToken_
+  name: UnregisterPluginAsync
+  nameWithType: IAgentOrchestrator.UnregisterPluginAsync
+  fullName: UltraGenericSystem.Services.IAgentOrchestrator.UnregisterPluginAsync
+- uid: UltraGenericSystem.Services.IAgentOrchestrator.GetAvailablePluginsAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAgentOrchestrator.GetAvailablePluginsAsync
+  href: UltraGenericSystem.Services.IAgentOrchestrator.html#UltraGenericSystem_Services_IAgentOrchestrator_GetAvailablePluginsAsync_System_Threading_CancellationToken_
+  name: GetAvailablePluginsAsync
+  nameWithType: IAgentOrchestrator.GetAvailablePluginsAsync
+  fullName: UltraGenericSystem.Services.IAgentOrchestrator.GetAvailablePluginsAsync
+- uid: System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Collections.Generic.IEnumerable{System.String}}}
+  commentId: T:System.Threading.Tasks.Task{UltraGenericSystem.Models.AgentResponse{System.Collections.Generic.IEnumerable{System.String}}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<AgentResponse<IEnumerable<string>>>
+  nameWithType: Task<AgentResponse<IEnumerable<string>>>
+  fullName: System.Threading.Tasks.Task<UltraGenericSystem.Models.AgentResponse<System.Collections.Generic.IEnumerable<string>>>
+  nameWithType.vb: Task(Of AgentResponse(Of IEnumerable(Of String)))
+  fullName.vb: System.Threading.Tasks.Task(Of UltraGenericSystem.Models.AgentResponse(Of System.Collections.Generic.IEnumerable(Of String)))
+  name.vb: Task(Of AgentResponse(Of IEnumerable(Of String)))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: UltraGenericSystem.Models.AgentResponse`1
+    name: AgentResponse
+    href: UltraGenericSystem.Models.AgentResponse-1.html
+  - name: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.AgentResponse`1
+    name: AgentResponse
+    href: UltraGenericSystem.Models.AgentResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: )
+  - name: )
+- uid: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteAdvancedOrchestrationAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAgentOrchestrator.ExecuteAdvancedOrchestrationAsync
+  href: UltraGenericSystem.Services.IAgentOrchestrator.html#UltraGenericSystem_Services_IAgentOrchestrator_ExecuteAdvancedOrchestrationAsync__2_UltraGenericSystem_Models_AdvancedAgentRequest___0___1__
+  name: ExecuteAdvancedOrchestrationAsync
+  nameWithType: IAgentOrchestrator.ExecuteAdvancedOrchestrationAsync
+  fullName: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteAdvancedOrchestrationAsync
+- uid: UltraGenericSystem.Models.AdvancedAgentRequest{{TInput},{TOutput}}
+  commentId: T:UltraGenericSystem.Models.AdvancedAgentRequest{``0,``1}
+  parent: UltraGenericSystem.Models
+  definition: UltraGenericSystem.Models.AdvancedAgentRequest`2
+  href: UltraGenericSystem.Models.AdvancedAgentRequest-2.html
+  name: AdvancedAgentRequest<TInput, TOutput>
+  nameWithType: AdvancedAgentRequest<TInput, TOutput>
+  fullName: UltraGenericSystem.Models.AdvancedAgentRequest<TInput, TOutput>
+  nameWithType.vb: AdvancedAgentRequest(Of TInput, TOutput)
+  fullName.vb: UltraGenericSystem.Models.AdvancedAgentRequest(Of TInput, TOutput)
+  name.vb: AdvancedAgentRequest(Of TInput, TOutput)
+  spec.csharp:
+  - uid: UltraGenericSystem.Models.AdvancedAgentRequest`2
+    name: AdvancedAgentRequest
+    href: UltraGenericSystem.Models.AdvancedAgentRequest-2.html
+  - name: <
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: '>'
+  spec.vb:
+  - uid: UltraGenericSystem.Models.AdvancedAgentRequest`2
+    name: AdvancedAgentRequest
+    href: UltraGenericSystem.Models.AdvancedAgentRequest-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: )
+- uid: System.Threading.Tasks.Task{UltraGenericSystem.Models.AdvancedAgentResponse{{TOutput}}}
+  commentId: T:System.Threading.Tasks.Task{UltraGenericSystem.Models.AdvancedAgentResponse{``1}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<AdvancedAgentResponse<TOutput>>
+  nameWithType: Task<AdvancedAgentResponse<TOutput>>
+  fullName: System.Threading.Tasks.Task<UltraGenericSystem.Models.AdvancedAgentResponse<TOutput>>
+  nameWithType.vb: Task(Of AdvancedAgentResponse(Of TOutput))
+  fullName.vb: System.Threading.Tasks.Task(Of UltraGenericSystem.Models.AdvancedAgentResponse(Of TOutput))
+  name.vb: Task(Of AdvancedAgentResponse(Of TOutput))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: UltraGenericSystem.Models.AdvancedAgentResponse`1
+    name: AdvancedAgentResponse
+    href: UltraGenericSystem.Models.AdvancedAgentResponse-1.html
+  - name: <
+  - name: TOutput
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.AdvancedAgentResponse`1
+    name: AdvancedAgentResponse
+    href: UltraGenericSystem.Models.AdvancedAgentResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TOutput
+  - name: )
+  - name: )
+- uid: UltraGenericSystem.Models.AdvancedAgentRequest`2
+  commentId: T:UltraGenericSystem.Models.AdvancedAgentRequest`2
+  href: UltraGenericSystem.Models.AdvancedAgentRequest-2.html
+  name: AdvancedAgentRequest<TInput, TOutput>
+  nameWithType: AdvancedAgentRequest<TInput, TOutput>
+  fullName: UltraGenericSystem.Models.AdvancedAgentRequest<TInput, TOutput>
+  nameWithType.vb: AdvancedAgentRequest(Of TInput, TOutput)
+  fullName.vb: UltraGenericSystem.Models.AdvancedAgentRequest(Of TInput, TOutput)
+  name.vb: AdvancedAgentRequest(Of TInput, TOutput)
+  spec.csharp:
+  - uid: UltraGenericSystem.Models.AdvancedAgentRequest`2
+    name: AdvancedAgentRequest
+    href: UltraGenericSystem.Models.AdvancedAgentRequest-2.html
+  - name: <
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: '>'
+  spec.vb:
+  - uid: UltraGenericSystem.Models.AdvancedAgentRequest`2
+    name: AdvancedAgentRequest
+    href: UltraGenericSystem.Models.AdvancedAgentRequest-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TInput
+  - name: ','
+  - name: " "
+  - name: TOutput
+  - name: )
+- uid: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteStructuredOrchestrationAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAgentOrchestrator.ExecuteStructuredOrchestrationAsync
+  href: UltraGenericSystem.Services.IAgentOrchestrator.html#UltraGenericSystem_Services_IAgentOrchestrator_ExecuteStructuredOrchestrationAsync__2_UltraGenericSystem_Models_StructuredInput___0__UltraGenericSystem_Models_AdvancedOrchestrationConfig_
+  name: ExecuteStructuredOrchestrationAsync
+  nameWithType: IAgentOrchestrator.ExecuteStructuredOrchestrationAsync
+  fullName: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteStructuredOrchestrationAsync
+- uid: UltraGenericSystem.Models.StructuredInput{{TInput}}
+  commentId: T:UltraGenericSystem.Models.StructuredInput{`0}
+  parent: UltraGenericSystem.Models
+  definition: UltraGenericSystem.Models.StructuredInput`1
+  href: UltraGenericSystem.Models.StructuredInput-1.html
+  name: StructuredInput<TInput>
+  nameWithType: StructuredInput<TInput>
+  fullName: UltraGenericSystem.Models.StructuredInput<TInput>
+  nameWithType.vb: StructuredInput(Of TInput)
+  fullName.vb: UltraGenericSystem.Models.StructuredInput(Of TInput)
+  name.vb: StructuredInput(Of TInput)
+  spec.csharp:
+  - uid: UltraGenericSystem.Models.StructuredInput`1
+    name: StructuredInput
+    href: UltraGenericSystem.Models.StructuredInput-1.html
+  - name: <
+  - name: TInput
+  - name: '>'
+  spec.vb:
+  - uid: UltraGenericSystem.Models.StructuredInput`1
+    name: StructuredInput
+    href: UltraGenericSystem.Models.StructuredInput-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TInput
+  - name: )
+- uid: UltraGenericSystem.Models.AdvancedOrchestrationConfig
+  commentId: T:UltraGenericSystem.Models.AdvancedOrchestrationConfig
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.AdvancedOrchestrationConfig.html
+  name: AdvancedOrchestrationConfig
+  nameWithType: AdvancedOrchestrationConfig
+  fullName: UltraGenericSystem.Models.AdvancedOrchestrationConfig
+- uid: System.Threading.Tasks.Task{UltraGenericSystem.Models.StructuredOutput{{TOutput}}}
+  commentId: T:System.Threading.Tasks.Task{UltraGenericSystem.Models.StructuredOutput{``1}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<StructuredOutput<TOutput>>
+  nameWithType: Task<StructuredOutput<TOutput>>
+  fullName: System.Threading.Tasks.Task<UltraGenericSystem.Models.StructuredOutput<TOutput>>
+  nameWithType.vb: Task(Of StructuredOutput(Of TOutput))
+  fullName.vb: System.Threading.Tasks.Task(Of UltraGenericSystem.Models.StructuredOutput(Of TOutput))
+  name.vb: Task(Of StructuredOutput(Of TOutput))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: UltraGenericSystem.Models.StructuredOutput`1
+    name: StructuredOutput
+    href: UltraGenericSystem.Models.StructuredOutput-1.html
+  - name: <
+  - name: TOutput
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.StructuredOutput`1
+    name: StructuredOutput
+    href: UltraGenericSystem.Models.StructuredOutput-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TOutput
+  - name: )
+  - name: )
+- uid: UltraGenericSystem.Models.StructuredInput`1
+  commentId: T:UltraGenericSystem.Models.StructuredInput`1
+  href: UltraGenericSystem.Models.StructuredInput-1.html
+  name: StructuredInput<T>
+  nameWithType: StructuredInput<T>
+  fullName: UltraGenericSystem.Models.StructuredInput<T>
+  nameWithType.vb: StructuredInput(Of T)
+  fullName.vb: UltraGenericSystem.Models.StructuredInput(Of T)
+  name.vb: StructuredInput(Of T)
+  spec.csharp:
+  - uid: UltraGenericSystem.Models.StructuredInput`1
+    name: StructuredInput
+    href: UltraGenericSystem.Models.StructuredInput-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: UltraGenericSystem.Models.StructuredInput`1
+    name: StructuredInput
+    href: UltraGenericSystem.Models.StructuredInput-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteWorkflowAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAgentOrchestrator.ExecuteWorkflowAsync
+  href: UltraGenericSystem.Services.IAgentOrchestrator.html#UltraGenericSystem_Services_IAgentOrchestrator_ExecuteWorkflowAsync__2___0_System_Collections_Generic_List_System_String__UltraGenericSystem_Models_AdvancedOrchestrationConfig_
+  name: ExecuteWorkflowAsync
+  nameWithType: IAgentOrchestrator.ExecuteWorkflowAsync
+  fullName: UltraGenericSystem.Services.IAgentOrchestrator.ExecuteWorkflowAsync
+- uid: '{TInput}'
+  commentId: '!:TInput'
+  definition: TInput
+  name: TInput
+  nameWithType: TInput
+  fullName: TInput
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Threading.Tasks.Task{UltraGenericSystem.Models.WorkflowExecutionResult}
+  commentId: T:System.Threading.Tasks.Task{UltraGenericSystem.Models.WorkflowExecutionResult}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<WorkflowExecutionResult>
+  nameWithType: Task<WorkflowExecutionResult>
+  fullName: System.Threading.Tasks.Task<UltraGenericSystem.Models.WorkflowExecutionResult>
+  nameWithType.vb: Task(Of WorkflowExecutionResult)
+  fullName.vb: System.Threading.Tasks.Task(Of UltraGenericSystem.Models.WorkflowExecutionResult)
+  name.vb: Task(Of WorkflowExecutionResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: UltraGenericSystem.Models.WorkflowExecutionResult
+    name: WorkflowExecutionResult
+    href: UltraGenericSystem.Models.WorkflowExecutionResult.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.WorkflowExecutionResult
+    name: WorkflowExecutionResult
+    href: UltraGenericSystem.Models.WorkflowExecutionResult.html
+  - name: )
+- uid: TInput
+  name: TInput
+  nameWithType: TInput
+  fullName: TInput
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: UltraGenericSystem.Services.IAgentOrchestrator.AnalyzeEntityAsync*
+  commentId: Overload:UltraGenericSystem.Services.IAgentOrchestrator.AnalyzeEntityAsync
+  href: UltraGenericSystem.Services.IAgentOrchestrator.html#UltraGenericSystem_Services_IAgentOrchestrator_AnalyzeEntityAsync__1___0_System_String_UltraGenericSystem_Models_AdvancedOrchestrationConfig_
+  name: AnalyzeEntityAsync
+  nameWithType: IAgentOrchestrator.AnalyzeEntityAsync
+  fullName: UltraGenericSystem.Services.IAgentOrchestrator.AnalyzeEntityAsync
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Threading.Tasks.Task{UltraGenericSystem.Models.EntityAnalysisResult}
+  commentId: T:System.Threading.Tasks.Task{UltraGenericSystem.Models.EntityAnalysisResult}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<EntityAnalysisResult>
+  nameWithType: Task<EntityAnalysisResult>
+  fullName: System.Threading.Tasks.Task<UltraGenericSystem.Models.EntityAnalysisResult>
+  nameWithType.vb: Task(Of EntityAnalysisResult)
+  fullName.vb: System.Threading.Tasks.Task(Of UltraGenericSystem.Models.EntityAnalysisResult)
+  name.vb: Task(Of EntityAnalysisResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: UltraGenericSystem.Models.EntityAnalysisResult
+    name: EntityAnalysisResult
+    href: UltraGenericSystem.Models.EntityAnalysisResult.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.EntityAnalysisResult
+    name: EntityAnalysisResult
+    href: UltraGenericSystem.Models.EntityAnalysisResult.html
+  - name: )
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T

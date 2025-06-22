@@ -1,0 +1,856 @@
+### YamlMime:ManagedReference
+items:
+- uid: UltraGenericSystem.Models.AzureAIAgentResponse
+  commentId: T:UltraGenericSystem.Models.AzureAIAgentResponse
+  id: AzureAIAgentResponse
+  parent: UltraGenericSystem.Models
+  children:
+  - UltraGenericSystem.Models.AzureAIAgentResponse.IsComplete
+  - UltraGenericSystem.Models.AzureAIAgentResponse.Message
+  - UltraGenericSystem.Models.AzureAIAgentResponse.Metadata
+  - UltraGenericSystem.Models.AzureAIAgentResponse.ResponseId
+  - UltraGenericSystem.Models.AzureAIAgentResponse.Timestamp
+  - UltraGenericSystem.Models.AzureAIAgentResponse.ToolCallResults
+  - UltraGenericSystem.Models.AzureAIAgentResponse.ToolCalls
+  - UltraGenericSystem.Models.AzureAIAgentResponse.Usage
+  langs:
+  - csharp
+  - vb
+  name: AzureAIAgentResponse
+  nameWithType: AzureAIAgentResponse
+  fullName: UltraGenericSystem.Models.AzureAIAgentResponse
+  type: Class
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: AzureAIAgentResponse
+    path: ../Models/AgentModels.cs
+    startLine: 990
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Azure AI Agent response
+  example: []
+  syntax:
+    content: public class AzureAIAgentResponse
+    content.vb: Public Class AzureAIAgentResponse
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: UltraGenericSystem.Models.AzureAIAgentResponse.Message
+  commentId: P:UltraGenericSystem.Models.AzureAIAgentResponse.Message
+  id: Message
+  parent: UltraGenericSystem.Models.AzureAIAgentResponse
+  langs:
+  - csharp
+  - vb
+  name: Message
+  nameWithType: AzureAIAgentResponse.Message
+  fullName: UltraGenericSystem.Models.AzureAIAgentResponse.Message
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Message
+    path: ../Models/AgentModels.cs
+    startLine: 995
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Response message
+  example: []
+  syntax:
+    content: public string Message { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Message As String
+  overload: UltraGenericSystem.Models.AzureAIAgentResponse.Message*
+- uid: UltraGenericSystem.Models.AzureAIAgentResponse.ToolCalls
+  commentId: P:UltraGenericSystem.Models.AzureAIAgentResponse.ToolCalls
+  id: ToolCalls
+  parent: UltraGenericSystem.Models.AzureAIAgentResponse
+  langs:
+  - csharp
+  - vb
+  name: ToolCalls
+  nameWithType: AzureAIAgentResponse.ToolCalls
+  fullName: UltraGenericSystem.Models.AzureAIAgentResponse.ToolCalls
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: ToolCalls
+    path: ../Models/AgentModels.cs
+    startLine: 1000
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Tool calls made
+  example: []
+  syntax:
+    content: public List<AzureAIToolCall> ToolCalls { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{UltraGenericSystem.Models.AzureAIToolCall}
+    content.vb: Public Property ToolCalls As List(Of AzureAIToolCall)
+  overload: UltraGenericSystem.Models.AzureAIAgentResponse.ToolCalls*
+- uid: UltraGenericSystem.Models.AzureAIAgentResponse.ToolCallResults
+  commentId: P:UltraGenericSystem.Models.AzureAIAgentResponse.ToolCallResults
+  id: ToolCallResults
+  parent: UltraGenericSystem.Models.AzureAIAgentResponse
+  langs:
+  - csharp
+  - vb
+  name: ToolCallResults
+  nameWithType: AzureAIAgentResponse.ToolCallResults
+  fullName: UltraGenericSystem.Models.AzureAIAgentResponse.ToolCallResults
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: ToolCallResults
+    path: ../Models/AgentModels.cs
+    startLine: 1005
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Tool call results
+  example: []
+  syntax:
+    content: public List<AzureAIToolCallResult> ToolCallResults { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{UltraGenericSystem.Models.AzureAIToolCallResult}
+    content.vb: Public Property ToolCallResults As List(Of AzureAIToolCallResult)
+  overload: UltraGenericSystem.Models.AzureAIAgentResponse.ToolCallResults*
+- uid: UltraGenericSystem.Models.AzureAIAgentResponse.Usage
+  commentId: P:UltraGenericSystem.Models.AzureAIAgentResponse.Usage
+  id: Usage
+  parent: UltraGenericSystem.Models.AzureAIAgentResponse
+  langs:
+  - csharp
+  - vb
+  name: Usage
+  nameWithType: AzureAIAgentResponse.Usage
+  fullName: UltraGenericSystem.Models.AzureAIAgentResponse.Usage
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Usage
+    path: ../Models/AgentModels.cs
+    startLine: 1010
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Usage statistics
+  example: []
+  syntax:
+    content: public AzureAIUsage Usage { get; set; }
+    parameters: []
+    return:
+      type: UltraGenericSystem.Models.AzureAIUsage
+    content.vb: Public Property Usage As AzureAIUsage
+  overload: UltraGenericSystem.Models.AzureAIAgentResponse.Usage*
+- uid: UltraGenericSystem.Models.AzureAIAgentResponse.IsComplete
+  commentId: P:UltraGenericSystem.Models.AzureAIAgentResponse.IsComplete
+  id: IsComplete
+  parent: UltraGenericSystem.Models.AzureAIAgentResponse
+  langs:
+  - csharp
+  - vb
+  name: IsComplete
+  nameWithType: AzureAIAgentResponse.IsComplete
+  fullName: UltraGenericSystem.Models.AzureAIAgentResponse.IsComplete
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: IsComplete
+    path: ../Models/AgentModels.cs
+    startLine: 1015
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Whether the response is complete
+  example: []
+  syntax:
+    content: public bool IsComplete { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsComplete As Boolean
+  overload: UltraGenericSystem.Models.AzureAIAgentResponse.IsComplete*
+- uid: UltraGenericSystem.Models.AzureAIAgentResponse.ResponseId
+  commentId: P:UltraGenericSystem.Models.AzureAIAgentResponse.ResponseId
+  id: ResponseId
+  parent: UltraGenericSystem.Models.AzureAIAgentResponse
+  langs:
+  - csharp
+  - vb
+  name: ResponseId
+  nameWithType: AzureAIAgentResponse.ResponseId
+  fullName: UltraGenericSystem.Models.AzureAIAgentResponse.ResponseId
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: ResponseId
+    path: ../Models/AgentModels.cs
+    startLine: 1020
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Response ID
+  example: []
+  syntax:
+    content: public string ResponseId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ResponseId As String
+  overload: UltraGenericSystem.Models.AzureAIAgentResponse.ResponseId*
+- uid: UltraGenericSystem.Models.AzureAIAgentResponse.Timestamp
+  commentId: P:UltraGenericSystem.Models.AzureAIAgentResponse.Timestamp
+  id: Timestamp
+  parent: UltraGenericSystem.Models.AzureAIAgentResponse
+  langs:
+  - csharp
+  - vb
+  name: Timestamp
+  nameWithType: AzureAIAgentResponse.Timestamp
+  fullName: UltraGenericSystem.Models.AzureAIAgentResponse.Timestamp
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Timestamp
+    path: ../Models/AgentModels.cs
+    startLine: 1025
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Response timestamp
+  example: []
+  syntax:
+    content: public DateTime Timestamp { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property Timestamp As Date
+  overload: UltraGenericSystem.Models.AzureAIAgentResponse.Timestamp*
+- uid: UltraGenericSystem.Models.AzureAIAgentResponse.Metadata
+  commentId: P:UltraGenericSystem.Models.AzureAIAgentResponse.Metadata
+  id: Metadata
+  parent: UltraGenericSystem.Models.AzureAIAgentResponse
+  langs:
+  - csharp
+  - vb
+  name: Metadata
+  nameWithType: AzureAIAgentResponse.Metadata
+  fullName: UltraGenericSystem.Models.AzureAIAgentResponse.Metadata
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Metadata
+    path: ../Models/AgentModels.cs
+    startLine: 1030
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Additional metadata
+  example: []
+  syntax:
+    content: public Dictionary<string, object> Metadata { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+    content.vb: Public Property Metadata As Dictionary(Of String, Object)
+  overload: UltraGenericSystem.Models.AzureAIAgentResponse.Metadata*
+references:
+- uid: UltraGenericSystem.Models
+  commentId: N:UltraGenericSystem.Models
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Models
+  nameWithType: UltraGenericSystem.Models
+  fullName: UltraGenericSystem.Models
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UltraGenericSystem.Models.AzureAIAgentResponse.Message*
+  commentId: Overload:UltraGenericSystem.Models.AzureAIAgentResponse.Message
+  href: UltraGenericSystem.Models.AzureAIAgentResponse.html#UltraGenericSystem_Models_AzureAIAgentResponse_Message
+  name: Message
+  nameWithType: AzureAIAgentResponse.Message
+  fullName: UltraGenericSystem.Models.AzureAIAgentResponse.Message
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: UltraGenericSystem.Models.AzureAIAgentResponse.ToolCalls*
+  commentId: Overload:UltraGenericSystem.Models.AzureAIAgentResponse.ToolCalls
+  href: UltraGenericSystem.Models.AzureAIAgentResponse.html#UltraGenericSystem_Models_AzureAIAgentResponse_ToolCalls
+  name: ToolCalls
+  nameWithType: AzureAIAgentResponse.ToolCalls
+  fullName: UltraGenericSystem.Models.AzureAIAgentResponse.ToolCalls
+- uid: System.Collections.Generic.List{UltraGenericSystem.Models.AzureAIToolCall}
+  commentId: T:System.Collections.Generic.List{UltraGenericSystem.Models.AzureAIToolCall}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<AzureAIToolCall>
+  nameWithType: List<AzureAIToolCall>
+  fullName: System.Collections.Generic.List<UltraGenericSystem.Models.AzureAIToolCall>
+  nameWithType.vb: List(Of AzureAIToolCall)
+  fullName.vb: System.Collections.Generic.List(Of UltraGenericSystem.Models.AzureAIToolCall)
+  name.vb: List(Of AzureAIToolCall)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: UltraGenericSystem.Models.AzureAIToolCall
+    name: AzureAIToolCall
+    href: UltraGenericSystem.Models.AzureAIToolCall.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.AzureAIToolCall
+    name: AzureAIToolCall
+    href: UltraGenericSystem.Models.AzureAIToolCall.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: UltraGenericSystem.Models.AzureAIAgentResponse.ToolCallResults*
+  commentId: Overload:UltraGenericSystem.Models.AzureAIAgentResponse.ToolCallResults
+  href: UltraGenericSystem.Models.AzureAIAgentResponse.html#UltraGenericSystem_Models_AzureAIAgentResponse_ToolCallResults
+  name: ToolCallResults
+  nameWithType: AzureAIAgentResponse.ToolCallResults
+  fullName: UltraGenericSystem.Models.AzureAIAgentResponse.ToolCallResults
+- uid: System.Collections.Generic.List{UltraGenericSystem.Models.AzureAIToolCallResult}
+  commentId: T:System.Collections.Generic.List{UltraGenericSystem.Models.AzureAIToolCallResult}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<AzureAIToolCallResult>
+  nameWithType: List<AzureAIToolCallResult>
+  fullName: System.Collections.Generic.List<UltraGenericSystem.Models.AzureAIToolCallResult>
+  nameWithType.vb: List(Of AzureAIToolCallResult)
+  fullName.vb: System.Collections.Generic.List(Of UltraGenericSystem.Models.AzureAIToolCallResult)
+  name.vb: List(Of AzureAIToolCallResult)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: UltraGenericSystem.Models.AzureAIToolCallResult
+    name: AzureAIToolCallResult
+    href: UltraGenericSystem.Models.AzureAIToolCallResult.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.AzureAIToolCallResult
+    name: AzureAIToolCallResult
+    href: UltraGenericSystem.Models.AzureAIToolCallResult.html
+  - name: )
+- uid: UltraGenericSystem.Models.AzureAIAgentResponse.Usage*
+  commentId: Overload:UltraGenericSystem.Models.AzureAIAgentResponse.Usage
+  href: UltraGenericSystem.Models.AzureAIAgentResponse.html#UltraGenericSystem_Models_AzureAIAgentResponse_Usage
+  name: Usage
+  nameWithType: AzureAIAgentResponse.Usage
+  fullName: UltraGenericSystem.Models.AzureAIAgentResponse.Usage
+- uid: UltraGenericSystem.Models.AzureAIUsage
+  commentId: T:UltraGenericSystem.Models.AzureAIUsage
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.AzureAIUsage.html
+  name: AzureAIUsage
+  nameWithType: AzureAIUsage
+  fullName: UltraGenericSystem.Models.AzureAIUsage
+- uid: UltraGenericSystem.Models.AzureAIAgentResponse.IsComplete*
+  commentId: Overload:UltraGenericSystem.Models.AzureAIAgentResponse.IsComplete
+  href: UltraGenericSystem.Models.AzureAIAgentResponse.html#UltraGenericSystem_Models_AzureAIAgentResponse_IsComplete
+  name: IsComplete
+  nameWithType: AzureAIAgentResponse.IsComplete
+  fullName: UltraGenericSystem.Models.AzureAIAgentResponse.IsComplete
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: UltraGenericSystem.Models.AzureAIAgentResponse.ResponseId*
+  commentId: Overload:UltraGenericSystem.Models.AzureAIAgentResponse.ResponseId
+  href: UltraGenericSystem.Models.AzureAIAgentResponse.html#UltraGenericSystem_Models_AzureAIAgentResponse_ResponseId
+  name: ResponseId
+  nameWithType: AzureAIAgentResponse.ResponseId
+  fullName: UltraGenericSystem.Models.AzureAIAgentResponse.ResponseId
+- uid: UltraGenericSystem.Models.AzureAIAgentResponse.Timestamp*
+  commentId: Overload:UltraGenericSystem.Models.AzureAIAgentResponse.Timestamp
+  href: UltraGenericSystem.Models.AzureAIAgentResponse.html#UltraGenericSystem_Models_AzureAIAgentResponse_Timestamp
+  name: Timestamp
+  nameWithType: AzureAIAgentResponse.Timestamp
+  fullName: UltraGenericSystem.Models.AzureAIAgentResponse.Timestamp
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: UltraGenericSystem.Models.AzureAIAgentResponse.Metadata*
+  commentId: Overload:UltraGenericSystem.Models.AzureAIAgentResponse.Metadata
+  href: UltraGenericSystem.Models.AzureAIAgentResponse.html#UltraGenericSystem_Models_AzureAIAgentResponse_Metadata
+  name: Metadata
+  nameWithType: AzureAIAgentResponse.Metadata
+  fullName: UltraGenericSystem.Models.AzureAIAgentResponse.Metadata
+- uid: System.Collections.Generic.Dictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, object>
+  nameWithType: Dictionary<string, object>
+  fullName: System.Collections.Generic.Dictionary<string, object>
+  nameWithType.vb: Dictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, Object)
+  name.vb: Dictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )

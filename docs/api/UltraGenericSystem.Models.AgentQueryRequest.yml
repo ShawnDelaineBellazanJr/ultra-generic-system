@@ -1,0 +1,877 @@
+### YamlMime:ManagedReference
+items:
+- uid: UltraGenericSystem.Models.AgentQueryRequest
+  commentId: T:UltraGenericSystem.Models.AgentQueryRequest
+  id: AgentQueryRequest
+  parent: UltraGenericSystem.Models
+  children:
+  - UltraGenericSystem.Models.AgentQueryRequest.EntityType
+  - UltraGenericSystem.Models.AgentQueryRequest.Filters
+  - UltraGenericSystem.Models.AgentQueryRequest.IncludeDeleted
+  - UltraGenericSystem.Models.AgentQueryRequest.Operation
+  - UltraGenericSystem.Models.AgentQueryRequest.Page
+  - UltraGenericSystem.Models.AgentQueryRequest.PageNumber
+  - UltraGenericSystem.Models.AgentQueryRequest.PageSize
+  - UltraGenericSystem.Models.AgentQueryRequest.Parameters
+  - UltraGenericSystem.Models.AgentQueryRequest.QueryType
+  - UltraGenericSystem.Models.AgentQueryRequest.SortBy
+  - UltraGenericSystem.Models.AgentQueryRequest.SortDirection
+  langs:
+  - csharp
+  - vb
+  name: AgentQueryRequest
+  nameWithType: AgentQueryRequest
+  fullName: UltraGenericSystem.Models.AgentQueryRequest
+  type: Class
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: AgentQueryRequest
+    path: ../Models/AgentModels.cs
+    startLine: 230
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Query request for agent operations
+  example: []
+  syntax:
+    content: public class AgentQueryRequest
+    content.vb: Public Class AgentQueryRequest
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: UltraGenericSystem.Models.AgentQueryRequest.EntityType
+  commentId: P:UltraGenericSystem.Models.AgentQueryRequest.EntityType
+  id: EntityType
+  parent: UltraGenericSystem.Models.AgentQueryRequest
+  langs:
+  - csharp
+  - vb
+  name: EntityType
+  nameWithType: AgentQueryRequest.EntityType
+  fullName: UltraGenericSystem.Models.AgentQueryRequest.EntityType
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: EntityType
+    path: ../Models/AgentModels.cs
+    startLine: 235
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Type of entity to query
+  example: []
+  syntax:
+    content: public Type EntityType { get; set; }
+    parameters: []
+    return:
+      type: System.Type
+    content.vb: Public Property EntityType As Type
+  overload: UltraGenericSystem.Models.AgentQueryRequest.EntityType*
+- uid: UltraGenericSystem.Models.AgentQueryRequest.Operation
+  commentId: P:UltraGenericSystem.Models.AgentQueryRequest.Operation
+  id: Operation
+  parent: UltraGenericSystem.Models.AgentQueryRequest
+  langs:
+  - csharp
+  - vb
+  name: Operation
+  nameWithType: AgentQueryRequest.Operation
+  fullName: UltraGenericSystem.Models.AgentQueryRequest.Operation
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Operation
+    path: ../Models/AgentModels.cs
+    startLine: 240
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Operation to perform
+  example: []
+  syntax:
+    content: public string Operation { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Operation As String
+  overload: UltraGenericSystem.Models.AgentQueryRequest.Operation*
+- uid: UltraGenericSystem.Models.AgentQueryRequest.Parameters
+  commentId: P:UltraGenericSystem.Models.AgentQueryRequest.Parameters
+  id: Parameters
+  parent: UltraGenericSystem.Models.AgentQueryRequest
+  langs:
+  - csharp
+  - vb
+  name: Parameters
+  nameWithType: AgentQueryRequest.Parameters
+  fullName: UltraGenericSystem.Models.AgentQueryRequest.Parameters
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Parameters
+    path: ../Models/AgentModels.cs
+    startLine: 245
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Query parameters
+  example: []
+  syntax:
+    content: public Dictionary<string, object> Parameters { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+    content.vb: Public Property Parameters As Dictionary(Of String, Object)
+  overload: UltraGenericSystem.Models.AgentQueryRequest.Parameters*
+- uid: UltraGenericSystem.Models.AgentQueryRequest.PageNumber
+  commentId: P:UltraGenericSystem.Models.AgentQueryRequest.PageNumber
+  id: PageNumber
+  parent: UltraGenericSystem.Models.AgentQueryRequest
+  langs:
+  - csharp
+  - vb
+  name: PageNumber
+  nameWithType: AgentQueryRequest.PageNumber
+  fullName: UltraGenericSystem.Models.AgentQueryRequest.PageNumber
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: PageNumber
+    path: ../Models/AgentModels.cs
+    startLine: 250
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Page number for pagination
+  example: []
+  syntax:
+    content: public int PageNumber { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property PageNumber As Integer
+  overload: UltraGenericSystem.Models.AgentQueryRequest.PageNumber*
+- uid: UltraGenericSystem.Models.AgentQueryRequest.PageSize
+  commentId: P:UltraGenericSystem.Models.AgentQueryRequest.PageSize
+  id: PageSize
+  parent: UltraGenericSystem.Models.AgentQueryRequest
+  langs:
+  - csharp
+  - vb
+  name: PageSize
+  nameWithType: AgentQueryRequest.PageSize
+  fullName: UltraGenericSystem.Models.AgentQueryRequest.PageSize
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: PageSize
+    path: ../Models/AgentModels.cs
+    startLine: 255
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Page size for pagination
+  example: []
+  syntax:
+    content: public int PageSize { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property PageSize As Integer
+  overload: UltraGenericSystem.Models.AgentQueryRequest.PageSize*
+- uid: UltraGenericSystem.Models.AgentQueryRequest.SortBy
+  commentId: P:UltraGenericSystem.Models.AgentQueryRequest.SortBy
+  id: SortBy
+  parent: UltraGenericSystem.Models.AgentQueryRequest
+  langs:
+  - csharp
+  - vb
+  name: SortBy
+  nameWithType: AgentQueryRequest.SortBy
+  fullName: UltraGenericSystem.Models.AgentQueryRequest.SortBy
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: SortBy
+    path: ../Models/AgentModels.cs
+    startLine: 260
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Sort field
+  example: []
+  syntax:
+    content: public string SortBy { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SortBy As String
+  overload: UltraGenericSystem.Models.AgentQueryRequest.SortBy*
+- uid: UltraGenericSystem.Models.AgentQueryRequest.SortDirection
+  commentId: P:UltraGenericSystem.Models.AgentQueryRequest.SortDirection
+  id: SortDirection
+  parent: UltraGenericSystem.Models.AgentQueryRequest
+  langs:
+  - csharp
+  - vb
+  name: SortDirection
+  nameWithType: AgentQueryRequest.SortDirection
+  fullName: UltraGenericSystem.Models.AgentQueryRequest.SortDirection
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: SortDirection
+    path: ../Models/AgentModels.cs
+    startLine: 265
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Sort direction
+  example: []
+  syntax:
+    content: public string SortDirection { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SortDirection As String
+  overload: UltraGenericSystem.Models.AgentQueryRequest.SortDirection*
+- uid: UltraGenericSystem.Models.AgentQueryRequest.Filters
+  commentId: P:UltraGenericSystem.Models.AgentQueryRequest.Filters
+  id: Filters
+  parent: UltraGenericSystem.Models.AgentQueryRequest
+  langs:
+  - csharp
+  - vb
+  name: Filters
+  nameWithType: AgentQueryRequest.Filters
+  fullName: UltraGenericSystem.Models.AgentQueryRequest.Filters
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Filters
+    path: ../Models/AgentModels.cs
+    startLine: 270
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Filter criteria
+  example: []
+  syntax:
+    content: public Dictionary<string, object> Filters { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+    content.vb: Public Property Filters As Dictionary(Of String, Object)
+  overload: UltraGenericSystem.Models.AgentQueryRequest.Filters*
+- uid: UltraGenericSystem.Models.AgentQueryRequest.IncludeDeleted
+  commentId: P:UltraGenericSystem.Models.AgentQueryRequest.IncludeDeleted
+  id: IncludeDeleted
+  parent: UltraGenericSystem.Models.AgentQueryRequest
+  langs:
+  - csharp
+  - vb
+  name: IncludeDeleted
+  nameWithType: AgentQueryRequest.IncludeDeleted
+  fullName: UltraGenericSystem.Models.AgentQueryRequest.IncludeDeleted
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: IncludeDeleted
+    path: ../Models/AgentModels.cs
+    startLine: 275
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Include deleted entities
+  example: []
+  syntax:
+    content: public bool IncludeDeleted { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IncludeDeleted As Boolean
+  overload: UltraGenericSystem.Models.AgentQueryRequest.IncludeDeleted*
+- uid: UltraGenericSystem.Models.AgentQueryRequest.QueryType
+  commentId: P:UltraGenericSystem.Models.AgentQueryRequest.QueryType
+  id: QueryType
+  parent: UltraGenericSystem.Models.AgentQueryRequest
+  langs:
+  - csharp
+  - vb
+  name: QueryType
+  nameWithType: AgentQueryRequest.QueryType
+  fullName: UltraGenericSystem.Models.AgentQueryRequest.QueryType
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: QueryType
+    path: ../Models/AgentModels.cs
+    startLine: 280
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Query type
+  example: []
+  syntax:
+    content: public string QueryType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property QueryType As String
+  overload: UltraGenericSystem.Models.AgentQueryRequest.QueryType*
+- uid: UltraGenericSystem.Models.AgentQueryRequest.Page
+  commentId: P:UltraGenericSystem.Models.AgentQueryRequest.Page
+  id: Page
+  parent: UltraGenericSystem.Models.AgentQueryRequest
+  langs:
+  - csharp
+  - vb
+  name: Page
+  nameWithType: AgentQueryRequest.Page
+  fullName: UltraGenericSystem.Models.AgentQueryRequest.Page
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Page
+    path: ../Models/AgentModels.cs
+    startLine: 285
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Page
+  example: []
+  syntax:
+    content: public int Page { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Page As Integer
+  overload: UltraGenericSystem.Models.AgentQueryRequest.Page*
+references:
+- uid: UltraGenericSystem.Models
+  commentId: N:UltraGenericSystem.Models
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Models
+  nameWithType: UltraGenericSystem.Models
+  fullName: UltraGenericSystem.Models
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UltraGenericSystem.Models.AgentQueryRequest.EntityType*
+  commentId: Overload:UltraGenericSystem.Models.AgentQueryRequest.EntityType
+  href: UltraGenericSystem.Models.AgentQueryRequest.html#UltraGenericSystem_Models_AgentQueryRequest_EntityType
+  name: EntityType
+  nameWithType: AgentQueryRequest.EntityType
+  fullName: UltraGenericSystem.Models.AgentQueryRequest.EntityType
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: UltraGenericSystem.Models.AgentQueryRequest.Operation*
+  commentId: Overload:UltraGenericSystem.Models.AgentQueryRequest.Operation
+  href: UltraGenericSystem.Models.AgentQueryRequest.html#UltraGenericSystem_Models_AgentQueryRequest_Operation
+  name: Operation
+  nameWithType: AgentQueryRequest.Operation
+  fullName: UltraGenericSystem.Models.AgentQueryRequest.Operation
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: UltraGenericSystem.Models.AgentQueryRequest.Parameters*
+  commentId: Overload:UltraGenericSystem.Models.AgentQueryRequest.Parameters
+  href: UltraGenericSystem.Models.AgentQueryRequest.html#UltraGenericSystem_Models_AgentQueryRequest_Parameters
+  name: Parameters
+  nameWithType: AgentQueryRequest.Parameters
+  fullName: UltraGenericSystem.Models.AgentQueryRequest.Parameters
+- uid: System.Collections.Generic.Dictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, object>
+  nameWithType: Dictionary<string, object>
+  fullName: System.Collections.Generic.Dictionary<string, object>
+  nameWithType.vb: Dictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, Object)
+  name.vb: Dictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: UltraGenericSystem.Models.AgentQueryRequest.PageNumber*
+  commentId: Overload:UltraGenericSystem.Models.AgentQueryRequest.PageNumber
+  href: UltraGenericSystem.Models.AgentQueryRequest.html#UltraGenericSystem_Models_AgentQueryRequest_PageNumber
+  name: PageNumber
+  nameWithType: AgentQueryRequest.PageNumber
+  fullName: UltraGenericSystem.Models.AgentQueryRequest.PageNumber
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: UltraGenericSystem.Models.AgentQueryRequest.PageSize*
+  commentId: Overload:UltraGenericSystem.Models.AgentQueryRequest.PageSize
+  href: UltraGenericSystem.Models.AgentQueryRequest.html#UltraGenericSystem_Models_AgentQueryRequest_PageSize
+  name: PageSize
+  nameWithType: AgentQueryRequest.PageSize
+  fullName: UltraGenericSystem.Models.AgentQueryRequest.PageSize
+- uid: UltraGenericSystem.Models.AgentQueryRequest.SortBy*
+  commentId: Overload:UltraGenericSystem.Models.AgentQueryRequest.SortBy
+  href: UltraGenericSystem.Models.AgentQueryRequest.html#UltraGenericSystem_Models_AgentQueryRequest_SortBy
+  name: SortBy
+  nameWithType: AgentQueryRequest.SortBy
+  fullName: UltraGenericSystem.Models.AgentQueryRequest.SortBy
+- uid: UltraGenericSystem.Models.AgentQueryRequest.SortDirection*
+  commentId: Overload:UltraGenericSystem.Models.AgentQueryRequest.SortDirection
+  href: UltraGenericSystem.Models.AgentQueryRequest.html#UltraGenericSystem_Models_AgentQueryRequest_SortDirection
+  name: SortDirection
+  nameWithType: AgentQueryRequest.SortDirection
+  fullName: UltraGenericSystem.Models.AgentQueryRequest.SortDirection
+- uid: UltraGenericSystem.Models.AgentQueryRequest.Filters*
+  commentId: Overload:UltraGenericSystem.Models.AgentQueryRequest.Filters
+  href: UltraGenericSystem.Models.AgentQueryRequest.html#UltraGenericSystem_Models_AgentQueryRequest_Filters
+  name: Filters
+  nameWithType: AgentQueryRequest.Filters
+  fullName: UltraGenericSystem.Models.AgentQueryRequest.Filters
+- uid: UltraGenericSystem.Models.AgentQueryRequest.IncludeDeleted*
+  commentId: Overload:UltraGenericSystem.Models.AgentQueryRequest.IncludeDeleted
+  href: UltraGenericSystem.Models.AgentQueryRequest.html#UltraGenericSystem_Models_AgentQueryRequest_IncludeDeleted
+  name: IncludeDeleted
+  nameWithType: AgentQueryRequest.IncludeDeleted
+  fullName: UltraGenericSystem.Models.AgentQueryRequest.IncludeDeleted
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: UltraGenericSystem.Models.AgentQueryRequest.QueryType*
+  commentId: Overload:UltraGenericSystem.Models.AgentQueryRequest.QueryType
+  href: UltraGenericSystem.Models.AgentQueryRequest.html#UltraGenericSystem_Models_AgentQueryRequest_QueryType
+  name: QueryType
+  nameWithType: AgentQueryRequest.QueryType
+  fullName: UltraGenericSystem.Models.AgentQueryRequest.QueryType
+- uid: UltraGenericSystem.Models.AgentQueryRequest.Page*
+  commentId: Overload:UltraGenericSystem.Models.AgentQueryRequest.Page
+  href: UltraGenericSystem.Models.AgentQueryRequest.html#UltraGenericSystem_Models_AgentQueryRequest_Page
+  name: Page
+  nameWithType: AgentQueryRequest.Page
+  fullName: UltraGenericSystem.Models.AgentQueryRequest.Page

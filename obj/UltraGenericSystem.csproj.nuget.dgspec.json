@@ -1,0 +1,213 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Tooensure\\Desktop\\generic\\UltraGenericSystem.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Tooensure\\Desktop\\generic\\UltraGenericSystem.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Tooensure\\Desktop\\generic\\UltraGenericSystem.csproj",
+        "projectName": "UltraGenericSystem",
+        "projectPath": "C:\\Users\\Tooensure\\Desktop\\generic\\UltraGenericSystem.csproj",
+        "packagesPath": "C:\\Users\\Tooensure\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Tooensure\\Desktop\\generic\\obj\\",
+        "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Tooensure\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[14.0.0, )",
+              "versionCentrallyManaged": true
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[12.0.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[9.0.6, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.CodeAnalysis.CSharp": {
+              "target": "Package",
+              "version": "[4.14.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.CodeAnalysis.Workspaces.Common": {
+              "target": "Package",
+              "version": "[4.14.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.6, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[9.0.6, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.SemanticKernel": {
+              "target": "Package",
+              "version": "[1.57.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.SemanticKernel.Agents.Core": {
+              "target": "Package",
+              "version": "[1.57.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.SemanticKernel.Agents.OpenAI": {
+              "target": "Package",
+              "version": "[1.57.0-preview, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.SemanticKernel.Agents.Orchestration": {
+              "target": "Package",
+              "version": "[1.57.0-preview, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.SemanticKernel.Agents.Runtime.InProcess": {
+              "target": "Package",
+              "version": "[1.57.0-preview, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.SemanticKernel.Connectors.AzureOpenAI": {
+              "target": "Package",
+              "version": "[1.57.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.SemanticKernel.Connectors.OpenAI": {
+              "target": "Package",
+              "version": "[1.57.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )",
+              "versionCentrallyManaged": true
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[9.0.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[6.0.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[7.0.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Spectre.Console": {
+              "target": "Package",
+              "version": "[0.50.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[9.0.1, )",
+              "versionCentrallyManaged": true
+            }
+          },
+          "centralPackageVersions": {
+            "AutoMapper": "14.0.0",
+            "FluentValidation": "12.0.0",
+            "Microsoft.AspNetCore.App": "9.0.0",
+            "Microsoft.AspNetCore.OpenApi": "9.0.6",
+            "Microsoft.CodeAnalysis.CSharp": "4.14.0",
+            "Microsoft.CodeAnalysis.Workspaces.Common": "4.14.0",
+            "Microsoft.EntityFrameworkCore": "9.0.0",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.6",
+            "Microsoft.EntityFrameworkCore.Sqlite": "9.0.6",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.0",
+            "Microsoft.Extensions.Logging": "9.0.0",
+            "Microsoft.NET.Sdk": "9.0.100",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.SemanticKernel": "1.57.0",
+            "Microsoft.SemanticKernel.Agents.Core": "1.57.0",
+            "Microsoft.SemanticKernel.Agents.OpenAI": "1.57.0-preview",
+            "Microsoft.SemanticKernel.Agents.Orchestration": "1.57.0-preview",
+            "Microsoft.SemanticKernel.Agents.Runtime.InProcess": "1.57.0-preview",
+            "Microsoft.SemanticKernel.Connectors.AzureOpenAI": "1.57.0",
+            "Microsoft.SemanticKernel.Connectors.OpenAI": "1.57.0",
+            "Moq": "4.20.69",
+            "Newtonsoft.Json": "13.0.3",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Console": "6.0.0",
+            "Serilog.Sinks.File": "7.0.0",
+            "Spectre.Console": "0.50.0",
+            "Swashbuckle.AspNetCore": "9.0.1",
+            "xunit": "2.6.0",
+            "xunit.runner.visualstudio": "2.5.0"
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

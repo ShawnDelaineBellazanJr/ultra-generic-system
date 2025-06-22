@@ -1,0 +1,621 @@
+### YamlMime:ManagedReference
+items:
+- uid: UltraGenericSystem.Models.AzureAIStreamingResponse
+  commentId: T:UltraGenericSystem.Models.AzureAIStreamingResponse
+  id: AzureAIStreamingResponse
+  parent: UltraGenericSystem.Models
+  children:
+  - UltraGenericSystem.Models.AzureAIStreamingResponse.ChunkId
+  - UltraGenericSystem.Models.AzureAIStreamingResponse.Content
+  - UltraGenericSystem.Models.AzureAIStreamingResponse.IsFinal
+  - UltraGenericSystem.Models.AzureAIStreamingResponse.Timestamp
+  - UltraGenericSystem.Models.AzureAIStreamingResponse.ToolCalls
+  langs:
+  - csharp
+  - vb
+  name: AzureAIStreamingResponse
+  nameWithType: AzureAIStreamingResponse
+  fullName: UltraGenericSystem.Models.AzureAIStreamingResponse
+  type: Class
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: AzureAIStreamingResponse
+    path: ../Models/AgentModels.cs
+    startLine: 1062
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Azure AI streaming response
+  example: []
+  syntax:
+    content: public class AzureAIStreamingResponse
+    content.vb: Public Class AzureAIStreamingResponse
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: UltraGenericSystem.Models.AzureAIStreamingResponse.Content
+  commentId: P:UltraGenericSystem.Models.AzureAIStreamingResponse.Content
+  id: Content
+  parent: UltraGenericSystem.Models.AzureAIStreamingResponse
+  langs:
+  - csharp
+  - vb
+  name: Content
+  nameWithType: AzureAIStreamingResponse.Content
+  fullName: UltraGenericSystem.Models.AzureAIStreamingResponse.Content
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Content
+    path: ../Models/AgentModels.cs
+    startLine: 1067
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Streaming chunk content
+  example: []
+  syntax:
+    content: public string Content { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Content As String
+  overload: UltraGenericSystem.Models.AzureAIStreamingResponse.Content*
+- uid: UltraGenericSystem.Models.AzureAIStreamingResponse.IsFinal
+  commentId: P:UltraGenericSystem.Models.AzureAIStreamingResponse.IsFinal
+  id: IsFinal
+  parent: UltraGenericSystem.Models.AzureAIStreamingResponse
+  langs:
+  - csharp
+  - vb
+  name: IsFinal
+  nameWithType: AzureAIStreamingResponse.IsFinal
+  fullName: UltraGenericSystem.Models.AzureAIStreamingResponse.IsFinal
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: IsFinal
+    path: ../Models/AgentModels.cs
+    startLine: 1072
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Whether this is the final chunk
+  example: []
+  syntax:
+    content: public bool IsFinal { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsFinal As Boolean
+  overload: UltraGenericSystem.Models.AzureAIStreamingResponse.IsFinal*
+- uid: UltraGenericSystem.Models.AzureAIStreamingResponse.ChunkId
+  commentId: P:UltraGenericSystem.Models.AzureAIStreamingResponse.ChunkId
+  id: ChunkId
+  parent: UltraGenericSystem.Models.AzureAIStreamingResponse
+  langs:
+  - csharp
+  - vb
+  name: ChunkId
+  nameWithType: AzureAIStreamingResponse.ChunkId
+  fullName: UltraGenericSystem.Models.AzureAIStreamingResponse.ChunkId
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: ChunkId
+    path: ../Models/AgentModels.cs
+    startLine: 1077
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Chunk ID
+  example: []
+  syntax:
+    content: public string ChunkId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ChunkId As String
+  overload: UltraGenericSystem.Models.AzureAIStreamingResponse.ChunkId*
+- uid: UltraGenericSystem.Models.AzureAIStreamingResponse.Timestamp
+  commentId: P:UltraGenericSystem.Models.AzureAIStreamingResponse.Timestamp
+  id: Timestamp
+  parent: UltraGenericSystem.Models.AzureAIStreamingResponse
+  langs:
+  - csharp
+  - vb
+  name: Timestamp
+  nameWithType: AzureAIStreamingResponse.Timestamp
+  fullName: UltraGenericSystem.Models.AzureAIStreamingResponse.Timestamp
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: Timestamp
+    path: ../Models/AgentModels.cs
+    startLine: 1082
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Chunk timestamp
+  example: []
+  syntax:
+    content: public DateTime Timestamp { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property Timestamp As Date
+  overload: UltraGenericSystem.Models.AzureAIStreamingResponse.Timestamp*
+- uid: UltraGenericSystem.Models.AzureAIStreamingResponse.ToolCalls
+  commentId: P:UltraGenericSystem.Models.AzureAIStreamingResponse.ToolCalls
+  id: ToolCalls
+  parent: UltraGenericSystem.Models.AzureAIStreamingResponse
+  langs:
+  - csharp
+  - vb
+  name: ToolCalls
+  nameWithType: AzureAIStreamingResponse.ToolCalls
+  fullName: UltraGenericSystem.Models.AzureAIStreamingResponse.ToolCalls
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: ToolCalls
+    path: ../Models/AgentModels.cs
+    startLine: 1087
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Tool calls in this chunk
+  example: []
+  syntax:
+    content: public List<AzureAIToolCall> ToolCalls { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{UltraGenericSystem.Models.AzureAIToolCall}
+    content.vb: Public Property ToolCalls As List(Of AzureAIToolCall)
+  overload: UltraGenericSystem.Models.AzureAIStreamingResponse.ToolCalls*
+references:
+- uid: UltraGenericSystem.Models
+  commentId: N:UltraGenericSystem.Models
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Models
+  nameWithType: UltraGenericSystem.Models
+  fullName: UltraGenericSystem.Models
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UltraGenericSystem.Models.AzureAIStreamingResponse.Content*
+  commentId: Overload:UltraGenericSystem.Models.AzureAIStreamingResponse.Content
+  href: UltraGenericSystem.Models.AzureAIStreamingResponse.html#UltraGenericSystem_Models_AzureAIStreamingResponse_Content
+  name: Content
+  nameWithType: AzureAIStreamingResponse.Content
+  fullName: UltraGenericSystem.Models.AzureAIStreamingResponse.Content
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: UltraGenericSystem.Models.AzureAIStreamingResponse.IsFinal*
+  commentId: Overload:UltraGenericSystem.Models.AzureAIStreamingResponse.IsFinal
+  href: UltraGenericSystem.Models.AzureAIStreamingResponse.html#UltraGenericSystem_Models_AzureAIStreamingResponse_IsFinal
+  name: IsFinal
+  nameWithType: AzureAIStreamingResponse.IsFinal
+  fullName: UltraGenericSystem.Models.AzureAIStreamingResponse.IsFinal
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: UltraGenericSystem.Models.AzureAIStreamingResponse.ChunkId*
+  commentId: Overload:UltraGenericSystem.Models.AzureAIStreamingResponse.ChunkId
+  href: UltraGenericSystem.Models.AzureAIStreamingResponse.html#UltraGenericSystem_Models_AzureAIStreamingResponse_ChunkId
+  name: ChunkId
+  nameWithType: AzureAIStreamingResponse.ChunkId
+  fullName: UltraGenericSystem.Models.AzureAIStreamingResponse.ChunkId
+- uid: UltraGenericSystem.Models.AzureAIStreamingResponse.Timestamp*
+  commentId: Overload:UltraGenericSystem.Models.AzureAIStreamingResponse.Timestamp
+  href: UltraGenericSystem.Models.AzureAIStreamingResponse.html#UltraGenericSystem_Models_AzureAIStreamingResponse_Timestamp
+  name: Timestamp
+  nameWithType: AzureAIStreamingResponse.Timestamp
+  fullName: UltraGenericSystem.Models.AzureAIStreamingResponse.Timestamp
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: UltraGenericSystem.Models.AzureAIStreamingResponse.ToolCalls*
+  commentId: Overload:UltraGenericSystem.Models.AzureAIStreamingResponse.ToolCalls
+  href: UltraGenericSystem.Models.AzureAIStreamingResponse.html#UltraGenericSystem_Models_AzureAIStreamingResponse_ToolCalls
+  name: ToolCalls
+  nameWithType: AzureAIStreamingResponse.ToolCalls
+  fullName: UltraGenericSystem.Models.AzureAIStreamingResponse.ToolCalls
+- uid: System.Collections.Generic.List{UltraGenericSystem.Models.AzureAIToolCall}
+  commentId: T:System.Collections.Generic.List{UltraGenericSystem.Models.AzureAIToolCall}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<AzureAIToolCall>
+  nameWithType: List<AzureAIToolCall>
+  fullName: System.Collections.Generic.List<UltraGenericSystem.Models.AzureAIToolCall>
+  nameWithType.vb: List(Of AzureAIToolCall)
+  fullName.vb: System.Collections.Generic.List(Of UltraGenericSystem.Models.AzureAIToolCall)
+  name.vb: List(Of AzureAIToolCall)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: UltraGenericSystem.Models.AzureAIToolCall
+    name: AzureAIToolCall
+    href: UltraGenericSystem.Models.AzureAIToolCall.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.AzureAIToolCall
+    name: AzureAIToolCall
+    href: UltraGenericSystem.Models.AzureAIToolCall.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

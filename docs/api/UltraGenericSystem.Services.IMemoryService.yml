@@ -1,0 +1,1224 @@
+### YamlMime:ManagedReference
+items:
+- uid: UltraGenericSystem.Services.IMemoryService
+  commentId: T:UltraGenericSystem.Services.IMemoryService
+  id: IMemoryService
+  parent: UltraGenericSystem.Services
+  children:
+  - UltraGenericSystem.Services.IMemoryService.CalculateSimilarityAsync(System.Collections.Generic.List{System.Single},System.Collections.Generic.List{System.Single},System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IMemoryService.CleanupMemoryAsync(System.TimeSpan,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IMemoryService.ClearWhiteboardAsync(System.String,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IMemoryService.DeleteMemoryAsync(System.String,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IMemoryService.GenerateEmbeddingAsync(System.String,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IMemoryService.GetMemoryAsync(System.String,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IMemoryService.GetMemoryStatsAsync(System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IMemoryService.GetWhiteboardAsync(System.String,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IMemoryService.ProcessDocumentAsync(UltraGenericSystem.Models.Document,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IMemoryService.QueryRAGAsync(UltraGenericSystem.Models.RAGRequest,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IMemoryService.SearchMemoryAsync(UltraGenericSystem.Models.MemorySearchRequest,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IMemoryService.StoreMemoryAsync(UltraGenericSystem.Models.MemoryEntry,System.Threading.CancellationToken)
+  - UltraGenericSystem.Services.IMemoryService.StoreWhiteboardAsync(UltraGenericSystem.Models.WhiteboardMemory,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: IMemoryService
+  nameWithType: IMemoryService
+  fullName: UltraGenericSystem.Services.IMemoryService
+  type: Interface
+  source:
+    remote:
+      path: Services/IMemoryService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: IMemoryService
+    path: ../Services/IMemoryService.cs
+    startLine: 7
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Interface for SK Memory and RAG services
+  example: []
+  syntax:
+    content: public interface IMemoryService
+    content.vb: Public Interface IMemoryService
+- uid: UltraGenericSystem.Services.IMemoryService.StoreMemoryAsync(UltraGenericSystem.Models.MemoryEntry,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IMemoryService.StoreMemoryAsync(UltraGenericSystem.Models.MemoryEntry,System.Threading.CancellationToken)
+  id: StoreMemoryAsync(UltraGenericSystem.Models.MemoryEntry,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IMemoryService
+  langs:
+  - csharp
+  - vb
+  name: StoreMemoryAsync(MemoryEntry, CancellationToken)
+  nameWithType: IMemoryService.StoreMemoryAsync(MemoryEntry, CancellationToken)
+  fullName: UltraGenericSystem.Services.IMemoryService.StoreMemoryAsync(UltraGenericSystem.Models.MemoryEntry, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IMemoryService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: StoreMemoryAsync
+    path: ../Services/IMemoryService.cs
+    startLine: 12
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Stores a memory entry
+  example: []
+  syntax:
+    content: Task<MemoryOperationResult> StoreMemoryAsync(MemoryEntry entry, CancellationToken cancellationToken = default)
+    parameters:
+    - id: entry
+      type: UltraGenericSystem.Models.MemoryEntry
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.MemoryOperationResult}
+    content.vb: Function StoreMemoryAsync(entry As MemoryEntry, cancellationToken As CancellationToken = Nothing) As Task(Of MemoryOperationResult)
+  overload: UltraGenericSystem.Services.IMemoryService.StoreMemoryAsync*
+- uid: UltraGenericSystem.Services.IMemoryService.GetMemoryAsync(System.String,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IMemoryService.GetMemoryAsync(System.String,System.Threading.CancellationToken)
+  id: GetMemoryAsync(System.String,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IMemoryService
+  langs:
+  - csharp
+  - vb
+  name: GetMemoryAsync(string, CancellationToken)
+  nameWithType: IMemoryService.GetMemoryAsync(string, CancellationToken)
+  fullName: UltraGenericSystem.Services.IMemoryService.GetMemoryAsync(string, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IMemoryService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetMemoryAsync
+    path: ../Services/IMemoryService.cs
+    startLine: 17
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Retrieves a memory entry by key
+  example: []
+  syntax:
+    content: Task<MemoryEntry?> GetMemoryAsync(string key, CancellationToken cancellationToken = default)
+    parameters:
+    - id: key
+      type: System.String
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.MemoryEntry}
+    content.vb: Function GetMemoryAsync(key As String, cancellationToken As CancellationToken = Nothing) As Task(Of MemoryEntry)
+  overload: UltraGenericSystem.Services.IMemoryService.GetMemoryAsync*
+  nameWithType.vb: IMemoryService.GetMemoryAsync(String, CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IMemoryService.GetMemoryAsync(String, System.Threading.CancellationToken)
+  name.vb: GetMemoryAsync(String, CancellationToken)
+- uid: UltraGenericSystem.Services.IMemoryService.SearchMemoryAsync(UltraGenericSystem.Models.MemorySearchRequest,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IMemoryService.SearchMemoryAsync(UltraGenericSystem.Models.MemorySearchRequest,System.Threading.CancellationToken)
+  id: SearchMemoryAsync(UltraGenericSystem.Models.MemorySearchRequest,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IMemoryService
+  langs:
+  - csharp
+  - vb
+  name: SearchMemoryAsync(MemorySearchRequest, CancellationToken)
+  nameWithType: IMemoryService.SearchMemoryAsync(MemorySearchRequest, CancellationToken)
+  fullName: UltraGenericSystem.Services.IMemoryService.SearchMemoryAsync(UltraGenericSystem.Models.MemorySearchRequest, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IMemoryService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: SearchMemoryAsync
+    path: ../Services/IMemoryService.cs
+    startLine: 22
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Searches memory entries by similarity
+  example: []
+  syntax:
+    content: Task<MemorySearchResponse> SearchMemoryAsync(MemorySearchRequest request, CancellationToken cancellationToken = default)
+    parameters:
+    - id: request
+      type: UltraGenericSystem.Models.MemorySearchRequest
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.MemorySearchResponse}
+    content.vb: Function SearchMemoryAsync(request As MemorySearchRequest, cancellationToken As CancellationToken = Nothing) As Task(Of MemorySearchResponse)
+  overload: UltraGenericSystem.Services.IMemoryService.SearchMemoryAsync*
+- uid: UltraGenericSystem.Services.IMemoryService.DeleteMemoryAsync(System.String,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IMemoryService.DeleteMemoryAsync(System.String,System.Threading.CancellationToken)
+  id: DeleteMemoryAsync(System.String,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IMemoryService
+  langs:
+  - csharp
+  - vb
+  name: DeleteMemoryAsync(string, CancellationToken)
+  nameWithType: IMemoryService.DeleteMemoryAsync(string, CancellationToken)
+  fullName: UltraGenericSystem.Services.IMemoryService.DeleteMemoryAsync(string, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IMemoryService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: DeleteMemoryAsync
+    path: ../Services/IMemoryService.cs
+    startLine: 27
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Deletes a memory entry
+  example: []
+  syntax:
+    content: Task<MemoryOperationResult> DeleteMemoryAsync(string key, CancellationToken cancellationToken = default)
+    parameters:
+    - id: key
+      type: System.String
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.MemoryOperationResult}
+    content.vb: Function DeleteMemoryAsync(key As String, cancellationToken As CancellationToken = Nothing) As Task(Of MemoryOperationResult)
+  overload: UltraGenericSystem.Services.IMemoryService.DeleteMemoryAsync*
+  nameWithType.vb: IMemoryService.DeleteMemoryAsync(String, CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IMemoryService.DeleteMemoryAsync(String, System.Threading.CancellationToken)
+  name.vb: DeleteMemoryAsync(String, CancellationToken)
+- uid: UltraGenericSystem.Services.IMemoryService.StoreWhiteboardAsync(UltraGenericSystem.Models.WhiteboardMemory,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IMemoryService.StoreWhiteboardAsync(UltraGenericSystem.Models.WhiteboardMemory,System.Threading.CancellationToken)
+  id: StoreWhiteboardAsync(UltraGenericSystem.Models.WhiteboardMemory,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IMemoryService
+  langs:
+  - csharp
+  - vb
+  name: StoreWhiteboardAsync(WhiteboardMemory, CancellationToken)
+  nameWithType: IMemoryService.StoreWhiteboardAsync(WhiteboardMemory, CancellationToken)
+  fullName: UltraGenericSystem.Services.IMemoryService.StoreWhiteboardAsync(UltraGenericSystem.Models.WhiteboardMemory, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IMemoryService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: StoreWhiteboardAsync
+    path: ../Services/IMemoryService.cs
+    startLine: 32
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Stores a whiteboard memory entry
+  example: []
+  syntax:
+    content: Task<MemoryOperationResult> StoreWhiteboardAsync(WhiteboardMemory entry, CancellationToken cancellationToken = default)
+    parameters:
+    - id: entry
+      type: UltraGenericSystem.Models.WhiteboardMemory
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.MemoryOperationResult}
+    content.vb: Function StoreWhiteboardAsync(entry As WhiteboardMemory, cancellationToken As CancellationToken = Nothing) As Task(Of MemoryOperationResult)
+  overload: UltraGenericSystem.Services.IMemoryService.StoreWhiteboardAsync*
+- uid: UltraGenericSystem.Services.IMemoryService.GetWhiteboardAsync(System.String,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IMemoryService.GetWhiteboardAsync(System.String,System.Threading.CancellationToken)
+  id: GetWhiteboardAsync(System.String,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IMemoryService
+  langs:
+  - csharp
+  - vb
+  name: GetWhiteboardAsync(string, CancellationToken)
+  nameWithType: IMemoryService.GetWhiteboardAsync(string, CancellationToken)
+  fullName: UltraGenericSystem.Services.IMemoryService.GetWhiteboardAsync(string, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IMemoryService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetWhiteboardAsync
+    path: ../Services/IMemoryService.cs
+    startLine: 37
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Gets whiteboard entries for a session
+  example: []
+  syntax:
+    content: Task<List<WhiteboardMemory>> GetWhiteboardAsync(string sessionId, CancellationToken cancellationToken = default)
+    parameters:
+    - id: sessionId
+      type: System.String
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{UltraGenericSystem.Models.WhiteboardMemory}}
+    content.vb: Function GetWhiteboardAsync(sessionId As String, cancellationToken As CancellationToken = Nothing) As Task(Of List(Of WhiteboardMemory))
+  overload: UltraGenericSystem.Services.IMemoryService.GetWhiteboardAsync*
+  nameWithType.vb: IMemoryService.GetWhiteboardAsync(String, CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IMemoryService.GetWhiteboardAsync(String, System.Threading.CancellationToken)
+  name.vb: GetWhiteboardAsync(String, CancellationToken)
+- uid: UltraGenericSystem.Services.IMemoryService.ClearWhiteboardAsync(System.String,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IMemoryService.ClearWhiteboardAsync(System.String,System.Threading.CancellationToken)
+  id: ClearWhiteboardAsync(System.String,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IMemoryService
+  langs:
+  - csharp
+  - vb
+  name: ClearWhiteboardAsync(string, CancellationToken)
+  nameWithType: IMemoryService.ClearWhiteboardAsync(string, CancellationToken)
+  fullName: UltraGenericSystem.Services.IMemoryService.ClearWhiteboardAsync(string, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IMemoryService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: ClearWhiteboardAsync
+    path: ../Services/IMemoryService.cs
+    startLine: 42
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Clears whiteboard entries for a session
+  example: []
+  syntax:
+    content: Task<MemoryOperationResult> ClearWhiteboardAsync(string sessionId, CancellationToken cancellationToken = default)
+    parameters:
+    - id: sessionId
+      type: System.String
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.MemoryOperationResult}
+    content.vb: Function ClearWhiteboardAsync(sessionId As String, cancellationToken As CancellationToken = Nothing) As Task(Of MemoryOperationResult)
+  overload: UltraGenericSystem.Services.IMemoryService.ClearWhiteboardAsync*
+  nameWithType.vb: IMemoryService.ClearWhiteboardAsync(String, CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IMemoryService.ClearWhiteboardAsync(String, System.Threading.CancellationToken)
+  name.vb: ClearWhiteboardAsync(String, CancellationToken)
+- uid: UltraGenericSystem.Services.IMemoryService.ProcessDocumentAsync(UltraGenericSystem.Models.Document,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IMemoryService.ProcessDocumentAsync(UltraGenericSystem.Models.Document,System.Threading.CancellationToken)
+  id: ProcessDocumentAsync(UltraGenericSystem.Models.Document,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IMemoryService
+  langs:
+  - csharp
+  - vb
+  name: ProcessDocumentAsync(Document, CancellationToken)
+  nameWithType: IMemoryService.ProcessDocumentAsync(Document, CancellationToken)
+  fullName: UltraGenericSystem.Services.IMemoryService.ProcessDocumentAsync(UltraGenericSystem.Models.Document, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IMemoryService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: ProcessDocumentAsync
+    path: ../Services/IMemoryService.cs
+    startLine: 47
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Processes a document for RAG
+  example: []
+  syntax:
+    content: Task<MemoryOperationResult> ProcessDocumentAsync(Document document, CancellationToken cancellationToken = default)
+    parameters:
+    - id: document
+      type: UltraGenericSystem.Models.Document
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.MemoryOperationResult}
+    content.vb: Function ProcessDocumentAsync(document As Document, cancellationToken As CancellationToken = Nothing) As Task(Of MemoryOperationResult)
+  overload: UltraGenericSystem.Services.IMemoryService.ProcessDocumentAsync*
+- uid: UltraGenericSystem.Services.IMemoryService.QueryRAGAsync(UltraGenericSystem.Models.RAGRequest,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IMemoryService.QueryRAGAsync(UltraGenericSystem.Models.RAGRequest,System.Threading.CancellationToken)
+  id: QueryRAGAsync(UltraGenericSystem.Models.RAGRequest,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IMemoryService
+  langs:
+  - csharp
+  - vb
+  name: QueryRAGAsync(RAGRequest, CancellationToken)
+  nameWithType: IMemoryService.QueryRAGAsync(RAGRequest, CancellationToken)
+  fullName: UltraGenericSystem.Services.IMemoryService.QueryRAGAsync(UltraGenericSystem.Models.RAGRequest, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IMemoryService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: QueryRAGAsync
+    path: ../Services/IMemoryService.cs
+    startLine: 52
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Performs a RAG query
+  example: []
+  syntax:
+    content: Task<RAGQueryResult> QueryRAGAsync(RAGRequest request, CancellationToken cancellationToken = default)
+    parameters:
+    - id: request
+      type: UltraGenericSystem.Models.RAGRequest
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.RAGQueryResult}
+    content.vb: Function QueryRAGAsync(request As RAGRequest, cancellationToken As CancellationToken = Nothing) As Task(Of RAGQueryResult)
+  overload: UltraGenericSystem.Services.IMemoryService.QueryRAGAsync*
+- uid: UltraGenericSystem.Services.IMemoryService.GenerateEmbeddingAsync(System.String,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IMemoryService.GenerateEmbeddingAsync(System.String,System.Threading.CancellationToken)
+  id: GenerateEmbeddingAsync(System.String,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IMemoryService
+  langs:
+  - csharp
+  - vb
+  name: GenerateEmbeddingAsync(string, CancellationToken)
+  nameWithType: IMemoryService.GenerateEmbeddingAsync(string, CancellationToken)
+  fullName: UltraGenericSystem.Services.IMemoryService.GenerateEmbeddingAsync(string, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IMemoryService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GenerateEmbeddingAsync
+    path: ../Services/IMemoryService.cs
+    startLine: 57
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Generates embeddings for text
+  example: []
+  syntax:
+    content: Task<List<float>> GenerateEmbeddingAsync(string text, CancellationToken cancellationToken = default)
+    parameters:
+    - id: text
+      type: System.String
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{System.Single}}
+    content.vb: Function GenerateEmbeddingAsync(text As String, cancellationToken As CancellationToken = Nothing) As Task(Of List(Of Single))
+  overload: UltraGenericSystem.Services.IMemoryService.GenerateEmbeddingAsync*
+  nameWithType.vb: IMemoryService.GenerateEmbeddingAsync(String, CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IMemoryService.GenerateEmbeddingAsync(String, System.Threading.CancellationToken)
+  name.vb: GenerateEmbeddingAsync(String, CancellationToken)
+- uid: UltraGenericSystem.Services.IMemoryService.CalculateSimilarityAsync(System.Collections.Generic.List{System.Single},System.Collections.Generic.List{System.Single},System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IMemoryService.CalculateSimilarityAsync(System.Collections.Generic.List{System.Single},System.Collections.Generic.List{System.Single},System.Threading.CancellationToken)
+  id: CalculateSimilarityAsync(System.Collections.Generic.List{System.Single},System.Collections.Generic.List{System.Single},System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IMemoryService
+  langs:
+  - csharp
+  - vb
+  name: CalculateSimilarityAsync(List<float>, List<float>, CancellationToken)
+  nameWithType: IMemoryService.CalculateSimilarityAsync(List<float>, List<float>, CancellationToken)
+  fullName: UltraGenericSystem.Services.IMemoryService.CalculateSimilarityAsync(System.Collections.Generic.List<float>, System.Collections.Generic.List<float>, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IMemoryService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: CalculateSimilarityAsync
+    path: ../Services/IMemoryService.cs
+    startLine: 62
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Calculates similarity between two embeddings
+  example: []
+  syntax:
+    content: Task<double> CalculateSimilarityAsync(List<float> embedding1, List<float> embedding2, CancellationToken cancellationToken = default)
+    parameters:
+    - id: embedding1
+      type: System.Collections.Generic.List{System.Single}
+    - id: embedding2
+      type: System.Collections.Generic.List{System.Single}
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{System.Double}
+    content.vb: Function CalculateSimilarityAsync(embedding1 As List(Of Single), embedding2 As List(Of Single), cancellationToken As CancellationToken = Nothing) As Task(Of Double)
+  overload: UltraGenericSystem.Services.IMemoryService.CalculateSimilarityAsync*
+  nameWithType.vb: IMemoryService.CalculateSimilarityAsync(List(Of Single), List(Of Single), CancellationToken)
+  fullName.vb: UltraGenericSystem.Services.IMemoryService.CalculateSimilarityAsync(System.Collections.Generic.List(Of Single), System.Collections.Generic.List(Of Single), System.Threading.CancellationToken)
+  name.vb: CalculateSimilarityAsync(List(Of Single), List(Of Single), CancellationToken)
+- uid: UltraGenericSystem.Services.IMemoryService.GetMemoryStatsAsync(System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IMemoryService.GetMemoryStatsAsync(System.Threading.CancellationToken)
+  id: GetMemoryStatsAsync(System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IMemoryService
+  langs:
+  - csharp
+  - vb
+  name: GetMemoryStatsAsync(CancellationToken)
+  nameWithType: IMemoryService.GetMemoryStatsAsync(CancellationToken)
+  fullName: UltraGenericSystem.Services.IMemoryService.GetMemoryStatsAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IMemoryService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: GetMemoryStatsAsync
+    path: ../Services/IMemoryService.cs
+    startLine: 67
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Gets memory statistics
+  example: []
+  syntax:
+    content: Task<Dictionary<string, object>> GetMemoryStatsAsync(CancellationToken cancellationToken = default)
+    parameters:
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.Dictionary{System.String,System.Object}}
+    content.vb: Function GetMemoryStatsAsync(cancellationToken As CancellationToken = Nothing) As Task(Of Dictionary(Of String, Object))
+  overload: UltraGenericSystem.Services.IMemoryService.GetMemoryStatsAsync*
+- uid: UltraGenericSystem.Services.IMemoryService.CleanupMemoryAsync(System.TimeSpan,System.Threading.CancellationToken)
+  commentId: M:UltraGenericSystem.Services.IMemoryService.CleanupMemoryAsync(System.TimeSpan,System.Threading.CancellationToken)
+  id: CleanupMemoryAsync(System.TimeSpan,System.Threading.CancellationToken)
+  parent: UltraGenericSystem.Services.IMemoryService
+  langs:
+  - csharp
+  - vb
+  name: CleanupMemoryAsync(TimeSpan, CancellationToken)
+  nameWithType: IMemoryService.CleanupMemoryAsync(TimeSpan, CancellationToken)
+  fullName: UltraGenericSystem.Services.IMemoryService.CleanupMemoryAsync(System.TimeSpan, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/IMemoryService.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: CleanupMemoryAsync
+    path: ../Services/IMemoryService.cs
+    startLine: 72
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Services
+  summary: Cleans up old memory entries
+  example: []
+  syntax:
+    content: Task<MemoryOperationResult> CleanupMemoryAsync(TimeSpan olderThan, CancellationToken cancellationToken = default)
+    parameters:
+    - id: olderThan
+      type: System.TimeSpan
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{UltraGenericSystem.Models.MemoryOperationResult}
+    content.vb: Function CleanupMemoryAsync(olderThan As TimeSpan, cancellationToken As CancellationToken = Nothing) As Task(Of MemoryOperationResult)
+  overload: UltraGenericSystem.Services.IMemoryService.CleanupMemoryAsync*
+references:
+- uid: UltraGenericSystem.Services
+  commentId: N:UltraGenericSystem.Services
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Services
+  nameWithType: UltraGenericSystem.Services
+  fullName: UltraGenericSystem.Services
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Services
+    name: Services
+    href: UltraGenericSystem.Services.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Services
+    name: Services
+    href: UltraGenericSystem.Services.html
+- uid: UltraGenericSystem.Services.IMemoryService.StoreMemoryAsync*
+  commentId: Overload:UltraGenericSystem.Services.IMemoryService.StoreMemoryAsync
+  href: UltraGenericSystem.Services.IMemoryService.html#UltraGenericSystem_Services_IMemoryService_StoreMemoryAsync_UltraGenericSystem_Models_MemoryEntry_System_Threading_CancellationToken_
+  name: StoreMemoryAsync
+  nameWithType: IMemoryService.StoreMemoryAsync
+  fullName: UltraGenericSystem.Services.IMemoryService.StoreMemoryAsync
+- uid: UltraGenericSystem.Models.MemoryEntry
+  commentId: T:UltraGenericSystem.Models.MemoryEntry
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.MemoryEntry.html
+  name: MemoryEntry
+  nameWithType: MemoryEntry
+  fullName: UltraGenericSystem.Models.MemoryEntry
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task{UltraGenericSystem.Models.MemoryOperationResult}
+  commentId: T:System.Threading.Tasks.Task{UltraGenericSystem.Models.MemoryOperationResult}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<MemoryOperationResult>
+  nameWithType: Task<MemoryOperationResult>
+  fullName: System.Threading.Tasks.Task<UltraGenericSystem.Models.MemoryOperationResult>
+  nameWithType.vb: Task(Of MemoryOperationResult)
+  fullName.vb: System.Threading.Tasks.Task(Of UltraGenericSystem.Models.MemoryOperationResult)
+  name.vb: Task(Of MemoryOperationResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: UltraGenericSystem.Models.MemoryOperationResult
+    name: MemoryOperationResult
+    href: UltraGenericSystem.Models.MemoryOperationResult.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.MemoryOperationResult
+    name: MemoryOperationResult
+    href: UltraGenericSystem.Models.MemoryOperationResult.html
+  - name: )
+- uid: UltraGenericSystem.Models
+  commentId: N:UltraGenericSystem.Models
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Models
+  nameWithType: UltraGenericSystem.Models
+  fullName: UltraGenericSystem.Models
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: UltraGenericSystem.Services.IMemoryService.GetMemoryAsync*
+  commentId: Overload:UltraGenericSystem.Services.IMemoryService.GetMemoryAsync
+  href: UltraGenericSystem.Services.IMemoryService.html#UltraGenericSystem_Services_IMemoryService_GetMemoryAsync_System_String_System_Threading_CancellationToken_
+  name: GetMemoryAsync
+  nameWithType: IMemoryService.GetMemoryAsync
+  fullName: UltraGenericSystem.Services.IMemoryService.GetMemoryAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task{UltraGenericSystem.Models.MemoryEntry}
+  commentId: T:System.Threading.Tasks.Task{UltraGenericSystem.Models.MemoryEntry}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<MemoryEntry>
+  nameWithType: Task<MemoryEntry>
+  fullName: System.Threading.Tasks.Task<UltraGenericSystem.Models.MemoryEntry>
+  nameWithType.vb: Task(Of MemoryEntry)
+  fullName.vb: System.Threading.Tasks.Task(Of UltraGenericSystem.Models.MemoryEntry)
+  name.vb: Task(Of MemoryEntry)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: UltraGenericSystem.Models.MemoryEntry
+    name: MemoryEntry
+    href: UltraGenericSystem.Models.MemoryEntry.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.MemoryEntry
+    name: MemoryEntry
+    href: UltraGenericSystem.Models.MemoryEntry.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UltraGenericSystem.Services.IMemoryService.SearchMemoryAsync*
+  commentId: Overload:UltraGenericSystem.Services.IMemoryService.SearchMemoryAsync
+  href: UltraGenericSystem.Services.IMemoryService.html#UltraGenericSystem_Services_IMemoryService_SearchMemoryAsync_UltraGenericSystem_Models_MemorySearchRequest_System_Threading_CancellationToken_
+  name: SearchMemoryAsync
+  nameWithType: IMemoryService.SearchMemoryAsync
+  fullName: UltraGenericSystem.Services.IMemoryService.SearchMemoryAsync
+- uid: UltraGenericSystem.Models.MemorySearchRequest
+  commentId: T:UltraGenericSystem.Models.MemorySearchRequest
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.MemorySearchRequest.html
+  name: MemorySearchRequest
+  nameWithType: MemorySearchRequest
+  fullName: UltraGenericSystem.Models.MemorySearchRequest
+- uid: System.Threading.Tasks.Task{UltraGenericSystem.Models.MemorySearchResponse}
+  commentId: T:System.Threading.Tasks.Task{UltraGenericSystem.Models.MemorySearchResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<MemorySearchResponse>
+  nameWithType: Task<MemorySearchResponse>
+  fullName: System.Threading.Tasks.Task<UltraGenericSystem.Models.MemorySearchResponse>
+  nameWithType.vb: Task(Of MemorySearchResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of UltraGenericSystem.Models.MemorySearchResponse)
+  name.vb: Task(Of MemorySearchResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: UltraGenericSystem.Models.MemorySearchResponse
+    name: MemorySearchResponse
+    href: UltraGenericSystem.Models.MemorySearchResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.MemorySearchResponse
+    name: MemorySearchResponse
+    href: UltraGenericSystem.Models.MemorySearchResponse.html
+  - name: )
+- uid: UltraGenericSystem.Services.IMemoryService.DeleteMemoryAsync*
+  commentId: Overload:UltraGenericSystem.Services.IMemoryService.DeleteMemoryAsync
+  href: UltraGenericSystem.Services.IMemoryService.html#UltraGenericSystem_Services_IMemoryService_DeleteMemoryAsync_System_String_System_Threading_CancellationToken_
+  name: DeleteMemoryAsync
+  nameWithType: IMemoryService.DeleteMemoryAsync
+  fullName: UltraGenericSystem.Services.IMemoryService.DeleteMemoryAsync
+- uid: UltraGenericSystem.Services.IMemoryService.StoreWhiteboardAsync*
+  commentId: Overload:UltraGenericSystem.Services.IMemoryService.StoreWhiteboardAsync
+  href: UltraGenericSystem.Services.IMemoryService.html#UltraGenericSystem_Services_IMemoryService_StoreWhiteboardAsync_UltraGenericSystem_Models_WhiteboardMemory_System_Threading_CancellationToken_
+  name: StoreWhiteboardAsync
+  nameWithType: IMemoryService.StoreWhiteboardAsync
+  fullName: UltraGenericSystem.Services.IMemoryService.StoreWhiteboardAsync
+- uid: UltraGenericSystem.Models.WhiteboardMemory
+  commentId: T:UltraGenericSystem.Models.WhiteboardMemory
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.WhiteboardMemory.html
+  name: WhiteboardMemory
+  nameWithType: WhiteboardMemory
+  fullName: UltraGenericSystem.Models.WhiteboardMemory
+- uid: UltraGenericSystem.Services.IMemoryService.GetWhiteboardAsync*
+  commentId: Overload:UltraGenericSystem.Services.IMemoryService.GetWhiteboardAsync
+  href: UltraGenericSystem.Services.IMemoryService.html#UltraGenericSystem_Services_IMemoryService_GetWhiteboardAsync_System_String_System_Threading_CancellationToken_
+  name: GetWhiteboardAsync
+  nameWithType: IMemoryService.GetWhiteboardAsync
+  fullName: UltraGenericSystem.Services.IMemoryService.GetWhiteboardAsync
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{UltraGenericSystem.Models.WhiteboardMemory}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.List{UltraGenericSystem.Models.WhiteboardMemory}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<List<WhiteboardMemory>>
+  nameWithType: Task<List<WhiteboardMemory>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<UltraGenericSystem.Models.WhiteboardMemory>>
+  nameWithType.vb: Task(Of List(Of WhiteboardMemory))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of UltraGenericSystem.Models.WhiteboardMemory))
+  name.vb: Task(Of List(Of WhiteboardMemory))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: UltraGenericSystem.Models.WhiteboardMemory
+    name: WhiteboardMemory
+    href: UltraGenericSystem.Models.WhiteboardMemory.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.WhiteboardMemory
+    name: WhiteboardMemory
+    href: UltraGenericSystem.Models.WhiteboardMemory.html
+  - name: )
+  - name: )
+- uid: UltraGenericSystem.Services.IMemoryService.ClearWhiteboardAsync*
+  commentId: Overload:UltraGenericSystem.Services.IMemoryService.ClearWhiteboardAsync
+  href: UltraGenericSystem.Services.IMemoryService.html#UltraGenericSystem_Services_IMemoryService_ClearWhiteboardAsync_System_String_System_Threading_CancellationToken_
+  name: ClearWhiteboardAsync
+  nameWithType: IMemoryService.ClearWhiteboardAsync
+  fullName: UltraGenericSystem.Services.IMemoryService.ClearWhiteboardAsync
+- uid: UltraGenericSystem.Services.IMemoryService.ProcessDocumentAsync*
+  commentId: Overload:UltraGenericSystem.Services.IMemoryService.ProcessDocumentAsync
+  href: UltraGenericSystem.Services.IMemoryService.html#UltraGenericSystem_Services_IMemoryService_ProcessDocumentAsync_UltraGenericSystem_Models_Document_System_Threading_CancellationToken_
+  name: ProcessDocumentAsync
+  nameWithType: IMemoryService.ProcessDocumentAsync
+  fullName: UltraGenericSystem.Services.IMemoryService.ProcessDocumentAsync
+- uid: UltraGenericSystem.Models.Document
+  commentId: T:UltraGenericSystem.Models.Document
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.Document.html
+  name: Document
+  nameWithType: Document
+  fullName: UltraGenericSystem.Models.Document
+- uid: UltraGenericSystem.Services.IMemoryService.QueryRAGAsync*
+  commentId: Overload:UltraGenericSystem.Services.IMemoryService.QueryRAGAsync
+  href: UltraGenericSystem.Services.IMemoryService.html#UltraGenericSystem_Services_IMemoryService_QueryRAGAsync_UltraGenericSystem_Models_RAGRequest_System_Threading_CancellationToken_
+  name: QueryRAGAsync
+  nameWithType: IMemoryService.QueryRAGAsync
+  fullName: UltraGenericSystem.Services.IMemoryService.QueryRAGAsync
+- uid: UltraGenericSystem.Models.RAGRequest
+  commentId: T:UltraGenericSystem.Models.RAGRequest
+  parent: UltraGenericSystem.Models
+  href: UltraGenericSystem.Models.RAGRequest.html
+  name: RAGRequest
+  nameWithType: RAGRequest
+  fullName: UltraGenericSystem.Models.RAGRequest
+- uid: System.Threading.Tasks.Task{UltraGenericSystem.Models.RAGQueryResult}
+  commentId: T:System.Threading.Tasks.Task{UltraGenericSystem.Models.RAGQueryResult}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<RAGQueryResult>
+  nameWithType: Task<RAGQueryResult>
+  fullName: System.Threading.Tasks.Task<UltraGenericSystem.Models.RAGQueryResult>
+  nameWithType.vb: Task(Of RAGQueryResult)
+  fullName.vb: System.Threading.Tasks.Task(Of UltraGenericSystem.Models.RAGQueryResult)
+  name.vb: Task(Of RAGQueryResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: UltraGenericSystem.Models.RAGQueryResult
+    name: RAGQueryResult
+    href: UltraGenericSystem.Models.RAGQueryResult.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UltraGenericSystem.Models.RAGQueryResult
+    name: RAGQueryResult
+    href: UltraGenericSystem.Models.RAGQueryResult.html
+  - name: )
+- uid: UltraGenericSystem.Services.IMemoryService.GenerateEmbeddingAsync*
+  commentId: Overload:UltraGenericSystem.Services.IMemoryService.GenerateEmbeddingAsync
+  href: UltraGenericSystem.Services.IMemoryService.html#UltraGenericSystem_Services_IMemoryService_GenerateEmbeddingAsync_System_String_System_Threading_CancellationToken_
+  name: GenerateEmbeddingAsync
+  nameWithType: IMemoryService.GenerateEmbeddingAsync
+  fullName: UltraGenericSystem.Services.IMemoryService.GenerateEmbeddingAsync
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{System.Single}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.List{System.Single}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<List<float>>
+  nameWithType: Task<List<float>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<float>>
+  nameWithType.vb: Task(Of List(Of Single))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of Single))
+  name.vb: Task(Of List(Of Single))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+  - name: )
+- uid: UltraGenericSystem.Services.IMemoryService.CalculateSimilarityAsync*
+  commentId: Overload:UltraGenericSystem.Services.IMemoryService.CalculateSimilarityAsync
+  href: UltraGenericSystem.Services.IMemoryService.html#UltraGenericSystem_Services_IMemoryService_CalculateSimilarityAsync_System_Collections_Generic_List_System_Single__System_Collections_Generic_List_System_Single__System_Threading_CancellationToken_
+  name: CalculateSimilarityAsync
+  nameWithType: IMemoryService.CalculateSimilarityAsync
+  fullName: UltraGenericSystem.Services.IMemoryService.CalculateSimilarityAsync
+- uid: System.Collections.Generic.List{System.Single}
+  commentId: T:System.Collections.Generic.List{System.Single}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<float>
+  nameWithType: List<float>
+  fullName: System.Collections.Generic.List<float>
+  nameWithType.vb: List(Of Single)
+  fullName.vb: System.Collections.Generic.List(Of Single)
+  name.vb: List(Of Single)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: System.Threading.Tasks.Task{System.Double}
+  commentId: T:System.Threading.Tasks.Task{System.Double}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<double>
+  nameWithType: Task<double>
+  fullName: System.Threading.Tasks.Task<double>
+  nameWithType.vb: Task(Of Double)
+  fullName.vb: System.Threading.Tasks.Task(Of Double)
+  name.vb: Task(Of Double)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: UltraGenericSystem.Services.IMemoryService.GetMemoryStatsAsync*
+  commentId: Overload:UltraGenericSystem.Services.IMemoryService.GetMemoryStatsAsync
+  href: UltraGenericSystem.Services.IMemoryService.html#UltraGenericSystem_Services_IMemoryService_GetMemoryStatsAsync_System_Threading_CancellationToken_
+  name: GetMemoryStatsAsync
+  nameWithType: IMemoryService.GetMemoryStatsAsync
+  fullName: UltraGenericSystem.Services.IMemoryService.GetMemoryStatsAsync
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.Dictionary{System.String,System.Object}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.Dictionary{System.String,System.Object}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<Dictionary<string, object>>
+  nameWithType: Task<Dictionary<string, object>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.Dictionary<string, object>>
+  nameWithType.vb: Task(Of Dictionary(Of String, Object))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.Dictionary(Of String, Object))
+  name.vb: Task(Of Dictionary(Of String, Object))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: UltraGenericSystem.Services.IMemoryService.CleanupMemoryAsync*
+  commentId: Overload:UltraGenericSystem.Services.IMemoryService.CleanupMemoryAsync
+  href: UltraGenericSystem.Services.IMemoryService.html#UltraGenericSystem_Services_IMemoryService_CleanupMemoryAsync_System_TimeSpan_System_Threading_CancellationToken_
+  name: CleanupMemoryAsync
+  nameWithType: IMemoryService.CleanupMemoryAsync
+  fullName: UltraGenericSystem.Services.IMemoryService.CleanupMemoryAsync
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan

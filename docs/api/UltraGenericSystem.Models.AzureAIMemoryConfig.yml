@@ -1,0 +1,580 @@
+### YamlMime:ManagedReference
+items:
+- uid: UltraGenericSystem.Models.AzureAIMemoryConfig
+  commentId: T:UltraGenericSystem.Models.AzureAIMemoryConfig
+  id: AzureAIMemoryConfig
+  parent: UltraGenericSystem.Models
+  children:
+  - UltraGenericSystem.Models.AzureAIMemoryConfig.EnableMemory
+  - UltraGenericSystem.Models.AzureAIMemoryConfig.EnableMemorySearch
+  - UltraGenericSystem.Models.AzureAIMemoryConfig.MaxMemoryEntries
+  - UltraGenericSystem.Models.AzureAIMemoryConfig.MemoryRetentionPeriod
+  - UltraGenericSystem.Models.AzureAIMemoryConfig.MemorySearchThreshold
+  - UltraGenericSystem.Models.AzureAIMemoryConfig.MemoryType
+  langs:
+  - csharp
+  - vb
+  name: AzureAIMemoryConfig
+  nameWithType: AzureAIMemoryConfig
+  fullName: UltraGenericSystem.Models.AzureAIMemoryConfig
+  type: Class
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: AzureAIMemoryConfig
+    path: ../Models/AgentModels.cs
+    startLine: 767
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Azure AI memory configuration
+  example: []
+  syntax:
+    content: public class AzureAIMemoryConfig
+    content.vb: Public Class AzureAIMemoryConfig
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: UltraGenericSystem.Models.AzureAIMemoryConfig.EnableMemory
+  commentId: P:UltraGenericSystem.Models.AzureAIMemoryConfig.EnableMemory
+  id: EnableMemory
+  parent: UltraGenericSystem.Models.AzureAIMemoryConfig
+  langs:
+  - csharp
+  - vb
+  name: EnableMemory
+  nameWithType: AzureAIMemoryConfig.EnableMemory
+  fullName: UltraGenericSystem.Models.AzureAIMemoryConfig.EnableMemory
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: EnableMemory
+    path: ../Models/AgentModels.cs
+    startLine: 772
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Whether to enable memory
+  example: []
+  syntax:
+    content: public bool EnableMemory { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property EnableMemory As Boolean
+  overload: UltraGenericSystem.Models.AzureAIMemoryConfig.EnableMemory*
+- uid: UltraGenericSystem.Models.AzureAIMemoryConfig.MemoryType
+  commentId: P:UltraGenericSystem.Models.AzureAIMemoryConfig.MemoryType
+  id: MemoryType
+  parent: UltraGenericSystem.Models.AzureAIMemoryConfig
+  langs:
+  - csharp
+  - vb
+  name: MemoryType
+  nameWithType: AzureAIMemoryConfig.MemoryType
+  fullName: UltraGenericSystem.Models.AzureAIMemoryConfig.MemoryType
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: MemoryType
+    path: ../Models/AgentModels.cs
+    startLine: 777
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Memory type to use
+  example: []
+  syntax:
+    content: public string MemoryType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property MemoryType As String
+  overload: UltraGenericSystem.Models.AzureAIMemoryConfig.MemoryType*
+- uid: UltraGenericSystem.Models.AzureAIMemoryConfig.MaxMemoryEntries
+  commentId: P:UltraGenericSystem.Models.AzureAIMemoryConfig.MaxMemoryEntries
+  id: MaxMemoryEntries
+  parent: UltraGenericSystem.Models.AzureAIMemoryConfig
+  langs:
+  - csharp
+  - vb
+  name: MaxMemoryEntries
+  nameWithType: AzureAIMemoryConfig.MaxMemoryEntries
+  fullName: UltraGenericSystem.Models.AzureAIMemoryConfig.MaxMemoryEntries
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: MaxMemoryEntries
+    path: ../Models/AgentModels.cs
+    startLine: 782
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Maximum memory entries
+  example: []
+  syntax:
+    content: public int MaxMemoryEntries { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property MaxMemoryEntries As Integer
+  overload: UltraGenericSystem.Models.AzureAIMemoryConfig.MaxMemoryEntries*
+- uid: UltraGenericSystem.Models.AzureAIMemoryConfig.MemoryRetentionPeriod
+  commentId: P:UltraGenericSystem.Models.AzureAIMemoryConfig.MemoryRetentionPeriod
+  id: MemoryRetentionPeriod
+  parent: UltraGenericSystem.Models.AzureAIMemoryConfig
+  langs:
+  - csharp
+  - vb
+  name: MemoryRetentionPeriod
+  nameWithType: AzureAIMemoryConfig.MemoryRetentionPeriod
+  fullName: UltraGenericSystem.Models.AzureAIMemoryConfig.MemoryRetentionPeriod
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: MemoryRetentionPeriod
+    path: ../Models/AgentModels.cs
+    startLine: 787
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Memory retention period
+  example: []
+  syntax:
+    content: public TimeSpan MemoryRetentionPeriod { get; set; }
+    parameters: []
+    return:
+      type: System.TimeSpan
+    content.vb: Public Property MemoryRetentionPeriod As TimeSpan
+  overload: UltraGenericSystem.Models.AzureAIMemoryConfig.MemoryRetentionPeriod*
+- uid: UltraGenericSystem.Models.AzureAIMemoryConfig.EnableMemorySearch
+  commentId: P:UltraGenericSystem.Models.AzureAIMemoryConfig.EnableMemorySearch
+  id: EnableMemorySearch
+  parent: UltraGenericSystem.Models.AzureAIMemoryConfig
+  langs:
+  - csharp
+  - vb
+  name: EnableMemorySearch
+  nameWithType: AzureAIMemoryConfig.EnableMemorySearch
+  fullName: UltraGenericSystem.Models.AzureAIMemoryConfig.EnableMemorySearch
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: EnableMemorySearch
+    path: ../Models/AgentModels.cs
+    startLine: 792
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Whether to enable memory search
+  example: []
+  syntax:
+    content: public bool EnableMemorySearch { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property EnableMemorySearch As Boolean
+  overload: UltraGenericSystem.Models.AzureAIMemoryConfig.EnableMemorySearch*
+- uid: UltraGenericSystem.Models.AzureAIMemoryConfig.MemorySearchThreshold
+  commentId: P:UltraGenericSystem.Models.AzureAIMemoryConfig.MemorySearchThreshold
+  id: MemorySearchThreshold
+  parent: UltraGenericSystem.Models.AzureAIMemoryConfig
+  langs:
+  - csharp
+  - vb
+  name: MemorySearchThreshold
+  nameWithType: AzureAIMemoryConfig.MemorySearchThreshold
+  fullName: UltraGenericSystem.Models.AzureAIMemoryConfig.MemorySearchThreshold
+  type: Property
+  source:
+    remote:
+      path: Models/AgentModels.cs
+      branch: feature/strange-loop-self-evolution
+      repo: https://github.com/ShawnDelaineBellazanJr/ultra-generic-system.git
+    id: MemorySearchThreshold
+    path: ../Models/AgentModels.cs
+    startLine: 797
+  assemblies:
+  - UltraGenericSystem
+  namespace: UltraGenericSystem.Models
+  summary: Memory search similarity threshold
+  example: []
+  syntax:
+    content: public double MemorySearchThreshold { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property MemorySearchThreshold As Double
+  overload: UltraGenericSystem.Models.AzureAIMemoryConfig.MemorySearchThreshold*
+references:
+- uid: UltraGenericSystem.Models
+  commentId: N:UltraGenericSystem.Models
+  href: UltraGenericSystem.html
+  name: UltraGenericSystem.Models
+  nameWithType: UltraGenericSystem.Models
+  fullName: UltraGenericSystem.Models
+  spec.csharp:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+  spec.vb:
+  - uid: UltraGenericSystem
+    name: UltraGenericSystem
+    href: UltraGenericSystem.html
+  - name: .
+  - uid: UltraGenericSystem.Models
+    name: Models
+    href: UltraGenericSystem.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UltraGenericSystem.Models.AzureAIMemoryConfig.EnableMemory*
+  commentId: Overload:UltraGenericSystem.Models.AzureAIMemoryConfig.EnableMemory
+  href: UltraGenericSystem.Models.AzureAIMemoryConfig.html#UltraGenericSystem_Models_AzureAIMemoryConfig_EnableMemory
+  name: EnableMemory
+  nameWithType: AzureAIMemoryConfig.EnableMemory
+  fullName: UltraGenericSystem.Models.AzureAIMemoryConfig.EnableMemory
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: UltraGenericSystem.Models.AzureAIMemoryConfig.MemoryType*
+  commentId: Overload:UltraGenericSystem.Models.AzureAIMemoryConfig.MemoryType
+  href: UltraGenericSystem.Models.AzureAIMemoryConfig.html#UltraGenericSystem_Models_AzureAIMemoryConfig_MemoryType
+  name: MemoryType
+  nameWithType: AzureAIMemoryConfig.MemoryType
+  fullName: UltraGenericSystem.Models.AzureAIMemoryConfig.MemoryType
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: UltraGenericSystem.Models.AzureAIMemoryConfig.MaxMemoryEntries*
+  commentId: Overload:UltraGenericSystem.Models.AzureAIMemoryConfig.MaxMemoryEntries
+  href: UltraGenericSystem.Models.AzureAIMemoryConfig.html#UltraGenericSystem_Models_AzureAIMemoryConfig_MaxMemoryEntries
+  name: MaxMemoryEntries
+  nameWithType: AzureAIMemoryConfig.MaxMemoryEntries
+  fullName: UltraGenericSystem.Models.AzureAIMemoryConfig.MaxMemoryEntries
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: UltraGenericSystem.Models.AzureAIMemoryConfig.MemoryRetentionPeriod*
+  commentId: Overload:UltraGenericSystem.Models.AzureAIMemoryConfig.MemoryRetentionPeriod
+  href: UltraGenericSystem.Models.AzureAIMemoryConfig.html#UltraGenericSystem_Models_AzureAIMemoryConfig_MemoryRetentionPeriod
+  name: MemoryRetentionPeriod
+  nameWithType: AzureAIMemoryConfig.MemoryRetentionPeriod
+  fullName: UltraGenericSystem.Models.AzureAIMemoryConfig.MemoryRetentionPeriod
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: UltraGenericSystem.Models.AzureAIMemoryConfig.EnableMemorySearch*
+  commentId: Overload:UltraGenericSystem.Models.AzureAIMemoryConfig.EnableMemorySearch
+  href: UltraGenericSystem.Models.AzureAIMemoryConfig.html#UltraGenericSystem_Models_AzureAIMemoryConfig_EnableMemorySearch
+  name: EnableMemorySearch
+  nameWithType: AzureAIMemoryConfig.EnableMemorySearch
+  fullName: UltraGenericSystem.Models.AzureAIMemoryConfig.EnableMemorySearch
+- uid: UltraGenericSystem.Models.AzureAIMemoryConfig.MemorySearchThreshold*
+  commentId: Overload:UltraGenericSystem.Models.AzureAIMemoryConfig.MemorySearchThreshold
+  href: UltraGenericSystem.Models.AzureAIMemoryConfig.html#UltraGenericSystem_Models_AzureAIMemoryConfig_MemorySearchThreshold
+  name: MemorySearchThreshold
+  nameWithType: AzureAIMemoryConfig.MemorySearchThreshold
+  fullName: UltraGenericSystem.Models.AzureAIMemoryConfig.MemorySearchThreshold
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
