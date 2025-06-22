@@ -3,7 +3,7 @@ using UltraGenericSystem.Models;
 namespace UltraGenericSystem.Services;
 
 /// <summary>
-/// Agent orchestrator interface for Semantic Kernel integration and multi-agent orchestration
+/// Interface for advanced agent orchestration with SK Agent Framework
 /// </summary>
 public interface IAgentOrchestrator
 {
@@ -51,4 +51,24 @@ public interface IAgentOrchestrator
     /// Gets available plugins/skills
     /// </summary>
     Task<AgentResponse<IEnumerable<string>>> GetAvailablePluginsAsync(CancellationToken cancellationToken = default);
+
+    // Advanced orchestration methods
+    Task<AdvancedAgentResponse<TOutput>> ExecuteAdvancedOrchestrationAsync<TInput, TOutput>(
+        AdvancedAgentRequest<TInput, TOutput> request);
+
+    Task<StructuredOutput<TOutput>> ExecuteStructuredOrchestrationAsync<TInput, TOutput>(
+        StructuredInput<TInput> input,
+        AdvancedOrchestrationConfig config)
+        where TInput : class
+        where TOutput : class;
+
+    Task<WorkflowExecutionResult> ExecuteWorkflowAsync<TInput, TOutput>(
+        TInput input,
+        List<string> workflowSteps,
+        AdvancedOrchestrationConfig config);
+
+    Task<EntityAnalysisResult> AnalyzeEntityAsync<T>(
+        T entity,
+        string entityType,
+        AdvancedOrchestrationConfig config);
 } 

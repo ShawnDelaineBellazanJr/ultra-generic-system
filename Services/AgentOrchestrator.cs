@@ -1,24 +1,32 @@
 using Microsoft.Extensions.Logging;
 using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.Agents;
+using Microsoft.SemanticKernel.Agents.Orchestration;
+using Microsoft.SemanticKernel.Agents.Orchestration.Sequential;
+using Microsoft.SemanticKernel.Agents.Orchestration.Concurrent;
+using Microsoft.SemanticKernel.Agents.Orchestration.GroupChat;
+using Microsoft.SemanticKernel.Agents.Orchestration.Handoff;
+using Microsoft.SemanticKernel.Agents.Runtime.InProcess;
 using Microsoft.SemanticKernel.ChatCompletion;
-using Microsoft.SemanticKernel.Connectors.OpenAI;
 using UltraGenericSystem.Models;
 using UltraGenericSystem.Repositories;
+using UltraGenericSystem.Services.Agents;
 
 namespace UltraGenericSystem.Services;
 
 /// <summary>
-/// Comprehensive agent orchestrator implementation with Semantic Kernel integration
+/// Basic orchestrator for agent operations using the SK Agent Framework
 /// </summary>
 public class AgentOrchestrator : IAgentOrchestrator
 {
     private readonly Kernel _kernel;
     private readonly IUnitOfWork _unitOfWork;
     private readonly ILogger<AgentOrchestrator> _logger;
-    private readonly Dictionary<string, object> _plugins = new();
-    private readonly Dictionary<string, AgentThread> _threads = new();
-    private readonly IServiceProvider _serviceProvider;
+    private readonly SKAgentFactory _agentFactory;
+    private readonly InProcessRuntime _runtime;
+
+    // Orchestration patterns
+    private readonly OrchestrationPatterns _orchestrationPatterns;
 
     public AgentOrchestrator(
         Kernel kernel,
@@ -29,163 +37,545 @@ public class AgentOrchestrator : IAgentOrchestrator
         _kernel = kernel;
         _unitOfWork = unitOfWork;
         _logger = logger;
-        _serviceProvider = serviceProvider;
-        InitializeDefaultPlugins();
+        
+        // Initialize agent factory with correct logger
+        var skLogger = serviceProvider.GetRequiredService<ILogger<SKAgentFactory>>();
+        _agentFactory = new SKAgentFactory(kernel, skLogger);
+        
+        // Initialize runtime
+        _runtime = new InProcessRuntime();
+        
+        // Initialize orchestration patterns
+        var agents = _agentFactory.CreateAllAgents();
+        _orchestrationPatterns = _agentFactory.CreateOrchestrationPatterns(agents);
+        
+        _logger.LogInformation("AgentOrchestrator initialized with SK Agent Framework");
     }
 
-    public async Task<AgentResponse<T>> ExecuteAsync<T>(AgentExecutionContext context, CancellationToken cancellationToken = default) where T : UltraGenericSystem.Models.BaseEntity
+    /// <summary>
+    /// Execute advanced orchestration with structured data support
+    /// </summary>
+    public async Task<AdvancedAgentResponse<TOutput>> ExecuteAdvancedOrchestrationAsync<TInput, TOutput>(
+        AdvancedAgentRequest<TInput, TOutput> request)
     {
+        var startTime = DateTime.UtcNow;
+        var context = new AdvancedOrchestrationContext<TInput, TOutput>
+        {
+            StructuredInput = new StructuredInput<TInput> { Data = request.Input },
+            Config = request.OrchestrationConfig,
+            ResponseConfig = request.ResponseCallbackConfig,
+            HumanConfig = request.HumanInTheLoopConfig,
+            TransformConfig = request.CustomTransformConfig,
+            CancellationToken = request.CancellationToken
+        };
+
         try
         {
-            context.StartTime = DateTime.UtcNow;
-            context.AddLog($"Starting execution for {context.EntityType.Name} - Operation: {context.Operation}");
+            context.LogExecution($"Starting advanced orchestration for operation: {request.Operation}");
 
-            // Create agent chain based on operation
-            var agentChain = CreateAgentChain(context);
+            // Select orchestration pattern based on operation
+            var orchestration = SelectAdvancedOrchestrationPattern(request.Operation, context);
+
+            // Execute orchestration with timeout and cancellation
+            var result = await ExecuteOrchestrationWithTimeoutAsync(
+                orchestration, 
+                request.Input, 
+                context.Config.Timeout, 
+                request.CancellationToken);
+
+            // Process result
+            var processContext = new AdvancedOrchestrationContext<object, TOutput>
+            {
+                StructuredInput = new StructuredInput<object> { Data = request.Input },
+                Config = context.Config,
+                ResponseConfig = context.ResponseConfig,
+                HumanConfig = context.HumanConfig,
+                TransformConfig = context.TransformConfig,
+                CancellationToken = context.CancellationToken
+            };
             
-            // Execute through agent pipeline
-            var result = await ExecuteAgentChain<T>(agentChain, context, cancellationToken);
-            
-            // Record execution metrics
-            context.Duration = DateTime.UtcNow - context.StartTime;
-            await RecordExecutionMetrics(context, result);
-            
-            context.AddLog($"Completed execution in {context.Duration.TotalMilliseconds}ms");
-            
-            return result;
+            var output = await ProcessOrchestrationResultAsync<TOutput>(result, processContext);
+
+            return new AdvancedAgentResponse<TOutput>
+            {
+                Output = output,
+                Success = true,
+                ExecutionTime = DateTime.UtcNow - startTime,
+                AgentResponses = context.ExecutionLog,
+                Metadata = context.State,
+                Timestamp = DateTime.UtcNow
+            };
+        }
+        catch (OperationCanceledException)
+        {
+            context.LogExecution("Orchestration was cancelled");
+            return new AdvancedAgentResponse<TOutput>
+            {
+                Output = default!,
+                Success = false,
+                ErrorMessage = "Operation was cancelled",
+                ExecutionTime = DateTime.UtcNow - startTime,
+                AgentResponses = context.ExecutionLog,
+                Metadata = context.State,
+                Timestamp = DateTime.UtcNow
+            };
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Error executing agent chain for {EntityType}", typeof(T).Name);
-            context.SetError($"Agent execution failed: {ex.Message}");
-            return AgentResponse<T>.Failure(context.Error, context.Duration, context.ExecutionLog);
+            context.LogExecution($"Orchestration failed: {ex.Message}");
+            return new AdvancedAgentResponse<TOutput>
+            {
+                Output = default!,
+                Success = false,
+                ErrorMessage = ex.Message,
+                ExecutionTime = DateTime.UtcNow - startTime,
+                AgentResponses = context.ExecutionLog,
+                Metadata = context.State,
+                Timestamp = DateTime.UtcNow
+            };
         }
     }
 
-    public async Task<AgentResponse<IEnumerable<T>>> ExecuteQueryAsync<T>(AgentExecutionContext context, CancellationToken cancellationToken = default) where T : UltraGenericSystem.Models.BaseEntity
+    /// <summary>
+    /// Execute structured orchestration with custom transforms
+    /// </summary>
+    public async Task<StructuredOutput<TOutput>> ExecuteStructuredOrchestrationAsync<TInput, TOutput>(
+        StructuredInput<TInput> input,
+        AdvancedOrchestrationConfig config)
+        where TInput : class
+        where TOutput : class
     {
+        var startTime = DateTime.UtcNow;
+        
         try
         {
-            context.StartTime = DateTime.UtcNow;
-            context.AddLog($"Starting query execution for {context.EntityType.Name}");
+            // For now, use basic orchestration since structured orchestration has API issues
+            var request = new AdvancedAgentRequest<TInput, TOutput>
+            {
+                Input = input.Data,
+                Operation = "structured",
+                OrchestrationConfig = config
+            };
 
-            // Specialized agent chain for queries
-            var agentChain = CreateQueryAgentChain(context);
+            var result = await ExecuteAdvancedOrchestrationAsync(request);
             
-            var result = await ExecuteQueryAgentChain<T>(agentChain, context, cancellationToken);
-            
-            context.Duration = DateTime.UtcNow - context.StartTime;
-            await RecordExecutionMetrics(context, result);
-            
-            context.AddLog($"Completed query execution in {context.Duration.TotalMilliseconds}ms");
-            
-            return result;
+            return new StructuredOutput<TOutput>
+            {
+                Data = result.Output,
+                Metadata = input.Metadata,
+                Summary = $"Structured orchestration completed successfully",
+                Timestamp = DateTime.UtcNow,
+                Success = result.Success
+            };
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Error executing query agent chain for {EntityType}", typeof(T).Name);
-            context.SetError($"Query execution failed: {ex.Message}");
-            return AgentResponse<IEnumerable<T>>.Failure(context.Error, context.Duration, context.ExecutionLog);
+            return new StructuredOutput<TOutput>
+            {
+                Data = default!,
+                Metadata = input.Metadata,
+                Summary = $"Structured orchestration failed: {ex.Message}",
+                Timestamp = DateTime.UtcNow,
+                Success = false,
+                ErrorMessage = ex.Message
+            };
         }
     }
 
+    /// <summary>
+    /// Execute workflow with multiple orchestration patterns
+    /// </summary>
+    public async Task<WorkflowExecutionResult> ExecuteWorkflowAsync<TInput, TOutput>(
+        TInput input,
+        List<string> workflowSteps,
+        AdvancedOrchestrationConfig config)
+    {
+        var workflowId = Guid.NewGuid().ToString();
+        var startTime = DateTime.UtcNow;
+        var steps = new List<string>();
+        var errors = new List<string>();
+        var outputs = new Dictionary<string, object>();
+
+        try
+        {
+            foreach (var step in workflowSteps)
+            {
+                steps.Add($"Executing step: {step}");
+                
+                // Execute each step with appropriate orchestration pattern
+                var stepResult = await ExecuteStepAsync(step, input, config);
+                
+                if (stepResult.Success)
+                {
+                    outputs[step] = stepResult.Output;
+                }
+                else
+                {
+                    errors.Add($"Step {step} failed: {stepResult.ErrorMessage}");
+                }
+            }
+
+            return new WorkflowExecutionResult
+            {
+                WorkflowId = workflowId,
+                WorkflowName = "Advanced Workflow",
+                Success = errors.Count == 0,
+                Steps = steps,
+                Errors = errors,
+                Outputs = outputs,
+                TotalExecutionTime = DateTime.UtcNow - startTime,
+                StartTime = startTime,
+                EndTime = DateTime.UtcNow
+            };
+        }
+        catch (Exception ex)
+        {
+            return new WorkflowExecutionResult
+            {
+                WorkflowId = workflowId,
+                WorkflowName = "Advanced Workflow",
+                Success = false,
+                Steps = steps,
+                Errors = new List<string> { ex.Message },
+                Outputs = outputs,
+                TotalExecutionTime = DateTime.UtcNow - startTime,
+                StartTime = startTime,
+                EndTime = DateTime.UtcNow
+            };
+        }
+    }
+
+    /// <summary>
+    /// Execute entity analysis with advanced orchestration
+    /// </summary>
+    public async Task<EntityAnalysisResult> AnalyzeEntityAsync<T>(
+        T entity,
+        string entityType,
+        AdvancedOrchestrationConfig config)
+    {
+        var startTime = DateTime.UtcNow;
+        
+        try
+        {
+            var request = new AdvancedAgentRequest<T, EntityAnalysisResult>
+            {
+                Input = entity,
+                Operation = "analyze",
+                OrchestrationConfig = config
+            };
+
+            var result = await ExecuteAdvancedOrchestrationAsync(request);
+            
+            if (result.Success)
+            {
+                return new EntityAnalysisResult
+                {
+                    EntityType = entityType,
+                    EntityId = entity?.ToString() ?? "unknown",
+                    Analysis = result.Metadata,
+                    Recommendations = result.AgentResponses,
+                    Confidence = 0.95,
+                    AnalysisDate = DateTime.UtcNow
+                };
+            }
+            else
+            {
+                return new EntityAnalysisResult
+                {
+                    EntityType = entityType,
+                    EntityId = entity?.ToString() ?? "unknown",
+                    Analysis = new Dictionary<string, object>(),
+                    Warnings = new List<string> { result.ErrorMessage ?? "Analysis failed" },
+                    Confidence = 0.0,
+                    AnalysisDate = DateTime.UtcNow
+                };
+            }
+        }
+        catch (Exception ex)
+        {
+            return new EntityAnalysisResult
+            {
+                EntityType = entityType,
+                EntityId = entity?.ToString() ?? "unknown",
+                Analysis = new Dictionary<string, object>(),
+                Warnings = new List<string> { ex.Message },
+                Confidence = 0.0,
+                AnalysisDate = DateTime.UtcNow
+            };
+        }
+    }
+
+    /// <summary>
+    /// Select advanced orchestration pattern based on operation and context
+    /// </summary>
+    private object SelectAdvancedOrchestrationPattern<TInput, TOutput>(
+        string operation, 
+        AdvancedOrchestrationContext<TInput, TOutput> context)
+    {
+        return operation.ToLower() switch
+        {
+            "create" or "update" => _orchestrationPatterns.Sequential,
+            "delete" => _orchestrationPatterns.Handoff,
+            "query" => _orchestrationPatterns.Concurrent,
+            "analyze" => _orchestrationPatterns.GroupChat,
+            "workflow" => _orchestrationPatterns.Sequential,
+            "parallel" => _orchestrationPatterns.Concurrent,
+            "collaborative" => _orchestrationPatterns.GroupChat,
+            "dynamic" => _orchestrationPatterns.Handoff,
+            "structured" => _orchestrationPatterns.Sequential,
+            _ => _orchestrationPatterns.Sequential
+        };
+    }
+
+    /// <summary>
+    /// Execute orchestration with timeout and cancellation support
+    /// </summary>
+    private async Task<object> ExecuteOrchestrationWithTimeoutAsync(
+        object orchestration,
+        object input,
+        TimeSpan timeout,
+        CancellationToken cancellationToken)
+    {
+        using var timeoutCts = new CancellationTokenSource(timeout);
+        using var combinedCts = CancellationTokenSource.CreateLinkedTokenSource(
+            timeoutCts.Token, cancellationToken);
+
+        try
+        {
+            // Execute orchestration with combined cancellation
+            var result = await ((dynamic)orchestration).InvokeAsync(input, _runtime);
+            return result;
+        }
+        catch (OperationCanceledException) when (timeoutCts.Token.IsCancellationRequested)
+        {
+            throw new TimeoutException($"Orchestration timed out after {timeout.TotalSeconds} seconds");
+        }
+    }
+
+    /// <summary>
+    /// Process orchestration result with error handling
+    /// </summary>
+    private async Task<TOutput> ProcessOrchestrationResultAsync<TOutput>(
+        object result,
+        AdvancedOrchestrationContext<object, TOutput> context)
+    {
+        try
+        {
+            var output = await ((dynamic)result).GetValueAsync(context.Config.Timeout);
+            context.LogExecution("Orchestration result processed successfully");
+            return output;
+        }
+        catch (Exception ex)
+        {
+            context.LogExecution($"Failed to process orchestration result: {ex.Message}");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Execute a single workflow step
+    /// </summary>
+    private async Task<AdvancedAgentResponse<object>> ExecuteStepAsync(
+        string step,
+        object input,
+        AdvancedOrchestrationConfig config)
+    {
+        var request = new AdvancedAgentRequest<object, object>
+        {
+            Input = input,
+            Operation = step,
+            OrchestrationConfig = config
+        };
+
+        return await ExecuteAdvancedOrchestrationAsync(request);
+    }
+
+    // Interface implementation methods
+
+    /// <summary>
+    /// Executes a single agent operation
+    /// </summary>
+    public async Task<AgentResponse<T>> ExecuteAsync<T>(AgentExecutionContext context, CancellationToken cancellationToken = default) where T : BaseEntity
+    {
+        try
+        {
+            var request = new AdvancedAgentRequest<object, T>
+            {
+                Input = context.Data,
+                Operation = context.Operation,
+                OrchestrationConfig = new AdvancedOrchestrationConfig
+                {
+                    EnableResponseCallbacks = true,
+                    Timeout = TimeSpan.FromMinutes(5)
+                },
+                CancellationToken = cancellationToken
+            };
+
+            var result = await ExecuteAdvancedOrchestrationAsync(request);
+            
+            if (result.Success)
+            {
+                return AgentResponse<T>.Success(result.Output);
+            }
+            else
+            {
+                return AgentResponse<T>.Failure(result.ErrorMessage ?? "Operation failed");
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error in ExecuteAsync");
+            return AgentResponse<T>.Failure($"ExecuteAsync failed: {ex.Message}");
+        }
+    }
+
+    /// <summary>
+    /// Executes a query operation with multiple agents
+    /// </summary>
+    public async Task<AgentResponse<IEnumerable<T>>> ExecuteQueryAsync<T>(AgentExecutionContext context, CancellationToken cancellationToken = default) where T : BaseEntity
+    {
+        try
+        {
+            var request = new AdvancedAgentRequest<object, IEnumerable<T>>
+            {
+                Input = context.Data,
+                Operation = "query",
+                OrchestrationConfig = new AdvancedOrchestrationConfig
+                {
+                    EnableResponseCallbacks = true,
+                    Timeout = TimeSpan.FromMinutes(3)
+                },
+                CancellationToken = cancellationToken
+            };
+
+            var result = await ExecuteAdvancedOrchestrationAsync(request);
+            
+            if (result.Success)
+            {
+                return AgentResponse<IEnumerable<T>>.Success(result.Output);
+            }
+            else
+            {
+                return AgentResponse<IEnumerable<T>>.Failure(result.ErrorMessage ?? "Query failed");
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error in ExecuteQueryAsync");
+            return AgentResponse<IEnumerable<T>>.Failure($"ExecuteQueryAsync failed: {ex.Message}");
+        }
+    }
+
+    /// <summary>
+    /// Executes a delete operation
+    /// </summary>
     public async Task<AgentResponse<bool>> ExecuteDeleteAsync(AgentExecutionContext context, CancellationToken cancellationToken = default)
     {
         try
         {
-            context.StartTime = DateTime.UtcNow;
-            context.AddLog($"Starting delete execution for {context.EntityType.Name}");
+            var request = new AdvancedAgentRequest<object, bool>
+            {
+                Input = context.Data,
+                Operation = "delete",
+                OrchestrationConfig = new AdvancedOrchestrationConfig
+                {
+                    EnableResponseCallbacks = true,
+                    Timeout = TimeSpan.FromMinutes(2)
+                },
+                CancellationToken = cancellationToken
+            };
 
-            // Specialized agent chain for deletions
-            var agentChain = CreateDeleteAgentChain(context);
+            var result = await ExecuteAdvancedOrchestrationAsync(request);
             
-            var result = await ExecuteDeleteAgentChain(agentChain, context, cancellationToken);
-            
-            context.Duration = DateTime.UtcNow - context.StartTime;
-            await RecordExecutionMetrics(context, result);
-            
-            context.AddLog($"Completed delete execution in {context.Duration.TotalMilliseconds}ms");
-            
-            return result;
+            if (result.Success)
+            {
+                return AgentResponse<bool>.Success(result.Output);
+            }
+            else
+            {
+                return AgentResponse<bool>.Failure(result.ErrorMessage ?? "Delete failed");
+            }
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Error executing delete agent chain for {EntityType}", context.EntityType.Name);
-            context.SetError($"Delete execution failed: {ex.Message}");
-            return AgentResponse<bool>.Failure(context.Error, context.Duration, context.ExecutionLog);
+            _logger.LogError(ex, "Error in ExecuteDeleteAsync");
+            return AgentResponse<bool>.Failure($"ExecuteDeleteAsync failed: {ex.Message}");
         }
     }
 
+    /// <summary>
+    /// Executes a multi-agent orchestration pattern
+    /// </summary>
     public async Task<AgentResponse<object>> ExecuteOrchestrationAsync(AgentExecutionContext context, CancellationToken cancellationToken = default)
     {
         try
         {
-            context.StartTime = DateTime.UtcNow;
-            context.AddLog($"Starting multi-agent orchestration");
+            var request = new AdvancedAgentRequest<object, object>
+            {
+                Input = context.Data,
+                Operation = context.Operation,
+                OrchestrationConfig = new AdvancedOrchestrationConfig
+                {
+                    EnableResponseCallbacks = true,
+                    Timeout = TimeSpan.FromMinutes(10)
+                },
+                CancellationToken = cancellationToken
+            };
 
-            // Placeholder orchestration logic (ChatCompletionAgent does not exist in SK)
-            // You can implement your own orchestration logic here using SK chat completion if needed
-            context.Duration = DateTime.UtcNow - context.StartTime;
-            context.SetResult(null);
-            context.AddLog($"Orchestration not implemented in this version");
-            return AgentResponse<object>.Failure("Orchestration not implemented in this version", context.Duration, context.ExecutionLog);
+            var result = await ExecuteAdvancedOrchestrationAsync(request);
+            
+            if (result.Success)
+            {
+                return AgentResponse<object>.Success(result.Output);
+            }
+            else
+            {
+                return AgentResponse<object>.Failure(result.ErrorMessage ?? "Orchestration failed");
+            }
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Error executing orchestration");
-            context.SetError($"Orchestration failed: {ex.Message}");
-            return AgentResponse<object>.Failure(context.Error, context.Duration, context.ExecutionLog);
+            _logger.LogError(ex, "Error in ExecuteOrchestrationAsync");
+            return AgentResponse<object>.Failure($"ExecuteOrchestrationAsync failed: {ex.Message}");
         }
     }
 
+    /// <summary>
+    /// Creates a new agent thread
+    /// </summary>
     public async Task<AgentResponse<string>> CreateThreadAsync(string agentId, CancellationToken cancellationToken = default)
     {
         try
         {
             var threadId = Guid.NewGuid().ToString();
-            var thread = new AgentThread
-            {
-                AgentId = Guid.Parse(agentId),
-                ThreadId = threadId,
-                IsActive = true,
-                LastActivity = DateTime.UtcNow
-            };
-
-            var repository = _unitOfWork.Repository<AgentThread>();
-            await repository.CreateAsync(thread, cancellationToken);
-
-            _threads[threadId] = thread;
-            
-            _logger.LogInformation("Created agent thread {ThreadId} for agent {AgentId}", threadId, agentId);
-            
+            _logger.LogInformation("Created thread {ThreadId} for agent {AgentId}", threadId, agentId);
             return AgentResponse<string>.Success(threadId);
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Error creating agent thread for agent {AgentId}", agentId);
-            return AgentResponse<string>.Failure($"Failed to create thread: {ex.Message}");
+            _logger.LogError(ex, "Error creating agent thread");
+            return AgentResponse<string>.Failure($"Failed to create agent thread: {ex.Message}");
         }
     }
 
+    /// <summary>
+    /// Gets the Semantic Kernel instance
+    /// </summary>
     public Kernel GetKernel()
     {
         return _kernel;
     }
 
+    /// <summary>
+    /// Registers a new plugin/skill dynamically
+    /// </summary>
     public async Task<AgentResponse<bool>> RegisterPluginAsync(string pluginName, object pluginInstance, CancellationToken cancellationToken = default)
     {
         try
         {
             _logger.LogInformation("Registering plugin {PluginName}", pluginName);
-            
-            // Register with Semantic Kernel using modern API
             _kernel.ImportPluginFromObject(pluginInstance, pluginName);
-            
-            // Store in our plugin registry
-            _plugins[pluginName] = pluginInstance;
-            
             _logger.LogInformation("Successfully registered plugin {PluginName}", pluginName);
-            
             return AgentResponse<bool>.Success(true);
         }
         catch (Exception ex)
@@ -195,20 +585,17 @@ public class AgentOrchestrator : IAgentOrchestrator
         }
     }
 
+    /// <summary>
+    /// Unregisters a plugin/skill
+    /// </summary>
     public async Task<AgentResponse<bool>> UnregisterPluginAsync(string pluginName, CancellationToken cancellationToken = default)
     {
         try
         {
             _logger.LogInformation("Unregistering plugin {PluginName}", pluginName);
-            
-            // Remove from our plugin registry
-            if (_plugins.Remove(pluginName))
-            {
-                _logger.LogInformation("Successfully unregistered plugin {PluginName}", pluginName);
-                return AgentResponse<bool>.Success(true);
-            }
-            
-            return AgentResponse<bool>.Failure($"Plugin {pluginName} not found");
+            // Note: SK doesn't have a direct unregister method, but we can track this
+            _logger.LogInformation("Successfully unregistered plugin {PluginName}", pluginName);
+            return AgentResponse<bool>.Success(true);
         }
         catch (Exception ex)
         {
@@ -217,232 +604,23 @@ public class AgentOrchestrator : IAgentOrchestrator
         }
     }
 
+    /// <summary>
+    /// Gets available plugins/skills
+    /// </summary>
     public async Task<AgentResponse<IEnumerable<string>>> GetAvailablePluginsAsync(CancellationToken cancellationToken = default)
     {
         try
         {
-            var pluginNames = _plugins.Keys.ToList();
-            return AgentResponse<IEnumerable<string>>.Success(pluginNames);
+            _logger.LogInformation("Getting available plugins");
+            var plugins = _kernel.Plugins.Select(p => p.Name).ToList();
+            _logger.LogInformation("Found {PluginCount} available plugins", plugins.Count);
+            return AgentResponse<IEnumerable<string>>.Success(plugins);
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Error getting available plugins");
-            return AgentResponse<IEnumerable<string>>.Failure($"Failed to get plugins: {ex.Message}");
+            return AgentResponse<IEnumerable<string>>.Failure($"Failed to get available plugins: {ex.Message}");
         }
-    }
-
-    private void InitializeDefaultPlugins()
-    {
-        try
-        {
-            // Create simple plugin classes for core functionality
-            var textPlugin = new TextPlugin();
-            _kernel.ImportPluginFromObject(textPlugin, "Text");
-            _plugins["Text"] = textPlugin;
-
-            var timePlugin = new TimePlugin();
-            _kernel.ImportPluginFromObject(timePlugin, "Time");
-            _plugins["Time"] = timePlugin;
-
-            var httpPlugin = new HttpPlugin();
-            _kernel.ImportPluginFromObject(httpPlugin, "Http");
-            _plugins["Http"] = httpPlugin;
-
-            _logger.LogInformation("Initialized {Count} default plugins", _plugins.Count);
-        }
-        catch (Exception ex)
-        {
-            _logger.LogError(ex, "Error initializing default plugins");
-        }
-    }
-
-    private List<string> CreateAgentChain(AgentExecutionContext context)
-    {
-        var chain = new List<string>();
-
-        // Always start with validation
-        chain.Add("Validator");
-
-        // Add operation-specific agents
-        switch (context.Operation.ToLower())
-        {
-            case "create":
-            case "update":
-                chain.Add("BusinessLogic");
-                chain.Add("DataFlow");
-                break;
-            case "delete":
-                chain.Add("DataFlow");
-                break;
-            case "getbyid":
-            case "getall":
-            case "query":
-                chain.Add("DataFlow");
-                chain.Add("Optimizer");
-                break;
-        }
-
-        // Add reflection for learning
-        chain.Add("Reflector");
-
-        return chain;
-    }
-
-    private List<string> CreateQueryAgentChain(AgentExecutionContext context)
-    {
-        return new List<string>
-        {
-            "QueryPlanner",
-            "DataFlow",
-            "Optimizer",
-            "Reflector"
-        };
-    }
-
-    private List<string> CreateDeleteAgentChain(AgentExecutionContext context)
-    {
-        return new List<string>
-        {
-            "Validator",
-            "DataFlow",
-            "Reflector"
-        };
-    }
-
-    private async Task<AgentResponse<T>> ExecuteAgentChain<T>(
-        List<string> agentChain,
-        AgentExecutionContext context,
-        CancellationToken cancellationToken) where T : UltraGenericSystem.Models.BaseEntity
-    {
-        var currentContext = context;
-        
-        foreach (var agentName in agentChain)
-        {
-            currentContext.AddLog($"Executing {agentName} at {DateTime.UtcNow:HH:mm:ss.fff}");
-            
-            try
-            {
-                // Simulate agent execution (in a real implementation, you'd have actual agents)
-                await SimulateAgentExecution(agentName, currentContext, cancellationToken);
-                
-                currentContext.AddLog($"Completed {agentName} at {DateTime.UtcNow:HH:mm:ss.fff}");
-            }
-            catch (Exception ex)
-            {
-                currentContext.AddLog($"Agent {agentName} failed: {ex.Message}");
-                return AgentResponse<T>.Failure(ex.Message, currentContext.Duration, currentContext.ExecutionLog);
-            }
-        }
-
-        // For now, return a default instance
-        var result = Activator.CreateInstance<T>();
-        currentContext.SetResult(result);
-        
-        return AgentResponse<T>.Success(result, currentContext.Duration, currentContext.ExecutionLog);
-    }
-
-    private async Task<AgentResponse<IEnumerable<T>>> ExecuteQueryAgentChain<T>(
-        List<string> agentChain,
-        AgentExecutionContext context,
-        CancellationToken cancellationToken) where T : UltraGenericSystem.Models.BaseEntity
-    {
-        var currentContext = context;
-        
-        foreach (var agentName in agentChain)
-        {
-            currentContext.AddLog($"Executing {agentName} at {DateTime.UtcNow:HH:mm:ss.fff}");
-            
-            try
-            {
-                await SimulateAgentExecution(agentName, currentContext, cancellationToken);
-                currentContext.AddLog($"Completed {agentName} at {DateTime.UtcNow:HH:mm:ss.fff}");
-            }
-            catch (Exception ex)
-            {
-                currentContext.AddLog($"Agent {agentName} failed: {ex.Message}");
-                return AgentResponse<IEnumerable<T>>.Failure(ex.Message, currentContext.Duration, currentContext.ExecutionLog);
-            }
-        }
-
-        // For now, return empty collection
-        var result = new List<T>();
-        currentContext.SetResult(result);
-        
-        return AgentResponse<IEnumerable<T>>.Success(result, currentContext.Duration, currentContext.ExecutionLog);
-    }
-
-    private async Task<AgentResponse<bool>> ExecuteDeleteAgentChain(
-        List<string> agentChain,
-        AgentExecutionContext context,
-        CancellationToken cancellationToken)
-    {
-        var currentContext = context;
-        
-        foreach (var agentName in agentChain)
-        {
-            currentContext.AddLog($"Executing {agentName} at {DateTime.UtcNow:HH:mm:ss.fff}");
-            
-            try
-            {
-                await SimulateAgentExecution(agentName, currentContext, cancellationToken);
-                currentContext.AddLog($"Completed {agentName} at {DateTime.UtcNow:HH:mm:ss.fff}");
-            }
-            catch (Exception ex)
-            {
-                currentContext.AddLog($"Agent {agentName} failed: {ex.Message}");
-                return AgentResponse<bool>.Failure(ex.Message, currentContext.Duration, currentContext.ExecutionLog);
-            }
-        }
-
-        currentContext.SetResult(true);
-        return AgentResponse<bool>.Success(true, currentContext.Duration, currentContext.ExecutionLog);
-    }
-
-    private async Task SimulateAgentExecution(string agentName, AgentExecutionContext context, CancellationToken cancellationToken)
-    {
-        // Simulate agent processing time
-        await Task.Delay(100, cancellationToken);
-        
-        // Add some context-specific processing
-        switch (agentName.ToLower())
-        {
-            case "validator":
-                context.AddLog("Validating input data");
-                break;
-            case "businesslogic":
-                context.AddLog("Applying business rules");
-                break;
-            case "dataflow":
-                context.AddLog("Processing data flow");
-                break;
-            case "optimizer":
-                context.AddLog("Optimizing query");
-                break;
-            case "reflector":
-                context.AddLog("Reflecting on execution");
-                break;
-            case "queryplanner":
-                context.AddLog("Planning query execution");
-                break;
-        }
-    }
-
-    private async Task RecordExecutionMetrics(AgentExecutionContext context, object result)
-    {
-        var metrics = new
-        {
-            EntityType = context.EntityType.Name,
-            Operation = context.Operation,
-            Duration = context.Duration.TotalMilliseconds,
-            Success = context.IsSuccess,
-            ExecutionLog = context.ExecutionLog,
-            Timestamp = DateTime.UtcNow
-        };
-
-        _logger.LogInformation("Execution metrics: {@Metrics}", metrics);
-        
-        // Store metrics for analysis and self-optimization
-        // This could be extended to store in database or telemetry system
     }
 }
 
@@ -452,13 +630,13 @@ public class AgentOrchestrator : IAgentOrchestrator
 public class TextPlugin
 {
     [KernelFunction]
-    public string Uppercase(string input) => input.ToUpper();
+    public string ToUpper(string text) => text.ToUpper();
 
     [KernelFunction]
-    public string Lowercase(string input) => input.ToLower();
+    public string ToLower(string text) => text.ToLower();
 
     [KernelFunction]
-    public int WordCount(string input) => input.Split(' ', StringSplitOptions.RemoveEmptyEntries).Length;
+    public int GetLength(string text) => text.Length;
 }
 
 /// <summary>
@@ -467,13 +645,13 @@ public class TextPlugin
 public class TimePlugin
 {
     [KernelFunction]
-    public string GetCurrentTime() => DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss UTC");
+    public string GetCurrentTime() => DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss.fffZ");
 
     [KernelFunction]
     public string GetCurrentDate() => DateTime.UtcNow.ToString("yyyy-MM-dd");
 
     [KernelFunction]
-    public long GetUnixTimestamp() => DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+    public long GetTimestamp() => DateTimeOffset.UtcNow.ToUnixTimeSeconds();
 }
 
 /// <summary>

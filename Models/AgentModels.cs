@@ -274,6 +274,16 @@ public class AgentQueryRequest
     /// Include deleted entities
     /// </summary>
     public bool IncludeDeleted { get; set; } = false;
+
+    /// <summary>
+    /// Query type
+    /// </summary>
+    public string QueryType { get; set; } = string.Empty;
+
+    /// <summary>
+    /// Page
+    /// </summary>
+    public int Page { get => PageNumber; set => PageNumber = value; }
 }
 
 /// <summary>
@@ -301,6 +311,16 @@ public class AgentCreateRequest<T> where T : BaseEntity
     /// Validation options
     /// </summary>
     public ValidationOptions ValidationOptions { get; set; } = new();
+
+    /// <summary>
+    /// Created by
+    /// </summary>
+    public string CreatedBy { get => UserId; set => UserId = value; }
+
+    /// <summary>
+    /// Validation level
+    /// </summary>
+    public string ValidationLevel { get; set; } = string.Empty;
 }
 
 /// <summary>
@@ -333,6 +353,21 @@ public class AgentUpdateRequest<T> where T : BaseEntity
     /// Whether to check for optimistic concurrency
     /// </summary>
     public bool CheckConcurrency { get; set; } = true;
+
+    /// <summary>
+    /// Updated by
+    /// </summary>
+    public string UpdatedBy { get => UserId; set => UserId = value; }
+
+    /// <summary>
+    /// Validation level
+    /// </summary>
+    public string ValidationLevel { get; set; } = string.Empty;
+
+    /// <summary>
+    /// Optimistic concurrency
+    /// </summary>
+    public bool OptimisticConcurrency { get => CheckConcurrency; set => CheckConcurrency = value; }
 }
 
 /// <summary>
@@ -361,9 +396,19 @@ public class AgentDeleteRequest
     public bool HardDelete { get; set; } = false;
 
     /// <summary>
-    /// Whether to check for dependencies
+    /// Deleted by
     /// </summary>
-    public bool CheckDependencies { get; set; } = true;
+    public string DeletedBy { get => UserId; set => UserId = value; }
+
+    /// <summary>
+    /// Whether to perform soft delete
+    /// </summary>
+    public bool SoftDelete { get; set; } = false;
+
+    /// <summary>
+    /// Whether to perform cascade delete
+    /// </summary>
+    public bool CascadeDelete { get; set; } = false;
 }
 
 /// <summary>
@@ -437,4 +482,170 @@ public class PaginatedResult<T>
     /// Whether there is a next page
     /// </summary>
     public bool HasNextPage => PageNumber < TotalPages;
+}
+
+/// <summary>
+/// Advanced orchestration configuration with structured data support
+/// </summary>
+public class AdvancedOrchestrationConfig
+{
+    public bool EnableStructuredData { get; set; } = false;
+    public bool EnableResponseCallbacks { get; set; } = true;
+    public bool EnableHumanInTheLoop { get; set; } = false;
+    public bool EnableCustomTransforms { get; set; } = false;
+    public TimeSpan Timeout { get; set; } = TimeSpan.FromMinutes(5);
+    public bool EnableCancellation { get; set; } = true;
+    public Dictionary<string, object> CustomSettings { get; set; } = new();
+}
+
+/// <summary>
+/// Structured input model for orchestration
+/// </summary>
+public class StructuredInput<T>
+{
+    public T Data { get; set; } = default!;
+    public Dictionary<string, object> Metadata { get; set; } = new();
+    public string? Context { get; set; }
+    public DateTime Timestamp { get; set; } = DateTime.UtcNow;
+}
+
+/// <summary>
+/// Structured output model for orchestration
+/// </summary>
+public class StructuredOutput<T>
+{
+    public T Data { get; set; } = default!;
+    public Dictionary<string, object> Metadata { get; set; } = new();
+    public List<string> Citations { get; set; } = new();
+    public string? Summary { get; set; }
+    public DateTime Timestamp { get; set; } = DateTime.UtcNow;
+    public bool Success { get; set; } = true;
+    public string? ErrorMessage { get; set; }
+}
+
+/// <summary>
+/// Response callback configuration
+/// </summary>
+public class ResponseCallbackConfig
+{
+    public bool EnableLogging { get; set; } = true;
+    public bool EnableUIUpdates { get; set; } = false;
+    public bool EnableMetrics { get; set; } = true;
+    public string? CustomFormat { get; set; }
+    public Dictionary<string, object> CustomSettings { get; set; } = new();
+}
+
+/// <summary>
+/// Human-in-the-loop configuration
+/// </summary>
+public class HumanInTheLoopConfig
+{
+    public bool EnableUserInput { get; set; } = false;
+    public bool EnableApprovalWorkflow { get; set; } = false;
+    public TimeSpan UserInputTimeout { get; set; } = TimeSpan.FromMinutes(2);
+    public string? DefaultUserResponse { get; set; }
+    public List<string> AllowedUserActions { get; set; } = new();
+    public Dictionary<string, object> CustomSettings { get; set; } = new();
+}
+
+/// <summary>
+/// Custom transform configuration
+/// </summary>
+public class CustomTransformConfig
+{
+    public string? InputTransformScript { get; set; }
+    public string? OutputTransformScript { get; set; }
+    public Dictionary<string, object> TransformParameters { get; set; } = new();
+    public bool EnableValidation { get; set; } = true;
+    public bool EnableCaching { get; set; } = false;
+}
+
+/// <summary>
+/// Advanced agent request with orchestration features
+/// </summary>
+public class AdvancedAgentRequest<TInput, TOutput>
+{
+    public TInput Input { get; set; } = default!;
+    public string Operation { get; set; } = string.Empty;
+    public AdvancedOrchestrationConfig OrchestrationConfig { get; set; } = new();
+    public ResponseCallbackConfig ResponseCallbackConfig { get; set; } = new();
+    public HumanInTheLoopConfig HumanInTheLoopConfig { get; set; } = new();
+    public CustomTransformConfig CustomTransformConfig { get; set; } = new();
+    public Dictionary<string, object> Parameters { get; set; } = new();
+    public CancellationToken CancellationToken { get; set; } = CancellationToken.None;
+}
+
+/// <summary>
+/// Advanced agent response with orchestration features
+/// </summary>
+public class AdvancedAgentResponse<TOutput>
+{
+    public TOutput Output { get; set; } = default!;
+    public bool Success { get; set; } = true;
+    public string? ErrorMessage { get; set; }
+    public TimeSpan ExecutionTime { get; set; }
+    public List<string> AgentResponses { get; set; } = new();
+    public List<string> UserInteractions { get; set; } = new();
+    public Dictionary<string, object> Metadata { get; set; } = new();
+    public DateTime Timestamp { get; set; } = DateTime.UtcNow;
+}
+
+/// <summary>
+/// Orchestration execution context with advanced features
+/// </summary>
+public class AdvancedOrchestrationContext<TInput, TOutput>
+{
+    public StructuredInput<TInput> StructuredInput { get; set; } = null!;
+    public AdvancedOrchestrationConfig Config { get; set; } = new();
+    public ResponseCallbackConfig ResponseConfig { get; set; } = new();
+    public HumanInTheLoopConfig HumanConfig { get; set; } = new();
+    public CustomTransformConfig TransformConfig { get; set; } = new();
+    public Dictionary<string, object> State { get; set; } = new();
+    public List<string> ExecutionLog { get; set; } = new();
+    public CancellationToken CancellationToken { get; set; } = CancellationToken.None;
+    
+    public void LogExecution(string message)
+    {
+        ExecutionLog.Add($"[{DateTime.UtcNow:HH:mm:ss}] {message}");
+    }
+    
+    public void SetState(string key, object value)
+    {
+        State[key] = value;
+    }
+    
+    public T? GetState<T>(string key)
+    {
+        return State.TryGetValue(key, out var value) ? (T)value : default;
+    }
+}
+
+/// <summary>
+/// Generic entity analysis result
+/// </summary>
+public class EntityAnalysisResult
+{
+    public string EntityType { get; set; } = string.Empty;
+    public string EntityId { get; set; } = string.Empty;
+    public Dictionary<string, object> Analysis { get; set; } = new();
+    public List<string> Recommendations { get; set; } = new();
+    public List<string> Warnings { get; set; } = new();
+    public double Confidence { get; set; } = 1.0;
+    public DateTime AnalysisDate { get; set; } = DateTime.UtcNow;
+}
+
+/// <summary>
+/// Generic workflow execution result
+/// </summary>
+public class WorkflowExecutionResult
+{
+    public string WorkflowId { get; set; } = string.Empty;
+    public string WorkflowName { get; set; } = string.Empty;
+    public bool Success { get; set; } = true;
+    public List<string> Steps { get; set; } = new();
+    public List<string> Errors { get; set; } = new();
+    public Dictionary<string, object> Outputs { get; set; } = new();
+    public TimeSpan TotalExecutionTime { get; set; }
+    public DateTime StartTime { get; set; } = DateTime.UtcNow;
+    public DateTime EndTime { get; set; } = DateTime.UtcNow;
 } 

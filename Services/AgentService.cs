@@ -167,8 +167,7 @@ public class AgentService<T> : IAgentService<T> where T : BaseEntity
                 UserId = request.UserId,
                 Metadata = new Dictionary<string, object>
                 {
-                    ["HardDelete"] = request.HardDelete,
-                    ["CheckDependencies"] = request.CheckDependencies
+                    ["HardDelete"] = request.HardDelete
                 }
             };
 

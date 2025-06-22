@@ -8,6 +8,7 @@ using UltraGenericSystem.Data;
 using UltraGenericSystem.Repositories;
 using UltraGenericSystem.Services;
 using UltraGenericSystem.Models;
+using UltraGenericSystem.Services.Agents;
 
 namespace UltraGenericSystem;
 
@@ -54,7 +55,15 @@ public class Program
         builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
         // Register agent orchestrator
-        builder.Services.AddScoped<IAgentOrchestrator, AgentOrchestrator>();
+        builder.Services.AddScoped<IAgentOrchestrator, AgentOrchestrator>(sp =>
+            new AgentOrchestrator(
+                sp.GetRequiredService<Kernel>(),
+                sp.GetRequiredService<IUnitOfWork>(),
+                sp.GetRequiredService<ILogger<AgentOrchestrator>>(),
+                sp));
+        
+        // Register SK Agent Factory
+        builder.Services.AddScoped<SKAgentFactory>();
 
         // Register agent services for all entity types
         RegisterGenericServices(builder.Services);
