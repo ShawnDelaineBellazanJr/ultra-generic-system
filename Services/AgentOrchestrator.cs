@@ -8,6 +8,7 @@ using Microsoft.SemanticKernel.Agents.Orchestration.GroupChat;
 using Microsoft.SemanticKernel.Agents.Orchestration.Handoff;
 using Microsoft.SemanticKernel.Agents.Runtime.InProcess;
 using Microsoft.SemanticKernel.ChatCompletion;
+using Spectre.Console;
 using UltraGenericSystem.Models;
 using UltraGenericSystem.Repositories;
 using UltraGenericSystem.Services.Agents;
@@ -15,41 +16,46 @@ using UltraGenericSystem.Services.Agents;
 namespace UltraGenericSystem.Services;
 
 /// <summary>
-/// Basic orchestrator for agent operations using the SK Agent Framework
+/// Advanced orchestrator for agent operations using the SK Agent Framework v1.57+
+/// Implements PMCR-O (Plan-Make-Check-Reflect-Orchestrate) roundtable pattern
 /// </summary>
 public class AgentOrchestrator : IAgentOrchestrator
 {
     private readonly Kernel _kernel;
     private readonly IUnitOfWork _unitOfWork;
     private readonly ILogger<AgentOrchestrator> _logger;
+    private readonly IConversationalLogger _conversationalLogger;
     private readonly SKAgentFactory _agentFactory;
     private readonly InProcessRuntime _runtime;
 
-    // Orchestration patterns
+    // Orchestration patterns following SK Agent Framework patterns
     private readonly OrchestrationPatterns _orchestrationPatterns;
 
     public AgentOrchestrator(
         Kernel kernel,
         IUnitOfWork unitOfWork,
         ILogger<AgentOrchestrator> logger,
+        IConversationalLogger conversationalLogger,
         IServiceProvider serviceProvider)
     {
         _kernel = kernel;
         _unitOfWork = unitOfWork;
         _logger = logger;
+        _conversationalLogger = conversationalLogger;
         
         // Initialize agent factory with correct logger
         var skLogger = serviceProvider.GetRequiredService<ILogger<SKAgentFactory>>();
         _agentFactory = new SKAgentFactory(kernel, skLogger);
         
-        // Initialize runtime
+        // Initialize runtime following SK Agent Framework pattern
         _runtime = new InProcessRuntime();
         
         // Initialize orchestration patterns
         var agents = _agentFactory.CreateAllAgents();
         _orchestrationPatterns = _agentFactory.CreateOrchestrationPatterns(agents);
         
-        _logger.LogInformation("AgentOrchestrator initialized with SK Agent Framework");
+        _logger.LogInformation("AgentOrchestrator initialized with SK Agent Framework v1.57+");
+        _conversationalLogger.LogSystemMessage("AgentOrchestrator initialized and ready for workflow execution", Color.Green);
     }
 
     /// <summary>
@@ -73,6 +79,9 @@ public class AgentOrchestrator : IAgentOrchestrator
         {
             context.LogExecution($"Starting advanced orchestration for operation: {request.Operation}");
 
+            // Start the runtime following SK Agent Framework pattern
+            await _runtime.StartAsync();
+
             // Select orchestration pattern based on operation
             var orchestration = SelectAdvancedOrchestrationPattern(request.Operation, context);
 
@@ -95,6 +104,9 @@ public class AgentOrchestrator : IAgentOrchestrator
             };
             
             var output = await ProcessOrchestrationResultAsync<TOutput>(result, processContext);
+
+            // Run until idle following SK Agent Framework pattern
+            await _runtime.RunUntilIdleAsync();
 
             return new AdvancedAgentResponse<TOutput>
             {
@@ -162,10 +174,9 @@ public class AgentOrchestrator : IAgentOrchestrator
             return new StructuredOutput<TOutput>
             {
                 Data = result.Output,
-                Metadata = input.Metadata,
-                Summary = $"Structured orchestration completed successfully",
-                Timestamp = DateTime.UtcNow,
-                Success = result.Success
+                Success = result.Success,
+                Metadata = result.Metadata,
+                Timestamp = result.Timestamp
             };
         }
         catch (Exception ex)
@@ -173,49 +184,61 @@ public class AgentOrchestrator : IAgentOrchestrator
             return new StructuredOutput<TOutput>
             {
                 Data = default!,
-                Metadata = input.Metadata,
-                Summary = $"Structured orchestration failed: {ex.Message}",
-                Timestamp = DateTime.UtcNow,
                 Success = false,
-                ErrorMessage = ex.Message
+                ErrorMessage = ex.Message,
+                Timestamp = DateTime.UtcNow
             };
         }
     }
 
     /// <summary>
-    /// Execute workflow with multiple orchestration patterns
+    /// Execute workflow with PMCR-O roundtable pattern
     /// </summary>
-    public async Task<WorkflowExecutionResult> ExecuteWorkflowAsync<TInput, TOutput>(
-        TInput input,
+    public async Task<WorkflowExecutionResult> ExecuteWorkflowAsync(
         List<string> workflowSteps,
+        object input,
         AdvancedOrchestrationConfig config)
     {
-        var workflowId = Guid.NewGuid().ToString();
         var startTime = DateTime.UtcNow;
+        var workflowId = Guid.NewGuid().ToString();
         var steps = new List<string>();
         var errors = new List<string>();
         var outputs = new Dictionary<string, object>();
 
+        _conversationalLogger.LogSystemMessage($"Starting workflow execution with PMCR-O roundtable pattern", Color.Blue);
+        _logger.LogInformation("Starting workflow execution with {StepCount} steps", workflowSteps.Count);
+
         try
         {
+            // Start the runtime following SK Agent Framework pattern
+            await _runtime.StartAsync();
+
             foreach (var step in workflowSteps)
             {
                 steps.Add($"Executing step: {step}");
                 
-                // Execute each step with appropriate orchestration pattern
-                var stepResult = await ExecuteStepAsync(step, input, config);
+                // Log step start conversationally
+                _conversationalLogger.LogAgentMessage("WorkflowOrchestrator", "orchestrator", $"Executing step: {step}", $"Processing workflow step {step}");
+                
+                // Execute each step with PMCR-O roundtable pattern
+                var stepResult = await ExecutePMCRORoundtableAsync(step, input, config);
                 
                 if (stepResult.Success)
                 {
                     outputs[step] = stepResult.Output;
+                    _conversationalLogger.LogAgentMessage("WorkflowOrchestrator", "orchestrator", $"Step '{step}' completed successfully", $"Output: {stepResult.Output}");
                 }
                 else
                 {
                     errors.Add($"Step {step} failed: {stepResult.ErrorMessage}");
+                    _conversationalLogger.LogError($"Step '{step}' failed: {stepResult.ErrorMessage}");
                 }
             }
 
-            return new WorkflowExecutionResult
+            // Run until idle following SK Agent Framework pattern
+            await _runtime.RunUntilIdleAsync();
+
+            var result = new WorkflowExecutionResult
             {
                 WorkflowId = workflowId,
                 WorkflowName = "Advanced Workflow",
@@ -227,9 +250,15 @@ public class AgentOrchestrator : IAgentOrchestrator
                 StartTime = startTime,
                 EndTime = DateTime.UtcNow
             };
+
+            _conversationalLogger.LogSystemMessage($"Workflow completed with {errors.Count} errors", errors.Count == 0 ? Color.Green : Color.Red);
+            return result;
         }
         catch (Exception ex)
         {
+            _logger.LogError(ex, "Workflow execution failed");
+            _conversationalLogger.LogError($"Workflow execution failed: {ex.Message}");
+            
             return new WorkflowExecutionResult
             {
                 WorkflowId = workflowId,
@@ -306,6 +335,77 @@ public class AgentOrchestrator : IAgentOrchestrator
     }
 
     /// <summary>
+    /// Execute PMCR-O roundtable pattern using GroupChat orchestration
+    /// </summary>
+    private async Task<AdvancedAgentResponse<object>> ExecutePMCRORoundtableAsync(
+        string step,
+        object input,
+        AdvancedOrchestrationConfig config)
+    {
+        _conversationalLogger.LogAgentMessage("PMCRORoundtable", "roundtable", $"Starting PMCR-O roundtable for step: {step}", $"Input type: {input?.GetType().Name ?? "null"}");
+        
+        try
+        {
+            // Create all agents for the PMCR-O roundtable
+            var agents = _agentFactory.CreateAllAgents();
+            
+            // Create GroupChat orchestration following SK Agent Framework pattern
+            var groupChatOrchestration = _agentFactory.CreateOrchestrationPatterns(agents).GroupChat;
+            
+            // Prepare the initial context message for the roundtable
+            var inputJson = System.Text.Json.JsonSerializer.Serialize(input);
+            var roundtableContext = $@"
+[PMCR-O Roundtable Context]
+Step: {step}
+Input: {inputJson}
+Goal: Execute the PMCR-O (Plan-Make-Check-Reflect-Orchestrate) pattern for this step.
+
+Agents participating:
+- Orchestrator: Frames context and synthesizes final output
+- Planner: Creates detailed execution plan
+- Maker: Executes the plan and produces output
+- Checker: Validates quality and identifies issues
+- Reflector: Analyzes process and suggests improvements
+
+Please engage in a collaborative discussion to complete this step effectively.
+";
+
+            _conversationalLogger.LogAgentMessage("PMCRORoundtable", "roundtable", roundtableContext, $"Initiating roundtable discussion for {step}");
+
+            // Execute GroupChat orchestration following SK Agent Framework pattern
+            var chatResult = await groupChatOrchestration.InvokeAsync(roundtableContext, _runtime);
+            var finalResult = await chatResult.GetValueAsync();
+
+            // Log the final result as the roundtable consensus
+            _conversationalLogger.LogAgentMessage("PMCRORoundtable", "roundtable", $"Step '{step}' completed successfully", $"Roundtable consensus: {finalResult}");
+
+            return new AdvancedAgentResponse<object>
+            {
+                Output = finalResult,
+                Success = true,
+                ExecutionTime = TimeSpan.FromMilliseconds(100), // Placeholder
+                AgentResponses = new List<string> { finalResult?.ToString() ?? string.Empty },
+                Metadata = new Dictionary<string, object> { { "roundtable_step", step } },
+                Timestamp = DateTime.UtcNow
+            };
+        }
+        catch (Exception ex)
+        {
+            _conversationalLogger.LogError($"PMCR-O roundtable for step '{step}' failed: {ex.Message}");
+            return new AdvancedAgentResponse<object>
+            {
+                Output = null,
+                Success = false,
+                ErrorMessage = ex.Message,
+                ExecutionTime = TimeSpan.FromMilliseconds(100), // Placeholder
+                AgentResponses = new List<string>(),
+                Metadata = new Dictionary<string, object>(),
+                Timestamp = DateTime.UtcNow
+            };
+        }
+    }
+
+    /// <summary>
     /// Select advanced orchestration pattern based on operation and context
     /// </summary>
     private object SelectAdvancedOrchestrationPattern<TInput, TOutput>(
@@ -342,7 +442,7 @@ public class AgentOrchestrator : IAgentOrchestrator
 
         try
         {
-            // Execute orchestration with combined cancellation
+            // Execute orchestration with combined cancellation following SK Agent Framework pattern
             var result = await ((dynamic)orchestration).InvokeAsync(input, _runtime);
             return result;
         }
@@ -361,7 +461,7 @@ public class AgentOrchestrator : IAgentOrchestrator
     {
         try
         {
-            var output = await ((dynamic)result).GetValueAsync(context.Config.Timeout);
+            var output = await ((dynamic)result).GetValueAsync();
             context.LogExecution("Orchestration result processed successfully");
             return output;
         }
@@ -370,24 +470,6 @@ public class AgentOrchestrator : IAgentOrchestrator
             context.LogExecution($"Failed to process orchestration result: {ex.Message}");
             throw;
         }
-    }
-
-    /// <summary>
-    /// Execute a single workflow step
-    /// </summary>
-    private async Task<AdvancedAgentResponse<object>> ExecuteStepAsync(
-        string step,
-        object input,
-        AdvancedOrchestrationConfig config)
-    {
-        var request = new AdvancedAgentRequest<object, object>
-        {
-            Input = input,
-            Operation = step,
-            OrchestrationConfig = config
-        };
-
-        return await ExecuteAdvancedOrchestrationAsync(request);
     }
 
     // Interface implementation methods
@@ -547,14 +629,18 @@ public class AgentOrchestrator : IAgentOrchestrator
     {
         try
         {
+            // Create a new thread ID for tracking
             var threadId = Guid.NewGuid().ToString();
-            _logger.LogInformation("Created thread {ThreadId} for agent {AgentId}", threadId, agentId);
+            
+            _logger.LogInformation("Created new agent thread: {ThreadId} for agent: {AgentId}", threadId, agentId);
+            _conversationalLogger.LogSystemMessage($"Created new agent thread: {threadId}", Color.Blue);
+            
             return AgentResponse<string>.Success(threadId);
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Error creating agent thread");
-            return AgentResponse<string>.Failure($"Failed to create agent thread: {ex.Message}");
+            return AgentResponse<string>.Failure($"CreateThreadAsync failed: {ex.Message}");
         }
     }
 
@@ -573,15 +659,24 @@ public class AgentOrchestrator : IAgentOrchestrator
     {
         try
         {
-            _logger.LogInformation("Registering plugin {PluginName}", pluginName);
-            _kernel.ImportPluginFromObject(pluginInstance, pluginName);
-            _logger.LogInformation("Successfully registered plugin {PluginName}", pluginName);
-            return AgentResponse<bool>.Success(true);
+            if (pluginInstance is Microsoft.SemanticKernel.KernelPlugin kernelPlugin)
+            {
+                _kernel.Plugins.Add(kernelPlugin);
+                _logger.LogInformation("Registered plugin: {PluginName}", pluginName);
+                _conversationalLogger.LogSystemMessage($"Registered plugin: {pluginName}", Color.Green);
+                return AgentResponse<bool>.Success(true);
+            }
+            else
+            {
+                _logger.LogWarning("Plugin instance is not a KernelPlugin: {PluginName}", pluginName);
+                _conversationalLogger.LogSystemMessage($"Failed to register plugin: {pluginName} (not a KernelPlugin)", Color.Yellow);
+                return AgentResponse<bool>.Failure($"Plugin instance is not a KernelPlugin: {pluginName}");
+            }
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Error registering plugin {PluginName}", pluginName);
-            return AgentResponse<bool>.Failure($"Failed to register plugin: {ex.Message}");
+            _logger.LogError(ex, "Error registering plugin: {PluginName}", pluginName);
+            return AgentResponse<bool>.Failure($"RegisterPluginAsync failed: {ex.Message}");
         }
     }
 
@@ -592,15 +687,16 @@ public class AgentOrchestrator : IAgentOrchestrator
     {
         try
         {
-            _logger.LogInformation("Unregistering plugin {PluginName}", pluginName);
             // Note: SK doesn't have a direct unregister method, but we can track this
-            _logger.LogInformation("Successfully unregistered plugin {PluginName}", pluginName);
+            _logger.LogInformation("Unregistered plugin: {PluginName}", pluginName);
+            _conversationalLogger.LogSystemMessage($"Unregistered plugin: {pluginName}", Color.Yellow);
+            
             return AgentResponse<bool>.Success(true);
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Error unregistering plugin {PluginName}", pluginName);
-            return AgentResponse<bool>.Failure($"Failed to unregister plugin: {ex.Message}");
+            _logger.LogError(ex, "Error unregistering plugin: {PluginName}", pluginName);
+            return AgentResponse<bool>.Failure($"UnregisterPluginAsync failed: {ex.Message}");
         }
     }
 
@@ -614,13 +710,27 @@ public class AgentOrchestrator : IAgentOrchestrator
             _logger.LogInformation("Getting available plugins");
             var plugins = _kernel.Plugins.Select(p => p.Name).ToList();
             _logger.LogInformation("Found {PluginCount} available plugins", plugins.Count);
+            _conversationalLogger.LogSystemMessage($"Found {plugins.Count} available plugins", Color.Blue);
             return AgentResponse<IEnumerable<string>>.Success(plugins);
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Error getting available plugins");
-            return AgentResponse<IEnumerable<string>>.Failure($"Failed to get available plugins: {ex.Message}");
+            return AgentResponse<IEnumerable<string>>.Failure($"GetAvailablePluginsAsync failed: {ex.Message}");
         }
+    }
+
+    /// <summary>
+    /// Execute workflow with generic input/output types
+    /// </summary>
+    public async Task<WorkflowExecutionResult> ExecuteWorkflowAsync<TInput, TOutput>(
+        TInput input,
+        List<string> workflowSteps,
+        AdvancedOrchestrationConfig config)
+    {
+        // Convert generic input to object for the non-generic method
+        var objectInput = (object)input!;
+        return await ExecuteWorkflowAsync(workflowSteps, objectInput, config);
     }
 }
 

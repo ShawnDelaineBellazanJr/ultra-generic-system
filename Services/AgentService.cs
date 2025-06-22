@@ -14,12 +14,14 @@ public class AgentService<T> : IAgentService<T> where T : BaseEntity
     private readonly IUnitOfWork _unitOfWork;
     private readonly IAgentOrchestrator _orchestrator;
     private readonly ILogger<AgentService<T>> _logger;
+    private readonly IConversationalLogger _conversationalLogger;
 
-    public AgentService(IUnitOfWork unitOfWork, IAgentOrchestrator orchestrator, ILogger<AgentService<T>> logger)
+    public AgentService(IUnitOfWork unitOfWork, IAgentOrchestrator orchestrator, ILogger<AgentService<T>> logger, IConversationalLogger conversationalLogger)
     {
         _unitOfWork = unitOfWork;
         _orchestrator = orchestrator;
         _logger = logger;
+        _conversationalLogger = conversationalLogger;
     }
 
     public async Task<AgentResponse<T>> ProcessAsync(AgentRequest<T> request, CancellationToken cancellationToken = default)
@@ -27,6 +29,7 @@ public class AgentService<T> : IAgentService<T> where T : BaseEntity
         try
         {
             _logger.LogDebug("Processing agent request for {EntityType} - Operation: {Operation}", typeof(T).Name, request.Operation);
+            _conversationalLogger.LogAgentMessage("AgentService", typeof(T).Name, $"Processing agent request - Operation: {request.Operation}");
 
             var context = new AgentExecutionContext
             {
@@ -43,12 +46,14 @@ public class AgentService<T> : IAgentService<T> where T : BaseEntity
             
             _logger.LogInformation("Processed agent request for {EntityType} - Operation: {Operation} - Success: {Success}", 
                 typeof(T).Name, request.Operation, result.IsSuccess);
+            _conversationalLogger.LogAgentMessage("AgentService", typeof(T).Name, $"Processed agent request - Operation: {request.Operation} - Success: {result.IsSuccess}");
 
             return result;
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Error processing agent request for {EntityType}", typeof(T).Name);
+            _conversationalLogger.LogError($"Error processing agent request for {typeof(T).Name}: {ex.Message}");
             return AgentResponse<T>.Failure($"Processing failed: {ex.Message}");
         }
     }
@@ -58,6 +63,7 @@ public class AgentService<T> : IAgentService<T> where T : BaseEntity
         try
         {
             _logger.LogDebug("Querying {EntityType} entities - Operation: {Operation}", typeof(T).Name, request.Operation);
+            _conversationalLogger.LogAgentMessage("AgentService", typeof(T).Name, $"Querying entities - Operation: {request.Operation}");
 
             var context = new AgentExecutionContext
             {
@@ -79,12 +85,14 @@ public class AgentService<T> : IAgentService<T> where T : BaseEntity
             
             _logger.LogInformation("Queried {EntityType} entities - Operation: {Operation} - Count: {Count}", 
                 typeof(T).Name, request.Operation, result.Data?.Count() ?? 0);
+            _conversationalLogger.LogAgentMessage("AgentService", typeof(T).Name, $"Queried entities - Operation: {request.Operation} - Count: {result.Data?.Count() ?? 0}");
 
             return result;
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Error querying {EntityType}", typeof(T).Name);
+            _conversationalLogger.LogError($"Error querying {typeof(T).Name}: {ex.Message}");
             return AgentResponse<IEnumerable<T>>.Failure($"Query failed: {ex.Message}");
         }
     }
@@ -94,6 +102,7 @@ public class AgentService<T> : IAgentService<T> where T : BaseEntity
         try
         {
             _logger.LogDebug("Creating {EntityType} entity", typeof(T).Name);
+            _conversationalLogger.LogAgentMessage("AgentService", typeof(T).Name, "Creating entity");
 
             var context = new AgentExecutionContext
             {
@@ -110,12 +119,14 @@ public class AgentService<T> : IAgentService<T> where T : BaseEntity
             var result = await _orchestrator.ExecuteAsync<T>(context, cancellationToken);
             
             _logger.LogInformation("Created {EntityType} entity - Success: {Success}", typeof(T).Name, result.IsSuccess);
+            _conversationalLogger.LogAgentMessage("AgentService", typeof(T).Name, $"Created entity - Success: {result.IsSuccess}");
 
             return result;
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Error creating {EntityType}", typeof(T).Name);
+            _conversationalLogger.LogError($"Error creating {typeof(T).Name}: {ex.Message}");
             return AgentResponse<T>.Failure($"Creation failed: {ex.Message}");
         }
     }
@@ -125,6 +136,7 @@ public class AgentService<T> : IAgentService<T> where T : BaseEntity
         try
         {
             _logger.LogDebug("Updating {EntityType} entity with id {Id}", typeof(T).Name, request.Entity.Id);
+            _conversationalLogger.LogAgentMessage("AgentService", typeof(T).Name, $"Updating entity with id {request.Entity.Id}");
 
             var context = new AgentExecutionContext
             {
@@ -143,12 +155,14 @@ public class AgentService<T> : IAgentService<T> where T : BaseEntity
             
             _logger.LogInformation("Updated {EntityType} entity with id {Id} - Success: {Success}", 
                 typeof(T).Name, request.Entity.Id, result.IsSuccess);
+            _conversationalLogger.LogAgentMessage("AgentService", typeof(T).Name, $"Updated entity with id {request.Entity.Id} - Success: {result.IsSuccess}");
 
             return result;
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Error updating {EntityType} with id {Id}", typeof(T).Name, request.Entity.Id);
+            _conversationalLogger.LogError($"Error updating {typeof(T).Name} with id {request.Entity.Id}: {ex.Message}");
             return AgentResponse<T>.Failure($"Update failed: {ex.Message}");
         }
     }
@@ -158,6 +172,7 @@ public class AgentService<T> : IAgentService<T> where T : BaseEntity
         try
         {
             _logger.LogDebug("Deleting {EntityType} entity with id {Id}", typeof(T).Name, request.Id);
+            _conversationalLogger.LogAgentMessage("AgentService", typeof(T).Name, $"Deleting entity with id {request.Id}");
 
             var context = new AgentExecutionContext
             {
@@ -175,12 +190,14 @@ public class AgentService<T> : IAgentService<T> where T : BaseEntity
             
             _logger.LogInformation("Deleted {EntityType} entity with id {Id} - Success: {Success}", 
                 typeof(T).Name, request.Id, result.IsSuccess);
+            _conversationalLogger.LogAgentMessage("AgentService", typeof(T).Name, $"Deleted entity with id {request.Id} - Success: {result.IsSuccess}");
 
             return result;
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Error deleting {EntityType} with id {Id}", typeof(T).Name, request.Id);
+            _conversationalLogger.LogError($"Error deleting {typeof(T).Name} with id {request.Id}: {ex.Message}");
             return AgentResponse<bool>.Failure($"Deletion failed: {ex.Message}");
         }
     }

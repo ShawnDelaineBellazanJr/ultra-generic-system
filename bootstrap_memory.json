@@ -1,0 +1,10 @@
+{
+  "key": "ultra_generic_system_knowledge",
+  "content": "The Ultra-Generic AI System is a production-ready enterprise AI platform that integrates Microsoft Semantic Kernel (SK) Agent Framework v1.57+, SK Process Framework, Prompty declarative templates, Microsoft.Extensions.AI, and Ollama local LLM hosting. The system operates as a continuous 'strange loop' that plans, executes, checks, and reflects to self-optimize through a 4-level meta-cognitive hierarchy.",
+  "metadata": {
+    "category": "system_architecture",
+    "tags": ["ai", "enterprise", "self-evolving", "strange-loop", "semantic-kernel"],
+    "version": "1.0.0",
+    "importance": "critical"
+  }
+} 

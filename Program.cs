@@ -40,6 +40,9 @@ public class Program
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
 
+        // Add HttpClient for external API calls
+        builder.Services.AddHttpClient();
+
         // Configure Entity Framework
         builder.Services.AddDbContext<UltraGenericContext>(options =>
             options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -145,6 +148,7 @@ public class Program
                 sp.GetRequiredService<Kernel>(),
                 sp.GetRequiredService<IUnitOfWork>(),
                 sp.GetRequiredService<ILogger<AgentOrchestrator>>(),
+                sp.GetRequiredService<IConversationalLogger>(),
                 sp));
         
         // Register conversational logger for agent chat visibility
@@ -255,6 +259,15 @@ public class Program
                 sp.GetRequiredService<ILogger<RuntimePluginLoader>>(),
                 sp.GetRequiredService<IRuntimeCompilationService>()));
 
+        // Register MCP Service for GitHub integration and self-evolving plugin generation
+        builder.Services.AddScoped<IMCPService, MCPService>(sp =>
+            new MCPService(
+                sp.GetRequiredService<ILogger<MCPService>>(),
+                sp.GetRequiredService<IConversationalLogger>(),
+                sp.GetRequiredService<IAgentOrchestrator>(),
+                sp.GetRequiredService<Kernel>(),
+                sp.GetRequiredService<HttpClient>()));
+
         // Register agent services for all entity types
         RegisterGenericServices(builder.Services);
 
@@ -325,10 +338,18 @@ public class Program
             var repositoryImplementation = typeof(GenericRepository<>).MakeGenericType(entityType);
             services.AddScoped(repositoryInterface, repositoryImplementation);
 
-            // Register generic service
-            var serviceInterface = typeof(IAgentService<>).MakeGenericType(entityType);
-            var serviceImplementation = typeof(AgentService<>).MakeGenericType(entityType);
-            services.AddScoped(serviceInterface, serviceImplementation);
+            // Register generic agent service with conversational logger
+            var agentServiceInterface = typeof(IAgentService<>).MakeGenericType(entityType);
+            var agentServiceImplementation = typeof(AgentService<>).MakeGenericType(entityType);
+            services.AddScoped(agentServiceInterface, serviceProvider =>
+            {
+                var unitOfWork = serviceProvider.GetRequiredService<IUnitOfWork>();
+                var orchestrator = serviceProvider.GetRequiredService<IAgentOrchestrator>();
+                var loggerType = typeof(Microsoft.Extensions.Logging.ILogger<>).MakeGenericType(agentServiceImplementation);
+                var logger = (Microsoft.Extensions.Logging.ILogger)serviceProvider.GetRequiredService(loggerType);
+                var conversationalLogger = serviceProvider.GetRequiredService<IConversationalLogger>();
+                return Activator.CreateInstance(agentServiceImplementation, unitOfWork, orchestrator, logger, conversationalLogger);
+            });
 
             // Do NOT register generic controller here (controllers are discovered automatically)
 

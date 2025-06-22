@@ -215,3 +215,13 @@ C:\Users\Tooensure\Desktop\generic\bin\Debug\net9.0\UltraGenericSystem.runtimeco
 C:\Users\Tooensure\Desktop\generic\bin\Debug\net9.0\UltraGenericSystem.pdb
 C:\Users\Tooensure\Desktop\generic\obj\Debug\net9.0\UltraGenericSystem.genruntimeconfig.cache
 C:\Users\Tooensure\Desktop\generic\obj\Debug\net9.0\ref\UltraGenericSystem.dll
+C:\Users\Tooensure\Desktop\generic\bin\Debug\net9.0\payload.json
+C:\Users\Tooensure\Desktop\generic\bin\Debug\net9.0\payload_structured.json
+C:\Users\Tooensure\Desktop\generic\bin\Debug\net9.0\payload_corrected.json
+C:\Users\Tooensure\Desktop\generic\bin\Debug\net9.0\payload_simple.json
+C:\Users\Tooensure\Desktop\generic\bin\Debug\net9.0\self_evolution_request.json
+C:\Users\Tooensure\Desktop\generic\bin\Debug\net9.0\test_memory.json
+C:\Users\Tooensure\Desktop\generic\bin\Debug\net9.0\bootstrap_memory.json
+C:\Users\Tooensure\Desktop\generic\bin\Debug\net9.0\service_template.json
+C:\Users\Tooensure\Desktop\generic\bin\Debug\net9.0\service_template_memory.json
+C:\Users\Tooensure\Desktop\generic\bin\Debug\net9.0\test_requests.json

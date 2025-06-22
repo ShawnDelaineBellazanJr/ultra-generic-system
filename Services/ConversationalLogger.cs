@@ -63,6 +63,12 @@ public class ConversationalLogger : IConversationalLogger
                                        message.Contains("[CODE]") || message.Contains("[HTML]") ||
                                        message.Contains("[CSS]") || message.Contains("[JSON]");
             
+            // Log to standard logger for file output
+            var logMessage = $"[CONVERSATION] {agentName} ({agentType}): {message}";
+            if (!string.IsNullOrEmpty(thinking))
+                logMessage += $" | Thinking: {thinking}";
+            _logger.LogInformation(logMessage);
+            
             if (UseAnsi && !hasProblematicContent)
             {
                 try
@@ -116,6 +122,9 @@ public class ConversationalLogger : IConversationalLogger
     {
         lock (_lockObject)
         {
+            // Log to standard logger for file output
+            _logger.LogInformation($"[CONVERSATION] SYSTEM: {message}");
+            
             var msg = $"[grey]{Timestamp}[/] [{color}]{message}[/]";
             if (UseAnsi)
                 AnsiConsole.MarkupLine(msg);
@@ -132,6 +141,9 @@ public class ConversationalLogger : IConversationalLogger
     {
         lock (_lockObject)
         {
+            // Log to standard logger for file output
+            _logger.LogInformation($"[CONVERSATION] STARTED: {task}");
+            
             var header = $"[bold blue]CONVERSATION STARTED[/]";
             var content = $"[grey]{Timestamp}[/]\n[white]Task:[/] [bold]{task}[/]";
             if (UseAnsi)
@@ -157,6 +169,9 @@ public class ConversationalLogger : IConversationalLogger
     {
         lock (_lockObject)
         {
+            // Log to standard logger for file output
+            _logger.LogInformation($"[CONVERSATION] ENDED: {result}");
+            
             var footer = $"[bold green]CONVERSATION ENDED[/]";
             var content = $"[grey]{Timestamp}[/]\n[white]Result:[/] [bold]{result}[/]";
             if (UseAnsi)
@@ -182,6 +197,9 @@ public class ConversationalLogger : IConversationalLogger
     {
         lock (_lockObject)
         {
+            // Log to standard logger for file output
+            _logger.LogError($"[CONVERSATION] ERROR: {error}");
+            
             var content = $"[grey]{Timestamp}[/]\n[white]Error:[/] [bold red]{error}[/]";
             if (UseAnsi)
             {

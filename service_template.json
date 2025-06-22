@@ -1,0 +1,6 @@
+{
+  "templateName": "ServiceTemplate",
+  "templateType": "service",
+  "templateContent": "public class {{ServiceName}} { public void Log(string message) { /* TODO: Implement logging */ } }",
+  "description": "Basic C# service template for dynamic code generation."
+} 

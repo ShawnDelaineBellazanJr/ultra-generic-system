@@ -1,0 +1,6 @@
+{
+  "specification": "Create a C# service for logging user activity",
+  "targetType": "service",
+  "framework": "aspnetcore",
+  "templateName": "ServiceTemplate"
+} 

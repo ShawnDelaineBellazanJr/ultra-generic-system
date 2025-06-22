@@ -1,0 +1,29 @@
+{
+  "input": "Summarize the following text and translate it to French. If the summary is too long, improve it. Text: Microsoft Semantic Kernel is an open-source SDK that lets you easily build agents that can orchestrate AI services, skills, and memory to solve complex tasks. It supports multi-agent collaboration, process workflows, and dynamic skill generation.",
+  "operation": "workflow",
+  "orchestrationConfig": {
+    "enableStructuredData": true,
+    "enableResponseCallbacks": true,
+    "enableHumanInTheLoop": false,
+    "timeout": "00:05:00"
+  },
+  "responseCallbackConfig": {
+    "enableCallbacks": true,
+    "callbackUrl": null,
+    "callbackHeaders": {}
+  },
+  "humanInTheLoopConfig": {
+    "enableUserInput": false,
+    "enableApprovalWorkflow": false,
+    "userInputTimeout": "00:02:00",
+    "allowedUserActions": []
+  },
+  "customTransformConfig": {
+    "inputTransformScript": null,
+    "outputTransformScript": null,
+    "transformParameters": {},
+    "enableValidation": true,
+    "enableCaching": false
+  },
+  "parameters": {}
+} 

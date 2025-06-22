@@ -86,6 +86,42 @@ public class UltraGenericContext : DbContext
             d => d == null ? null : System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, object>>(System.Text.Json.JsonSerializer.Serialize(d, (System.Text.Json.JsonSerializerOptions?)null), (System.Text.Json.JsonSerializerOptions?)null)!
         );
 
+    // Value comparers for collection properties
+    private static ValueComparer<List<float>> FloatListValueComparer =>
+        new ValueComparer<List<float>>(
+            (c1, c2) => System.Text.Json.JsonSerializer.Serialize(c1, (System.Text.Json.JsonSerializerOptions?)null) == System.Text.Json.JsonSerializer.Serialize(c2, (System.Text.Json.JsonSerializerOptions?)null),
+            c => System.Text.Json.JsonSerializer.Serialize(c, (System.Text.Json.JsonSerializerOptions?)null).GetHashCode(),
+            c => System.Text.Json.JsonSerializer.Deserialize<List<float>>(System.Text.Json.JsonSerializer.Serialize(c, (System.Text.Json.JsonSerializerOptions?)null), (System.Text.Json.JsonSerializerOptions?)null) ?? new List<float>()
+        );
+
+    private static ValueComparer<string[]> StringArrayValueComparer =>
+        new ValueComparer<string[]>(
+            (c1, c2) => System.Text.Json.JsonSerializer.Serialize(c1, (System.Text.Json.JsonSerializerOptions?)null) == System.Text.Json.JsonSerializer.Serialize(c2, (System.Text.Json.JsonSerializerOptions?)null),
+            c => System.Text.Json.JsonSerializer.Serialize(c, (System.Text.Json.JsonSerializerOptions?)null).GetHashCode(),
+            c => System.Text.Json.JsonSerializer.Deserialize<string[]>(System.Text.Json.JsonSerializer.Serialize(c, (System.Text.Json.JsonSerializerOptions?)null), (System.Text.Json.JsonSerializerOptions?)null) ?? Array.Empty<string>()
+        );
+
+    private static ValueComparer<List<string>> StringListValueComparer =>
+        new ValueComparer<List<string>>(
+            (c1, c2) => System.Text.Json.JsonSerializer.Serialize(c1, (System.Text.Json.JsonSerializerOptions?)null) == System.Text.Json.JsonSerializer.Serialize(c2, (System.Text.Json.JsonSerializerOptions?)null),
+            c => System.Text.Json.JsonSerializer.Serialize(c, (System.Text.Json.JsonSerializerOptions?)null).GetHashCode(),
+            c => System.Text.Json.JsonSerializer.Deserialize<List<string>>(System.Text.Json.JsonSerializer.Serialize(c, (System.Text.Json.JsonSerializerOptions?)null), (System.Text.Json.JsonSerializerOptions?)null) ?? new List<string>()
+        );
+
+    private static ValueComparer<Dictionary<string, object>> DictionaryValueComparer =>
+        new ValueComparer<Dictionary<string, object>>(
+            (d1, d2) => System.Text.Json.JsonSerializer.Serialize(d1, (System.Text.Json.JsonSerializerOptions?)null) == System.Text.Json.JsonSerializer.Serialize(d2, (System.Text.Json.JsonSerializerOptions?)null),
+            d => d == null ? 0 : System.Text.Json.JsonSerializer.Serialize(d, (System.Text.Json.JsonSerializerOptions?)null).GetHashCode(),
+            d => d == null ? null : System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, object>>(System.Text.Json.JsonSerializer.Serialize(d, (System.Text.Json.JsonSerializerOptions?)null), (System.Text.Json.JsonSerializerOptions?)null)!
+        );
+
+    private static ValueComparer<Dictionary<string, string>> StringDictionaryValueComparer =>
+        new ValueComparer<Dictionary<string, string>>(
+            (d1, d2) => System.Text.Json.JsonSerializer.Serialize(d1, (System.Text.Json.JsonSerializerOptions?)null) == System.Text.Json.JsonSerializer.Serialize(d2, (System.Text.Json.JsonSerializerOptions?)null),
+            d => d == null ? 0 : System.Text.Json.JsonSerializer.Serialize(d, (System.Text.Json.JsonSerializerOptions?)null).GetHashCode(),
+            d => d == null ? null : System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, string>>(System.Text.Json.JsonSerializer.Serialize(d, (System.Text.Json.JsonSerializerOptions?)null), (System.Text.Json.JsonSerializerOptions?)null)!
+        );
+
     private void ConfigureBaseEntity(ModelBuilder modelBuilder)
     {
         foreach (var entityType in modelBuilder.Model.GetEntityTypes())
@@ -218,7 +254,8 @@ public class UltraGenericContext : DbContext
                 .HasConversion(
                     v => System.Text.Json.JsonSerializer.Serialize(v, (System.Text.Json.JsonSerializerOptions?)null),
                     v => System.Text.Json.JsonSerializer.Deserialize<string[]>(v, (System.Text.Json.JsonSerializerOptions?)null) ?? Array.Empty<string>()
-                );
+                )
+                .Metadata.SetValueComparer(StringArrayValueComparer);
 
             entity.Property(e => e.CompilationOutput)
                 .HasColumnType("TEXT");
@@ -257,7 +294,8 @@ public class UltraGenericContext : DbContext
                 .HasConversion(
                     v => System.Text.Json.JsonSerializer.Serialize(v, (System.Text.Json.JsonSerializerOptions?)null),
                     v => System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, object>>(v, (System.Text.Json.JsonSerializerOptions?)null) ?? new Dictionary<string, object>()
-                );
+                )
+                .Metadata.SetValueComparer(DictionaryValueComparer);
 
             // Workaround: Ignore Metadata as navigation, then re-add as scalar
             entity.Ignore(e => e.Metadata);
@@ -299,7 +337,8 @@ public class UltraGenericContext : DbContext
                 .HasConversion(
                     v => System.Text.Json.JsonSerializer.Serialize(v, (System.Text.Json.JsonSerializerOptions?)null),
                     v => System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, object>>(v, (System.Text.Json.JsonSerializerOptions?)null) ?? new Dictionary<string, object>()
-                );
+                )
+                .Metadata.SetValueComparer(DictionaryValueComparer);
 
             // Workaround: Ignore Metadata as navigation, then re-add as scalar
             entity.Ignore(e => e.Metadata);
@@ -373,7 +412,8 @@ public class UltraGenericContext : DbContext
                 .HasConversion(
                     v => System.Text.Json.JsonSerializer.Serialize(v, (System.Text.Json.JsonSerializerOptions?)null),
                     v => System.Text.Json.JsonSerializer.Deserialize<string[]>(v, (System.Text.Json.JsonSerializerOptions?)null) ?? Array.Empty<string>()
-                );
+                )
+                .Metadata.SetValueComparer(StringArrayValueComparer);
 
             entity.Property(e => e.CompilationResult)
                 .HasColumnType("TEXT");
@@ -458,7 +498,8 @@ public class UltraGenericContext : DbContext
                 .HasConversion(
                     v => System.Text.Json.JsonSerializer.Serialize(v, (System.Text.Json.JsonSerializerOptions?)null),
                     v => System.Text.Json.JsonSerializer.Deserialize<List<float>>(v, (System.Text.Json.JsonSerializerOptions?)null) ?? new List<float>()
-                );
+                )
+                .Metadata.SetValueComparer(FloatListValueComparer);
 
             entity.Property(e => e.SimilarityScore);
 
@@ -543,7 +584,8 @@ public class UltraGenericContext : DbContext
                 .HasConversion(
                     v => System.Text.Json.JsonSerializer.Serialize(v, (System.Text.Json.JsonSerializerOptions?)null),
                     v => System.Text.Json.JsonSerializer.Deserialize<List<float>>(v, (System.Text.Json.JsonSerializerOptions?)null) ?? new List<float>()
-                );
+                )
+                .Metadata.SetValueComparer(FloatListValueComparer);
 
             entity.Property(e => e.Model)
                 .HasMaxLength(100);
@@ -629,7 +671,8 @@ public class UltraGenericContext : DbContext
                 .HasConversion(
                     v => System.Text.Json.JsonSerializer.Serialize(v, (System.Text.Json.JsonSerializerOptions?)null),
                     v => System.Text.Json.JsonSerializer.Deserialize<List<float>>(v, (System.Text.Json.JsonSerializerOptions?)null) ?? new List<float>()
-                );
+                )
+                .Metadata.SetValueComparer(FloatListValueComparer);
 
             entity.Property(e => e.DocumentId);
 
@@ -734,13 +777,15 @@ public class UltraGenericContext : DbContext
                 .HasConversion(
                     v => System.Text.Json.JsonSerializer.Serialize(v, (System.Text.Json.JsonSerializerOptions?)null),
                     v => System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, string>>(v, (System.Text.Json.JsonSerializerOptions?)null) ?? new Dictionary<string, string>()
-                );
+                )
+                .Metadata.SetValueComparer(StringDictionaryValueComparer);
 
             entity.Property(e => e.Dependencies)
                 .HasConversion(
                     v => System.Text.Json.JsonSerializer.Serialize(v, (System.Text.Json.JsonSerializerOptions?)null),
                     v => System.Text.Json.JsonSerializer.Deserialize<List<string>>(v, (System.Text.Json.JsonSerializerOptions?)null) ?? new List<string>()
-                );
+                )
+                .Metadata.SetValueComparer(StringListValueComparer);
 
             // Workaround: Ignore Metadata as navigation, then re-add as scalar
             entity.Ignore(e => e.Metadata);
@@ -789,19 +834,22 @@ public class UltraGenericContext : DbContext
                 .HasConversion(
                     v => System.Text.Json.JsonSerializer.Serialize(v, (System.Text.Json.JsonSerializerOptions?)null),
                     v => System.Text.Json.JsonSerializer.Deserialize<List<string>>(v, (System.Text.Json.JsonSerializerOptions?)null) ?? new List<string>()
-                );
+                )
+                .Metadata.SetValueComparer(StringListValueComparer);
 
             entity.Property(e => e.ForbiddenNamespaces)
                 .HasConversion(
                     v => System.Text.Json.JsonSerializer.Serialize(v, (System.Text.Json.JsonSerializerOptions?)null),
                     v => System.Text.Json.JsonSerializer.Deserialize<List<string>>(v, (System.Text.Json.JsonSerializerOptions?)null) ?? new List<string>()
-                );
+                )
+                .Metadata.SetValueComparer(StringListValueComparer);
 
             entity.Property(e => e.AdvancedSettings)
                 .HasConversion(
                     v => System.Text.Json.JsonSerializer.Serialize(v, (System.Text.Json.JsonSerializerOptions?)null),
                     v => System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, object>>(v, (System.Text.Json.JsonSerializerOptions?)null) ?? new Dictionary<string, object>()
-                );
+                )
+                .Metadata.SetValueComparer(DictionaryValueComparer);
 
             // Workaround: Ignore Metadata as navigation, then re-add as scalar
             entity.Ignore(e => e.Metadata);

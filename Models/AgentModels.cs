@@ -1280,4 +1280,35 @@ public class ApiCapabilitiesResponse
     /// List of available endpoint categories
     /// </summary>
     public List<string> Categories { get; set; } = new();
+}
+
+/// <summary>
+/// Request model for continuous loop conversation
+/// </summary>
+public class ContinuousLoopRequest
+{
+    public string? Task { get; set; } = "Create a continuous self-improvement loop";
+    public int? MaxIterations { get; set; } = 5;
+    public double? ConvergenceThreshold { get; set; } = 0.8;
+    public bool EnableMetaLearning { get; set; } = true;
+}
+
+/// <summary>
+/// Result of a single iteration in the continuous loop
+/// </summary>
+public class IterationResult
+{
+    public int IterationNumber { get; set; }
+    public DateTime StartTime { get; set; }
+    public DateTime EndTime { get; set; }
+    public TimeSpan Duration { get; set; }
+    public string? Plan { get; set; }
+    public string? Execution { get; set; }
+    public string? Evaluation { get; set; }
+    public string? Reflection { get; set; }
+    public double ConvergenceScore { get; set; }
+    public bool ShouldContinue { get; set; }
+    public string? Summary { get; set; }
+    public List<string> ConversationHistory { get; set; } = new();
+    public Dictionary<string, object>? MetaData { get; set; }
 } 

@@ -1,0 +1,14 @@
+{
+  "workflow_request": {
+    "input": {
+      "goal": "Test conversational logging",
+      "context": "Validate agent service logging",
+      "developer_context": "Testing unified logging"
+    },
+    "steps": ["plan", "execute", "check"]
+  },
+  "ollama_request": {
+    "model": "llama3:latest",
+    "prompt": "Hello, test conversational logging"
+  }
+} 
