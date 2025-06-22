@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using UltraGenericSystem.Models;
 using UltraGenericSystem.Services;
+using System.Text;
 
 namespace UltraGenericSystem.Controllers;
 
@@ -13,11 +14,13 @@ public class OllamaController : ControllerBase
 {
     private readonly IOllamaService _ollamaService;
     private readonly ILogger<OllamaController> _logger;
+    private readonly IConversationalLogger _conversationalLogger;
 
-    public OllamaController(IOllamaService ollamaService, ILogger<OllamaController> logger)
+    public OllamaController(IOllamaService ollamaService, ILogger<OllamaController> logger, IConversationalLogger conversationalLogger)
     {
         _ollamaService = ollamaService;
         _logger = logger;
+        _conversationalLogger = conversationalLogger;
     }
 
     /// <summary>
@@ -28,14 +31,28 @@ public class OllamaController : ControllerBase
     {
         try
         {
+            var conversationId = Guid.NewGuid().ToString();
+            _conversationalLogger.LogConversationStart(conversationId, $"Ollama Chat - Model: {request.Model}");
+            
+            // Log user message
+            _conversationalLogger.LogAgentMessage("User", "user", request.Prompt);
+            
             _logger.LogInformation("Sending message to Ollama model: {Model}", request.Model);
             
             var response = await _ollamaService.SendMessageAsync(request, cancellationToken);
+            
+            // Log AI response
+            _conversationalLogger.LogAgentMessage("Ollama AI", "ai", response.Response, $"Response generated in {response.TotalDuration}ms");
+            
+            _logger.LogInformation("Received response from Ollama model: {Model}", request.Model);
+            
+            _conversationalLogger.LogConversationEnd(conversationId, $"Chat completed successfully in {response.TotalDuration}ms");
             
             return Ok(response);
         }
         catch (Exception ex)
         {
+            _conversationalLogger.LogError($"Error sending message to Ollama: {ex.Message}");
             _logger.LogError(ex, "Error sending message to Ollama");
             return StatusCode(500, new { error = ex.Message });
         }
@@ -49,20 +66,34 @@ public class OllamaController : ControllerBase
     {
         try
         {
-            _logger.LogInformation("Sending streaming message to Ollama model: {Model}", request.Model);
+            var conversationId = Guid.NewGuid().ToString();
+            _conversationalLogger.LogConversationStart(conversationId, $"Ollama Streaming Chat - Model: {request.Model}");
             
-            Response.Headers.Add("Content-Type", "text/event-stream");
-            Response.Headers.Add("Cache-Control", "no-cache");
-            Response.Headers.Add("Connection", "keep-alive");
+            // Log user message
+            _conversationalLogger.LogAgentMessage("User", "user", request.Prompt);
+            
+            Response.Headers["Content-Type"] = "text/event-stream";
+            Response.Headers["Cache-Control"] = "no-cache";
+            Response.Headers["Connection"] = "keep-alive";
 
+            var fullResponse = new StringBuilder();
             await foreach (var streamingResponse in _ollamaService.SendStreamingMessageAsync(request, cancellationToken))
             {
                 var json = System.Text.Json.JsonSerializer.Serialize(streamingResponse);
                 await Response.WriteAsync($"data: {json}\n\n", cancellationToken);
                 await Response.Body.FlushAsync(cancellationToken);
                 
+                // Accumulate full response
+                if (!string.IsNullOrEmpty(streamingResponse.Response))
+                {
+                    fullResponse.Append(streamingResponse.Response);
+                }
+                
                 if (streamingResponse.Done)
                 {
+                    // Log complete AI response
+                    _conversationalLogger.LogAgentMessage("Ollama AI", "ai", fullResponse.ToString(), "Streaming response completed");
+                    _conversationalLogger.LogConversationEnd(conversationId, "Streaming chat completed successfully");
                     break;
                 }
             }
@@ -72,6 +103,7 @@ public class OllamaController : ControllerBase
         }
         catch (Exception ex)
         {
+            _conversationalLogger.LogError($"Error in streaming message to Ollama: {ex.Message}");
             _logger.LogError(ex, "Error in streaming message to Ollama");
             return StatusCode(500, new { error = ex.Message });
         }

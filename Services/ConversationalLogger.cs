@@ -55,21 +55,38 @@ public class ConversationalLogger : IConversationalLogger
             var color = _agentColors.ContainsKey(agentType) ? _agentColors[agentType] : _agentColors["default"];
             var icon = _agentIcons.ContainsKey(agentType) ? _agentIcons[agentType] : _agentIcons["default"];
             var header = $"{icon} [bold {color}]{agentName}[/] [grey]({agentType})[/]   [dim]{Timestamp}[/]";
-            var body = $"[white]{message}[/]";
+            
             var footer = !string.IsNullOrEmpty(thinking) ? $"[dim italic]💭 {agentName} thinking: {thinking}[/]" : null;
-            if (UseAnsi)
+            
+            // Check if message contains problematic content that might cause parsing issues
+            bool hasProblematicContent = message.Contains("[PYTHON]") || message.Contains("[JAVASCRIPT]") || 
+                                       message.Contains("[CODE]") || message.Contains("[HTML]") ||
+                                       message.Contains("[CSS]") || message.Contains("[JSON]");
+            
+            if (UseAnsi && !hasProblematicContent)
             {
-                var messageContent = !string.IsNullOrEmpty(thinking) 
-                    ? $"{body}\n\n[dim italic]{footer}[/]"
-                    : body;
-                var panel = new Panel(messageContent)
-                    .Header(header)
-                    .Border(BoxBorder.Rounded)
-                    .BorderColor(color)
-                    .Padding(1, 0)
-                    .Expand();
-                AnsiConsole.Write(panel);
-                AnsiConsole.WriteLine();
+                try
+                {
+                    // Use plain text for message content to avoid parsing issues
+                    var messageContent = !string.IsNullOrEmpty(thinking) 
+                        ? $"{message}\n\n[dim italic]{footer}[/]"
+                        : message;
+                    var panel = new Panel(messageContent)
+                        .Header(header)
+                        .Border(BoxBorder.Rounded)
+                        .BorderColor(color)
+                        .Padding(1, 0)
+                        .Expand();
+                    AnsiConsole.Write(panel);
+                    AnsiConsole.WriteLine();
+                }
+                catch (Exception)
+                {
+                    // Fall back to plain console output if Spectre.Console fails
+                    Console.WriteLine($"[{Timestamp}] {agentName} ({agentType}): {message}");
+                    if (!string.IsNullOrEmpty(thinking))
+                        Console.WriteLine($"[{Timestamp}] 💭 {agentName} thinking: {thinking}");
+                }
             }
             else
             {
@@ -77,6 +94,7 @@ public class ConversationalLogger : IConversationalLogger
                 if (!string.IsNullOrEmpty(thinking))
                     Console.WriteLine($"[{Timestamp}] 💭 {agentName} thinking: {thinking}");
             }
+            
             _conversationBuffer.AppendLine($"{Timestamp} {agentName} ({agentType}): {message}");
             if (!string.IsNullOrEmpty(thinking))
                 _conversationBuffer.AppendLine($"{Timestamp} 💭 {agentName} thinking: {thinking}");
