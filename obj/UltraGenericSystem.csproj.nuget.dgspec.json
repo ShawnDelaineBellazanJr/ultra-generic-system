@@ -54,49 +54,74 @@
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
-              "version": "[12.0.1, )",
+              "version": "[14.0.0, )",
               "versionCentrallyManaged": true
             },
             "FluentValidation": {
               "target": "Package",
-              "version": "[11.8.0, )",
+              "version": "[12.0.0, )",
               "versionCentrallyManaged": true
             },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[9.0.0, )",
+              "version": "[9.0.6, )",
               "versionCentrallyManaged": true
             },
             "Microsoft.CodeAnalysis.CSharp": {
               "target": "Package",
-              "version": "[4.8.0, )",
+              "version": "[4.14.0, )",
               "versionCentrallyManaged": true
             },
             "Microsoft.CodeAnalysis.Workspaces.Common": {
               "target": "Package",
-              "version": "[4.8.0, )",
+              "version": "[4.14.0, )",
               "versionCentrallyManaged": true
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.0, )",
+              "version": "[9.0.6, )",
               "versionCentrallyManaged": true
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[9.0.0, )",
+              "version": "[9.0.6, )",
               "versionCentrallyManaged": true
             },
             "Microsoft.SemanticKernel": {
               "target": "Package",
-              "version": "[1.20.0, )",
+              "version": "[1.57.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.SemanticKernel.Agents.Core": {
+              "target": "Package",
+              "version": "[1.57.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.SemanticKernel.Agents.OpenAI": {
+              "target": "Package",
+              "version": "[1.57.0-preview, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.SemanticKernel.Agents.Orchestration": {
+              "target": "Package",
+              "version": "[1.57.0-preview, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.SemanticKernel.Agents.Runtime.InProcess": {
+              "target": "Package",
+              "version": "[1.57.0-preview, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.SemanticKernel.Connectors.AzureOpenAI": {
+              "target": "Package",
+              "version": "[1.57.0, )",
               "versionCentrallyManaged": true
             },
             "Microsoft.SemanticKernel.Connectors.OpenAI": {
               "target": "Package",
-              "version": "[1.20.0, )",
+              "version": "[1.57.0, )",
               "versionCentrallyManaged": true
             },
             "Newtonsoft.Json": {
@@ -106,47 +131,52 @@
             },
             "Serilog.AspNetCore": {
               "target": "Package",
-              "version": "[8.0.0, )",
+              "version": "[9.0.0, )",
               "versionCentrallyManaged": true
             },
             "Serilog.Sinks.Console": {
               "target": "Package",
-              "version": "[5.0.0, )",
+              "version": "[6.0.0, )",
               "versionCentrallyManaged": true
             },
             "Serilog.Sinks.File": {
               "target": "Package",
-              "version": "[5.0.0, )",
+              "version": "[6.0.0, )",
               "versionCentrallyManaged": true
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.5.0, )",
+              "version": "[9.0.1, )",
               "versionCentrallyManaged": true
             }
           },
           "centralPackageVersions": {
-            "AutoMapper": "12.0.1",
-            "FluentValidation": "11.8.0",
+            "AutoMapper": "14.0.0",
+            "FluentValidation": "12.0.0",
             "Microsoft.AspNetCore.App": "9.0.0",
-            "Microsoft.AspNetCore.OpenApi": "9.0.0",
-            "Microsoft.CodeAnalysis.CSharp": "4.8.0",
-            "Microsoft.CodeAnalysis.Workspaces.Common": "4.8.0",
+            "Microsoft.AspNetCore.OpenApi": "9.0.6",
+            "Microsoft.CodeAnalysis.CSharp": "4.14.0",
+            "Microsoft.CodeAnalysis.Workspaces.Common": "4.14.0",
             "Microsoft.EntityFrameworkCore": "9.0.0",
-            "Microsoft.EntityFrameworkCore.Design": "9.0.0",
-            "Microsoft.EntityFrameworkCore.Sqlite": "9.0.0",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.6",
+            "Microsoft.EntityFrameworkCore.Sqlite": "9.0.6",
             "Microsoft.EntityFrameworkCore.Tools": "9.0.0",
             "Microsoft.Extensions.Logging": "9.0.0",
             "Microsoft.NET.Sdk": "9.0.100",
             "Microsoft.NET.Test.Sdk": "17.8.0",
-            "Microsoft.SemanticKernel": "1.20.0",
-            "Microsoft.SemanticKernel.Connectors.OpenAI": "1.20.0",
+            "Microsoft.SemanticKernel": "1.57.0",
+            "Microsoft.SemanticKernel.Agents.Core": "1.57.0",
+            "Microsoft.SemanticKernel.Agents.OpenAI": "1.57.0-preview",
+            "Microsoft.SemanticKernel.Agents.Orchestration": "1.57.0-preview",
+            "Microsoft.SemanticKernel.Agents.Runtime.InProcess": "1.57.0-preview",
+            "Microsoft.SemanticKernel.Connectors.AzureOpenAI": "1.57.0",
+            "Microsoft.SemanticKernel.Connectors.OpenAI": "1.57.0",
             "Moq": "4.20.69",
             "Newtonsoft.Json": "13.0.3",
-            "Serilog.AspNetCore": "8.0.0",
-            "Serilog.Sinks.Console": "5.0.0",
-            "Serilog.Sinks.File": "5.0.0",
-            "Swashbuckle.AspNetCore": "6.5.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Console": "6.0.0",
+            "Serilog.Sinks.File": "6.0.0",
+            "Swashbuckle.AspNetCore": "9.0.1",
             "xunit": "2.6.0",
             "xunit.runner.visualstudio": "2.5.0"
           },
