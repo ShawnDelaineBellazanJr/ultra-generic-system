@@ -136,6 +136,15 @@ public class Program
                 sp.GetRequiredService<ICodeGenerationService>(),
                 sp.GetRequiredService<ILogger<DynamicPluginService>>()));
 
+        builder.Services.AddScoped<IStrangeLoopService, StrangeLoopService>(sp =>
+            new StrangeLoopService(
+                sp.GetRequiredService<ICodeGenerationService>(),
+                sp.GetRequiredService<IDynamicPluginService>(),
+                sp.GetRequiredService<IGenericRepository<Agent>>(),
+                sp.GetRequiredService<IGenericRepository<Skill>>(),
+                sp.GetRequiredService<IGenericRepository<SelfEvolutionConfig>>(),
+                sp.GetRequiredService<ILogger<StrangeLoopService>>()));
+
         // Register agent services for all entity types
         RegisterGenericServices(builder.Services);
 

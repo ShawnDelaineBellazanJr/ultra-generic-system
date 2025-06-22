@@ -13,15 +13,18 @@ public class SelfEvolutionController : ControllerBase
 {
     private readonly ICodeGenerationService _codeGenerationService;
     private readonly IDynamicPluginService _pluginService;
+    private readonly IStrangeLoopService _strangeLoopService;
     private readonly ILogger<SelfEvolutionController> _logger;
 
     public SelfEvolutionController(
         ICodeGenerationService codeGenerationService,
         IDynamicPluginService pluginService,
+        IStrangeLoopService strangeLoopService,
         ILogger<SelfEvolutionController> logger)
     {
         _codeGenerationService = codeGenerationService;
         _pluginService = pluginService;
+        _strangeLoopService = strangeLoopService;
         _logger = logger;
     }
 
@@ -503,6 +506,85 @@ public class SelfEvolutionController : ControllerBase
         catch (Exception ex)
         {
             _logger.LogError(ex, "Error checking plugin compatibility");
+            return BadRequest(new { error = ex.Message });
+        }
+    }
+
+    #endregion
+
+    #region Strange Loop Endpoints
+
+    /// <summary>
+    /// Execute the strange loop: agent modifies itself
+    /// </summary>
+    [HttpPost("strange-loop")]
+    public async Task<ActionResult<StrangeLoopResult>> ExecuteStrangeLoop([FromBody] StrangeLoopRequest request)
+    {
+        try
+        {
+            _logger.LogInformation("Executing strange loop for agent: {AgentId}", request.AgentId);
+            
+            var result = await _strangeLoopService.ExecuteStrangeLoopAsync(request);
+            
+            return Ok(result);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error executing strange loop");
+            return BadRequest(new { error = ex.Message });
+        }
+    }
+
+    /// <summary>
+    /// Get evolution history for an agent
+    /// </summary>
+    [HttpGet("strange-loop/history/{agentId}")]
+    public async Task<ActionResult<List<StrangeLoopResult>>> GetEvolutionHistory(string agentId)
+    {
+        try
+        {
+            var history = await _strangeLoopService.GetEvolutionHistoryAsync(agentId);
+            return Ok(history);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error getting evolution history");
+            return BadRequest(new { error = ex.Message });
+        }
+    }
+
+    /// <summary>
+    /// Check if agent is ready for evolution
+    /// </summary>
+    [HttpGet("strange-loop/ready/{agentId}")]
+    public async Task<ActionResult<bool>> IsAgentReadyForEvolution(string agentId)
+    {
+        try
+        {
+            var isReady = await _strangeLoopService.IsAgentReadyForEvolutionAsync(agentId);
+            return Ok(isReady);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error checking agent readiness");
+            return BadRequest(new { error = ex.Message });
+        }
+    }
+
+    /// <summary>
+    /// Get evolution statistics
+    /// </summary>
+    [HttpGet("strange-loop/statistics")]
+    public async Task<ActionResult<EvolutionStatistics>> GetEvolutionStatistics()
+    {
+        try
+        {
+            var stats = await _strangeLoopService.GetEvolutionStatisticsAsync();
+            return Ok(stats);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error getting evolution statistics");
             return BadRequest(new { error = ex.Message });
         }
     }

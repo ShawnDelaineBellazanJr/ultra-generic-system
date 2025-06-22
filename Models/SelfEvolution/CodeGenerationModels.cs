@@ -241,4 +241,200 @@ public class CodeIssue
     public string? FilePath { get; set; }
     
     public string? SuggestedFix { get; set; }
+}
+
+// Strange Loop Models
+
+/// <summary>
+/// Request to execute the strange loop of self-evolution
+/// </summary>
+public class StrangeLoopRequest
+{
+    public string AgentId { get; set; } = string.Empty;
+    
+    public string EvolutionType { get; set; } = "SelfModification"; // SelfModification, CapabilityEnhancement, PerformanceOptimization
+    
+    public Dictionary<string, object> Parameters { get; set; } = new();
+    
+    public bool EnableHumanApproval { get; set; } = false;
+    
+    public TimeSpan Timeout { get; set; } = TimeSpan.FromMinutes(10);
+    
+    public int MaxEvolutionSteps { get; set; } = 10;
+}
+
+/// <summary>
+/// Result of strange loop execution
+/// </summary>
+public class StrangeLoopResult
+{
+    public string LoopId { get; set; } = string.Empty;
+    
+    public bool Success { get; set; }
+    
+    public string? ErrorMessage { get; set; }
+    
+    public DateTime StartTime { get; set; }
+    
+    public DateTime EndTime { get; set; }
+    
+    public TimeSpan TotalDuration { get; set; }
+    
+    public List<EvolutionStep> EvolutionSteps { get; set; } = new();
+    
+    public Dictionary<string, object> Metadata { get; set; } = new();
+}
+
+/// <summary>
+/// A single step in the evolution process
+/// </summary>
+public class EvolutionStep
+{
+    public string StepName { get; set; } = string.Empty;
+    
+    public string Description { get; set; } = string.Empty;
+    
+    public bool Success { get; set; }
+    
+    public string? ErrorMessage { get; set; }
+    
+    public DateTime StartTime { get; set; }
+    
+    public DateTime EndTime { get; set; }
+    
+    public TimeSpan Duration { get; set; }
+    
+    public object? Output { get; set; }
+    
+    public Dictionary<string, object> Metadata { get; set; } = new();
+}
+
+/// <summary>
+/// Improvement opportunity identified by agent
+/// </summary>
+public class ImprovementOpportunity
+{
+    public string Type { get; set; } = string.Empty; // Performance, Capability, AI Enhancement
+    
+    public string Description { get; set; } = string.Empty;
+    
+    public string Priority { get; set; } = string.Empty; // High, Medium, Low
+    
+    public string EstimatedImpact { get; set; } = string.Empty;
+    
+    public double Confidence { get; set; } = 0.8;
+    
+    public Dictionary<string, object> Parameters { get; set; } = new();
+}
+
+/// <summary>
+/// Design for a new capability
+/// </summary>
+public class CapabilityDesign
+{
+    public string Name { get; set; } = string.Empty;
+    
+    public string Description { get; set; } = string.Empty;
+    
+    public string Type { get; set; } = string.Empty;
+    
+    public string Priority { get; set; } = string.Empty;
+    
+    public string SourceCode { get; set; } = string.Empty;
+    
+    public List<string> Dependencies { get; set; } = new();
+    
+    public Dictionary<string, string> Configuration { get; set; } = new();
+}
+
+/// <summary>
+/// Generated capability with compilation result
+/// </summary>
+public class GeneratedCapability
+{
+    public string Name { get; set; } = string.Empty;
+    
+    public string Type { get; set; } = string.Empty;
+    
+    public string GeneratedCode { get; set; } = string.Empty;
+    
+    public CompilationResult? CompilationResult { get; set; }
+    
+    public byte[]? AssemblyBytes { get; set; }
+    
+    public bool CompilationSuccess { get; set; }
+}
+
+/// <summary>
+/// Loaded capability in the system
+/// </summary>
+public class LoadedCapability
+{
+    public string Name { get; set; } = string.Empty;
+    
+    public string Type { get; set; } = string.Empty;
+    
+    public string PluginId { get; set; } = string.Empty;
+    
+    public bool LoadSuccess { get; set; }
+    
+    public DateTime LoadTime { get; set; }
+    
+    public string? ErrorMessage { get; set; }
+}
+
+/// <summary>
+/// Test result for a capability
+/// </summary>
+public class CapabilityTestResult
+{
+    public string CapabilityName { get; set; } = string.Empty;
+    
+    public DateTime TestTime { get; set; }
+    
+    public bool Success { get; set; }
+    
+    public Dictionary<string, object> PerformanceMetrics { get; set; } = new();
+    
+    public string? ErrorMessage { get; set; }
+}
+
+/// <summary>
+/// Reflection on the evolution process
+/// </summary>
+public class EvolutionReflection
+{
+    public DateTime EvolutionDate { get; set; }
+    
+    public int NewCapabilitiesCount { get; set; }
+    
+    public double SuccessRate { get; set; }
+    
+    public double PerformanceImprovement { get; set; }
+    
+    public List<string> FutureImprovements { get; set; } = new();
+    
+    public string SelfAssessment { get; set; } = string.Empty;
+}
+
+/// <summary>
+/// Evolution statistics
+/// </summary>
+public class EvolutionStatistics
+{
+    public int TotalEvolutions { get; set; }
+    
+    public int SuccessfulEvolutions { get; set; }
+    
+    public int FailedEvolutions { get; set; }
+    
+    public double SuccessRate { get; set; }
+    
+    public TimeSpan AverageEvolutionTime { get; set; }
+    
+    public int TotalNewCapabilities { get; set; }
+    
+    public Dictionary<string, int> EvolutionTypes { get; set; } = new();
+    
+    public List<string> MostCommonImprovements { get; set; } = new();
 } 
