@@ -124,6 +124,21 @@
               "version": "[1.57.0, )",
               "versionCentrallyManaged": true
             },
+            "NSwag.CodeGeneration.CSharp": {
+              "target": "Package",
+              "version": "[14.0.0, )",
+              "versionCentrallyManaged": true
+            },
+            "NSwag.CodeGeneration.TypeScript": {
+              "target": "Package",
+              "version": "[14.0.0, )",
+              "versionCentrallyManaged": true
+            },
+            "NSwag.MSBuild": {
+              "target": "Package",
+              "version": "[14.0.0, )",
+              "versionCentrallyManaged": true
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )",
@@ -178,6 +193,9 @@
             "Microsoft.SemanticKernel.Connectors.OpenAI": "1.57.0",
             "Moq": "4.20.69",
             "Newtonsoft.Json": "13.0.3",
+            "NSwag.CodeGeneration.CSharp": "14.0.0",
+            "NSwag.CodeGeneration.TypeScript": "14.0.0",
+            "NSwag.MSBuild": "14.0.0",
             "Serilog.AspNetCore": "9.0.0",
             "Serilog.Sinks.Console": "6.0.0",
             "Serilog.Sinks.File": "7.0.0",

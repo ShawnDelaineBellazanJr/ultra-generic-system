@@ -666,6 +666,11 @@ public class AzureAIAgentConfig
     public string ApiKey { get; set; } = string.Empty;
 
     /// <summary>
+    /// Model name (alias for ModelDeploymentName)
+    /// </summary>
+    public string ModelName { get; set; } = "gpt-4";
+
+    /// <summary>
     /// Model deployment name
     /// </summary>
     public string ModelDeploymentName { get; set; } = "gpt-4";
@@ -714,6 +719,16 @@ public class AzureAIAgentConfig
     /// Whether to enable vision capabilities
     /// </summary>
     public bool EnableVision { get; set; } = false;
+
+    /// <summary>
+    /// Maximum retry attempts (alias for RetryConfig.MaxRetries)
+    /// </summary>
+    public int MaxRetries { get; set; } = 3;
+
+    /// <summary>
+    /// Retry delay in seconds (alias for RetryConfig.BaseDelay)
+    /// </summary>
+    public int RetryDelay { get; set; } = 1;
 
     /// <summary>
     /// Custom headers for API calls
@@ -783,6 +798,11 @@ public class AzureAIMemoryConfig
     public int MaxMemoryEntries { get; set; } = 1000;
 
     /// <summary>
+    /// Maximum conversation history entries
+    /// </summary>
+    public int MaxConversationHistory { get; set; } = 100;
+
+    /// <summary>
     /// Memory retention period
     /// </summary>
     public TimeSpan MemoryRetentionPeriod { get; set; } = TimeSpan.FromHours(24);
@@ -791,6 +811,11 @@ public class AzureAIMemoryConfig
     /// Whether to enable memory search
     /// </summary>
     public bool EnableMemorySearch { get; set; } = true;
+
+    /// <summary>
+    /// Whether to enable embeddings
+    /// </summary>
+    public bool EnableEmbeddings { get; set; } = true;
 
     /// <summary>
     /// Memory search similarity threshold

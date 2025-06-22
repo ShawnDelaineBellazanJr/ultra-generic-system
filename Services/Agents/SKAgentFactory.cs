@@ -58,6 +58,24 @@ public class SKAgentFactory
     }
 
     /// <summary>
+    /// Creates an agent asynchronously (alias for CreateChatCompletionAgent for compatibility)
+    /// </summary>
+    public async Task<ChatCompletionAgent> CreateAgentAsync(
+        string name,
+        string instructions,
+        Dictionary<string, object>? arguments = null)
+    {
+        _logger.LogInformation("Creating agent asynchronously: {Name}", name);
+        
+        var agent = CreateChatCompletionAgent(name, instructions, arguments);
+        
+        // Simulate async operation
+        await Task.Delay(1);
+        
+        return agent;
+    }
+
+    /// <summary>
     /// Creates basic orchestration patterns
     /// </summary>
     public OrchestrationPatterns CreateOrchestrationPatterns(IEnumerable<ChatCompletionAgent> agents)

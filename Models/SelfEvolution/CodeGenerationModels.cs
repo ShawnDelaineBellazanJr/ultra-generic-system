@@ -325,6 +325,11 @@ public class ImprovementOpportunity
     public double Confidence { get; set; } = 0.8;
     
     public Dictionary<string, object> Parameters { get; set; } = new();
+    
+    // Additional properties for MetaAgentSelfEvolution compatibility
+    public Impact Impact { get; set; } = Impact.Medium;
+    
+    public Effort Effort { get; set; } = Effort.Medium;
 }
 
 /// <summary>

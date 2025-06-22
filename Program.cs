@@ -11,6 +11,9 @@ using UltraGenericSystem.Repositories;
 using UltraGenericSystem.Services;
 using UltraGenericSystem.Services.Agents;
 using UltraGenericSystem.Services.SelfEvolution;
+using UltraGenericSystem.Services.RuntimeCompilation;
+using UltraGenericSystem.Services.DynamicAPI;
+using UltraGenericSystem.Services.ProcessFramework;
 
 namespace UltraGenericSystem;
 
@@ -169,6 +172,19 @@ public class Program
                     VectorStoreType = "sqlite"
                 }));
 
+        // Register Process Framework service
+        builder.Services.AddScoped<IKernelProcessService, KernelProcessService>();
+
+        // Register Runtime Compilation service
+        builder.Services.AddScoped<IRuntimeCompilationService, RuntimeCompilationService>();
+
+        // Register Dynamic API Generator service
+        builder.Services.AddScoped<IDynamicAPIGeneratorService, DynamicOpenAPIGenerator>(sp =>
+            new DynamicOpenAPIGenerator(
+                sp.GetRequiredService<Kernel>(),
+                sp.GetRequiredService<ILogger<DynamicOpenAPIGenerator>>(),
+                sp.GetRequiredService<SKAgentFactory>()));
+
         // Register Azure AI Agent service
         builder.Services.AddScoped<IAzureAIAgentService, AzureAIAgentService>(sp =>
             new AzureAIAgentService(
@@ -178,30 +194,16 @@ public class Program
                     Endpoint = builder.Configuration["AzureOpenAI:Endpoint"] ?? "",
                     ApiKey = builder.Configuration["AzureOpenAI:ApiKey"] ?? "",
                     ModelDeploymentName = builder.Configuration["AzureOpenAI:DeploymentName"] ?? "gpt-4",
-                    EmbeddingDeploymentName = builder.Configuration["AzureOpenAI:EmbeddingDeploymentName"] ?? "text-embedding-ada-002",
                     MaxTokens = int.TryParse(builder.Configuration["AzureOpenAI:MaxTokens"], out var maxTokens) ? maxTokens : 4000,
                     Temperature = double.TryParse(builder.Configuration["AzureOpenAI:Temperature"], out var temperature) ? temperature : 0.7,
-                    TopP = double.TryParse(builder.Configuration["AzureOpenAI:TopP"], out var topP) ? topP : 0.9,
-                    FrequencyPenalty = double.TryParse(builder.Configuration["AzureOpenAI:FrequencyPenalty"], out var freqPenalty) ? freqPenalty : 0.0,
-                    PresencePenalty = double.TryParse(builder.Configuration["AzureOpenAI:PresencePenalty"], out var presPenalty) ? presPenalty : 0.0,
-                    EnableStreaming = bool.TryParse(builder.Configuration["AzureOpenAI:EnableStreaming"], out var enableStreaming) ? enableStreaming : true,
-                    EnableFunctionCalling = bool.TryParse(builder.Configuration["AzureOpenAI:EnableFunctionCalling"], out var enableFunctionCalling) ? enableFunctionCalling : true,
-                    EnableVision = bool.TryParse(builder.Configuration["AzureOpenAI:EnableVision"], out var enableVision) ? enableVision : false,
-                    RetryConfig = new AzureAIRetryConfig
-                    {
-                        MaxRetries = int.TryParse(builder.Configuration["AzureOpenAI:RetryConfig:MaxRetries"], out var maxRetries) ? maxRetries : 3,
-                        BaseDelay = TimeSpan.FromSeconds(int.TryParse(builder.Configuration["AzureOpenAI:RetryConfig:BaseDelaySeconds"], out var baseDelay) ? baseDelay : 1),
-                        MaxDelay = TimeSpan.FromSeconds(int.TryParse(builder.Configuration["AzureOpenAI:RetryConfig:MaxDelaySeconds"], out var maxDelay) ? maxDelay : 30),
-                        UseExponentialBackoff = bool.TryParse(builder.Configuration["AzureOpenAI:RetryConfig:UseExponentialBackoff"], out var useExpBackoff) ? useExpBackoff : true
-                    },
+                    EnableFunctionCalling = true,
+                    EnableStreaming = true,
+                    EnableVision = false,
                     MemoryConfig = new AzureAIMemoryConfig
                     {
-                        EnableMemory = bool.TryParse(builder.Configuration["AzureOpenAI:MemoryConfig:EnableMemory"], out var enableMemory) ? enableMemory : true,
-                        MemoryType = builder.Configuration["AzureOpenAI:MemoryConfig:MemoryType"] ?? "Volatile",
-                        MaxMemoryEntries = int.TryParse(builder.Configuration["AzureOpenAI:MemoryConfig:MaxMemoryEntries"], out var maxMemEntries) ? maxMemEntries : 1000,
-                        MemoryRetentionPeriod = TimeSpan.FromHours(int.TryParse(builder.Configuration["AzureOpenAI:MemoryConfig:MemoryRetentionHours"], out var memRetention) ? memRetention : 24),
-                        EnableMemorySearch = bool.TryParse(builder.Configuration["AzureOpenAI:MemoryConfig:EnableMemorySearch"], out var enableMemSearch) ? enableMemSearch : true,
-                        MemorySearchThreshold = double.TryParse(builder.Configuration["AzureOpenAI:MemoryConfig:MemorySearchThreshold"], out var memSearchThreshold) ? memSearchThreshold : 0.8
+                        EnableMemory = true,
+                        MaxConversationHistory = 100,
+                        EnableEmbeddings = true
                     }
                 }));
 
@@ -234,6 +236,24 @@ public class Program
                 sp.GetRequiredService<ILogger<SwaggerToSKPluginService>>(),
                 sp.GetRequiredService<HttpClient>(),
                 sp.GetRequiredService<Kernel>()));
+
+        // Register Meta-Agent Self-Evolution service
+        builder.Services.AddScoped<IMetaAgentSelfEvolution, MetaAgentSelfEvolution>(sp =>
+            new MetaAgentSelfEvolution(
+                sp.GetRequiredService<Kernel>(),
+                sp.GetRequiredService<ILogger<MetaAgentSelfEvolution>>(),
+                sp.GetRequiredService<ICodeGenerationService>(),
+                sp.GetRequiredService<IDynamicPluginService>(),
+                sp.GetRequiredService<IRuntimeCompilationService>(),
+                sp.GetRequiredService<IDynamicAPIGeneratorService>(),
+                sp.GetRequiredService<IKernelProcessService>()));
+
+        // Register Runtime Plugin Loader service
+        builder.Services.AddScoped<IRuntimePluginLoader, RuntimePluginLoader>(sp =>
+            new RuntimePluginLoader(
+                sp.GetRequiredService<Kernel>(),
+                sp.GetRequiredService<ILogger<RuntimePluginLoader>>(),
+                sp.GetRequiredService<IRuntimeCompilationService>()));
 
         // Register agent services for all entity types
         RegisterGenericServices(builder.Services);

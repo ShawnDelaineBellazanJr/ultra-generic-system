@@ -33,6 +33,9 @@
     <PackageReference Include="AutoMapper" />
     <PackageReference Include="FluentValidation" />
     <PackageReference Include="Newtonsoft.Json" />
+    <PackageReference Include="NSwag.CodeGeneration.CSharp" />
+    <PackageReference Include="NSwag.CodeGeneration.TypeScript" />
+    <PackageReference Include="NSwag.MSBuild" />
   </ItemGroup>
 
 </Project> 
