@@ -22,6 +22,13 @@ public class UltraGenericContext : DbContext
     public DbSet<DynamicSkill> DynamicSkills { get; set; }
     public DbSet<DocumentationEntry> DocumentationEntries { get; set; }
 
+    // Memory DbSets
+    public DbSet<MemoryEntry> MemoryEntries { get; set; }
+    public DbSet<WhiteboardMemory> WhiteboardMemories { get; set; }
+    public DbSet<VectorEmbedding> VectorEmbeddings { get; set; }
+    public DbSet<Document> Documents { get; set; }
+    public DbSet<DocumentChunk> DocumentChunks { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
@@ -37,6 +44,13 @@ public class UltraGenericContext : DbContext
         ConfigureKnowledgeEntry(modelBuilder);
         ConfigureDynamicSkill(modelBuilder);
         ConfigureDocumentationEntry(modelBuilder);
+
+        // Configure memory entities
+        ConfigureMemoryEntry(modelBuilder);
+        ConfigureWhiteboardMemory(modelBuilder);
+        ConfigureVectorEmbedding(modelBuilder);
+        ConfigureDocument(modelBuilder);
+        ConfigureDocumentChunk(modelBuilder);
 
         // Configure relationships
         ConfigureRelationships(modelBuilder);
@@ -357,6 +371,192 @@ public class UltraGenericContext : DbContext
             entity.HasIndex(e => e.Category);
             entity.HasIndex(e => e.IsPublished);
             entity.HasIndex(e => e.Author);
+        });
+    }
+
+    private void ConfigureMemoryEntry(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<MemoryEntry>(entity =>
+        {
+            entity.ToTable("MemoryEntries");
+
+            entity.Property(e => e.Key)
+                .IsRequired()
+                .HasMaxLength(500);
+
+            entity.Property(e => e.Content)
+                .IsRequired()
+                .HasColumnType("TEXT");
+
+            entity.Property(e => e.Description)
+                .HasMaxLength(1000);
+
+            entity.Property(e => e.Source)
+                .HasMaxLength(100);
+
+            entity.Property(e => e.Collection)
+                .HasMaxLength(100);
+
+            entity.Property(e => e.Embedding)
+                .HasConversion(
+                    v => System.Text.Json.JsonSerializer.Serialize(v, (System.Text.Json.JsonSerializerOptions?)null),
+                    v => System.Text.Json.JsonSerializer.Deserialize<List<float>>(v, (System.Text.Json.JsonSerializerOptions?)null) ?? new List<float>()
+                );
+
+            entity.Property(e => e.SimilarityScore);
+
+            entity.Property(e => e.LastAccessed);
+
+            entity.Property(e => e.AccessCount)
+                .HasDefaultValue(0);
+
+            // Indexes
+            entity.HasIndex(e => e.Key).IsUnique();
+            entity.HasIndex(e => e.Collection);
+            entity.HasIndex(e => e.Source);
+            entity.HasIndex(e => e.LastAccessed);
+            entity.HasIndex(e => e.AccessCount);
+        });
+    }
+
+    private void ConfigureWhiteboardMemory(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<WhiteboardMemory>(entity =>
+        {
+            entity.ToTable("WhiteboardMemories");
+
+            entity.Property(e => e.SessionId)
+                .IsRequired()
+                .HasMaxLength(100);
+
+            entity.Property(e => e.AgentId)
+                .IsRequired()
+                .HasMaxLength(100);
+
+            entity.Property(e => e.Content)
+                .IsRequired()
+                .HasColumnType("TEXT");
+
+            entity.Property(e => e.MessageType)
+                .HasMaxLength(100);
+
+            entity.Property(e => e.Timestamp);
+
+            entity.Property(e => e.IsShared)
+                .HasDefaultValue(false);
+
+            // Indexes
+            entity.HasIndex(e => e.SessionId);
+            entity.HasIndex(e => e.AgentId);
+            entity.HasIndex(e => e.Timestamp);
+            entity.HasIndex(e => e.IsShared);
+        });
+    }
+
+    private void ConfigureVectorEmbedding(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<VectorEmbedding>(entity =>
+        {
+            entity.ToTable("VectorEmbeddings");
+
+            entity.Property(e => e.Text)
+                .IsRequired()
+                .HasColumnType("TEXT");
+
+            entity.Property(e => e.Embedding)
+                .IsRequired()
+                .HasConversion(
+                    v => System.Text.Json.JsonSerializer.Serialize(v, (System.Text.Json.JsonSerializerOptions?)null),
+                    v => System.Text.Json.JsonSerializer.Deserialize<List<float>>(v, (System.Text.Json.JsonSerializerOptions?)null) ?? new List<float>()
+                );
+
+            entity.Property(e => e.Model)
+                .HasMaxLength(100);
+
+            entity.Property(e => e.Collection)
+                .HasMaxLength(100);
+
+            entity.Property(e => e.CreatedAt);
+
+            // Indexes
+            entity.HasIndex(e => e.Collection);
+            entity.HasIndex(e => e.Model);
+            entity.HasIndex(e => e.CreatedAt);
+        });
+    }
+
+    private void ConfigureDocument(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Document>(entity =>
+        {
+            entity.ToTable("Documents");
+
+            entity.Property(e => e.Title)
+                .IsRequired()
+                .HasMaxLength(500);
+
+            entity.Property(e => e.Content)
+                .IsRequired()
+                .HasColumnType("TEXT");
+
+            entity.Property(e => e.Type)
+                .HasMaxLength(100);
+
+            entity.Property(e => e.Source)
+                .HasMaxLength(100);
+
+            entity.Property(e => e.Url)
+                .HasMaxLength(1000);
+
+            entity.Property(e => e.IsProcessed)
+                .HasDefaultValue(false);
+
+            entity.Property(e => e.ProcessedAt);
+
+            // Indexes
+            entity.HasIndex(e => e.Title);
+            entity.HasIndex(e => e.Type);
+            entity.HasIndex(e => e.Source);
+            entity.HasIndex(e => e.IsProcessed);
+            entity.HasIndex(e => e.ProcessedAt);
+        });
+    }
+
+    private void ConfigureDocumentChunk(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<DocumentChunk>(entity =>
+        {
+            entity.ToTable("DocumentChunks");
+
+            entity.Property(e => e.Content)
+                .IsRequired()
+                .HasColumnType("TEXT");
+
+            entity.Property(e => e.ChunkIndex);
+
+            entity.Property(e => e.StartPosition);
+
+            entity.Property(e => e.EndPosition);
+
+            entity.Property(e => e.Embedding)
+                .HasConversion(
+                    v => System.Text.Json.JsonSerializer.Serialize(v, (System.Text.Json.JsonSerializerOptions?)null),
+                    v => System.Text.Json.JsonSerializer.Deserialize<List<float>>(v, (System.Text.Json.JsonSerializerOptions?)null) ?? new List<float>()
+                );
+
+            entity.Property(e => e.DocumentId);
+
+            // Foreign key relationship
+            entity.HasOne(e => e.Document)
+                .WithMany(d => d.Chunks)
+                .HasForeignKey(e => e.DocumentId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            // Indexes
+            entity.HasIndex(e => e.DocumentId);
+            entity.HasIndex(e => e.ChunkIndex);
+            entity.HasIndex(e => e.StartPosition);
+            entity.HasIndex(e => e.EndPosition);
         });
     }
 

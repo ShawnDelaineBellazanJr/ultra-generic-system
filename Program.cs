@@ -65,6 +65,25 @@ public class Program
         // Register SK Agent Factory
         builder.Services.AddScoped<SKAgentFactory>();
 
+        // Register memory service
+        builder.Services.AddScoped<IMemoryService, MemoryService>(sp =>
+            new MemoryService(
+                sp.GetRequiredService<Kernel>(),
+                sp.GetRequiredService<IUnitOfWork>(),
+                sp.GetRequiredService<ILogger<MemoryService>>(),
+                new MemoryConfig
+                {
+                    EnableMem0 = true,
+                    EnableWhiteboard = true,
+                    EnableRAG = true,
+                    MaxMemoryEntries = 10000,
+                    MaxWhiteboardEntries = 1000,
+                    MaxRAGResults = 10,
+                    MinSimilarityThreshold = 0.7,
+                    EmbeddingModel = "text-embedding-ada-002",
+                    VectorStoreType = "sqlite"
+                }));
+
         // Register agent services for all entity types
         RegisterGenericServices(builder.Services);
 
