@@ -1,348 +1,315 @@
-# SK Ultra-Generic Evolution Plan
+# SK Ultra-Generic System Evolution Plan
 
 ## Overview
-This document outlines the evolution of the Ultra-Generic System into a meta-programmable, self-evolving AI architecture using Semantic Kernel (SK) agents, advanced orchestration patterns, and .NET 9/C# 13 with Aspire 9.3.
+This document outlines the evolution of the Ultra-Generic System into a meta-programmable, self-evolving AI architecture using Semantic Kernel (SK), Roslyn, NSwag/OpenAPI, Prompty templates, and .NET 9/C# 13.
 
-## Current Implementation Status
+## Architecture Goals
+- **Zero Manual Code**: New entities require no manual controller/service/repository code
+- **Single Generic Controller**: One controller handles all entity operations
+- **Agent Orchestration**: Multi-agent coordination for complex operations
+- **Runtime Self-Modification**: System can modify its own code and behavior
+- **Meta-Programming**: System can generate and execute new code patterns
+
+## Evolution Phases
 
 ### ✅ Phase 1: Foundation (COMPLETED)
-- [x] BaseEntity with metadata support
-- [x] Generic Repository pattern with IUnitOfWork
-- [x] Agent request/response models
-- [x] Generic agent service interface and implementation
-- [x] Basic SK Agent Framework integration
+**Status**: Complete
+**Branch**: `main`
 
-### ✅ Phase 2: SK Agent Integration (COMPLETED)
-- [x] Streaming SK agent base class
-- [x] Concrete streaming agents (Orchestrator, Planner, Maker, Checker, Reflector)
-- [x] SK agent factory with orchestration patterns
-- [x] Agent orchestrator with runtime management
-- [x] Build fixes and API compatibility
+**Components**:
+- ✅ BaseEntity with audit fields
+- ✅ Generic Repository pattern
+- ✅ Unit of Work pattern
+- ✅ Agent models and interfaces
+- ✅ Basic SK integration
+- ✅ Generic controller with CRUD operations
+- ✅ Entity Framework with SQLite
+- ✅ Dependency injection setup
 
-### ✅ Phase 3: Advanced Orchestration Features (COMPLETED)
-- [x] **Structured Data Support**
-  - [x] StructuredInput<T> and StructuredOutput<T> models
-  - [x] Advanced orchestration configuration
-  - [x] Custom input/output transforms
-  - [x] Type-safe orchestration patterns
+**Key Features**:
+- Generic CRUD operations for any entity
+- Audit trail (Created/Updated/Deleted)
+- Soft delete support
+- Pagination and filtering
+- Basic SK kernel integration
 
-- [x] **Response Callbacks**
-  - [x] ResponseCallback delegate for monitoring agent responses
-  - [x] InteractiveCallback for human-in-the-loop scenarios
-  - [x] Real-time agent response logging
-  - [x] Configurable callback settings
+### ✅ Phase 2: Advanced SK Agent Orchestration (COMPLETED)
+**Status**: Complete
+**Branch**: `feature/advanced-orchestration`
 
-- [x] **Human-in-the-Loop**
-  - [x] HumanInTheLoopConfig with approval workflows
-  - [x] User input timeout management
-  - [x] Allowed user actions configuration
-  - [x] Interactive orchestration patterns
+**Components**:
+- ✅ Enhanced SKAgentFactory with orchestration patterns
+- ✅ AgentOrchestrator with advanced capabilities
+- ✅ Streaming SK agents (Planner, Maker, Checker, Reflector, Orchestrator)
+- ✅ Advanced orchestration patterns (Sequential, Concurrent, GroupChat, Handoff)
+- ✅ Structured data support with input/output transforms
+- ✅ Response callbacks and human-in-the-loop capabilities
+- ✅ Timeout and cancellation support
+- ✅ Workflow execution and entity analysis
+- ✅ AdvancedOrchestrationController with REST endpoints
 
-- [x] **Advanced Orchestration Patterns**
-  - [x] Sequential orchestration for pipeline workflows
-  - [x] Concurrent orchestration for parallel processing
-  - [x] GroupChat orchestration for collaborative problem solving
-  - [x] Handoff orchestration for dynamic agent routing
+**Key Features**:
+- Multi-agent orchestration with different patterns
+- Real-time streaming responses
+- Structured data processing
+- Human-in-the-loop workflows
+- Advanced timeout and error handling
+- Entity analysis and recommendations
 
-- [x] **Timeout and Cancellation Support**
-  - [x] Configurable timeouts per operation
-  - [x] Cancellation token support
-  - [x] Graceful timeout handling
-  - [x] Background operation management
+### ✅ Phase 3: SK Memory and RAG Integration (COMPLETED)
+**Status**: Complete
+**Branch**: `feature/sk-memory-rag-integration`
 
-- [x] **Workflow Execution**
-  - [x] Multi-step workflow support
-  - [x] Workflow execution tracking
-  - [x] Step-by-step result aggregation
-  - [x] Error handling and recovery
+**Components**:
+- ✅ Memory models (MemoryEntry, WhiteboardMemory, VectorEmbedding, Document, DocumentChunk)
+- ✅ MemoryService with SK Memory integration
+- ✅ RAG (Retrieval-Augmented Generation) capabilities
+- ✅ Vector similarity search
+- ✅ Document processing and chunking
+- ✅ MemoryController with REST API endpoints
+- ✅ Database schema updates for memory storage
 
-- [x] **Entity Analysis**
-  - [x] Generic entity analysis framework
-  - [x] Confidence scoring
-  - [x] Recommendations and warnings
-  - [x] Analysis result metadata
+**Key Features**:
+- Persistent memory storage with embeddings
+- Whiteboard memory for agent collaboration
+- Document processing and RAG queries
+- Vector similarity search
+- Memory statistics and cleanup
 
-- [x] **Advanced Controller**
-  - [x] AdvancedOrchestrationController with REST endpoints
-  - [x] Structured orchestration API
-  - [x] Workflow execution API
-  - [x] Entity analysis API
-  - [x] Human-in-the-loop API
-  - [x] Custom transforms API
-  - [x] Cancellable operations API
+### ✅ Phase 4: Azure AI Agent Integration (COMPLETED)
+**Status**: Complete
+**Branch**: `feature/azure-ai-agent-integration`
 
-## Architecture Components
+**Components**:
+- ✅ Azure AI Agent models and configuration
+- ✅ AzureAIAgentService with comprehensive capabilities
+- ✅ AzureAIAgentController with REST API endpoints
+- ✅ Chat completion and streaming support
+- ✅ Embedding generation (hash-based approach)
+- ✅ Conversation history management
+- ✅ Function calling and similarity search
+- ✅ Health monitoring and configuration validation
 
-### Core Models
-```csharp
-// Advanced orchestration configuration
-public class AdvancedOrchestrationConfig
+**Key Features**:
+- Direct Azure OpenAI integration
+- Streaming chat responses
+- Conversation memory and history
+- Embedding generation and similarity search
+- Function calling capabilities
+- Health monitoring and diagnostics
+- Comprehensive configuration management
+
+### 🔄 Phase 5: Self-Evolution and Meta-Programming (IN PROGRESS)
+**Status**: Planning
+**Branch**: `feature/self-evolution`
+
+**Components**:
+- 🔄 Roslyn-based code generation
+- 🔄 Dynamic plugin/skill registration
+- 🔄 Runtime code compilation
+- 🔄 Self-modifying agent behaviors
+- 🔄 Meta-programming patterns
+- 🔄 Code analysis and optimization
+
+**Key Features**:
+- Generate new entity controllers/services at runtime
+- Dynamic skill/plugin registration
+- Self-optimizing agent behaviors
+- Code analysis and refactoring
+- Meta-programming capabilities
+
+### 📋 Phase 6: Advanced Orchestration Patterns (PLANNED)
+**Status**: Planned
+**Branch**: `feature/advanced-patterns`
+
+**Components**:
+- 📋 Hierarchical agent structures
+- 📋 Dynamic agent creation
+- 📋 Advanced workflow patterns
+- 📋 Agent specialization and learning
+- 📋 Cross-domain orchestration
+
+**Key Features**:
+- Hierarchical agent management
+- Dynamic agent creation and specialization
+- Advanced workflow orchestration
+- Cross-domain agent coordination
+- Learning and adaptation patterns
+
+### 📋 Phase 7: Production Readiness (PLANNED)
+**Status**: Planned
+**Branch**: `feature/production-ready`
+
+**Components**:
+- 📋 Comprehensive testing suite
+- 📋 Performance optimization
+- 📋 Security hardening
+- 📋 Monitoring and observability
+- 📋 Deployment automation
+- 📋 Documentation and guides
+
+**Key Features**:
+- Unit, integration, and performance tests
+- Security audit and hardening
+- Production monitoring and alerting
+- Automated deployment pipelines
+- Comprehensive documentation
+
+## Current Status
+
+### ✅ Completed Phases
+1. **Phase 1**: Foundation - Basic generic system with SK integration
+2. **Phase 2**: Advanced SK Agent Orchestration - Multi-agent coordination
+3. **Phase 3**: SK Memory and RAG Integration - Memory and retrieval capabilities
+4. **Phase 4**: Azure AI Agent Integration - Direct Azure OpenAI integration
+
+### 🔄 Current Focus
+- **Phase 5**: Self-Evolution and Meta-Programming
+  - Roslyn-based code generation
+  - Dynamic plugin registration
+  - Runtime code compilation
+  - Self-modifying behaviors
+
+### 📋 Next Steps
+1. Implement Roslyn-based code generation
+2. Add dynamic plugin/skill registration
+3. Enable runtime code compilation
+4. Implement self-modifying agent behaviors
+5. Add meta-programming patterns
+
+## Technical Architecture
+
+### Core Components
+- **BaseEntity**: Foundation for all entities with audit fields
+- **GenericRepository**: Universal data access pattern
+- **UnitOfWork**: Transaction management
+- **AgentOrchestrator**: Multi-agent coordination
+- **MemoryService**: SK Memory and RAG integration
+- **AzureAIAgentService**: Azure OpenAI integration
+
+### Key Patterns
+- **Generic Programming**: Type-safe generic operations
+- **Repository Pattern**: Abstracted data access
+- **Unit of Work**: Transaction management
+- **Agent Orchestration**: Multi-agent coordination
+- **Memory Management**: Persistent and ephemeral memory
+- **Streaming Responses**: Real-time data flow
+
+### Technologies
+- **.NET 9**: Latest framework features
+- **C# 13**: Modern language features
+- **Semantic Kernel**: AI orchestration framework
+- **Entity Framework**: Data access
+- **SQLite**: Lightweight database
+- **Azure OpenAI**: AI services
+- **Roslyn**: Code analysis and generation
+
+## API Endpoints
+
+### Generic Controller
+- `GET /api/generic/{entityType}` - Get all entities
+- `GET /api/generic/{entityType}/{id}` - Get entity by ID
+- `POST /api/generic/{entityType}` - Create entity
+- `PUT /api/generic/{entityType}/{id}` - Update entity
+- `DELETE /api/generic/{entityType}/{id}` - Delete entity
+
+### Advanced Orchestration Controller
+- `POST /api/orchestration/execute` - Execute orchestration
+- `POST /api/orchestration/stream` - Streaming orchestration
+- `POST /api/orchestration/analyze` - Entity analysis
+- `POST /api/orchestration/workflow` - Workflow execution
+
+### Memory Controller
+- `POST /api/memory/store` - Store memory entry
+- `GET /api/memory/{key}` - Get memory entry
+- `POST /api/memory/search` - Search memory
+- `POST /api/memory/rag` - RAG query
+- `POST /api/memory/document` - Process document
+
+### Azure AI Agent Controller
+- `POST /api/azureaiagent/message` - Send message
+- `POST /api/azureaiagent/stream` - Streaming message
+- `POST /api/azureaiagent/embeddings` - Generate embeddings
+- `POST /api/azureaiagent/similarity` - Find similar texts
+- `POST /api/azureaiagent/analyze` - Analyze text
+- `POST /api/azureaiagent/generate` - Generate content
+- `GET /api/azureaiagent/health` - Health status
+
+## Configuration
+
+### Azure OpenAI Settings
+```json
 {
-    public bool EnableStructuredData { get; set; }
-    public bool EnableResponseCallbacks { get; set; }
-    public bool EnableHumanInTheLoop { get; set; }
-    public bool EnableCustomTransforms { get; set; }
-    public TimeSpan Timeout { get; set; }
-    public bool EnableCancellation { get; set; }
-    public Dictionary<string, object> CustomSettings { get; set; }
+  "AzureOpenAI": {
+    "Endpoint": "https://your-resource.openai.azure.com/",
+    "ApiKey": "your-api-key-here",
+    "DeploymentName": "gpt-4",
+    "EmbeddingDeploymentName": "text-embedding-ada-002",
+    "MaxTokens": 4000,
+    "Temperature": 0.7,
+    "EnableStreaming": true,
+    "EnableFunctionCalling": true
+  }
 }
-
-// Structured data models
-public class StructuredInput<T>
-{
-    public T Data { get; set; }
-    public Dictionary<string, object> Metadata { get; set; }
-    public string? Context { get; set; }
-    public DateTime Timestamp { get; set; }
-}
-
-public class StructuredOutput<T>
-{
-    public T Data { get; set; }
-    public Dictionary<string, object> Metadata { get; set; }
-    public List<string> Citations { get; set; }
-    public string? Summary { get; set; }
-    public DateTime Timestamp { get; set; }
-    public bool Success { get; set; }
-    public string? ErrorMessage { get; set; }
-}
 ```
 
-### Agent Factory
-```csharp
-public class SKAgentFactory
-{
-    // Creates ChatCompletionAgent with advanced configuration
-    public ChatCompletionAgent CreateChatCompletionAgent(string name, string instructions, Dictionary<string, object>? arguments = null);
-    
-    // Creates orchestration patterns
-    public OrchestrationPatterns CreateOrchestrationPatterns(IEnumerable<ChatCompletionAgent> agents);
-    
-    // Creates all core agents
-    public List<ChatCompletionAgent> CreateAllAgents();
-}
-```
+## Development Guidelines
 
-### Agent Orchestrator
-```csharp
-public class AgentOrchestrator : IAgentOrchestrator
-{
-    // Advanced orchestration with structured data
-    public async Task<AdvancedAgentResponse<TOutput>> ExecuteAdvancedOrchestrationAsync<TInput, TOutput>(AdvancedAgentRequest<TInput, TOutput> request);
-    
-    // Structured orchestration with custom transforms
-    public async Task<StructuredOutput<TOutput>> ExecuteStructuredOrchestrationAsync<TInput, TOutput>(StructuredInput<TInput> input, AdvancedOrchestrationConfig config);
-    
-    // Workflow execution
-    public async Task<WorkflowExecutionResult> ExecuteWorkflowAsync<TInput, TOutput>(TInput input, List<string> workflowSteps, AdvancedOrchestrationConfig config);
-    
-    // Entity analysis
-    public async Task<EntityAnalysisResult> AnalyzeEntityAsync<T>(T entity, string entityType, AdvancedOrchestrationConfig config);
-}
-```
+### Adding New Entities
+1. Create entity class inheriting from `BaseEntity`
+2. Add to `UltraGenericContext` DbSet
+3. Run migration: `dotnet ef migrations add AddNewEntity`
+4. Update database: `dotnet ef database update`
+5. Entity is automatically available via generic controller
 
-### API Endpoints
-```
-POST /api/AdvancedOrchestration/advanced
-POST /api/AdvancedOrchestration/structured
-POST /api/AdvancedOrchestration/workflow
-POST /api/AdvancedOrchestration/analyze
-POST /api/AdvancedOrchestration/human-in-loop
-POST /api/AdvancedOrchestration/custom-transforms
-POST /api/AdvancedOrchestration/cancellable
-GET  /api/AdvancedOrchestration/patterns
-```
+### Adding New Agents
+1. Create agent class inheriting from `StreamingSKAgentBase`
+2. Implement required abstract methods
+3. Register in `SKAgentFactory`
+4. Agent is available for orchestration
 
-## Key Features Implemented
+### Adding New Skills
+1. Create skill class with required interface
+2. Register in `AgentOrchestrator`
+3. Skill is available for agent execution
 
-### 1. **Structured Data Orchestration**
-- Type-safe input/output transforms
-- Custom serialization/deserialization
-- Metadata preservation
-- Context-aware processing
+## Future Enhancements
 
-### 2. **Response Callbacks**
-- Real-time agent response monitoring
-- Configurable logging and metrics
-- UI update support
-- Custom formatting options
+### Planned Features
+- **Dynamic Entity Generation**: Generate entities at runtime
+- **Advanced Agent Patterns**: Hierarchical and specialized agents
+- **Cross-Domain Orchestration**: Multi-domain agent coordination
+- **Learning and Adaptation**: Agent behavior optimization
+- **Production Monitoring**: Comprehensive observability
+- **Security Hardening**: Advanced security features
 
-### 3. **Human-in-the-Loop**
-- Interactive user input collection
-- Approval workflow support
-- Timeout management
-- Action validation
+### Research Areas
+- **Meta-Programming Patterns**: Advanced code generation
+- **Agent Learning**: Reinforcement learning integration
+- **Distributed Orchestration**: Multi-node agent coordination
+- **Advanced Memory**: Hierarchical and associative memory
+- **Code Analysis**: Automated code optimization
 
-### 4. **Advanced Orchestration Patterns**
-- **Sequential**: Pipeline workflows for data operations
-- **Concurrent**: Parallel processing for queries
-- **GroupChat**: Collaborative problem solving
-- **Handoff**: Dynamic agent routing
+## Contributing
 
-### 5. **Timeout and Cancellation**
-- Configurable operation timeouts
-- Cancellation token support
-- Graceful error handling
-- Background operation management
+### Development Workflow
+1. Create feature branch from `main`
+2. Implement feature with tests
+3. Update documentation
+4. Create pull request
+5. Code review and merge
 
-### 6. **Workflow Execution**
-- Multi-step workflow support
-- Step-by-step tracking
-- Result aggregation
-- Error recovery
-
-### 7. **Entity Analysis**
-- Generic analysis framework
-- Confidence scoring
-- Recommendations and warnings
-- Metadata enrichment
-
-## Usage Examples
-
-### Basic Advanced Orchestration
-```csharp
-var request = new AdvancedAgentRequest<object, string>
-{
-    Input = "Analyze this data",
-    Operation = "analyze",
-    OrchestrationConfig = new AdvancedOrchestrationConfig
-    {
-        EnableResponseCallbacks = true,
-        Timeout = TimeSpan.FromMinutes(5)
-    }
-};
-
-var result = await orchestrator.ExecuteAdvancedOrchestrationAsync(request);
-```
-
-### Structured Orchestration
-```csharp
-var input = new StructuredInput<MyData>
-{
-    Data = myData,
-    Metadata = new Dictionary<string, object> { ["source"] = "api" }
-};
-
-var config = new AdvancedOrchestrationConfig
-{
-    EnableStructuredData = true,
-    EnableResponseCallbacks = true
-};
-
-var result = await orchestrator.ExecuteStructuredOrchestrationAsync<MyData, AnalysisResult>(input, config);
-```
-
-### Workflow Execution
-```csharp
-var workflowSteps = new List<string> { "validate", "process", "analyze", "report" };
-var config = new AdvancedOrchestrationConfig { Timeout = TimeSpan.FromMinutes(10) };
-
-var result = await orchestrator.ExecuteWorkflowAsync<InputData, OutputData>(inputData, workflowSteps, config);
-```
-
-### Entity Analysis
-```csharp
-var config = new AdvancedOrchestrationConfig
-{
-    EnableResponseCallbacks = true,
-    Timeout = TimeSpan.FromMinutes(3)
-};
-
-var result = await orchestrator.AnalyzeEntityAsync(myEntity, "User", config);
-```
-
-## Next Steps
-
-### ✅ Phase 4: SK Memory and RAG Integration (COMPLETED)
-- [x] **Mem0 Memory Integration**
-  - [x] MemoryEntry model with embedding support
-  - [x] Memory storage and retrieval operations
-  - [x] Similarity-based memory search
-  - [x] Memory access statistics and cleanup
-
-- [x] **Whiteboard Memory for Agent Collaboration**
-  - [x] WhiteboardMemory model for session-based collaboration
-  - [x] Session-based whiteboard operations
-  - [x] Shared memory for agent communication
-  - [x] Whiteboard cleanup and management
-
-- [x] **RAG (Retrieval Augmented Generation) Implementation**
-  - [x] Document and DocumentChunk models
-  - [x] Document processing and chunking
-  - [x] Vector embedding generation
-  - [x] Similarity-based document retrieval
-  - [x] RAG query processing with context generation
-
-- [x] **Vector Store Integration**
-  - [x] VectorEmbedding model for similarity search
-  - [x] Cosine similarity calculation
-  - [x] SQLite-based vector storage
-  - [x] Embedding generation and normalization
-
-- [x] **Document Processing and Indexing**
-  - [x] Document chunking with configurable size
-  - [x] Automatic embedding generation for chunks
-  - [x] Document metadata and source tracking
-  - [x] Processing status and timestamp management
-
-- [x] **Memory Service Architecture**
-  - [x] IMemoryService interface with comprehensive operations
-  - [x] MemoryService implementation with caching
-  - [x] Database integration with Entity Framework
-  - [x] Memory statistics and monitoring
-
-- [x] **REST API Endpoints**
-  - [x] MemoryController with full CRUD operations
-  - [x] Whiteboard management endpoints
-  - [x] RAG query and document processing endpoints
-  - [x] Embedding generation and similarity calculation endpoints
-  - [x] Memory statistics and cleanup endpoints
-
-### Phase 5: AzureAIAgent Integration (PLANNED)
-- [ ] AzureAIAgent implementation
-- [ ] Code interpreter integration
-- [ ] File search capabilities
-- [ ] Multi-modal agent support
-- [ ] Azure OpenAI integration
-
-### Phase 6: Self-Evolution Integration (PLANNED)
-- [ ] Dynamic code generation
-- [ ] Runtime entity creation
-- [ ] Self-optimizing workflows
-- [ ] Agent learning and adaptation
-- [ ] Meta-programming capabilities
-
-## Technical Notes
-
-### Build Status
-- ✅ Build succeeds with 26 warnings (mostly nullable reference warnings)
-- ✅ All advanced orchestration features implemented
-- ✅ API endpoints functional
-- ✅ Interface implementation complete
-
-### Dependencies
-- Microsoft.SemanticKernel.Agents.Core (latest)
-- Microsoft.SemanticKernel.Agents.Orchestration (preview)
-- Microsoft.SemanticKernel.Connectors.AzureOpenAI (latest)
-- .NET 9.0 with C# 13 features
-
-### Configuration
-- Experimental warnings suppressed in project file
-- Preview packages enabled for orchestration features
-- Nullable reference types enabled
-- Async/await patterns throughout
+### Code Standards
+- Follow C# coding conventions
+- Add XML documentation
+- Include unit tests
+- Update evolution plan
+- Maintain backward compatibility
 
 ## Conclusion
 
-The Ultra-Generic System has successfully evolved to include advanced Semantic Kernel orchestration features while maintaining its generic, extensible architecture. The system now supports:
+The Ultra-Generic System represents a significant advancement in AI-powered software architecture. With the completion of Phases 1-4, we have established a solid foundation for self-evolving, meta-programmable systems. The integration of Azure AI agents provides direct access to powerful AI capabilities, while the memory and RAG systems enable persistent knowledge and intelligent retrieval.
 
-1. **Structured data processing** with type-safe transforms
-2. **Real-time response monitoring** with configurable callbacks
-3. **Human-in-the-loop** scenarios with approval workflows
-4. **Multiple orchestration patterns** for different use cases
-5. **Timeout and cancellation** support for robust operations
-6. **Workflow execution** with step-by-step tracking
-7. **Entity analysis** with confidence scoring
-8. **RESTful API** endpoints for all advanced features
+The next phase focuses on self-evolution and meta-programming, which will enable the system to modify its own behavior and generate new capabilities at runtime. This represents the pinnacle of the ultra-generic architecture, where the system becomes truly self-evolving and adaptive.
 
-The system is ready for the next phases of evolution, including SK Memory integration, AzureAIAgent capabilities, and self-evolution features. 
+The system is designed to be extensible, maintainable, and production-ready, with comprehensive testing, monitoring, and documentation planned for future phases. 

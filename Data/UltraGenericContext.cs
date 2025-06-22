@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using UltraGenericSystem.Models;
+using UltraGenericSystem.Models.SelfEvolution;
 using System.Linq.Expressions;
 
 namespace UltraGenericSystem.Data;
@@ -29,6 +30,11 @@ public class UltraGenericContext : DbContext
     public DbSet<Document> Documents { get; set; }
     public DbSet<DocumentChunk> DocumentChunks { get; set; }
 
+    // Self-Evolution DbSets
+    public DbSet<CodeTemplate> CodeTemplates { get; set; }
+    public DbSet<DynamicPlugin> DynamicPlugins { get; set; }
+    public DbSet<SelfEvolutionConfig> SelfEvolutionConfigs { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
@@ -51,6 +57,11 @@ public class UltraGenericContext : DbContext
         ConfigureVectorEmbedding(modelBuilder);
         ConfigureDocument(modelBuilder);
         ConfigureDocumentChunk(modelBuilder);
+
+        // Configure self-evolution entities
+        ConfigureCodeTemplate(modelBuilder);
+        ConfigureDynamicPlugin(modelBuilder);
+        ConfigureSelfEvolutionConfig(modelBuilder);
 
         // Configure relationships
         ConfigureRelationships(modelBuilder);
@@ -557,6 +568,152 @@ public class UltraGenericContext : DbContext
             entity.HasIndex(e => e.ChunkIndex);
             entity.HasIndex(e => e.StartPosition);
             entity.HasIndex(e => e.EndPosition);
+        });
+    }
+
+    private void ConfigureCodeTemplate(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<CodeTemplate>(entity =>
+        {
+            entity.ToTable("CodeTemplates");
+
+            entity.Property(e => e.Name)
+                .IsRequired()
+                .HasMaxLength(100);
+
+            entity.Property(e => e.TemplateType)
+                .IsRequired()
+                .HasMaxLength(50);
+
+            entity.Property(e => e.TemplateContent)
+                .IsRequired()
+                .HasColumnType("TEXT");
+
+            entity.Property(e => e.Description)
+                .HasMaxLength(500);
+
+            entity.Property(e => e.IsActive)
+                .HasDefaultValue(true);
+
+            entity.Property(e => e.Version)
+                .HasDefaultValue(1);
+
+            entity.Property(e => e.Tags)
+                .HasMaxLength(100);
+
+            // Indexes
+            entity.HasIndex(e => e.Name).IsUnique();
+            entity.HasIndex(e => e.TemplateType);
+            entity.HasIndex(e => e.IsActive);
+            entity.HasIndex(e => e.Version);
+        });
+    }
+
+    private void ConfigureDynamicPlugin(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<DynamicPlugin>(entity =>
+        {
+            entity.ToTable("DynamicPlugins");
+
+            entity.Property(e => e.Name)
+                .IsRequired()
+                .HasMaxLength(100);
+
+            entity.Property(e => e.PluginType)
+                .IsRequired()
+                .HasMaxLength(50);
+
+            entity.Property(e => e.SourceCode)
+                .IsRequired()
+                .HasColumnType("TEXT");
+
+            entity.Property(e => e.CompiledAssembly)
+                .HasColumnType("BLOB");
+
+            entity.Property(e => e.IsActive)
+                .HasDefaultValue(true);
+
+            entity.Property(e => e.IsLoaded)
+                .HasDefaultValue(false);
+
+            entity.Property(e => e.Description)
+                .HasMaxLength(500);
+
+            entity.Property(e => e.Version)
+                .HasMaxLength(20);
+
+            entity.Property(e => e.Configuration)
+                .HasConversion(
+                    v => System.Text.Json.JsonSerializer.Serialize(v, (System.Text.Json.JsonSerializerOptions?)null),
+                    v => System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, string>>(v, (System.Text.Json.JsonSerializerOptions?)null) ?? new Dictionary<string, string>()
+                );
+
+            entity.Property(e => e.Dependencies)
+                .HasConversion(
+                    v => System.Text.Json.JsonSerializer.Serialize(v, (System.Text.Json.JsonSerializerOptions?)null),
+                    v => System.Text.Json.JsonSerializer.Deserialize<List<string>>(v, (System.Text.Json.JsonSerializerOptions?)null) ?? new List<string>()
+                );
+
+            // Indexes
+            entity.HasIndex(e => e.Name).IsUnique();
+            entity.HasIndex(e => e.PluginType);
+            entity.HasIndex(e => e.IsActive);
+            entity.HasIndex(e => e.IsLoaded);
+            entity.HasIndex(e => e.Version);
+        });
+    }
+
+    private void ConfigureSelfEvolutionConfig(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<SelfEvolutionConfig>(entity =>
+        {
+            entity.ToTable("SelfEvolutionConfigs");
+
+            entity.Property(e => e.Name)
+                .IsRequired()
+                .HasMaxLength(100);
+
+            entity.Property(e => e.EnableCodeGeneration)
+                .HasDefaultValue(true);
+
+            entity.Property(e => e.EnableDynamicCompilation)
+                .HasDefaultValue(true);
+
+            entity.Property(e => e.EnablePluginRegistration)
+                .HasDefaultValue(true);
+
+            entity.Property(e => e.EnableSelfModification)
+                .HasDefaultValue(false);
+
+            entity.Property(e => e.MaxGeneratedFiles)
+                .HasDefaultValue(1000);
+
+            entity.Property(e => e.MaxCompilationTime)
+                .HasDefaultValue(30000);
+
+            entity.Property(e => e.AllowedNamespaces)
+                .HasConversion(
+                    v => System.Text.Json.JsonSerializer.Serialize(v, (System.Text.Json.JsonSerializerOptions?)null),
+                    v => System.Text.Json.JsonSerializer.Deserialize<List<string>>(v, (System.Text.Json.JsonSerializerOptions?)null) ?? new List<string>()
+                );
+
+            entity.Property(e => e.ForbiddenNamespaces)
+                .HasConversion(
+                    v => System.Text.Json.JsonSerializer.Serialize(v, (System.Text.Json.JsonSerializerOptions?)null),
+                    v => System.Text.Json.JsonSerializer.Deserialize<List<string>>(v, (System.Text.Json.JsonSerializerOptions?)null) ?? new List<string>()
+                );
+
+            entity.Property(e => e.AdvancedSettings)
+                .HasConversion(
+                    v => System.Text.Json.JsonSerializer.Serialize(v, (System.Text.Json.JsonSerializerOptions?)null),
+                    v => System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, object>>(v, (System.Text.Json.JsonSerializerOptions?)null) ?? new Dictionary<string, object>()
+                );
+
+            // Indexes
+            entity.HasIndex(e => e.Name).IsUnique();
+            entity.HasIndex(e => e.EnableCodeGeneration);
+            entity.HasIndex(e => e.EnableDynamicCompilation);
+            entity.HasIndex(e => e.EnablePluginRegistration);
         });
     }
 

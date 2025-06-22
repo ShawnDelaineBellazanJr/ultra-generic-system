@@ -5,10 +5,12 @@ using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.Connectors.AzureOpenAI;
 using Serilog;
 using UltraGenericSystem.Data;
+using UltraGenericSystem.Models;
+using UltraGenericSystem.Models.SelfEvolution;
 using UltraGenericSystem.Repositories;
 using UltraGenericSystem.Services;
-using UltraGenericSystem.Models;
 using UltraGenericSystem.Services.Agents;
+using UltraGenericSystem.Services.SelfEvolution;
 
 namespace UltraGenericSystem;
 
@@ -119,6 +121,20 @@ public class Program
                         MemorySearchThreshold = double.TryParse(builder.Configuration["AzureOpenAI:MemoryConfig:MemorySearchThreshold"], out var memSearchThreshold) ? memSearchThreshold : 0.8
                     }
                 }));
+
+        // Register self-evolution services
+        builder.Services.AddScoped<ICodeGenerationService, CodeGenerationService>(sp =>
+            new CodeGenerationService(
+                sp.GetRequiredService<IGenericRepository<CodeTemplate>>(),
+                sp.GetRequiredService<IGenericRepository<DynamicPlugin>>(),
+                sp.GetRequiredService<IGenericRepository<SelfEvolutionConfig>>(),
+                sp.GetRequiredService<ILogger<CodeGenerationService>>()));
+
+        builder.Services.AddScoped<IDynamicPluginService, DynamicPluginService>(sp =>
+            new DynamicPluginService(
+                sp.GetRequiredService<IGenericRepository<DynamicPlugin>>(),
+                sp.GetRequiredService<ICodeGenerationService>(),
+                sp.GetRequiredService<ILogger<DynamicPluginService>>()));
 
         // Register agent services for all entity types
         RegisterGenericServices(builder.Services);
