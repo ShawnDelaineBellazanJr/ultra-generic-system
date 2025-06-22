@@ -648,4 +648,493 @@ public class WorkflowExecutionResult
     public TimeSpan TotalExecutionTime { get; set; }
     public DateTime StartTime { get; set; } = DateTime.UtcNow;
     public DateTime EndTime { get; set; } = DateTime.UtcNow;
+}
+
+/// <summary>
+/// Azure AI Agent configuration
+/// </summary>
+public class AzureAIAgentConfig
+{
+    /// <summary>
+    /// Azure OpenAI endpoint
+    /// </summary>
+    public string Endpoint { get; set; } = string.Empty;
+
+    /// <summary>
+    /// Azure OpenAI API key
+    /// </summary>
+    public string ApiKey { get; set; } = string.Empty;
+
+    /// <summary>
+    /// Model deployment name
+    /// </summary>
+    public string ModelDeploymentName { get; set; } = "gpt-4";
+
+    /// <summary>
+    /// Model deployment name for embeddings
+    /// </summary>
+    public string EmbeddingDeploymentName { get; set; } = "text-embedding-ada-002";
+
+    /// <summary>
+    /// Maximum tokens for completion
+    /// </summary>
+    public int MaxTokens { get; set; } = 4000;
+
+    /// <summary>
+    /// Temperature for generation
+    /// </summary>
+    public double Temperature { get; set; } = 0.7;
+
+    /// <summary>
+    /// Top P for generation
+    /// </summary>
+    public double TopP { get; set; } = 0.9;
+
+    /// <summary>
+    /// Frequency penalty
+    /// </summary>
+    public double FrequencyPenalty { get; set; } = 0.0;
+
+    /// <summary>
+    /// Presence penalty
+    /// </summary>
+    public double PresencePenalty { get; set; } = 0.0;
+
+    /// <summary>
+    /// Whether to enable streaming
+    /// </summary>
+    public bool EnableStreaming { get; set; } = true;
+
+    /// <summary>
+    /// Whether to enable function calling
+    /// </summary>
+    public bool EnableFunctionCalling { get; set; } = true;
+
+    /// <summary>
+    /// Whether to enable vision capabilities
+    /// </summary>
+    public bool EnableVision { get; set; } = false;
+
+    /// <summary>
+    /// Custom headers for API calls
+    /// </summary>
+    public Dictionary<string, string> CustomHeaders { get; set; } = new();
+
+    /// <summary>
+    /// Retry configuration
+    /// </summary>
+    public AzureAIRetryConfig RetryConfig { get; set; } = new();
+
+    /// <summary>
+    /// Memory configuration
+    /// </summary>
+    public AzureAIMemoryConfig MemoryConfig { get; set; } = new();
+}
+
+/// <summary>
+/// Azure AI retry configuration
+/// </summary>
+public class AzureAIRetryConfig
+{
+    /// <summary>
+    /// Maximum retry attempts
+    /// </summary>
+    public int MaxRetries { get; set; } = 3;
+
+    /// <summary>
+    /// Base delay between retries
+    /// </summary>
+    public TimeSpan BaseDelay { get; set; } = TimeSpan.FromSeconds(1);
+
+    /// <summary>
+    /// Maximum delay between retries
+    /// </summary>
+    public TimeSpan MaxDelay { get; set; } = TimeSpan.FromSeconds(30);
+
+    /// <summary>
+    /// Whether to use exponential backoff
+    /// </summary>
+    public bool UseExponentialBackoff { get; set; } = true;
+
+    /// <summary>
+    /// HTTP status codes to retry on
+    /// </summary>
+    public List<int> RetryableStatusCodes { get; set; } = new() { 429, 500, 502, 503, 504 };
+}
+
+/// <summary>
+/// Azure AI memory configuration
+/// </summary>
+public class AzureAIMemoryConfig
+{
+    /// <summary>
+    /// Whether to enable memory
+    /// </summary>
+    public bool EnableMemory { get; set; } = true;
+
+    /// <summary>
+    /// Memory type to use
+    /// </summary>
+    public string MemoryType { get; set; } = "Volatile"; // Volatile, Persistent, Vector
+
+    /// <summary>
+    /// Maximum memory entries
+    /// </summary>
+    public int MaxMemoryEntries { get; set; } = 1000;
+
+    /// <summary>
+    /// Memory retention period
+    /// </summary>
+    public TimeSpan MemoryRetentionPeriod { get; set; } = TimeSpan.FromHours(24);
+
+    /// <summary>
+    /// Whether to enable memory search
+    /// </summary>
+    public bool EnableMemorySearch { get; set; } = true;
+
+    /// <summary>
+    /// Memory search similarity threshold
+    /// </summary>
+    public double MemorySearchThreshold { get; set; } = 0.8;
+}
+
+/// <summary>
+/// Azure AI Agent request
+/// </summary>
+public class AzureAIAgentRequest
+{
+    /// <summary>
+    /// User message
+    /// </summary>
+    public string Message { get; set; } = string.Empty;
+
+    /// <summary>
+    /// System prompt
+    /// </summary>
+    public string? SystemPrompt { get; set; }
+
+    /// <summary>
+    /// Conversation history
+    /// </summary>
+    public List<AzureAIConversationMessage> ConversationHistory { get; set; } = new();
+
+    /// <summary>
+    /// Function definitions
+    /// </summary>
+    public List<AzureAIFunctionDefinition> Functions { get; set; } = new();
+
+    /// <summary>
+    /// Tool calls to execute
+    /// </summary>
+    public List<AzureAIToolCall> ToolCalls { get; set; } = new();
+
+    /// <summary>
+    /// Additional parameters
+    /// </summary>
+    public Dictionary<string, object> Parameters { get; set; } = new();
+
+    /// <summary>
+    /// Whether to enable streaming
+    /// </summary>
+    public bool EnableStreaming { get; set; } = true;
+
+    /// <summary>
+    /// User ID for tracking
+    /// </summary>
+    public string UserId { get; set; } = string.Empty;
+
+    /// <summary>
+    /// Session ID for conversation tracking
+    /// </summary>
+    public string SessionId { get; set; } = Guid.NewGuid().ToString();
+}
+
+/// <summary>
+/// Azure AI conversation message
+/// </summary>
+public class AzureAIConversationMessage
+{
+    /// <summary>
+    /// Role of the message sender
+    /// </summary>
+    public string Role { get; set; } = string.Empty; // system, user, assistant, tool
+
+    /// <summary>
+    /// Message content
+    /// </summary>
+    public string Content { get; set; } = string.Empty;
+
+    /// <summary>
+    /// Message timestamp
+    /// </summary>
+    public DateTime Timestamp { get; set; } = DateTime.UtcNow;
+
+    /// <summary>
+    /// Message ID
+    /// </summary>
+    public string MessageId { get; set; } = Guid.NewGuid().ToString();
+
+    /// <summary>
+    /// Tool calls in this message
+    /// </summary>
+    public List<AzureAIToolCall> ToolCalls { get; set; } = new();
+
+    /// <summary>
+    /// Tool call results
+    /// </summary>
+    public List<AzureAIToolCallResult> ToolCallResults { get; set; } = new();
+}
+
+/// <summary>
+/// Azure AI function definition
+/// </summary>
+public class AzureAIFunctionDefinition
+{
+    /// <summary>
+    /// Function name
+    /// </summary>
+    public string Name { get; set; } = string.Empty;
+
+    /// <summary>
+    /// Function description
+    /// </summary>
+    public string Description { get; set; } = string.Empty;
+
+    /// <summary>
+    /// Function parameters schema
+    /// </summary>
+    public Dictionary<string, object> Parameters { get; set; } = new();
+
+    /// <summary>
+    /// Whether the function is required
+    /// </summary>
+    public bool Required { get; set; } = false;
+}
+
+/// <summary>
+/// Azure AI tool call
+/// </summary>
+public class AzureAIToolCall
+{
+    /// <summary>
+    /// Tool call ID
+    /// </summary>
+    public string Id { get; set; } = Guid.NewGuid().ToString();
+
+    /// <summary>
+    /// Tool type
+    /// </summary>
+    public string Type { get; set; } = "function";
+
+    /// <summary>
+    /// Function call details
+    /// </summary>
+    public AzureAIFunctionCall Function { get; set; } = new();
+}
+
+/// <summary>
+/// Azure AI function call
+/// </summary>
+public class AzureAIFunctionCall
+{
+    /// <summary>
+    /// Function name
+    /// </summary>
+    public string Name { get; set; } = string.Empty;
+
+    /// <summary>
+    /// Function arguments
+    /// </summary>
+    public string Arguments { get; set; } = string.Empty;
+}
+
+/// <summary>
+/// Azure AI tool call result
+/// </summary>
+public class AzureAIToolCallResult
+{
+    /// <summary>
+    /// Tool call ID
+    /// </summary>
+    public string ToolCallId { get; set; } = string.Empty;
+
+    /// <summary>
+    /// Tool type
+    /// </summary>
+    public string Type { get; set; } = "function";
+
+    /// <summary>
+    /// Function call result
+    /// </summary>
+    public AzureAIFunctionCallResult Function { get; set; } = new();
+}
+
+/// <summary>
+/// Azure AI function call result
+/// </summary>
+public class AzureAIFunctionCallResult
+{
+    /// <summary>
+    /// Function name
+    /// </summary>
+    public string Name { get; set; } = string.Empty;
+
+    /// <summary>
+    /// Function result content
+    /// </summary>
+    public string Content { get; set; } = string.Empty;
+}
+
+/// <summary>
+/// Azure AI Agent response
+/// </summary>
+public class AzureAIAgentResponse
+{
+    /// <summary>
+    /// Response message
+    /// </summary>
+    public string Message { get; set; } = string.Empty;
+
+    /// <summary>
+    /// Tool calls made
+    /// </summary>
+    public List<AzureAIToolCall> ToolCalls { get; set; } = new();
+
+    /// <summary>
+    /// Tool call results
+    /// </summary>
+    public List<AzureAIToolCallResult> ToolCallResults { get; set; } = new();
+
+    /// <summary>
+    /// Usage statistics
+    /// </summary>
+    public AzureAIUsage Usage { get; set; } = new();
+
+    /// <summary>
+    /// Whether the response is complete
+    /// </summary>
+    public bool IsComplete { get; set; } = true;
+
+    /// <summary>
+    /// Response ID
+    /// </summary>
+    public string ResponseId { get; set; } = Guid.NewGuid().ToString();
+
+    /// <summary>
+    /// Response timestamp
+    /// </summary>
+    public DateTime Timestamp { get; set; } = DateTime.UtcNow;
+
+    /// <summary>
+    /// Additional metadata
+    /// </summary>
+    public Dictionary<string, object> Metadata { get; set; } = new();
+}
+
+/// <summary>
+/// Azure AI usage statistics
+/// </summary>
+public class AzureAIUsage
+{
+    /// <summary>
+    /// Number of prompt tokens
+    /// </summary>
+    public int PromptTokens { get; set; }
+
+    /// <summary>
+    /// Number of completion tokens
+    /// </summary>
+    public int CompletionTokens { get; set; }
+
+    /// <summary>
+    /// Total number of tokens
+    /// </summary>
+    public int TotalTokens { get; set; }
+
+    /// <summary>
+    /// Model used
+    /// </summary>
+    public string Model { get; set; } = string.Empty;
+}
+
+/// <summary>
+/// Azure AI streaming response
+/// </summary>
+public class AzureAIStreamingResponse
+{
+    /// <summary>
+    /// Streaming chunk content
+    /// </summary>
+    public string Content { get; set; } = string.Empty;
+
+    /// <summary>
+    /// Whether this is the final chunk
+    /// </summary>
+    public bool IsFinal { get; set; } = false;
+
+    /// <summary>
+    /// Chunk ID
+    /// </summary>
+    public string ChunkId { get; set; } = Guid.NewGuid().ToString();
+
+    /// <summary>
+    /// Chunk timestamp
+    /// </summary>
+    public DateTime Timestamp { get; set; } = DateTime.UtcNow;
+
+    /// <summary>
+    /// Tool calls in this chunk
+    /// </summary>
+    public List<AzureAIToolCall> ToolCalls { get; set; } = new();
+}
+
+/// <summary>
+/// Azure AI Agent capabilities
+/// </summary>
+public class AzureAIAgentCapabilities
+{
+    /// <summary>
+    /// Whether the agent supports text generation
+    /// </summary>
+    public bool SupportsTextGeneration { get; set; } = true;
+
+    /// <summary>
+    /// Whether the agent supports function calling
+    /// </summary>
+    public bool SupportsFunctionCalling { get; set; } = true;
+
+    /// <summary>
+    /// Whether the agent supports vision
+    /// </summary>
+    public bool SupportsVision { get; set; } = false;
+
+    /// <summary>
+    /// Whether the agent supports streaming
+    /// </summary>
+    public bool SupportsStreaming { get; set; } = true;
+
+    /// <summary>
+    /// Whether the agent supports memory
+    /// </summary>
+    public bool SupportsMemory { get; set; } = true;
+
+    /// <summary>
+    /// Whether the agent supports embeddings
+    /// </summary>
+    public bool SupportsEmbeddings { get; set; } = true;
+
+    /// <summary>
+    /// Maximum input tokens
+    /// </summary>
+    public int MaxInputTokens { get; set; } = 128000;
+
+    /// <summary>
+    /// Maximum output tokens
+    /// </summary>
+    public int MaxOutputTokens { get; set; } = 4096;
+
+    /// <summary>
+    /// Supported models
+    /// </summary>
+    public List<string> SupportedModels { get; set; } = new();
 } 
